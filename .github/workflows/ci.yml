@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Read-only token: CI never writes to the repository.
+permissions:
+  contents: read
+
+# A new push to the same ref supersedes the run already in flight.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+
+      # Must precede setup-node so that `cache: pnpm` can find the store.
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4.3.0
+
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      # Mirrors `pnpm check` locally, but as discrete steps so a failure is
+      # obvious from the job summary without opening the log.
+      - name: Format
+        run: pnpm fmt:check
+      - name: Lint
+        run: pnpm lint
+      - name: Typecheck
+        run: pnpm typecheck
+      - name: Test
+        run: pnpm test --coverage
+      - name: Build
+        run: pnpm build
+      # Catches broken files globs, a missing preload and fuse or ASAR
+      # problems on every PR instead of at release time.
+      - name: Package
+        run: pnpm --filter @michigo/desktop exec electron-builder --dir --publish never
