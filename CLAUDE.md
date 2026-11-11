@@ -1,4 +1,4 @@
-# Michigo Browser: working notes
+# Michigo: working notes
 
 Rules that the code cannot state for itself. Read before adding a feature.
 
@@ -116,7 +116,7 @@ Oxfmt runs with `proseWrap: "never"`, so it joins every paragraph onto one line.
 
 ### Issue tracker
 
-Issues and specs live in GitHub Issues for `iuriioapps/michigo-browser`. Use the `gh` CLI. See `docs/agents/issue-tracker.md`.
+Issues and specs live in GitHub Issues for `iuriioapps/michigo`. Use the `gh` CLI. See `docs/agents/issue-tracker.md`.
 
 ### Triage labels
 

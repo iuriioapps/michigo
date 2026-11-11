@@ -1,6 +1,6 @@
 # Issue tracker: GitHub
 
-Issues and specs for this repo live as GitHub issues in `iuriioapps/michigo-browser`. Use the `gh` CLI for all operations. `gh` infers the repo from the git remote when you run it inside a clone.
+Issues and specs for this repo live as GitHub issues in `iuriioapps/michigo`. Use the `gh` CLI for all operations. `gh` infers the repo from the git remote when you run it inside a clone.
 
 ## Conventions
 
