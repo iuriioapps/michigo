@@ -20,7 +20,7 @@
     "@michigo/vocab": "workspace:*",
     "@tailwindcss/vite": "^4.3.3",
     "@tanstack/react-query": "^5.103.2",
-    "@tanstack/react-router": "^1.170.39",
+    "@tanstack/react-router": "^1.170.46",
     "@tanstack/router-plugin": "^1.168.40",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^7.0.1",
