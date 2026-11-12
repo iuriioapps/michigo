@@ -149,3 +149,7 @@ release/
 
 # macOS
 .DS_Store
+
+# Local agent tooling
+.claude/worktrees/
+.playwright-mcp/
