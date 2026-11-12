@@ -55,3 +55,13 @@ External data that the learner imports to describe words: a Dictionary, a JLPT l
 An external reference that the learner imports to see meanings and readings. Michigo ships none, and the learner can work without one.
 
 _Avoid_: glossary, word database
+
+### Snapshot
+
+A copy of the learner's database alone, which Michigo takes automatically and keeps beside the data.
+
+### Backup
+
+A single file that holds everything needed to restore Michigo: the database, plus media and Dictionaries when the learner includes them. The learner or a schedule creates it.
+
+_Avoid_: dump, archive, export
