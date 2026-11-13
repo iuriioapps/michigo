@@ -1,0 +1,9 @@
+{
+  "name": "tokenizer-electron-test",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "main.js",
+  "dependencies": { "lindera": "6.2.0" },
+  "devDependencies": { "electron": "44.4.5", "electron-builder": "26.15.3", "lindera-wasm": "6.2.0" }
+}

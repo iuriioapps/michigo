@@ -1,0 +1,63 @@
+# Throwaway: runs the tokenizer spike on three platforms. Lives only on the research branch.
+name: Tokenizer spike
+
+on:
+  push:
+    branches: [research/tokenizer-spike]
+    paths:
+      - docs/research/tokenizer-spike/**
+      - .github/workflows/tokenizer-spike.yml
+
+permissions:
+  contents: read
+
+jobs:
+  spike:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
+        working-directory: docs/research/tokenizer-spike
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Download dictionaries
+        run: |
+          mkdir -p dicts && cd dicts
+          for d in ipadic unidic; do
+            curl -sSL -o $d.zip https://github.com/lindera/lindera/releases/download/v6.2.0/lindera-$d-6.2.0.zip
+            unzip -q $d.zip
+          done
+      - run: npm install
+      - name: Tokenize on this platform
+        env:
+          TEXTS: prose,lyrics-classic
+          OUT: out-ci
+        run: |
+          for c in lindera-unidic lindera-native-unidic lindera-ipadic kuromoji; do
+            node --expose-gc spike.mjs run $c
+          done
+          node ci-hash.mjs
+      - name: Memory
+        run: node --expose-gc mem.mjs unidic
+      - name: One-file CLI bundle
+        working-directory: docs/research/tokenizer-spike/cli-test
+        run: |
+          npm install
+          npx tsdown
+          mkdir -p "$RUNNER_TEMP/cli" && cp dist/index.js "$RUNNER_TEMP/cli/" && echo '{"type":"module"}' > "$RUNNER_TEMP/cli/package.json"
+          ls -l dist
+          node "$RUNNER_TEMP/cli/index.js" "$PWD/../dicts/lindera-unidic"
+      - name: Packaged Electron app
+        working-directory: docs/research/tokenizer-spike/electron-test
+        run: |
+          npm install
+          mkdir -p vendor && cp node_modules/lindera-wasm/lindera_wasm.js node_modules/lindera-wasm/lindera_wasm_bg.wasm vendor/
+          npx electron-builder --dir --publish never
+          if [ "$RUNNER_OS" = "Linux" ]; then xvfb-run -a node run.mjs; else node run.mjs; fi

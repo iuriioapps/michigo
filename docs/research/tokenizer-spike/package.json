@@ -1,0 +1,14 @@
+{
+  "name": "tokenizer-spike",
+  "private": true,
+  "type": "module",
+  "description": "Throwaway tokenizer comparison. Not part of the workspace.",
+  "dependencies": {
+    "@patdx/kuromoji": "1.0.4",
+    "lindera": "6.2.0",
+    "lindera-wasm": "6.2.0"
+  },
+  "optionalDependencies": {
+    "sudachi-wasm333": "1.0.4"
+  }
+}

@@ -1,0 +1,27 @@
+appId: com.michigo.tokenizertest
+productName: TokenizerTest
+files:
+  - main.js
+  - worker.js
+  - tokenize.js
+  - vendor/**
+extraResources:
+  - from: ../dicts/lindera-unidic
+    to: unidic
+asarUnpack:
+  - "**/*.node"
+npmRebuild: false
+electronFuses:
+  runAsNode: false
+  enableNodeOptionsEnvironmentVariable: false
+  enableNodeCliInspectArguments: false
+  enableEmbeddedAsarIntegrityValidation: true
+  onlyLoadAppFromAsar: true
+mac:
+  target: dir
+  identity: "-"
+  hardenedRuntime: false
+win:
+  target: dir
+linux:
+  target: dir

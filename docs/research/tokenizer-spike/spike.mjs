@@ -4,8 +4,9 @@
 import { readFileSync, writeFileSync, mkdirSync, promises } from "node:fs";
 import assert from "node:assert";
 
-const CANDIDATES = ["lindera-unidic", "lindera-sudachidict", "lindera-ipadic", "kuromoji", "sudachi-wasm"];
-const TEXTS = ["subtitles", "transcript", "lyrics", "lyrics-classic", "prose", "wiki-miku", "wiki-danmachi"];
+const CANDIDATES = (process.env.CANDS ?? "lindera-unidic,lindera-sudachidict,lindera-ipadic,kuromoji,sudachi-wasm").split(",");
+const OUT = process.env.OUT ?? "out";
+const TEXTS = (process.env.TEXTS ?? "subtitles,transcript,lyrics,lyrics-classic,prose,wiki-miku,wiki-danmachi").split(",");
 const SKIP_POS = new Set(["助詞", "助動詞", "記号", "補助記号", "空白"]);
 
 const HARD_CASES = [
@@ -57,6 +58,20 @@ const loaders = {
   "lindera-unidic": () => loadLindera("unidic"),
   "lindera-sudachidict": () => loadLindera("sudachidict"),
   "lindera-ipadic": () => loadLindera("ipadic"),
+  // Native napi binding: same engine and dictionary files, loaded by path
+  "lindera-native-unidic": async () => {
+    const { createRequire } = await import("node:module");
+    const { TokenizerBuilder } = createRequire(import.meta.url)("lindera");
+    const b = new TokenizerBuilder();
+    b.setDictionary(new URL("dicts/lindera-unidic", import.meta.url).pathname);
+    b.setMode("normal");
+    const tok = b.build();
+    return (line) =>
+      tok.tokenize(line).map((t) => {
+        const d = t.details, s = t.surface;
+        return { s, b: utf16(line, t.byteStart), e: utf16(line, t.byteEnd), oov: t.isUnknown ?? d[6] === "*", pos: d[0], lemma: star(d[10], s), reading: star(d[9], ""), group: d[7] && d[7] !== "*" ? `${d[7]}(${d[6]})` : s };
+      });
+  },
   kuromoji: async () => {
     const k = await import("@patdx/kuromoji");
     const { default: Loader } = await import("@patdx/kuromoji/node");
@@ -137,11 +152,11 @@ async function run(name) {
     const viaJs = (line) => { const { norm, toOriginal } = nfkcWithMap(line); return tokenize(norm).map(toOriginal); };
     const hw = "ｽｺﾞｲ ｶﾞﾝﾀﾞﾑ ﾊﾝｶｸ。ＡＢＣ１２３！";
     const toks = viaJs(hw);
-    const subs = readFileSync("texts/subtitles.txt", "utf8").split("\n").filter(Boolean);
+    const subs = readFileSync(`texts/${TEXTS[0]}.txt`, "utf8").split("\n").filter(Boolean);
     const count = (fn) => subs.flatMap(fn).filter((t) => t.oov && !SKIP_POS.has(t.pos) && t.s.trim()).length;
     out.extra.jsNfkc = { text: hw, toks, spansOk: toks.every((t) => hw.slice(t.b, t.e).normalize("NFKC") === t.s), subsOovRaw: count(tokenize), subsOovNfkc: count(viaJs) };
   }
-  if (name.startsWith("lindera-")) {
+  if (name.startsWith("lindera-") && !name.includes("native")) {
     const dictName = name.slice(8);
     const hw = "ｽｺﾞｲ ｶﾞﾝﾀﾞﾑ ﾊﾝｶｸ。①㍍ＡＢＣ";
     try {
@@ -159,8 +174,8 @@ async function run(name) {
     await s.initialize_node(promises.readFile);
     out.extra.modeA = ["封魔鉱を採掘する。", "選挙管理委員会"].map((text) => ({ text, a: s.tokenize_raw(text, TokenizeMode.A).map((t) => t.surface), c: s.tokenize_raw(text, TokenizeMode.C).map((t) => t.surface) }));
   }
-  mkdirSync("out", { recursive: true });
-  writeFileSync(`out/${name}.json`, JSON.stringify(out));
+  mkdirSync(OUT, { recursive: true });
+  writeFileSync(`${OUT}/${name}.json`, JSON.stringify(out));
   console.log(name, { loadMs, rss: out.rssAfterLoadMb, tps: out.tokensPerSec });
 }
 
@@ -186,7 +201,7 @@ function regions(lineToks) {
 }
 
 function report() {
-  const R = Object.fromEntries(CANDIDATES.map((c) => [c, JSON.parse(readFileSync(`out/${c}.json`, "utf8"))]));
+  const R = Object.fromEntries(CANDIDATES.map((c) => [c, JSON.parse(readFileSync(`${OUT}/${c}.json`, "utf8"))]));
   const md = [];
   const table = (head, rows) => md.push("", `| ${head.join(" | ")} |`, `| ${head.map(() => "---").join(" | ")} |`, ...rows.map((r) => `| ${r.join(" | ")} |`), "");
 
@@ -209,12 +224,14 @@ function report() {
   md.push("Lines in the seven texts where raw offsets did not slice back to the surface (no normalization applied):");
   table(["Candidate", "Lines with wrong offsets"], CANDIDATES.map((c) => [c, R[c].badOffsetLines ?? 0]));
 
-  md.push("", "## NFKC applied in JavaScript before tokenizing", "", "Offsets are mapped back with a per-cluster index table. Unknown counts are content tokens in the subtitle text.");
+  md.push("", "## NFKC applied in JavaScript before tokenizing", "", "Offsets are mapped back with a per-cluster index table. Unknown counts are content tokens in the first text.");
   table(["Candidate", "Tokens", "Mapped spans point at the original", "Subtitle unknowns raw", "Subtitle unknowns after NFKC"], CANDIDATES.map((c) => { const j = R[c].extra.jsNfkc; return [c, show(j.toks), j.spansOk ? "yes" : "no", j.subsOovRaw, j.subsOovNfkc]; }));
   md.push("", "## User dictionary for 封魔鉱 (Lindera only)");
   table(["Candidate", "Tokens with a one-line user dictionary"], CANDIDATES.filter((c) => R[c].extra.userDict).map((c) => [c, R[c].extra.userDict.error ?? show(R[c].extra.userDict.toks)]));
-  md.push("## Sudachi split modes (sudachi-wasm only)");
-  table(["Text", "Mode A", "Mode C"], R["sudachi-wasm"].extra.modeA.map((m) => [m.text, m.a.join(" / "), m.c.join(" / ")]));
+  if (R["sudachi-wasm"]) {
+    md.push("## Sudachi split modes (sudachi-wasm only)");
+    table(["Text", "Mode A", "Mode C"], R["sudachi-wasm"].extra.modeA.map((m) => [m.text, m.a.join(" / "), m.c.join(" / ")]));
+  }
 
   for (const tx of TEXTS) {
     md.push(`## Text: ${tx}`);
@@ -271,11 +288,11 @@ function report() {
     md.push(`Most frequent regions, in the order ${CANDIDATES.join(" / ")}:`, "");
     for (const [k, n] of [...diff].sort((a, b) => b[1] - a[1]).slice(0, 25)) md.push(`- ${n}× ${k}`);
 
-    md.push("", "### Lemma disagreement on identical spans", "", `${sameSpan} content tokens have the same span in all five candidates. The lemma string differs in ${lemmaDisagree} of them (${((100 * lemmaDisagree) / sameSpan).toFixed(1)}%).`, "", `Most frequent, in the order ${CANDIDATES.join(" / ")}:`, "");
+    md.push("", "### Lemma disagreement on identical spans", "", `${sameSpan} content tokens have the same span in all candidates. The lemma string differs in ${lemmaDisagree} of them (${((100 * lemmaDisagree) / sameSpan).toFixed(1)}%).`, "", `Most frequent, in the order ${CANDIDATES.join(" / ")}:`, "");
     for (const [k, n] of [...lemmaDiff].sort((a, b) => b[1] - a[1]).slice(0, 25)) md.push(`- ${n}× ${k}`);
     md.push("");
   }
-  writeFileSync("results.md", md.join("\n"));
+  writeFileSync(process.env.RESULTS ?? "results.md", md.join("\n"));
   console.log("wrote results.md", md.length, "lines");
 }
 

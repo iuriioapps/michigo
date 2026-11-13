@@ -1,0 +1,7 @@
+node_modules/
+dicts/
+out*/
+dist/
+vendor/
+result*.json
+package-lock.json

@@ -1,0 +1,1 @@
+{ "name": "cli-test", "private": true, "type": "module", "devDependencies": { "tsdown": "0.23.0", "lindera-wasm": "6.2.0", "typescript": "^5" } }
