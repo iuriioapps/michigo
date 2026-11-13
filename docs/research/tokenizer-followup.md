@@ -25,7 +25,7 @@ A throwaway Electron 44 app was packaged with the same fuses as the desktop app 
 | Native `lindera` binding from `app.asar.unpacked`, no rebuild | Works on all four |
 | Dictionary read from `extraResources` | Works on all four |
 | One-file CLI bundle (tsdown, WASM inlined as bytes) | 2.43 MB, runs from an empty folder on all four |
-| Same tokens on every platform | Yes for macOS and Linux. The Windows hash differed for every candidate, which points at CRLF in the checked-out text files. A rerun with the line-ending fix is on the branch. |
+| Same tokens on every platform | Yes. The token hash is identical on macOS x64, macOS arm64, Linux x64 and Windows x64. The first Windows run differed only because git checked the text files out with CRLF. |
 
 The native binding is a per-platform optional dependency, so it cannot go into the one-file CLI. The WASM build can.
 
@@ -33,8 +33,8 @@ The native binding is a per-platform optional dependency, so it cannot go into t
 
 | Build | Startup | Memory |
 | --- | --- | --- |
-| WASM, UniDic 2.1.2 | 150 to 1,050 ms, by platform | WASM heap 382 MB on every platform. RSS after load 450 to 680 MB, because the file buffers stay for a while |
-| Native, UniDic 2.1.2 | 5 to 40 ms | 40 to 55 MB after load. 240 to 360 MB after tokenizing all texts, as pages of the mapped file are touched |
+| WASM, UniDic 2.1.2 | 150 to 1,500 ms, by platform | WASM heap 382 MB on every platform. RSS after load 450 to 680 MB, because the file buffers stay for a while |
+| Native, UniDic 2.1.2 | 5 to 75 ms | 40 to 55 MB after load. 240 to 360 MB after tokenizing all texts, as pages of the mapped file are touched |
 
 **The WASM heap never shrinks, so only the end of the process returns the memory.** After a worker thread exits, RSS went back to 59 MB on Windows and 78 MB on Linux. On macOS it stayed near 300 MB. A utility process that exits after an import frees everything on every platform.
 
@@ -123,4 +123,3 @@ Character filters and token filters work in the native binding. Offsets still po
 - English words in lyrics stay unknown (17.6% of content tokens in the modern song). They need a rule, not a dictionary.
 - No candidate links とく to ておく. That stays with Grammar Patterns.
 - 鬼舞辻-style kanji names need the Names Word List.
-- The Windows token hash needs the rerun to confirm the CRLF explanation.
