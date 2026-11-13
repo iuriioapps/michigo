@@ -24,7 +24,7 @@ _Avoid_: term, lemma, token, entry
 
 ### Spelling
 
-One way of writing a word in its dictionary form, such as すごい or 凄い. A word has every Spelling that Michigo has seen for it. A Spelling has no Known state of its own.
+One way of writing a word in its dictionary form, such as すごい or 凄い. A word has every Spelling that Michigo has seen for it. A Spelling has its own reading, which can differ from the reading of another Spelling of the same word: みんな and 皆 are one word. A Spelling has no Known state of its own.
 
 _Avoid_: form, variant, surface
 
@@ -110,6 +110,6 @@ _Avoid_: source (alone), provider, TTS engine
 
 ### Clip
 
-One stored audio file of a word from one Audio Source. A word can hold several Clips. Audio of a sentence is not a Clip: Michigo keeps it only for a time.
+One stored audio file of one Spelling of a word, from one Audio Source. A Clip never stands for the word as a whole, because two Spellings of one word can sound different. A word can hold several Clips. Audio of a sentence is not a Clip: Michigo keeps it only for a time.
 
 _Avoid_: recording, sound, audio file
