@@ -2,7 +2,7 @@
 
 Read on 2026-11-13 from the license pages of each publisher. This is a reading of the license texts, not legal advice.
 
-Every data set that the earlier research marked as shippable also permits a copy on Michigo's own hosting. Hosting is redistribution, and each license grants it. Three points need care: the update duty for the EDRDG files, the SKIP codes inside KANJIDIC2, and the Jiten terms of service.
+Every data set that the earlier research marked as shippable also permits a copy on Michigo's own hosting. Hosting is redistribution, and each license grants it. Two points need care: the update duty for the EDRDG files and the Jiten terms of service.
 
 ## Summary
 
@@ -10,7 +10,7 @@ Every data set that the earlier research marked as shippable also permits a copy
 | --- | --- | --- | --- |
 | UniDic 2025.12 (tokenizer dictionary) | GPL v2, LGPL v2.1 or modified BSD, at the user's choice | Yes, under BSD | Copyright notice, conditions and disclaimer with the download. No use of the consortium's name for promotion. |
 | JMdict, JMnedict | CC BY-SA 4.0 plus the EDRDG licence | Yes | Credit on an About screen, in docs and on the website. License copy or link. A procedure for regular updates. |
-| KANJIDIC2 | CC BY-SA 4.0 plus the EDRDG licence | Yes, with one open point | The same as JMdict. The SKIP codes may be under a non-commercial license. |
+| KANJIDIC2 | CC BY-SA 4.0 plus the EDRDG licence | Yes | The same as JMdict, plus credit to Jack Halpern for the SKIP codes. |
 | Jitendex, jmdict-yomitan, jmdict-simplified | CC BY-SA 4.0 (data), EDRDG licence applies | Yes | The same as JMdict, plus credit to the repackager. |
 | Jiten frequency lists | CC BY-SA 4.0 | Yes by the license, unclear by the site terms | Attribution and share-alike. The terms forbid a mirror of the service. |
 | JMdict priority tags | Part of JMdict | Yes | Covered by JMdict. |
@@ -56,7 +56,7 @@ The licence says: "there must be a procedure for regular updating of the data fr
 
 ### SKIP codes in KANJIDIC2
 
-The EDRDG licence says that the SKIP codes are "under their own similar Creative Common licence". The current KANJIDIC wiki page names CC BY-NC-SA 4.0 for them, which forbids commercial use. The two pages do not agree, and this research did not settle which one holds. Michigo is free, but a non-commercial term on one field conflicts with a plain CC BY-SA label on the whole file. A hosted KANJIDIC2 without the SKIP field avoids the question.
+The EDRDG licence says that the SKIP codes are "under their own similar Creative Common licence". The KANJIDIC wiki names CC BY-NC-SA 4.0 for them. The rights holder's own page says CC BY-SA 4.0 with commercial use allowed. See the follow-up section.
 
 ### Repackagings
 
@@ -95,14 +95,37 @@ The EDRDG licence says that the SKIP codes are "under their own similar Creative
 - The acceptable use policy keeps a right to throttle or suspend when bandwidth is "significantly excessive in relation to other users of similar features". It gives no number.
 - GitHub describes releases as the way to give binary files to other people. No page says whether automatic downloads by every install of an app count as normal use.
 
-## Not verified
+## Follow-up on the open points
 
-- Which license the SKIP codes carry today.
-- The NINJAL page on commercial use (`commerce_use.html`).
-- The EDRDG sample attribution page, and the version of CC BY on Waller's lists (the site was not read).
-- OpenJLPT, which was not located in this pass.
-- GitHub's Additional Product Terms, which may hold more wording on bandwidth.
+None of the open points blocks a launch. Each was read again from its primary source.
+
+### SKIP codes: not a blocker
+
+Jack Halpern's own page says: "As of December 12, 2014, the SKIP coding system and all established SKIP codes have been placed under a Creative Commons Attribution-ShareAlike 4.0 International." It allows use "for any purpose, even commercially". The EDRDG licence points to that page. Only the KANJIDIC wiki names a non-commercial license, with no source, and it cites the same page.
+
+The rights holder's statement is the stronger source, so KANJIDIC2 can be hosted whole. Halpern asks for this credit: the SKIP system "was developed by Jack Halpern (Kanji Dictionary Publishing Society at http://www.kanji.org/), and is used with his permission". Michigo is free in any case, so even the non-commercial reading would not forbid it.
+
+### UniDic commercial use: not a blocker
+
+The NINJAL page on commercial use says that the written-language UniDic from version 2.x on is "完全なフリーソフトウェア" (fully free software) under the triple license, and that commercial use is free. Prior consultation applies only to dictionaries under other licenses, such as the historical ones under CC BY-NC-SA.
+
+### EDRDG credit wording: settled
+
+The sample for a software package is: "This package uses the JMdict/EDICT and KANJIDIC dictionary files. These files are the property of the Electronic Dictionary Research and Development Group, and are used in conformance with the Group's licence." Any reasonable variant is accepted.
+
+### GitHub Releases: not a blocker, with a watch point
+
+The terms for additional products do not mention release assets. They forbid use as a content delivery network for Actions and Codespaces only. The GitHub Pages limits page itself suggests releases for heavy downloads. The 2 GiB file limit holds on the Free plan. No bandwidth number exists, so GitHub's right to throttle stays a matter of its judgment. The download URL should be a setting in the app, so the host can change without a new release.
+
+### JLPT lists: not a blocker
+
+OpenJLPT exists at https://github.com/evanclan/OpenJLPT under CC BY-SA 4.0, with JSON, CSV and SQLite files and a NOTICE file for its sources. Waller's own site (tanos.co.uk) does not resolve, so the version of his CC BY license was not read. The earlier JLPT research read the license through the Wayback Machine. Michigo would host a downstream list (yomitan-jlpt-vocab or OpenJLPT), which states its own license, and credit Waller by name.
+
+## Still not verified
+
 - The license files inside jmdict-simplified and the legal page of Jitendex.
+- The NOTICE file of OpenJLPT.
+- Whether Jiten accepts a hosted copy of its lists. Only Jiten can answer that.
 
 ## Sources
 
@@ -112,4 +135,6 @@ The EDRDG licence says that the SKIP codes are "under their own similar Creative
 - https://jitendex.org/pages/downloads.html, https://github.com/yomidevs/jmdict-yomitan, https://github.com/scriptin/jmdict-simplified
 - https://jiten.moe/terms, https://jiten.moe/frequency-dictionaries, https://jiten.moe/guides/deck-licensing
 - https://github.com/stephenmk/yomitan-jlpt-vocab, https://github.com/rspeer/wordfreq, https://github.com/tofugu/japanese-vocabulary-pronunciation-audio
+- https://www.kanji.org/kanji/dictionaries/skip_permission.htm, https://www.edrdg.org/edrdg/sample.html, https://clrd.ninjal.ac.jp/unidic/commerce_use.html, https://github.com/evanclan/OpenJLPT
+- https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features, https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits
 - https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases, https://docs.github.com/en/site-policy/acceptable-use-policies/github-acceptable-use-policies
