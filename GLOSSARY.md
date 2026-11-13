@@ -72,11 +72,11 @@ _Avoid_: grammar point, rule
 
 ### Reference data
 
-External data that describes words: a Dictionary, a JLPT list or a frequency list. Michigo downloads it, and the learner does not load it from a file of their own. Removing it changes nothing in the Word Bank or in any Word List.
+External data that describes words: a Dictionary, a JLPT list or a frequency list. Michigo downloads it when its license permits a hosted copy, and the learner can import more from a file. Removing it changes nothing in the Word Bank or in any Word List.
 
 ### Dictionary
 
-An external reference for meanings and readings. The Michigo installer holds none: Michigo downloads each Dictionary. The learner can work without one.
+An external reference for meanings and readings. The Michigo installer holds none: Michigo downloads a Dictionary, and the learner can import additional ones. The learner can work without one.
 
 _Avoid_: glossary, word database
 
