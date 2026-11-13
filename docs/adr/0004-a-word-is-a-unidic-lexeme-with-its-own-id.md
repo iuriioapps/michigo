@@ -2,7 +2,7 @@
 
 A word in the Word Bank is one UniDic lexeme: the pair 語彙素 and 語彙素読み that the tokenizer reports for a token. Each word also has an ID that Michigo creates. The lexeme pair is stored text that finds the word. It is not the ID. Under each word, Michigo records every Spelling it has seen (the lemma as written).
 
-A word that the learner knows must count as Known in every text, in kana or in kanji. Only the lexeme does that: すごい, 凄い, スゴイ and すげぇ share one lexeme, and the lemma as written keeps them apart. The Word Bank must also work with no Dictionary installed, so a Dictionary entry ID cannot be the identity. UniDic is tokenizer data that Michigo provides, not a Dictionary, so the lexeme is always available.
+A word that the learner knows must count as Known in every text, in kana or in kanji. Only the lexeme does that: すごい, 凄い, スゴイ and すげぇ share one lexeme. The lemma as written keeps すごい, 凄い and スゴイ apart, and it reports すげぇ as すごい. The Word Bank must also work with no Dictionary installed, so a Dictionary entry ID cannot be the identity. UniDic is tokenizer data that Michigo provides, not a Dictionary, so the lexeme is always available.
 
 ## The identity rule
 
@@ -14,7 +14,7 @@ Michigo takes the tokenizer's choice of lexeme as it is. A word displays with th
 
 ## Considered options
 
-- Lemma as written plus reading. Rejected: a learner who knows すごい would see 凄い and すげぇ as unknown words.
+- Lemma as written plus reading. Rejected: a learner who knows すごい would see 凄い and スゴイ as unknown words.
 - Dictionary entry ID (JMdict). Rejected: the Word Bank must not depend on a Dictionary, and a word must stay when a Dictionary goes.
 - The lexeme pair as the primary key, with no ID. Rejected: 2.2% of tokens change lexeme between UniDic versions, so a dictionary change would lose words.
 - Known for each Spelling. Rejected for v1: it doubles the bookkeeping. The recorded Spellings leave room for it.
