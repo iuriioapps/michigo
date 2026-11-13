@@ -52,7 +52,7 @@ UniDic 2023.02 (written, CWJ) and its spoken variant (CSJ) were built for Linder
 
 - The new dictionaries know 禰豆子, 炭治郎, スマホ and ボカロ. They cut other unknown names differently, not better (フリーレン becomes フリー + レン).
 - やべぇ is still broken (やべ + ぇ), and あかん is still あ + かん.
-- The connection matrix is 800 MB. Lindera's own UniDic 2.1.2 build compacts it to 71 MB with a context ID map, and `buildDictionary` did not do that.
+- The connection matrix is 800 MB. The 2.1.2 matrix is 71 MB because that version has only 5,981 context IDs on each side, not because Lindera compacts it. See `tokenizer-unidic-versions.md`.
 - These dictionaries are too large for the WASM heap. They were run with the native binding only.
 
 ## Grouping keys change between UniDic versions

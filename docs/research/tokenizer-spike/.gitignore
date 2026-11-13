@@ -10,3 +10,6 @@ unidic-new/*-out/
 unidic-new/*.zip
 sample.json
 sample.txt
+sample2.json
+raw/
+unidic-new/*.zst
