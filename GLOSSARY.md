@@ -46,6 +46,12 @@ _Avoid_: known list, vocabulary
 
 The state of a word in the Word Bank that the learner can already read. A learner can forget a word: it becomes unknown and stays in the Word Bank.
 
+### Grammar Pattern
+
+A grammatical construction, such as 〜てしまう, that Michigo detects in a Source to show the learner which grammar the text needs. The learner marks it Known the same way as a word. It never changes coverage.
+
+_Avoid_: grammar point, rule
+
 ### Reference data
 
 External data that the learner imports to describe words: a Dictionary, a JLPT list or a frequency list. Removing it changes nothing in the Word Bank or in any Word List.
