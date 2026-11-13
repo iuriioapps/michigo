@@ -98,6 +98,34 @@ for (const [name, lines] of Object.entries(texts)) {
 table(["Text", "Lines", "Part of speech only", "+ letter or digit", "+ half-width katakana", "+ joined runs", "Tokens removed by joining", "Full NFKC, no joining"], rows);
 md.push("### What is still unknown after all fixes", "", top(leftover, 60), "", "### Most frequent joined runs", "", top(mergedEx, 40));
 
+// Katakana runs: UniDic cuts an unknown katakana word into dictionary words (フリーレン becomes フリー + レン)
+md.push("", "## Joining katakana runs");
+{
+  const KATA = /^[\p{sc=Katakana}ー]+$/u;
+  const join = (toks, strict) => {
+    const out = [];
+    for (const t of toks) {
+      const p = out.at(-1);
+      if (p && p.e === t.b && KATA.test(p.s) && KATA.test(t.s) && (!strict || p.short || t.oov || t.s.length <= 2)) {
+        p.s += t.s; p.e = t.e; p.key = p.s; p.joined = true; p.short = false;
+      } else out.push({ ...t, short: t.oov || t.s.length <= 2 });
+    }
+    return out;
+  };
+  const all = [], strictOnly = [];
+  let lines = 0, changedAll = 0, changedStrict = 0;
+  for (const [name, ls] of Object.entries(texts)) for (const line of ls) {
+    lines++;
+    const toks = base(line);
+    const a = join(toks, false).filter((t) => t.joined), b = join(toks, true).filter((t) => t.joined);
+    if (a.length) changedAll++;
+    if (b.length) changedStrict++;
+    all.push(...a.map((t) => t.s)); strictOnly.push(...b.map((t) => t.s));
+  }
+  const strictSet = new Set(strictOnly);
+  md.push(`Joining every run of adjacent katakana tokens changes ${changedAll} of ${lines} lines (${all.length} joins, ${new Set(all).size} distinct). Joining only when a piece is unknown or at most two characters long changes ${changedStrict} lines (${strictOnly.length} joins, ${strictSet.size} distinct).`, "", "### Most frequent joins under the narrow rule", "", top(strictOnly, 60), "", "### Joins that only the wide rule makes", "", top(all.filter((s) => !strictSet.has(s)), 60));
+}
+
 // 4: user dictionary at scale
 md.push("", "## User dictionary at 10,000 entries");
 {

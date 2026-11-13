@@ -135,7 +135,7 @@ async function run(name) {
   let n = 0;
   const t1 = performance.now();
   for (const tx of TEXTS) {
-    const lines = readFileSync(`texts/${tx}.txt`, "utf8").split("\n").filter(Boolean);
+    const lines = readFileSync(`texts/${tx}.txt`, "utf8").split(/\r?\n/).filter(Boolean);
     out.texts[tx] = lines.map((line) => {
       const toks = tokenize(line);
       n += toks.length;

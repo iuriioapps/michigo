@@ -1,6 +1,6 @@
 # Tokenizer spike: what the candidates output
 
-Measured on 2026-11-12 with Node 24.22.1 on macOS arm64. This replaces the "unknown" cells in `docs/research/tokenizer.md` with output from real runs. The full tables are in `tokenizer-spike/results.md`. The script is `tokenizer-spike/spike.mjs`.
+Measured on 2026-11-12 with Node 24.22.1 on macOS x64 (Intel). This replaces the "unknown" cells in `docs/research/tokenizer.md` with output from real runs. The full tables are in `tokenizer-spike/results.md`. The script is `tokenizer-spike/spike.mjs`.
 
 ## Candidates
 

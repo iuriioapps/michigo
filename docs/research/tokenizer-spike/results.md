@@ -1,6 +1,6 @@
 # Tokenizer spike: measured output
 
-Node v24.22.1, macOS arm64. Token notation: `surface[lemma ⇒ grouping key]`. The grouping key appears only when it differs from the lemma. A `?` after the surface marks an unknown word.
+Node v24.22.1, macOS x64 (Intel). Token notation: `surface[lemma ⇒ grouping key]`. The grouping key appears only when it differs from the lemma. A `?` after the surface marks an unknown word.
 
 ## Startup, memory and speed
 
