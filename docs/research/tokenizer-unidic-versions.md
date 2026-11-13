@@ -98,11 +98,22 @@ Of 136,999 known content tokens with the same span in 2.1.2 and 2025.12, the lex
 
 A Word Bank that starts on one version needs a key mapping to move to another. Starting on the version that v1 keeps avoids that migration.
 
+## Build on a runner and tokens on three platforms
+
+Measured later on 2026-11-13 with the throwaway workflow `.github/workflows/unidic-build-spike.yml` on standard GitHub runners.
+
+- The build works on `ubuntu-latest` (16 GB of RAM). The whole job takes 8.5 minutes: 100 s to download from NINJAL, 111 s and 2.3 GB to compact, 13 s and a peak of 13.3 GB to build, and about 4 minutes to pack with `zstd -19`.
+- **The margin is thin: 13.3 GB of 15 GB usable.** A larger release of UniDic or a smaller runner breaks the build.
+- Disk is no limit. The runner had 87 GB free, and the job used 7 GB, because it extracts only `lex.csv`, `unk.def`, `char.def` and `matrix.bin`.
+- The build is reproducible. All nine files have the same SHA-256 on the runner (Linux) and on the local macOS x64 build.
+- The archive is 383,781,941 bytes as `tar.zst`.
+- The tokens are the same on every platform. The native binding gives the token hash `e3329e359bff0335` on Linux x64, Windows x64, macOS arm64 and macOS x64 for `prose` and `lyrics-classic`.
+- RSS after load is 41 to 55 MB, and the load takes 7 to 46 ms.
+
 ## Not measured
 
 - An uncompacted 2025.12 build, to prove that compaction changes no token. The compaction keeps every cost by construction.
 - 3.1.1 in the judged sample.
-- Windows and Linux. The earlier follow-up found identical tokens on all platforms for 2.1.2.
+- A packaged Electron app with the 2025.12 dictionary. The earlier follow-up proved the binding in a packaged app with 2.1.2.
 - The spoken-language variant (CSJ) of 2025.12.
-- A build on a CI runner. The build needs 13 GB of RAM, and a standard GitHub runner has 16 GB.
 - A dictionary with fewer detail columns.
