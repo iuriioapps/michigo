@@ -1,0 +1,82 @@
+# Throwaway: builds UniDic 2025.12 for Lindera on a standard runner, then checks the tokens on three platforms.
+# Lives only on the research branch.
+name: UniDic build spike
+
+on:
+  push:
+    branches: [research/tokenizer-spike]
+    paths:
+      - .github/workflows/unidic-build-spike.yml
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+    working-directory: docs/research/tokenizer-spike
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm install
+      - name: Download the source from NINJAL
+        working-directory: docs/research/tokenizer-spike/unidic-new
+        run: |
+          free -g && df -h .
+          curl -sSL --retry 3 -o src.zip https://clrd.ninjal.ac.jp/unidic_archive/2512/unidic-cwj-202512_full.zip
+          sha256sum src.zip
+          # matrix.def is 8 GB of text. compact.mjs reads matrix.bin instead.
+          unzip -q src.zip lex.csv unk.def char.def matrix.bin 'license/*' -d 202512-src
+          rm src.zip
+      - name: Compact
+        working-directory: docs/research/tokenizer-spike/unidic-new
+        run: /usr/bin/time -v node --max-old-space-size=8000 compact.mjs 202512-src 202512-compact-src 2>&1 | grep -v -E "^\s+(Page|Swaps|File|Socket|Signals|Voluntary|Involuntary|Average|Major|Minor|Exit)"
+      - name: Build
+        working-directory: docs/research/tokenizer-spike/unidic-new
+        run: |
+          rm 202512-src/matrix.bin
+          node build.cjs 202512-compact-src 202512-out
+          cp -r 202512-src/license 202512-out/
+          df -h . && ls -l 202512-out && sha256sum 202512-out/*.*
+      - name: Archive size
+        working-directory: docs/research/tokenizer-spike/unidic-new
+        run: |
+          tar -cf - 202512-out | zstd -19 -T0 -q -o 202512-lindera.tar.zst
+          ls -l 202512-lindera.tar.zst && sha256sum 202512-lindera.tar.zst
+      - uses: actions/upload-artifact@v4
+        with:
+          name: unidic-202512-lindera
+          path: docs/research/tokenizer-spike/unidic-new/202512-out
+          compression-level: 1
+          retention-days: 3
+
+  check:
+    needs: build
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: actions/download-artifact@v4
+        with:
+          name: unidic-202512-lindera
+          path: docs/research/tokenizer-spike/unidic-new/202512-out
+      - run: npm install
+      - name: Tokenize on this platform
+        env:
+          TEXTS: prose,lyrics-classic
+          OUT: out-ci
+        run: |
+          node --expose-gc spike.mjs run lindera-native-unidic202512
+          node ci-hash.mjs
