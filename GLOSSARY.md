@@ -16,6 +16,24 @@ A named group of Sources that the learner organizes and measures together.
 
 _Avoid_: collection, shelf, library
 
+### Word
+
+One vocabulary item of Japanese, whatever its Spelling or inflection: すごい, 凄い and すげぇ are one word. Two items with the same Spelling and different readings are two words, such as 人 read ひと and 人 read じん. A particle or an auxiliary is also a word.
+
+_Avoid_: term, lemma, token, entry
+
+### Spelling
+
+One way of writing a word in its dictionary form, such as すごい or 凄い. A word has every Spelling that Michigo has seen for it. A Spelling has no Known state of its own.
+
+_Avoid_: form, variant, surface
+
+### Unrecognized
+
+A piece of Japanese text in a Source that Michigo could not identify as a word, often a name or an invented term. It is not in the Word Bank. The learner can promote it to a word, or put it in Names or Stopwords.
+
+_Avoid_: junk, unknown word
+
 ### Word List
 
 A named group of words that the learner manages, such as "Magic-related words". It is either global or owned by one Project, and a word can be in many Word Lists.
