@@ -21,7 +21,7 @@
     "@michigo/vocab": "workspace:*",
     "@oclif/core": "^5.1.7",
     "@types/node": "catalog:",
-    "tsdown": "^0.23.0",
+    "tsdown": "^0.23.7",
     "tsx": "^4.23.15",
     "typescript": "catalog:",
     "vitest": "catalog:",
