@@ -118,6 +118,16 @@ Fourteen of the 17 raw UniDic errors are unknown katakana names cut into diction
 
 Character filters and token filters work in the native binding. Offsets still point at the original text, and an invalid filter name raises an error. In `lindera-wasm` 6.2.0 with a dictionary loaded from bytes they do nothing and raise no error. No issue about this was found in the Lindera tracker.
 
+### Lindera's compound-word filter
+
+Tested through the native binding with `tokenizer-spike/compound.cjs`. The filter needs the full four-part tag (`名詞,普通名詞,一般,*`). A two-part tag joins nothing except numerals.
+
+- With `名詞,数詞` it joins digits: 2·0·2·5 becomes 2025.
+- With the common-noun, place-name and noun-suffix tags it joins 封魔鉱, 冒険者, 日本人, 大学生 and 自転車.
+- In the same run it left 魔法 + 使い and フリー + レン apart, and it does not join Latin letters.
+
+It joins every run of the listed tags, so it turns UniDic's short units into long ones across the whole text. It is not available in the WASM build, so the CLI could not use it.
+
 ## Still open
 
 - English words in lyrics stay unknown (17.6% of content tokens in the modern song). They need a rule, not a dictionary.
