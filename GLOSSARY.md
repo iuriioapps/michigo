@@ -70,6 +70,12 @@ A grammatical construction, such as 〜てしまう, that Michigo detects in a S
 
 _Avoid_: grammar point, rule
 
+### Tokenizer dictionary
+
+The data that Michigo needs to split text into words. Michigo downloads it on first start and cannot work without it. It is not Reference data and not a Dictionary: the learner never imports, replaces or removes it.
+
+_Avoid_: UniDic dictionary, dictionary (alone)
+
 ### Reference data
 
 External data that describes words: a Dictionary, a JLPT list or a frequency list. Michigo downloads it when its license permits a hosted copy, and the learner can import more from a file. Removing it changes nothing in the Word Bank or in any Word List.

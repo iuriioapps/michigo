@@ -24,10 +24,19 @@ Keeping new code on the correct side of this split is much cheaper than untangli
 
 Vite and tsdown bundle `devDependencies` and leave `dependencies` external. Consequences:
 
-- The CLI bundle is one file today. That is a result of the bundling, not a requirement: the CLI may ship with native modules and with data that it downloads, such as the tokenizer dictionary.
+- The CLI's own code bundles into one file. The CLI as a whole is not one file: it ships inside the desktop app's install, with the native tokenizer binding beside it, and it reads the tokenizer dictionary that the app downloads.
 - electron-builder copies only `dependencies` into the packaged app, so an empty `dependencies` keeps the app small and avoids pnpm symlink problems.
 
-`dependencies` is reserved for things that genuinely cannot be bundled: native modules, or `electron-updater` when it lands.
+`dependencies` is reserved for things that genuinely cannot be bundled: native modules, or `electron-updater` when it lands. The native Lindera binding is the first such entry, in both apps.
+
+## Tokenizer
+
+Decided in `docs/adr/0005-unidic-2025-12-with-the-native-lindera-binding.md`. The rules for code:
+
+- Use the native `lindera` binding only, never `lindera-wasm`. The WASM build needs a 2 GB heap for this dictionary, and Lindera's filters do nothing in it.
+- The tokenizer dictionary is never in the repo, the installer or a bundle. It downloads on first start into one folder per build in the shared data folder.
+- One constant names the dictionary build (UniDic version plus Lindera version). Both apps refuse to tokenize with any other build.
+- Do not change the UniDic version within a major version of Michigo. Lexeme keys differ between versions, so a change is a migration.
 
 ## Validate at the IPC boundary
 
@@ -52,7 +61,7 @@ Never expose `ipcRenderer` itself to the page, only named functions.
 
 ## Adding a CLI command
 
-The CLI uses oclif with the `explicit` command strategy, because the bundled CLI is one file and has no `commands/` directory to glob.
+The CLI uses oclif with the `explicit` command strategy, because the CLI's own code bundles into one file and has no `commands/` directory to glob.
 
 1. Write the command class as the default export of `apps/cli/src/commands/<name>.ts`.
 2. Register it in `COMMANDS` in `apps/cli/src/index.ts`. The key is the command ID.
