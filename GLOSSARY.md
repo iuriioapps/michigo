@@ -101,3 +101,15 @@ A copy of the learner's database alone, which Michigo takes automatically and ke
 A single file that holds everything needed to restore Michigo: the database, plus media and Dictionaries when the learner includes them. The learner or a schedule creates it.
 
 _Avoid_: dump, archive, export
+
+### Audio Source
+
+One entry in the learner's ordered list that can return audio for a word or a sentence: a publisher of recorded audio, a voice of the operating system, a cloud voice or a custom URL. Michigo asks them in order and takes the first audio it gets. Every Audio Source is off until the learner turns it on. Never shorten it to "source": a Source is a text.
+
+_Avoid_: source (alone), provider, TTS engine
+
+### Clip
+
+One stored audio file of a word from one Audio Source. A word can hold several Clips. Audio of a sentence is not a Clip: Michigo keeps it only for a time.
+
+_Avoid_: recording, sound, audio file
