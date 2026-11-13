@@ -24,7 +24,7 @@ Keeping new code on the correct side of this split is much cheaper than untangli
 
 Vite and tsdown bundle `devDependencies` and leave `dependencies` external. Consequences:
 
-- The CLI ships as one self-contained file with no install-time dependencies.
+- The CLI bundle is one file today. That is a result of the bundling, not a requirement: the CLI may ship with native modules and with data that it downloads, such as the tokenizer dictionary.
 - electron-builder copies only `dependencies` into the packaged app, so an empty `dependencies` keeps the app small and avoids pnpm symlink problems.
 
 `dependencies` is reserved for things that genuinely cannot be bundled: native modules, or `electron-updater` when it lands.
