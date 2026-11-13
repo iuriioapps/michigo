@@ -3,6 +3,7 @@
 //   node spike.mjs report                        -> results.md
 import { readFileSync, writeFileSync, mkdirSync, promises } from "node:fs";
 import assert from "node:assert";
+import { fileURLToPath } from "node:url";
 
 const CANDIDATES = (process.env.CANDS ?? "lindera-unidic,lindera-sudachidict,lindera-ipadic,kuromoji,sudachi-wasm").split(",");
 const OUT = process.env.OUT ?? "out";
@@ -54,24 +55,28 @@ async function loadLindera(dictName, { nfkc = false, userCsv } = {}) {
     });
 }
 
+async function loadNative(dir) {
+  const { createRequire } = await import("node:module");
+  const { TokenizerBuilder } = createRequire(import.meta.url)("lindera");
+  const b = new TokenizerBuilder();
+  b.setDictionary(fileURLToPath(new URL(dir, import.meta.url)));
+  b.setMode("normal");
+  const tok = b.build();
+  return (line) =>
+    tok.tokenize(line).map((t) => {
+      const d = t.details, s = t.surface;
+      return { s, b: utf16(line, t.byteStart), e: utf16(line, t.byteEnd), oov: t.isUnknown, pos: d[0], lemma: star(d[10], s), reading: star(d[9], ""), group: d[7] && d[7] !== "*" ? `${d[7]}(${d[6]})` : s };
+    });
+}
+
 const loaders = {
   "lindera-unidic": () => loadLindera("unidic"),
   "lindera-sudachidict": () => loadLindera("sudachidict"),
   "lindera-ipadic": () => loadLindera("ipadic"),
-  // Native napi binding: same engine and dictionary files, loaded by path
-  "lindera-native-unidic": async () => {
-    const { createRequire } = await import("node:module");
-    const { TokenizerBuilder } = createRequire(import.meta.url)("lindera");
-    const b = new TokenizerBuilder();
-    b.setDictionary(new URL("dicts/lindera-unidic", import.meta.url).pathname);
-    b.setMode("normal");
-    const tok = b.build();
-    return (line) =>
-      tok.tokenize(line).map((t) => {
-        const d = t.details, s = t.surface;
-        return { s, b: utf16(line, t.byteStart), e: utf16(line, t.byteEnd), oov: t.isUnknown ?? d[6] === "*", pos: d[0], lemma: star(d[10], s), reading: star(d[9], ""), group: d[7] && d[7] !== "*" ? `${d[7]}(${d[6]})` : s };
-      });
-  },
+  // Native napi binding: same engine, dictionary loaded by path
+  "lindera-native-unidic": () => loadNative("dicts/lindera-unidic"),
+  "lindera-native-unidic2023": () => loadNative("unidic-new/cwj-out"),
+  "lindera-native-unidic-csj": () => loadNative("unidic-new/csj-out"),
   kuromoji: async () => {
     const k = await import("@patdx/kuromoji");
     const { default: Loader } = await import("@patdx/kuromoji/node");
