@@ -22,7 +22,7 @@ Three things stand out:
 
 - The JMdict file is larger than its unzipped JSON (171 MB), which is 11 times the size of the zip. The glossary is Yomitan structured content.
 - Storing the glossary compressed cuts JMdict to 127 MB, but the build goes from 7 s to more than 4 minutes.
-- **With one index on spelling and one on reading, a lookup by spelling plus reading in JMnedict takes 55 ms, not 25 µs.** A combined index on spelling and reading removes the problem.
+- **With one index on spelling and one on reading, a lookup by spelling plus reading in JMnedict takes 55 ms, not 25 µs.** A combined index on spelling and reading removes the problem. So does `ANALYZE` at the end of the build, with no extra index: see [`ANALYZE` alone fixes the plan](#analyze-alone-fixes-the-plan).
 
 ## Setup
 
@@ -180,7 +180,18 @@ In JMnedict, 498,923 of 668,033 rows have an empty reading, so a lookup with an 
 SEARCH terms USING INDEX terms_expression_reading (expression=? AND reading=?)
 ```
 
-The script does not run `ANALYZE`. Whether `ANALYZE` alone changes the plan was not measured.
+The build script does not run `ANALYZE`.
+
+### `ANALYZE` alone fixes the plan
+
+Measured afterward on a copy of the plain JMnedict file, with `docs/research/dictionary-file-size/analyze.mjs` and 1,000 lookups by spelling plus reading.
+
+| State            | Index that SQLite picks | Median  | p95     |
+| ---------------- | ----------------------- | ------- | ------- |
+| Before `ANALYZE` | reading                 | 53.8 ms | 61.1 ms |
+| After `ANALYZE`  | spelling                | 20 µs   | 24 µs   |
+
+`ANALYZE` takes 0.14 s and adds 4 kB to the 62.5 MB file. So the plain schema with two indexes is sufficient when the build ends with `ANALYZE`, and the combined index (4 MB more for JMnedict, 9 MB more for JMdict) is not needed for speed.
 
 ### Most JMnedict rows have no reading in the reading field
 
