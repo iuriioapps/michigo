@@ -13,8 +13,8 @@ All checks ran on 2026-11-13.
 | Format rules | Read from the specification or from the reference implementation named in each section |
 | Package metadata | `npm view <package>` for version, license, release date, dependencies, unpacked size and types |
 | Repository state | `gh api repos/<owner>/<repo>` for the archived flag and the last push |
-| Parser behavior | Read from the published source of each package. The packages were installed with `--ignore-scripts` but not executed, so behavior claims come from the code, not from a run |
-| `TextDecoder` behavior | Run on Node 24.22.1 with ICU 78.3 (full ICU). Not run inside Electron 44 |
+| Parser behavior | Read from the published source of each package. Afterward `subsrt-ts`, `ass-compiler` and `lrc-kit` were run on small hand-made samples: see [What a run on sample files shows](#what-a-run-on-sample-files-shows). `media-captions`, `subtitle`, `node-webvtt` and `clrc` were not run |
+| `TextDecoder` behavior | Run on Node 24.22.1 with ICU 78.3 (full ICU), and afterward inside Electron 44.4.5 run as Node (Node 24.21.0, ICU 78.2), with the same result |
 
 Anything that no primary source confirmed is listed under [What is not verified](#what-is-not-verified).
 
@@ -419,6 +419,43 @@ The source of `ass-compiler` shows that `parse`:
 
 These came up in the search and are listed so that nobody checks them again: `subsrt` 1.1.1 (2019, no types, the origin of `subsrt-ts`), `srt-parser-2` 1.2.3 (2023), `subtitles-parser` 0.0.2 (2013), `subtitle-converter` 3.0.12 (2022, 6 dependencies), `lrc-parser` 1.0.1 (2018), `lrc.js` 1.0.2 (2018), `lyric-parser` 1.0.1 (2017).
 
+## What a run on sample files shows
+
+`docs/research/source-formats/parser-check.mjs` runs `subsrt-ts` 2.1.3, `ass-compiler` 0.1.16 and `lrc-kit` 1.2.1 on small samples written for this check. Every gap that the source reading found is confirmed, and the run found three more.
+
+### `subsrt-ts` on SRT
+
+| Sample | Result |
+| --- | --- |
+| Three plain blocks | All three are returned. `{\an8}` and `<i>` are removed, and `（田中）` stays in the text |
+| A BOM before the first block | The first block is dropped without an error |
+| Coordinates on a timing line | That block is dropped without an error |
+| CRLF line ends | All three blocks are returned |
+
+The text of the last block ends with `\r\n` in every sample, also when the input uses LF. This was not seen in the source reading.
+
+### LRC
+
+| Sample | `subsrt-ts` | `lrc-kit` |
+| --- | --- | --- |
+| `[00:01.00][00:20.00]` before one line | One line at 1 s. The second tag stays in the text as `[00:20.00]繰り返す歌詞` | Two lines, at 1 s and at 20 s |
+| Enhanced word tags `<00:05.00>一 <00:06.00>二` | The tags stay in the text | The text is `一 二`, and the word times are returned apart |
+
+So the second time tag is not only ignored by `subsrt-ts`: it lands in the text.
+
+### ASS
+
+| Sample | `subsrt-ts` | `ass-compiler` |
+| --- | --- | --- |
+| Text that holds a comma | Rejoined correctly | Rejoined correctly |
+| `\N` line break | Turned into a line end | Left in the text as `\N` |
+| Actor in the `Name` field | Not in the result | Returned as `Name` |
+| Drawing `{\p1}m 0 0 l 100 0 100 100{\p0}` | The drawing commands are returned as text | Returned as a drawing, with empty text |
+| `Comment:` event | Not returned | Returned apart from the dialogue |
+| Karaoke with readings `{\k20}漢 | かん{\k20}字 | じ` | `漢 | かん字 | じ` | `漢 | かん`and`字 | じ`, one part per karaoke tag |
+
+`subsrt-ts` also returns two entries with no text before the dialogue lines, for the sections of the file that are not events. No parser removes the `|かん` reading marks.
+
 ## Options
 
 ### Parsing
@@ -445,8 +482,7 @@ Decoding itself needs no library on Node 24 with full ICU.
 
 ## What is not verified
 
-- Whether `TextDecoder` in the main process of Electron 44 accepts `shift_jis`, `euc-jp` and `iso-2022-jp`. It depends on the ICU data that Electron ships.
-- Parser behavior on real files. The claims above come from reading source. Running the packages on sample files was not possible in this session.
+- Parser behavior on real files. Three parsers were run on hand-made samples only. `media-captions`, `subtitle`, `node-webvtt` and `clrc` were not run.
 - How often Japanese SRT files write readings in parentheses, and whether converters produce that form from ruby markup. No primary source was found.
 - Whether the Aegisub karaoke templater leaves the original lines as comments and marks generated lines in the `Effect` field. The page that was read does not say.
 - Rolling duplicate lines in automatically generated WebVTT captions.
