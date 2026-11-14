@@ -63,12 +63,12 @@ The 4 second length is the assumption of the ticket. A longer sentence scales ev
 
 No Polly page states the MP3 bitrate in kbps. The value of about 48 kbps is derived from a table on the [Polly features page](https://aws.amazon.com/polly/features/) that gives the size of one sample in each format:
 
-| Sampling rate | MP3 size | OGG size | PCM size |
-| --- | --- | --- | --- |
-| 24.00 kHz | 19.31 kB | 18.11 kB | N/A |
-| 22.05 kHz | 19.33 kB | 17.62 kB | N/A |
-| 16.05 kHz | 16.22 kB | 15.48 kB | 100.68 kB |
-| 8.00 kHz | 13.26 kB | 9.72 kB | 50.34 kB |
+| Sampling rate | MP3 size | OGG size | PCM size  |
+| ------------- | -------- | -------- | --------- |
+| 24.00 kHz     | 19.31 kB | 18.11 kB | N/A       |
+| 22.05 kHz     | 19.33 kB | 17.62 kB | N/A       |
+| 16.05 kHz     | 16.22 kB | 15.48 kB | 100.68 kB |
+| 8.00 kHz      | 13.26 kB | 9.72 kB  | 50.34 kB  |
 
 PCM is 16 bit mono, so 16 kHz is 32,000 bytes per second. The sample is 100,680 / 32,000 = 3.146 seconds long. The 8 kHz row agrees: 50,340 / 16,000 = 3.146 seconds. The 24 kHz MP3 is then 19,310 x 8 / 3.146 = 49,100 bits per second. That is a 48 kbps stream plus a header. This is a derivation from a marketing page, not a documented value.
 
@@ -86,7 +86,7 @@ The IAM user needs the `polly:DescribeVoices` permission for the list ([Describe
 
 | Option | Package | Version | License | Unpacked size | Note |
 | --- | --- | --- | --- | --- | --- |
-| Sign in Michigo with `node:crypto` | none | | | 0 | SigV4 is HMAC-SHA256 over a canonical request |
+| Sign in Michigo with `node:crypto` | none |  |  | 0 | SigV4 is HMAC-SHA256 over a canonical request |
 | Official signer only | `@smithy/signature-v4` | 5.7.5 | Apache-2.0 | 107 kB | Depends on `@smithy/core`, `@smithy/types`, `tslib` |
 | Third-party signer | `aws4fetch` | 1.0.20 | MIT | 66 kB | No dependencies. Not an AWS package |
 | Official SDK client | `@aws-sdk/client-polly` | 3.1169.0 | Apache-2.0 | 434 kB | Has 10 direct dependencies. The size of the full tree was not measured |
@@ -97,12 +97,12 @@ The IAM user needs the `polly:DescribeVoices` permission for the list ([Describe
 
 ### Japanese voices today
 
-| Voice | Gender | Standard | Neural | Long-form | Generative |
-| --- | --- | --- | --- | --- | --- |
-| Mizuki | Female | Yes | No | No | No |
-| Takumi | Male | Yes | Yes | No | No |
-| Kazuha | Female | No | Yes | No | No |
-| Tomoko | Female | No | Yes | No | No |
+| Voice  | Gender | Standard | Neural | Long-form | Generative |
+| ------ | ------ | -------- | ------ | --------- | ---------- |
+| Mizuki | Female | Yes      | No     | No        | No         |
+| Takumi | Male   | Yes      | Yes    | No        | No         |
+| Kazuha | Female | No       | Yes    | No        | No         |
+| Tomoko | Female | No       | Yes    | No        | No         |
 
 That is 2 standard and 3 neural voices, 4 distinct. Japanese has no generative and no long-form voice ([available voices](https://docs.aws.amazon.com/polly/latest/dg/available-voices.html)).
 
@@ -196,10 +196,10 @@ Microsoft calls its neural voices "Standard". Preview voices and Neural HD voice
 
 The [pricing page](https://azure.microsoft.com/en-us/pricing/details/speech/) fills in its prices with a script, so they were read from the [Azure Retail Prices API](https://prices.azure.com/api/retail/prices) for East US:
 
-| Meter | Price per 1M characters |
-| --- | --- |
-| S1 Neural Text To Speech Characters | $15 |
-| Neural HD Text to Speech Characters | $22 |
+| Meter                               | Price per 1M characters |
+| ----------------------------------- | ----------------------- |
+| S1 Neural Text To Speech Characters | $15                     |
+| Neural HD Text to Speech Characters | $22                     |
 
 The API has no meter with "Flash" or "MAI" in its name. The price of the two Neural HD Flash voices was not found.
 
@@ -235,12 +235,12 @@ The project must have billing enabled, also for the free allowance ([pricing](ht
 
 From the [voice table](https://cloud.google.com/text-to-speech/docs/list-voices-and-types):
 
-| Tier | Count | Names |
-| --- | --- | --- |
-| Standard | 4 | `ja-JP-Standard-A` to `-D` |
-| WaveNet | 4 | `ja-JP-Wavenet-A` to `-D` |
-| Neural2 | 3 | `ja-JP-Neural2-B`, `-C`, `-D` |
-| Chirp 3 HD | 30 | `ja-JP-Chirp3-HD-Achernar`, `-Aoede`, `-Charon`, `-Kore` and 26 more |
+| Tier       | Count | Names                                                                |
+| ---------- | ----- | -------------------------------------------------------------------- |
+| Standard   | 4     | `ja-JP-Standard-A` to `-D`                                           |
+| WaveNet    | 4     | `ja-JP-Wavenet-A` to `-D`                                            |
+| Neural2    | 3     | `ja-JP-Neural2-B`, `-C`, `-D`                                        |
+| Chirp 3 HD | 30    | `ja-JP-Chirp3-HD-Achernar`, `-Aoede`, `-Charon`, `-Kore` and 26 more |
 
 Japanese has no Studio voice. Gemini-TTS models are a separate family, priced by token. They were not examined.
 
@@ -266,12 +266,12 @@ Chirp 3 HD voices accept a short list of tags in synchronous requests, and `phon
 
 From the [pricing page](https://cloud.google.com/text-to-speech/pricing):
 
-| Tier | Free per month | Price per 1M characters |
-| --- | --- | --- |
-| Standard | 4 million characters | $4 |
-| WaveNet | 4 million characters | $4 |
-| Neural2 | 1 million characters | $16 |
-| Chirp 3 HD | 1 million characters | $30 |
+| Tier       | Free per month       | Price per 1M characters |
+| ---------- | -------------------- | ----------------------- |
+| Standard   | 4 million characters | $4                      |
+| WaveNet    | 4 million characters | $4                      |
+| Neural2    | 1 million characters | $16                     |
+| Chirp 3 HD | 1 million characters | $30                     |
 
 A Japanese character counts once: "you are only charged for one character, not multiple bytes." SSML tags count as characters, except `mark`.
 
@@ -305,12 +305,12 @@ A probe of `GET /v1/voices` without a key returned the 21 default voices. Every 
 
 From the [models page](https://elevenlabs.io/docs/overview/models). `ja` is in the language list of `eleven_multilingual_v2`, and `eleven_flash_v2_5` supports all of those languages. `eleven_v3` and `eleven_v4` list 70+ and 90+ languages.
 
-| Model | Character limit per request | Price per 1M characters |
-| --- | --- | --- |
-| `eleven_flash_v2_5` | 40,000 | $40 |
-| `eleven_multilingual_v2` (the default) | 10,000 | $80 |
-| `eleven_v3` | 5,000 | $80 |
-| `eleven_v4` | 10,000 | $80 |
+| Model                                  | Character limit per request | Price per 1M characters |
+| -------------------------------------- | --------------------------- | ----------------------- |
+| `eleven_flash_v2_5`                    | 40,000                      | $40                     |
+| `eleven_multilingual_v2` (the default) | 10,000                      | $80                     |
+| `eleven_v3`                            | 5,000                       | $80                     |
+| `eleven_v4`                            | 10,000                      | $80                     |
 
 ### Speech request
 
