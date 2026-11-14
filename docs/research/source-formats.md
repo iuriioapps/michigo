@@ -489,7 +489,7 @@ Counts are lines of text, out of 139,000.
 
 | Convention | Lines | Note |
 | --- | --- | --- |
-| A label in parentheses at the start of the line | 28,158 (20%) | 27,797 use full-width parentheses and 361 half-width. 7,078 stand alone on the line and 20,761 have text after them |
+| A label in parentheses at the start of the line | 28,158 (20%) | 27,662 use full-width parentheses and 496 half-width. 7,078 stand alone on the line and 20,761 have text after them |
 | A kana reading in parentheses after kanji, such as `咆哮(ほうこう)` | 1,683 (1.2%) | Every one uses half-width parentheses. None uses full-width |
 | `《…》` | 563 | Never after kanji. It is a quotation or emphasis bracket here, not Aozora ruby |
 | A music mark (`♪`, `♬`) | 2,610 |  |
@@ -497,7 +497,7 @@ Counts are lines of text, out of 139,000.
 | A name and a colon at the start of the line | 22 |  |
 | A block with the same text as the block before | 1,244 blocks |  |
 
-So readings in parentheses exist in real Japanese SRT files, which the sources did not confirm. In this sample the width of the parentheses separates a reading (half-width) from a label (full-width) in all but 361 lines. The form alone still cannot tell a speaker label from a sound cue.
+So readings in parentheses exist in real Japanese SRT files, which the sources did not confirm. In this sample the width of the parentheses separates a reading (half-width) from a label (full-width) in all but 496 lines. The form alone still cannot tell a speaker label from a sound cue.
 
 ### ASS files
 
