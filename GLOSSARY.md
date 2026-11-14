@@ -10,6 +10,12 @@ A material that Michigo can extract Japanese text from, such as a subtitle file,
 
 _Avoid_: document, file, material
 
+### Line
+
+One piece of the text that Michigo keeps for a Source after cleanup: one cue of a subtitle file, one line of lyrics or one paragraph of plain text. A Line from a subtitle or lyrics file keeps its time. A sentence never crosses from one Line into the next.
+
+_Avoid_: cue, segment, block
+
 ### Project
 
 A named group of Sources that the learner organizes and measures together.
