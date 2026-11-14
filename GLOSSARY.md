@@ -12,9 +12,15 @@ _Avoid_: document, file, material
 
 ### Line
 
-One piece of the text that Michigo keeps for a Source after cleanup: one cue of a subtitle file, one line of lyrics or one paragraph of plain text. A Line from a subtitle or lyrics file keeps its time. A sentence never crosses from one Line into the next.
+One piece of the text that Michigo keeps for a Source after cleanup: one cue of a subtitle file, one line of lyrics or one paragraph of plain text. A Line from a subtitle or lyrics file keeps its time. A Line holds one or more Sentences.
 
 _Avoid_: cue, segment, block
+
+### Sentence
+
+One sentence of a Line, with every character that the Line has there: digits, Latin letters and symbols included. The learner reads Sentences, and every word that Michigo counts sits at a place in one Sentence. A Sentence never crosses from one Line into the next.
+
+_Avoid_: phrase, example (alone)
 
 ### Project
 
@@ -36,7 +42,7 @@ _Avoid_: form, variant, surface
 
 ### Unrecognized
 
-A piece of Japanese text in a Source that Michigo could not identify as a word, often a name or an invented term. It is not in the Word Bank. The learner can promote it to a word, or put it in Names or Stopwords.
+A piece of Japanese text in a Source that Michigo could not identify as a word, often a name or an invented term. It is not in the Word Bank. The learner can promote it to a word, put it in Names or put it in Stopwords. In Names it becomes a word. In Stopwords it stays a piece of text outside the Word Bank.
 
 _Avoid_: junk, unknown word
 
@@ -54,11 +60,11 @@ _Avoid_: collection, deck, custom collection, category
 
 ### Names
 
-A built-in Word List for the names of people and characters. One exists globally and one in each Project.
+A built-in Word List for the names of people and characters. One exists globally and one in each Project. A name goes into the Names of its Project first, because a name such as フリーレン has a meaning only there, and the learner can promote it to the global one. A name is a normal word: it counts in coverage, and it is Known only when the learner marks it.
 
 ### Stopwords
 
-A built-in Word List for words that the coverage count ignores completely: a piece that Michigo parsed wrongly, or a word the learner does not care about, such as a sound effect or an obscure term. One exists globally and one in each Project. A word has no "ignored" state: it is in Stopwords or it is not.
+A built-in Word List for everything that the coverage count ignores completely: a piece that Michigo parsed wrongly, or a word the learner does not care about, such as a sound effect or an obscure term. It is the only Word List that can hold an Unrecognized piece, which it keeps as text. One exists globally and one in each Project. A word has no "ignored" state: it is in Stopwords or it is not.
 
 _Avoid_: exclusion list, ignore list, ignored word
 
