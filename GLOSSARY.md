@@ -34,6 +34,12 @@ A piece of Japanese text in a Source that Michigo could not identify as a word, 
 
 _Avoid_: junk, unknown word
 
+### Compound
+
+A word that the learner makes from several adjacent words in a text, such as 魔法使い from 魔法 and 使い. It matches that exact text in every Source, and where it matches, it counts instead of its parts. Its Known state is its own. The learner can delete a Compound, and the text then counts as its parts again.
+
+_Avoid_: merge, joined word, phrase
+
 ### Word List
 
 A named group of words that the learner manages, such as "Magic-related words". It is either global or owned by one Project, and a word can be in many Word Lists.
