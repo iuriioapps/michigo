@@ -456,6 +456,71 @@ So the second time tag is not only ignored by `subsrt-ts`: it lands in the text.
 
 `subsrt-ts` also returns two entries with no text before the dialogue lines, for the sections of the file that are not events. No parser removes the `|かん` reading marks.
 
+## What a scan of real files shows
+
+`docs/research/source-formats/real-files.mjs` scans a folder of subtitle files and prints counts only. It ran on 504 files from the owner's machine: 295 SRT and 209 ASS, all Japanese. The files are local only and are not in the repository.
+
+**The sample is narrow: every file is an anime subtitle, from five series.** The counts show what exists, not how common it is in general.
+
+### Encoding and line ends
+
+| Measure             | SRT (295 files) | ASS (209 files) |
+| ------------------- | --------------- | --------------- |
+| UTF-8 with a BOM    | 187             | 179             |
+| UTF-8 without a BOM | 107             | 30              |
+| UTF-16LE with a BOM | 1               | 0               |
+| Shift_JIS or EUC-JP | 0               | 0               |
+| CRLF line ends      | 177             | 142             |
+| LF line ends        | 118             | 67              |
+
+Most real files carry a BOM, so the BOM case is the normal case.
+
+### `subsrt-ts` on real SRT files
+
+- When the BOM character reaches the parser, `subsrt-ts` loses the first block in all 188 files that have a BOM.
+- When `TextDecoder` decodes the file first, it removes the BOM, and `subsrt-ts` returns 101,663 of 101,674 blocks.
+- The blocks it still loses are of two kinds, in 4 files: a block with no text, and a first block with a negative time such as `00:00:00,-564`, which a retiming tool wrote.
+- No SRT file has coordinates on a timing line.
+- 102 SRT files use `{\an8}` position blocks. No file uses `<i>`, `<b>`, `<u>` or `<font>`.
+
+### Text conventions in SRT
+
+Counts are lines of text, out of 139,000.
+
+| Convention | Lines | Note |
+| --- | --- | --- |
+| A label in parentheses at the start of the line | 28,158 (20%) | 27,797 use full-width parentheses and 361 half-width. 7,078 stand alone on the line and 20,761 have text after them |
+| A kana reading in parentheses after kanji, such as `咆哮(ほうこう)` | 1,683 (1.2%) | Every one uses half-width parentheses. None uses full-width |
+| `《…》` | 563 | Never after kanji. It is a quotation or emphasis bracket here, not Aozora ruby |
+| A music mark (`♪`, `♬`) | 2,610 |  |
+| A hyphen at the start of the line | 356 |  |
+| A name and a colon at the start of the line | 22 |  |
+| A block with the same text as the block before | 1,244 blocks |  |
+
+So readings in parentheses exist in real Japanese SRT files, which the sources did not confirm. In this sample the width of the parentheses separates a reading (half-width) from a label (full-width) in all but 361 lines. The form alone still cannot tell a speaker label from a sound cue.
+
+### ASS files
+
+Counts are dialogue events, out of 146,574.
+
+| Measure                                              | Result                   |
+| ---------------------------------------------------- | ------------------------ |
+| `Comment:` events                                    | 454, in 60 files         |
+| Events with an actor in the `Name` field             | 10,181 (7%), in 52 files |
+| Files with a style named for furigana or ruby        | 8                        |
+| Files with position, clip, fade or transform tags    | 179                      |
+| Files with `\N` line breaks                          | 129                      |
+| Events that repeat a text at the same start time     | 2,322, in 104 files      |
+| Styles used by dialogue                              | 5 per file on average    |
+| Drawings                                             | 0                        |
+| Karaoke tags                                         | 0                        |
+| Lines that start with a label in parentheses         | 7,308 of 150,526 lines   |
+| Lines with a kana reading in parentheses after kanji | 212                      |
+
+- No file holds a drawing or a karaoke tag, so the drawing leak of `subsrt-ts` and the `base|reading` marks did not occur in this sample.
+- Eight files carry readings as separate events in a furigana style, which matches the Aegisub convention.
+- Half of the files show the same text twice at the same start time. Cleanup must remove such repeats, or a word counts twice.
+
 ## Options
 
 ### Parsing
@@ -482,8 +547,9 @@ Decoding itself needs no library on Node 24 with full ICU.
 
 ## What is not verified
 
-- Parser behavior on real files. Three parsers were run on hand-made samples only. `media-captions`, `subtitle`, `node-webvtt` and `clrc` were not run.
-- How often Japanese SRT files write readings in parentheses, and whether converters produce that form from ruby markup. No primary source was found.
+- Real WebVTT and LRC files, and real files outside anime. The scan covered SRT and ASS only. `media-captions`, `subtitle`, `node-webvtt` and `clrc` were not run.
+- Real ASS files with drawings or karaoke. The sample has none.
+- Whether converters produce readings in parentheses from ruby markup. The scan of real files shows that the form exists (1.2% of SRT lines in one narrow sample), but not where it comes from.
 - Whether the Aegisub karaoke templater leaves the original lines as comments and marks generated lines in the `Effect` field. The page that was read does not say.
 - Rolling duplicate lines in automatically generated WebVTT captions.
 - The accuracy of `chardet`, `jschardet` and `encoding-japanese` on short Japanese subtitle files.
