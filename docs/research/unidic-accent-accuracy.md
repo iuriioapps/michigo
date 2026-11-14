@@ -80,24 +80,24 @@ Kanjium covers fewer tokens because it lists some frequent words only under a ka
 
 ## Agreement
 
-| Measure | Kanjium | Wadoku file |
-| --- | --- | --- |
-| Any overlap, pairs | 8,922 of 8,969 (99.5%) | 8,348 of 8,541 (97.7%) |
+| Measure             | Kanjium                  | Wadoku file               |
+| ------------------- | ------------------------ | ------------------------- |
+| Any overlap, pairs  | 8,922 of 8,969 (99.5%)   | 8,348 of 8,541 (97.7%)    |
 | Any overlap, tokens | 79,065 of 81,239 (97.3%) | 97,894 of 108,136 (90.5%) |
-| First equal, pairs | 8,642 of 8,969 (96.4%) | 8,028 of 8,541 (94.0%) |
+| First equal, pairs  | 8,642 of 8,969 (96.4%)   | 8,028 of 8,541 (94.0%)    |
 | First equal, tokens | 76,192 of 81,239 (93.8%) | 89,682 of 108,136 (82.9%) |
 
 ### Second opinion
 
 When one reference contradicts UniDic, the other reference often has the same pair. This shows which side is the odd one out.
 
-| Case | Pairs | Tokens |
-| --- | --- | --- |
-| Kanjium contradicts UniDic, Wadoku file has the pair | 27 | 2,106 |
-| Of those, Wadoku file agrees with UniDic | 12 | 2,016 |
-| Wadoku file contradicts UniDic, Kanjium has the pair | 118 | 2,937 |
-| Of those, Kanjium agrees with UniDic | 103 | 2,847 |
-| Both references contradict UniDic | 15 | 90 |
+| Case                                                 | Pairs | Tokens |
+| ---------------------------------------------------- | ----- | ------ |
+| Kanjium contradicts UniDic, Wadoku file has the pair | 27    | 2,106  |
+| Of those, Wadoku file agrees with UniDic             | 12    | 2,016  |
+| Wadoku file contradicts UniDic, Kanjium has the pair | 118   | 2,937  |
+| Of those, Kanjium agrees with UniDic                 | 103   | 2,847  |
+| Both references contradict UniDic                    | 15    | 90     |
 
 The case counts cover only pairs that both references list.
 
