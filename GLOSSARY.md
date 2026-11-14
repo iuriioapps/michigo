@@ -70,6 +70,12 @@ _Avoid_: known list, vocabulary
 
 The state of a word in the Word Bank that the learner can already read. A word is Known or it is not, with no state between. Only an action of the learner changes it, one word at a time or many at once. A learner can forget a word: it becomes unknown and stays in the Word Bank.
 
+### Occurrences
+
+How many times a word appears in one Source or one Project. The number belongs to that Source or Project: a word can appear 50 times in one Source and once in another. The Word Bank has no such number of its own.
+
+_Avoid_: frequency, count
+
 ### Grammar Pattern
 
 A grammatical construction, such as 〜てしまう, that Michigo detects in a Source to show the learner which grammar the text needs. It is Known or not, like a word, and only the learner changes that. It never changes coverage.
@@ -85,6 +91,18 @@ _Avoid_: UniDic dictionary, dictionary (alone)
 ### Reference data
 
 External data that describes words: a Dictionary, a JLPT list or a frequency list. Michigo downloads it when its license permits a hosted copy, and the learner can import more from a file. Removing it changes nothing in the Word Bank or in any Word List.
+
+### Word metadata
+
+A fact about a word that Reference data adds, such as its JLPT level or its Frequency rank. A word has it only while Reference data that provides it is present. The learner can filter words by it and act on the result.
+
+_Avoid_: tag, property
+
+### Frequency rank
+
+The position of a word in a frequency list. It is Word metadata, and it describes the texts that the list was built from, such as news articles. It does not say how useful the word is for the Source that the learner wants to read: Occurrences says that.
+
+_Avoid_: frequency (alone)
 
 ### Dictionary
 
