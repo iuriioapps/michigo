@@ -30,6 +30,8 @@ interface Tool {
 
 // One row per action. In the real app this table and `registerIpc` would read
 // the same list, so an action exists once.
+const jobs = new Map<string, { id: string; state: string; seconds: number }>();
+
 const tools: Record<string, Tool> = {
   app_info: {
     description: "Runtime details of the running Michigo app.",
@@ -57,6 +59,28 @@ const tools: Record<string, Tool> = {
           resolve({ waited: input.seconds });
         }, input.seconds * 1000);
       }),
+  },
+  // A real agent client gave up on `slow_import` after about 60 seconds, so a
+  // long action starts a job and the agent asks for its state.
+  import_start: {
+    description:
+      "PROTOTYPE: starts a long import that takes the given seconds. Returns a job id at once. Ask import_status for the result.",
+    input: z.object({ seconds: z.number().min(0).max(600) }),
+    run: (input: { seconds: number }) => {
+      const job = { id: randomBytes(4).toString("hex"), state: "running", seconds: input.seconds };
+
+      jobs.set(job.id, job);
+      setTimeout(() => {
+        job.state = "done";
+      }, input.seconds * 1000);
+
+      return job;
+    },
+  },
+  import_status: {
+    description: "PROTOTYPE: the state of a job from import_start: running or done.",
+    input: z.object({ id: z.string() }),
+    run: (input: { id: string }) => jobs.get(input.id) ?? { state: "unknown" },
   },
   project_create: {
     description: "Create a Project and return it.",

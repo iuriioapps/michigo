@@ -22,8 +22,7 @@ async function rpc(method, params, headers = {}) {
   return { status: response.status, body: response.status === 200 ? await response.json() : null };
 }
 
-const call = async (name, args) =>
-  (await rpc("tools/call", { name, arguments: args })).body.result;
+const call = async (name, args) => (await rpc("tools/call", { name, arguments: args })).body.result;
 
 try {
   for (let attempt = 0; ; attempt++) {
@@ -40,10 +39,20 @@ try {
   assert.equal((await rpc("ping", undefined, { origin: "https://evil.example" })).status, 403);
 
   const tools = (await rpc("tools/list")).body.result.tools.map((tool) => tool.name);
-  assert.deepEqual(tools, ["app_info", "project_list", "slow_import", "project_create"]);
+  assert.deepEqual(tools, [
+    "app_info",
+    "project_list",
+    "slow_import",
+    "import_start",
+    "import_status",
+    "project_create",
+  ]);
 
   console.log("app_info:", (await call("app_info", {})).content[0].text);
-  assert.equal(JSON.parse((await call("project_create", { name: " Frieren " })).content[0].text).name, "Frieren");
+  assert.equal(
+    JSON.parse((await call("project_create", { name: " Frieren " })).content[0].text).name,
+    "Frieren",
+  );
   assert.equal((await call("project_create", { name: "" })).isError, true);
 
   // A long call must not block other calls.
@@ -55,7 +64,9 @@ try {
   assert.equal(list.length, 1);
   assert.ok(listMs < 2000, `project_list took ${listMs} ms during a long call`);
   assert.deepEqual(JSON.parse((await slow).content[0].text), { waited: 20 });
-  console.log(`OK on ${process.platform}-${process.arch}: list during a long call took ${listMs} ms`);
+  console.log(
+    `OK on ${process.platform}-${process.arch}: list during a long call took ${listMs} ms`,
+  );
 } finally {
   app.kill();
 }
