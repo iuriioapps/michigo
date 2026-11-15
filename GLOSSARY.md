@@ -158,6 +158,18 @@ An external reference for meanings and readings. The Michigo installer holds non
 
 _Avoid_: glossary, word database
 
+### Dictionary entry
+
+One record of a Dictionary: its spellings, its readings and its meanings. It is never part of a word. Michigo finds the Dictionary entries for a word when the learner looks at the word, so one word can have several, and nothing is lost when the Dictionary goes.
+
+_Avoid_: definition, record, entry (alone)
+
+### Headword
+
+One spelling with one reading, as a Dictionary lists it, such as 辛い read からい. 辛い read つらい is another Headword. The word popup groups the Dictionary entries of every Dictionary by Headword.
+
+_Avoid_: term, expression
+
 ### Personal Dictionary
 
 The learner's own translation and notes for words. It is built in, always present and shown before any Dictionary. It is not part of the word itself, and it is deleted with its word.
