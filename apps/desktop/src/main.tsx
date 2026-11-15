@@ -11,6 +11,13 @@ const queryClient = new QueryClient({
   // handler error, so retrying only delays showing it.
   defaultOptions: { queries: { retry: false } },
 });
+// PROTOTYPE: refetch everything when an agent changed data in main.
+(
+  window as unknown as { michigoAgentPrototype?: { onChange(callback: () => void): void } }
+).michigoAgentPrototype?.onChange(() => {
+  void queryClient.invalidateQueries();
+});
+
 const container = document.getElementById("root");
 
 if (container === null) {

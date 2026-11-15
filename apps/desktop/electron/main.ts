@@ -11,6 +11,7 @@ import {
   shell,
 } from "electron";
 
+import { startAgentAccessPrototype } from "./agent-access.prototype";
 import { registerIpc } from "./ipc";
 
 // import.meta.dirname is unavailable once bundled; derive it from the URL.
@@ -124,6 +125,7 @@ if (!app.requestSingleInstanceLock()) {
     session.defaultSession.setPermissionCheckHandler(() => false);
     Menu.setApplicationMenu(buildMenu());
     registerIpc(rendererUrl);
+    startAgentAccessPrototype();
     createWindow();
 
     app.on("activate", () => {

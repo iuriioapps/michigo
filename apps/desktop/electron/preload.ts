@@ -20,3 +20,12 @@ const api: DesktopApi = {
 };
 
 contextBridge.exposeInMainWorld("michigo", api);
+
+// PROTOTYPE: tells the page that an agent changed data.
+contextBridge.exposeInMainWorld("michigoAgentPrototype", {
+  onChange: (callback: () => void) => {
+    ipcRenderer.on("agent-prototype:changed", () => {
+      callback();
+    });
+  },
+});

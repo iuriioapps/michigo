@@ -56,7 +56,11 @@ export function registerIpc(rendererUrl: string): void {
     }),
   );
 
-  handle(channels.projectList, () => listProjects());
+  handle(channels.projectList, () => {
+    console.log("[agent prototype] renderer asked for project:list");
+
+    return listProjects();
+  });
 
   handle(channels.projectCreate, (raw) => {
     // Never trust the renderer. A parse failure throws, which Electron turns
