@@ -22,6 +22,12 @@ One sentence of a Line, with every character that the Line has there: digits, La
 
 _Avoid_: phrase, example (alone)
 
+### Example
+
+A Sentence from the learner's own Sources that contains a given word, in any Spelling and any inflected form. Michigo finds Examples when the learner asks and stores none: an Anki card holds a copy of the text.
+
+_Avoid_: example sentence, usage, context
+
 ### Project
 
 A named group of Sources that the learner organizes and measures together.
