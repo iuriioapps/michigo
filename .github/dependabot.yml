@@ -7,8 +7,7 @@ updates:
     groups:
       # One PR per ecosystem cluster keeps review manageable.
       dev-tooling:
-        patterns:
-          ["oxlint*", "oxfmt", "turbo", "typescript", "vitest", "@vitest/*", "tsdown", "tsx"]
+        patterns: ["oxlint*", "oxfmt", "turbo", "typescript", "vitest", "@vitest/*"]
       react:
         patterns: ["react", "react-dom", "@types/react", "@types/react-dom"]
     ignore:

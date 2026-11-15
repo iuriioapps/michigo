@@ -29,7 +29,7 @@ Reference data from any Manifest is untrusted input. The app never unpacks an ar
 
 ## Consequences
 
-A new Tokenizer dictionary build needs a new release of Michigo, because the hash is in the app. This fits the rule that both apps refuse any other build.
+A new Tokenizer dictionary build needs a new release of Michigo, because the hash is in the app. This fits the rule that the app refuses any other build.
 
 An unpinned entry has no integrity check beyond its schema. Michigo accepts this for the Jiten list, because a frequency rank is Word metadata only and no action in v1 depends on it.
 

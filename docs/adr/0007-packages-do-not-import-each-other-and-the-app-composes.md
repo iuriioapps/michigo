@@ -1,10 +1,10 @@
-# Packages do not import each other, and the apps compose them
+# Packages do not import each other, and the app composes them
 
-Michigo v1 has eleven packages. Each one imports `core` and no other package, with one exception: `storage` imports the store interfaces of the packages it serves. The desktop app and the CLI combine the packages themselves.
+Michigo v1 has eleven packages. Each one imports `core` and no other package, with one exception: `storage` imports the store interfaces of the packages it serves. The desktop app combines the packages itself. It is the only app in v1.
 
 ```text
 apps/desktop ─┬─> storage ──────────────> vocab, reference, pitch, audio ─┐
-apps/cli ─────┴─> tokenizer, source, grammar, anki, manifest ─────────────┴─> core
+              └─> tokenizer, source, grammar, anki, manifest ─────────────┴─> core
 ```
 
 Most learner actions need several capabilities. "Update from Anki" reads fields through `anki`, splits them with `tokenizer` and marks words through `vocab`. If packages imported each other for this, the graph would grow layers that are hard to state and easy to break. With one flat rule, a package can be read, tested and replaced alone, and its `package.json` enforces the rule: pnpm refuses an import that the package does not declare.
@@ -30,13 +30,13 @@ Most learner actions need several capabilities. "Update from Anki" reads fields 
 - **`core` is not a place for logic.** A thing enters `core` only when it is a data shape that two packages, or a package and the renderer, exchange. Logic goes to the package that owns the capability.
 - A package that keeps data declares its store, and `storage` implements it. No package but `storage` holds SQL.
 - A package that needs the output of another package takes it as an argument. `grammar` takes tokens, `pitch` takes the pitch rows that `reference` reads from an archive, and `anki` takes the finished values of a card.
-- Only `tokenizer` imports the native binding. It names `lindera` as a peer dependency, and each app carries it in `dependencies`.
+- Only `tokenizer` imports the native binding. It names `lindera` as a peer dependency, and the desktop app carries it in `dependencies`.
 - A package knows nothing about Electron. The desktop app decides which process runs what, and it passes API keys and folder paths to `audio`.
 - The scripts that build the Tokenizer dictionary and the UniDic Pitch dictionary live in `scripts/` at the repo root. They are not a package.
 
 ## Considered options
 
-- One package that holds each learner action once, between the apps and the other packages. Rejected: the CLI will do far less than the desktop app, and whether v1 ships a CLI is open. The cost is that an action in both apps is written twice.
+- One package that holds each learner action once, between the app and the other packages. Rejected: v1 has one app, so the app is that place. Access for AI agents, if a later version adds it, goes through the running desktop app and reuses the same composition.
 - Layers, where a package may import the packages below it. Rejected: every new feature would reopen the question of which layer a package sits in.
 - Store interfaces, the tokenize contract and pure helpers in `core`. Rejected: `core` would collect everything that has no obvious home.
 - Store interfaces inside `storage`. Rejected: `storage` would define what each package needs, and a package could not be tested without it.
@@ -47,8 +47,8 @@ Most learner actions need several capabilities. "Update from Anki" reads fields 
 
 ## Consequences
 
-The apps hold real code: each learner action that spans packages is composed there. The same action in the desktop app and the CLI is duplicate code, by choice.
+The desktop app holds real code: each learner action that spans packages is composed there.
 
 `storage` depends on the four packages that declare a store, so a new field in a store is a change in two packages.
 
-The Vite build of the Electron main process fails when it meets the native binding. The main build must list `lindera` as external. The CLI build with tsdown leaves it external by itself. Checked with `lindera` 6.2.0 in a workspace package: the binding loads under `tsx`, from the CLI bundle and in an Electron 44.4.5 main process.
+The Vite build of the Electron main process fails when it meets the native binding. The main build must list `lindera` as external. Checked with `lindera` 6.2.0 in a workspace package: the binding loads in an Electron 44.4.5 main process.

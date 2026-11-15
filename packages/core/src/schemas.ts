@@ -19,7 +19,7 @@ export const ModuleInfoSchema = z.object({
 });
 export type ModuleInfo = z.infer<typeof ModuleInfoSchema>;
 
-/** What the CLI prints and the desktop UI renders. */
+/** What the desktop UI renders. */
 export const RuntimeInfoSchema = z.object({
   app: z.string().min(1),
   version: z.string().min(1),
