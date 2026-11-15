@@ -5,7 +5,7 @@ Measured on 2026-11-15 for [How does pitch accent show in the UI and on Anki car
 ## Short answer
 
 - The tokenizer gives an accent value only for the reading that it chose. A table taken from the UniDic lexicon gives a value to any Headword by its spelling and reading.
-- The table has 369,017 lines for 355,285 pairs of spelling and reading. It is 12.3 MB as text and 2.9 MB with zstd.
+- The table has 369,017 lines for 355,285 pairs of spelling and reading. It is 12.3 MB as text, 2.9 MB with zstd and 3.6 MB as a zip.
 - It has a value for 81.3% of the JMdict Headwords with a score above zero and for 52.2% of the "Other readings" Headwords of the corpus.
 - Against Kanjium the table is as good as the value of the token: a shared value for 99.7% of the corpus pairs, the first value equal for 96.3%.
 - The build takes 7 seconds and gives the same file on every run and platform.
@@ -32,6 +32,10 @@ One line per dictionary-form spelling, kana reading and lexeme:
 - 374,447 pairs exist, and 92.7% of them have an accent value.
 - 4,130 pairs (1.2%) have different values from different lexemes: 君 read キミ is 0 as a pronoun and 1 as a noun, 雪 read ユキ is 2 as a noun and 1 as a name. These pairs are frequent: 19.5% of the corpus tokens with a value sit on such a pair. So the lexeme ID is in the table, and the value of the word's own lexeme comes first.
 - For 4 of 11,735 corpus pairs the line of the word's lexeme differs from the value of the token, because the token came from a conjugation row with another value.
+
+### Whether the lexeme column is needed
+
+A lookup by spelling and reading alone, with the values of all lexemes merged in order of cost, gives the token's own main value for 98.8% of the 125,514 corpus tokens with a value. The other 1.2% sit on 100 pairs where another lexeme comes first: くる (own 1, merged 2,1) 460 tokens, あ 289, え 95, ひと 68, 雪 read ユキ 18. With the lexeme column the main value is the token's own for all of them.
 
 ## Coverage
 
@@ -69,6 +73,10 @@ Other readings with no shared value are mostly rare readings: 一 read ヒ, 二 
 | Windows x64, runner | 6 s  | 341 MB      | `f18d11a1…5713fffb`  |
 
 The file is the same on all three: 369,017 lines, 12,291,826 bytes, and 2,910,148 bytes with `zstd -19`. The workflow that builds the Tokenizer dictionary already downloads `lex.csv`, so the table is one more step there.
+
+## Delivery
+
+The table can sit inside the Tokenizer dictionary archive or be a download of its own. The app accepts the Tokenizer dictionary by one hash over the whole archive (384 MB), so a fix to a table inside it costs a full download. As its own file, a fix costs 3.6 MB.
 
 ## Not answered
 
