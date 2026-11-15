@@ -42,7 +42,7 @@ _Avoid_: form, variant, surface
 
 ### Unrecognized
 
-A piece of Japanese text in a Source that Michigo could not identify as a word, often a name or an invented term. It is not in the Word Bank. The learner can promote it to a word, put it in Names or put it in Stopwords. In Names it becomes a word. In Stopwords it stays a piece of text outside the Word Bank.
+A piece of Japanese text in a Source that Michigo could not identify as a word, often a name or an invented term. It is not in the Word Bank. The learner can promote it to a word, put it in Names or put it in Stopwords. In Names it becomes a word. In Stopwords it stays a piece of text outside the Word Bank. Until the learner acts on it, it counts in Coverage as unknown.
 
 _Avoid_: junk, unknown word
 
@@ -60,11 +60,11 @@ _Avoid_: collection, deck, custom collection, category
 
 ### Names
 
-A built-in Word List for the names of people and characters. One exists globally and one in each Project. A name goes into the Names of its Project first, because a name such as フリーレン has a meaning only there, and the learner can promote it to the global one. A name is a normal word: it counts in coverage, and it is Known only when the learner marks it. Names only labels the word, so the learner can filter a view by it. A word in the global Names is a name in every Project.
+A built-in Word List for the names of people and characters. One exists globally and one in each Project. A name goes into the Names of its Project first, because a name such as フリーレン has a meaning only there, and the learner can promote it to the global one. A name is a normal word: it counts in Coverage, and it is Known only when the learner marks it. Names only labels the word, so the learner can filter a view by it. A word in the global Names is a name in every Project.
 
 ### Stopwords
 
-A built-in Word List for everything that the coverage count ignores completely: a piece that Michigo parsed wrongly, or a word the learner does not care about, such as a sound effect or an obscure term. It is the only Word List that can hold an Unrecognized piece, which it keeps as text. One exists globally and one in each Project. A word has no "ignored" state: it is in Stopwords or it is not.
+A built-in Word List for everything that Coverage ignores completely: a piece that Michigo parsed wrongly, or a word the learner does not care about, such as a sound effect or an obscure term. It is the only Word List that can hold an Unrecognized piece, which it keeps as text. One exists globally and one in each Project. A word has no "ignored" state: it is in Stopwords or it is not.
 
 _Avoid_: exclusion list, ignore list, ignored word
 
@@ -88,9 +88,27 @@ How many times a word appears in one Source or one Project. The number belongs t
 
 _Avoid_: frequency, count
 
+### Coverage
+
+The share of the counted Occurrences in a Source, a group or a Project whose word is Known. Every word counts, whatever its Part of speech, and so does every Unrecognized piece, as unknown. Only Stopwords takes something out of the count. A Project counts all its Sources as one text, or shows the average of its Sources when the learner sets that for the Project.
+
+_Avoid_: comprehension, known percent
+
+### Coverage target
+
+The Coverage that the learner wants to reach before reading, 95% unless the learner changes it. The learner can set it for all of Michigo, for one Project and for one Source, and the nearest value wins.
+
+_Avoid_: comprehension target, goal
+
+### Gap words
+
+The unknown words that bring Coverage up to the Coverage target when the learner learns them in order of Occurrences, highest first. They are the shortest list of words that reaches the target.
+
+_Avoid_: missing words, words to learn
+
 ### Grammar Pattern
 
-A grammatical construction, such as 〜てしまう, that Michigo detects in a Source to show the learner which grammar the text needs. It is Known or not, like a word, and only the learner changes that. It never changes coverage.
+A grammatical construction, such as 〜てしまう, that Michigo detects in a Source to show the learner which grammar the text needs. It is Known or not, like a word, and only the learner changes that. It never changes Coverage.
 
 _Avoid_: grammar point, rule
 
