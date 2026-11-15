@@ -140,6 +140,12 @@ The position of a word in a frequency list. It is Word metadata, and it describe
 
 _Avoid_: frequency (alone)
 
+### JLPT level
+
+An estimate of the level of the Japanese-Language Proficiency Test, from N5 to N1, at which a word is expected. It is Word metadata from a JLPT list, and a word has at most one. It is unofficial: the test has published no word list since 2010.
+
+_Avoid_: official level, grade
+
 ### Dictionary
 
 An external reference for meanings and readings. The Michigo installer holds none: Michigo downloads a Dictionary, and the learner can import additional ones. The learner can work without one.
