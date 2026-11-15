@@ -47,7 +47,6 @@ export function registerIpc(rendererUrl: string): void {
   }
 
   handle(channels.appInfo, () =>
-    // The CLI makes this identical call. Both surfaces read from one place.
     describeRuntime({
       app: app.getName(),
       version: app.getVersion(),

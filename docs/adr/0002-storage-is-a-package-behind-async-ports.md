@@ -1,6 +1,6 @@
 # Storage is its own package behind asynchronous ports
 
-Storage lives in `packages/storage`. Each package that keeps data declares the store it needs as an asynchronous interface in domain terms. `storage` implements every store, with one strategy per backend. v1 ships one strategy for data, `node:sqlite`, and one for files, a local folder. The apps create the stores and hand them to the packages, which never import an engine.
+Storage lives in `packages/storage`. Each package that keeps data declares the store it needs as an asynchronous interface in domain terms. `storage` implements every store, with one strategy per backend. v1 ships one strategy for data, `node:sqlite`, and one for files, a local folder. The desktop app creates the stores and hands them to the packages, which never import an engine.
 
 `node:sqlite` is synchronous and is still a release candidate. Remote storage is out of v1 but planned, and every remote database is asynchronous. Callers that use a synchronous API would all need a rewrite on the day a remote store arrives, so the stores are asynchronous now, while the cost is only an `await`. The same interfaces contain the engine risk: `better-sqlite3` can replace `node:sqlite` without a change in any caller.
 

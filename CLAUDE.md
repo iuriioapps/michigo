@@ -8,10 +8,10 @@ Strictly one way:
 
 ```text
 apps/desktop ─┬─> storage ──────────────> vocab, reference, pitch, audio ─┐
-apps/cli ─────┴─> tokenizer, source, grammar, anki, manifest ─────────────┴─> core
+              └─> tokenizer, source, grammar, anki, manifest ─────────────┴─> core
 ```
 
-Decided in `docs/adr/0007-packages-do-not-import-each-other-and-the-apps-compose.md`. Only `core`, `vocab` and `anki` exist today. Create each other package when its first feature lands. The rules for code:
+Decided in `docs/adr/0007-packages-do-not-import-each-other-and-the-app-composes.md`. Only `core`, `vocab` and `anki` exist today. Create each other package when its first feature lands. The rules for code:
 
 - `core` imports no other package, and nothing in `packages/` imports from `apps/`.
 - A package imports `core` and nothing else. The one exception is `storage`, which imports the store interfaces of the packages it serves.
@@ -23,27 +23,26 @@ Decided in `docs/adr/0007-packages-do-not-import-each-other-and-the-apps-compose
 ## `@michigo/core` has two entry points
 
 - `@michigo/core/schemas` is **pure**. No `node:*` imports, ever. The Electron renderer imports from here, so a Node built-in would break the browser bundle.
-- `@michigo/core` (the `.` entry) may use Node APIs. Only the main process and the CLI import it.
+- `@michigo/core` (the `.` entry) may use Node APIs. Only the main process imports it.
 
 Keeping new code on the correct side of this split is much cheaper than untangling it later.
 
-## Everything in the apps goes in `devDependencies`
+## Everything in the app goes in `devDependencies`
 
-Vite and tsdown bundle `devDependencies`. tsdown leaves `dependencies` external by itself. The Vite build of the Electron main process does not: list each entry of `dependencies` in `rolldownOptions.external` of the main build in `vite.config.ts`, or the build fails on the native `.node` file. Consequences:
+Vite bundles `devDependencies`. The Vite build of the Electron main process does not leave `dependencies` external by itself: list each entry of `dependencies` in `rolldownOptions.external` of the main build in `vite.config.ts`, or the build fails on the native `.node` file. One consequence:
 
-- The CLI's own code bundles into one file. The CLI as a whole is not one file: it ships inside the desktop app's install, with the native tokenizer binding beside it, and it reads the tokenizer dictionary that the app downloads.
 - electron-builder copies only `dependencies` into the packaged app, so an empty `dependencies` keeps the app small and avoids pnpm symlink problems.
 
-`dependencies` is reserved for things that genuinely cannot be bundled: native modules, or `electron-updater` when it lands. The native Lindera binding is the first such entry, in both apps.
+`dependencies` is reserved for things that genuinely cannot be bundled: native modules, or `electron-updater` when it lands. The native Lindera binding is the first such entry.
 
 ## Tokenizer
 
 Decided in `docs/adr/0005-unidic-2025-12-with-the-native-lindera-binding.md`. The rules for code:
 
-- Only `packages/tokenizer` imports `lindera`. It names the binding as a peer dependency, and each app carries it in `dependencies`.
+- Only `packages/tokenizer` imports `lindera`. It names the binding as a peer dependency, and the desktop app carries it in `dependencies`.
 - Use the native `lindera` binding only, never `lindera-wasm`. The WASM build needs a 2 GB heap for this dictionary, and Lindera's filters do nothing in it.
 - The tokenizer dictionary is never in the repo, the installer or a bundle. It downloads on first start into one folder per build in the shared data folder.
-- One constant names the dictionary build (UniDic version plus Lindera version). Both apps refuse to tokenize with any other build.
+- One constant names the dictionary build (UniDic version plus Lindera version). The app refuses to tokenize with any other build.
 - Do not change the UniDic version within a major version of Michigo. Lexeme keys differ between versions, so a change is a migration.
 
 ## Validate at the IPC boundary
@@ -66,18 +65,6 @@ Touch these four places, in order:
 4. `apps/desktop/src/lib/queries.ts`: a query or mutation, then use it.
 
 Never expose `ipcRenderer` itself to the page, only named functions.
-
-## Adding a CLI command
-
-The CLI uses oclif with the `explicit` command strategy, because the CLI's own code bundles into one file and has no `commands/` directory to glob.
-
-1. Write the command class as the default export of `apps/cli/src/commands/<name>.ts`.
-2. Register it in `COMMANDS` in `apps/cli/src/index.ts`. The key is the command ID.
-
-Two rules keep this working:
-
-- The entry must not use top-level `await`. oclif imports the entry to read `COMMANDS`, and an await there deadlocks that self-import.
-- Do not add an `oclif` block to `package.json`. The config is inline in `src/index.ts`, so the same `target` works under tsx and in `dist/`.
 
 ## Routing
 

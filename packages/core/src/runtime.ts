@@ -16,9 +16,8 @@ export interface DescribeRuntimeOptions {
 /**
  * Collects a description of the current process and the modules loaded into it.
  *
- * Shared by the CLI and the Electron main process: both call this, so the two
- * surfaces cannot drift. Composition happens at the app layer — core never
- * imports the domain packages it reports on.
+ * Composition happens at the app layer — core never imports the domain
+ * packages it reports on.
  */
 export function describeRuntime(options: DescribeRuntimeOptions): RuntimeInfo {
   return RuntimeInfoSchema.parse({
