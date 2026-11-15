@@ -124,9 +124,15 @@ The data that Michigo needs to split text into words. Michigo downloads it on fi
 
 _Avoid_: UniDic dictionary, dictionary (alone)
 
+### Manifest
+
+The list of the downloads that Michigo offers: the Tokenizer dictionary and Reference data, each with its addresses, license and credit. Michigo reads one Manifest at a time. The learner can point Michigo at a Manifest that someone else publishes and can return to Michigo's own.
+
+_Avoid_: catalog, registry, source list
+
 ### Reference data
 
-External data that describes words: a Dictionary, a JLPT list or a frequency list. Michigo downloads it when its license permits a hosted copy, and the learner can import more from a file. Removing it changes nothing in the Word Bank or in any Word List.
+External data that describes words: a Dictionary, a JLPT list or a frequency list. Michigo downloads the Reference data that its Manifest lists, and the learner can import more from a file. Removing it changes nothing in the Word Bank or in any Word List.
 
 ### Word metadata
 
