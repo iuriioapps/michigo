@@ -6,12 +6,19 @@ Rules that the code cannot state for itself. Read before adding a feature.
 
 Strictly one way:
 
-```
-apps/desktop ─┐
-apps/cli ─────┴─> packages/vocab, packages/anki ──> packages/core
+```text
+apps/desktop ─┬─> storage ──────────────> vocab, reference, pitch, audio ─┐
+apps/cli ─────┴─> tokenizer, source, grammar, anki, manifest ─────────────┴─> core
 ```
 
-`core` must never import `vocab` or `anki`, and nothing in `packages/` may import from `apps/`. Where several domain packages have to be combined, the composition happens in the app. See how `describeRuntime` receives its modules as an argument instead of importing them.
+Decided in `docs/adr/0007-packages-do-not-import-each-other-and-the-apps-compose.md`. Only `core`, `vocab` and `anki` exist today. Create each other package when its first feature lands. The rules for code:
+
+- `core` imports no other package, and nothing in `packages/` imports from `apps/`.
+- A package imports `core` and nothing else. The one exception is `storage`, which imports the store interfaces of the packages it serves.
+- Where several packages have to be combined, the composition happens in the app. See how `describeRuntime` receives its modules as an argument instead of importing them.
+- A package that keeps data declares its store as an interface in domain terms. **SQL exists only in `storage`.**
+- `core` holds the data shapes that packages and the renderer exchange. Logic goes to the package that owns the capability.
+- Each package declares what it imports in its own `package.json`, so pnpm refuses an import that breaks these rules.
 
 ## `@michigo/core` has two entry points
 
@@ -22,7 +29,7 @@ Keeping new code on the correct side of this split is much cheaper than untangli
 
 ## Everything in the apps goes in `devDependencies`
 
-Vite and tsdown bundle `devDependencies` and leave `dependencies` external. Consequences:
+Vite and tsdown bundle `devDependencies`. tsdown leaves `dependencies` external by itself. The Vite build of the Electron main process does not: list each entry of `dependencies` in `rolldownOptions.external` of the main build in `vite.config.ts`, or the build fails on the native `.node` file. Consequences:
 
 - The CLI's own code bundles into one file. The CLI as a whole is not one file: it ships inside the desktop app's install, with the native tokenizer binding beside it, and it reads the tokenizer dictionary that the app downloads.
 - electron-builder copies only `dependencies` into the packaged app, so an empty `dependencies` keeps the app small and avoids pnpm symlink problems.
@@ -33,6 +40,7 @@ Vite and tsdown bundle `devDependencies` and leave `dependencies` external. Cons
 
 Decided in `docs/adr/0005-unidic-2025-12-with-the-native-lindera-binding.md`. The rules for code:
 
+- Only `packages/tokenizer` imports `lindera`. It names the binding as a peer dependency, and each app carries it in `dependencies`.
 - Use the native `lindera` binding only, never `lindera-wasm`. The WASM build needs a 2 GB heap for this dictionary, and Lindera's filters do nothing in it.
 - The tokenizer dictionary is never in the repo, the installer or a bundle. It downloads on first start into one folder per build in the shared data folder.
 - One constant names the dictionary build (UniDic version plus Lindera version). Both apps refuse to tokenize with any other build.
