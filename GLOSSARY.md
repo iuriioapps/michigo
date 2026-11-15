@@ -60,7 +60,7 @@ _Avoid_: collection, deck, custom collection, category
 
 ### Names
 
-A built-in Word List for the names of people and characters. One exists globally and one in each Project. A name goes into the Names of its Project first, because a name such as フリーレン has a meaning only there, and the learner can promote it to the global one. A name is a normal word: it counts in coverage, and it is Known only when the learner marks it.
+A built-in Word List for the names of people and characters. One exists globally and one in each Project. A name goes into the Names of its Project first, because a name such as フリーレン has a meaning only there, and the learner can promote it to the global one. A name is a normal word: it counts in coverage, and it is Known only when the learner marks it. Names only labels the word, so the learner can filter a view by it. A word in the global Names is a name in every Project.
 
 ### Stopwords
 
