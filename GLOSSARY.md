@@ -120,7 +120,7 @@ _Avoid_: grammar point, rule
 
 ### Tokenizer dictionary
 
-The data that Michigo needs to split text into words. Michigo downloads it on first start and cannot work without it. It is not Reference data and not a Dictionary: the learner never imports, replaces or removes it.
+The data that Michigo needs to split text into words. It also holds a Pitch accent value for many Headwords. Michigo downloads it on first start and cannot work without it. It is not Reference data and not a Dictionary: the learner never imports, replaces or removes it.
 
 _Avoid_: UniDic dictionary, dictionary (alone)
 
@@ -132,7 +132,7 @@ _Avoid_: catalog, registry, source list
 
 ### Reference data
 
-External data that describes words: a Dictionary, a JLPT list or a frequency list. Michigo downloads the Reference data that its Manifest lists, and the learner can import more from a file. Removing it changes nothing in the Word Bank or in any Word List.
+External data that describes words: a Dictionary, a Pitch dictionary, a JLPT list or a frequency list. Michigo downloads the Reference data that its Manifest lists, and the learner can import more from a file. Removing it changes nothing in the Word Bank or in any Word List.
 
 ### Word metadata
 
@@ -169,6 +169,18 @@ _Avoid_: definition, record, entry (alone)
 One spelling with one reading, as a Dictionary lists it, such as 辛い read からい. 辛い read つらい is another Headword. The word popup groups the Dictionary entries of every Dictionary by Headword.
 
 _Avoid_: term, expression
+
+### Pitch accent
+
+Where the pitch of a Headword drops, counted in morae from its start, with 0 for no drop: 食べる read たべる is 2. It describes the dictionary form, not an inflected form in a text. It belongs to a Headword and not to a word, because two Spellings of one word can differ. A Headword can have several values or none.
+
+_Avoid_: tone, intonation, stress
+
+### Pitch dictionary
+
+Reference data that gives Pitch accent values for Headwords. Michigo offers none for download: the learner imports one. Without one, Pitch accent comes from the Tokenizer dictionary alone.
+
+_Avoid_: accent dictionary
 
 ### Personal Dictionary
 

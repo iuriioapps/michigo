@@ -15,6 +15,7 @@ A dictionary build is identified by the UniDic version plus the Lindera version 
 - Both apps use the native binding. It maps the dictionary from disk and uses about 50 MB after load.
 - The CLI ships inside the desktop app's install. It is not one file, and Michigo publishes no separate CLI package in v1.
 - A script in the repo builds the dictionary: download from NINJAL, compact the connection matrix, build with Lindera, pack. A manual GitHub Actions workflow runs it, and a local run is the fallback.
+- The same script writes an accent table from the UniDic lexicon into the archive: one line per spelling, reading and lexeme, 2.9 MB compressed. A token carries the accent of the reading that the tokenizer chose, and the table gives a Pitch accent to every other Headword that the word popup shows.
 - The archive sits in a GitHub release of its own. The manifest entry holds the URL, the size and a SHA-256 hash.
 - The download resumes, checks free disk space and the hash, and installs with one atomic rename into one folder per build in the shared data folder.
 
