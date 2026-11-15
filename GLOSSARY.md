@@ -84,13 +84,13 @@ The state of a word in the Word Bank that the learner can already read. A word i
 
 ### Occurrences
 
-How many times a word appears in one Source or one Project. The number belongs to that Source or Project: a word can appear 50 times in one Source and once in another. The Word Bank has no such number of its own.
+How many times a word appears in one Source, one Project or one group of Sources inside a Project. The number belongs to that scope: a word can appear 50 times in one Source and once in another. The Word Bank has no such number of its own.
 
 _Avoid_: frequency, count
 
 ### Coverage
 
-The share of the counted Occurrences in a Source, a group or a Project whose word is Known. Every word counts, whatever its Part of speech, and so does every Unrecognized piece, as unknown. Only Stopwords takes something out of the count. A Project counts all its Sources as one text, or shows the average of its Sources when the learner sets that for the Project.
+The share of the counted Occurrences in a Source, a Project or a group of Sources inside a Project whose word is Known. Every word counts, whatever its Part of speech, and so does every Unrecognized piece, as unknown. Only Stopwords takes something out of the count. A Project counts all its Sources as one text, or shows the average of its Sources when the learner sets that for the Project.
 
 _Avoid_: comprehension, known percent
 
