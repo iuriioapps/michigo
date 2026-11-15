@@ -8,7 +8,7 @@ The installer holds no Reference data, and GitHub states no bandwidth limit for 
 
 **The app carries the SHA-256 of its Tokenizer dictionary build and accepts that file from any host only when the hash matches.** A hash in a Manifest proves only that a file matches that Manifest. The Tokenizer dictionary loads through a native binding and decides what a word is, so a Manifest can move it but can never replace it.
 
-Reference data from any Manifest is untrusted input. The app limits the size on unpack, writes no path outside the target folder and validates each row against a schema that Michigo names. A change of the Manifest address shows one warning that names the new host.
+Reference data from any Manifest is untrusted input. The app never unpacks an archive to disk: it reads the files that it knows straight into the database, so it uses no file path from the archive. It reads at most 256 MB per file, 4 GB in total and 100,000 entries, and it validates each row against a schema that Michigo names. A change of the Manifest address shows one warning that names the new host.
 
 ## The Manifest
 
