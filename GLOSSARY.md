@@ -120,7 +120,7 @@ _Avoid_: grammar point, rule
 
 ### Tokenizer dictionary
 
-The data that Michigo needs to split text into words. It also holds a Pitch accent value for many Headwords. Michigo downloads it on first start and cannot work without it. It is not Reference data and not a Dictionary: the learner never imports, replaces or removes it.
+The data that Michigo needs to split text into words. Michigo downloads it on first start and cannot work without it. It is not Reference data and not a Dictionary: the learner never imports, replaces or removes it.
 
 _Avoid_: UniDic dictionary, dictionary (alone)
 
@@ -178,7 +178,7 @@ _Avoid_: tone, intonation, stress
 
 ### Pitch dictionary
 
-Reference data that gives Pitch accent values for Headwords. Michigo offers none for download: the learner imports one. Without one, Pitch accent comes from the Tokenizer dictionary alone.
+Reference data that gives Pitch accent values for Headwords. Michigo downloads one that it builds from UniDic, and the learner can import more. Without any, Michigo shows no Pitch accent.
 
 _Avoid_: accent dictionary
 
