@@ -2,7 +2,7 @@
 
 Michigo v1 tokenizes with UniDic 2025.12 through the native Lindera binding, in the desktop app and in the CLI. The Tokenizer dictionary is 1 GB on disk and a download of about 385 MB. Michigo builds it, hosts it and downloads it on first start.
 
-The tokenizer decides what a word is, so its errors reach every coverage number. In a judged sample of 150 regions where the two versions differ, UniDic 2.1.2 is wrong in 43 and 2025.12 in 18. Version 2025.12 knows current spoken forms and names (やべぇ, フリーレン), and each token carries an accent field that Michigo uses for pitch. The learner pays for the size once, at first start.
+The tokenizer decides what a word is, so its errors reach every coverage number. In a judged sample of 150 regions where the two versions differ, UniDic 2.1.2 is wrong in 43 and 2025.12 in 18. Version 2025.12 knows current spoken forms and names (やべぇ, フリーレン), and its lexicon carries the accent values that Michigo's Pitch dictionary is built from. The learner pays for the size once, at first start.
 
 ## The pin
 
