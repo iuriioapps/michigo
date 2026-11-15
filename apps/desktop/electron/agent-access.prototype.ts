@@ -77,10 +77,21 @@ const tools: Record<string, Tool> = {
       return job;
     },
   },
+  // An agent that cannot sleep asked 18 times in a few seconds. So the status
+  // call itself waits, for less than the 60 seconds that a client allows.
   import_status: {
-    description: "PROTOTYPE: the state of a job from import_start: running or done.",
+    description:
+      "PROTOTYPE: the state of a job from import_start: running or done. Waits up to 30 seconds for the job to finish before it answers.",
     input: z.object({ id: z.string() }),
-    run: (input: { id: string }) => jobs.get(input.id) ?? { state: "unknown" },
+    run: async (input: { id: string }) => {
+      for (let waited = 0; waited < 30 && jobs.get(input.id)?.state === "running"; waited++) {
+        await new Promise((resolve) => {
+          setTimeout(resolve, 1000);
+        });
+      }
+
+      return jobs.get(input.id) ?? { state: "unknown" };
+    },
   },
   project_create: {
     description: "Create a Project and return it.",
