@@ -22,6 +22,8 @@ win:
   target: nsis
 linux:
   target: [AppImage, deb]
+  # Without this the binary takes the package name and is called `@michigodesktop`.
+  executableName: michigo
   category: Education
 publish:
   provider: github
