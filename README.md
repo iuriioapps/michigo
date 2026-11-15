@@ -6,8 +6,6 @@ A desktop application for Japanese language learning.
 
 > **Status: scaffold.** The repository currently contains no domain features. What exists is the full production toolchain — build, lint, typecheck, test, package and release — plus one end-to-end "proof of life" slice that exercises every seam. See [Proof of life](#proof-of-life).
 
-New to Electron, pnpm workspaces, or this toolchain? Start with [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — it explains how the pieces fit together and why, for someone who knows TypeScript and the web but not this stack.
-
 ## Prerequisites
 
 - **Node 24** — `nvm use` picks it up from `.nvmrc`. Pinned to match the Node that Electron bundles (24.21.0), so dev, CI and tests run the same runtime as the packaged app.
@@ -34,7 +32,7 @@ Run `pnpm fmt` to apply formatting; `pnpm check` only verifies it.
 
 ```
 apps/
-  desktop/   Electron + React + Tailwind + shadcn/ui
+  desktop/   Electron + React + Tailwind, with hand-written UI components
 packages/
   core/      shared primitives and zod schemas
   vocab/     vocabulary coverage analysis  (scaffold)
