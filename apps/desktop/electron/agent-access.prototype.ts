@@ -47,6 +47,17 @@ const tools: Record<string, Tool> = {
     input: z.object({}),
     run: () => listProjects(),
   },
+  // Stands in for a long action such as the import of a Source.
+  slow_import: {
+    description: "PROTOTYPE: waits for the given seconds, like a long import, then returns.",
+    input: z.object({ seconds: z.number().min(0).max(600) }),
+    run: (input: { seconds: number }) =>
+      new Promise((resolve) => {
+        setTimeout(() => {
+          resolve({ waited: input.seconds });
+        }, input.seconds * 1000);
+      }),
+  },
   project_create: {
     description: "Create a Project and return it.",
     input: CreateProjectInputSchema,
@@ -55,7 +66,7 @@ const tools: Record<string, Tool> = {
   },
 };
 
-function callTool(name: string, args: unknown): unknown {
+async function callTool(name: string, args: unknown): Promise<unknown> {
   const tool = tools[name];
 
   if (tool === undefined) {
@@ -64,7 +75,7 @@ function callTool(name: string, args: unknown): unknown {
 
   try {
     // The same parse as the IPC handler: the agent is as untrusted as the renderer.
-    const result = tool.run(tool.input.parse(args ?? {}) as never);
+    const result = await tool.run(tool.input.parse(args ?? {}) as never);
 
     if (tool.changes === true) {
       for (const window of BrowserWindow.getAllWindows()) {
@@ -79,6 +90,7 @@ function callTool(name: string, args: unknown): unknown {
 }
 
 function answer(method: string, params: Record<string, unknown>): unknown {
+  // `tools/call` returns a promise, and the caller awaits every result.
   switch (method) {
     case "initialize":
       return {
@@ -146,14 +158,18 @@ export function startAgentAccessPrototype(): void {
         return;
       }
 
-      const result = answer(message.method, message.params ?? {});
-
-      reply(
-        200,
-        result === undefined
-          ? { jsonrpc: "2.0", id: message.id, error: { code: -32601, message: "Method not found" } }
-          : { jsonrpc: "2.0", id: message.id, result },
-      );
+      void Promise.resolve(answer(message.method, message.params ?? {})).then((result) => {
+        reply(
+          200,
+          result === undefined
+            ? {
+                jsonrpc: "2.0",
+                id: message.id,
+                error: { code: -32601, message: "Method not found" },
+              }
+            : { jsonrpc: "2.0", id: message.id, result },
+        );
+      });
     });
   });
 

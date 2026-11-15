@@ -1,0 +1,40 @@
+# PROTOTYPE, throwaway. Runs only on the prototype branch.
+name: Agent prototype
+
+on:
+  push:
+    branches: [prototype/agent-access]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-latest
+            run: node scripts/agent-prototype-check.mjs apps/desktop/release/0.1.0/mac-arm64/Michigo.app/Contents/MacOS/Michigo
+          - os: ubuntu-latest
+            run: xvfb-run -a node scripts/agent-prototype-check.mjs apps/desktop/release/0.1.0/linux-unpacked/michigo --no-sandbox
+          - os: windows-latest
+            run: node scripts/agent-prototype-check.mjs apps/desktop/release/0.1.0/win-unpacked/Michigo.exe
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4.3.0
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: pnpm --filter @michigo/desktop exec electron-builder --dir --publish never
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: false
+      - run: ls apps/desktop/release/0.1.0 apps/desktop/release/0.1.0/*
+        shell: bash
+      - run: ${{ matrix.run }}
+        shell: bash
+        timeout-minutes: 5
