@@ -1,0 +1,38 @@
+# Throwaway: builds the accent table from the UniDic 2025.12 lexicon on a standard runner.
+# Lives only on the research branch.
+name: Accent table spike
+
+on:
+  push:
+    branches: [research/pitch-accent-table]
+    paths:
+      - .github/workflows/accent-table-spike.yml
+      - docs/research/pitch-accent-table/build-accent-table.cjs
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
+        working-directory: docs/research/pitch-accent-table
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Download the lexicon from NINJAL
+        run: |
+          curl -sSL --retry 3 -o src.zip https://clrd.ninjal.ac.jp/unidic_archive/2512/unidic-cwj-202512_full.zip
+          unzip -q src.zip lex.csv -d src && rm src.zip
+      - name: Build the table
+        run: |
+          node build-accent-table.cjs src/lex.csv accent.tsv
+          zstd -19 -q accent.tsv -o accent.tsv.zst && ls -l accent.tsv accent.tsv.zst
