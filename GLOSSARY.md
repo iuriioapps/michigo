@@ -209,3 +209,15 @@ _Avoid_: source (alone), provider, TTS engine
 One stored audio file of one Spelling of a word, from one Audio Source. A Clip never stands for the word as a whole, because two Spellings of one word can sound different. A word can hold several Clips. Audio of a sentence is not a Clip: Michigo keeps it only for a time.
 
 _Avoid_: recording, sound, audio file
+
+### Card Queue
+
+The one list of words that the learner wants as Anki cards. The learner adds words to it from any Source or word view, reviews it and sends all of it or a part of it to Anki. It is the only way from a word to an Anki card. It keeps its content until the learner sends or removes it. Michigo has no study of its own: the learner studies the cards in Anki.
+
+_Avoid_: Anki queue, export list, deck
+
+### Queued card
+
+One word in the Card Queue. A word is in it at most once. It holds no card content: Michigo builds the card from the word when the learner previews it or sends it. It leaves the Card Queue when Anki has a card for its word.
+
+_Avoid_: queue item, pending card
