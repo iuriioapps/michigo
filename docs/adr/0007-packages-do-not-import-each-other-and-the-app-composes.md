@@ -19,7 +19,7 @@ Most learner actions need several capabilities. "Update from Anki" reads fields 
 | `source` | One strategy per Source format, and the cleanup into Lines |
 | `grammar` | Grammar Patterns, and the label of an inflected form as a separate export |
 | `reference` | Readers for the import schemas, and the lookups for Dictionary entries, JLPT level and Frequency rank |
-| `pitch` | Pitch dictionary rows, the order of Pitch dictionaries, the lookup and the split of a reading into morae |
+| `pitch` | Pitch dictionary rows, the order of Pitch dictionaries, the lookup, the split of a reading into morae, the high and low pattern of a value, and the card markup for Pitch accent |
 | `vocab` | Projects, stored Sources, the Word Bank, Word Lists, Known, Coverage, Examples and CSV |
 | `anki` | The AnkiConnect client, the maturity rule, and card formats with their markers |
 | `audio` | Audio Sources, one strategy each, and the pipeline that produces a file |
@@ -40,7 +40,7 @@ Most learner actions need several capabilities. "Update from Anki" reads fields 
 - Layers, where a package may import the packages below it. Rejected: every new feature would reopen the question of which layer a package sits in.
 - Store interfaces, the tokenize contract and pure helpers in `core`. Rejected: `core` would collect everything that has no obvious home.
 - Store interfaces inside `storage`. Rejected: `storage` would define what each package needs, and a package could not be tested without it.
-- Pitch code inside `reference`. Rejected: pitch has its own rules (order of Pitch dictionaries, morae), and where its drawing happens is still open.
+- Pitch code inside `reference`. Rejected: pitch has its own rules (order of Pitch dictionaries, morae, the card markup).
 - One package each for Dictionary, JLPT list and Frequency list. Rejected: they share the archive readers and the same shape of lookup from a word's Spellings and readings.
 - `audio` and `manifest` inside the desktop app. Rejected: `audio` has replaceable implementations, and `manifest` checks the hash of the Tokenizer dictionary and reads an untrusted Manifest. Both need tests that run without Electron.
 - Packages for `media`, `ocr` and `llm`. Rejected: the file store covers media, and nothing in v1 uses the other two.
