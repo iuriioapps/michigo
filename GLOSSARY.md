@@ -142,7 +142,7 @@ _Avoid_: tag, property
 
 ### Frequency rank
 
-The position of a word in a frequency list. It is Word metadata, and it describes the texts that the list was built from, such as news articles. It does not say how useful the word is for the Source that the learner wants to read: Occurrences says that.
+The position of a word in the active frequency list. Several frequency lists can be present, and the learner chooses the one that is active. It is Word metadata, and it describes the texts that the list was built from, such as news articles. It does not say how useful the word is for the Source that the learner wants to read: Occurrences says that.
 
 _Avoid_: frequency (alone)
 
