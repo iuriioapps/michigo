@@ -78,7 +78,7 @@ A `-` prefix keeps a path out of the route tree: `src/routes/-components/` is wh
 
 ## UI components
 
-Hand-written, no shadcn, no `cva`, no Radix. A variant is a plain lookup object:
+Hand-written styling, no shadcn, no `cva`. Behavior (focus, anchoring, keyboard) comes from Base UI, a headless library; see `docs/adr/0008-base-ui-for-behavior-and-tanstack-for-state-and-tables.md`. A variant is a plain lookup object:
 
 ```ts
 const variants = { default: "…", outline: "…" } as const;
