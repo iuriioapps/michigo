@@ -102,7 +102,7 @@ _Avoid_: comprehension, known percent
 
 ### Coverage target
 
-The Coverage that the learner wants to reach before reading, 95% unless the learner changes it. The learner can set it for all of Michigo, for one Project and for one Source, and the nearest value wins.
+The Coverage that the learner wants to reach before reading, 95% unless the learner changes it. The learner can set it for all of Michigo and for one Project, and the nearest value wins. A Source uses the target of its Project.
 
 _Avoid_: comprehension target, goal
 
