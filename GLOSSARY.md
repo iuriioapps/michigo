@@ -148,7 +148,7 @@ _Avoid_: frequency (alone)
 
 ### JLPT level
 
-An estimate of the level of the Japanese-Language Proficiency Test, from N5 to N1, at which a word is expected. It is Word metadata from a JLPT list, and a word has at most one. It is unofficial: the test has published no word list since 2010.
+An estimate of the level of the Japanese-Language Proficiency Test, from N5 to N1, at which a word is expected. It is Word metadata from the active JLPT list, and a word has at most one. Several JLPT lists can be present, and the learner chooses the one that is active. It is unofficial: the test has published no word list since 2010.
 
 _Avoid_: official level, grade
 
