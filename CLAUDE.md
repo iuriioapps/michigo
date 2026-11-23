@@ -67,6 +67,10 @@ The main thread of the main process only validates IPC input and passes work on.
 - One transaction covers one item (one Source, one CSV import, one Anki update). An action over many items commits each item on its own.
 - Every action that reaches the main process shows a pending state, ignores a repeat while pending and leaves the rest of the window usable. An action longer than about 1 s shows progress, and it can be canceled where it commits item by item.
 
+## Quality targets
+
+Every implementation issue meets the performance budgets, accessibility checks, translation rules, `Temporal` rules and logging rules in `docs/quality-targets.md`. Read it before adding a feature.
+
 ## Adding an IPC channel
 
 Touch these four places, in order:
