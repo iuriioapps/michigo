@@ -1,0 +1,2025 @@
+[
+  {
+    "id": "ba-yokatta",
+    "form": "〜ばよかった",
+    "variants": [
+      "〜ばよかったのに",
+      "〜たらよかった",
+      "〜なきゃよかった"
+    ],
+    "meaning": "I should have ~ / I wish I had ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "V-ba + よかった",
+      "i-Adj-stem + ければよかった",
+      "V-ta + らよかった",
+      "V-nai-stem + なきゃよかった"
+    ],
+    "examples": [
+      {
+        "ja": "もっと早く家を出ればよかった。",
+        "match": "ばよかった",
+        "en": "I should have left home earlier."
+      },
+      {
+        "ja": "あんなこと、言わなければよかったな。",
+        "match": "ばよかった",
+        "en": "I wish I hadn't said that."
+      },
+      {
+        "ja": "傘を持ってくればよかったのに、どうして忘れたの？",
+        "match": "ばよかったのに",
+        "en": "You should have brought an umbrella. Why did you forget it?"
+      },
+      {
+        "ja": "先に彼に相談したらよかったと、今になって思う。",
+        "match": "たらよかった",
+        "en": "Now I think I should have talked to him first."
+      },
+      {
+        "ja": "こんなことなら来なきゃよかった。",
+        "match": "なきゃよかった",
+        "en": "If I'd known it'd be like this, I wouldn't have come."
+      },
+      {
+        "ja": "もう少し勉強しておけばよかったです。",
+        "match": "ばよかった",
+        "en": "I wish I had studied a little more."
+      },
+      {
+        "ja": "値段がもう少し安ければよかったんだけどね。",
+        "match": "ければよかった",
+        "en": "I just wish it had been a bit cheaper."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "天気がよかったら、外で食べよう。",
+        "en": "If the weather's nice, let's eat outside.",
+        "why": "よかったら is the たら conditional of いい; there is no ば before it."
+      },
+      {
+        "ja": "来てくれてよかった。",
+        "en": "I'm glad you came.",
+        "why": "てよかった is te-yokatta (glad that), not a regret after ば."
+      },
+      {
+        "ja": "どれを選べばいいか分からない。",
+        "en": "I don't know which one to pick.",
+        "why": "Present ばいい is ba-ii (what one should do), not past regret."
+      },
+      {
+        "ja": "この薬を飲めば、よくなるよ。",
+        "en": "Take this medicine and you'll get better.",
+        "why": "ば is a plain condition and よく belongs to よくなる; no よかった."
+      }
+    ],
+    "subsumes": [
+      "tara"
+    ],
+    "confusables": [
+      "ba-ii",
+      "ba-noni",
+      "te-yokatta",
+      "tara-ii"
+    ],
+    "detection": "A verb or adjective in 仮定形 + 接続助詞 ば (lexeme ば), then 形容詞 良い in 連用形 + 助動詞 た (よかった). The たら variant is 助動詞 た in 仮定形 (たら/だら) + 良い + た; なきゃ is a contraction of なければ that UniDic may tag as ない in a fused 仮定形 (?). Guard: よかった must follow ば or たら directly and be past; present ばいい is ba-ii, and てよかった is te-yokatta. ばよかったのに is also listed under ba-noni, so one of the two must own it."
+  },
+  {
+    "id": "to-ii",
+    "form": "〜といい",
+    "variants": [
+      "〜といいね",
+      "〜といいな",
+      "〜といいですね",
+      "〜といいんだけど"
+    ],
+    "meaning": "I hope ~ / it'd be good if ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "jt4y": "N3",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "V-dict + といい",
+      "V-nai + といい",
+      "i-Adj + といい",
+      "na-Adj + だといい",
+      "N + だといい"
+    ],
+    "examples": [
+      {
+        "ja": "明日、晴れるといいね。",
+        "match": "といいね",
+        "en": "I hope it's sunny tomorrow."
+      },
+      {
+        "ja": "合格できるといいな。",
+        "match": "といいな",
+        "en": "I hope I pass."
+      },
+      {
+        "ja": "早く元気になるといいですね。",
+        "match": "といいですね",
+        "en": "I hope you get well soon."
+      },
+      {
+        "ja": "彼女が気に入ってくれるといいんだけど。",
+        "match": "といいんだけど",
+        "en": "I hope she likes it."
+      },
+      {
+        "ja": "痛くないといいなあ、と思いながら注射を待った。",
+        "match": "といい",
+        "en": "I waited for the shot, hoping it wouldn't hurt."
+      },
+      {
+        "ja": "新しい部屋、静かだといいですね。",
+        "match": "といい",
+        "en": "I hope your new room is quiet."
+      },
+      {
+        "ja": "疲れたときは、甘いものを食べるといいよ。",
+        "match": "といい",
+        "en": "When you're tired, it helps to eat something sweet."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "はじめまして、田中といいます。",
+        "en": "Nice to meet you, my name is Tanaka.",
+        "why": "いい is the masu-stem of 言う (say) after quotative と."
+      },
+      {
+        "ja": "兄といい、弟といい、みんな背が高い。",
+        "en": "The older brother, the younger one, they're all tall.",
+        "why": "Paired といい〜といい is to-ii-to-ii (both X and Y)."
+      },
+      {
+        "ja": "週末は友達といい時間を過ごした。",
+        "en": "I had a great time with my friends on the weekend.",
+        "why": "と means 'with' and いい modifies the noun 時間."
+      },
+      {
+        "ja": "ドアを開けるといい匂いがした。",
+        "en": "When I opened the door, there was a nice smell.",
+        "why": "Conditional と followed by いい modifying 匂い; no wish."
+      }
+    ],
+    "subsumes": [
+      "to-conditional"
+    ],
+    "confusables": [
+      "tara-ii",
+      "ba-ii",
+      "to-ii-to-ii",
+      "to-conditional"
+    ],
+    "detection": "接続助詞 と after a plain non-past predicate, then 形容詞 良い (surface いい or 良い) closing the clause, optionally followed by ね, な, なあ, よ, けど, んだけど or です. Guard: いい must not modify a following noun (いい匂い, いい時間); いい followed by ます or いう forms is the verb 言う (lexeme 言う), and と must be 接続助詞, not the 格助詞 と 'with'. A second といい in the same sentence makes it to-ii-to-ii. tara-ii also lists といい variants, so the two entries must agree on who owns them."
+  },
+  {
+    "id": "tara-dou",
+    "form": "〜たらどう",
+    "variants": [
+      "〜たらどうですか",
+      "〜たらどうでしょう",
+      "〜たら？",
+      "〜たらいかがですか"
+    ],
+    "meaning": "why don't you ~?",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "V-ta + らどう",
+      "V-ta + らいかが",
+      "V-ta + ら？"
+    ],
+    "examples": [
+      {
+        "ja": "少し休んだらどう？",
+        "match": "だらどう",
+        "en": "Why don't you take a little break?"
+      },
+      {
+        "ja": "一度お医者さんに診てもらったらどうですか。",
+        "match": "たらどうですか",
+        "en": "Why not get yourself checked by a doctor?"
+      },
+      {
+        "ja": "本人に直接聞いてみたらどうでしょう。",
+        "match": "たらどうでしょう",
+        "en": "Maybe you could ask them directly?"
+      },
+      {
+        "ja": "そんなに好きなら、告白したら？",
+        "match": "たら？",
+        "en": "If you like her that much, why not tell her?"
+      },
+      {
+        "ja": "文句ばかり言ってないで、自分でやってみたらどうなの。",
+        "match": "たらどう",
+        "en": "Stop complaining and try doing it yourself."
+      },
+      {
+        "ja": "雨が降りそうですから、傘を持っていったらいかがですか。",
+        "match": "たらいかがですか",
+        "en": "It looks like rain, so why not take an umbrella?"
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "駅に着いたらどうすればいい？",
+        "en": "What should I do once I get to the station?",
+        "why": "Conditional たら followed by the question どうすればいい; no suggestion."
+      },
+      {
+        "ja": "失敗したらどうしよう。",
+        "en": "What if I fail?",
+        "why": "Conditional たら plus どうしよう (worry), not advice to someone."
+      },
+      {
+        "ja": "家に帰ったら、電話してね。",
+        "en": "Call me when you get home.",
+        "why": "Plain conditional たら in mid-sentence (tara)."
+      },
+      {
+        "ja": "このまま雨が降り続いたらどうなるの？",
+        "en": "What happens if it keeps raining like this?",
+        "why": "どう belongs to the verb どうなる; たら is a condition."
+      }
+    ],
+    "subsumes": [
+      "tara"
+    ],
+    "confusables": [
+      "tara",
+      "wa-dou-desu-ka",
+      "hou-ga-ii",
+      "te-goran"
+    ],
+    "detection": "助動詞 た in 仮定形 (たら/だら) + 副詞 どう (lexeme どう) or いかが (lexeme 如何?), optionally + です/でしょう/か/の/かな, then end of sentence. The bare variant is たら directly before ？ or the end of a line. Guard: if a verb follows どう (どうする, どうなる, どうしよう, どうすれば), it is a conditional plus a question; a たら followed by more clause is tara. Must be matched before tara."
+  },
+  {
+    "id": "te-sumimasen",
+    "form": "〜てすみません",
+    "variants": [
+      "〜てごめんなさい",
+      "〜てごめん",
+      "〜て申し訳ありません",
+      "〜てすみませんでした",
+      "〜て申し訳ございません"
+    ],
+    "meaning": "sorry for ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "V-te + すみません",
+      "V-te + ごめん",
+      "V-te + 申し訳ありません",
+      "i-Adj-stem + くてすみません",
+      "na-Adj + ですみません"
+    ],
+    "examples": [
+      {
+        "ja": "遅れてすみません。",
+        "match": "てすみません",
+        "en": "Sorry I'm late."
+      },
+      {
+        "ja": "昨日は急に帰っちゃってごめんね。",
+        "match": "てごめん",
+        "en": "Sorry for leaving so suddenly yesterday."
+      },
+      {
+        "ja": "ご迷惑をおかけして申し訳ありません。",
+        "match": "て申し訳ありません",
+        "en": "I'm very sorry for the trouble."
+      },
+      {
+        "ja": "何度も電話してすみませんでした。",
+        "match": "てすみませんでした",
+        "en": "Sorry for calling so many times."
+      },
+      {
+        "ja": "部屋が汚くてごめんなさい、適当に座ってください。",
+        "match": "くてごめんなさい",
+        "en": "Sorry the place is a mess. Sit anywhere you like."
+      },
+      {
+        "ja": "下手ですみません。",
+        "match": "ですみません",
+        "en": "Sorry I'm so bad at this."
+      },
+      {
+        "ja": "待たせてごめん、行こうか。",
+        "match": "てごめん",
+        "en": "Sorry to keep you waiting. Shall we go?"
+      },
+      {
+        "ja": "お返事が遅くなって申し訳ございません。",
+        "match": "て申し訳ございません",
+        "en": "I apologize for the late reply."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "彼は頭を下げて、ごめんなさいと言った。",
+        "en": "He bowed his head and said he was sorry.",
+        "why": "下げて is a sequence of actions; ごめんなさい is a quoted word."
+      },
+      {
+        "ja": "ちょっと待ってて。すみません、電話です。",
+        "en": "Hang on a second. Sorry, I've got a call.",
+        "why": "The て ends a request sentence; すみません opens a new one."
+      },
+      {
+        "ja": "謝って済む問題じゃない。",
+        "en": "This isn't something an apology can fix.",
+        "why": "済む is the verb 'be settled', not the apology すみません."
+      }
+    ],
+    "subsumes": [
+      "te-cause"
+    ],
+    "confusables": [
+      "te-kurete-arigatou",
+      "te-cause"
+    ],
+    "detection": "A て-form (接続助詞 て/で, or くて/で after adjectives) immediately followed by an apology: すみません (UniDic splits すみ + ませ + ん; lexeme 済む), ごめん / ごめんなさい (lexeme 御免?), or 申し訳 + ない/ありません/ございません (lexeme 申し訳). Only でした, ね or a comma may follow inside the match. Guard: a sentence boundary (。) between the て and the apology breaks it; 済む with a subject or after が/で in the sense 'be settled' (済む問題, で済む) is the literal verb."
+  },
+  {
+    "id": "te-kurete-arigatou",
+    "form": "〜てくれてありがとう",
+    "variants": [
+      "〜てくださってありがとうございます",
+      "〜てくれてありがとうございます",
+      "〜てくれてありがと"
+    ],
+    "meaning": "thank you for ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N4",
+    "sources": {
+      "bunpro": "N4",
+      "tanos": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "V-te + くれてありがとう",
+      "V-te + くださってありがとうございます"
+    ],
+    "examples": [
+      {
+        "ja": "来てくれてありがとう。",
+        "match": "てくれてありがとう",
+        "en": "Thanks for coming."
+      },
+      {
+        "ja": "手伝ってくれて本当にありがとう、助かったよ。",
+        "match": "てくれて本当にありがとう",
+        "en": "Thanks so much for helping. You saved me."
+      },
+      {
+        "ja": "貴重なお話を聞かせてくださってありがとうございます。",
+        "match": "てくださってありがとうございます",
+        "en": "Thank you for sharing such valuable stories with us."
+      },
+      {
+        "ja": "いつも話を聞いてくれてありがとね。",
+        "match": "てくれてありがと",
+        "en": "Thanks for always listening to me."
+      },
+      {
+        "ja": "心配してくれてありがとうございます。でも、もう大丈夫です。",
+        "match": "てくれてありがとうございます",
+        "en": "Thank you for worrying about me. But I'm fine now."
+      },
+      {
+        "ja": "生まれてきてくれて、ありがとう。",
+        "match": "てくれて、ありがとう",
+        "en": "Thank you for being born."
+      },
+      {
+        "ja": "ずっと待っててくれてありがとう。",
+        "match": "てくれてありがとう",
+        "en": "Thanks for waiting for me all this time."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "彼が手伝ってくれて、仕事が早く終わった。",
+        "en": "He helped me, so the work got done quickly.",
+        "why": "てくれて links to a result clause; nobody is thanked."
+      },
+      {
+        "ja": "ありがとうって言ってくれて嬉しかった。",
+        "en": "I was happy that you said thank you.",
+        "why": "ありがとう is quoted before って, and くれて leads to 嬉しかった."
+      },
+      {
+        "ja": "プレゼントをくれてありがとう。",
+        "en": "Thanks for the present.",
+        "why": "くれる is the main verb 'give me' after a noun, not an auxiliary after a て-form."
+      }
+    ],
+    "subsumes": [
+      "te-kureru"
+    ],
+    "confusables": [
+      "te-sumimasen",
+      "te-kureru",
+      "te-yokatta"
+    ],
+    "detection": "A て-form + 補助動詞 くれる (lexeme 呉れる) or くださる (lexeme 下さる) in 連用形 + 接続助詞 て, then ありがとう (UniDic may tag it 感動詞 or as 形容詞 有り難い in ウ音便 ?), optionally + ございます/ございました. Allow a comma or one adverb (本当に, いつも) between くれて and ありがとう. Guard: くれ must follow a て/で; くれて after a noun + を is the main verb くれる. If anything other than ありがとう follows くれて, it is plain te-kureru."
+  },
+  {
+    "id": "te-itadakemasen-ka",
+    "form": "〜ていただけませんか",
+    "variants": [
+      "〜ていただけますか",
+      "〜てもらえませんか",
+      "〜てもらえますか",
+      "〜ていただけないでしょうか",
+      "〜てもらえない？"
+    ],
+    "meaning": "could you please ~?",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "jt4y": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "V-te + いただけませんか",
+      "V-te + いただけますか",
+      "V-te + もらえませんか",
+      "V-te + もらえない？"
+    ],
+    "examples": [
+      {
+        "ja": "すみません、写真を撮っていただけませんか。",
+        "match": "ていただけませんか",
+        "en": "Excuse me, could you take a picture for us?"
+      },
+      {
+        "ja": "もう一度説明していただけますか。",
+        "match": "ていただけますか",
+        "en": "Could you explain that once more?"
+      },
+      {
+        "ja": "ちょっと窓を開けてもらえませんか。",
+        "match": "てもらえませんか",
+        "en": "Could you open the window a little?"
+      },
+      {
+        "ja": "悪いけど、駅まで迎えに来てもらえない？",
+        "match": "てもらえない？",
+        "en": "Sorry, but could you come and pick me up at the station?"
+      },
+      {
+        "ja": "恐れ入りますが、こちらにお名前を書いていただけないでしょうか。",
+        "match": "ていただけないでしょうか",
+        "en": "Sorry to trouble you, but could you write your name here?"
+      },
+      {
+        "ja": "この荷物、少し見ていてもらえますか。トイレに行きたいので。",
+        "match": "てもらえますか",
+        "en": "Could you watch my bag for a bit? I need the restroom."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "結局、先生に推薦状を書いていただけませんでした。",
+        "en": "In the end, I couldn't get the teacher to write me a reference.",
+        "why": "Past negative statement of the potential; no question, no request."
+      },
+      {
+        "ja": "誰にも手伝ってもらえない。",
+        "en": "No one will help me.",
+        "why": "Plain negative potential statement with no question marker."
+      },
+      {
+        "ja": "そのお菓子、私もいただけますか。",
+        "en": "Could I have one of those sweets too?",
+        "why": "いただく is the main verb 'receive' after a noun; no て-form."
+      },
+      {
+        "ja": "手伝ってもらえて助かった。",
+        "en": "Your help really saved me.",
+        "why": "Potential もらえる in its て-form inside a statement."
+      }
+    ],
+    "subsumes": [
+      "te-morau",
+      "masen-ka"
+    ],
+    "confusables": [
+      "te-kudasai",
+      "te-moratte-mo-ii-desu-ka",
+      "masen-ka",
+      "sasete-kudasai"
+    ],
+    "detection": "A て-form + the potential of 頂く or 貰う; UniDic short units give いただける and もらえる as their own potential verbs (lexemes 頂ける? and 貰える?). Then ます + ん + か, ます + か, ない + でしょう + か, or ない + ？. Guard: a question marker (か or ？) must close the match; いただけませんでした and a plain もらえない。 are statements. いただく/もらう right after a noun + を/も is the main verb. Must be matched before te-morau and masen-ka."
+  },
+  {
+    "id": "o-ni-naru",
+    "form": "お〜になる",
+    "variants": [
+      "ご〜になる",
+      "お〜になります"
+    ],
+    "meaning": "(honorific) someone does ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "お + V-masu-stem + になる",
+      "ご + N + になる"
+    ],
+    "examples": [
+      {
+        "ja": "社長はもうお帰りになりました。",
+        "match": "お帰りになりました",
+        "en": "The president has already gone home."
+      },
+      {
+        "ja": "この本はもうお読みになりましたか。",
+        "match": "お読みになりました",
+        "en": "Have you already read this book?"
+      },
+      {
+        "ja": "先生がお書きになった本を拝読しました。",
+        "match": "お書きになった",
+        "en": "I read the book the professor wrote."
+      },
+      {
+        "ja": "新しいシステムは、どなたでもご利用になれます。",
+        "match": "ご利用になれます",
+        "en": "Anyone can use the new system."
+      },
+      {
+        "ja": "何時ごろお着きになりますか。",
+        "match": "お着きになります",
+        "en": "Around what time will you arrive?"
+      },
+      {
+        "ja": "どうぞお掛けになってお待ちください。",
+        "match": "お掛けになって",
+        "en": "Please have a seat and wait."
+      },
+      {
+        "ja": "部長がご覧になるのは、こちらの資料です。",
+        "match": "ご覧になる",
+        "en": "This is the document the manager will look at."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "将来はお医者さんになりたい。",
+        "en": "I want to be a doctor when I grow up.",
+        "why": "お医者さん is a noun; になる means 'become'."
+      },
+      {
+        "ja": "いつもお世話になっております。",
+        "en": "Thank you for your continued support.",
+        "why": "お世話になる is a fixed phrase 'be indebted'; the speaker is the subject."
+      },
+      {
+        "ja": "お時間になりましたので、始めさせていただきます。",
+        "en": "It's time, so we'll begin.",
+        "why": "お時間 is a noun; になる means 'it has become (time)'."
+      },
+      {
+        "ja": "ご迷惑になるので、ここでは静かにしてください。",
+        "en": "Please keep quiet here, as it bothers others.",
+        "why": "ご迷惑 is a noun; になる means 'become a nuisance'."
+      }
+    ],
+    "subsumes": [
+      "ku-ni-naru"
+    ],
+    "confusables": [
+      "o-suru",
+      "o-kudasai",
+      "o-desu",
+      "ku-ni-naru"
+    ],
+    "detection": "接頭辞 お/ご (lexeme 御) + a verb in 連用形 or a サ変可能 noun + 格助詞 に + 動詞 成る (lexeme 成る) in any form, including the potential なれる. ご覧になる (honorific of 見る) counts. Guard: お + an ordinary noun + になる (お医者さん, お時間, ご迷惑) is 'become'; お世話になる is a fixed phrase. Since UniDic tags ご + 漢語 as a noun either way, a stoplist of nouns like 世話, 迷惑, 時間 is needed. Must be matched before ku-ni-naru."
+  },
+  {
+    "id": "o-suru",
+    "form": "お〜する",
+    "variants": [
+      "ご〜する",
+      "お〜いたす",
+      "お〜します",
+      "ご〜いたします"
+    ],
+    "meaning": "(humble) I do ~ (for you)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N4",
+    "sources": {
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "お + V-masu-stem + する",
+      "ご + N + する",
+      "お + V-masu-stem + いたす",
+      "ご + N + いたす"
+    ],
+    "examples": [
+      {
+        "ja": "お荷物、お持ちします。",
+        "match": "お持ちします",
+        "en": "Let me carry your bags."
+      },
+      {
+        "ja": "結果は後ほどメールでご連絡します。",
+        "match": "ご連絡します",
+        "en": "We'll email you the results later."
+      },
+      {
+        "ja": "この前の本、お返ししますね。",
+        "match": "お返しします",
+        "en": "Here's the book you lent me the other day."
+      },
+      {
+        "ja": "ご乗車の皆様にご案内いたします。",
+        "match": "ご案内いたします",
+        "en": "An announcement for all passengers."
+      },
+      {
+        "ja": "何かお手伝いしましょうか。",
+        "match": "お手伝いしましょう",
+        "en": "Is there anything I can help you with?"
+      },
+      {
+        "ja": "ご説明した通り、締め切りは金曜日です。",
+        "match": "ご説明した",
+        "en": "As I explained, the deadline is Friday."
+      },
+      {
+        "ja": "皆様のご来店を心よりお待ちしております。",
+        "match": "お待ちして",
+        "en": "We look forward to seeing you at our store."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "駅前のカフェでお茶しない？",
+        "en": "Want to grab a coffee at the café by the station?",
+        "why": "お茶する is a casual verb 'have tea'; お is part of the noun, not humble."
+      },
+      {
+        "ja": "毎朝、お化粧するのに三十分かかる。",
+        "en": "Putting on makeup takes me thirty minutes every morning.",
+        "why": "お化粧 is a noun with polite お plus ordinary する; nobody is honored."
+      },
+      {
+        "ja": "これから部長がお話しになります。",
+        "en": "The manager will now speak.",
+        "why": "お〜になる is the honorific o-ni-naru, not humble お〜する."
+      }
+    ],
+    "subsumes": [],
+    "confusables": [
+      "o-ni-naru",
+      "go-itadaku",
+      "o-desu",
+      "o-kudasai"
+    ],
+    "detection": "接頭辞 お/ご (lexeme 御) + a verb in 連用形 or a サ変可能 noun + 動詞 為る (する) or 致す (いたす) in any form. The speaker or their side is the doer. Guard: if に + なる follows, it is o-ni-naru; if ください or いただく follows, it is o-kudasai or go-itadaku. Nouns that take a polite お and an ordinary する (お茶, お化粧, お掃除, お洗濯, お昼寝) need a stoplist, since UniDic gives them the same tokens."
+  },
+  {
+    "id": "de-gozaimasu",
+    "form": "〜でございます",
+    "variants": [
+      "〜でござる",
+      "〜でございました"
+    ],
+    "meaning": "is ~ (very polite copula)",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "N + でございます",
+      "na-Adj + でございます"
+    ],
+    "examples": [
+      {
+        "ja": "こちらが本日のおすすめでございます。",
+        "match": "でございます",
+        "en": "This is today's special."
+      },
+      {
+        "ja": "お手洗いは二階でございます。",
+        "match": "でございます",
+        "en": "The restroom is on the second floor."
+      },
+      {
+        "ja": "担当の佐藤でございます。よろしくお願いいたします。",
+        "match": "でございます",
+        "en": "I'm Sato, and I'll be looking after you."
+      },
+      {
+        "ja": "拙者は旅の侍でござる。",
+        "match": "でござる",
+        "en": "I am a wandering samurai."
+      },
+      {
+        "ja": "先ほどのお電話は、どちら様でございましたか。",
+        "match": "でございました",
+        "en": "May I ask who called a moment ago?"
+      },
+      {
+        "ja": "お支払いは現金のみでございますので、ご了承ください。",
+        "match": "でございます",
+        "en": "Please note that we only accept cash."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "本日はご来場、誠にありがとうございます。",
+        "en": "Thank you very much for coming today.",
+        "why": "ございます follows ありがとう, a set phrase; there is no で copula."
+      },
+      {
+        "ja": "婦人服売り場は三階にございます。",
+        "en": "Women's clothing is on the third floor.",
+        "why": "に + ござる is the polite existence verb 'there is', not the copula."
+      },
+      {
+        "ja": "何かご質問はございますか。",
+        "en": "Do you have any questions?",
+        "why": "は + ございます is polite ある (existence)."
+      }
+    ],
+    "subsumes": [],
+    "confusables": [
+      "de-aru",
+      "de-irassharu"
+    ],
+    "detection": "Copula だ in 連用形 (で) + 動詞 御座る (lexeme 御座る?) + 助動詞 ます in any form (ございます, ございました, ございますか). でござる is the same without ます and appears in samurai-style role language. Guard: UniDic may tag the で as 格助詞 instead of 助動詞 だ, so check that a noun or na-adjective stem precedes and no other predicate follows. ございます after に, が or は is the polite existence verb, and after the ウ音便 of an adjective (ありがとう, おはよう) it is a set phrase."
+  },
+  {
+    "id": "de-aru",
+    "form": "〜である",
+    "variants": [
+      "〜であった",
+      "〜であり",
+      "〜であろう",
+      "〜であって"
+    ],
+    "meaning": "is ~ (written copula)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N4",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "N + である",
+      "na-Adj + である",
+      "Clause-plain + のである"
+    ],
+    "examples": [
+      {
+        "ja": "健康は何よりも大切である。",
+        "match": "である",
+        "en": "Health matters more than anything."
+      },
+      {
+        "ja": "彼はこの村で生まれ育った漁師であった。",
+        "match": "であった",
+        "en": "He was a fisherman born and raised in this village."
+      },
+      {
+        "ja": "東京は日本の首都であり、経済の中心地だ。",
+        "match": "であり",
+        "en": "Tokyo is Japan's capital and the center of its economy."
+      },
+      {
+        "ja": "こうして、二人は再び出会ったのである。",
+        "match": "である",
+        "en": "And so the two of them met again."
+      },
+      {
+        "ja": "真相は、おそらく永遠に謎のままであろう。",
+        "match": "であろう",
+        "en": "The truth will probably remain a mystery forever."
+      },
+      {
+        "ja": "彼が犯人であるという証拠は、どこにもない。",
+        "match": "である",
+        "en": "There's no evidence anywhere that he's the culprit."
+      },
+      {
+        "ja": "子供であっても、ルールは守らなければならない。",
+        "match": "であって",
+        "en": "Even children have to follow the rules."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "棚に本がぎっしり詰め込んである。",
+        "en": "The shelf is crammed full of books.",
+        "why": "込んで is the て-form of 込む, so this is てある, not the copula."
+      },
+      {
+        "ja": "電車である程度は本が読める。",
+        "en": "I can read a fair amount on the train.",
+        "why": "で marks the place, and ある belongs to ある程度 'to some extent'."
+      },
+      {
+        "ja": "彼女は歌手でもある。",
+        "en": "She's also a singer.",
+        "why": "でもある is the separate entry de-mo-aru."
+      },
+      {
+        "ja": "明日、体育館で集会がある。",
+        "en": "There's an assembly in the gym tomorrow.",
+        "why": "で is the location particle and ある is existence with its own subject."
+      }
+    ],
+    "subsumes": [],
+    "confusables": [
+      "de-mo-aru",
+      "de-gozaimasu",
+      "te-aru",
+      "no-da"
+    ],
+    "detection": "Copula だ in 連用形 (で, 助動詞) + 動詞 有る (ある) in any form: ある, あった, あり, あって, あろう. UniDic may tag this で as 格助詞, so check what precedes: a noun, a na-adjective stem or の, and no place or means reading. Guard: で after a 撥音便 verb stem (込んで, 読んで, 遊んで) is 接続助詞 て, which makes te-aru; ある as 連体詞 (ある程度, ある日) is not the verb. でもある is de-mo-aru, and のである overlaps the explanatory no-da."
+  },
+  {
+    "id": "koto-ga-aru",
+    "form": "〜ことがある",
+    "variants": [
+      "〜こともある",
+      "〜ことはある",
+      "〜ことがあります",
+      "〜ことある"
+    ],
+    "meaning": "sometimes ~ / there are times when ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N3",
+      "jt4y": "N3",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "V-dict + ことがある",
+      "V-nai + ことがある",
+      "i-Adj + ことがある"
+    ],
+    "examples": [
+      {
+        "ja": "忙しいと、昼ご飯を食べないことがある。",
+        "match": "ことがある",
+        "en": "When I'm busy, I sometimes skip lunch."
+      },
+      {
+        "ja": "父は週末、ひとりで釣りに行くことがあります。",
+        "match": "ことがあります",
+        "en": "My dad sometimes goes fishing alone on weekends."
+      },
+      {
+        "ja": "天才だって失敗することはある。",
+        "match": "ことはある",
+        "en": "Even geniuses fail sometimes."
+      },
+      {
+        "ja": "電車が遅れることもあるから、早めに出よう。",
+        "match": "こともある",
+        "en": "Trains run late sometimes, so let's leave early."
+      },
+      {
+        "ja": "夜中に急に目が覚めることがあって、なかなか眠れない。",
+        "match": "ことがあって",
+        "en": "Sometimes I wake up suddenly at night and can't get back to sleep."
+      },
+      {
+        "ja": "静かすぎると、かえって落ち着かないこともある。",
+        "match": "こともある",
+        "en": "When it's too quiet, it can actually make you restless."
+      },
+      {
+        "ja": "あの店って、たまに閉まってることあるよね。",
+        "match": "ことある",
+        "en": "That shop is closed now and then, isn't it?"
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "京都には一度行ったことがある。",
+        "en": "I've been to Kyoto once.",
+        "why": "た + ことがある is ta-koto-ga-aru (past experience)."
+      },
+      {
+        "ja": "君に話したいことがある。",
+        "en": "There's something I want to tell you.",
+        "why": "こと is literally 'a thing', modified by 話したい: there is something."
+      },
+      {
+        "ja": "今日はやることがたくさんある。",
+        "en": "I've got a lot to do today.",
+        "why": "Literal 'there are many things to do'; たくさん quantifies こと."
+      },
+      {
+        "ja": "そんなに心配することはない。",
+        "en": "There's no need to worry so much.",
+        "why": "ことはない is koto-wa-nai (no need to)."
+      }
+    ],
+    "subsumes": [
+      "ga-aru",
+      "koto-nominalizer"
+    ],
+    "confusables": [
+      "ta-koto-ga-aru",
+      "koto-wa-nai",
+      "koto-wa-ga",
+      "tokoro-ga-aru"
+    ],
+    "detection": "A non-past plain predicate (verb 連体形, ない, or an i-adjective) + 名詞 事 (こと, lexeme 事) + が/も/は or nothing + 動詞 有る. Guard: if the word before こと is 助動詞 た, it is ta-koto-ga-aru; ことはない and こともない are koto-wa-nai. The literal 'there is something to ~' (話したいことがある, やることがたくさんある) has the same tokens; lower confidence when こと follows たい or a quantity word stands between こと and ある. ことは + verb again (行くことは行く) is koto-wa-ga."
+  },
+  {
+    "id": "hitsuyou-ga-aru",
+    "form": "〜必要がある",
+    "variants": [
+      "〜必要はない",
+      "〜必要があります",
+      "〜必要がない",
+      "〜必要もない"
+    ],
+    "meaning": "need to ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "V-dict + 必要がある",
+      "N + の必要がある"
+    ],
+    "examples": [
+      {
+        "ja": "このアプリを使うには、まず登録する必要がある。",
+        "match": "必要がある",
+        "en": "To use this app, you first need to register."
+      },
+      {
+        "ja": "明日までに書類を提出する必要があります。",
+        "match": "必要があります",
+        "en": "You need to hand in the documents by tomorrow."
+      },
+      {
+        "ja": "そんなに急ぐ必要はないよ。",
+        "match": "必要はない",
+        "en": "There's no need to hurry like that."
+      },
+      {
+        "ja": "予約する必要もないくらい、店は空いていた。",
+        "match": "必要もない",
+        "en": "The restaurant was so empty we didn't even need a reservation."
+      },
+      {
+        "ja": "契約の前に、内容をもう一度確認する必要があると思う。",
+        "match": "必要がある",
+        "en": "I think we need to check the terms again before signing."
+      },
+      {
+        "ja": "この古い橋は補強の必要がある。",
+        "match": "必要がある",
+        "en": "This old bridge needs reinforcing."
+      },
+      {
+        "ja": "会員の方は、チケットを買う必要がありません。",
+        "match": "必要がありません",
+        "en": "Members don't need to buy a ticket."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "海外旅行にはパスポートが必要だ。",
+        "en": "You need a passport to travel abroad.",
+        "why": "が必要 after a noun is ga-hitsuyou (a thing is needed)."
+      },
+      {
+        "ja": "必要な物だけ持っていこう。",
+        "en": "Let's just take what we need.",
+        "why": "必要な is the na-adjective modifying 物."
+      },
+      {
+        "ja": "必要以上に心配しないで。",
+        "en": "Don't worry more than you need to.",
+        "why": "必要以上 is a compound 'more than necessary'."
+      },
+      {
+        "ja": "必要があれば、いつでも呼んでください。",
+        "en": "Call me anytime if you need me.",
+        "why": "必要 stands alone as 'a need'; no verb says what must be done."
+      }
+    ],
+    "subsumes": [
+      "ga-aru"
+    ],
+    "confusables": [
+      "ga-hitsuyou",
+      "koto-wa-nai",
+      "nakute-mo-ii",
+      "nakereba-naranai"
+    ],
+    "detection": "A plain non-past verb (連体形) or a noun + の, then 名詞 必要 (lexeme 必要), then が/は/も, then 動詞 有る or 形容詞 無い (ない, ありません). Guard: require the verb or N の directly before 必要; 必要 + な/に/だ is the adjective use, a noun + が必要 is ga-hitsuyou, and 必要以上 / 必要性 are compounds. The ない after 必要は is 形容詞 無い, not 助動詞 ない."
+  },
+  {
+    "id": "ga-hitsuyou",
+    "form": "〜が必要",
+    "variants": [
+      "〜が必要だ",
+      "〜が必要です",
+      "〜が必要な"
+    ],
+    "meaning": "~ is needed",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "N + が必要"
+    ],
+    "examples": [
+      {
+        "ja": "この仕事には経験が必要だ。",
+        "match": "が必要だ",
+        "en": "This job requires experience."
+      },
+      {
+        "ja": "申し込みには身分証明書が必要です。",
+        "match": "が必要です",
+        "en": "You need ID to apply."
+      },
+      {
+        "ja": "少し時間が必要なんだ。待っててくれる？",
+        "match": "が必要",
+        "en": "I need a little time. Will you wait for me?"
+      },
+      {
+        "ja": "手術が必要な患者が増えている。",
+        "match": "が必要な",
+        "en": "More and more patients need surgery."
+      },
+      {
+        "ja": "君には休みが必要だよ。",
+        "match": "が必要",
+        "en": "You need a break."
+      },
+      {
+        "ja": "何が必要か、リストにまとめておいて。",
+        "match": "が必要",
+        "en": "Make a list of what we need."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "もう一度確認する必要がある。",
+        "en": "We need to check again.",
+        "why": "A verb + 必要がある is hitsuyou-ga-aru; が follows 必要 here."
+      },
+      {
+        "ja": "彼が必要としているのは、お金じゃない。",
+        "en": "What he needs isn't money.",
+        "why": "必要とする is the verb 'to need'; が marks the person who needs."
+      },
+      {
+        "ja": "最近、水が必要以上に使われている。",
+        "en": "These days water is being used more than necessary.",
+        "why": "必要以上 is a compound adverb; nothing is said to be needed."
+      }
+    ],
+    "subsumes": [],
+    "confusables": [
+      "hitsuyou-ga-aru",
+      "ga-hoshii"
+    ],
+    "detection": "格助詞 が + 名詞 必要 (lexeme 必要), optionally + だ/です/な/なの/か or end of clause. The thing marked by が is what is needed. Guard: 必要 must not be followed by が/は + ある (hitsuyou-ga-aru), by と + する (the verb 'to need', where が marks the needer), or by 以上/性/経費 forming a compound. のが必要 after a verb still counts."
+  },
+  {
+    "id": "to-iwarete-iru",
+    "form": "〜と言われている",
+    "variants": [
+      "〜と言われています",
+      "〜と言われる",
+      "〜と言われてきた",
+      "〜と思われている"
+    ],
+    "meaning": "it is said that ~ / ~ is believed to be",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "Clause-plain + と言われている",
+      "N + だと言われている",
+      "N + と言われている"
+    ],
+    "examples": [
+      {
+        "ja": "この寺は千年以上前に建てられたと言われている。",
+        "match": "と言われている",
+        "en": "This temple is said to have been built over a thousand years ago."
+      },
+      {
+        "ja": "日本人は働きすぎだと言われています。",
+        "match": "と言われています",
+        "en": "Japanese people are said to work too much."
+      },
+      {
+        "ja": "昔から、満月の夜には不思議なことが起こると言われてきた。",
+        "match": "と言われてきた",
+        "en": "It has long been said that strange things happen on nights with a full moon."
+      },
+      {
+        "ja": "彼は天才と言われているけど、実はすごく努力してるんだよ。",
+        "match": "と言われている",
+        "en": "People call him a genius, but he actually works incredibly hard."
+      },
+      {
+        "ja": "恐竜は巨大な隕石が原因で絶滅したと思われている。",
+        "match": "と思われている",
+        "en": "Dinosaurs are believed to have died out because of a huge asteroid."
+      },
+      {
+        "ja": "よく笑う人は長生きすると言われる。",
+        "match": "と言われる",
+        "en": "People who laugh a lot are said to live longer."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "先生に、もっと練習しろと言われた。",
+        "en": "My teacher told me to practice more.",
+        "why": "Direct passive: one person told the speaker something once."
+      },
+      {
+        "ja": "母に早く帰ってきなさいと言われている。",
+        "en": "My mom has told me to come home early.",
+        "why": "The agent 母に gave the speaker an order; it is not general hearsay."
+      },
+      {
+        "ja": "彼はきっと来ると思っている。",
+        "en": "I'm sure he'll come.",
+        "why": "Active と思っている is the speaker's own belief, not a passive."
+      },
+      {
+        "ja": "この病気は遺伝すると考えられている。",
+        "en": "This disease is thought to be hereditary.",
+        "why": "と考えられている is the separate entry to-kangaerareru."
+      }
+    ],
+    "subsumes": [
+      "te-iru"
+    ],
+    "confusables": [
+      "to-kangaerareru",
+      "to-sareru",
+      "to-mirareru",
+      "sou-hearsay",
+      "to-iu"
+    ],
+    "detection": "Quotative 格助詞 と + 動詞 言う (lexeme 言う) or 思う (lexeme 思う) in 未然形 + 助動詞 れる (passive), then + て + 動詞 居る (いる), or plain る, or て + 来る. Guard: a に-marked agent (先生に, 母に) makes it a direct passive about one event; the general reading has no agent or a generic one. Past 言われた without ている is usually a direct passive. と考えられている is to-kangaerareru and とされている is to-sareru, so do not count them here."
+  },
+  {
+    "id": "ni-mieru",
+    "form": "〜に見える",
+    "variants": [
+      "〜く見える",
+      "〜そうに見える",
+      "〜には見えない"
+    ],
+    "meaning": "looks ~ / seems ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "N + に見える",
+      "na-Adj + に見える",
+      "i-Adj-stem + く見える",
+      "i-Adj-stem + そうに見える"
+    ],
+    "examples": [
+      {
+        "ja": "彼女は年のわりに若く見える。",
+        "match": "く見える",
+        "en": "She looks young for her age."
+      },
+      {
+        "ja": "この絵、写真に見えるでしょう？",
+        "match": "に見える",
+        "en": "This painting looks like a photo, doesn't it?"
+      },
+      {
+        "ja": "あの人、全然四十歳には見えないね。",
+        "match": "には見えない",
+        "en": "That guy doesn't look forty at all."
+      },
+      {
+        "ja": "遠くから眺めると、あの雲は羊に見えた。",
+        "match": "に見えた",
+        "en": "From far away, that cloud looked like a sheep."
+      },
+      {
+        "ja": "部屋を片付けたら、ずいぶん広く見えるようになった。",
+        "match": "く見える",
+        "en": "Once I tidied up, the room looked a lot bigger."
+      },
+      {
+        "ja": "このケーキ、おいしそうに見えますね。",
+        "match": "そうに見えます",
+        "en": "This cake looks delicious."
+      },
+      {
+        "ja": "彼の態度は、あまり真剣に見えなかった。",
+        "match": "に見えなかった",
+        "en": "He didn't seem very serious about it."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "晴れた日には、窓から富士山が見える。",
+        "en": "On clear days, you can see Mt. Fuji from the window.",
+        "why": "が見える is literal 'be visible'; nothing is said to look like something."
+      },
+      {
+        "ja": "暗くて、よく見えない。",
+        "en": "It's too dark; I can't see well.",
+        "why": "よく is the adverb 'well' with literal 見える, not an adjective + く見える."
+      },
+      {
+        "ja": "彼は病気のように見える。",
+        "en": "He looks like he's ill.",
+        "why": "ように見える is the separate entry you-ni-mieru."
+      },
+      {
+        "ja": "このメモ、先生に見えるところに貼っておいて。",
+        "en": "Put this note up where the teacher can see it.",
+        "why": "に marks the person who sees, so 見える is literal visibility."
+      }
+    ],
+    "subsumes": [],
+    "confusables": [
+      "you-ni-mieru",
+      "sou-appearance",
+      "mitai-da",
+      "to-mieru"
+    ],
+    "detection": "Three shapes before 動詞 見える (lexeme 見える): 格助詞 に after a noun, に after a na-adjective stem (UniDic may tag it 助動詞 だ 連用形), or an i-adjective in 連用形 (く). Optional は/も may stand between に/く and 見える. Guard: に after よう is you-ni-mieru; a noun + に naming a person who sees (先生に見える所) is literal; よく見える is usually the adverb 良く 'well', so lower confidence for it. が見える and から見える are literal visibility."
+  },
+  {
+    "id": "to-mieru",
+    "form": "〜とみえる",
+    "variants": [
+      "〜とみえて",
+      "〜と見える",
+      "〜とみえ"
+    ],
+    "meaning": "it seems that ~ (judging from signs)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "Clause-plain + とみえる",
+      "N + とみえる"
+    ],
+    "examples": [
+      {
+        "ja": "夜のうちに雨が降ったとみえて、道がぬれている。",
+        "match": "とみえて",
+        "en": "It must have rained overnight; the road is wet."
+      },
+      {
+        "ja": "子供たちはよほど疲れていたとみえ、すぐに寝てしまった。",
+        "match": "とみえ",
+        "en": "The kids must have been worn out; they fell asleep right away."
+      },
+      {
+        "ja": "あの様子だと、彼はまだ怒っていると見える。",
+        "match": "と見える",
+        "en": "Judging by the look of him, he's still angry."
+      },
+      {
+        "ja": "店主はこの客が気に入ったとみえる。",
+        "match": "とみえる",
+        "en": "The shop owner seems to have taken a liking to this customer."
+      },
+      {
+        "ja": "彼女はよほど自信があるとみえて、少しも緊張していなかった。",
+        "match": "とみえて",
+        "en": "She must have been very confident; she wasn't nervous at all."
+      },
+      {
+        "ja": "どうやら犯人は裏口から逃げたとみえる。",
+        "match": "とみえる",
+        "en": "Apparently the culprit escaped through the back door."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "この部屋から海が見える。",
+        "en": "You can see the sea from this room.",
+        "why": "が見える is literal 'be visible'; there is no quotative と."
+      },
+      {
+        "ja": "彼と見る夕日は特別だ。",
+        "en": "Sunsets I watch with him are special.",
+        "why": "と means 'with', and 見る is the verb 'watch'."
+      },
+      {
+        "ja": "山頂に着くと、遠くに町が見えた。",
+        "en": "When we reached the summit, we could see a town in the distance.",
+        "why": "Conditional と, then literal 見える with its own subject."
+      }
+    ],
+    "subsumes": [],
+    "confusables": [
+      "ni-mieru",
+      "you-da",
+      "rashii",
+      "you-ni-mieru"
+    ],
+    "detection": "Quotative 格助詞 と right after a plain clause or a noun, then 動詞 見える (lexeme 見える) as みえる, みえて, みえ or 見える. The clause before と is the speaker's inference from visible signs. Guard: と meaning 'with' (彼と) or conditional と followed by a が-marked thing that is seen is literal sight. It belongs to narration and writing; in speech the same idea is usually らしい or ようだ."
+  },
+  {
+    "id": "ga-suru",
+    "form": "〜がする",
+    "variants": [
+      "〜がします",
+      "〜がした",
+      "〜がしない"
+    ],
+    "meaning": "(a sound, smell, taste or body sensation) is sensed",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "N + がする"
+    ],
+    "examples": [
+      {
+        "ja": "台所からいい匂いがする。",
+        "match": "がする",
+        "en": "Something smells good in the kitchen."
+      },
+      {
+        "ja": "誰かがドアをノックする音がした。",
+        "match": "音がした",
+        "en": "I heard someone knocking on the door."
+      },
+      {
+        "ja": "このスープ、ちょっと変な味がしない？",
+        "match": "がしない",
+        "en": "Doesn't this soup taste a bit weird?"
+      },
+      {
+        "ja": "朝から頭痛がして、仕事に集中できない。",
+        "match": "がして",
+        "en": "I've had a headache since this morning and can't focus on work."
+      },
+      {
+        "ja": "雨上がりの森は、土の香りがします。",
+        "match": "がします",
+        "en": "After rain, the forest smells of earth."
+      },
+      {
+        "ja": "急に寒気がしたので、早めに寝た。",
+        "match": "がした",
+        "en": "I suddenly got the chills, so I went to bed early."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "彼がするなら、私もやる。",
+        "en": "If he does it, I'll do it too.",
+        "why": "が marks the subject 彼, and する means 'do'."
+      },
+      {
+        "ja": "また会えるような気がする。",
+        "en": "I have a feeling we'll meet again.",
+        "why": "ような気がする is the separate entry you-na-ki-ga-suru."
+      },
+      {
+        "ja": "今日は誰が掃除するの？",
+        "en": "Who's cleaning today?",
+        "why": "が marks the subject 誰, and する is part of the verb 掃除する."
+      }
+    ],
+    "subsumes": [],
+    "confusables": [
+      "you-na-ki-ga-suru",
+      "ki",
+      "ga-aru"
+    ],
+    "detection": "格助詞 が + 動詞 為る (する) in any form, where the noun before が is a perception noun: 音, 声, 匂い/におい/臭い, 香り, 味, 感じ, 気配, 寒気, 吐き気, 頭痛, めまい, 予感. Guard: with any other noun, が marks the subject of する 'do' (誰がする, 彼がする); a サ変 noun right before する (掃除する) means が belongs to an earlier word. 気がする is you-na-ki-ga-suru or ki and must not count here. The matcher needs this noun list."
+  },
+  {
+    "id": "ni-ki-ga-tsuku",
+    "form": "〜に気がつく",
+    "variants": [
+      "〜に気づく",
+      "〜に気がついた",
+      "〜に気付く"
+    ],
+    "meaning": "notice ~ / realize ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "N + に気がつく",
+      "Clause-plain + ことに気がつく",
+      "Clause-plain + のに気がつく"
+    ],
+    "examples": [
+      {
+        "ja": "駅に着いてから、財布を忘れたことに気がついた。",
+        "match": "に気がついた",
+        "en": "After I got to the station, I realized I'd forgotten my wallet."
+      },
+      {
+        "ja": "彼女の髪型が変わったのに気づいた？",
+        "match": "に気づいた",
+        "en": "Did you notice she changed her hairstyle?"
+      },
+      {
+        "ja": "自分の間違いに気づくまで、ずいぶん時間がかかった。",
+        "match": "に気づく",
+        "en": "It took me a long time to notice my own mistake."
+      },
+      {
+        "ja": "誰も私の存在に気がつかなかった。",
+        "match": "に気がつかなかった",
+        "en": "Nobody noticed I was there."
+      },
+      {
+        "ja": "あの時、君の気持ちに気付いていれば……",
+        "match": "に気付いて",
+        "en": "If only I'd noticed how you felt back then..."
+      },
+      {
+        "ja": "先生はすぐに私の嘘に気がつきました。",
+        "match": "に気がつきました",
+        "en": "The teacher saw through my lie right away."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "気がつくと、もう朝だった。",
+        "en": "Before I knew it, it was morning.",
+        "why": "気がつくと 'before I knew it' has no に-marked object."
+      },
+      {
+        "ja": "体に気をつけてね。",
+        "en": "Take care of yourself.",
+        "why": "に気をつける is ni-ki-o-tsukeru (be careful), with を and 付ける."
+      },
+      {
+        "ja": "病院で気がついたとき、母がそばにいた。",
+        "en": "When I came to in the hospital, my mom was by my side.",
+        "why": "気がつく means 'regain consciousness'; で marks the place."
+      },
+      {
+        "ja": "隣の席の子が気になる。",
+        "en": "I can't stop thinking about the kid sitting next to me.",
+        "why": "が気になる is ga-ki-ni-naru (be bothered by, be curious about)."
+      }
+    ],
+    "subsumes": [],
+    "confusables": [
+      "ni-ki-o-tsukeru",
+      "ga-ki-ni-naru",
+      "ki"
+    ],
+    "detection": "格助詞 に + 名詞 気 (lexeme 気) + 格助詞 が + 動詞 付く (lexeme 付く), or に + the single verb 気付く (lexeme 気付く) in any form. Guard: the に-marked object is required; 気がつくと / 気がついたら with no object means 'before I knew it' or 'came to'. 気をつける (を + 付ける) is ni-ki-o-tsukeru, and 気になる is ga-ki-ni-naru. The に must not be a place or time (すぐに, 朝に)."
+  },
+  {
+    "id": "hazu-ga-nai",
+    "form": "〜はずがない",
+    "variants": [
+      "〜はずはない",
+      "〜はずない",
+      "〜はずがありません"
+    ],
+    "meaning": "there's no way that ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "V-plain + はずがない",
+      "i-Adj + はずがない",
+      "na-Adj + なはずがない",
+      "N + のはずがない"
+    ],
+    "examples": [
+      {
+        "ja": "彼がそんなことを言うはずがない。",
+        "match": "はずがない",
+        "en": "There's no way he'd say something like that."
+      },
+      {
+        "ja": "あんなに練習したんだから、負けるはずはない。",
+        "match": "はずはない",
+        "en": "We practiced so hard, there's no way we'll lose."
+      },
+      {
+        "ja": "こんな簡単な問題、間違えるはずないじゃん。",
+        "match": "はずない",
+        "en": "No way I'd get such an easy question wrong."
+      },
+      {
+        "ja": "本物のダイヤがこんなに安いはずがありません。",
+        "match": "はずがありません",
+        "en": "A real diamond can't possibly be this cheap."
+      },
+      {
+        "ja": "あの真面目な田中さんが犯人のはずがないと、誰もが思った。",
+        "match": "はずがない",
+        "en": "Everyone thought there was no way serious Tanaka was the culprit."
+      },
+      {
+        "ja": "嫌いなはずがないでしょ。ずっと一緒にいたんだから。",
+        "match": "はずがない",
+        "en": "Of course I don't hate you. We've been together all this time."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "彼はもう着いているはずだ。",
+        "en": "He should have arrived by now.",
+        "why": "Affirmative はずだ is hazu (should be)."
+      },
+      {
+        "ja": "その話は、彼女はまだ知らないはずだ。",
+        "en": "She shouldn't know about that yet.",
+        "why": "ない sits inside the clause before はず; はず itself is affirmative."
+      },
+      {
+        "ja": "来るはずだったのに、結局来なかった。",
+        "en": "He was supposed to come, but in the end he didn't.",
+        "why": "はずだった is an expectation that failed (hazu)."
+      },
+      {
+        "ja": "彼が嘘をつくわけがない。",
+        "en": "There's no way he'd lie.",
+        "why": "わけがない is the separate entry wake-ga-nai."
+      }
+    ],
+    "subsumes": [
+      "hazu"
+    ],
+    "confusables": [
+      "hazu",
+      "wake-ga-nai",
+      "ni-chigainai"
+    ],
+    "detection": "名詞 筈 (はず, lexeme 筈) + が/は/nothing + 形容詞 無い (ない, なかった) or 動詞 有る + ます + ん. Guard: the negation must come after はず; a ない before はず (知らないはず) is hazu. Trailing でしょ, じゃん, よ still count. Must be matched before hazu. Close in meaning to わけがない, which uses 訳."
+  },
+  {
+    "id": "dake-de",
+    "form": "〜だけで",
+    "variants": [
+      "〜だけでも",
+      "〜だけでは"
+    ],
+    "meaning": "just by ~ / with only ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "V-dict + だけで",
+      "V-ta + だけで",
+      "N + だけで"
+    ],
+    "examples": [
+      {
+        "ja": "君の声を聞くだけで、元気が出る。",
+        "match": "だけで",
+        "en": "Just hearing your voice cheers me up."
+      },
+      {
+        "ja": "考えただけで、ゾッとする。",
+        "match": "だけで",
+        "en": "Just thinking about it gives me the chills."
+      },
+      {
+        "ja": "このカードなら、タッチするだけで支払いができます。",
+        "match": "だけで",
+        "en": "With this card, you can pay with just a tap."
+      },
+      {
+        "ja": "子供だけで夜道を歩くのは危ないよ。",
+        "match": "だけで",
+        "en": "It's dangerous for kids to walk at night on their own."
+      },
+      {
+        "ja": "五分だけでもいいから、話を聞いてくれない？",
+        "match": "だけでも",
+        "en": "Even five minutes is fine. Will you hear me out?"
+      },
+      {
+        "ja": "見ているだけでは、何も変わらない。",
+        "match": "だけでは",
+        "en": "Just watching won't change anything."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "来たのは私だけでした。",
+        "en": "I was the only one who came.",
+        "why": "で is part of the copula でした after だけ."
+      },
+      {
+        "ja": "君だけでなく、みんな心配している。",
+        "en": "It's not just you. Everyone's worried.",
+        "why": "だけでなく is dake-de-naku (not only)."
+      },
+      {
+        "ja": "お昼はおにぎりだけです。",
+        "en": "Lunch is just rice balls.",
+        "why": "Plain だけ 'only' followed by です; no で particle."
+      }
+    ],
+    "subsumes": [
+      "dake"
+    ],
+    "confusables": [
+      "dake",
+      "dake-de-naku",
+      "dake-shika",
+      "bakari-de"
+    ],
+    "detection": "副助詞 だけ (lexeme 丈?) + 格助詞 で, optionally + も or は. Guard: で that UniDic tags as 助動詞 だ (でした, である, でしょう after だけ) is the copula; だけでなく and だけじゃなく are dake-de-naku. Must be matched before dake. The tagger may not split 格助詞 で from copula で reliably here, so check what follows: a predicate clause, not した/しょう/ある."
+  },
+  {
+    "id": "te-bakari",
+    "form": "〜てばかりいる",
+    "variants": [
+      "〜てばかり",
+      "〜てばっかり",
+      "〜てばっか",
+      "〜てばかりいないで"
+    ],
+    "meaning": "do nothing but ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N3",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "V-te + ばかりいる",
+      "V-te + ばかり"
+    ],
+    "examples": [
+      {
+        "ja": "弟は毎日ゲームをしてばかりいる。",
+        "match": "てばかりいる",
+        "en": "My little brother does nothing but play games every day."
+      },
+      {
+        "ja": "泣いてばかりいないで、何があったか話してごらん。",
+        "match": "てばかりいないで",
+        "en": "Stop crying and tell me what happened."
+      },
+      {
+        "ja": "あいつは文句を言ってばっかりだ。",
+        "match": "てばっかり",
+        "en": "All that guy does is complain."
+      },
+      {
+        "ja": "最近、寝てばっかで何もしてない。",
+        "match": "てばっか",
+        "en": "Lately all I do is sleep. I haven't done a thing."
+      },
+      {
+        "ja": "遊んでばかりいると、あとで困りますよ。",
+        "match": "でばかりいる",
+        "en": "If you just play around, you'll be sorry later."
+      },
+      {
+        "ja": "人に頼ってばかりじゃ、成長できないよ。",
+        "match": "てばかり",
+        "en": "You won't grow if you always rely on other people."
+      },
+      {
+        "ja": "うちの犬は一日中食べてばかりいます。",
+        "match": "てばかりいます",
+        "en": "Our dog does nothing but eat all day."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "さっき起きたばかりだ。",
+        "en": "I just woke up.",
+        "why": "たばかり after the past た is ta-bakari (just did)."
+      },
+      {
+        "ja": "甘いものばかり食べている。",
+        "en": "I'm eating nothing but sweets.",
+        "why": "ばかり follows a noun (bakari 'only'); ている is on the verb."
+      },
+      {
+        "ja": "駅で一時間ばかり待っていた。",
+        "en": "I waited at the station for about an hour.",
+        "why": "ばかり after a number is bakari-approx (about)."
+      }
+    ],
+    "subsumes": [
+      "bakari",
+      "te-iru"
+    ],
+    "confusables": [
+      "bakari",
+      "ta-bakari",
+      "bakari-approx",
+      "te-iru"
+    ],
+    "detection": "接続助詞 て/で + 副助詞 ばかり (also ばっかり, ばっか; lexeme 許り?) + optionally 動詞 居る (いる) in any form, or だ/じゃ/で/の. Guard: ばかり after 助動詞 た is ta-bakari; after a noun it is bakari; after a number it is bakari-approx. Must be matched before bakari and te-iru, because the いる after ばかり is the same auxiliary as in ている."
+  },
+  {
+    "id": "yotei-da",
+    "form": "〜予定だ",
+    "variants": [
+      "〜予定です",
+      "〜予定",
+      "〜予定だった"
+    ],
+    "meaning": "plan to ~ / be scheduled to ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N5"
+    },
+    "prototype": false,
+    "connection": [
+      "V-dict + 予定だ",
+      "N + の予定だ"
+    ],
+    "examples": [
+      {
+        "ja": "来月、京都に引っ越す予定だ。",
+        "match": "予定だ",
+        "en": "I'm planning to move to Kyoto next month."
+      },
+      {
+        "ja": "会議は三時に始まる予定です。",
+        "match": "予定です",
+        "en": "The meeting is scheduled to start at three."
+      },
+      {
+        "ja": "週末は友達と映画を見に行く予定なんだ。",
+        "match": "予定",
+        "en": "I'm going to see a movie with friends this weekend."
+      },
+      {
+        "ja": "本当は昨日帰る予定だったんですが、飛行機が欠航になって。",
+        "match": "予定だった",
+        "en": "I was supposed to come back yesterday, but my flight got canceled."
+      },
+      {
+        "ja": "新しい駅は二〇三〇年に完成の予定。",
+        "match": "予定",
+        "en": "The new station is set to be finished in 2030."
+      },
+      {
+        "ja": "出席する予定の方は、こちらに名前を書いてください。",
+        "match": "予定",
+        "en": "If you plan to attend, please write your name here."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "明日って何か予定ある？",
+        "en": "Have you got any plans tomorrow?",
+        "why": "予定 is a plain noun 'plans' used as a subject; no verb before it."
+      },
+      {
+        "ja": "旅行の予定を立てるのが苦手だ。",
+        "en": "I'm bad at planning trips.",
+        "why": "予定 is the object of 立てる, not a predicate."
+      },
+      {
+        "ja": "工事は予定通りに進んでいる。",
+        "en": "The construction is going according to plan.",
+        "why": "予定通り is a compound 'as planned'."
+      }
+    ],
+    "subsumes": [],
+    "confusables": [
+      "tsumori",
+      "koto-ni-natte-iru",
+      "you-to-omou"
+    ],
+    "detection": "A plain non-past verb (連体形) or a noun + の directly before 名詞 予定 (lexeme 予定), then だ/です/だった/なの/の or end of clause. Guard: 予定 as a subject or object (予定がある, 予定を立てる) or in compounds (予定通り, 予定表, 予定日) is the plain noun. Close in meaning to つもり (personal intention) and ことになっている (arranged by others)."
+  },
+  {
+    "id": "you-to-omou",
+    "form": "〜ようと思う",
+    "variants": [
+      "〜おうと思う",
+      "〜ようと思っている",
+      "〜ようと思います",
+      "〜ようと思って"
+    ],
+    "meaning": "I'm thinking of doing ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "connection": [
+      "V-vol + と思う"
+    ],
+    "examples": [
+      {
+        "ja": "今年こそ、ダイエットしようと思う。",
+        "match": "しようと思う",
+        "en": "This year I'm really going to go on a diet."
+      },
+      {
+        "ja": "夏休みに北海道へ行こうと思っています。",
+        "match": "行こうと思っています",
+        "en": "I'm thinking of going to Hokkaido over summer vacation."
+      },
+      {
+        "ja": "会社を辞めようと思ってるんだけど、どう思う？",
+        "match": "辞めようと思ってる",
+        "en": "I'm thinking about quitting my job. What do you think?"
+      },
+      {
+        "ja": "寝ようと思ったら、電話が鳴った。",
+        "match": "寝ようと思った",
+        "en": "Just as I was about to go to bed, the phone rang."
+      },
+      {
+        "ja": "明日からはちゃんと早起きしようと思います。",
+        "match": "しようと思います",
+        "en": "Starting tomorrow, I'm going to get up early."
+      },
+      {
+        "ja": "彼女に謝ろうと思って、電話をかけた。",
+        "match": "謝ろうと思って",
+        "en": "I called her, meaning to apologize."
+      }
+    ],
+    "counterexamples": [
+      {
+        "ja": "明日は雨だろうと思う。",
+        "en": "I think it'll probably rain tomorrow.",
+        "why": "だろう is conjecture (darou-to-omou), not a volitional verb."
+      },
+      {
+        "ja": "彼は来ると思う。",
+        "en": "I think he'll come.",
+        "why": "Plain と思う after a non-volitional verb is to-omou."
+      },
+      {
+        "ja": "ドアを開けようとしたが、鍵がかかっていた。",
+        "en": "I tried to open the door, but it was locked.",
+        "why": "ようとする is you-to-suru (try to); the verb is する, not 思う."
+      },
+      {
+        "ja": "行こうかと思ったけど、やめた。",
+        "en": "I thought about going, but I didn't.",
+        "why": "か between the volitional and と思う makes it ka-to-omou."
+      }
+    ],
+    "subsumes": [
+      "to-omou"
+    ],
+    "confusables": [
+      "darou-to-omou",
+      "you-to-suru",
+      "tsumori",
+      "ka-to-omou"
+    ],
+    "detection": "A verb in 意志推量形 + 助動詞 う or よう (lexeme う / よう?), then 格助詞 と + 動詞 思う (lexeme 思う) in any form (思う, 思って, 思ってる, 思います, 思った). Guard: the う must be volitional, not the conjecture in だろう/でしょう (lexeme だ / です); か between the volitional and と is ka-to-omou; ようと + する is you-to-suru. Must be matched before to-omou."
+  }
+]
