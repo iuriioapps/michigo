@@ -55,6 +55,18 @@ Treat everything arriving from the renderer as untrusted, exactly as a server tr
 
 Register handlers through the local `handle()` in `registerIpc`, never `ipcMain.handle` directly. `handle()` rejects calls from any frame other than the app's own page.
 
+## Threads and I/O
+
+The main thread of the main process only validates IPC input and passes work on. Decided in issue #117 and recorded in ADR 0002. The rules for code:
+
+- No synchronous I/O on the main thread: no `*Sync` file calls and no `DatabaseSync`. Async Node I/O (`fs/promises`, `fetch`, AnkiConnect) is allowed there.
+- Any step that can take more than about 50 ms runs off the main thread, I/O or CPU. Hashing the tokenizer archive and unzipping a dropped archive use streaming async APIs or a worker.
+- One storage worker (a worker thread) holds the only connection to `michigo.db` and the read-only Dictionary connections. It runs the migrations before it reports ready. The stores reach it through their async ports.
+- A Dictionary build runs in a short-lived worker of its own, writes a temporary file and renames it into `reference/`.
+- The tokenizer utility process never opens a database. It returns tokens, and the storage worker writes words and occurrences in one transaction.
+- One transaction covers one item (one Source, one CSV import, one Anki update). An action over many items commits each item on its own.
+- Every action that reaches the main process shows a pending state, ignores a repeat while pending and leaves the rest of the window usable. An action longer than about 1 s shows progress, and it can be canceled where it commits item by item.
+
 ## Adding an IPC channel
 
 Touch these four places, in order:

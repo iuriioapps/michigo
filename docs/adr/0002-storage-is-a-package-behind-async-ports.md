@@ -33,6 +33,6 @@ A capability that has its own external dependency or a replaceable implementatio
 
 ## Consequences
 
-Removing or updating a Dictionary is a file operation. A Snapshot stays small, and a Backup includes Dictionaries and media only when the learner ticks them. Heavy writes still block the thread that runs `node:sqlite`, so the SQLite implementation must move them to a worker.
+Removing or updating a Dictionary is a file operation. A Snapshot stays small, and a Backup includes Dictionaries and media only when the learner ticks them. `node:sqlite` blocks the thread that runs it, so the desktop app runs it in one storage worker: a worker thread of the main process that holds the only connection to `michigo.db` and the read-only connections to the Dictionary files. The main thread never opens SQLite. A Dictionary build runs in a short-lived worker of its own and renames its finished file into `reference/`. The tokenizer utility process never touches a database: it returns tokens, and the storage worker turns them into words and occurrences in one transaction. One transaction covers one item, so a query waits behind at most one Source or one import. Decided in [Which thread runs node:sqlite, and which writes go to a worker?](https://github.com/iuriioapps/michigo/issues/117).
 
 `storage` is the largest package, because every query lands there. It keeps one folder per store. The renderer cannot ask for a filter that the word query does not name.
