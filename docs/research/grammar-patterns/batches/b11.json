@@ -1,0 +1,422 @@
+[
+  {
+    "id": "ni-tsurete",
+    "form": "〜につれて",
+    "variants": [
+      "〜につれ"
+    ],
+    "meaning": "as ~ changes, so does ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-tomo-ni",
+    "form": "〜とともに",
+    "variants": [
+      "〜と共に"
+    ],
+    "meaning": "together with ~; at the same time as ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-shitagatte",
+    "form": "〜にしたがって",
+    "variants": [
+      "〜に従って",
+      "〜にしたがい"
+    ],
+    "meaning": "as ~ goes on; in accordance with ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N2",
+      "marumori": "N3",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Marumori also lists the verb 従う on its own; merged here. Level disagreement: jlptsensei N3, bunpro N2, marumori N3."
+  },
+  {
+    "id": "ni-oite",
+    "form": "〜において / 〜における",
+    "variants": [
+      "〜においては",
+      "〜においても"
+    ],
+    "meaning": "in ~; at ~ (formal)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "o-tooshite",
+    "form": "〜を通して / 〜を通じて",
+    "variants": [
+      "〜を通し",
+      "〜を通じ"
+    ],
+    "meaning": "through ~; via ~; throughout ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N2",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: jlptsensei N3, bunpro N2, marumori N3, try N3."
+  },
+  {
+    "id": "ni-shite-wa",
+    "form": "〜にしては",
+    "variants": [],
+    "meaning": "for ~; considering ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-shite-mo",
+    "form": "〜にしても",
+    "variants": [
+      "〜にしろ"
+    ],
+    "meaning": "even if ~; even though ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Doubled 〜にしても〜にしても is N2 in all three sites and left out. 〜にしろ/〜にせよ are N2 points of their own."
+  },
+  {
+    "id": "to-ittemo",
+    "form": "〜と言っても",
+    "variants": [
+      "〜といっても",
+      "〜って言っても"
+    ],
+    "meaning": "even though I say ~; although ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-ieba",
+    "form": "〜と言えば",
+    "variants": [
+      "〜といえば",
+      "〜って言えば"
+    ],
+    "meaning": "speaking of ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-iu-to",
+    "form": "〜と言うと",
+    "variants": [
+      "〜というと",
+      "〜っていうと"
+    ],
+    "meaning": "speaking of ~; when you say ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-ittara",
+    "form": "〜と言ったら",
+    "variants": [
+      "〜といったら",
+      "〜ことといったら"
+    ],
+    "meaning": "speaking of ~; when it comes to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": "Try! 〜ことといったら ('the degree of ~ is...') merged here as a variant."
+  },
+  {
+    "id": "ka-to-iu-to",
+    "form": "〜かというと",
+    "variants": [
+      "〜かといえば",
+      "なぜかというと"
+    ],
+    "meaning": "if you ask why/what ~, it's that ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "koto-ni",
+    "form": "〜ことに",
+    "variants": [],
+    "meaning": "to my (surprise, relief) ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Emotion adjective + ことに (驚いたことに). Not koto-ni-suru / koto-ni-naru. Level disagreement: jlptsensei N2, bunpro N3, marumori N3."
+  },
+  {
+    "id": "koto-ka",
+    "form": "〜ことか",
+    "variants": [
+      "〜ことだろう"
+    ],
+    "meaning": "how very ~!",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: jlptsensei N2, bunpro N3, marumori N3."
+  },
+  {
+    "id": "koto-da",
+    "form": "〜ことだ",
+    "variants": [
+      "〜ことです"
+    ],
+    "meaning": "you should ~ (advice)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: jlptsensei N2, bunpro N3, marumori N3."
+  },
+  {
+    "id": "koto-kisoku",
+    "form": "〜こと",
+    "variants": [],
+    "meaning": "must ~ (written rules and instructions)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Sentence-final dictionary or ない form + こと, as in notices. Same surface as the N4 nominalizer こと."
+  },
+  {
+    "id": "koto-kara",
+    "form": "〜ことから",
+    "variants": [],
+    "meaning": "from the fact that ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "koto-wa-ga",
+    "form": "〜ことは〜が",
+    "variants": [
+      "〜ことは〜けど"
+    ],
+    "meaning": "it is ~, but ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N2",
+      "marumori": "N3",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: jlptsensei N3, bunpro N2, marumori N3."
+  },
+  {
+    "id": "wa-koto-na-no-da",
+    "form": "〜は〜ことなのだ",
+    "variants": [
+      "〜ということなのだ",
+      "〜ことなんだ"
+    ],
+    "meaning": "~ means that ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "te-hajimete",
+    "form": "〜て初めて",
+    "variants": [
+      "〜てはじめて"
+    ],
+    "meaning": "only after ~; not until ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "te-kara-de-nai-to",
+    "form": "〜てからでないと",
+    "variants": [
+      "〜てからでなければ",
+      "〜てからじゃないと"
+    ],
+    "meaning": "not until after ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N2",
+      "marumori": "N3",
+      "try": "N3",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: jlptsensei N3, bunpro N2, marumori N3, try N3. | jt4y lists it in both its N2 and N3 lists."
+  },
+  {
+    "id": "o-hajime",
+    "form": "〜をはじめ",
+    "variants": [
+      "〜をはじめとして",
+      "〜をはじめとする"
+    ],
+    "meaning": "starting with ~; including ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "wa-mochiron",
+    "form": "〜はもちろん",
+    "variants": [
+      "〜はもちろん〜も"
+    ],
+    "meaning": "not to mention ~; ~ of course, and also",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  }
+]

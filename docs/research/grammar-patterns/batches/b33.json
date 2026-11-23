@@ -1,0 +1,427 @@
+[
+  {
+    "id": "tada-nomi",
+    "form": "ただ〜のみ",
+    "variants": [
+      "ただ〜のみだ"
+    ],
+    "meaning": "only, nothing but",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "nomi-ka",
+    "form": "〜のみか",
+    "variants": [],
+    "meaning": "not only",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "tari-tomo",
+    "form": "〜たりとも〜ない",
+    "variants": [
+      "一日たりとも",
+      "一人たりとも"
+    ],
+    "meaning": "not even one",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "de-are",
+    "form": "〜であれ",
+    "variants": [
+      "〜であろうと"
+    ],
+    "meaning": "even if, whatever",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "de-are-de-are",
+    "form": "〜であれ〜であれ",
+    "variants": [],
+    "meaning": "whether X or Y",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "denakute-nan-darou",
+    "form": "〜でなくてなんだろう",
+    "variants": [
+      "〜でなくて何であろう"
+    ],
+    "meaning": "if not X, what is it?",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "de-wa-arumai-ka",
+    "form": "〜ではあるまいか",
+    "variants": [
+      "〜のではあるまいか"
+    ],
+    "meaning": "isn't it perhaps",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "te-yamanai",
+    "form": "〜てやまない",
+    "variants": [],
+    "meaning": "never cease to (wish, hope)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "te-shikaru-beki-da",
+    "form": "〜てしかるべきだ",
+    "variants": [
+      "〜てしかるべき"
+    ],
+    "meaning": "ought to, it is only proper",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "temo-sashitsukaenai",
+    "form": "〜ても差し支えない",
+    "variants": [
+      "〜てもさしつかえない"
+    ],
+    "meaning": "it's all right to",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Formal version of prototype te-mo-ii."
+  },
+  {
+    "id": "to-ie-domo",
+    "form": "〜といえども",
+    "variants": [],
+    "meaning": "even though, even",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-atte",
+    "form": "〜とあって",
+    "variants": [],
+    "meaning": "since (it is X, naturally)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-areba",
+    "form": "〜とあれば",
+    "variants": [],
+    "meaning": "if (it is for X)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-aimatte",
+    "form": "〜と相まって",
+    "variants": [
+      "〜とあいまって"
+    ],
+    "meaning": "combined with",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-miru-ya",
+    "form": "〜と見るや",
+    "variants": [
+      "〜とみるや",
+      "〜と見ると"
+    ],
+    "meaning": "the moment one sees that",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "JS also lists とみると separately; merged."
+  },
+  {
+    "id": "towa-utte-kawatte",
+    "form": "〜とは打って変わって",
+    "variants": [
+      "〜とは打って変わり"
+    ],
+    "meaning": "in complete contrast to",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "towa-kurabemono-ni-naranai",
+    "form": "〜とは比べものにならない",
+    "variants": [
+      "〜とは比べ物にならない"
+    ],
+    "meaning": "beyond comparison with",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-sareru",
+    "form": "〜とされる",
+    "variants": [
+      "〜とされている"
+    ],
+    "meaning": "is considered, is said to",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: とする 'assume' in passive with other meanings."
+  },
+  {
+    "id": "to-mirareru",
+    "form": "〜とみられる",
+    "variants": [
+      "〜と見られる",
+      "〜と見られている"
+    ],
+    "meaning": "is thought to (news style)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Overlaps mono-to-omowareru."
+  },
+  {
+    "id": "mono-to-omowareru",
+    "form": "〜ものと思われる",
+    "variants": [
+      "〜ものと見られる"
+    ],
+    "meaning": "it is thought that",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "mono-toshite",
+    "form": "〜ものとして",
+    "variants": [],
+    "meaning": "assuming, treating as",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "mono-to-suru",
+    "form": "〜ものとする",
+    "variants": [],
+    "meaning": "shall (rules); is deemed",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "mo-saru-koto-nagara",
+    "form": "〜もさることながら",
+    "variants": [],
+    "meaning": "X goes without saying, but also",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "tokoro-kara",
+    "form": "〜ところから",
+    "variants": [],
+    "meaning": "from the fact that",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: ところ 'place' + から; close to ことから (N3)."
+  },
+  {
+    "id": "koto-tote",
+    "form": "〜こととて",
+    "variants": [],
+    "meaning": "because (apology, excuse)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  }
+]

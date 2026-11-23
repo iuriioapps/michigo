@@ -1,0 +1,459 @@
+[
+  {
+    "id": "dasu",
+    "form": "〜出す",
+    "variants": [
+      "〜だす",
+      "〜出した"
+    ],
+    "meaning": "suddenly start doing ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": true,
+    "notes": "Also \"do ~ out\" (飛び出す). Compound verbs are often one token in UniDic, so the matcher may need the lexeme."
+  },
+  {
+    "id": "hajimeru",
+    "form": "〜始める",
+    "variants": [
+      "〜はじめる",
+      "〜始めた"
+    ],
+    "meaning": "start doing ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N3",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Tanos lists it at N3."
+  },
+  {
+    "id": "tsuzukeru",
+    "form": "〜続ける",
+    "variants": [
+      "〜つづける",
+      "〜続けている"
+    ],
+    "meaning": "keep on doing ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": true,
+    "notes": ""
+  },
+  {
+    "id": "owaru",
+    "form": "〜終わる",
+    "variants": [
+      "〜おわる",
+      "〜終わった"
+    ],
+    "meaning": "finish doing ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": true,
+    "notes": ""
+  },
+  {
+    "id": "yasui",
+    "form": "〜やすい",
+    "variants": [
+      "〜易い",
+      "〜やすく"
+    ],
+    "meaning": "easy to ~ / prone to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": true,
+    "notes": "Prototype file lists it at N4."
+  },
+  {
+    "id": "nikui",
+    "form": "〜にくい",
+    "variants": [
+      "〜難い",
+      "〜にくく"
+    ],
+    "meaning": "hard to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": true,
+    "notes": ""
+  },
+  {
+    "id": "aida-ni",
+    "form": "〜間に",
+    "variants": [
+      "〜あいだに",
+      "〜ているあいだに",
+      "〜の間に"
+    ],
+    "meaning": "while ~ (something happens within that time)",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "jt4y": "N3",
+      "marumori": "N4"
+    },
+    "prototype": true,
+    "notes": "Prototype file lists it at N3. Bunpro has ているあいだに at N4 and の間に at N3; recorded N4. JT4Y has の間に at N3."
+  },
+  {
+    "id": "aida",
+    "form": "〜間",
+    "variants": [
+      "〜あいだ",
+      "〜ている間",
+      "〜の間"
+    ],
+    "meaning": "during the whole time ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Differs from aida-ni: 間 covers the whole span, 間に a point inside it. The noun 間 (space between) is a near miss."
+  },
+  {
+    "id": "ga-hoshii",
+    "form": "〜がほしい",
+    "variants": [
+      "〜ほしい",
+      "〜がほしいです",
+      "〜が欲しい"
+    ],
+    "meaning": "want (something)",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "JLPT Sensei lists it at N5. ほしい is an adjective; matcher keys on ほしい after が/を."
+  },
+  {
+    "id": "tagaru",
+    "form": "〜たがる",
+    "variants": [
+      "〜たがっている",
+      "〜たがらない",
+      "〜ほしがる"
+    ],
+    "meaning": "(someone else) wants to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "marumori": "N4"
+    },
+    "prototype": true,
+    "notes": "Marumori merges ほしがる; kept as a variant."
+  },
+  {
+    "id": "garu",
+    "form": "〜がる",
+    "variants": [
+      "〜がっている",
+      "〜がらない"
+    ],
+    "meaning": "(someone) shows signs of feeling ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "tagaru is a special case of this; match tagaru first."
+  },
+  {
+    "id": "sasete-kudasai",
+    "form": "〜させてください",
+    "variants": [
+      "〜させてもらう",
+      "〜させていただく",
+      "〜させてくれる"
+    ],
+    "meaning": "please let me do ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N3",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Bunpro lists させてもらう at N3. Builds on causative."
+  },
+  {
+    "id": "te-kurenai",
+    "form": "〜てくれない？",
+    "variants": [
+      "〜てもらえない？",
+      "〜てくれませんか",
+      "〜てもらえませんか"
+    ],
+    "meaning": "won't you do ~ for me?",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "bunpro": "N4"
+    },
+    "prototype": false,
+    "notes": "Only Bunpro lists it. Request form of te-kureru and te-morau."
+  },
+  {
+    "id": "no-darou-ka",
+    "form": "〜のだろうか",
+    "variants": [
+      "〜のでしょうか",
+      "〜んだろうか",
+      "〜んでしょうか"
+    ],
+    "meaning": "I wonder if ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "JLPT Sensei lists のでしょうか at N3."
+  },
+  {
+    "id": "n-dakedo",
+    "form": "〜んだけど",
+    "variants": [
+      "〜んですが",
+      "〜んですけど",
+      "〜のだが"
+    ],
+    "meaning": "(lead-in) ~, but / ~, and",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "bunpro": "N4"
+    },
+    "prototype": false,
+    "notes": "Only Bunpro lists it. Builds on no-da (prototype, N3)."
+  },
+  {
+    "id": "to-iu-koto",
+    "form": "〜ということ",
+    "variants": [
+      "〜っていうこと",
+      "〜ってこと"
+    ],
+    "meaning": "the fact that ~ (turns a clause into a noun)",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Prototype to-iu covers ということだ (hearsay) and N という N (called); most sources put both at N3, so to-iu is left out of this file. This entry is the nominalizer only."
+  },
+  {
+    "id": "nasai",
+    "form": "〜なさい",
+    "variants": [
+      "〜な (casual)"
+    ],
+    "meaning": "do ~ (firm, from a superior)",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "te-yokatta",
+    "form": "〜てよかった",
+    "variants": [
+      "〜てよかったです",
+      "〜てよかったね"
+    ],
+    "meaning": "I'm glad that ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "made-ni",
+    "form": "〜までに",
+    "variants": [
+      "〜までには"
+    ],
+    "meaning": "by (a deadline)",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4"
+    },
+    "prototype": false,
+    "notes": "Not まで (until, N5)."
+  },
+  {
+    "id": "ku-suru",
+    "form": "〜くする / 〜にする",
+    "variants": [
+      "〜くした",
+      "〜にした",
+      "〜くして"
+    ],
+    "meaning": "make something ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "JLPT Sensei lists くする and にする as two N4 points; merged. Noun + にする (\"decide on\", N5 in JLPT Sensei, Bunpro, Marumori) is a near miss."
+  },
+  {
+    "id": "nakute",
+    "form": "〜なくて",
+    "variants": [
+      "〜なくって"
+    ],
+    "meaning": "not ~ and / because not ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Marumori also lists 〜なくて at N5. Do not confuse with なくてもいい or なくてはいけない."
+  },
+  {
+    "id": "te-cause",
+    "form": "〜て (reason)",
+    "variants": [
+      "〜で",
+      "〜くて",
+      "N + で"
+    ],
+    "meaning": "~, and so / because of ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "The plain て-form link is N5. Bunpro also lists て for contrast and for means at N4; merged here. Hard to tell from plain て by form alone."
+  },
+  {
+    "id": "naide-request",
+    "form": "〜ないで (casual request)",
+    "variants": [
+      "〜ないでね",
+      "〜ないでよ"
+    ],
+    "meaning": "please don't ~ (casual)",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "bunpro": "N4"
+    },
+    "prototype": false,
+    "notes": "Only Bunpro lists it. Sentence-final ないで; overlaps naide."
+  }
+]

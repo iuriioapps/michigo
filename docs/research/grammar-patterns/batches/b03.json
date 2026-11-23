@@ -1,0 +1,495 @@
+[
+  {
+    "id": "naide",
+    "form": "〜ないで",
+    "variants": [
+      "〜ないで、"
+    ],
+    "meaning": "without doing ~ / instead of doing ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N5",
+      "marumori": "N5",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "jt4y": "N4"
+    },
+    "prototype": true,
+    "notes": "Level disagreement: bunpro places ないで (without doing) at N4. Overlaps with naide-kudasai and with sentence-final casual ないで ('don't'), which is a variant of naide-kudasai. | Prototype file lists it at N5. Three of five sources say N4; Tanos lists it at N4 and again at N3. Check for a duplicate in the N5 inventory. The casual request is naide-request."
+  },
+  {
+    "id": "ato-de",
+    "form": "〜後で",
+    "variants": [
+      "〜あとで",
+      "〜後に",
+      "Nの後で",
+      "〜たあとで",
+      "〜のあとで"
+    ],
+    "meaning": "after ~ / later",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "marumori": "N5",
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4"
+    },
+    "prototype": true,
+    "notes": "Level disagreement: two of three sources that list it say N4. Kept here only because prototype-ids.tsv files it at N5, so the N4 pass may skip it; reconcile with the N4 file. Standalone あとで ('later') is a word use. | Prototype file lists it at N5. Three of four sources say N4. Check for a duplicate in the N5 inventory."
+  },
+  {
+    "id": "o-kudasai",
+    "form": "お〜ください",
+    "variants": [
+      "Nください",
+      "Nを下さい",
+      "Nをちょうだい",
+      "ご〜ください"
+    ],
+    "meaning": "please do ~ (honorific)",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "marumori": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4"
+    },
+    "prototype": false,
+    "notes": "Tie between jlptsensei (N5) and marumori (〜ください, N4); kept by the tie rule. Differs from te-kudasai by what precedes ください (a noun, not a て-form). | Marumori's N4 entry is titled 〜ください; mapped here."
+  },
+  {
+    "id": "yori",
+    "form": "より",
+    "variants": [
+      "〜は〜より",
+      "〜よりも"
+    ],
+    "meaning": "than (comparison); from (formal)",
+    "kind": "particle",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "marumori": "N5",
+      "bunpro": "N4",
+      "jt4y": "N4"
+    },
+    "prototype": false,
+    "notes": "jlptsensei lists は〜より at N5 and bare より at N4; bunpro lists より at N4; marumori lists より ('from' and 'more than') at N5. Overlaps with yori-hou-ga. | The comparison frame より〜ほうが is N5."
+  },
+  {
+    "id": "te-shimau",
+    "form": "〜てしまう",
+    "variants": [
+      "〜ちゃう",
+      "〜じゃう",
+      "〜ちまう",
+      "〜てしまいます",
+      "〜てしまった"
+    ],
+    "meaning": "do completely, or do with regret",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": true,
+    "notes": ""
+  },
+  {
+    "id": "to-omou",
+    "form": "〜と思う",
+    "variants": [
+      "〜と思います",
+      "〜と思っている",
+      "〜とおもう"
+    ],
+    "meaning": "I think that ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Quotative と + 思う. Very common; the clause before と can be any plain form."
+  },
+  {
+    "id": "tara",
+    "form": "〜たら",
+    "variants": [
+      "〜だら",
+      "〜たらば"
+    ],
+    "meaning": "if ~ / when ~ (once ~ happens)",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": true,
+    "notes": "Prototype file lists it at N5, but all five sources place it at N4. Check for a duplicate in the N5 inventory."
+  },
+  {
+    "id": "temo",
+    "form": "〜ても",
+    "variants": [
+      "〜でも (after ぐ/ぶ/む/ぬ verbs)",
+      "〜くても",
+      "〜ったって"
+    ],
+    "meaning": "even if ~ / even though ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "jt4y": "N4",
+      "marumori": "N5"
+    },
+    "prototype": false,
+    "notes": "Tanos lists 〜ても at N4 and again at N3. Marumori groups it with てもいい at N5. Do not confuse with te-mo-ii (N5) or the particle でも."
+  },
+  {
+    "id": "noni",
+    "form": "〜のに",
+    "variants": [
+      "〜なのに"
+    ],
+    "meaning": "although ~ / even though ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": true,
+    "notes": "Prototype meaning also mentions purposive のに; that reading is split out as noni-purpose here. Bunpro and Marumori also list a のに at N3."
+  },
+  {
+    "id": "sou-appearance",
+    "form": "〜そう (appearance)",
+    "variants": [
+      "〜そうだ",
+      "〜そうです",
+      "〜そうな",
+      "〜そうに",
+      "〜なさそう",
+      "〜よさそう"
+    ],
+    "meaning": "looks like ~ / seems about to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": true,
+    "notes": "Merged そうに/そうな, which JLPT Sensei, Bunpro, JT4Y and Marumori list as a separate point. Attaches to stems; hearsay そうだ attaches to a plain form."
+  },
+  {
+    "id": "you-da",
+    "form": "〜ようだ",
+    "variants": [
+      "〜ようです",
+      "〜ような",
+      "〜ように (seems)"
+    ],
+    "meaning": "it seems that ~ / looks as if ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": true,
+    "notes": "Tanos 〜よう at N4 is the volitional, not this. Overlaps no-you-na (likeness) in its ような/ように forms."
+  },
+  {
+    "id": "mitai-da",
+    "form": "〜みたいだ",
+    "variants": [
+      "〜みたい",
+      "〜みたいです",
+      "〜みたいな",
+      "〜みたいに"
+    ],
+    "meaning": "seems like ~ / like ~ (casual)",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": true,
+    "notes": "Merged みたいな/みたいに, listed separately by JLPT Sensei, Bunpro, JT4Y and Marumori."
+  },
+  {
+    "id": "te-kureru",
+    "form": "〜てくれる",
+    "variants": [
+      "〜てくれます",
+      "〜てくれた",
+      "〜てくださる"
+    ],
+    "meaning": "someone does ~ for me or us",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "jt4y": "N4",
+      "marumori": "N5"
+    },
+    "prototype": true,
+    "notes": "Marumori puts the giving verbs at N5. てくださる is the honorific variant."
+  },
+  {
+    "id": "te-iku",
+    "form": "〜ていく",
+    "variants": [
+      "〜てく",
+      "〜て行く",
+      "〜ていった"
+    ],
+    "meaning": "go on doing ~ / do ~ and go",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Also marks change from now on (増えていく). A naive matcher can confuse it with て + 行く as two actions."
+  },
+  {
+    "id": "te-kuru",
+    "form": "〜てくる",
+    "variants": [
+      "〜て来る",
+      "〜てきた",
+      "〜てきます"
+    ],
+    "meaning": "come to ~ / start to ~ / do ~ and come back",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Also marks change up to now (寒くなってきた)."
+  },
+  {
+    "id": "nara-conditional",
+    "form": "〜なら",
+    "variants": [
+      "〜ならば",
+      "〜んなら",
+      "〜のなら"
+    ],
+    "meaning": "if it's the case that ~ / as for ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": true,
+    "notes": ""
+  },
+  {
+    "id": "to-conditional",
+    "form": "〜と (conditional)",
+    "variants": [
+      "〜と、"
+    ],
+    "meaning": "whenever ~ / if ~, then naturally",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "marumori": "N4"
+    },
+    "prototype": true,
+    "notes": "Tanos calls it \"Dictionary form+と\". Ambiguous with particle と (and, with, quotative), which Bunpro and Marumori list at N5. Conditional と follows a plain non-past predicate."
+  },
+  {
+    "id": "te-morau",
+    "form": "〜てもらう",
+    "variants": [
+      "〜てもらいます",
+      "〜てもらった",
+      "〜ていただく"
+    ],
+    "meaning": "have someone do ~ for me",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "jt4y": "N4",
+      "marumori": "N5"
+    },
+    "prototype": true,
+    "notes": "Marumori lists 〜いただく at N4 on its own; merged here as the humble variant."
+  },
+  {
+    "id": "kamoshirenai",
+    "form": "〜かもしれない",
+    "variants": [
+      "〜かもしれません",
+      "〜かも",
+      "〜かもしんない"
+    ],
+    "meaning": "might ~ / maybe ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "marumori": "N4"
+    },
+    "prototype": true,
+    "notes": ""
+  },
+  {
+    "id": "koto-nominalizer",
+    "form": "〜こと (nominalizer)",
+    "variants": [
+      "〜ことは",
+      "〜ことが"
+    ],
+    "meaning": "turns a verb phrase into a noun (doing ~)",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N5"
+    },
+    "prototype": false,
+    "notes": "JLPT Sensei and Marumori also list other こと uses at N3 (こと as a command, ことだ). Underlies koto-ga-dekiru, koto-ni-suru and others; match those first."
+  },
+  {
+    "id": "te-ita",
+    "form": "〜ていた",
+    "variants": [
+      "〜てた",
+      "〜ていました",
+      "〜てました"
+    ],
+    "meaning": "was doing ~ / had been ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Past of te-iru (N5). A later step may model it as te-iru plus past tense instead of a pattern of its own."
+  },
+  {
+    "id": "te-miru",
+    "form": "〜てみる",
+    "variants": [
+      "〜てみます",
+      "〜てみたい",
+      "〜てみて",
+      "〜てみよう"
+    ],
+    "meaning": "try doing ~ (to see how it is)",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "marumori": "N4"
+    },
+    "prototype": true,
+    "notes": "Do not confuse with て + 見る (look) as two actions."
+  },
+  {
+    "id": "te-oku",
+    "form": "〜ておく",
+    "variants": [
+      "〜とく",
+      "〜どく",
+      "〜ておきます",
+      "〜といて"
+    ],
+    "meaning": "do ~ in advance / leave as is",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "marumori": "N4"
+    },
+    "prototype": true,
+    "notes": ""
+  }
+]

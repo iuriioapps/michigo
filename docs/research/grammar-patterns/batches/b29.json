@@ -1,0 +1,434 @@
+[
+  {
+    "id": "zu-ni-wa-okanai",
+    "form": "〜ずにはおかない",
+    "variants": [
+      "〜ないではおかない"
+    ],
+    "meaning": "will not fail to; is bound to",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: ずにはいられない (N3)."
+  },
+  {
+    "id": "zu-tomo",
+    "form": "〜ずとも",
+    "variants": [],
+    "meaning": "even without doing",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-nai",
+    "form": "〜に〜ない",
+    "variants": [
+      "泣くに泣けない",
+      "笑うに笑えない"
+    ],
+    "meaning": "want to but cannot (same verb repeated)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": "Overlaps you-ni-mo-nai."
+  },
+  {
+    "id": "you-ni-yotte-wa",
+    "form": "〜ようによっては",
+    "variants": [
+      "考えようによっては"
+    ],
+    "meaning": "depending on how one does",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "JS merges ようでは, which is N2 in JS, JT4Y and Bunpro."
+  },
+  {
+    "id": "nara-iza-shirazu",
+    "form": "〜ならいざしらず",
+    "variants": [
+      "〜はいざしらず",
+      "〜ならいざ知らず"
+    ],
+    "meaning": "X might be one thing, but",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "wa-wa",
+    "form": "〜わ〜わ",
+    "variants": [
+      "〜わ〜わで"
+    ],
+    "meaning": "one after another; X and Y on top of that",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": "Bunpro has two entries (わ〜わ, わ〜わで); merged. Near miss: sentence-final わ."
+  },
+  {
+    "id": "yare-yare",
+    "form": "やれ〜やれ〜",
+    "variants": [
+      "やれ〜だ、やれ〜だ"
+    ],
+    "meaning": "what with X and Y (complaints)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: interjection やれやれ 'good grief'."
+  },
+  {
+    "id": "nan-to-iu",
+    "form": "なんという / なんと / なんて (exclamation)",
+    "variants": [
+      "なんて〜んだ",
+      "なんと〜ことか"
+    ],
+    "meaning": "what a ...! how ...!",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": "Bunpro and JT4Y list なんて at N3 in its dismissive sense; only the exclamation is N1 in JS."
+  },
+  {
+    "id": "to-iu-kyouchou",
+    "form": "〜という〜 (every one of)",
+    "variants": [
+      "何百という",
+      "日本中という日本中"
+    ],
+    "meaning": "every single, as many as",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Overlaps prototype to-iu (N4 quotative)."
+  },
+  {
+    "id": "to-kite-iru",
+    "form": "〜ときている",
+    "variants": [
+      "〜ときた"
+    ],
+    "meaning": "on top of that, it's X",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "toshita-koto-ga",
+    "form": "〜としたことが",
+    "variants": [
+      "私としたことが"
+    ],
+    "meaning": "how unlike me (of all people) to",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "tomo-arou-mono-ga",
+    "form": "〜ともあろうものが",
+    "variants": [
+      "〜ともあろう人が",
+      "〜ともあろう"
+    ],
+    "meaning": "of all people, someone like X",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "tomo-naku",
+    "form": "〜ともなく",
+    "variants": [
+      "〜ともなしに"
+    ],
+    "meaning": "without really meaning to",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "tomo-tomo",
+    "form": "〜とも〜とも",
+    "variants": [
+      "〜とも〜とも言えない"
+    ],
+    "meaning": "neither X nor Y (can't tell)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: N2 とも 'of course'."
+  },
+  {
+    "id": "to-iwazu",
+    "form": "〜といわず〜といわず",
+    "variants": [
+      "〜といわず"
+    ],
+    "meaning": "not only X or Y but everywhere",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-shitatte",
+    "form": "〜としたって",
+    "variants": [
+      "〜としたところで",
+      "〜としても"
+    ],
+    "meaning": "even supposing",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Different from にしたって (noun + にしたって). としても is N2."
+  },
+  {
+    "id": "ni-shitatte",
+    "form": "〜にしたって",
+    "variants": [
+      "〜にしたところで"
+    ],
+    "meaning": "even for X; even if",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-shite-mireba",
+    "form": "〜にしてみれば",
+    "variants": [
+      "〜にしてみると",
+      "〜にしてみたら"
+    ],
+    "meaning": "from X's point of view",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": "Close to にしたら (N2 in JS and Bunpro)."
+  },
+  {
+    "id": "ni-iwasereba",
+    "form": "〜に言わせれば",
+    "variants": [
+      "〜に言わせると",
+      "〜に言わせたら"
+    ],
+    "meaning": "if you ask X",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-kakatte-iru",
+    "form": "〜にかかっている",
+    "variants": [
+      "〜にかかってる"
+    ],
+    "meaning": "depends on",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-kakatte-wa",
+    "form": "〜にかかっては",
+    "variants": [
+      "〜にかかったら",
+      "〜にかかると",
+      "〜にかかれば"
+    ],
+    "meaning": "in the hands of, against X (no one stands a chance)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-kamakete",
+    "form": "〜にかまけて",
+    "variants": [],
+    "meaning": "too busy with X to",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-kagitta-koto-de-wa-nai",
+    "form": "〜に限ったことではない",
+    "variants": [
+      "〜に限ったことじゃない"
+    ],
+    "meaning": "it's not only X",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-wa-muri-ga-aru",
+    "form": "〜には無理がある",
+    "variants": [],
+    "meaning": "it is a stretch to",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": "Close to plain 無理がある."
+  },
+  {
+    "id": "ni-wa-oyobanai",
+    "form": "〜には及ばない",
+    "variants": [
+      "〜に及ばない",
+      "〜には及びません"
+    ],
+    "meaning": "no need to; is no match for",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Bunpro splits 'no need' and 'no match'; JS and JT4Y merge."
+  }
+]

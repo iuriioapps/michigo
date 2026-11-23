@@ -1,0 +1,485 @@
+[
+  {
+    "id": "ka-nai-ka-no-uchi-ni",
+    "form": "〜か〜ないかのうちに",
+    "variants": [
+      "〜か〜ないかで"
+    ],
+    "meaning": "just as ~ / the moment ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-atatte",
+    "form": "〜にあたって",
+    "variants": [
+      "〜にあたり",
+      "〜に当たって"
+    ],
+    "meaning": "when ~ / on the occasion of ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": "tanos's 〜にあたる (corresponds to) is another point; Bunpro puts that at N3."
+  },
+  {
+    "id": "ni-saishite",
+    "form": "〜に際して",
+    "variants": [
+      "〜に際し",
+      "〜に際しての"
+    ],
+    "meaning": "on the occasion of ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "sai-ni",
+    "form": "〜際に",
+    "variants": [
+      "〜際は",
+      "〜際"
+    ],
+    "meaning": "when ~ / at the time of ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2",
+      "jlptsensei": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-sakidachi",
+    "form": "〜に先立ち",
+    "variants": [
+      "〜に先立って",
+      "〜に先立つ"
+    ],
+    "meaning": "prior to ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "nimo-kakawarazu",
+    "form": "〜にもかかわらず",
+    "variants": [
+      "〜にも関わらず"
+    ],
+    "meaning": "despite ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": "Contains にかかわらず; a matcher must prefer this longer form."
+  },
+  {
+    "id": "ni-kakawarazu",
+    "form": "〜にかかわらず",
+    "variants": [
+      "〜に関わらず",
+      "〜にかかわりなく"
+    ],
+    "meaning": "regardless of ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": "Kanzen pairs it with にかかわりなく; merged."
+  },
+  {
+    "id": "ni-kakawaru",
+    "form": "〜にかかわる",
+    "variants": [
+      "〜に関わる"
+    ],
+    "meaning": "concerning ~ / affecting ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-kotaete",
+    "form": "〜に応えて",
+    "variants": [
+      "〜にこたえて",
+      "〜に応え"
+    ],
+    "meaning": "in response to ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-kuwaete",
+    "form": "〜に加えて",
+    "variants": [
+      "〜に加え"
+    ],
+    "meaning": "in addition to ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "o-moto-ni",
+    "form": "〜をもとに",
+    "variants": [
+      "〜をもとにして",
+      "〜を元に"
+    ],
+    "meaning": "using ~ as a basis",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-mukatte",
+    "form": "〜に向かって",
+    "variants": [
+      "〜に向けて",
+      "〜に向かい"
+    ],
+    "meaning": "toward ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Bunpro merges に向けて here."
+  },
+  {
+    "id": "ni-oujite",
+    "form": "〜に応じて",
+    "variants": [
+      "〜に応じ",
+      "〜に応じた"
+    ],
+    "meaning": "according to ~ / in response to ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-sotte",
+    "form": "〜に沿って",
+    "variants": [
+      "〜に沿い",
+      "〜に沿った"
+    ],
+    "meaning": "along ~ / in line with ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-tomonatte",
+    "form": "〜に伴って",
+    "variants": [
+      "〜に伴い",
+      "〜に伴う"
+    ],
+    "meaning": "along with ~ / as ~ changes",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-hanshite",
+    "form": "〜に反して",
+    "variants": [
+      "〜に反し",
+      "〜に反する"
+    ],
+    "meaning": "contrary to ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "jlptsensei": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-tsuke",
+    "form": "〜につけ",
+    "variants": [
+      "〜につけて",
+      "〜につけても"
+    ],
+    "meaning": "whenever ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-tsuki",
+    "form": "〜につき",
+    "variants": [
+      "〜につきまして"
+    ],
+    "meaning": "due to ~ / per ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": "Two senses: notice-style reason and per unit."
+  },
+  {
+    "id": "ni-watatte",
+    "form": "〜にわたって",
+    "variants": [
+      "〜にわたり",
+      "〜にわたる"
+    ],
+    "meaning": "over (a period or area) of ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-seyo",
+    "form": "〜にせよ",
+    "variants": [
+      "〜にしろ"
+    ],
+    "meaning": "even if ~ / whatever ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": "にしても alone is N3 in all sources; only にせよ/にしろ are N2."
+  },
+  {
+    "id": "ni-shiro-ni-shiro",
+    "form": "〜にしろ〜にしろ",
+    "variants": [
+      "〜にせよ〜にせよ"
+    ],
+    "meaning": "whether ~ or ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-shitemo-ni-shitemo",
+    "form": "〜にしても〜にしても",
+    "variants": [],
+    "meaning": "whether ~ or ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-shitara",
+    "form": "〜にしたら",
+    "variants": [
+      "〜にすれば",
+      "〜にしてみれば",
+      "〜にしてみたら"
+    ],
+    "meaning": "from the viewpoint of ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "o-megutte",
+    "form": "〜をめぐって",
+    "variants": [
+      "〜を巡って",
+      "〜をめぐる"
+    ],
+    "meaning": "over ~ / concerning ~ (dispute)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "o-keiki-ni",
+    "form": "〜を契機に",
+    "variants": [
+      "〜を契機として"
+    ],
+    "meaning": "taking ~ as an opportunity",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  }
+]

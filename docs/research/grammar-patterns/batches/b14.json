@@ -1,0 +1,398 @@
+[
+  {
+    "id": "kara-iu-to",
+    "form": "〜から言うと",
+    "variants": [
+      "〜から言えば",
+      "〜から言ったら"
+    ],
+    "meaning": "from the standpoint of ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: jlptsensei N2, bunpro N3, marumori N3."
+  },
+  {
+    "id": "de-iu-to",
+    "form": "〜で言うと",
+    "variants": [
+      "〜で言えば",
+      "〜で言うところの"
+    ],
+    "meaning": "in terms of ~; in ~ it would be",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ka-wa-ni-yotte-chigau",
+    "form": "〜かは〜によって違う",
+    "variants": [
+      "〜かは〜による",
+      "〜かは〜次第だ"
+    ],
+    "meaning": "whether ~ depends on ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Contains ni-yotte."
+  },
+  {
+    "id": "wa-betsu-to-shite",
+    "form": "〜は別として",
+    "variants": [
+      "〜は別にして"
+    ],
+    "meaning": "setting ~ aside",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N2",
+      "marumori": "N3",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Marumori also has a 〜は別として・にして entry at N2. Level disagreement: jlptsensei N3, bunpro N2, marumori N3."
+  },
+  {
+    "id": "ni-kakete-mo",
+    "form": "〜にかけても",
+    "variants": [],
+    "meaning": "staking ~ on it; by ~ (oath)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Same surface as a variant of ni-kakete-wa; meaning differs (命にかけても)."
+  },
+  {
+    "id": "to-ieru",
+    "form": "〜と言える",
+    "variants": [
+      "〜とも言える",
+      "〜と言えるだろう"
+    ],
+    "meaning": "one can say that ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "kangaerarenai",
+    "form": "〜なんて考えられない",
+    "variants": [
+      "考えられない"
+    ],
+    "meaning": "unthinkable that ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "de-yuumei",
+    "form": "〜は〜で有名",
+    "variants": [
+      "〜で有名だ",
+      "〜で知られる"
+    ],
+    "meaning": "~ is famous for ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "no-wa-no-hou-da",
+    "form": "〜のは〜の方だ",
+    "variants": [],
+    "meaning": "the one who ~ is actually ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Bare 〜のは〜だ (cleft) is N4 in JLPT Sensei and left out."
+  },
+  {
+    "id": "to-iu-riyuu-de",
+    "form": "〜という理由で",
+    "variants": [],
+    "meaning": "on the grounds that ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-iu-no-wa-jijitsu-da",
+    "form": "〜というのは事実だ",
+    "variants": [
+      "〜ことは事実だ"
+    ],
+    "meaning": "it is a fact that ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-kankei-ga-aru",
+    "form": "〜に関係がある",
+    "variants": [
+      "〜と関係がある",
+      "〜に関係のある",
+      "〜に関係ない"
+    ],
+    "meaning": "~ is related to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "iu-made-mo-nai",
+    "form": "〜は言うまでもない",
+    "variants": [
+      "言うまでもなく"
+    ],
+    "meaning": "it goes without saying ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-awasete",
+    "form": "〜に合わせて",
+    "variants": [
+      "〜に合わせる",
+      "〜に合った"
+    ],
+    "meaning": "to match ~; in line with ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-ataru",
+    "form": "〜に当たる",
+    "variants": [
+      "〜にあたる"
+    ],
+    "meaning": "corresponds to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "にあたって ('on the occasion of') is N2."
+  },
+  {
+    "id": "to-onaji-de",
+    "form": "〜と同じで",
+    "variants": [
+      "〜と同じく",
+      "〜と同じように"
+    ],
+    "meaning": "like ~; same as ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-chigatte",
+    "form": "〜と違って",
+    "variants": [
+      "〜とは違って"
+    ],
+    "meaning": "unlike ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-narande",
+    "form": "〜と並んで",
+    "variants": [
+      "〜と並ぶ"
+    ],
+    "meaning": "alongside ~; on a par with ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-onaji-kurai",
+    "form": "〜と同じくらい",
+    "variants": [
+      "〜と同じぐらい"
+    ],
+    "meaning": "about as ~ as",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "de-yokereba",
+    "form": "〜でよければ",
+    "variants": [
+      "〜でよかったら"
+    ],
+    "meaning": "if ~ is all right with you",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "moshimo-tara",
+    "form": "もしも〜たら",
+    "variants": [
+      "もしも〜なら",
+      "もしも〜ば"
+    ],
+    "meaning": "if by any chance ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Bunpro's entry also covers もしも〜でも."
+  },
+  {
+    "id": "suuryou-wa",
+    "form": "〔数量〕は",
+    "variants": [],
+    "meaning": "at least (amount) ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N4",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Number + は marking a minimum (3時間はかかる). Needs a numeral before は. Level disagreement: jlptsensei N3, bunpro N4, marumori N3."
+  },
+  {
+    "id": "to-natte-iru",
+    "form": "〜は〜となっている",
+    "variants": [
+      "〜となっております"
+    ],
+    "meaning": "~ is (set as) ~ (formal notices)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  }
+]

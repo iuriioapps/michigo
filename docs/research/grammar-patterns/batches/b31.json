@@ -1,0 +1,449 @@
+[
+  {
+    "id": "ni-shite",
+    "form": "〜にして",
+    "variants": [
+      "〜にしてようやく",
+      "〜にして〜"
+    ],
+    "meaning": "only at (stage); both X and Y",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Bunpro splits にして① (at the stage) and ② (both). Near miss: にする + て."
+  },
+  {
+    "id": "ni-todomarazu",
+    "form": "〜にとどまらず",
+    "variants": [],
+    "meaning": "not limited to",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-matsuwaru",
+    "form": "〜にまつわる",
+    "variants": [
+      "〜にまつわって"
+    ],
+    "meaning": "related to (stories, rumors)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-hikikae",
+    "form": "〜に引き換え",
+    "variants": [
+      "〜にひきかえ"
+    ],
+    "meaning": "in contrast to",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-taeru",
+    "form": "〜に耐える / 〜に耐えない",
+    "variants": [
+      "〜にたえない",
+      "〜に堪えない"
+    ],
+    "meaning": "worth (doing); cannot bear to",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: 耐える 'endure' as a main verb."
+  },
+  {
+    "id": "ni-katakunai",
+    "form": "〜に難くない",
+    "variants": [
+      "〜にかたくない"
+    ],
+    "meaning": "it is not hard to (imagine)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-taru",
+    "form": "〜に足る",
+    "variants": [
+      "〜に足りる"
+    ],
+    "meaning": "worth, sufficient for",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-taranai",
+    "form": "〜に足らない",
+    "variants": [
+      "〜に足りない",
+      "取るに足らない"
+    ],
+    "meaning": "not worth, trivial",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-atai-suru",
+    "form": "〜に値する",
+    "variants": [
+      "〜に値しない"
+    ],
+    "meaning": "worthy of",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1",
+      "bunpro": "N2"
+    },
+    "prototype": false,
+    "notes": "Bunpro N2."
+  },
+  {
+    "id": "ni-yorazu",
+    "form": "〜によらず",
+    "variants": [
+      "〜によらない"
+    ],
+    "meaning": "regardless of",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: prototype-adjacent による (N3)."
+  },
+  {
+    "id": "ni-terashite",
+    "form": "〜に照らして",
+    "variants": [
+      "〜に照らすと",
+      "〜に照らせば"
+    ],
+    "meaning": "in light of",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-sakigakete",
+    "form": "〜に先駆けて",
+    "variants": [
+      "〜に先駆け"
+    ],
+    "meaning": "ahead of",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-wa-ataranai",
+    "form": "〜には当たらない",
+    "variants": [
+      "〜にはあたらない",
+      "〜に当たらない"
+    ],
+    "meaning": "there is no need to (be surprised)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: 当たらない 'not hit'."
+  },
+  {
+    "id": "ni-hajinai",
+    "form": "〜に恥じない",
+    "variants": [
+      "〜に恥じぬ"
+    ],
+    "meaning": "worthy of, living up to",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-itaru",
+    "form": "〜に至る",
+    "variants": [
+      "〜に至った",
+      "〜に至って",
+      "〜に至り"
+    ],
+    "meaning": "reach, come to (a point)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-itaru-made",
+    "form": "〜に至るまで",
+    "variants": [],
+    "meaning": "all the way down to",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1",
+      "tanos": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-itatte-wa",
+    "form": "〜に至っては",
+    "variants": [],
+    "meaning": "when it comes to (extreme case)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-itatte-mo",
+    "form": "〜に至っても",
+    "variants": [],
+    "meaning": "even when it reaches",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-kakotsukete",
+    "form": "〜にかこつけて",
+    "variants": [],
+    "meaning": "using X as a pretext",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-shinobinai",
+    "form": "〜に忍びない",
+    "variants": [],
+    "meaning": "cannot bring oneself to",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "nimo-mashite",
+    "form": "〜にも増して",
+    "variants": [
+      "〜にもまして",
+      "いつにも増して"
+    ],
+    "meaning": "even more than",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-nottotte",
+    "form": "〜に則って",
+    "variants": [
+      "〜に則り",
+      "〜にのっとって"
+    ],
+    "meaning": "in accordance with",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-sokushite",
+    "form": "〜に即して",
+    "variants": [
+      "〜に即した",
+      "〜に即し"
+    ],
+    "meaning": "in line with (facts)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-o-kasanete",
+    "form": "〜に〜を重ねて",
+    "variants": [
+      "改良に改良を重ねて"
+    ],
+    "meaning": "with repeated (effort)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "no-yara",
+    "form": "〜のやら",
+    "variants": [
+      "〜ものやら",
+      "〜ことやら"
+    ],
+    "meaning": "I wonder (what, how)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  }
+]

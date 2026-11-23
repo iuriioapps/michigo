@@ -1,0 +1,442 @@
+[
+  {
+    "id": "no-nan-no-tte",
+    "form": "〜のなんのって",
+    "variants": [
+      "〜のなんの"
+    ],
+    "meaning": "so incredibly X (you can't believe it)",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "tokitara",
+    "form": "〜ときたら",
+    "variants": [
+      "〜と来たら"
+    ],
+    "meaning": "when it comes to (complaint)",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Bunpro has two entries (ときたら, と来たら); merged."
+  },
+  {
+    "id": "mo-nara-mo-da",
+    "form": "〜も〜なら〜も〜だ",
+    "variants": [
+      "親も親なら子も子だ"
+    ],
+    "meaning": "A is as bad as B",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": "JS lists it as が-も〜なら〜も〜だ."
+  },
+  {
+    "id": "temo-shiranai",
+    "form": "〜ても知らない",
+    "variants": [
+      "〜ても知らないよ",
+      "〜ても知らないからね"
+    ],
+    "meaning": "don't blame me if",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: literal 知らない 'don't know'."
+  },
+  {
+    "id": "ta-koto-ni-suru",
+    "form": "〜たことにする",
+    "variants": [
+      "〜たことになる",
+      "〜なかったことにする"
+    ],
+    "meaning": "act as if, treat as having happened",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": "Built on prototype koto-ni-suru / koto-ni-naru (N3); a matcher must check the preceding た."
+  },
+  {
+    "id": "you-mono-nara",
+    "form": "〜ようものなら",
+    "variants": [
+      "〜ようもんなら"
+    ],
+    "meaning": "if one dared to (something bad follows)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Bunpro ものなら② is this; the non-volitional ものなら is N2 (JS, JT4Y, Bunpro ①)."
+  },
+  {
+    "id": "made-mo-nai",
+    "form": "〜までもない",
+    "variants": [
+      "〜までもなく",
+      "言うまでもない"
+    ],
+    "meaning": "there is no need to",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "言うまでもない is very common and also listed at N3 by Bunpro as a fixed phrase."
+  },
+  {
+    "id": "made-da",
+    "form": "〜までだ",
+    "variants": [
+      "〜までのことだ",
+      "〜たまでだ",
+      "〜までのこと"
+    ],
+    "meaning": "will simply (as a last resort); only did",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Bunpro splits るまでだ (resolve) and たまでだ (only did); JS and JT4Y merge."
+  },
+  {
+    "id": "you-ni-mo-nai",
+    "form": "〜ようにも〜ない",
+    "variants": [
+      "〜にも〜ない",
+      "行こうにも行けない"
+    ],
+    "meaning": "want to but cannot",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": "Bunpro lists にも～ない; merged."
+  },
+  {
+    "id": "dou-nimo-nai",
+    "form": "どうにも〜ない",
+    "variants": [
+      "どうにもならない",
+      "どうにもできない"
+    ],
+    "meaning": "no matter what, cannot",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Overlaps temo-dou-ni-mo-naranai."
+  },
+  {
+    "id": "tomo-naru-to",
+    "form": "〜ともなると",
+    "variants": [
+      "〜ともなれば",
+      "〜にもなると"
+    ],
+    "meaning": "once it gets to be (a stage or rank)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Overlaps to-naru-to."
+  },
+  {
+    "id": "to-wa-ie",
+    "form": "〜とはいえ",
+    "variants": [
+      "〜とは言え"
+    ],
+    "meaning": "although, that said",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-wa-iu-mono-no",
+    "form": "〜とはいうものの",
+    "variants": [
+      "〜とは言うものの"
+    ],
+    "meaning": "although one says so",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Built on ものの (N2)."
+  },
+  {
+    "id": "to-iu-tokoro-da",
+    "form": "〜というところだ",
+    "variants": [
+      "〜といったところだ",
+      "〜ってところだ"
+    ],
+    "meaning": "about, at most (rough amount)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-iu-ka-to-iu-ka",
+    "form": "〜というか〜というか",
+    "variants": [
+      "〜といおうか〜といおうか",
+      "〜といおうか"
+    ],
+    "meaning": "call it X or Y",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Bunpro lists といおうか."
+  },
+  {
+    "id": "to-ii-to-ii",
+    "form": "〜といい〜といい",
+    "variants": [],
+    "meaning": "both X and Y alike",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: といい 'it would be good if' (N3)."
+  },
+  {
+    "id": "dano-dano",
+    "form": "〜だの〜だの",
+    "variants": [
+      "〜だの"
+    ],
+    "meaning": "X and Y and so on (complaint)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "nari-nari",
+    "form": "〜なり〜なり",
+    "variants": [],
+    "meaning": "either X or Y, whatever",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "kare-kare",
+    "form": "〜かれ〜かれ",
+    "variants": [
+      "遅かれ早かれ",
+      "多かれ少なかれ",
+      "良かれ悪しかれ"
+    ],
+    "meaning": "whether X or Y (fixed pairs)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Almost only in fixed phrases."
+  },
+  {
+    "id": "tara-tade",
+    "form": "〜たら〜たで",
+    "variants": [
+      "〜なら〜で",
+      "〜ば〜で"
+    ],
+    "meaning": "if it does, then (it brings its own trouble)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": "Bunpro lists たら〜で and なら〜で separately; merged."
+  },
+  {
+    "id": "tara-tokoro-da",
+    "form": "〜たら〜ところだ",
+    "variants": [
+      "〜ば〜ところだった"
+    ],
+    "meaning": "if X, would have Y (counterfactual)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": "Overlaps ところだった (N2/N3)."
+  },
+  {
+    "id": "ta-wa-ii-ga",
+    "form": "〜たはいいが",
+    "variants": [
+      "〜たのはいいが"
+    ],
+    "meaning": "it was fine that one did, but",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "darou-ni",
+    "form": "〜だろうに",
+    "variants": [
+      "〜でしょうに"
+    ],
+    "meaning": "surely would have; if only (sympathy or regret)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": "Built on prototype deshou-darou; matcher must require final に."
+  },
+  {
+    "id": "mono-de",
+    "form": "〜もので",
+    "variants": [
+      "〜もんで"
+    ],
+    "meaning": "because (excuse)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1",
+      "bunpro": "N2"
+    },
+    "prototype": false,
+    "notes": "Bunpro places ものですから・もので at N2. Near miss: noun もの + で."
+  },
+  {
+    "id": "koto-dashi",
+    "form": "〜ことだし",
+    "variants": [],
+    "meaning": "since (as one reason)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  }
+]

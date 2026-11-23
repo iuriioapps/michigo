@@ -1,0 +1,416 @@
+[
+  {
+    "id": "betsu-ni-nai",
+    "form": "別に〜ない",
+    "variants": [
+      "べつに〜ない",
+      "別に"
+    ],
+    "meaning": "not particularly ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "In speech 別に often stands alone as a curt reply with the negative left out."
+  },
+  {
+    "id": "metta-ni-nai",
+    "form": "めったに〜ない",
+    "variants": [],
+    "meaning": "rarely ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "totemo-nai",
+    "form": "とても〜ない",
+    "variants": [],
+    "meaning": "can't possibly ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Not the N5 adverb とても 'very'; requires a negative or potential-negative predicate."
+  },
+  {
+    "id": "mattaku-nai",
+    "form": "全く〜ない",
+    "variants": [
+      "まったく〜ない"
+    ],
+    "meaning": "not ~ at all",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: jlptsensei N2, bunpro N3, marumori N3."
+  },
+  {
+    "id": "nakanaka-nai",
+    "form": "なかなか〜ない",
+    "variants": [],
+    "meaning": "just won't ~; not easily",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Positive なかなか ('quite') is the word entry nakanaka. Level disagreement: jlptsensei N4, bunpro N3, marumori N3."
+  },
+  {
+    "id": "sae-ba",
+    "form": "〜さえ〜ば",
+    "variants": [
+      "〜さえ〜たら"
+    ],
+    "meaning": "if only ~; as long as ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Contains particle sae; a matcher must prefer this form when ば follows."
+  },
+  {
+    "id": "ba-noni",
+    "form": "〜ば〜のに",
+    "variants": [
+      "〜ばいいのに",
+      "〜たらいいのに",
+      "〜ばよかったのに"
+    ],
+    "meaning": "if only ~ (regret or wish)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": "Try! 〜ばいいのに (critical suggestion) merged here."
+  },
+  {
+    "id": "ba-ii",
+    "form": "〜ばいい",
+    "variants": [
+      "〜ばいいです",
+      "〜ばいいですか"
+    ],
+    "meaning": "you just need to ~; it would be good to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Marumori bundles it with ばよかった at N4. ばよかった itself is N4 in Bunpro and Marumori and left out. Level disagreement: jlptsensei N3, bunpro N3, marumori N4."
+  },
+  {
+    "id": "nai-to",
+    "form": "〜ないと",
+    "variants": [
+      "〜ないと（いけない）",
+      "〜ないとだめ"
+    ],
+    "meaning": "have to ~ (casual); unless ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N4",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "The 'have to' use ends the sentence at ないと. Overlaps with N4 to-conditional after a negative. Level disagreement: jlptsensei N3, bunpro N4, marumori N3."
+  },
+  {
+    "id": "te-goran",
+    "form": "〜てごらん",
+    "variants": [
+      "〜てごらんなさい"
+    ],
+    "meaning": "try ~ing (soft, to a junior)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "furi-o-suru",
+    "form": "〜ふりをする",
+    "variants": [
+      "〜ふりして",
+      "〜振りをする"
+    ],
+    "meaning": "to pretend to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "sasete-morau",
+    "form": "〜させてもらう",
+    "variants": [
+      "〜させていただく",
+      "〜させていただきます",
+      "〜せてもらう"
+    ],
+    "meaning": "to be allowed to ~ (humble)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N4",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": "Contains N4 causative. Marumori bundles させてください with it at N4. Level disagreement: bunpro N3, marumori N4, try N3."
+  },
+  {
+    "id": "ta-tokoro-kekka",
+    "form": "〜たところ",
+    "variants": [
+      "〜たところ、〜た"
+    ],
+    "meaning": "when I did ~, (I found) ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Result-discovery sense. Same form as prototype ta-tokoro ('just did'), which all sources put at N4. Later step: decide whether to fold into ta-tokoro."
+  },
+  {
+    "id": "noni-mokuteki",
+    "form": "〜のに",
+    "variants": [
+      "〜のには"
+    ],
+    "meaning": "in order to ~; for ~ (purpose)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Purpose のに (dictionary form + のに + 便利/必要/使う). Prototype noni (N4) is the 'although' sense. Level disagreement: jlptsensei N4, bunpro N3, marumori N3."
+  },
+  {
+    "id": "temo-shou-ga-nai",
+    "form": "〜てもしょうがない",
+    "variants": [
+      "〜てもしかたがない",
+      "〜ても仕方ない"
+    ],
+    "meaning": "there's no point in ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "temo-hajimaranai",
+    "form": "〜ても始まらない",
+    "variants": [
+      "〜たって始まらない"
+    ],
+    "meaning": "it does no good to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "marumori": "N3",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Level tie: JS N3, JT4Y N1."
+  },
+  {
+    "id": "te-sumu",
+    "form": "〜て済む",
+    "variants": [
+      "〜てすむ",
+      "〜で済む"
+    ],
+    "meaning": "~ is enough; get off with just ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "ずに済む / なくて済む are N2 points."
+  },
+  {
+    "id": "te-wa-ikenai-kara",
+    "form": "〜てはいけないから",
+    "variants": [
+      "〜といけないから"
+    ],
+    "meaning": "so as not to ~; in case ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Contains N5 te-wa-ikenai."
+  },
+  {
+    "id": "te-iru-baai-ja-nai",
+    "form": "〜ている場合じゃない",
+    "variants": [
+      "〜ている場合ではない",
+      "〜てる場合じゃない"
+    ],
+    "meaning": "this is no time to be ~ing",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "temo-nakutemo",
+    "form": "〜ても〜なくても",
+    "variants": [],
+    "meaning": "whether or not ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "n-datte",
+    "form": "〜んだって",
+    "variants": [
+      "〜んですって",
+      "〜なんだって"
+    ],
+    "meaning": "I heard that ~ (casual)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-douji-ni",
+    "form": "〜と同時に",
+    "variants": [
+      "〜と同時"
+    ],
+    "meaning": "at the same time as ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: jlptsensei N2, bunpro N3, marumori N3."
+  },
+  {
+    "id": "wake-ni-wa-ikanai",
+    "form": "〜わけにはいかない",
+    "variants": [
+      "〜わけにはいきません",
+      "〜わけにもいかない"
+    ],
+    "meaning": "can't very well ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "ないわけにはいかない ('must') is N2 in Bunpro."
+  }
+]

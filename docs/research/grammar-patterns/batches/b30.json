@@ -1,0 +1,422 @@
+[
+  {
+    "id": "o-ii-koto-ni",
+    "form": "〜をいいことに",
+    "variants": [],
+    "meaning": "taking advantage of",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "o-kanete",
+    "form": "〜を兼ねて",
+    "variants": [
+      "〜をかねて",
+      "〜兼"
+    ],
+    "meaning": "also serving as; partly for",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "o-sakai-ni",
+    "form": "〜を境に",
+    "variants": [
+      "〜を境にして"
+    ],
+    "meaning": "from (that point) on",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "o-ki-ni",
+    "form": "〜を機に",
+    "variants": [
+      "〜を機にして"
+    ],
+    "meaning": "taking the opportunity of",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Close to を契機に (N2)."
+  },
+  {
+    "id": "mama-ni",
+    "form": "〜がままに / 〜ままに",
+    "variants": [
+      "〜られるままに",
+      "あるがままに",
+      "思うままに"
+    ],
+    "meaning": "just as (it is, one is told, one likes)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "bunpro": "N1",
+      "jt4y": "N1",
+      "jlptsensei": "N2"
+    },
+    "prototype": false,
+    "notes": "Bunpro lists まま(に) at N3 and N1 (れる + ままに). Prototype has no まま id."
+  },
+  {
+    "id": "mo-douzen-da",
+    "form": "〜も同然だ",
+    "variants": [
+      "〜も同然"
+    ],
+    "meaning": "as good as, practically",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "mo-shinai-de",
+    "form": "〜もしないで",
+    "variants": [
+      "〜もせずに"
+    ],
+    "meaning": "without even doing",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: prototype naide."
+  },
+  {
+    "id": "wa-sateoki",
+    "form": "〜はさておき",
+    "variants": [
+      "〜はさておいて"
+    ],
+    "meaning": "setting X aside",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "wa-oroka",
+    "form": "〜はおろか",
+    "variants": [],
+    "meaning": "let alone, not to mention",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "wa-socchinoke-de",
+    "form": "〜はそっちのけで",
+    "variants": [
+      "〜をそっちのけで"
+    ],
+    "meaning": "neglecting X",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "wa-dou-de-are",
+    "form": "〜はどうであれ",
+    "variants": [],
+    "meaning": "whatever X may be",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "hodo-no-koto-de-wa-nai",
+    "form": "〜ほどのことではない",
+    "variants": [
+      "〜ほどのことはない",
+      "〜ほどのことでもない"
+    ],
+    "meaning": "not worth (doing)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "koto-no-nai-you-ni",
+    "form": "〜ことのないように",
+    "variants": [
+      "〜ことのないよう"
+    ],
+    "meaning": "so as not to",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Overlaps prototype you-ni."
+  },
+  {
+    "id": "koto-mo-atte",
+    "form": "〜こともあって",
+    "variants": [],
+    "meaning": "partly because",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "kurai-no-mono-da",
+    "form": "〜くらいのものだ",
+    "variants": [
+      "〜ぐらいのものだ"
+    ],
+    "meaning": "only X would; it's only about",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "uchi-ni-hairanai",
+    "form": "〜うちに入らない",
+    "variants": [],
+    "meaning": "doesn't count as",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: N3 うちに 'while'."
+  },
+  {
+    "id": "tokoro-ga-aru",
+    "form": "〜ところがある",
+    "variants": [
+      "〜なところがある",
+      "〜ところもある"
+    ],
+    "meaning": "has a side that is, tends to",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "High false-positive risk with literal ところ 'place' + ある."
+  },
+  {
+    "id": "mono-to-omou",
+    "form": "〜ものと思う",
+    "variants": [
+      "〜ものと思っていた"
+    ],
+    "meaning": "firmly believe; had assumed",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": "Bunpro has two entries; merged. A ものと思う matcher also hits ものと思われる."
+  },
+  {
+    "id": "demo-ari-demo-aru",
+    "form": "〜でもあり〜でもある",
+    "variants": [],
+    "meaning": "is both X and Y",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "gatera",
+    "form": "〜がてら",
+    "variants": [],
+    "meaning": "while at it, on the way",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "tanos lists it at N2 as well as N1."
+  },
+  {
+    "id": "kanousei-ga-aru",
+    "form": "〜可能性がある",
+    "variants": [
+      "〜可能性もある",
+      "〜可能性が高い"
+    ],
+    "meaning": "there is a possibility that",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Plain vocabulary (可能性) + ある; low grammatical value, kept because two sources list it."
+  },
+  {
+    "id": "omoi-o-suru",
+    "form": "〜思いをする",
+    "variants": [
+      "〜思いをした",
+      "つらい思いをする"
+    ],
+    "meaning": "experience (a feeling)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "izen",
+    "form": "〜以前",
+    "variants": [
+      "〜以前の問題"
+    ],
+    "meaning": "before even (getting to) X",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: 以前 'before, formerly' (N4 vocabulary)."
+  },
+  {
+    "id": "dani",
+    "form": "〜だに",
+    "variants": [
+      "〜だにしない",
+      "微動だにしない",
+      "想像するだに"
+    ],
+    "meaning": "not even; merely (thinking of)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Bunpro splits だに+しない and Verb+だに."
+  },
+  {
+    "id": "ni-atte",
+    "form": "〜にあって",
+    "variants": [],
+    "meaning": "in (a situation); being in",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  }
+]

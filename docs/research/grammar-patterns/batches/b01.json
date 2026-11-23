@@ -1,0 +1,499 @@
+[
+  {
+    "id": "no-da",
+    "form": "〜のだ / 〜んです",
+    "variants": [
+      "〜んだ",
+      "〜のです",
+      "〜んです",
+      "〜んですか",
+      "〜の (explanatory, sentence-final)"
+    ],
+    "meaning": "explanatory: it's that ~ / the thing is ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "tanos": "N5"
+    },
+    "prototype": true,
+    "notes": "prototype-ids.tsv files this at N3, but every checked source lists it at N5. jlptsensei lists んです and のです as two entries; merged. Sentence-final の in questions is a separate entry (no-question); the matcher must tell explanatory の from possessive and nominalizer の."
+  },
+  {
+    "id": "te-iru",
+    "form": "〜ている",
+    "variants": [
+      "〜てる",
+      "〜ています",
+      "〜てます",
+      "〜でいる",
+      "〜ていた"
+    ],
+    "meaning": "ongoing action, resulting state, or habit",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": true,
+    "notes": "Bunpro splits it into three points (progressive, state, habitual); merged here. jlptsensei and marumori list 〜ていた (past continuous) separately at N4; kept as a variant here, decide later whether it needs its own entry."
+  },
+  {
+    "id": "kara-because",
+    "form": "〜から (because)",
+    "variants": [
+      "〜だから",
+      "〜ですから"
+    ],
+    "meaning": "because ~ / since ~ (clause of reason)",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5"
+    },
+    "prototype": false,
+    "notes": "Classified as construction because all sources treat it as a clause-linking reason. Same surface as kara-from (particle); the matcher must check that から follows a predicate, not a noun. Sentence-initial だから is a conjunction word, not in any N5 list."
+  },
+  {
+    "id": "kedo",
+    "form": "〜けど",
+    "variants": [
+      "〜けれど",
+      "〜けれども",
+      "〜だけど",
+      "〜けども"
+    ],
+    "meaning": "but ~ / although ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5"
+    },
+    "prototype": false,
+    "notes": "jlptsensei and bunpro list けど and けれども as two points; merged as spelling variants. marumori lists けど at N5 but けれども at N4. Clause-linking, so construction. Also softens a sentence-final clause (言ったけど…)."
+  },
+  {
+    "id": "ga-but",
+    "form": "〜が (but)",
+    "variants": [
+      "〜ですが",
+      "〜ますが"
+    ],
+    "meaning": "but ~ / and (soft contrast between clauses)",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "jt4y": "N5",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "jlptsensei folds it into the が entry with the subject marker; split here because it links clauses. marumori lists （です・だ）が at N4. Must not be confused with ga-subject: this が follows a predicate."
+  },
+  {
+    "id": "deshou-darou",
+    "form": "〜でしょう / 〜だろう",
+    "variants": [
+      "〜でしょ",
+      "〜だろ",
+      "〜でしょうか",
+      "〜だろうか"
+    ],
+    "meaning": "probably ~ / right? (guess or seeking agreement)",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "tanos": "N5"
+    },
+    "prototype": true,
+    "notes": "jlptsensei and bunpro list でしょう and だろう separately; merged as polite/plain pair. Bunpro lists のだろうか at N4 and marumori lists (の)でしょうか at N4 as 'I wonder'; that wondering use may need its own entry at N4."
+  },
+  {
+    "id": "tai",
+    "form": "〜たい",
+    "variants": [
+      "〜たいです",
+      "〜たくない",
+      "〜たかった"
+    ],
+    "meaning": "want to do ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": true,
+    "notes": "Third-person 〜たがる is N4 (prototype tagaru)."
+  },
+  {
+    "id": "te-kudasai",
+    "form": "〜てください",
+    "variants": [
+      "〜でください",
+      "〜てくださいませんか"
+    ],
+    "meaning": "please do ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": true,
+    "notes": "Noun + をください is a separate entry (o-kudasai). Negative ないでください is naide-kudasai."
+  },
+  {
+    "id": "ga-aru",
+    "form": "〜がある",
+    "variants": [
+      "〜があります",
+      "〜はある",
+      "〜もある"
+    ],
+    "meaning": "there is ~ / to have ~ (things, events)",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": false,
+    "notes": "Bunpro also lists がある + Noun (a noun that has ~) at N5; folded in here. Overlaps with ta-koto-ga-aru, which ends in the same verb."
+  },
+  {
+    "id": "ga-iru",
+    "form": "〜がいる",
+    "variants": [
+      "〜がいます",
+      "〜はいる",
+      "〜もいる"
+    ],
+    "meaning": "there is ~ / to have ~ (people, animals)",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": false,
+    "notes": "The same verb いる is the auxiliary in te-iru; the matcher must not count 〜ている as existence."
+  },
+  {
+    "id": "node",
+    "form": "〜ので",
+    "variants": [
+      "〜んで",
+      "〜なので"
+    ],
+    "meaning": "because ~ / since ~ (softer, more objective than から)",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": true,
+    "notes": "prototype-ids.tsv files this at N4, but all five checked sources list it at N5. Clause-linking, so construction. Casual んで collides with explanatory ん + て; flag for the matcher."
+  },
+  {
+    "id": "mashou",
+    "form": "〜ましょう",
+    "variants": [],
+    "meaning": "let's do ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": true,
+    "notes": "〜ましょうか (offer or suggestion as a question) is a separate entry, mashou-ka. A matcher for mashou must not also fire on ましょうか, or the two entries must be kept apart explicitly."
+  },
+  {
+    "id": "te-mo-ii",
+    "form": "〜てもいい",
+    "variants": [
+      "〜てもいいです",
+      "〜てもいいですか",
+      "〜てもいい？",
+      "〜でもいい",
+      "〜てもかまわない"
+    ],
+    "meaning": "it's okay to do ~ / may I do ~?",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": true,
+    "notes": "marumori bundles it with concessive 〜ても (even if); jlptsensei and bunpro put bare 〜ても at N4, so concessive ても is left out of this file. てもかまわない is N3 in bunpro; listed as a variant only for recognition, may move. Negative なくてもいい is nakute-mo-ii."
+  },
+  {
+    "id": "mae-ni",
+    "form": "〜前に",
+    "variants": [
+      "〜まえに",
+      "Nの前に"
+    ],
+    "meaning": "before doing ~ / before N",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": true,
+    "notes": "Spatial 'in front of' (Nの前) is covered by no-position. Time span + 前 (三年前, 'ago') is a word use, not this pattern; tanos's gloss mentions 'ago'."
+  },
+  {
+    "id": "ta-koto-ga-aru",
+    "form": "〜たことがある",
+    "variants": [
+      "〜たことがあります",
+      "〜たことがない",
+      "〜たことはない",
+      "〜だことがある"
+    ],
+    "meaning": "have done ~ before (experience)",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": true,
+    "notes": "Non-past 〜ることがある ('there are times when') is N4 in jlptsensei and marumori; the matcher must require the past た before こと."
+  },
+  {
+    "id": "te-kara",
+    "form": "〜てから",
+    "variants": [
+      "〜でから"
+    ],
+    "meaning": "after doing ~, then ...",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": true,
+    "notes": "prototype-ids.tsv files this at N4, but all five checked sources list it at N5."
+  },
+  {
+    "id": "hou-ga-ii",
+    "form": "〜たほうがいい / 〜ないほうがいい",
+    "variants": [
+      "〜た方がいい",
+      "〜たほうがいいです",
+      "〜ないほうがいい",
+      "〜ほうがいいよ"
+    ],
+    "meaning": "had better do ~ / had better not do ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": true,
+    "notes": "prototype-ids.tsv files this at N4, but all five checked sources list it at N5. Bunpro and jt4y list the た and ない forms as two points; merged as the prototype does. Comparison ほうが in yori-hou-ga shares the noun ほう."
+  },
+  {
+    "id": "ku-ni-naru",
+    "form": "〜くなる / 〜になる",
+    "variants": [
+      "〜くなります",
+      "〜になります",
+      "〜くなった",
+      "〜になった"
+    ],
+    "meaning": "to become ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": false,
+    "notes": "jlptsensei and jt4y list the verb なる; marumori lists なる and 〜になる at N5 but 〜くなる separately at N4. Must not fire inside ようになる or ことになる (prototype N3 entries)."
+  },
+  {
+    "id": "masen-ka",
+    "form": "〜ませんか",
+    "variants": [
+      "〜ない？"
+    ],
+    "meaning": "won't you ~? / would you like to ~? (invitation)",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": false,
+    "notes": "A plain negative question (行かない？) can be an invitation too, but it is hard to tell from a real negative question; low-confidence variant."
+  },
+  {
+    "id": "tsumori",
+    "form": "〜つもり",
+    "variants": [
+      "〜つもりだ",
+      "〜つもりです",
+      "〜ないつもり"
+    ],
+    "meaning": "intend to ~ / plan to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": true,
+    "notes": "prototype-ids.tsv files this at N3, but all five checked sources list it at N5. marumori lists つもりで and つもりだった at N3; those uses can stay under this id or split later."
+  },
+  {
+    "id": "te-wa-ikenai",
+    "form": "〜てはいけない",
+    "variants": [
+      "〜てはいけません",
+      "〜ちゃいけない",
+      "〜じゃいけない",
+      "〜ちゃだめ",
+      "〜てはだめ"
+    ],
+    "meaning": "must not do ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": true,
+    "notes": "jlptsensei and marumori list ちゃいけない・じゃいけない as their own N5 point; merged as a contraction. 〜てはならない is listed by marumori at N2, so it is not a variant here."
+  },
+  {
+    "id": "sugiru",
+    "form": "〜すぎる",
+    "variants": [
+      "〜過ぎる",
+      "〜すぎます",
+      "〜すぎ"
+    ],
+    "meaning": "too much ~ / overly ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "tanos": "N5"
+    },
+    "prototype": true,
+    "notes": "prototype-ids.tsv files this at N4, but the four sources that list it say N5. The verb 過ぎる on its own ('to pass') is not the pattern."
+  },
+  {
+    "id": "mashou-ka",
+    "form": "〜ましょうか",
+    "variants": [
+      "〜ようか"
+    ],
+    "meaning": "shall I ~? / shall we ~? (offer or suggestion)",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "tanos": "N5"
+    },
+    "prototype": false,
+    "notes": "Contains mashou; decide whether a sentence with ましょうか counts as both. Plain ようか depends on the volitional form, which is N4 in jlptsensei and bunpro."
+  }
+]

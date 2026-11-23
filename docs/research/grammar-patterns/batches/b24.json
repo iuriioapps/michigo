@@ -1,0 +1,419 @@
+[
+  {
+    "id": "ue-wa",
+    "form": "〜上は",
+    "variants": [
+      "〜うえは"
+    ],
+    "meaning": "now that ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "jou",
+    "form": "〜上",
+    "variants": [
+      "法律上",
+      "歴史上",
+      "〜上の"
+    ],
+    "meaning": "in terms of ~ / from the standpoint of ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Suffix read じょう."
+  },
+  {
+    "id": "ijou-wa",
+    "form": "〜以上は",
+    "variants": [
+      "〜以上"
+    ],
+    "meaning": "since ~ / now that ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Bunpro splits 以上① (more than, N4) and ② (since, N2)."
+  },
+  {
+    "id": "ijou-ni",
+    "form": "〜以上に",
+    "variants": [
+      "〜以上の"
+    ],
+    "meaning": "more than ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "tsutsu-mo",
+    "form": "〜つつも",
+    "variants": [],
+    "meaning": "although ~ / even while ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "bunpro": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": "Bunpro and Kanzen split it from つつ; JLPT Sensei and jt4y cover it under つつ."
+  },
+  {
+    "id": "tsutsu-aru",
+    "form": "〜つつある",
+    "variants": [
+      "〜つつあります"
+    ],
+    "meaning": "in the process of ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "chittomo-nai",
+    "form": "ちっとも〜ない",
+    "variants": [
+      "ちっとも〜ません"
+    ],
+    "meaning": "not at all ~",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "nanimo-nai",
+    "form": "何も〜ない",
+    "variants": [
+      "なにも〜ない"
+    ],
+    "meaning": "nothing ~ / not at all ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "jt4y": "N2",
+      "bunpro": "N5"
+    },
+    "prototype": false,
+    "notes": "Bunpro lists なにも at N5."
+  },
+  {
+    "id": "roku-ni-nai",
+    "form": "ろくに〜ない",
+    "variants": [
+      "碌に〜ない",
+      "ろくな〜ない"
+    ],
+    "meaning": "hardly ~ / not properly ~",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "tanos": "N2"
+    },
+    "prototype": false,
+    "notes": "tanos lists ろくに both alone and with ない."
+  },
+  {
+    "id": "bakari-approx",
+    "form": "〜ばかり (about)",
+    "variants": [],
+    "meaning": "about ~ / around ~ (amount)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Approximate amount (十日ばかり). Not ばかり (only), which is N3/N4."
+  },
+  {
+    "id": "bakari-ka",
+    "form": "〜ばかりか",
+    "variants": [],
+    "meaning": "not only ~ but also",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "niwa-purpose",
+    "form": "〜には",
+    "variants": [
+      "〜のには"
+    ],
+    "meaning": "in order to ~ / for ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "jlptsensei": "N3"
+    },
+    "prototype": false,
+    "notes": "Purpose/evaluation には after a verb. Plain topic には is N5; a matcher must check the dictionary form before it."
+  },
+  {
+    "id": "tamae",
+    "form": "〜たまえ",
+    "variants": [
+      "〜てくれたまえ"
+    ],
+    "meaning": "do ~ (superior to inferior)",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Old-fashioned male speech; appears in anime and period dramas."
+  },
+  {
+    "id": "te-choudai",
+    "form": "〜てちょうだい",
+    "variants": [
+      "〜て頂戴"
+    ],
+    "meaning": "please ~ (soft, familiar)",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N2",
+    "sources": {
+      "bunpro": "N2"
+    },
+    "prototype": false,
+    "notes": "Bunpro only."
+  },
+  {
+    "id": "ba-to-omoimasu",
+    "form": "〜ばと思います",
+    "variants": [
+      "〜ばと思う",
+      "〜ばと存じます"
+    ],
+    "meaning": "I would be glad if ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "bunpro": "N2"
+    },
+    "prototype": false,
+    "notes": "Bunpro only. Formal requests."
+  },
+  {
+    "id": "keikou-ga-aru",
+    "form": "〜傾向がある",
+    "variants": [
+      "〜傾向にある"
+    ],
+    "meaning": "tend to ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "bunpro": "N2"
+    },
+    "prototype": false,
+    "notes": "Bunpro only."
+  },
+  {
+    "id": "to-iu-ten-kara",
+    "form": "〜という点から考えると",
+    "variants": [
+      "〜という点で",
+      "〜という点から"
+    ],
+    "meaning": "from the standpoint of ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "bunpro": "N2"
+    },
+    "prototype": false,
+    "notes": "Bunpro only."
+  },
+  {
+    "id": "ato-number",
+    "form": "後〜 (remaining)",
+    "variants": [
+      "あと〜",
+      "後の〜"
+    ],
+    "meaning": "~ more / ~ left",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N2",
+    "sources": {
+      "bunpro": "N2"
+    },
+    "prototype": false,
+    "notes": "Bunpro only. あと3日 (three more days). Not 〜後で (after), N5 prototype ato-de."
+  },
+  {
+    "id": "jaku-kyou",
+    "form": "〜弱 / 〜強",
+    "variants": [
+      "〜強",
+      "〜弱"
+    ],
+    "meaning": "just under ~ / just over ~ (numbers)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "bunpro": "N2"
+    },
+    "prototype": false,
+    "notes": "Bunpro lists 弱 and 強 as two points; merged."
+  },
+  {
+    "id": "te-kono-kata",
+    "form": "〜てこのかた",
+    "variants": [],
+    "meaning": "ever since ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": "Kanzen only; rare."
+  },
+  {
+    "id": "mai",
+    "form": "〜まい",
+    "variants": [
+      "〜まいか",
+      "〜まいと"
+    ],
+    "meaning": "will not ~ / probably not ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2",
+      "tanos": "N3"
+    },
+    "prototype": false,
+    "notes": "tanos lists まい at N3. Also part of ようか〜まいか."
+  },
+  {
+    "id": "datte",
+    "form": "だって",
+    "variants": [
+      "〜だって"
+    ],
+    "meaning": "even ~ / ~ too / because (casual)",
+    "kind": "particle",
+    "register": "spoken",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "jt4y": "N2",
+      "bunpro": "N3"
+    },
+    "prototype": false,
+    "notes": "Sentence-initial だって (but, because) and NだってNも (even). Bunpro N3. んだって (hearsay) is N3, another point."
+  },
+  {
+    "id": "nomi",
+    "form": "〜のみ",
+    "variants": [],
+    "meaning": "only ~ (formal)",
+    "kind": "particle",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "nominarazu",
+    "form": "〜のみならず",
+    "variants": [
+      "〜のみならず〜も"
+    ],
+    "meaning": "not only ~ but also",
+    "kind": "particle",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  }
+]

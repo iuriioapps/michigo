@@ -1,0 +1,421 @@
+[
+  {
+    "id": "bakari-de-naku",
+    "form": "〜ばかりでなく",
+    "variants": [
+      "〜ばかりでなく〜も"
+    ],
+    "meaning": "not only ~ but also",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "bakari-de",
+    "form": "〜ばかりで",
+    "variants": [],
+    "meaning": "only ~ (and nothing else happens)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "bakari-da",
+    "form": "〜ばかりだ",
+    "variants": [
+      "〜ばかりです"
+    ],
+    "meaning": "keeps getting ~ (usually worse)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: jlptsensei N2, bunpro N3, marumori N3."
+  },
+  {
+    "id": "bakari-ni",
+    "form": "〜ばかりに",
+    "variants": [],
+    "meaning": "simply because ~ (with a bad result)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: jlptsensei N2, bunpro N3, marumori N3."
+  },
+  {
+    "id": "ippou-da",
+    "form": "〜一方だ",
+    "variants": [
+      "〜いっぽうだ"
+    ],
+    "meaning": "keeps on ~ing; more and more",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ippou-de",
+    "form": "〜一方で",
+    "variants": [
+      "〜一方",
+      "その一方で"
+    ],
+    "meaning": "on the other hand; while ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: jlptsensei N2, bunpro N3, marumori N3."
+  },
+  {
+    "id": "kara-koso",
+    "form": "〜からこそ",
+    "variants": [
+      "だからこそ",
+      "それこそ",
+      "〜だからこそ"
+    ],
+    "meaning": "precisely because ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: jlptsensei N2, bunpro N3, marumori N3, try N3."
+  },
+  {
+    "id": "dokoro-ka",
+    "form": "〜どころか",
+    "variants": [],
+    "meaning": "far from ~; let alone ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: jlptsensei N2, bunpro N3, marumori N3."
+  },
+  {
+    "id": "ni-kawatte",
+    "form": "〜に代わって",
+    "variants": [
+      "〜に代わり",
+      "〜にかわって"
+    ],
+    "meaning": "in place of ~; on behalf of ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ue-de",
+    "form": "〜上で",
+    "variants": [
+      "〜うえで",
+      "〜上での"
+    ],
+    "meaning": "after ~; upon ~; in doing ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Marumori splits 'after' (①) from 'in doing' (②); merged because the form is the same."
+  },
+  {
+    "id": "saichuu-ni",
+    "form": "〜最中に",
+    "variants": [
+      "〜最中だ",
+      "〜さいちゅうに"
+    ],
+    "meaning": "right in the middle of ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "tsuide-ni",
+    "form": "〜ついでに",
+    "variants": [],
+    "meaning": "while you're at it; on the way",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "tochuu-de",
+    "form": "〜途中で / 〜途中に",
+    "variants": [
+      "〜途中"
+    ],
+    "meaning": "on the way; partway through ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N2",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: jlptsensei N3, bunpro N2, marumori N3."
+  },
+  {
+    "id": "chuu",
+    "form": "〜中",
+    "variants": [
+      "〜じゅう"
+    ],
+    "meaning": "during ~ (ちゅう); throughout ~ (じゅう)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Two readings: 会議中 (ちゅう, in progress) and 一日中 (じゅう, throughout). UniDic separates them by reading."
+  },
+  {
+    "id": "kara-ni-kakete",
+    "form": "〜から〜にかけて",
+    "variants": [
+      "〜にかけて"
+    ],
+    "meaning": "from ~ through ~ (span of time or area)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "JLPT Sensei and Marumori list から〜にかけて and にかけて separately; merged."
+  },
+  {
+    "id": "zuni-wa-irarenai",
+    "form": "〜ずにはいられない",
+    "variants": [
+      "〜ずにいられない"
+    ],
+    "meaning": "can't help ~ing",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "zu-ni",
+    "form": "〜ずに",
+    "variants": [
+      "〜ず"
+    ],
+    "meaning": "without ~ing",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": true,
+    "notes": "Prototype file has zu-ni at N4, but all four sources put it at N3. Bare 〜ず is the separate inflection entry zu."
+  },
+  {
+    "id": "you-to-shinai",
+    "form": "〜ようとしない",
+    "variants": [
+      "〜うとしない"
+    ],
+    "meaning": "won't even try to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Negative of you-to-suru; a matcher must prefer this longer form."
+  },
+  {
+    "id": "you-to-omowanai",
+    "form": "〜ようと思わない",
+    "variants": [
+      "〜うとは思わない"
+    ],
+    "meaning": "have no wish to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "sou-mo-nai",
+    "form": "〜そうもない",
+    "variants": [
+      "〜そうにない",
+      "〜そうにもない"
+    ],
+    "meaning": "~ seems unlikely",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Bunpro lists そうにない separately at N2."
+  },
+  {
+    "id": "to-wa-kagiranai",
+    "form": "〜とは限らない",
+    "variants": [
+      "〜とも限らない",
+      "〜とは限りません"
+    ],
+    "meaning": "not necessarily ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "kanarazushimo-nai",
+    "form": "必ずしも〜ない",
+    "variants": [
+      "必ずしも〜とは限らない"
+    ],
+    "meaning": "not always ~; not necessarily ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Adverb plus a negative predicate; often with to-wa-kagiranai."
+  },
+  {
+    "id": "kesshite-nai",
+    "form": "決して〜ない",
+    "variants": [
+      "けっして〜ない"
+    ],
+    "meaning": "never ~; by no means ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  }
+]

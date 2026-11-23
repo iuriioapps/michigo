@@ -1,0 +1,421 @@
+[
+  {
+    "id": "kirenai",
+    "form": "〜切れない",
+    "variants": [
+      "〜きれない"
+    ],
+    "meaning": "can't ~ completely; too many to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3"
+    },
+    "prototype": false,
+    "notes": "Potential negative of kiru; a matcher must prefer this form."
+  },
+  {
+    "id": "komu",
+    "form": "〜込む",
+    "variants": [
+      "〜こむ"
+    ],
+    "meaning": "~ into; ~ thoroughly",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ageru",
+    "form": "〜上げる / 〜上がる",
+    "variants": [
+      "〜あげる",
+      "〜あがる"
+    ],
+    "meaning": "to finish ~ing; ~ up completely",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Compound-verb suffix on a verb stem. Not N4 てあげる."
+  },
+  {
+    "id": "toosu",
+    "form": "〜通す",
+    "variants": [
+      "〜とおす"
+    ],
+    "meaning": "to ~ all the way through",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "au",
+    "form": "〜合う",
+    "variants": [
+      "〜あう"
+    ],
+    "meaning": "to ~ each other",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "tate",
+    "form": "〜たて",
+    "variants": [
+      "〜たての"
+    ],
+    "meaning": "freshly ~ed",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "gachi",
+    "form": "〜がち",
+    "variants": [
+      "〜がちだ",
+      "〜がちな"
+    ],
+    "meaning": "tends to ~ (bad habit)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "gimi",
+    "form": "〜気味",
+    "variants": [
+      "〜ぎみ"
+    ],
+    "meaning": "a touch of ~; slightly ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ppoi",
+    "form": "〜っぽい",
+    "variants": [],
+    "meaning": "-ish; tends to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": true,
+    "notes": ""
+  },
+  {
+    "id": "ppanashi",
+    "form": "〜っぱなし",
+    "variants": [
+      "〜っぱなしだ",
+      "〜っぱなしにする"
+    ],
+    "meaning": "left ~ing; keeps ~ing",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "darake",
+    "form": "〜だらけ",
+    "variants": [],
+    "meaning": "full of ~; covered in ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "gatai",
+    "form": "〜がたい",
+    "variants": [
+      "〜難い"
+    ],
+    "meaning": "hard to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "teki",
+    "form": "〜的",
+    "variants": [
+      "〜的な",
+      "〜的に"
+    ],
+    "meaning": "-al; -ic; in terms of ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "muke",
+    "form": "〜向け",
+    "variants": [
+      "〜向けの",
+      "〜向けに"
+    ],
+    "meaning": "aimed at ~; for ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "muki",
+    "form": "〜向き",
+    "variants": [
+      "〜向きの",
+      "〜向きだ"
+    ],
+    "meaning": "suited to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "toori",
+    "form": "〜とおり",
+    "variants": [
+      "〜とおりに",
+      "〜通り",
+      "〜どおり"
+    ],
+    "meaning": "just as ~; exactly as ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "buri-ni",
+    "form": "〜ぶりに",
+    "variants": [
+      "〜ぶり",
+      "〜振り",
+      "〜振りに"
+    ],
+    "meaning": "for the first time in ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N2",
+      "marumori": "N3",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: jlptsensei N3, bunpro N2, marumori N3. | N1 has ぶり/っぷり (manner), another point."
+  },
+  {
+    "id": "gata",
+    "form": "〜型",
+    "variants": [],
+    "meaning": "~ type; ~ model",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "doushi",
+    "form": "〜同士",
+    "variants": [],
+    "meaning": "fellow ~; among ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "atari",
+    "form": "〜当たり",
+    "variants": [
+      "〜あたり"
+    ],
+    "meaning": "per ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ten",
+    "form": "〜点",
+    "variants": [
+      "〜という点で",
+      "〜点では"
+    ],
+    "meaning": "in that ~; in terms of ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "nashi",
+    "form": "〜なし",
+    "variants": [
+      "〜なしで",
+      "〜なしに"
+    ],
+    "meaning": "without ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "wari-ni",
+    "form": "〜割に",
+    "variants": [
+      "〜わりに",
+      "〜割には"
+    ],
+    "meaning": "considering ~; for ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  }
+]

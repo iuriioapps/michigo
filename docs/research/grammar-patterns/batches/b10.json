@@ -1,0 +1,432 @@
+[
+  {
+    "id": "hodo-nai",
+    "form": "〜ほど〜ない",
+    "variants": [
+      "〜ほど〜はない"
+    ],
+    "meaning": "not as ~ as; nothing is as ~ as",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "kawari-ni",
+    "form": "〜代わりに",
+    "variants": [
+      "〜かわりに",
+      "〜の代わりに"
+    ],
+    "meaning": "instead of ~; in exchange for ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "okage-de",
+    "form": "〜おかげで",
+    "variants": [
+      "〜おかげだ",
+      "〜おかげ"
+    ],
+    "meaning": "thanks to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": true,
+    "notes": ""
+  },
+  {
+    "id": "sei-de",
+    "form": "〜せいで",
+    "variants": [
+      "〜せいだ",
+      "〜せい",
+      "〜せいか"
+    ],
+    "meaning": "because of ~ (blame)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": true,
+    "notes": "〜せいか is N2 in JLPT Sensei and Marumori."
+  },
+  {
+    "id": "kuse-ni",
+    "form": "〜くせに",
+    "variants": [
+      "〜くせして"
+    ],
+    "meaning": "even though ~ (critical)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": true,
+    "notes": "〜くせして is N2 in JLPT Sensei and Marumori."
+  },
+  {
+    "id": "tabi-ni",
+    "form": "〜たびに",
+    "variants": [
+      "〜たび"
+    ],
+    "meaning": "every time ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": true,
+    "notes": ""
+  },
+  {
+    "id": "ta-totan",
+    "form": "〜たとたん（に）",
+    "variants": [
+      "〜た途端"
+    ],
+    "meaning": "the moment ~; as soon as ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "mono-da",
+    "form": "〜ものだ",
+    "variants": [
+      "〜もんだ",
+      "〜たものだ",
+      "〜ものです"
+    ],
+    "meaning": "used to ~; that's how ~ is; one should ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": true,
+    "notes": "Merges たものだ (nostalgic, all three N3) into prototype mono-da. JLPT Sensei puts general ものだ at N2."
+  },
+  {
+    "id": "tsumori-de",
+    "form": "〜つもりで",
+    "variants": [],
+    "meaning": "with the intention of ~; as if ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N2",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Contains N5 つもり. Level disagreement: jlptsensei N3, bunpro N2, marumori N3."
+  },
+  {
+    "id": "tsumori-datta",
+    "form": "〜つもりだった",
+    "variants": [
+      "〜つもりでした"
+    ],
+    "meaning": "I meant to ~; I thought I had ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Contains N5 つもり."
+  },
+  {
+    "id": "koto-ni-natte-iru",
+    "form": "〜ことになっている",
+    "variants": [
+      "〜ことになってる"
+    ],
+    "meaning": "it is arranged that ~; the rule is ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N2",
+      "marumori": "N3",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Contains N4 ことになる; a matcher must prefer this longer form. Level disagreement: jlptsensei N3, bunpro N2, marumori N3. | Overlaps the N3 prototype koto-ni-naru; a matcher must prefer this longer form."
+  },
+  {
+    "id": "koto-wa-nai",
+    "form": "〜ことはない",
+    "variants": [
+      "〜こともない"
+    ],
+    "meaning": "there's no need to ~; ~ never happens",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "nai-koto-wa-nai",
+    "form": "〜ないことはない",
+    "variants": [
+      "〜ないこともない"
+    ],
+    "meaning": "it's not that ~ can't; ~ is possible",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Contains koto-wa-nai."
+  },
+  {
+    "id": "you-na-ki-ga-suru",
+    "form": "〜ような気がする",
+    "variants": [
+      "〜気がする",
+      "〜ような気がします"
+    ],
+    "meaning": "I have a feeling that ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-iu-yori",
+    "form": "〜というより",
+    "variants": [
+      "〜というよりは",
+      "〜っていうか"
+    ],
+    "meaning": "rather than ~; more like ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-iu-no-wa",
+    "form": "〜というのは",
+    "variants": [
+      "〜っていうのは",
+      "〜とは"
+    ],
+    "meaning": "what is called ~ is; the reason is ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "tatoe-temo",
+    "form": "たとえ〜ても",
+    "variants": [
+      "たとえ〜でも",
+      "たとえ〜としても"
+    ],
+    "meaning": "even if ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "donna-ni-temo",
+    "form": "どんなに〜ても",
+    "variants": [
+      "どんなに〜でも"
+    ],
+    "meaning": "no matter how ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ikura-temo",
+    "form": "いくら〜ても",
+    "variants": [
+      "いくら〜でも"
+    ],
+    "meaning": "no matter how much ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-suru-to",
+    "form": "〜とすると / 〜としたら / 〜とすれば",
+    "variants": [],
+    "meaning": "if we assume ~; supposing ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "temo-kamawanai",
+    "form": "〜ても構わない",
+    "variants": [
+      "〜てもかまわない",
+      "〜ても構いません"
+    ],
+    "meaning": "it's fine if ~; I don't mind if ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-kurabete",
+    "form": "〜に比べて",
+    "variants": [
+      "〜と比べて",
+      "〜に比べ",
+      "〜に比べると"
+    ],
+    "meaning": "compared with ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-kanshite",
+    "form": "〜に関して / 〜に関する",
+    "variants": [
+      "〜に関し",
+      "〜に関しては"
+    ],
+    "meaning": "about ~; regarding ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  }
+]

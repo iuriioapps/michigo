@@ -1,0 +1,459 @@
+[
+  {
+    "id": "naide-kudasai",
+    "form": "〜ないでください",
+    "variants": [
+      "〜ないで (sentence-final request)",
+      "〜ないでくれ",
+      "〜ないでね"
+    ],
+    "meaning": "please don't do ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": false,
+    "notes": "Sentence-final casual ないで ('don't') is listed by marumori at N5 and by bunpro at N4; folded in as a variant. It looks like naide (without doing); the matcher tells them apart by what follows."
+  },
+  {
+    "id": "nakute-wa-ikenai",
+    "form": "〜なくてはいけない",
+    "variants": [
+      "〜なくてはいけません",
+      "〜なくちゃいけない",
+      "〜なくちゃだめ",
+      "〜なくてはだめ"
+    ],
+    "meaning": "must do ~ / have to do ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "tanos": "N5"
+    },
+    "prototype": true,
+    "notes": "prototype-ids.tsv files this at N4, but the four sources that list it say N5 (tanos as なくちゃいけない). 〜なければいけない/ならない are N4 in jlptsensei, bunpro and marumori (prototype nakereba-naranai). 〜ないといけない is N5 in jlptsensei but N4 in bunpro and marumori, so it is left out."
+  },
+  {
+    "id": "nakucha",
+    "form": "〜なくちゃ / 〜なきゃ",
+    "variants": [
+      "〜なくちゃ",
+      "〜なきゃ",
+      "〜なくては (sentence-final)"
+    ],
+    "meaning": "gotta do ~ (casual, rest of 'must' left unsaid)",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5"
+    },
+    "prototype": false,
+    "notes": "Conflict with prototype-ids.tsv: nakereba-naranai (N4) lists なきゃ as its variant. Sources treat the cut-off なくちゃ・なきゃ as its own N5 point. Decide whether なきゃ belongs here or under nakereba-naranai; なくちゃいけない is a variant of nakute-wa-ikenai."
+  },
+  {
+    "id": "tari",
+    "form": "〜たり〜たりする",
+    "variants": [
+      "〜だり",
+      "〜たりする",
+      "〜たりして"
+    ],
+    "meaning": "do things like ~ and ~ (among others)",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "tanos": "N5"
+    },
+    "prototype": true,
+    "notes": "prototype-ids.tsv files this at N4, but the four sources that list it say N5. A single 〜たり is also common and should match."
+  },
+  {
+    "id": "ni-iku",
+    "form": "〜に行く",
+    "variants": [
+      "〜にいく",
+      "〜に来る",
+      "〜に帰る",
+      "〜に行きます"
+    ],
+    "meaning": "go (come) somewhere to do ~ (purpose)",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": false,
+    "notes": "The stem before に is a verb stem or an action noun (買い物に行く). Destination に + 行く (学校に行く) is not this pattern; that is ni or e-direction."
+  },
+  {
+    "id": "interrogative-ka",
+    "form": "question word + か",
+    "variants": [
+      "何か",
+      "誰か",
+      "どこか",
+      "いつか",
+      "どれか"
+    ],
+    "meaning": "some- (something, someone, somewhere)",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "bunpro": "N5",
+      "marumori": "N5"
+    },
+    "prototype": false,
+    "notes": "Indirect questions (何をするか分からない) are N4 in marumori; the matcher must not take question word + か at clause end as this."
+  },
+  {
+    "id": "interrogative-mo",
+    "form": "question word + も (〜ない)",
+    "variants": [
+      "何も〜ない",
+      "誰も〜ない",
+      "どこも",
+      "どこにも〜ない",
+      "いつも"
+    ],
+    "meaning": "no- / every- (nothing, no one, everywhere)",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "bunpro": "N5",
+      "marumori": "N5"
+    },
+    "prototype": false,
+    "notes": "marumori lists 何も〜ない again at N2 as an expression. いつも is listed as a word (itsumo); it is lexicalized and should not double count."
+  },
+  {
+    "id": "mada-te-inai",
+    "form": "まだ〜ていない",
+    "variants": [
+      "まだ〜ていません",
+      "まだ〜てない",
+      "まだ〜ている"
+    ],
+    "meaning": "haven't done ~ yet",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "tanos": "N5"
+    },
+    "prototype": false,
+    "notes": "marumori pairs it with まだ〜ている (still doing) and もう〜ている (already); those are kept as variants and as uses of te-iru plus the words mada and mou."
+  },
+  {
+    "id": "yori-hou-ga",
+    "form": "〜より〜のほうが",
+    "variants": [
+      "〜のほうが〜より",
+      "〜より〜の方が",
+      "〜は〜より"
+    ],
+    "meaning": "B is more ~ than A",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": false,
+    "notes": "jlptsensei lists は〜より and より〜ほうが as two N5 points; merged. Bare より 'than' is the particle entry yori. AとBとどちらが is N4 in bunpro."
+  },
+  {
+    "id": "no-naka-de-ichiban",
+    "form": "〜の中で〜が一番",
+    "variants": [
+      "〜の中で〜がいちばん",
+      "〜で〜が一番"
+    ],
+    "meaning": "out of ~, X is the most ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "tanos": "N5"
+    },
+    "prototype": false,
+    "notes": "jlptsensei and bunpro list の中で ('among') alone at N4. The word 一番 alone is ichiban."
+  },
+  {
+    "id": "ni-suru",
+    "form": "〜にする",
+    "variants": [
+      "〜にします",
+      "〜にしよう"
+    ],
+    "meaning": "to decide on ~ / to choose ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5"
+    },
+    "prototype": false,
+    "notes": "jlptsensei and bunpro also list にする/くする 'to make something ~' at N4; that change-of-state use is a different meaning with the same surface. Must not fire inside ことにする or ようにする."
+  },
+  {
+    "id": "no-ga-suki",
+    "form": "〜のが好き",
+    "variants": [
+      "〜のが好きです",
+      "〜のが嫌い",
+      "〜のが大好き",
+      "〜ことが好き"
+    ],
+    "meaning": "to like doing ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": false,
+    "notes": "marumori merges 好き and 嫌い; the words alone are suki-kirai."
+  },
+  {
+    "id": "nakute-mo-ii",
+    "form": "〜なくてもいい",
+    "variants": [
+      "〜なくてもいいです",
+      "〜なくても大丈夫",
+      "〜なくてもかまわない"
+    ],
+    "meaning": "don't have to do ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "marumori": "N5",
+      "bunpro": "N4"
+    },
+    "prototype": true,
+    "notes": "prototype-ids.tsv files this at N4; jlptsensei and marumori say N5, bunpro N4. marumori bundles concessive なくても ('even if not'), which is left to N4."
+  },
+  {
+    "id": "te-request",
+    "form": "〜て (casual request)",
+    "variants": [
+      "〜てよ",
+      "〜てね",
+      "ちょっと〜て",
+      "〜てくれ"
+    ],
+    "meaning": "do ~ (casual request or command)",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "marumori": "N5",
+      "bunpro": "N4"
+    },
+    "prototype": false,
+    "notes": "Tie between marumori (N5) and bunpro (N4); kept by the tie rule. It is the bare て-form at sentence end, so the matcher must tell it from te-form joining clauses. | Only Bunpro lists it. Sentence-final て; overlaps te-kudasai (N5)."
+  },
+  {
+    "id": "no-position",
+    "form": "Nの前 / 後ろ / 横 / 中 / 上 / 下",
+    "variants": [
+      "Nの前",
+      "Nの後ろ",
+      "Nの横",
+      "Nの隣",
+      "Nの中",
+      "Nの上",
+      "Nの下"
+    ],
+    "meaning": "in front of / behind / beside / in / on / under N",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "marumori": "N5"
+    },
+    "prototype": false,
+    "notes": "Only marumori lists these as grammar; marumori puts 隣・横 again at N4. Nの前に (place) shares the surface of mae-ni (time); the meaning depends on the noun."
+  },
+  {
+    "id": "no-ga-jouzu",
+    "form": "〜のが上手",
+    "variants": [
+      "〜のが上手です",
+      "〜のがじょうず",
+      "Nが上手",
+      "〜のが得意"
+    ],
+    "meaning": "to be good at doing ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": false,
+    "notes": "marumori lists 〜上手 (noun + が上手) rather than のが上手; folded in. 得意 is in tokui-nigate."
+  },
+  {
+    "id": "no-ga-heta",
+    "form": "〜のが下手",
+    "variants": [
+      "〜のが下手です",
+      "〜のがへた",
+      "Nが下手",
+      "〜のが苦手"
+    ],
+    "meaning": "to be bad at doing ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5",
+      "tanos": "N5"
+    },
+    "prototype": false,
+    "notes": "marumori lists 〜下手 (noun + が下手); folded in. 苦手 is in tokui-nigate."
+  },
+  {
+    "id": "nakute-wa-naranai",
+    "form": "〜なくてはならない",
+    "variants": [
+      "〜なくてはなりません",
+      "〜なくちゃならない"
+    ],
+    "meaning": "must do ~ (more formal or written)",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Could be merged into nakute-wa-ikenai (same meaning, different final verb); kept apart because marumori puts it at N4 and the prototype keeps nakereba-naranai separate."
+  },
+  {
+    "id": "wa-dou-desu-ka",
+    "form": "〜はどうですか",
+    "variants": [
+      "〜はどう？",
+      "〜はどうでしたか",
+      "〜はいかがですか"
+    ],
+    "meaning": "how about ~? / how is ~?",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5"
+    },
+    "prototype": false,
+    "notes": "Only jlptsensei lists it. 〜たらどう ('why don't you') is N4 in jlptsensei, bunpro and marumori."
+  },
+  {
+    "id": "ni-kimeru",
+    "form": "〜に決める",
+    "variants": [
+      "〜に決めた",
+      "〜にきめる"
+    ],
+    "meaning": "to decide on ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "marumori": "N5"
+    },
+    "prototype": false,
+    "notes": "Only marumori lists it. Near-synonym of ni-suru. ことに決める is not covered here."
+  },
+  {
+    "id": "dake",
+    "form": "だけ",
+    "variants": [
+      "だけで",
+      "ただ〜だけ"
+    ],
+    "meaning": "only / just",
+    "kind": "particle",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "jlptsensei": "N5",
+      "bunpro": "N5",
+      "marumori": "N5",
+      "jt4y": "N5"
+    },
+    "prototype": false,
+    "notes": "だけで ('just by') is N4 in jlptsensei and bunpro; listed as a variant only for recognition. marumori's ただ〜(だけ) folded in."
+  },
+  {
+    "id": "na-prohibitive",
+    "form": "〜な (prohibitive)",
+    "variants": [
+      "〜なよ"
+    ],
+    "meaning": "don't ~!",
+    "kind": "construction",
+    "register": null,
+    "level": "N5",
+    "sources": {
+      "bunpro": "N5",
+      "jt4y": "N5",
+      "jlptsensei": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Tie (2 N5, 2 N4); kept by the tie rule. Pairs with the N4 imperative (prototype meirei). Collides with naa written as な. | Bunpro lists it at N5. Follows a dictionary form; na-command follows a stem."
+  }
+]

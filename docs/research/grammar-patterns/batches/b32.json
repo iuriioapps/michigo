@@ -1,0 +1,442 @@
+[
+  {
+    "id": "no-yara-no-yara",
+    "form": "〜のやら〜のやら",
+    "variants": [],
+    "meaning": "can't tell whether X or Y",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: やら〜やら (N2)."
+  },
+  {
+    "id": "no-kiwami",
+    "form": "〜の極み",
+    "variants": [],
+    "meaning": "the height of",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "no-itari",
+    "form": "〜の至り",
+    "variants": [],
+    "meaning": "the utmost (feeling)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "kiwamaru",
+    "form": "〜極まる / 〜極まりない",
+    "variants": [
+      "〜きわまる",
+      "〜極まりない"
+    ],
+    "meaning": "extremely",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "koto-kono-ue-nai",
+    "form": "〜ことこの上ない",
+    "variants": [
+      "この上ない",
+      "この上なく"
+    ],
+    "meaning": "nothing could be more",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "nari-tomo",
+    "form": "〜なりとも",
+    "variants": [
+      "少しなりとも"
+    ],
+    "meaning": "at least a little, even if only",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "kara-aru",
+    "form": "〜からある",
+    "variants": [
+      "〜からする",
+      "〜からの"
+    ],
+    "meaning": "as much as, no less than",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Bunpro lists からする separately; merged."
+  },
+  {
+    "id": "o-oite-nai",
+    "form": "〜をおいて〜ない",
+    "variants": [
+      "〜をおいてほかに〜ない",
+      "〜をおいて"
+    ],
+    "meaning": "no one but, nothing other than",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "JT4Y also lists ほかに〜ない separately; merged."
+  },
+  {
+    "id": "o-mono-tomo-sezu",
+    "form": "〜をものともせず",
+    "variants": [
+      "〜をものともせずに"
+    ],
+    "meaning": "in defiance of, undaunted by",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "o-yoso-ni",
+    "form": "〜をよそに",
+    "variants": [],
+    "meaning": "ignoring, regardless of (others)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "o-yogi-naku-sareru",
+    "form": "〜を余儀なくされる",
+    "variants": [
+      "〜を余儀なくさせる",
+      "〜を余儀なくされた"
+    ],
+    "meaning": "be forced to",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Bunpro has separate entries for される and させる; merged."
+  },
+  {
+    "id": "o-kawakiri-ni",
+    "form": "〜を皮切りに",
+    "variants": [
+      "〜を皮切りとして"
+    ],
+    "meaning": "starting with",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "o-hete",
+    "form": "〜を経て",
+    "variants": [],
+    "meaning": "after going through, via",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "o-fumaete",
+    "form": "〜を踏まえて",
+    "variants": [
+      "〜を踏まえ",
+      "〜を踏まえた"
+    ],
+    "meaning": "based on, taking into account",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "o-kagiri-ni",
+    "form": "〜を限りに",
+    "variants": [],
+    "meaning": "as of, from (that point) no longer",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "o-kaerimizu",
+    "form": "〜を顧みず",
+    "variants": [
+      "〜も顧みず"
+    ],
+    "meaning": "without regard for",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "o-kinji-enai",
+    "form": "〜を禁じ得ない",
+    "variants": [
+      "〜を禁じえない"
+    ],
+    "meaning": "cannot help feeling",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "o-zentei-toshite",
+    "form": "〜を前提として",
+    "variants": [
+      "〜を前提に"
+    ],
+    "meaning": "on the premise of",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "o-oshite",
+    "form": "〜を押して",
+    "variants": [
+      "〜を押し切って"
+    ],
+    "meaning": "despite, pushing through",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "tanos": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "o-hikaete",
+    "form": "〜を控えて",
+    "variants": [
+      "〜を控え"
+    ],
+    "meaning": "with X approaching",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: 控える 'refrain from'."
+  },
+  {
+    "id": "o-motte",
+    "form": "〜をもって (means)",
+    "variants": [
+      "〜を以て"
+    ],
+    "meaning": "by means of, with",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Split from o-motte-jiten as Bunpro and JT4Y do; JS has one entry."
+  },
+  {
+    "id": "o-motte-jiten",
+    "form": "〜をもって (as of)",
+    "variants": [
+      "〜をもちまして"
+    ],
+    "meaning": "as of (a time), marking an end",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Split from o-motte; see there."
+  },
+  {
+    "id": "n-ga-tame-ni",
+    "form": "〜んがために",
+    "variants": [
+      "〜んがため",
+      "〜んがための"
+    ],
+    "meaning": "in order to (strong intent)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "beku-shite",
+    "form": "〜べくして",
+    "variants": [],
+    "meaning": "as was bound to",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "beku-mo-nai",
+    "form": "〜べくもない",
+    "variants": [],
+    "meaning": "there's no way to",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  }
+]

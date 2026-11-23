@@ -1,0 +1,436 @@
+[
+  {
+    "id": "sobireru",
+    "form": "〜そびれる",
+    "variants": [
+      "〜そびれた",
+      "言いそびれる"
+    ],
+    "meaning": "miss the chance to",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "sokonau",
+    "form": "〜損なう",
+    "variants": [
+      "〜損ねる",
+      "〜損じる",
+      "〜そこなう"
+    ],
+    "meaning": "fail to; miss doing",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: verb 損なう 'harm' on its own."
+  },
+  {
+    "id": "tsukusu",
+    "form": "〜尽くす",
+    "variants": [
+      "〜尽くした",
+      "食べ尽くす",
+      "知り尽くす"
+    ],
+    "meaning": "do completely, exhaust",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: 尽くす 'devote oneself' as a main verb."
+  },
+  {
+    "id": "zu-jimai",
+    "form": "〜ずじまい",
+    "variants": [
+      "〜ずじまいだ",
+      "〜ずじまいで"
+    ],
+    "meaning": "ended up never doing",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "tameshi-ga-nai",
+    "form": "〜ためしがない",
+    "variants": [
+      "〜た試しがない"
+    ],
+    "meaning": "has never once (happened)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ta-hyoushi-ni",
+    "form": "〜た拍子に",
+    "variants": [
+      "〜た弾みに",
+      "〜たはずみに"
+    ],
+    "meaning": "the moment, in the act of (accident)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ta-shunkan-ni",
+    "form": "〜た瞬間に",
+    "variants": [
+      "〜た瞬間"
+    ],
+    "meaning": "the instant that",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Overlaps N3 たとたん in meaning; 瞬間 is also a plain noun."
+  },
+  {
+    "id": "ta-tsumori-wa-nai",
+    "form": "〜たつもりはない",
+    "variants": [
+      "〜たつもりはありません"
+    ],
+    "meaning": "had no intention of (having done)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": "Built on prototype tsumori (N3)."
+  },
+  {
+    "id": "nashi-ni",
+    "form": "〜なしに",
+    "variants": [
+      "〜なしで",
+      "〜なしには"
+    ],
+    "meaning": "without",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: ことなしに, ともなしに."
+  },
+  {
+    "id": "koto-nashi-ni",
+    "form": "〜ことなしに",
+    "variants": [
+      "〜ことなしには"
+    ],
+    "meaning": "without doing",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "nakushite-wa",
+    "form": "〜なくしては",
+    "variants": [
+      "〜なくして",
+      "〜なくしては〜ない"
+    ],
+    "meaning": "without (X, Y is impossible)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: 無くす 'lose' + て は."
+  },
+  {
+    "id": "atte-no",
+    "form": "〜あっての",
+    "variants": [
+      "〜あってのこと"
+    ],
+    "meaning": "only possible because of",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "koso-ga",
+    "form": "〜こそ〜が",
+    "variants": [
+      "〜こそ〜けれど",
+      "〜こそしたが"
+    ],
+    "meaning": "it is true that X, but",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: emphatic こそ (N3)."
+  },
+  {
+    "id": "koso-sure",
+    "form": "〜こそすれ",
+    "variants": [
+      "〜こそすれ〜ない"
+    ],
+    "meaning": "may X, but certainly not Y",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "koso-are",
+    "form": "〜こそあれ",
+    "variants": [],
+    "meaning": "though there is X, (not Y)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "nai-de-mo-nai",
+    "form": "〜ないでもない",
+    "variants": [
+      "〜ないこともない"
+    ],
+    "meaning": "it's not that one doesn't; somewhat",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": "Close to ないものでもない (N1) and なくはない (N2); ないことはない is N3 in Bunpro."
+  },
+  {
+    "id": "nai-mono-de-mo-nai",
+    "form": "〜ないものでもない",
+    "variants": [
+      "〜ないもんでもない"
+    ],
+    "meaning": "it's not impossible that",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "nai-tomo-kagiranai",
+    "form": "〜ないとも限らない",
+    "variants": [],
+    "meaning": "it may well happen that",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: とは限らない (N3)."
+  },
+  {
+    "id": "nai-made-mo",
+    "form": "〜ないまでも",
+    "variants": [],
+    "meaning": "even if not (fully), at least",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-ienaku-mo-nai",
+    "form": "〜と言えなくもない",
+    "variants": [
+      "〜といえなくもない"
+    ],
+    "meaning": "one could say",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "temo-dou-ni-mo-naranai",
+    "form": "〜てもどうにもならない",
+    "variants": [
+      "〜たってどうにもならない"
+    ],
+    "meaning": "it's no use doing",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Overlaps dou-nimo-nai."
+  },
+  {
+    "id": "te-kanawanai",
+    "form": "〜て敵わない",
+    "variants": [
+      "〜てかなわない",
+      "〜てはかなわない",
+      "〜ちゃかなわない"
+    ],
+    "meaning": "unbearably; can't stand it if",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "te-sumu-koto-de-wa-nai",
+    "form": "〜て済むことではない",
+    "variants": [
+      "〜て済む問題じゃない"
+    ],
+    "meaning": "not something that can be settled by",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: N3 ないで済む."
+  },
+  {
+    "id": "de-wa-sumanai",
+    "form": "〜では済まない",
+    "variants": [
+      "〜じゃ済まない",
+      "〜では済まされない"
+    ],
+    "meaning": "won't end with just X",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "zu-ni-wa-sumanai",
+    "form": "〜ずには済まない",
+    "variants": [
+      "〜ないでは済まない",
+      "〜ずにはすまない"
+    ],
+    "meaning": "cannot get away without",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  }
+]

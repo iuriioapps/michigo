@@ -1,0 +1,495 @@
+[
+  {
+    "id": "sukoshi-mo-nai",
+    "form": "少しも〜ない",
+    "variants": [
+      "すこしも〜ない",
+      "ちっとも〜ない"
+    ],
+    "meaning": "not even a little ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "bunpro": "N4",
+      "jlptsensei": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Only Bunpro lists it."
+  },
+  {
+    "id": "ni-kagiru",
+    "form": "〜に限る",
+    "variants": [
+      "〜に限ります",
+      "〜は〜に限る"
+    ],
+    "meaning": "nothing beats ~ / ~ is best",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "jt4y": "N2",
+      "tanos": "N2"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: jlptsensei N2, bunpro N3, marumori N3. | Bunpro lists に限る at N3."
+  },
+  {
+    "id": "tatte",
+    "form": "〜たって",
+    "variants": [
+      "〜だって",
+      "〜ったって"
+    ],
+    "meaning": "even if ~",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N2",
+      "marumori": "N2",
+      "try": "N3",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: jlptsensei N3, bunpro N2, marumori N2, try N3. | Overlaps the particle だって; a matcher must check the preceding verb form."
+  },
+  {
+    "id": "te-shou-ga-nai",
+    "form": "〜てしょうがない",
+    "variants": [
+      "〜てしかたがない",
+      "〜てしょうがありません",
+      "〜てしょうがねえ"
+    ],
+    "meaning": "extremely ~ / can't help feeling ~",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N2",
+      "marumori": "N2",
+      "try": "N3",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: jlptsensei N3, bunpro N2, marumori N2, try N3. | JLPT Sensei lists it at N3 together with 〜てしかたがない."
+  },
+  {
+    "id": "tokoro-datta",
+    "form": "〜ところだった",
+    "variants": [
+      "〜ところでした"
+    ],
+    "meaning": "almost ~ / nearly ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "marumori": "N3",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": "Bunpro also has ところだった ② at N2. Level disagreement: jlptsensei N2, bunpro N3, marumori N3. | Bunpro has two senses: nearly (N3) and was about to (N2)."
+  },
+  {
+    "id": "ni-motozuite",
+    "form": "〜に基づいて",
+    "variants": [
+      "〜に基づく",
+      "〜に基づき"
+    ],
+    "meaning": "based on ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: jlptsensei N2, bunpro N3, marumori N3."
+  },
+  {
+    "id": "ni-kakete-wa",
+    "form": "〜にかけては",
+    "variants": [
+      "〜にかけても"
+    ],
+    "meaning": "when it comes to ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "bunpro": "N2",
+      "marumori": "N3",
+      "tanos": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: bunpro N2, marumori N3. | Not から〜にかけて (from ~ to), which is N3."
+  },
+  {
+    "id": "mono-ka",
+    "form": "〜ものか",
+    "variants": [
+      "〜もんか",
+      "〜ものですか"
+    ],
+    "meaning": "no way I would ~ / as if I'd ever ~",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-kimatte-iru",
+    "form": "〜に決まっている",
+    "variants": [
+      "〜に決まってる"
+    ],
+    "meaning": "it's bound to be ~ / of course it's ~",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "te-tamaranai",
+    "form": "〜てたまらない",
+    "variants": [
+      "〜てたまらん",
+      "〜くてたまらない"
+    ],
+    "meaning": "unbearably ~ / so ~ I can't stand it",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "tanos": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "mono-dakara",
+    "form": "〜ものだから",
+    "variants": [
+      "〜もんだから",
+      "〜ものですから",
+      "〜もので",
+      "〜もんで"
+    ],
+    "meaning": "because ~ (giving an excuse or reason)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "tanos": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": "Bunpro and tanos list ものですから・もので separately; jt4y has もので at N1. Merged as one excuse-giving reason form."
+  },
+  {
+    "id": "kkonai",
+    "form": "〜っこない",
+    "variants": [
+      "〜っこありません"
+    ],
+    "meaning": "there's no way ~ will happen",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "kara-to-itte",
+    "form": "〜からといって",
+    "variants": [
+      "〜からって",
+      "〜からといっても"
+    ],
+    "meaning": "just because ~ (doesn't mean)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": "Casual からって is common in speech."
+  },
+  {
+    "id": "to-iu-wake-de-wa-nai",
+    "form": "〜というわけではない",
+    "variants": [
+      "〜というわけじゃない",
+      "〜ってわけじゃない"
+    ],
+    "meaning": "it's not that ~ / that doesn't mean ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "bunpro": "N2",
+      "tanos": "N2",
+      "kanzen": "N2",
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Level split N2 (3) vs N1 (2). Overlaps the N3 prototype wake-de-wa-nai; a matcher must prefer the longer という form. | Level tie (equal votes N1 and lower); kept here. Overlaps prototype wake-de-wa-nai (N3); consider merging into it. Kept here only because the level vote is tied."
+  },
+  {
+    "id": "ka-to-omottara",
+    "form": "〜かと思ったら",
+    "variants": [
+      "〜かと思うと",
+      "〜かと思えば"
+    ],
+    "meaning": "just when I thought ~ / no sooner ~ than",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ka-no-you-ni",
+    "form": "〜かのように",
+    "variants": [
+      "〜かのようだ",
+      "〜かのような"
+    ],
+    "meaning": "as if ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-sugi-nai",
+    "form": "〜に過ぎない",
+    "variants": [
+      "〜にすぎない",
+      "〜にすぎず"
+    ],
+    "meaning": "merely ~ / no more than ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "tanos": "N3"
+    },
+    "prototype": false,
+    "notes": "tanos lists すぎない at N3."
+  },
+  {
+    "id": "you-ga-nai",
+    "form": "〜ようがない",
+    "variants": [
+      "〜ようもない",
+      "〜ようがありません"
+    ],
+    "meaning": "there's no way to ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "jlptsensei": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "dokoro-dewa-nai",
+    "form": "〜どころではない",
+    "variants": [
+      "〜どころじゃない",
+      "〜どころではありません"
+    ],
+    "meaning": "it's no time for ~ / far from ~",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": "Distinct from どころか, which most sources put at N3."
+  },
+  {
+    "id": "zaru-o-enai",
+    "form": "〜ざるを得ない",
+    "variants": [
+      "〜ざるをえない",
+      "〜せざるを得ない"
+    ],
+    "meaning": "have no choice but to ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Overlaps the ざる inflection entry; a matcher must prefer this longer form."
+  },
+  {
+    "id": "nai-wake-niwa-ikanai",
+    "form": "〜ないわけにはいかない",
+    "variants": [
+      "〜ないわけにはいきません",
+      "〜ないわけにもいかない"
+    ],
+    "meaning": "can't not ~ / have to ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "bunpro": "N2",
+      "tanos": "N2"
+    },
+    "prototype": false,
+    "notes": "The positive わけにはいかない is N3 in most sources (tanos alone says N2) and is left out."
+  },
+  {
+    "id": "kaneru",
+    "form": "〜かねる",
+    "variants": [
+      "〜かねます",
+      "〜かねております"
+    ],
+    "meaning": "can't (bring oneself to) ~ (polite refusal)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "tanos": "N2"
+    },
+    "prototype": false,
+    "notes": "Mostly business or polite speech. Overlaps かねない: a matcher must tell the negative apart."
+  },
+  {
+    "id": "kanenai",
+    "form": "〜かねない",
+    "variants": [
+      "〜かねません"
+    ],
+    "meaning": "might well ~ (a bad outcome)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "tanos": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "dake-atte",
+    "form": "〜だけあって",
+    "variants": [
+      "〜だけのことはあって"
+    ],
+    "meaning": "as you'd expect from ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "dake-ni",
+    "form": "〜だけに",
+    "variants": [],
+    "meaning": "all the more because ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  }
+]

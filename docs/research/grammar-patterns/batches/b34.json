@@ -1,0 +1,390 @@
+[
+  {
+    "id": "ka-ina-ka",
+    "form": "〜か否か",
+    "variants": [
+      "〜かいなか"
+    ],
+    "meaning": "whether or not",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Formal version of prototype ka-douka."
+  },
+  {
+    "id": "katagata",
+    "form": "〜かたがた",
+    "variants": [],
+    "meaning": "while also, partly to",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "katawara",
+    "form": "〜かたわら",
+    "variants": [
+      "〜の傍ら"
+    ],
+    "meaning": "while also (a side activity)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "tanos lists it at N2 as well as N1."
+  },
+  {
+    "id": "gamashii",
+    "form": "〜がましい",
+    "variants": [
+      "押し付けがましい",
+      "未練がましい"
+    ],
+    "meaning": "smacking of, -ish (negative)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "kitte-no",
+    "form": "〜きっての",
+    "variants": [],
+    "meaning": "the best in (a group)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ikan-de-wa",
+    "form": "〜いかんでは",
+    "variants": [
+      "〜いかんによっては",
+      "〜いかんだ",
+      "〜如何"
+    ],
+    "meaning": "depending on",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ikan-ni-kakawarazu",
+    "form": "〜いかんにかかわらず",
+    "variants": [
+      "〜いかんによらず",
+      "〜いかんを問わず"
+    ],
+    "meaning": "regardless of",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "yue-ni",
+    "form": "〜ゆえ(に)",
+    "variants": [
+      "〜ゆえ",
+      "〜がゆえに",
+      "ゆえに (conjunction)"
+    ],
+    "meaning": "because of, therefore",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "tanos also lists ゆえに at N2. JS lists 故に as a separate conjunction; merged."
+  },
+  {
+    "id": "ori-ni",
+    "form": "〜折に",
+    "variants": [
+      "〜折には",
+      "〜折"
+    ],
+    "meaning": "on the occasion of",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "sube-ga-nai",
+    "form": "〜術がない",
+    "variants": [
+      "〜すべがない",
+      "〜すべもない"
+    ],
+    "meaning": "there is no way to",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "kirai-ga-aru",
+    "form": "〜嫌いがある",
+    "variants": [
+      "〜きらいがある"
+    ],
+    "meaning": "has a tendency to (bad)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: 嫌い 'dislike'."
+  },
+  {
+    "id": "to-no",
+    "form": "〜との",
+    "variants": [
+      "〜との連絡",
+      "〜とのこと"
+    ],
+    "meaning": "that (quoted content before a noun)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": "Bunpro only. とのことだ (hearsay) is a separate N3 point."
+  },
+  {
+    "id": "shidai-desu",
+    "form": "〜次第です",
+    "variants": [
+      "〜次第だ",
+      "という次第です"
+    ],
+    "meaning": "that is how it came about",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": "Different sense from 次第で 'depending on' (N2 in all sources)."
+  },
+  {
+    "id": "gotoki",
+    "form": "〜ごとき / 〜ごとく / 〜ごとし",
+    "variants": [
+      "〜如く",
+      "〜如き",
+      "〜如し",
+      "〜のごとく"
+    ],
+    "meaning": "like, as if",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "tanos lists ごとし at N2 too. Common in lyrics and titles."
+  },
+  {
+    "id": "beku",
+    "form": "〜べく",
+    "variants": [],
+    "meaning": "in order to",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Classical べし continuative. Near miss: べき (prototype beki-da)."
+  },
+  {
+    "id": "majiki",
+    "form": "〜まじき",
+    "variants": [
+      "あるまじき",
+      "〜まじ"
+    ],
+    "meaning": "unbecoming, must not",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "bekarazu",
+    "form": "〜べからず",
+    "variants": [
+      "〜べからざる"
+    ],
+    "meaning": "must not (prohibition)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "taru",
+    "form": "〜たる",
+    "variants": [
+      "〜たるもの",
+      "〜たる者"
+    ],
+    "meaning": "as one who is (in that role)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "tteba",
+    "form": "〜ってば / 〜ったら",
+    "variants": [
+      "〜てば"
+    ],
+    "meaning": "I'm telling you!; (exasperated topic)",
+    "kind": "particle",
+    "register": "spoken",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: ったら as conditional (行ったら) and といったらない."
+  },
+  {
+    "id": "sura",
+    "form": "〜すら",
+    "variants": [
+      "〜ですら"
+    ],
+    "meaning": "even",
+    "kind": "particle",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "JT4Y places (で)すら at N2."
+  },
+  {
+    "id": "tote",
+    "form": "〜とて",
+    "variants": [
+      "〜だとて",
+      "〜からとて"
+    ],
+    "meaning": "even, even if",
+    "kind": "particle",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: とて as colloquial といって."
+  }
+]

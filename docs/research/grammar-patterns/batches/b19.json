@@ -1,0 +1,474 @@
+[
+  {
+    "id": "dake-no-koto-wa-aru",
+    "form": "〜だけのことはある",
+    "variants": [
+      "〜だけある",
+      "〜だけのことはあった"
+    ],
+    "meaning": "no wonder ~ / it lives up to ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "dake-wa",
+    "form": "〜だけは",
+    "variants": [
+      "〜だけはする"
+    ],
+    "meaning": "at least ~ / do all one can ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Covers both 〜だけは〜 (at least) and V-るだけV (as much as one can)."
+  },
+  {
+    "id": "dake-mashi-da",
+    "form": "〜だけましだ",
+    "variants": [
+      "〜だけまし",
+      "〜だけましです"
+    ],
+    "meaning": "at least ~, so it could be worse",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "tanos": "N1"
+    },
+    "prototype": false,
+    "notes": "tanos lists だけまし at N1."
+  },
+  {
+    "id": "nai-dewa-irarenai",
+    "form": "〜ないではいられない",
+    "variants": [
+      "〜ないではいられません"
+    ],
+    "meaning": "can't help ~ / can't stop oneself ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "The ずにはいられない form is N3 in all sources and stays with N3."
+  },
+  {
+    "id": "tewa-irarenai",
+    "form": "〜てはいられない",
+    "variants": [
+      "〜てはいられません",
+      "〜ちゃいられない",
+      "〜てられない"
+    ],
+    "meaning": "can't afford to keep ~",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "te-bakari-wa-irarenai",
+    "form": "〜てばかりはいられない",
+    "variants": [
+      "〜てばかりもいられない"
+    ],
+    "meaning": "can't keep on just ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Contains 〜てはいられない; a matcher must prefer this longer form."
+  },
+  {
+    "id": "te-naranai",
+    "form": "〜てならない",
+    "variants": [
+      "〜くてならない"
+    ],
+    "meaning": "can't help feeling ~ / terribly ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Feelings only. Do not confuse with 〜てはならない (must not)."
+  },
+  {
+    "id": "tewa-naranai",
+    "form": "〜てはならない",
+    "variants": [
+      "〜てはなりません",
+      "〜ではならない"
+    ],
+    "meaning": "must not ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "kagiri",
+    "form": "〜限り",
+    "variants": [
+      "〜かぎり",
+      "〜限りでは",
+      "〜限りは"
+    ],
+    "meaning": "as long as ~ / as far as ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": "Kanzen lists 限りでは separately; merged. N1 has 〜限りだ (extremely), a different point."
+  },
+  {
+    "id": "ni-kagitte",
+    "form": "〜に限って",
+    "variants": [
+      "〜に限り",
+      "〜に限ってない"
+    ],
+    "meaning": "only (in that case) ~ / of all times ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": "Kanzen lists に限り (limited to) next to it; merged here."
+  },
+  {
+    "id": "ni-kagirazu",
+    "form": "〜に限らず",
+    "variants": [
+      "〜にかぎらず"
+    ],
+    "meaning": "not just ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "te-demo",
+    "form": "〜てでも",
+    "variants": [],
+    "meaning": "even if it means ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "te-made",
+    "form": "〜てまで",
+    "variants": [
+      "〜までして",
+      "〜てまでも"
+    ],
+    "meaning": "going as far as ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "kanzen": "N2",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "jt4y puts てまで at N1. | Level tie: JS N2, JT4Y N1."
+  },
+  {
+    "id": "te-koso",
+    "form": "〜てこそ",
+    "variants": [
+      "〜てこそ初めて"
+    ],
+    "meaning": "only by ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "te-irai",
+    "form": "〜て以来",
+    "variants": [
+      "〜以来"
+    ],
+    "meaning": "ever since ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": "Bunpro's entry is 以来 alone (also after a noun)."
+  },
+  {
+    "id": "te-touzen-da",
+    "form": "〜て当然だ",
+    "variants": [
+      "〜て当たり前だ",
+      "〜て当然"
+    ],
+    "meaning": "it's natural that ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "no-mo-touzen-da",
+    "form": "〜のも当然だ",
+    "variants": [
+      "〜も当然だ",
+      "〜のも当たり前だ"
+    ],
+    "meaning": "no wonder ~ / it's only natural ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "JLPT Sensei's entry is も当然だ."
+  },
+  {
+    "id": "no-mo-mottomo-da",
+    "form": "〜のももっともだ",
+    "variants": [
+      "〜のももっともです"
+    ],
+    "meaning": "it's understandable that ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-hoka-naranai",
+    "form": "〜にほかならない",
+    "variants": [
+      "〜に他ならない"
+    ],
+    "meaning": "nothing other than ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "de-shika-nai",
+    "form": "〜でしかない",
+    "variants": [
+      "〜でしかありません"
+    ],
+    "meaning": "nothing more than ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "Overlaps しか〜ない (N4); a matcher must prefer this longer form."
+  },
+  {
+    "id": "ni-koshita-koto-wa-nai",
+    "form": "〜に越したことはない",
+    "variants": [
+      "〜に越したことはありません"
+    ],
+    "meaning": "it's best to ~ / nothing is better than ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "tanos": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "nai-koto-niwa",
+    "form": "〜ないことには",
+    "variants": [
+      "〜ないことには〜ない"
+    ],
+    "meaning": "unless ~ (nothing can happen)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "naku-wa-nai",
+    "form": "〜なくはない",
+    "variants": [
+      "〜なくもない",
+      "〜ないこともない"
+    ],
+    "meaning": "it's not that ~ isn't / somewhat ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": "ないことはない is N3 in all sources; a matcher must not count it here."
+  },
+  {
+    "id": "zu-ni-sumu",
+    "form": "〜ずに済む",
+    "variants": [
+      "〜ないで済む",
+      "〜なくて済む",
+      "〜ずに済んだ"
+    ],
+    "meaning": "get by without ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2",
+      "tanos": "N2"
+    },
+    "prototype": false,
+    "notes": "Merged ずに済む (js, bp, jt4y), ないで済む (tanos) and なくて済む (js). て済む alone is N3 at JLPT Sensei."
+  },
+  {
+    "id": "neba-naranai",
+    "form": "〜ねばならない",
+    "variants": [
+      "〜ねばならぬ",
+      "〜ねば"
+    ],
+    "meaning": "must ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N2",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N2",
+      "jt4y": "N2"
+    },
+    "prototype": false,
+    "notes": ""
+  }
+]

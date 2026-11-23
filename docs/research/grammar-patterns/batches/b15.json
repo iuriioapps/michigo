@@ -1,0 +1,382 @@
+[
+  {
+    "id": "de-mo-aru",
+    "form": "〜でもある",
+    "variants": [],
+    "meaning": "~ is also ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "de-wa-nakute",
+    "form": "〜ではなくて",
+    "variants": [
+      "〜じゃなくて",
+      "〜ではなく"
+    ],
+    "meaning": "not ~ but ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "dake-shika",
+    "form": "〜だけしか〜ない",
+    "variants": [
+      "〜だけしか"
+    ],
+    "meaning": "only ~ (stressed)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ni-nareru",
+    "form": "〜に慣れる",
+    "variants": [
+      "〜に慣れている"
+    ],
+    "meaning": "to get used to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "you-ni-mieru",
+    "form": "〜ように見える",
+    "variants": [
+      "〜ように見えた"
+    ],
+    "meaning": "seems ~; looks as if ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3"
+    },
+    "prototype": false,
+    "notes": "Not N4 〜に見える (Bunpro, Marumori), which follows a noun or adjective stem directly."
+  },
+  {
+    "id": "ja-nai-kakunin",
+    "form": "〜じゃない",
+    "variants": [
+      "〜じゃん",
+      "〜じゃないですか"
+    ],
+    "meaning": "isn't it? / you know (surprise or reproach)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": "Sentence-final rising じゃない. Overlaps with N4 じゃないか (JLPT Sensei, Bunpro, Marumori) and must not match the N5 negative copula."
+  },
+  {
+    "id": "n-ja-nai",
+    "form": "〜んじゃない",
+    "variants": [
+      "〜んじゃありません"
+    ],
+    "meaning": "don't ~! (scolding)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3"
+    },
+    "prototype": false,
+    "notes": "Prohibition sense only; the same string also asks 'isn't it the case that' (〜んじゃない？)."
+  },
+  {
+    "id": "sete-oku",
+    "form": "〜せておく",
+    "variants": [
+      "〜させておく"
+    ],
+    "meaning": "to let someone keep ~ing",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": "Causative plus N4 te-oku; only Try! lists it."
+  },
+  {
+    "id": "rarete-shimau",
+    "form": "〜られてしまう",
+    "variants": [
+      "〜れてしまう",
+      "〜られちゃう"
+    ],
+    "meaning": "to (unfortunately) have ~ done to one",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": "Passive plus N4 te-shimau; only Try! lists it."
+  },
+  {
+    "id": "darou-to-omou",
+    "form": "〜だろうと思う",
+    "variants": [
+      "〜だろうと思います"
+    ],
+    "meaning": "I suppose that ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": "Only Try! lists it; built from N5 darou and N4 to-omou."
+  },
+  {
+    "id": "nasasou-da",
+    "form": "〜なさそうだ",
+    "variants": [
+      "〜なさそう",
+      "〜よくなさそう"
+    ],
+    "meaning": "doesn't seem ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": "Only Try! lists it; negative form of N4 sou-appearance."
+  },
+  {
+    "id": "to-ta-hakken",
+    "form": "〜と、〜た",
+    "variants": [],
+    "meaning": "when I ~, I found ~ (discovery)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": "Only Try! lists it. Overlaps with N4 to-conditional; differs only by a past-tense result clause."
+  },
+  {
+    "id": "tari-shite",
+    "form": "〜たりして",
+    "variants": [],
+    "meaning": "maybe ~, who knows (casual); softening",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": "Only Try! lists it (two senses). Not N4 tari〜tari."
+  },
+  {
+    "id": "desu-to",
+    "form": "〜ですと",
+    "variants": [],
+    "meaning": "if it is ~ (polite conditional)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "you-nara",
+    "form": "〜ようなら",
+    "variants": [
+      "〜ようだったら"
+    ],
+    "meaning": "if it seems that ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ka-to-omou",
+    "form": "〜かと思う",
+    "variants": [
+      "〜かと思います",
+      "〜かと思った"
+    ],
+    "meaning": "I think it may be ~; I thought it was ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": "Only Try! lists it. Not N2 かと思ったら ('just when')."
+  },
+  {
+    "id": "te-moratte-mo-ii-desu-ka",
+    "form": "〜てもらってもいいですか",
+    "variants": [
+      "〜てもらってもいい？"
+    ],
+    "meaning": "could I have you ~?",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "go-itadaku",
+    "form": "ご〜いただく",
+    "variants": [
+      "お〜いただく",
+      "ご〜いただきました"
+    ],
+    "meaning": "to receive the favor of ~ (humble)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "o-desu",
+    "form": "お〜です",
+    "variants": [
+      "ご〜です"
+    ],
+    "meaning": "is ~ing (honorific)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "de-irassharu",
+    "form": "〜でいらっしゃる",
+    "variants": [
+      "〜でいらっしゃいます"
+    ],
+    "meaning": "is ~ (honorific copula)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "shidai",
+    "form": "〜次第",
+    "variants": [
+      "〜しだい",
+      "〜次第すぐに"
+    ],
+    "meaning": "as soon as ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "kanzen": "N2"
+    },
+    "prototype": false,
+    "notes": "'Depending on' sense (〜次第で) is N2 in JLPT Sensei and Bunpro and left out. Level disagreement: jlptsensei N2, bunpro N3, marumori N3. | Bunpro puts the \"as soon as\" 次第 at N3. Distinct from 次第で and 次第に."
+  },
+  {
+    "id": "kakeru",
+    "form": "〜かける",
+    "variants": [
+      "〜かけ",
+      "〜かけの"
+    ],
+    "meaning": "half-done; about to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "kiru",
+    "form": "〜切る",
+    "variants": [
+      "〜きる",
+      "〜切った"
+    ],
+    "meaning": "to do ~ completely",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": true,
+    "notes": ""
+  }
+]

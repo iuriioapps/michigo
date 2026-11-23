@@ -1,0 +1,345 @@
+[
+  {
+    "id": "tte-kanji",
+    "form": "〜って感じ",
+    "variants": [
+      "〜という感じ",
+      "〜って感じだ"
+    ],
+    "meaning": "kind of a ~ feel",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "bunpro": "N4"
+    },
+    "prototype": false,
+    "notes": "Only Bunpro lists it. Common in casual speech."
+  },
+  {
+    "id": "wa-no-hitotsu-da",
+    "form": "〜は〜の一つだ",
+    "variants": [
+      "〜のひとつだ",
+      "〜の一つです"
+    ],
+    "meaning": "~ is one of ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "kara-dekiru",
+    "form": "〜からできる / 〜でできる",
+    "variants": [
+      "〜から作る",
+      "〜で作る",
+      "〜でできている"
+    ],
+    "meaning": "made from ~ / made of ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "JLPT Sensei titles it から作る."
+  },
+  {
+    "id": "ga-mirareru",
+    "form": "〜が見られる",
+    "variants": [
+      "〜がみられる"
+    ],
+    "meaning": "~ can be seen / ~ is observed",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "bunpro": "N4"
+    },
+    "prototype": false,
+    "notes": "Only Bunpro lists it. Mostly written style."
+  },
+  {
+    "id": "no-tsugi-ni",
+    "form": "〜の次に",
+    "variants": [
+      "〜の次は"
+    ],
+    "meaning": "next to ~ / second after ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "bunpro": "N4"
+    },
+    "prototype": false,
+    "notes": "Only Bunpro lists it."
+  },
+  {
+    "id": "demo-demo",
+    "form": "〜でも〜でも",
+    "variants": [
+      "〜でも〜でもいい"
+    ],
+    "meaning": "whether ~ or ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "bunpro": "N4"
+    },
+    "prototype": false,
+    "notes": "Only Bunpro lists it."
+  },
+  {
+    "id": "to-to-dochira",
+    "form": "〜と〜と、どちらが",
+    "variants": [
+      "〜と〜とどっちが"
+    ],
+    "meaning": "which is more ~, A or B?",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "bunpro": "N4"
+    },
+    "prototype": false,
+    "notes": "Only Bunpro lists it at N4; the answer frame より〜ほうが is N5."
+  },
+  {
+    "id": "mai-no-you-ni",
+    "form": "毎〜のように",
+    "variants": [
+      "毎日のように",
+      "毎晩のように"
+    ],
+    "meaning": "almost every ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "na-command",
+    "form": "〜な (casual command)",
+    "variants": [
+      "〜なよ"
+    ],
+    "meaning": "do ~ (soft casual command)",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Marumori lists a second 〜な next to なさい, read here as stem + な (早く寝な). Ambiguous with prohibitive な after a dictionary form."
+  },
+  {
+    "id": "nan-counter-ka",
+    "form": "何 + counter + か",
+    "variants": [
+      "何人か",
+      "何回か",
+      "何本か"
+    ],
+    "meaning": "several ~ / a few ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "bunpro": "N4"
+    },
+    "prototype": false,
+    "notes": "Only Bunpro lists it."
+  },
+  {
+    "id": "rashii-typical",
+    "form": "〜らしい (typical of)",
+    "variants": [
+      "〜らしく",
+      "〜らしさ"
+    ],
+    "meaning": "typical of ~ / befitting ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Split from rashii (hearsay); both Bunpro and Marumori list two らしい at N4. Attaches to a noun."
+  },
+  {
+    "id": "noni-purpose",
+    "form": "〜のに (purpose)",
+    "variants": [
+      "〜のには"
+    ],
+    "meaning": "for ~ / to ~ (with use, time or cost)",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N3",
+      "jt4y": "N4"
+    },
+    "prototype": false,
+    "notes": "The prototype noni mentions this reading in its meaning; kept separate here because the meaning differs. Bunpro lists it at N3."
+  },
+  {
+    "id": "demo",
+    "form": "でも (example / any)",
+    "variants": [
+      "何でも",
+      "誰でも",
+      "どこでも"
+    ],
+    "meaning": "~ or something / any ~ (with question words)",
+    "kind": "particle",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N5"
+    },
+    "prototype": false,
+    "notes": "Near misses: でも \"but\" at the start of a sentence (N5) and ても/でも \"even if\"."
+  },
+  {
+    "id": "nado",
+    "form": "など",
+    "variants": [
+      "なんか",
+      "なんて",
+      "などの"
+    ],
+    "meaning": "such as ~ / and so on",
+    "kind": "particle",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N5"
+    },
+    "prototype": false,
+    "notes": "JLPT Sensei lists なんか/なんて/など at N3 in their dismissive sense."
+  },
+  {
+    "id": "shi",
+    "form": "し",
+    "variants": [
+      "〜し〜し"
+    ],
+    "meaning": "and also ~ (listing reasons)",
+    "kind": "particle",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "kana",
+    "form": "かな",
+    "variants": [
+      "かなあ",
+      "かなー"
+    ],
+    "meaning": "I wonder ~",
+    "kind": "particle",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "mo-emphasis",
+    "form": "(number)も",
+    "variants": [
+      "〜も (as many as)"
+    ],
+    "meaning": "as many as ~ / even ~",
+    "kind": "particle",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Not the additive も (N5)."
+  },
+  {
+    "id": "kashira",
+    "form": "かしら",
+    "variants": [
+      "かしらね"
+    ],
+    "meaning": "I wonder ~ (feminine)",
+    "kind": "particle",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "made-even",
+    "form": "まで (even)",
+    "variants": [
+      "までも"
+    ],
+    "meaning": "even ~ / to the extent of ~",
+    "kind": "particle",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Not まで \"until\" (N5). Marumori's N4 まで entry is mapped here."
+  }
+]

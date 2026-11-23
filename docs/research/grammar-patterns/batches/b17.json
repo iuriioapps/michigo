@@ -1,0 +1,336 @@
+[
+  {
+    "id": "nagara-mo",
+    "form": "〜ながらも",
+    "variants": [
+      "〜ながら"
+    ],
+    "meaning": "although ~; even while ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Concessive. Plain 〜ながら ('while') is prototype nagara at N4."
+  },
+  {
+    "id": "amari",
+    "form": "〜あまり",
+    "variants": [
+      "あまりの〜に",
+      "あまり〜て"
+    ],
+    "meaning": "so ~ that; out of too much ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Not N4 あまり〜ない ('not very')."
+  },
+  {
+    "id": "kekka",
+    "form": "〜結果",
+    "variants": [
+      "〜た結果",
+      "その結果",
+      "〜の結果"
+    ],
+    "meaning": "as a result of ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Bunpro also has 結果・の結果 at N2."
+  },
+  {
+    "id": "yori-zutto",
+    "form": "〜よりずっと",
+    "variants": [
+      "ずっと〜"
+    ],
+    "meaning": "far more ~ than",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3"
+    },
+    "prototype": false,
+    "notes": "Comparative ずっと only. ずっと 'all along' is N4 in Bunpro and Marumori."
+  },
+  {
+    "id": "mono-mon",
+    "form": "〜もの / 〜もん",
+    "variants": [
+      "〜んだもん",
+      "〜だもの"
+    ],
+    "meaning": "because ~ (excuse)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N2",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Level disagreement: jlptsensei N2, bunpro N3, marumori N3."
+  },
+  {
+    "id": "nanka-nante",
+    "form": "なんか / なんて",
+    "variants": [
+      "なんて",
+      "なんか〜ない"
+    ],
+    "meaning": "things like ~; such a thing as ~ (dismissive)",
+    "kind": "particle",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": "Merges the example, belittling and strong-negation uses. Marumori lists exclamatory なんて ('how ~!') separately."
+  },
+  {
+    "id": "hodo",
+    "form": "ほど",
+    "variants": [
+      "〜ほどだ",
+      "〜ほどの"
+    ],
+    "meaning": "to the extent that ~; about ~",
+    "kind": "particle",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "sae",
+    "form": "さえ",
+    "variants": [
+      "でさえ",
+      "さえも"
+    ],
+    "meaning": "even ~",
+    "kind": "particle",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "koso",
+    "form": "こそ",
+    "variants": [
+      "〜こそ"
+    ],
+    "meaning": "precisely ~; it is ~ that",
+    "kind": "particle",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "tte-shudai",
+    "form": "って",
+    "variants": [
+      "〜ってさ"
+    ],
+    "meaning": "as for ~ (casual topic)",
+    "kind": "particle",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "bunpro": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": "Topic って (=は). Quotation って ('named') is N4 in JLPT Sensei and N5 in Bunpro."
+  },
+  {
+    "id": "kke",
+    "form": "っけ",
+    "variants": [
+      "だっけ",
+      "でしたっけ"
+    ],
+    "meaning": "was it ~? (checking memory)",
+    "kind": "particle",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3",
+      "try": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "zutsu",
+    "form": "ずつ",
+    "variants": [
+      "少しずつ"
+    ],
+    "meaning": "~ each; ~ at a time",
+    "kind": "particle",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "kiri",
+    "form": "きり",
+    "variants": [
+      "っきり",
+      "〜たきり"
+    ],
+    "meaning": "only ~; since ~ (and no more)",
+    "kind": "particle",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "dake-gendo",
+    "form": "だけ",
+    "variants": [
+      "できるだけ",
+      "好きなだけ",
+      "〜たいだけ"
+    ],
+    "meaning": "as much as ~",
+    "kind": "particle",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Extent sense only. Limiting だけ ('only') is N5."
+  },
+  {
+    "id": "tte-kyouchou",
+    "form": "って",
+    "variants": [
+      "〜んだって",
+      "〜ってば"
+    ],
+    "meaning": "I told you ~! (insistent ending)",
+    "kind": "particle",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "marumori": "N3"
+    },
+    "prototype": false,
+    "notes": "Sentence-final insistence. Not n-datte (hearsay)."
+  },
+  {
+    "id": "baai-ni-yotte-wa",
+    "form": "場合によっては",
+    "variants": [],
+    "meaning": "depending on the case",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": {
+      "jt4y": "N1",
+      "jlptsensei": "N3"
+    },
+    "prototype": false,
+    "notes": "Level tie: JS N3, JT4Y N1."
+  },
+  {
+    "id": "sou-nimo-nai",
+    "form": "〜そうにもない",
+    "variants": [
+      "〜そうもない",
+      "〜そうにない"
+    ],
+    "meaning": "not likely to",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": {
+      "jt4y": "N1",
+      "bunpro": "N3"
+    },
+    "prototype": false,
+    "notes": "Level tie. JT4Y lists そうにない at N2; Bunpro そうもない at N3. Overlaps prototype sou-appearance."
+  },
+  {
+    "id": "you-ni",
+    "form": "〜ように",
+    "variants": [
+      "〜ないように",
+      "〜ようにと"
+    ],
+    "meaning": "so that, in order that (purpose with a non-volitional verb)",
+    "kind": "construction",
+    "register": null,
+    "level": "N3",
+    "sources": {
+      "jlptsensei": "N3",
+      "tanos": "N3",
+      "jt4y": "N3",
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": true,
+    "notes": "Added at merge: the N4 and N3 inventories each left it to the other. Confusable with you-ni-suru, you-ni-naru and ように as a wish or request."
+  }
+]

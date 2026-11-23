@@ -1,0 +1,448 @@
+[
+  {
+    "id": "ba-yokatta",
+    "form": "〜ばよかった",
+    "variants": [
+      "〜ばよかったのに",
+      "〜たらよかった"
+    ],
+    "meaning": "I should have ~ / I wish I had ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "JLPT Sensei lists it at N3. Marumori groups it with ばいい; ばいい alone is N3 in JLPT Sensei, Bunpro and JT4Y, so it is left out."
+  },
+  {
+    "id": "to-ii",
+    "form": "〜といい",
+    "variants": [
+      "〜といいね",
+      "〜といいな",
+      "〜といいですね"
+    ],
+    "meaning": "I hope ~ / it'd be good if ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "jt4y": "N3",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "JLPT Sensei and JT4Y list といい/たらいい together at N3. Bunpro has といい at N4 and たらいい・といい at N3."
+  },
+  {
+    "id": "tara-dou",
+    "form": "〜たらどう",
+    "variants": [
+      "〜たらどうですか",
+      "〜たらどうでしょう",
+      "〜たら？"
+    ],
+    "meaning": "why don't you ~?",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Sentence-final たら? is the elided form; overlaps tara."
+  },
+  {
+    "id": "te-sumimasen",
+    "form": "〜てすみません",
+    "variants": [
+      "〜てごめんなさい",
+      "〜てごめん",
+      "〜て申し訳ありません"
+    ],
+    "meaning": "sorry for ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "te-kurete-arigatou",
+    "form": "〜てくれてありがとう",
+    "variants": [
+      "〜てくださってありがとうございます"
+    ],
+    "meaning": "thank you for ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "bunpro": "N4",
+      "tanos": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "te-itadakemasen-ka",
+    "form": "〜ていただけませんか",
+    "variants": [
+      "〜ていただけますか",
+      "〜てもらえませんか"
+    ],
+    "meaning": "could you please ~?",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "tanos": "N4",
+      "jt4y": "N4"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "o-ni-naru",
+    "form": "お〜になる",
+    "variants": [
+      "ご〜になる"
+    ],
+    "meaning": "(honorific) someone does ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Marumori lists 尊敬語 (honorific speech) at N4 as one topic; mapped here."
+  },
+  {
+    "id": "o-suru",
+    "form": "お〜する",
+    "variants": [
+      "ご〜する",
+      "お〜いたす"
+    ],
+    "meaning": "(humble) I do ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Marumori lists 謙譲語 (humble speech) at N4 as one topic; mapped here."
+  },
+  {
+    "id": "de-gozaimasu",
+    "form": "〜でございます",
+    "variants": [
+      "〜でござる"
+    ],
+    "meaning": "is ~ (very polite copula)",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "de-aru",
+    "form": "〜である",
+    "variants": [
+      "〜であった",
+      "〜であり",
+      "〜であろう"
+    ],
+    "meaning": "is ~ (written copula)",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "bunpro": "N3",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Tie with N4 lowest. Common in novels and narration."
+  },
+  {
+    "id": "koto-ga-aru",
+    "form": "〜ことがある",
+    "variants": [
+      "〜こともある",
+      "〜ことはある"
+    ],
+    "meaning": "sometimes ~ / there are times when ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N3",
+      "jt4y": "N3",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Tie with N4 lowest. The verb is non-past; た + ことがある is ta-koto-ga-aru (N5)."
+  },
+  {
+    "id": "hitsuyou-ga-aru",
+    "form": "〜必要がある",
+    "variants": [
+      "〜必要はない",
+      "〜必要があります"
+    ],
+    "meaning": "need to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ga-hitsuyou",
+    "form": "〜が必要",
+    "variants": [
+      "〜が必要だ",
+      "〜が必要です"
+    ],
+    "meaning": "~ is needed",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "JT4Y titles it ひつよう."
+  },
+  {
+    "id": "to-iwarete-iru",
+    "form": "〜と言われている",
+    "variants": [
+      "〜と考えられている",
+      "〜と思われている",
+      "〜とされている"
+    ],
+    "meaning": "it is said that ~ / ~ is thought to be",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Merged three Bunpro N4 entries (といわれている, とかんがえられている, とされている) and Marumori's combined entry."
+  },
+  {
+    "id": "ni-mieru",
+    "form": "〜に見える",
+    "variants": [
+      "〜く見える",
+      "〜そうに見える"
+    ],
+    "meaning": "looks ~ / seems ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "JLPT Sensei lists ように見える at N3 separately. Bunpro also lists the verb 見える at N4 (word mieru)."
+  },
+  {
+    "id": "to-mieru",
+    "form": "〜とみえる",
+    "variants": [
+      "〜とみえて",
+      "〜と見える"
+    ],
+    "meaning": "it seems that ~ (judging from signs)",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N3",
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "JLPT Sensei lists it at N3."
+  },
+  {
+    "id": "ga-suru",
+    "form": "〜がする",
+    "variants": [
+      "〜がします",
+      "〜がした"
+    ],
+    "meaning": "(a sound, smell or taste) is sensed",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4"
+    },
+    "prototype": false,
+    "notes": "ような気がする is N3 in JLPT Sensei, Bunpro, JT4Y and Marumori."
+  },
+  {
+    "id": "ni-ki-ga-tsuku",
+    "form": "〜に気がつく",
+    "variants": [
+      "〜に気づく",
+      "〜に気がついた"
+    ],
+    "meaning": "notice ~ / realize ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "hazu-ga-nai",
+    "form": "〜はずがない",
+    "variants": [
+      "〜はずはない",
+      "〜はずないじゃん"
+    ],
+    "meaning": "there's no way that ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Close in meaning to wake-ga-nai (prototype, N3)."
+  },
+  {
+    "id": "dake-de",
+    "form": "〜だけで",
+    "variants": [
+      "〜だけでも"
+    ],
+    "meaning": "just by ~ / with only ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "te-bakari",
+    "form": "〜てばかりいる",
+    "variants": [
+      "〜てばかり",
+      "〜てばっかり"
+    ],
+    "meaning": "do nothing but ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N3",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Tie with N4 lowest."
+  },
+  {
+    "id": "yotei-da",
+    "form": "〜予定だ",
+    "variants": [
+      "〜予定です",
+      "〜予定"
+    ],
+    "meaning": "plan to ~ / be scheduled to ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "jt4y": "N4",
+      "marumori": "N5"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "you-to-omou",
+    "form": "〜ようと思う",
+    "variants": [
+      "〜おうと思う",
+      "〜ようと思っている"
+    ],
+    "meaning": "I'm thinking of doing ~",
+    "kind": "construction",
+    "register": null,
+    "level": "N4",
+    "sources": {
+      "jlptsensei": "N4",
+      "bunpro": "N4",
+      "marumori": "N4"
+    },
+    "prototype": false,
+    "notes": "Built on volitional; match this before the bare volitional."
+  }
+]

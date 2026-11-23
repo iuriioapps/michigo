@@ -1,0 +1,465 @@
+[
+  {
+    "id": "tokoro-o",
+    "form": "〜ところを",
+    "variants": [
+      "お忙しいところを"
+    ],
+    "meaning": "at a time when; despite (the situation)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: ところ as place + を; ところを見ると (N2)."
+  },
+  {
+    "id": "soba-kara",
+    "form": "〜そばから",
+    "variants": [],
+    "meaning": "no sooner than, right after (repeatedly)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: literal そば 'side' + から."
+  },
+  {
+    "id": "te-kara-to-iu-mono",
+    "form": "〜てからというもの",
+    "variants": [],
+    "meaning": "ever since",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-iu-mono",
+    "form": "〜というもの",
+    "variants": [
+      "この一年というもの"
+    ],
+    "meaning": "for the whole (period)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: というものだ (N2) and plain という + もの."
+  },
+  {
+    "id": "nari",
+    "form": "〜なり",
+    "variants": [
+      "〜たなり",
+      "〜なり〜"
+    ],
+    "meaning": "as soon as; and then stayed so",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Bunpro splits なり (as soon as) and たなり (and has not since). Near miss: なりに, なり〜なり."
+  },
+  {
+    "id": "ga-hayai-ka",
+    "form": "〜が早いか",
+    "variants": [],
+    "meaning": "no sooner than",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ya-ina-ya",
+    "form": "〜や否や",
+    "variants": [
+      "〜やいなや"
+    ],
+    "meaning": "the moment, as soon as",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "n-bakari-ni",
+    "form": "〜んばかりに",
+    "variants": [
+      "〜んばかりの",
+      "〜んばかりだ"
+    ],
+    "meaning": "as if about to, almost",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "to-bakari-ni",
+    "form": "〜とばかりに",
+    "variants": [
+      "〜とばかり"
+    ],
+    "meaning": "as if to say",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "ba-koso",
+    "form": "〜ばこそ",
+    "variants": [],
+    "meaning": "precisely because",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "kai-mo-naku",
+    "form": "〜甲斐もなく",
+    "variants": [
+      "〜かいもなく",
+      "〜甲斐なく"
+    ],
+    "meaning": "despite (efforts), to no avail",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: 甲斐がある (N2)."
+  },
+  {
+    "id": "kagiri-da",
+    "form": "〜限りだ",
+    "variants": [
+      "嬉しい限りだ",
+      "寂しい限りです"
+    ],
+    "meaning": "extremely (feeling)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: 限り 'as long as' (N2)."
+  },
+  {
+    "id": "kiri-ga-nai",
+    "form": "〜切りがない",
+    "variants": [
+      "〜きりがない",
+      "キリがない"
+    ],
+    "meaning": "endless, there is no end to",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: N3 きり 'only'."
+  },
+  {
+    "id": "hame-ni-naru",
+    "form": "〜羽目になる",
+    "variants": [
+      "〜はめになる",
+      "〜羽目に陥る"
+    ],
+    "meaning": "end up having to (something unpleasant)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "shimatsu-da",
+    "form": "〜始末だ",
+    "variants": [
+      "〜しまつだ",
+      "〜始末"
+    ],
+    "meaning": "end up (with this sorry outcome)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: 始末する 'deal with, dispose of'."
+  },
+  {
+    "id": "houdai",
+    "form": "〜放題",
+    "variants": [
+      "食べ放題",
+      "やりたい放題",
+      "言いたい放題"
+    ],
+    "meaning": "as much as one likes; unchecked",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "notes": "Only JS lists it at any level among the checked sources."
+  },
+  {
+    "id": "makuru",
+    "form": "〜まくる",
+    "variants": [
+      "〜まくって",
+      "〜まくり"
+    ],
+    "meaning": "do like crazy, nonstop",
+    "kind": "construction",
+    "register": "spoken",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "buri",
+    "form": "〜ぶり",
+    "variants": [
+      "〜っぷり",
+      "飲みっぷり"
+    ],
+    "meaning": "manner, way of doing",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Different from 久しぶり 'for the first time in' (Bunpro ぶりに N2)."
+  },
+  {
+    "id": "buru",
+    "form": "〜ぶる",
+    "variants": [
+      "〜ぶって",
+      "〜ぶった",
+      "いい子ぶる"
+    ],
+    "meaning": "act as if, pretend to be",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "meku",
+    "form": "〜めく",
+    "variants": [
+      "〜めいた",
+      "春めく",
+      "謎めいた"
+    ],
+    "meaning": "show signs of, -ish",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "jimita",
+    "form": "〜じみた",
+    "variants": [
+      "〜じみる",
+      "子供じみた"
+    ],
+    "meaning": "like, smacking of (negative)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "biru",
+    "form": "〜びる",
+    "variants": [
+      "〜びた",
+      "〜びて",
+      "大人びる",
+      "古びる"
+    ],
+    "meaning": "take on the air of",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "zukume",
+    "form": "〜ずくめ",
+    "variants": [
+      "黒ずくめ",
+      "いいことずくめ"
+    ],
+    "meaning": "nothing but, entirely",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": ""
+  },
+  {
+    "id": "gurumi",
+    "form": "〜ぐるみ",
+    "variants": [
+      "家族ぐるみ",
+      "町ぐるみ"
+    ],
+    "meaning": "the whole (group) together",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: ぬいぐるみ 'stuffed toy'."
+  },
+  {
+    "id": "nami",
+    "form": "〜並み",
+    "variants": [
+      "人並み",
+      "プロ並み",
+      "例年並み"
+    ],
+    "meaning": "on par with, equal to",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "notes": "Near miss: 並み as 'row' (町並み)."
+  }
+]

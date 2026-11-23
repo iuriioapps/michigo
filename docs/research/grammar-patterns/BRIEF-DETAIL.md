@@ -39,7 +39,7 @@ Each one shares surface text or tokens with the pattern but is a different struc
 Run the validator on your output and fix every problem it reports:
 
 ```text
-node /private/tmp/claude-501/-Users-iuriio-Projects-michigo-browser/1a104d7d-3e54-44e5-ac3c-b55bbb5f625a/scratchpad/grammar/tools/validate.mjs --known /private/tmp/claude-501/-Users-iuriio-Projects-michigo-browser/1a104d7d-3e54-44e5-ac3c-b55bbb5f625a/scratchpad/grammar/final-ids.json <your output file>
+node docs/research/grammar-patterns/tools/validate.mjs --known docs/research/grammar-patterns/final-ids.json <your output file>
 ```
 
 Then reread every sentence once as a native speaker would, and fix anything unnatural, wrong or ambiguous.
