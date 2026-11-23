@@ -1,0 +1,22 @@
+# Same fuses as apps/desktop, so the worker must load from the integrity-checked app.asar.
+appId: com.michigo.sqliteworkertest
+productName: SqliteWorkerTest
+files:
+  - main.js
+  - worker.js
+npmRebuild: false
+electronFuses:
+  runAsNode: false
+  enableNodeOptionsEnvironmentVariable: false
+  enableNodeCliInspectArguments: false
+  enableEmbeddedAsarIntegrityValidation: true
+  onlyLoadAppFromAsar: true
+mac:
+  target: dir
+  identity: "-"
+  hardenedRuntime: false
+win:
+  target: dir
+linux:
+  target: dir
+  executableName: sqliteworkertest

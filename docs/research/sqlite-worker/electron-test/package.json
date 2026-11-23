@@ -1,0 +1,8 @@
+{
+  "name": "sqlite-worker-test",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "main.js",
+  "devDependencies": { "electron": "44.4.5", "electron-builder": "26.15.3" }
+}

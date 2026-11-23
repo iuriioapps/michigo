@@ -1,0 +1,29 @@
+# Throwaway: checks node:sqlite in a worker thread of packaged Electron on three platforms. Lives only on the research branch.
+name: SQLite worker check
+
+on:
+  push:
+    branches: [research/sqlite-worker]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
+        working-directory: docs/research/sqlite-worker/electron-test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm install
+      - run: npx electron-builder --dir --publish never
+      - run: if [ "$RUNNER_OS" = "Linux" ]; then xvfb-run -a node run.mjs; else node run.mjs; fi
