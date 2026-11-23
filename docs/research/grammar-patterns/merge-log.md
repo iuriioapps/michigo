@@ -1,0 +1,48 @@
+# Merge log
+
+801 candidates (N5: 45, N4: 134, N3: 202, N2: 174, N1: 246).
+
+- drop relative-clause: no surface marker
+- merge te-shouganai into te-shou-ga-nai
+- merge to-iu-wake-dewa-nai into to-iu-wake-de-wa-nai
+- merge wa-betsu-toshite into wa-betsu-to-shite
+- merge sukoshimo-nai into sukoshi-mo-nai
+- merge tsu-tsu into tsutsu
+- combine naide: N5+N4 -> N4
+- combine ato-de: N5+N4 -> N4
+- combine te-request: N5+N4 -> N5
+- combine shika-nai: N5+N4+N3 -> N3
+- combine o-kudasai: N5+N4 -> N4
+- combine yori: N5+N4 -> N4
+- combine kurai: N5+N3 -> N3
+- combine na-prohibitive: N5+N4 -> N5
+- combine bakari: N4+N3 -> N3
+- combine tara-ii: N4+N3 -> N3
+- combine dake-de-naku: N4+N3 -> N3
+- combine sukoshi-mo-nai: N4+N2 -> N2
+- combine oki-ni: N4+N3 -> N4
+- combine koto-ni-natte-iru: N3+N2 -> N3
+- combine ni-shitagatte: N3+N2 -> N3
+- combine koto-wa-ga: N3+N2 -> N3
+- combine te-kara-de-nai-to: N3+N2 -> N3
+- combine bakari-da: N3+N2 -> N3
+- combine kara-koso: N3+N2 -> N3
+- combine ni-kagiru: N3+N2 -> N2
+- combine mattaku-nai: N3+N2 -> N3
+- combine tatte: N3+N2 -> N2
+- combine te-shou-ga-nai: N3+N2 -> N2
+- combine temo-hajimaranai: N3+N1 -> N3
+- combine tokoro-datta: N3+N2 -> N2
+- combine to-douji-ni: N3+N2 -> N3
+- combine ni-motozuite: N3+N2 -> N2
+- combine wa-betsu-to-shite: N3+N2 -> N3
+- combine ni-kakete-wa: N3+N2 -> N2
+- combine shidai: N3+N2 -> N3
+- combine buri-ni: N3+N2 -> N3
+- combine to-iu-wake-de-wa-nai: N2+N1 -> N2
+- combine te-made: N2+N1 -> N2
+- combine toshite-nai: N2+N1 -> N2
+- combine nara-madashimo: N2+N1 -> N2
+- combine you-ka-mai-ka: N2+N1 -> N2
+- combine tsutsu: N2+N1 -> N1
+- add you-ni: missing from every inventory
