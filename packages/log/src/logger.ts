@@ -1,8 +1,10 @@
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 import { type LogFields, type Logger, MichigoError } from "@michigo/core";
 import { ZodError } from "zod";
 
+import { stackFrames } from "./frames";
 import type { LogLevel } from "./renderer";
 
 export type LogProcess = "main" | "storage" | "dictionary-build" | "tokenizer" | "renderer";
@@ -27,6 +29,22 @@ const fixedKeys = new Set(["time", "level", "process", "scope", "event", "error"
 export function createLogger(options: LoggerOptions): Logger {
   const { dataDir, homeDir, now = Date.now } = options;
 
+  // The path relative to the data folder, or undefined for a path outside it,
+  // which can name the learner's files and so never reaches the log.
+  function insideDataDir(value: string): string | undefined {
+    let absolute: string;
+    try {
+      absolute = value.startsWith("file:") ? fileURLToPath(value) : value;
+    } catch {
+      return undefined;
+    }
+    const relative = path.relative(dataDir, absolute);
+    const outside =
+      relative === ".." || relative.startsWith(`..${path.sep}`) || path.isAbsolute(relative);
+
+    return outside ? undefined : relative;
+  }
+
   function safeFields(fields: LogFields): Record<string, unknown> {
     const safe: Record<string, unknown> = {};
 
@@ -34,14 +52,12 @@ export function createLogger(options: LoggerOptions): Logger {
       if (fixedKeys.has(key) || value === undefined) {
         continue;
       }
-      if (typeof value === "string" && path.isAbsolute(value)) {
-        const relative = path.relative(dataDir, value);
+      if (typeof value === "string" && (value.startsWith("file:") || path.isAbsolute(value))) {
+        const relative = insideDataDir(value);
 
-        // An outside path can name the learner's files, so it never reaches the log.
-        if (relative.startsWith("..") || path.isAbsolute(relative)) {
-          continue;
+        if (relative !== undefined) {
+          safe[key] = relative;
         }
-        safe[key] = relative;
       } else {
         safe[key] = value;
       }
@@ -67,11 +83,7 @@ export function createLogger(options: LoggerOptions): Logger {
 
     const code = "code" in error ? error.code : undefined;
     const errcode = "errcode" in error ? error.errcode : undefined;
-    // The first stack line repeats the message, which can span several lines.
-    const frames = (error.stack ?? "")
-      .split("\n")
-      .filter((line) => /^\s+at /.test(line))
-      .map((line) => hideHome(line.trim()));
+    const frames = stackFrames(error).map((line) => hideHome(line.trim()));
 
     return {
       name: error.name,
@@ -104,7 +116,7 @@ export function createLogger(options: LoggerOptions): Logger {
   }
 
   return {
-    info: (scope, event, fields = {}) => log("info", scope, event, fields),
+    info: (scope, event, fields = {}, error) => log("info", scope, event, fields, error),
     warn: (scope, event, fields = {}, error) => log("warn", scope, event, fields, error),
     error: (scope, event, fields = {}, error) => log("error", scope, event, fields, error),
   };

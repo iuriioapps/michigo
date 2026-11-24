@@ -21,19 +21,22 @@ describe("logUncaughtErrors", () => {
     stop = logUncaughtErrors(target, write);
   }
 
-  it("sends an uncaught error as a line the main process accepts", () => {
+  it("sends an uncaught error without its message, as a line the main process accepts", () => {
     install();
     const error = new TypeError("MyShow.srt");
 
     target.dispatchEvent(errorEvent(error));
 
     const line = write.mock.calls[0]?.[0];
-    expect(line).toEqual({
+    expect(line).toMatchObject({
       level: "error",
       scope: "app",
       event: "uncaught.error",
-      error: { name: "TypeError", stack: error.stack },
+      error: { name: "TypeError" },
     });
+    // The stack keeps the name line and the frames, never the message.
+    expect(line?.error?.stack).toMatch(/^TypeError\n\s+at /);
+    expect(JSON.stringify(line)).not.toContain("MyShow");
     expect(RendererLogLineSchema.safeParse(line).success).toBe(true);
   });
 

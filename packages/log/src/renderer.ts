@@ -1,5 +1,7 @@
 import { z } from "zod";
 
+import { stackFrames } from "./frames";
+
 /**
  * The pure entry, `@michigo/log/renderer`: it must never import `node:*` or
  * `@michigo/core`, because the Electron renderer bundles it. The main process
@@ -54,7 +56,8 @@ function describeError(error: unknown): LoggedError {
   return {
     name: error.name.slice(0, LOG_ERROR_NAME_MAX_LENGTH),
     ...(typeof code === "string" ? { code: code.slice(0, LOG_ERROR_NAME_MAX_LENGTH) } : {}),
-    ...(error.stack === undefined ? {} : { stack: error.stack.slice(0, LOG_STACK_MAX_LENGTH) }),
+    // The message stays here: the stack keeps only the name line and the frames.
+    stack: [error.name, ...stackFrames(error)].join("\n").slice(0, LOG_STACK_MAX_LENGTH),
   };
 }
 

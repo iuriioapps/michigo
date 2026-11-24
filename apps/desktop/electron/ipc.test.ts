@@ -122,4 +122,25 @@ describe("registerIpc", () => {
       ipc.call(channels.logWrite, { level: "debug", scope: "x", event: "y" }),
     ).rejects.toThrow("invalid_value");
   });
+
+  it("writes at most 100 renderer lines per second, so a flood cannot push out the history", async () => {
+    const line = { level: "info", scope: "app", event: "app.flood" };
+
+    await Promise.all(Array.from({ length: 150 }, () => ipc.call(channels.logWrite, line)));
+
+    expect(ipc.lines).toHaveLength(100);
+  });
+
+  it("keeps the error of a renderer line at info", async () => {
+    await ipc.call(channels.logWrite, {
+      level: "info",
+      scope: "app",
+      event: "app.retry",
+      error: { name: "TypeError", stack: "TypeError\n    at /home/learner/app.js:1:2" },
+    });
+
+    expect(ipc.lines[0]).toMatchObject({
+      error: { name: "TypeError", frames: ["at ~/app.js:1:2"] },
+    });
+  });
 });

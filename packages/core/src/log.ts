@@ -3,7 +3,7 @@
  * `@michigo/log` and passes it in, because a package imports only `core`.
  */
 export interface Logger {
-  info(scope: string, event: string, fields?: LogFields): void;
+  info(scope: string, event: string, fields?: LogFields, error?: unknown): void;
   warn(scope: string, event: string, fields?: LogFields, error?: unknown): void;
   error(scope: string, event: string, fields?: LogFields, error?: unknown): void;
 }

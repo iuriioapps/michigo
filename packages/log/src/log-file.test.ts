@@ -4,7 +4,12 @@ import path from "node:path";
 
 import { describe, expect, it, vi } from "vitest";
 
-import { LOG_FILE_COUNT, LOG_FILE_MAX_BYTES, createLogFile } from "./log-file";
+import {
+  LOG_FILE_COUNT,
+  LOG_FILE_MAX_BYTES,
+  LOG_FILE_MAX_QUEUED_LINES,
+  createLogFile,
+} from "./log-file";
 
 async function folder(): Promise<string> {
   return mkdtemp(path.join(tmpdir(), "michigo-log-"));
@@ -85,5 +90,18 @@ describe("createLogFile", () => {
     await file.flushed();
 
     expect(console.error).toHaveBeenCalledTimes(1);
+  });
+
+  it("drops new lines once too many wait for the disk, so a flood cannot exhaust memory", async () => {
+    const dir = await folder();
+    const file = createLogFile(dir);
+
+    for (let index = 0; index < LOG_FILE_MAX_QUEUED_LINES + 5; index += 1) {
+      file.write(`${String(index)}\n`);
+    }
+    await file.flushed();
+
+    const lines = (await readFile(path.join(dir, "michigo.log"), "utf8")).split("\n");
+    expect(lines.at(-2)).toBe(String(LOG_FILE_MAX_QUEUED_LINES - 1));
   });
 });

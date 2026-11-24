@@ -61,6 +61,16 @@ function buildMenu(): Menu {
   ]);
 }
 
+// The code of the last error nobody caught, kept for a window that loads later.
+let mainError: string | undefined;
+
+function reportMainError(): void {
+  mainError = "main.uncaught";
+  for (const window of BrowserWindow.getAllWindows()) {
+    window.webContents.send(channels.appError, mainError);
+  }
+}
+
 function createWindow(): void {
   const window = new BrowserWindow({
     width: 1100,
@@ -94,6 +104,13 @@ function createWindow(): void {
     return { action: "deny" };
   });
 
+  // An error that came before this page listened would otherwise never show.
+  window.webContents.on("did-finish-load", () => {
+    if (mainError !== undefined) {
+      window.webContents.send(channels.appError, mainError);
+    }
+  });
+
   window.once("ready-to-show", () => {
     window.show();
   });
@@ -123,12 +140,11 @@ if (!app.requestSingleInstanceLock()) {
   // message. The window shows only the code.
   process.on("uncaughtException", (error) => {
     log.main.error("process", "uncaught.exception", {}, error);
-    for (const window of BrowserWindow.getAllWindows()) {
-      window.webContents.send(channels.appError, "main.uncaught");
-    }
+    reportMainError();
   });
   process.on("unhandledRejection", (reason) => {
     log.main.error("process", "unhandled.rejection", {}, reason);
+    reportMainError();
   });
   log.main.info("app", "app.start", {
     version: app.getVersion(),
@@ -166,12 +182,17 @@ if (!app.requestSingleInstanceLock()) {
     });
   });
 
-  // Holds the quit until the last lines (often the error that led to it) reach the disk.
-  // will-quit is the last stage and the windows are closed, so exit() ends the app.
-  // A second app.quit() after preventDefault() does not.
+  // Holds the quit until the last lines (often the error that led to it) reach the disk,
+  // for at most 2 s so a stalled disk cannot block quitting. will-quit is the last
+  // stage and the windows are closed, so exit() ends the app; a second app.quit()
+  // after preventDefault() does not. exit() also skips the `quit` event, so cleanup
+  // belongs in will-quit.
   app.on("will-quit", (event) => {
     event.preventDefault();
-    void logFile.flushed().finally(() => {
+    const timeout = new Promise((resolve) => {
+      setTimeout(resolve, 2000);
+    });
+    void Promise.race([logFile.flushed(), timeout]).then(() => {
       app.exit();
     });
   });

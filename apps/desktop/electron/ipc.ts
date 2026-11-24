@@ -12,12 +12,15 @@ import { type IpcMainInvokeEvent, app, ipcMain } from "electron";
 import { channels } from "../shared/api";
 import { createProject, listProjects } from "./projects";
 
+const RENDERER_LINES_PER_SECOND = 100;
+
 /**
  * Registers every IPC handler the renderer is allowed to reach.
  *
  * Rule for handlers that take arguments: treat anything arriving from the
- * renderer as untrusted and parse it with a zod schema from `@michigo/core`
- * before use, exactly as a server validates an HTTP body. `project:create`
+ * renderer as untrusted and parse it with a zod schema before use, exactly as
+ * a server validates an HTTP body. The schema comes from `@michigo/core`, or
+ * from the package that owns the channel's shape, as `log:write` does. `project:create`
  * below is the reference implementation — copy it.
  *
  * Every handler goes through `handle`, which rejects calls from any frame
@@ -45,7 +48,7 @@ export function registerIpc(
 
   function handle(
     channel: string,
-    listener: (raw: unknown, actionId: string) => unknown,
+    listener: (raw: unknown) => unknown,
     // A log line that logged its own call would write three lines for one.
     { quiet = false } = {},
   ): void {
@@ -63,7 +66,7 @@ export function registerIpc(
         log.main.info("ipc", "ipc.start", { actionId, channel });
       }
       try {
-        const result = await listener(raw, actionId);
+        const result = await listener(raw);
 
         if (!quiet) {
           log.main.info("ipc", "ipc.end", { actionId, channel, durationMs: durationMs() });
@@ -97,10 +100,24 @@ export function registerIpc(
     return createProject(input);
   });
 
+  // A compromised page must not be able to push the real lines out of the log.
+  let windowStart = 0;
+  let linesInWindow = 0;
+
   handle(
     channels.logWrite,
     (raw) => {
       const line = RendererLogLineSchema.parse(raw);
+      const now = performance.now();
+
+      if (now - windowStart >= 1000) {
+        windowStart = now;
+        linesInWindow = 0;
+      }
+      linesInWindow += 1;
+      if (linesInWindow > RENDERER_LINES_PER_SECOND) {
+        return;
+      }
       // The stack goes through the same frame filter as a main-process error.
       const error =
         line.error === undefined

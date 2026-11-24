@@ -3,6 +3,8 @@ import path from "node:path";
 
 export const LOG_FILE_MAX_BYTES = 5 * 1024 * 1024;
 export const LOG_FILE_COUNT = 3;
+/** Lines waiting for the disk beyond this are dropped, so a flood cannot exhaust memory. */
+export const LOG_FILE_MAX_QUEUED_LINES = 10_000;
 
 export interface LogFile {
   write(line: string): void;
@@ -45,15 +47,28 @@ export function createLogFile(
         () => 0,
       );
     }
-    for (let line = queue.shift(); line !== undefined; line = queue.shift()) {
-      const bytes = Buffer.byteLength(line);
+    // One append per batch of lines that fits, instead of one per line.
+    while (queue.length > 0) {
+      let chunk = "";
+      let chunkBytes = 0;
 
-      if (size > 0 && size + bytes > maxBytes) {
-        await rotate();
-        size = 0;
+      for (const line of queue.splice(0)) {
+        const bytes = Buffer.byteLength(line);
+
+        if (size + chunkBytes > 0 && size + chunkBytes + bytes > maxBytes) {
+          if (chunk !== "") {
+            await appendFile(nameOf(0), chunk);
+          }
+          await rotate();
+          size = 0;
+          chunk = "";
+          chunkBytes = 0;
+        }
+        chunk += line;
+        chunkBytes += bytes;
       }
-      await appendFile(nameOf(0), line);
-      size += bytes;
+      await appendFile(nameOf(0), chunk);
+      size += chunkBytes;
     }
   }
 
@@ -80,8 +95,10 @@ export function createLogFile(
 
   return {
     write(line) {
-      queue.push(line);
-      kick();
+      if (queue.length < LOG_FILE_MAX_QUEUED_LINES) {
+        queue.push(line);
+        kick();
+      }
     },
     async flushed() {
       // A drain that finds new lines at its end starts the next one.

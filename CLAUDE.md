@@ -50,7 +50,7 @@ Decided in `docs/adr/0005-unidic-2025-12-with-the-native-lindera-binding.md`. Th
 
 ## Validate at the IPC boundary
 
-Treat everything arriving from the renderer as untrusted, exactly as a server treats an HTTP body. Parse it with a zod schema from `@michigo/core` inside the handler before use. The renderer is a locked-down browser tab; a compromised page or dependency must not be able to drive the main process.
+Treat everything arriving from the renderer as untrusted, exactly as a server treats an HTTP body. Parse it with a zod schema inside the handler before use. The schema comes from `@michigo/core`, or from the package that owns the channel's shape (`log:write` uses `RendererLogLineSchema` from `@michigo/log/renderer`). The renderer is a locked-down browser tab; a compromised page or dependency must not be able to drive the main process.
 
 `project:create` in `apps/desktop/electron/ipc.ts` is the reference implementation: it parses with `CreateProjectInputSchema` before touching the argument. Copy it. A parse failure throws, Electron rejects the renderer's promise, and TanStack Query surfaces it as a mutation error; no extra plumbing.
 

@@ -126,6 +126,20 @@ describe("createLogger", () => {
     expect(lines[0]).toContain('"frames":["at ');
   });
 
+  it("drops a message line that looks like a frame", () => {
+    const { lines, logger } = setup();
+
+    logger.error(
+      "x",
+      "x.failed",
+      {},
+      new Error("parse failed\n    at line 3 of /Users/learner/MyShow.srt"),
+    );
+
+    expect(lines[0]).not.toContain("MyShow");
+    expect(lines[0]).toContain('"frames":["at ');
+  });
+
   it("replaces the home folder in stack frames with ~", () => {
     const { lines, parsed, logger } = setup();
     const error = new TypeError("boom");
@@ -187,6 +201,28 @@ describe("createLogger", () => {
     logger.info("storage", "db.opened", { file: path.join(dataDir, "michigo.db") });
 
     expect(parsed()[0]?.["file"]).toBe("michigo.db");
+  });
+
+  it("treats a file URL as a path, and keeps a data-folder file whose name starts with ..", () => {
+    const { lines, parsed, logger } = setup();
+
+    logger.info("source", "source.open", {
+      inside: `file://${dataDir}/michigo.db`,
+      outside: "file:///Users/learner/Videos/MyShow.srt",
+      dotted: path.join(dataDir, "..cache"),
+    });
+
+    expect(lines[0]).not.toContain("MyShow");
+    expect(parsed()[0]).not.toHaveProperty("outside");
+    expect(parsed()[0]).toMatchObject({ inside: "michigo.db", dotted: "..cache" });
+  });
+
+  it("logs an error passed at info", () => {
+    const { parsed, logger } = setup();
+
+    logger.info("app", "app.retry", {}, new MichigoError("anki.closed"));
+
+    expect(parsed()[0]?.["error"]).toMatchObject({ message: "anki.closed" });
   });
 
   it("never logs a path outside the data folder", () => {
