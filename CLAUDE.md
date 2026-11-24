@@ -109,7 +109,9 @@ There is no `asChild`. A component that others need to borrow the look of export
 
 ## Node version pinning
 
-`.nvmrc` and `@types/node` are both pinned to 24 because Electron 44 bundles Node 24.21.0. The shared packages execute inside Electron main, so typing them against a newer Node would let code compile that crashes in the packaged app. Bump these when Electron bumps its bundled Node, not before.
+`.nvmrc` and `@types/node` are both pinned to 24 because Electron 44.11.3 bundles Node 24.22.2. The shared packages execute inside Electron main, so typing them against a newer Node would let code compile that crashes in the packaged app. Bump these when Electron bumps its bundled Node, not before.
+
+Node 24.22.1 is the minimum, because earlier versions have known security vulnerabilities. `engines` in the root `package.json` sets it, and `engineStrict` in `pnpm-workspace.yaml` makes the install fail on an older Node. The packaged app runs on the Node that Electron bundles, so never move `electron` back to a release that bundles an older Node.
 
 ## Toolchain notes
 

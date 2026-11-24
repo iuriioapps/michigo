@@ -8,7 +8,7 @@ A desktop application for Japanese language learning.
 
 ## Prerequisites
 
-- **Node 24** — `nvm use` picks it up from `.nvmrc`. Pinned to match the Node that Electron bundles (24.21.0), so dev, CI and tests run the same runtime as the packaged app.
+- **Node 24** — `nvm use` picks it up from `.nvmrc`. Pinned to match the Node that Electron bundles (24.22.2), so dev, CI and tests run the same runtime as the packaged app. The minimum is 24.22.1, because earlier versions have known security vulnerabilities: `pnpm install` fails on an older Node.
 - **pnpm 12** — `corepack enable && corepack prepare pnpm@12.6.0 --activate`. Corepack ships with Node 24; it was removed in Node 26, where you need `npm i -g pnpm@12` instead.
 
 ```sh
