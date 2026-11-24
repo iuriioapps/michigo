@@ -2,6 +2,7 @@ import path from "node:path";
 import process from "node:process";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
+import type { Logger } from "@michigo/core";
 import { createLogFile, createLogger } from "@michigo/log";
 import {
   BrowserWindow,
@@ -64,9 +65,21 @@ function buildMenu(): Menu {
 // The code of the last error nobody caught, kept for a window that loads later.
 let mainError: string | undefined;
 
-function reportMainError(): void {
+function reportMainError(log: Logger): void {
   mainError = "main.uncaught";
-  for (const window of BrowserWindow.getAllWindows()) {
+
+  const windows = BrowserWindow.getAllWindows();
+
+  // A failure during startup can come before the first window, which would leave only
+  // a dock icon. A new window shows the code once it loads.
+  if (windows.length === 0 && app.isReady()) {
+    try {
+      createWindow();
+    } catch (error) {
+      log.error("app", "window.failed", {}, error);
+    }
+  }
+  for (const window of windows) {
     window.webContents.send(channels.appError, mainError);
   }
 }
@@ -140,11 +153,11 @@ if (!app.requestSingleInstanceLock()) {
   // message. The window shows only the code.
   process.on("uncaughtException", (error) => {
     log.main.error("process", "uncaught.exception", {}, error);
-    reportMainError();
+    reportMainError(log.main);
   });
   process.on("unhandledRejection", (reason) => {
     log.main.error("process", "unhandled.rejection", {}, reason);
-    reportMainError();
+    reportMainError(log.main);
   });
   log.main.info("app", "app.start", {
     version: app.getVersion(),
