@@ -1,6 +1,8 @@
 import { Outlet, createRootRoute } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 
 import { NewProjectProvider } from "@/components/new-project-dialog";
+import { RouteError } from "@/components/route-fallbacks";
 import { AppSidebar } from "@/components/sidebar/app-sidebar";
 
 export const Route = createRootRoute({ component: AppShell });
@@ -19,6 +21,11 @@ export const Route = createRootRoute({ component: AppShell });
  * it that is not marked `titlebar-no-drag`.
  */
 function AppShell() {
+  // An error the main process did not catch arrives as a code only.
+  const [mainError, setMainError] = useState<string>();
+
+  useEffect(() => window.michigo.app.onError(setMainError), []);
+
   return (
     <NewProjectProvider>
       <div className="flex h-screen overflow-hidden">
@@ -28,7 +35,16 @@ function AppShell() {
               border, so the two strips form one continuous band. */}
           <div className="titlebar-drag -ml-px h-11 shrink-0" />
           <div className="min-h-0 flex-1 overflow-y-auto">
-            <Outlet />
+            {mainError === undefined ? (
+              <Outlet />
+            ) : (
+              <RouteError
+                error={new Error(mainError)}
+                reset={() => {
+                  setMainError(undefined);
+                }}
+              />
+            )}
           </div>
         </main>
       </div>

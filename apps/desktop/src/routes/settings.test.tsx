@@ -28,6 +28,7 @@ describe("settings route", () => {
       "/settings",
       createApiStub({
         app: {
+          ...createApiStub().app,
           info: vi
             .fn<() => Promise<RuntimeInfo>>()
             .mockRejectedValue(new Error("main process unavailable")),
@@ -43,7 +44,9 @@ describe("settings route", () => {
 
     renderRoute(
       "/settings",
-      createApiStub({ app: { info: () => Promise.resolve(withoutElectron) } }),
+      createApiStub({
+        app: { ...createApiStub().app, info: () => Promise.resolve(withoutElectron) },
+      }),
     );
 
     expect(await screen.findByText("Michigo 0.1.0")).toBeInTheDocument();

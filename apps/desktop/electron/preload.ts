@@ -1,4 +1,4 @@
-import { contextBridge, ipcRenderer } from "electron";
+import { type IpcRendererEvent, contextBridge, ipcRenderer } from "electron";
 
 import { channels, type DesktopApi } from "../shared/api";
 
@@ -12,6 +12,18 @@ import { channels, type DesktopApi } from "../shared/api";
 const api: DesktopApi = {
   app: {
     info: () => ipcRenderer.invoke(channels.appInfo),
+    onError: (listener) => {
+      // The page gets the code only, never the IPC event.
+      const forward = (_event: IpcRendererEvent, code: string) => {
+        listener(code);
+      };
+
+      ipcRenderer.on(channels.appError, forward);
+
+      return () => {
+        ipcRenderer.off(channels.appError, forward);
+      };
+    },
   },
   projects: {
     list: () => ipcRenderer.invoke(channels.projectList),

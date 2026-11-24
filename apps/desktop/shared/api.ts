@@ -17,6 +17,11 @@ export interface DesktopApi {
   readonly app: {
     /** Runtime details plus the domain modules the main process has loaded. */
     info(): Promise<RuntimeInfo>;
+    /**
+     * Calls `listener` with an error code such as `main.uncaught` when the main
+     * process hits an error nobody caught. Returns the unsubscriber.
+     */
+    onError(listener: (code: string) => void): () => void;
   };
   readonly projects: {
     /** Every project the main process is holding, oldest first. */
@@ -35,6 +40,7 @@ export interface DesktopApi {
 
 export const channels = {
   appInfo: "app:info",
+  appError: "app:error",
   projectList: "project:list",
   projectCreate: "project:create",
   logWrite: "log:write",

@@ -12,6 +12,7 @@ import {
   shell,
 } from "electron";
 
+import { channels } from "../shared/api";
 import { registerIpc } from "./ipc";
 
 // import.meta.dirname is unavailable once bundled; derive it from the URL.
@@ -118,9 +119,13 @@ if (!app.requestSingleInstanceLock()) {
     renderer: createLogger({ process: "renderer", ...logOptions }),
   };
 
-  // The monitor only observes, so Electron still shows its error dialog.
-  process.on("uncaughtExceptionMonitor", (error) => {
+  // A listener here also replaces Electron's own error box, which would show the raw
+  // message. The window shows only the code.
+  process.on("uncaughtException", (error) => {
     log.main.error("process", "uncaught.exception", {}, error);
+    for (const window of BrowserWindow.getAllWindows()) {
+      window.webContents.send(channels.appError, "main.uncaught");
+    }
   });
   process.on("unhandledRejection", (reason) => {
     log.main.error("process", "unhandled.rejection", {}, reason);
