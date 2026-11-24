@@ -114,7 +114,7 @@ _Avoid_: missing words, words to learn
 
 ### Grammar Pattern
 
-A grammatical construction, such as 〜てしまう, that Michigo detects in a Source to show the learner which grammar the text needs. It is Known or not, like a word, and only the learner changes that. It never changes Coverage.
+A grammatical construction, such as 〜てしまう, or a particle with a meaning of its own, such as さえ, that Michigo detects in a Source to show the learner which grammar the text needs. It is Known or not, like a word, and only the learner changes that. It never changes Coverage.
 
 _Avoid_: grammar point, rule
 
