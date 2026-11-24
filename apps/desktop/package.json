@@ -18,7 +18,7 @@
     "@michigo/anki": "workspace:*",
     "@michigo/core": "workspace:*",
     "@michigo/vocab": "workspace:*",
-    "@tailwindcss/vite": "^4.3.3",
+    "@tailwindcss/vite": "^4.3.5",
     "@tanstack/react-query": "^5.103.2",
     "@tanstack/react-router": "^1.170.46",
     "@tanstack/router-plugin": "^1.169.0",
