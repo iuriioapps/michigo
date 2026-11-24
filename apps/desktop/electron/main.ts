@@ -2,7 +2,7 @@ import path from "node:path";
 import process from "node:process";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
-import { createLogger } from "@michigo/core";
+import { createLogFile, createLogger } from "@michigo/log";
 import {
   BrowserWindow,
   Menu,
@@ -13,7 +13,6 @@ import {
 } from "electron";
 
 import { registerIpc } from "./ipc";
-import { createLogFile } from "./log-file";
 
 // import.meta.dirname is unavailable once bundled; derive it from the URL.
 const moduleDir = path.dirname(fileURLToPath(import.meta.url));
@@ -162,16 +161,14 @@ if (!app.requestSingleInstanceLock()) {
     });
   });
 
-  // Holds the quit once, so the last lines (often the error that led to it) reach the disk.
-  let logFlushed = false;
+  // Holds the quit until the last lines (often the error that led to it) reach the disk.
+  // will-quit is the last stage and the windows are closed, so exit() ends the app.
+  // A second app.quit() after preventDefault() does not.
   app.on("will-quit", (event) => {
-    if (!logFlushed) {
-      event.preventDefault();
-      void logFile.flushed().finally(() => {
-        logFlushed = true;
-        app.quit();
-      });
-    }
+    event.preventDefault();
+    void logFile.flushed().finally(() => {
+      app.exit();
+    });
   });
 
   app.on("window-all-closed", () => {

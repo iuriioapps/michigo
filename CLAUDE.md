@@ -8,22 +8,25 @@ Strictly one way:
 
 ```text
 apps/desktop ─┬─> storage ──────────────> vocab, reference, pitch, audio ─┐
-              └─> tokenizer, source, grammar, anki, manifest ─────────────┴─> core
+              └─> tokenizer, source, grammar, anki, manifest, log ────────┴─> core
 ```
 
-Decided in `docs/adr/0007-packages-do-not-import-each-other-and-the-app-composes.md`. Only `core`, `vocab` and `anki` exist today. Create each other package when its first feature lands. The rules for code:
+Decided in `docs/adr/0007-packages-do-not-import-each-other-and-the-app-composes.md`. Only `core`, `vocab`, `anki` and `log` exist today. Create each other package when its first feature lands. The rules for code:
 
 - `core` imports no other package, and nothing in `packages/` imports from `apps/`.
 - A package imports `core` and nothing else. The one exception is `storage`, which imports the store interfaces of the packages it serves.
 - Where several packages have to be combined, the composition happens in the app. See how `describeRuntime` receives its modules as an argument instead of importing them.
+- A package that logs takes a `Logger` (a type in `core`) as an argument. Only the app, and the worker entries it owns, import `@michigo/log`.
 - A package that keeps data declares its store as an interface in domain terms. **SQL exists only in `storage`.**
 - `core` holds the data shapes that packages and the renderer exchange. Logic goes to the package that owns the capability.
 - Each package declares what it imports in its own `package.json`, so pnpm refuses an import that breaks these rules.
 
-## `@michigo/core` has two entry points
+## `@michigo/core` and `@michigo/log` have two entry points
 
 - `@michigo/core/schemas` is **pure**. No `node:*` imports, ever. The Electron renderer imports from here, so a Node built-in would break the browser bundle.
 - `@michigo/core` (the `.` entry) may use Node APIs. Only the main process imports it.
+
+`@michigo/log` has the same split: `@michigo/log/renderer` is pure, and its `.` entry (the logger and the log file) is for the main process and workers.
 
 Keeping new code on the correct side of this split is much cheaper than untangling it later.
 

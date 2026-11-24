@@ -4,7 +4,8 @@ import process from "node:process";
 
 import { ankiModule } from "@michigo/anki";
 import { type Logger, describeRuntime } from "@michigo/core";
-import { CreateProjectInputSchema, RendererLogLineSchema } from "@michigo/core/schemas";
+import { CreateProjectInputSchema } from "@michigo/core/schemas";
+import { RendererLogLineSchema } from "@michigo/log/renderer";
 import { vocabModule } from "@michigo/vocab";
 import { type IpcMainInvokeEvent, app, ipcMain } from "electron";
 

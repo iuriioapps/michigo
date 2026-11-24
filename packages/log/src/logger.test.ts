@@ -5,8 +5,8 @@ import { DatabaseSync } from "node:sqlite";
 import { describe, expect, it } from "vitest";
 import { z } from "zod";
 
-import { MichigoError } from "./errors";
-import { createLogger } from "./log";
+import { MichigoError } from "@michigo/core";
+import { createLogger } from "./logger";
 
 const home = "/Users/learner";
 const dataDir = path.join(home, "Library/Application Support/Michigo");

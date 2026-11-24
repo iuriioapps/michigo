@@ -52,38 +52,3 @@ export const CreateProjectInputSchema = z.object({
   name: z.string().trim().min(1).max(PROJECT_NAME_MAX_LENGTH),
 });
 export type CreateProjectInput = z.infer<typeof CreateProjectInputSchema>;
-
-/** Shared with the renderer, which cuts an error to fit instead of losing the line. */
-export const LOG_ERROR_NAME_MAX_LENGTH = 100;
-export const LOG_STACK_MAX_LENGTH = 20_000;
-
-export const LogLevelSchema = z.enum(["error", "warn", "info"]);
-export type LogLevel = z.infer<typeof LogLevelSchema>;
-
-/** A stable name such as `source.import.done`, or a scope such as `anki`. */
-const LogNameSchema = z
-  .string()
-  .regex(/^[a-z][a-z0-9-]*(\.[a-z0-9-]+)*$/)
-  .max(100);
-
-/**
- * The only shape the renderer may send on `log:write`. The main process adds
- * the time and the process, and turns `error` into name, code and frames.
- */
-export const RendererLogLineSchema = z.object({
-  level: LogLevelSchema,
-  scope: LogNameSchema,
-  event: LogNameSchema,
-  fields: z
-    .record(z.string().max(64), z.union([z.string().max(200), z.number(), z.boolean()]))
-    .refine((fields) => Object.keys(fields).length <= 20)
-    .optional(),
-  error: z
-    .object({
-      name: z.string().max(LOG_ERROR_NAME_MAX_LENGTH),
-      code: z.string().max(LOG_ERROR_NAME_MAX_LENGTH).optional(),
-      stack: z.string().max(LOG_STACK_MAX_LENGTH).optional(),
-    })
-    .optional(),
-});
-export type RendererLogLine = z.infer<typeof RendererLogLineSchema>;

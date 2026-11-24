@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { createLogger } from "@michigo/core";
+import { createLogger } from "@michigo/log";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import { channels } from "../shared/api";

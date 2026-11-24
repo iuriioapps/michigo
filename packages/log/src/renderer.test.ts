@@ -1,12 +1,15 @@
-import type { RendererLogLine } from "@michigo/core/schemas";
-import { RendererLogLineSchema } from "@michigo/core/schemas";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-import { createApiStub } from "../test/render";
-import { logUncaughtErrors } from "./log";
+import { type RendererLogLine, RendererLogLineSchema, logUncaughtErrors } from "./renderer";
+
+// Node has neither ErrorEvent nor PromiseRejectionEvent, so the events carry the property by hand.
+function errorEvent(error: unknown): Event {
+  return Object.assign(new Event("error"), { error });
+}
 
 describe("logUncaughtErrors", () => {
   const write = vi.fn<(line: RendererLogLine) => Promise<void>>(() => Promise.resolve());
+  const target = new EventTarget();
   let stop: (() => void) | undefined;
 
   afterEach(() => {
@@ -15,15 +18,14 @@ describe("logUncaughtErrors", () => {
   });
 
   function install() {
-    window.michigo = createApiStub({ log: { write } });
-    stop = logUncaughtErrors(window);
+    stop = logUncaughtErrors(target, write);
   }
 
   it("sends an uncaught error as a line the main process accepts", () => {
     install();
     const error = new TypeError("MyShow.srt");
 
-    window.dispatchEvent(new ErrorEvent("error", { error }));
+    target.dispatchEvent(errorEvent(error));
 
     const line = write.mock.calls[0]?.[0];
     expect(line).toEqual({
@@ -38,8 +40,7 @@ describe("logUncaughtErrors", () => {
   it("sends an unhandled rejection, and a non-error reason only by its type", () => {
     install();
 
-    // happy-dom has no PromiseRejectionEvent.
-    window.dispatchEvent(Object.assign(new Event("unhandledrejection"), { reason: "MyShow.srt" }));
+    target.dispatchEvent(Object.assign(new Event("unhandledrejection"), { reason: "MyShow.srt" }));
 
     expect(write).toHaveBeenCalledWith({
       level: "error",
@@ -54,8 +55,17 @@ describe("logUncaughtErrors", () => {
     const error = new Error("x");
     error.stack = "a".repeat(30_000);
 
-    window.dispatchEvent(new ErrorEvent("error", { error }));
+    target.dispatchEvent(errorEvent(error));
 
     expect(RendererLogLineSchema.safeParse(write.mock.calls[0]?.[0]).success).toBe(true);
+  });
+
+  it("stops sending once uninstalled", () => {
+    install();
+    stop?.();
+
+    target.dispatchEvent(errorEvent(new Error("x")));
+
+    expect(write).not.toHaveBeenCalled();
   });
 });

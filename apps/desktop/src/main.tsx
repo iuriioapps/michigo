@@ -1,13 +1,13 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { logUncaughtErrors } from "@michigo/log/renderer";
 import { RouterProvider } from "@tanstack/react-router";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import "./index.css";
-import { logUncaughtErrors } from "./lib/log";
 import { router } from "./router";
 
-logUncaughtErrors(window);
+logUncaughtErrors(window, (line) => window.michigo.log.write(line));
 
 const queryClient = new QueryClient({
   // Queries hit local IPC, not a network. A rejection is a deterministic

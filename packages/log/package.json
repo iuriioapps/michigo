@@ -1,0 +1,23 @@
+{
+  "name": "@michigo/log",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The JSON Lines log that every process writes",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./renderer": "./src/renderer.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@michigo/core": "workspace:*",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

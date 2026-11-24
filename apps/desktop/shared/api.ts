@@ -1,9 +1,5 @@
-import type {
-  CreateProjectInput,
-  Project,
-  RendererLogLine,
-  RuntimeInfo,
-} from "@michigo/core/schemas";
+import type { CreateProjectInput, Project, RuntimeInfo } from "@michigo/core/schemas";
+import type { RendererLogLine } from "@michigo/log/renderer";
 
 /**
  * The IPC contract — the single source of truth shared by all three processes.
@@ -14,7 +10,8 @@ import type {
  * a raw string would only ever surface at runtime.
  *
  * This file must stay importable from the renderer, so it may only import types
- * from `@michigo/core/schemas` (the pure entry point) — never `@michigo/core`.
+ * from the pure entry points `@michigo/core/schemas` and `@michigo/log/renderer`,
+ * never from `@michigo/core` or `@michigo/log`.
  */
 export interface DesktopApi {
   readonly app: {
