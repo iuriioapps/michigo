@@ -2,8 +2,9 @@ packages:
   - apps/*
   - packages/*
 
-# Fails the install on a Node older than `engines` in package.json (24.22.1,
-# the first 24.x without the known security vulnerabilities).
+# Fails the install on a Node outside `engines` in package.json: older than
+# 24.22.1 (known security vulnerabilities) or 25 and later (Electron 44 bundles
+# Node 24, so code must not depend on a newer Node).
 engineStrict: true
 
 # Single source of truth for versions shared across workspaces.
