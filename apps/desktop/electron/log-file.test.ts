@@ -1,8 +1,9 @@
-import { mkdtemp, readFile, readdir, stat } from "node:fs/promises";
+// @vitest-environment node
+import { mkdir, mkdtemp, readFile, readdir, stat, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 
 import { LOG_FILE_COUNT, LOG_FILE_MAX_BYTES, createLogFile } from "./log-file";
 
@@ -58,5 +59,32 @@ describe("createLogFile", () => {
 
     expect(await readFile(path.join(dir, "michigo.1.log"), "utf8")).toBe("12345678\n");
     expect(await readFile(path.join(dir, "michigo.log"), "utf8")).toBe("abc\n");
+  });
+
+  it("drops lines instead of growing the file when it cannot rotate", async () => {
+    vi.spyOn(console, "error").mockImplementation(() => undefined);
+    const dir = await folder();
+    // A folder in the place of the oldest file makes the rotation fail.
+    await mkdir(path.join(dir, "michigo.1.log", "blocked"), { recursive: true });
+    const file = createLogFile(dir, { maxBytes: 10, files: 2 });
+
+    for (let index = 0; index < 20; index += 1) {
+      file.write("123456\n");
+    }
+    await file.flushed();
+
+    expect((await stat(path.join(dir, "michigo.log"))).size).toBeLessThanOrEqual(10);
+  });
+
+  it("drops the queued lines when the folder cannot be made", async () => {
+    vi.spyOn(console, "error").mockImplementation(() => undefined);
+    const parent = await folder();
+    await writeFile(path.join(parent, "logs"), "a file, not a folder");
+    const file = createLogFile(path.join(parent, "logs"));
+
+    file.write("lost\n");
+    await file.flushed();
+
+    expect(console.error).toHaveBeenCalledTimes(1);
   });
 });

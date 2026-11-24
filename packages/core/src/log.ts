@@ -59,12 +59,13 @@ export function createLogger(options: LoggerOptions): Logger {
     return safe;
   }
 
+  // Renderer frames are file:// URLs: forward slashes on Windows too, and a
+  // name with spaces or Japanese characters is percent-encoded.
+  const slashedHome = homeDir.replaceAll("\\", "/");
+  const homeForms = homeDir === "" ? [] : [homeDir, slashedHome, encodeURI(slashedHome)];
+
   function hideHome(frame: string): string {
-    if (homeDir === "") {
-      return frame;
-    }
-    // Stack frames from the renderer are file:// URLs, which use forward slashes on Windows too.
-    return frame.replaceAll(homeDir, "~").replaceAll(homeDir.replaceAll("\\", "/"), "~");
+    return homeForms.reduce((hidden, form) => hidden.replaceAll(form, "~"), frame);
   }
 
   function serializeError(error: unknown): Record<string, unknown> {

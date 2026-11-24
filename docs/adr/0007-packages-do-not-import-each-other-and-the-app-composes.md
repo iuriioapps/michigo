@@ -28,6 +28,7 @@ Most learner actions need several capabilities. "Update from Anki" reads fields 
 ## The rules
 
 - **`core` is not a place for logic.** A thing enters `core` only when it is a data shape that two packages, or a package and the renderer, exchange. Logic goes to the package that owns the capability.
+- The one exception is the logger in the Node entry of `core`. Every process writes the same line shape, and the code that a package runs in a worker can import only `core`. The log file and its rotation stay in the app, because only the main process writes the file.
 - A package that keeps data declares its store, and `storage` implements it. No package but `storage` holds SQL.
 - A package that needs the output of another package takes it as an argument. `grammar` takes tokens, `pitch` takes the pitch rows that `reference` reads from an archive, and `anki` takes the finished values of a card.
 - Only `tokenizer` imports the native binding. It names `lindera` as a peer dependency, and the desktop app carries it in `dependencies`.

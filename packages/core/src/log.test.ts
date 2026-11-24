@@ -147,6 +147,23 @@ describe("createLogger", () => {
     });
   });
 
+  it("replaces a URL-encoded home folder in a renderer frame with ~", () => {
+    const lines: string[] = [];
+    const logger = createLogger({
+      process: "renderer",
+      write: (line) => lines.push(line),
+      dataDir,
+      homeDir: "/Users/山田 太郎",
+    });
+    const error = new Error("boom");
+    error.stack =
+      "Error: boom\n    at file:///Users/%E5%B1%B1%E7%94%B0%20%E5%A4%AA%E9%83%8E/app.js:1:2";
+
+    logger.error("app", "uncaught.error", {}, error);
+
+    expect(lines[0]).toContain('"frames":["at file://~/app.js:1:2"]');
+  });
+
   it("logs the message of a Michigo error, which is a code", () => {
     const { parsed, logger } = setup();
 

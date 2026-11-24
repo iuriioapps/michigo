@@ -53,6 +53,10 @@ export const CreateProjectInputSchema = z.object({
 });
 export type CreateProjectInput = z.infer<typeof CreateProjectInputSchema>;
 
+/** Shared with the renderer, which cuts an error to fit instead of losing the line. */
+export const LOG_ERROR_NAME_MAX_LENGTH = 100;
+export const LOG_STACK_MAX_LENGTH = 20_000;
+
 export const LogLevelSchema = z.enum(["error", "warn", "info"]);
 export type LogLevel = z.infer<typeof LogLevelSchema>;
 
@@ -76,9 +80,9 @@ export const RendererLogLineSchema = z.object({
     .optional(),
   error: z
     .object({
-      name: z.string().max(100),
-      code: z.string().max(100).optional(),
-      stack: z.string().max(20_000).optional(),
+      name: z.string().max(LOG_ERROR_NAME_MAX_LENGTH),
+      code: z.string().max(LOG_ERROR_NAME_MAX_LENGTH).optional(),
+      stack: z.string().max(LOG_STACK_MAX_LENGTH).optional(),
     })
     .optional(),
 });

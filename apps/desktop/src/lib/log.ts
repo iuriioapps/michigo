@@ -1,4 +1,8 @@
-import type { RendererLogLine } from "@michigo/core/schemas";
+import {
+  LOG_ERROR_NAME_MAX_LENGTH,
+  LOG_STACK_MAX_LENGTH,
+  type RendererLogLine,
+} from "@michigo/core/schemas";
 
 type LoggedError = NonNullable<RendererLogLine["error"]>;
 
@@ -11,9 +15,9 @@ function describeError(error: unknown): LoggedError {
   const code = "code" in error ? error.code : undefined;
 
   return {
-    name: error.name.slice(0, 100),
-    ...(typeof code === "string" ? { code: code.slice(0, 100) } : {}),
-    ...(error.stack === undefined ? {} : { stack: error.stack.slice(0, 20_000) }),
+    name: error.name.slice(0, LOG_ERROR_NAME_MAX_LENGTH),
+    ...(typeof code === "string" ? { code: code.slice(0, LOG_ERROR_NAME_MAX_LENGTH) } : {}),
+    ...(error.stack === undefined ? {} : { stack: error.stack.slice(0, LOG_STACK_MAX_LENGTH) }),
   };
 }
 

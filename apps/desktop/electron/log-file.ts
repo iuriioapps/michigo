@@ -28,7 +28,12 @@ export function createLogFile(
   async function rotate(): Promise<void> {
     await rm(nameOf(files - 1), { force: true });
     for (let index = files - 2; index >= 0; index -= 1) {
-      await rename(nameOf(index), nameOf(index + 1)).catch(() => undefined);
+      // A missing older file is normal. Any other failure stops this write, so the file cannot grow past the limit.
+      await rename(nameOf(index), nameOf(index + 1)).catch((error: unknown) => {
+        if (!(error instanceof Error && "code" in error && error.code === "ENOENT")) {
+          throw error;
+        }
+      });
     }
   }
 
@@ -60,6 +65,8 @@ export function createLogFile(
     draining = drain()
       // A failing log must never take the app down, or log its own failure in a loop.
       .catch((error: unknown) => {
+        // Retrying the same lines could loop forever, so they are lost.
+        queue.length = 0;
         console.error("Michigo could not write its log", error);
       })
       .finally(() => {
