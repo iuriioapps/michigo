@@ -22,6 +22,18 @@ export interface LoggerOptions {
 
 const fixedKeys = new Set(["time", "level", "process", "scope", "event", "error"]);
 
+const MAX_LOGGED_ISSUES = 10;
+
+// A part of a zod issue path is a field name of the schema or a record key of the
+// input, and a record key is received text. Only a short ASCII name is kept.
+function safePathPart(part: PropertyKey): string {
+  if (typeof part === "number") {
+    return String(part);
+  }
+
+  return typeof part === "string" && /^[A-Za-z_][A-Za-z0-9_]{0,63}$/.test(part) ? part : "*";
+}
+
 /**
  * The one logger of every Michigo process. A worker passes a `write` that
  * posts the line to the main process, which appends it to the log file.
@@ -93,7 +105,11 @@ export function createLogger(options: LoggerOptions): Logger {
       ...(typeof errcode === "number" ? { errcode } : {}),
       ...(error instanceof ZodError
         ? {
-            issues: error.issues.map((issue) => ({ path: issue.path.join("."), code: issue.code })),
+            issueCount: error.issues.length,
+            issues: error.issues.slice(0, MAX_LOGGED_ISSUES).map((issue) => ({
+              path: issue.path.map(safePathPart).join("."),
+              code: issue.code,
+            })),
           }
         : {}),
       frames,

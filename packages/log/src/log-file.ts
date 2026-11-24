@@ -40,19 +40,23 @@ export function createLogFile(
   }
 
   async function drain(): Promise<void> {
-    if (size === undefined) {
-      await mkdir(dir, { recursive: true });
-      size = await stat(nameOf(0)).then(
-        (stats) => stats.size,
-        () => 0,
-      );
-    }
-    // One append per batch of lines that fits, instead of one per line.
+    // One append per batch of lines that fits, instead of one per line. A failure
+    // loses only the batch taken here, never the lines written while it ran.
     while (queue.length > 0) {
+      const batch = queue.splice(0);
+
+      if (size === undefined) {
+        await mkdir(dir, { recursive: true });
+        size = await stat(nameOf(0)).then(
+          (stats) => stats.size,
+          () => 0,
+        );
+      }
+
       let chunk = "";
       let chunkBytes = 0;
 
-      for (const line of queue.splice(0)) {
+      for (const line of batch) {
         const bytes = Buffer.byteLength(line);
 
         if (size + chunkBytes > 0 && size + chunkBytes + bytes > maxBytes) {
@@ -80,8 +84,7 @@ export function createLogFile(
     draining = drain()
       // A failing log must never take the app down, or log its own failure in a loop.
       .catch((error: unknown) => {
-        // Retrying the same lines could loop forever, so they are lost.
-        queue.length = 0;
+        // The failed batch is lost: retrying it could loop forever.
         console.error("Michigo could not write its log", error);
       })
       .finally(() => {

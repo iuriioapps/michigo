@@ -62,25 +62,35 @@ function buildMenu(): Menu {
   ]);
 }
 
-// The code of the last error nobody caught, kept for a window that loads later.
-let mainError: string | undefined;
+const MAIN_ERROR = "main.uncaught";
+
+// Set while an error waits for a window that is still loading, or not open yet.
+// Cleared once sent, so a later window or reload does not show it again.
+let pendingMainError = false;
+let quitting = false;
 
 function reportMainError(log: Logger): void {
-  mainError = "main.uncaught";
-
   const windows = BrowserWindow.getAllWindows();
 
+  for (const window of windows) {
+    if (window.webContents.isLoading()) {
+      pendingMainError = true;
+    } else {
+      window.webContents.send(channels.appError, MAIN_ERROR);
+    }
+  }
+  if (windows.length > 0) {
+    return;
+  }
+  pendingMainError = true;
   // A failure during startup can come before the first window, which would leave only
-  // a dock icon. A new window shows the code once it loads.
-  if (windows.length === 0 && app.isReady()) {
+  // a dock icon. Not while quitting, or a window would flash before exit.
+  if (app.isReady() && !quitting) {
     try {
       createWindow();
     } catch (error) {
       log.error("app", "window.failed", {}, error);
     }
-  }
-  for (const window of windows) {
-    window.webContents.send(channels.appError, mainError);
   }
 }
 
@@ -119,8 +129,9 @@ function createWindow(): void {
 
   // An error that came before this page listened would otherwise never show.
   window.webContents.on("did-finish-load", () => {
-    if (mainError !== undefined) {
-      window.webContents.send(channels.appError, mainError);
+    if (pendingMainError) {
+      pendingMainError = false;
+      window.webContents.send(channels.appError, MAIN_ERROR);
     }
   });
 
@@ -200,6 +211,10 @@ if (!app.requestSingleInstanceLock()) {
   // stage and the windows are closed, so exit() ends the app; a second app.quit()
   // after preventDefault() does not. exit() also skips the `quit` event, so cleanup
   // belongs in will-quit.
+  app.on("before-quit", () => {
+    quitting = true;
+  });
+
   app.on("will-quit", (event) => {
     event.preventDefault();
     const timeout = new Promise((resolve) => {

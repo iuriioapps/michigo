@@ -1,5 +1,4 @@
 import { randomUUID } from "node:crypto";
-import { performance } from "node:perf_hooks";
 import process from "node:process";
 
 import { ankiModule } from "@michigo/anki";
@@ -46,6 +45,8 @@ export function registerIpc(
     return url.href === trustedUrl;
   }
 
+  const warnedChannels = new Set<string>();
+
   function handle(
     channel: string,
     listener: (raw: unknown) => unknown,
@@ -54,7 +55,11 @@ export function registerIpc(
   ): void {
     ipcMain.handle(channel, async (event, raw: unknown) => {
       if (!isTrustedSender(event)) {
-        log.main.warn("ipc", "ipc.untrusted", { channel });
+        // Once per channel, so a frame that keeps calling cannot flood the log.
+        if (!warnedChannels.has(channel)) {
+          warnedChannels.add(channel);
+          log.main.warn("ipc", "ipc.untrusted", { channel });
+        }
         throw new Error(`IPC call to ${channel} from untrusted frame`);
       }
 
@@ -107,10 +112,15 @@ export function registerIpc(
   handle(
     channels.logWrite,
     (raw) => {
-      const line = RendererLogLineSchema.parse(raw);
+      // Counted before parsing: a line that fails the schema writes ipc.failed too.
       const now = performance.now();
 
       if (now - windowStart >= 1000) {
+        const dropped = linesInWindow - RENDERER_LINES_PER_SECOND;
+
+        if (dropped > 0) {
+          log.main.warn("ipc", "log.dropped", { count: dropped });
+        }
         windowStart = now;
         linesInWindow = 0;
       }
@@ -118,6 +128,8 @@ export function registerIpc(
       if (linesInWindow > RENDERER_LINES_PER_SECOND) {
         return;
       }
+
+      const line = RendererLogLineSchema.parse(raw);
       // The stack goes through the same frame filter as a main-process error.
       const error =
         line.error === undefined

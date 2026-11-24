@@ -61,6 +61,11 @@ function describeError(error: unknown): LoggedError {
   };
 }
 
+/** The line for an error the page caught or saw, such as a route that threw. */
+export function errorLine(event: string, error: unknown): RendererLogLine {
+  return { level: "error", scope: "app", event, error: describeError(error) };
+}
+
 /**
  * Sends uncaught errors and unhandled rejections from `target` (the page's
  * `window`) to `write`. Returns the uninstaller.
@@ -71,9 +76,7 @@ export function logUncaughtErrors(
 ): () => void {
   const send = (event: string, error: unknown) => {
     // A failed log write has nowhere else to go.
-    write({ level: "error", scope: "app", event, error: describeError(error) }).catch(
-      () => undefined,
-    );
+    write(errorLine(event, error)).catch(() => undefined);
   };
   // `in` checks instead of ErrorEvent and PromiseRejectionEvent, so the package needs no DOM types.
   const onError = (event: Event) => {

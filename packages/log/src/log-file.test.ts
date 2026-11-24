@@ -101,7 +101,9 @@ describe("createLogFile", () => {
     }
     await file.flushed();
 
-    const lines = (await readFile(path.join(dir, "michigo.log"), "utf8")).split("\n");
-    expect(lines.at(-2)).toBe(String(LOG_FILE_MAX_QUEUED_LINES - 1));
+    // The first line leaves the queue at once, so one more than the limit gets through.
+    const written = (await readFile(path.join(dir, "michigo.log"), "utf8")).trimEnd().split("\n");
+    expect(written).toHaveLength(LOG_FILE_MAX_QUEUED_LINES + 1);
+    expect(written.at(-1)).toBe(String(LOG_FILE_MAX_QUEUED_LINES));
   });
 });

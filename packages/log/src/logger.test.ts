@@ -108,12 +108,41 @@ describe("createLogger", () => {
     expect(lines[0]).not.toContain("secret-title");
     expect(parsed()[0]?.["error"]).toEqual({
       name: "ZodError",
+      issueCount: 2,
       issues: [
         { path: "name", code: "invalid_type" },
         { path: "tags.0", code: "invalid_value" },
       ],
       frames: expect.any(Array),
     });
+  });
+
+  it("writes a path part that is not a short name as *, because a record key is received input", () => {
+    const { lines, parsed, logger } = setup();
+    const schema = z.object({ counts: z.record(z.string(), z.number()) });
+    const error = caught(() => schema.parse({ counts: { "MyShow.srt": "x", 猫: "y" } }));
+
+    logger.error("ipc", "ipc.failed", {}, error);
+
+    expect(lines[0]).not.toContain("MyShow");
+    expect(lines[0]).not.toContain("猫");
+    expect(parsed()[0]?.["error"]).toMatchObject({
+      issues: [
+        { path: "counts.*", code: "invalid_type" },
+        { path: "counts.*", code: "invalid_type" },
+      ],
+    });
+  });
+
+  it("logs at most 10 issues and the count of all of them", () => {
+    const { parsed, logger } = setup();
+    const error = caught(() => z.array(z.number()).parse(Array.from({ length: 50 }, () => "x")));
+
+    logger.error("ipc", "ipc.failed", {}, error);
+
+    const logged = parsed()[0]?.["error"];
+    expect(logged).toMatchObject({ issueCount: 50 });
+    expect(JSON.stringify(logged).match(/invalid_type/g)).toHaveLength(10);
   });
 
   it("keeps only the stack frames, without the message line", () => {

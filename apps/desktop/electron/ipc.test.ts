@@ -131,6 +131,39 @@ describe("registerIpc", () => {
     expect(ipc.lines).toHaveLength(100);
   });
 
+  it("counts a line that fails the schema toward the limit, so failures cannot flood the log either", async () => {
+    const bad = { level: "debug", scope: "app", event: "app.flood" };
+
+    await Promise.allSettled(Array.from({ length: 150 }, () => ipc.call(channels.logWrite, bad)));
+
+    expect(ipc.lines.filter((line) => line["event"] === "ipc.failed")).toHaveLength(100);
+  });
+
+  it("marks the lines it dropped once the next second starts", async () => {
+    vi.useFakeTimers({ toFake: ["performance"] });
+    try {
+      const line = { level: "info", scope: "app", event: "app.flood" };
+      await Promise.all(Array.from({ length: 130 }, () => ipc.call(channels.logWrite, line)));
+      vi.advanceTimersByTime(1000);
+
+      await ipc.call(channels.logWrite, line);
+
+      expect(ipc.lines).toContainEqual(
+        expect.objectContaining({ level: "warn", event: "log.dropped", count: 30 }),
+      );
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it("warns about an untrusted frame once per channel", async () => {
+    const evil = { senderFrame: { url: "https://evil.example/" } };
+
+    await Promise.allSettled([1, 2, 3].map(() => ipc.call(channels.appInfo, undefined, evil)));
+
+    expect(ipc.lines).toHaveLength(1);
+  });
+
   it("keeps the error of a renderer line at info", async () => {
     await ipc.call(channels.logWrite, {
       level: "info",

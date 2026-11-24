@@ -128,7 +128,7 @@ The message of an error from Node, SQLite, zod or another library can hold a fil
 
 - The `error` field holds the error's name, its code (`err.code`, such as `ENOENT` or `SQLITE_CONSTRAINT`) and the stack frames, without the first line of the stack, which repeats the message.
 - The message is logged only for Michigo's own errors, whose message is a code such as `anki.closed`.
-- A zod failure logs the path and code of each issue, never the received value.
+- A zod failure logs the path and code of each issue, never the received value. A path part that is not a short ASCII name (a record key can be the learner's text) is logged as `*`, and at most 10 issues are logged, with the count of all of them.
 - In stack frames, the home folder becomes `~`, as a safety net for the app's own install path.
 
 ### Bug reports

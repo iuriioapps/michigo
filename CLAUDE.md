@@ -81,7 +81,7 @@ Touch these four places, in order:
 1. `apps/desktop/shared/api.ts`: add the method to `DesktopApi` and its name to `channels`. This is where you decide what the feature looks like.
 2. `apps/desktop/electron/ipc.ts`: `handle()`, parsing any input.
 3. `apps/desktop/electron/preload.ts`: expose the function. Forgetting this is a compile error, because the object is typed as `DesktopApi`.
-4. `apps/desktop/src/lib/queries.ts`: a query or mutation, then use it.
+4. `apps/desktop/src/lib/queries.ts`: a query or mutation, then use it. A fire-and-forget call (`log:write`) or an event that main sends (`app:error`) has no query, and the code that needs it calls `window.michigo` directly.
 
 Never expose `ipcRenderer` itself to the page, only named functions.
 
