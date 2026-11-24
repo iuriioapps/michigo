@@ -4,7 +4,10 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import "./index.css";
+import { logUncaughtErrors } from "./lib/log";
 import { router } from "./router";
+
+logUncaughtErrors(window);
 
 const queryClient = new QueryClient({
   // Queries hit local IPC, not a network. A rejection is a deterministic

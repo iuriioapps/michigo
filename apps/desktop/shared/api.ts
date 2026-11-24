@@ -1,4 +1,9 @@
-import type { CreateProjectInput, Project, RuntimeInfo } from "@michigo/core/schemas";
+import type {
+  CreateProjectInput,
+  Project,
+  RendererLogLine,
+  RuntimeInfo,
+} from "@michigo/core/schemas";
 
 /**
  * The IPC contract — the single source of truth shared by all three processes.
@@ -25,12 +30,17 @@ export interface DesktopApi {
      */
     create(input: CreateProjectInput): Promise<Project>;
   };
+  readonly log: {
+    /** Appends one line to the shared log. Rejects if `line` fails validation. */
+    write(line: RendererLogLine): Promise<void>;
+  };
 }
 
 export const channels = {
   appInfo: "app:info",
   projectList: "project:list",
   projectCreate: "project:create",
+  logWrite: "log:write",
 } as const;
 
 export type Channel = (typeof channels)[keyof typeof channels];

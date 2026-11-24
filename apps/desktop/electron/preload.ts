@@ -17,6 +17,9 @@ const api: DesktopApi = {
     list: () => ipcRenderer.invoke(channels.projectList),
     create: (input) => ipcRenderer.invoke(channels.projectCreate, input),
   },
+  log: {
+    write: (line) => ipcRenderer.invoke(channels.logWrite, line),
+  },
 };
 
 contextBridge.exposeInMainWorld("michigo", api);

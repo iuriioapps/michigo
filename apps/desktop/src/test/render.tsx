@@ -52,6 +52,7 @@ export function createApiStub(
       list: () => Promise.resolve([...projects]),
       create: (input) => Promise.resolve(add(input.name)),
     },
+    log: { write: () => Promise.resolve() },
     ...overrides,
   };
 }

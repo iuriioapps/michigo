@@ -2,6 +2,7 @@ import path from "node:path";
 import process from "node:process";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
+import { createLogFile, createLogger } from "@michigo/core";
 import {
   BrowserWindow,
   Menu,
@@ -104,6 +105,32 @@ function createWindow(): void {
 if (!app.requestSingleInstanceLock()) {
   app.quit();
 } else {
+  const logFile = createLogFile(app.getPath("logs"));
+  const logOptions = {
+    write: (line: string) => {
+      logFile.write(line);
+    },
+    dataDir: app.getPath("userData"),
+    homeDir: app.getPath("home"),
+  };
+  const log = {
+    main: createLogger({ process: "main", ...logOptions }),
+    renderer: createLogger({ process: "renderer", ...logOptions }),
+  };
+
+  // The monitor only observes, so Electron still shows its error dialog.
+  process.on("uncaughtExceptionMonitor", (error) => {
+    log.main.error("process", "uncaught.exception", {}, error);
+  });
+  process.on("unhandledRejection", (reason) => {
+    log.main.error("process", "unhandled.rejection", {}, reason);
+  });
+  log.main.info("app", "app.start", {
+    version: app.getVersion(),
+    electron: process.versions.electron,
+    platform: `${process.platform}-${process.arch}`,
+  });
+
   app.on("second-instance", () => {
     const [window] = BrowserWindow.getAllWindows();
 
@@ -123,7 +150,7 @@ if (!app.requestSingleInstanceLock()) {
     });
     session.defaultSession.setPermissionCheckHandler(() => false);
     Menu.setApplicationMenu(buildMenu());
-    registerIpc(rendererUrl);
+    registerIpc(rendererUrl, log);
     createWindow();
 
     app.on("activate", () => {
