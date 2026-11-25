@@ -1,6 +1,7 @@
 import { randomUUID } from "node:crypto";
 
-import type { Logger } from "@michigo/core";
+import { type Logger, MichigoError } from "@michigo/core";
+import { mapEventIterator } from "@orpc/client";
 import { ORPCError, ValidationError, implement } from "@orpc/server";
 import { ZodRealError } from "zod";
 import type { $ZodIssue } from "zod/v4/core";
@@ -35,9 +36,23 @@ function isZodIssue(issue: ValidationError["issues"][number]): issue is $ZodIssu
   return "code" in issue && typeof issue.code === "string";
 }
 
+// The renderer shows a code, never a message. A Michigo error's message is its
+// code, so it crosses as the ORPCError code and message. oRPC turns any other
+// error into INTERNAL_SERVER_ERROR, so that message stays in main.
+function forRenderer(error: unknown): unknown {
+  return error instanceof MichigoError
+    ? new ORPCError(error.message, { message: error.message, cause: error })
+    : error;
+}
+
+function isStream(output: unknown): output is AsyncIterator<unknown, unknown, unknown> {
+  return typeof output === "object" && output !== null && Symbol.asyncIterator in output;
+}
+
 /**
  * Makes the `actionId` of each call and logs its start, its end and any failure.
  * It runs before input validation, so a call that fails the schema is logged too.
+ * It also hands the renderer the code of a Michigo error, from a call or a stream.
  */
 export const logCalls = os.middleware(async ({ context, next, path, procedure }) => {
   const log = context.log.main;
@@ -56,8 +71,18 @@ export const logCalls = os.middleware(async ({ context, next, path, procedure })
     if (!quiet) {
       log.info("ipc", "ipc.end", { actionId, channel, durationMs: durationMs() });
     }
+    if (!isStream(result.output)) {
+      return result;
+    }
 
-    return result;
+    // A stream fails after the call has returned, so its error is mapped as it comes.
+    return {
+      ...result,
+      output: mapEventIterator(result.output, {
+        value: async (value) => value,
+        error: async (error) => forRenderer(error),
+      }),
+    };
   } catch (error) {
     log.error(
       "ipc",
@@ -65,6 +90,6 @@ export const logCalls = os.middleware(async ({ context, next, path, procedure })
       { actionId, channel, durationMs: durationMs() },
       loggable(error),
     );
-    throw error;
+    throw forRenderer(error);
   }
 });

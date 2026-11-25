@@ -41,3 +41,4 @@ The renderer gets its port through one handshake: it posts the port to its own w
 - A handler validates by contract and passes the work on to a package or a worker, as "Threads and I/O" in `CLAUDE.md` requires.
 - The `logCalls` middleware in `electron/rpc/base.ts` logs the start, the end and any failure of every call, with the procedure path as `channel`. A procedure opts out with `.meta({ quiet: true })`, which only `log.write` needs.
 - Dependencies that handlers share, such as the loggers, come through `RpcContext` in `electron/rpc/base.ts`.
+- A failure the learner should see is a `MichigoError` with a code, such as `anki.closed`. `logCalls` hands that code to the page as the `ORPCError` code and message, from a call or from inside a stream. Any other error reaches the page as `INTERNAL_SERVER_ERROR`, and its message stays in the log.
