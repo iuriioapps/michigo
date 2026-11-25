@@ -2,6 +2,7 @@ import { screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 
 import type { RuntimeInfo } from "@michigo/core/schemas";
+import { ORPCError } from "@orpc/client";
 
 import { createApiStub, renderRoute, runtimeInfo } from "../test/render";
 
@@ -23,7 +24,7 @@ describe("settings route", () => {
     expect(screen.getAllByText("scaffold")).toHaveLength(2);
   });
 
-  it("surfaces an IPC failure instead of rendering stale chrome", async () => {
+  it("shows the code of a failure in main instead of rendering stale chrome", async () => {
     renderRoute(
       "/settings",
       createApiStub({
@@ -31,12 +32,12 @@ describe("settings route", () => {
           ...createApiStub().app,
           info: vi
             .fn<() => Promise<RuntimeInfo>>()
-            .mockRejectedValue(new Error("main process unavailable")),
+            .mockRejectedValue(new ORPCError("anki.closed", { message: "anki.closed" })),
         },
       }),
     );
 
-    expect(await screen.findByText("main process unavailable")).toBeInTheDocument();
+    expect(await screen.findByText("anki.closed")).toBeInTheDocument();
   });
 
   it("omits the electron row when not running inside Electron", async () => {

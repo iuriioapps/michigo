@@ -25,7 +25,7 @@ const create = useMutation(orpc.projects.create.mutationOptions({ onSuccess }));
 void queryClient.invalidateQueries({ queryKey: orpc.projects.key() });
 ```
 
-Use `orpc` inside components and `rpc` for a call outside TanStack Query. Tests render with `renderRoute` from `src/test/render.tsx`, whose stub answers every procedure in place of main. A new procedure gets a stub entry there.
+Use `orpc` inside components and `rpc` for a call outside TanStack Query. A failed call rejects with an `ORPCError` whose `code` is a Michigo code such as `anki.closed`, `BAD_REQUEST` for input that failed the contract, or `INTERNAL_SERVER_ERROR`. Tests render with `renderRoute` from `src/test/render.tsx`, whose stub answers every procedure in place of main. A new procedure gets a stub entry there.
 
 ## UI components
 
