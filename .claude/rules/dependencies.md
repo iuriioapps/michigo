@@ -15,6 +15,10 @@ Vite bundles `devDependencies`, and electron-builder copies only `dependencies` 
 
 `dependencies` is for what cannot be bundled: native modules, or `electron-updater` when it lands. The native Lindera binding is the first such entry. The Vite build of the Electron main process does not leave `dependencies` external by itself, so list each entry in `rolldownOptions.external` of the main build in `apps/desktop/vite.config.ts`. Without it, the build fails on the native `.node` file.
 
+## Packages that move together
+
+The four `@orpc/*` packages share one version, and `@orpc/tanstack-query` requires the exact same `@orpc/client`. Dependabot bumps them in one group, and a manual bump changes all four.
+
 ## Install scripts
 
 A new dependency with an install script goes in `allowBuilds` in `pnpm-workspace.yaml`. Otherwise pnpm fails the install and says so.

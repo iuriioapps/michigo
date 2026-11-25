@@ -15,6 +15,7 @@ import {
 
 import { channels } from "../shared/api";
 import { registerIpc } from "./ipc";
+import { registerRpc } from "./rpc";
 
 // import.meta.dirname is unavailable once bundled; derive it from the URL.
 const moduleDir = path.dirname(fileURLToPath(import.meta.url));
@@ -195,6 +196,7 @@ if (!app.requestSingleInstanceLock()) {
     });
     session.defaultSession.setPermissionCheckHandler(() => false);
     Menu.setApplicationMenu(buildMenu());
+    registerRpc(rendererUrl, log);
     registerIpc(rendererUrl, log);
     createWindow();
 

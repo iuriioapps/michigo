@@ -6,10 +6,11 @@ import { type Logger, describeRuntime } from "@michigo/core";
 import { CreateProjectInputSchema } from "@michigo/core/schemas";
 import { RendererLogLineSchema } from "@michigo/log/renderer";
 import { vocabModule } from "@michigo/vocab";
-import { type IpcMainInvokeEvent, app, ipcMain } from "electron";
+import { app, ipcMain } from "electron";
 
 import { channels } from "../shared/api";
 import { createProject, listProjects } from "./projects";
+import { trustedSender } from "./trusted-sender";
 
 const RENDERER_LINES_PER_SECOND = 100;
 
@@ -30,20 +31,7 @@ export function registerIpc(
   rendererUrl: string,
   log: { readonly main: Logger; readonly renderer: Logger },
 ): void {
-  // Normalized, so a dev server URL without a trailing slash still matches.
-  const trustedUrl = new URL(rendererUrl).href;
-
-  function isTrustedSender(event: IpcMainInvokeEvent): boolean {
-    const url = URL.parse(event.senderFrame?.url ?? "");
-
-    if (url === null) {
-      return false;
-    }
-    // Hash routing changes only the fragment; the page itself must match.
-    url.hash = "";
-
-    return url.href === trustedUrl;
-  }
+  const isTrustedSender = trustedSender(rendererUrl);
 
   const warnedChannels = new Set<string>();
 
