@@ -12,7 +12,7 @@ updates:
         patterns: ["react", "react-dom", "@types/react", "@types/react-dom"]
     ignore:
       # An Electron major changes the bundled Node, so .nvmrc and @types/node
-      # must move with it (see "Node version pinning" in CLAUDE.md). Bump it
+      # must move with it (see .claude/rules/dependencies.md). Bump it
       # by hand as a deliberate decision.
       - dependency-name: electron
         update-types: ["version-update:semver-major"]
