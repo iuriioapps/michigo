@@ -1,38 +1,27 @@
 import { randomUUID } from "node:crypto";
-import process from "node:process";
 
-import { ankiModule } from "@michigo/anki";
-import { type Logger, describeRuntime } from "@michigo/core";
-import { CreateProjectInputSchema } from "@michigo/core/schemas";
+import type { Logger } from "@michigo/core";
 import { RendererLogLineSchema } from "@michigo/log/renderer";
-import { vocabModule } from "@michigo/vocab";
-import { app, ipcMain } from "electron";
+import { ipcMain } from "electron";
 
 import { channels } from "../shared/api";
-import { createProject, listProjects } from "./projects";
 import { trustedSender } from "./trusted-sender";
 
 const RENDERER_LINES_PER_SECOND = 100;
 
 /**
- * Registers every IPC handler the renderer is allowed to reach.
+ * Registers `log:write`, the one channel not yet on the oRPC contract in
+ * `electron/rpc/`. It parses its input with `RendererLogLineSchema`.
  *
- * Rule for handlers that take arguments: treat anything arriving from the
- * renderer as untrusted and parse it with a zod schema before use, exactly as
- * a server validates an HTTP body. The schema comes from `@michigo/core`, or
- * from the package that owns the channel's shape, as `log:write` does. `project:create`
- * below is the reference implementation — copy it.
- *
- * Every handler goes through `handle`, which rejects calls from any frame
- * other than the app's own page at `rendererUrl`. It also makes the
- * `actionId` of the call and logs its start, its end and any failure.
+ * `handle` rejects calls from any frame other than the app's own page at
+ * `rendererUrl`. It also makes the `actionId` of the call and logs its start,
+ * its end and any failure.
  */
 export function registerIpc(
   rendererUrl: string,
   log: { readonly main: Logger; readonly renderer: Logger },
 ): void {
   const isTrustedSender = trustedSender(rendererUrl);
-
   const warnedChannels = new Set<string>();
 
   function handle(
@@ -72,26 +61,6 @@ export function registerIpc(
       }
     });
   }
-
-  handle(channels.appInfo, () =>
-    describeRuntime({
-      app: app.getName(),
-      version: app.getVersion(),
-      modules: [vocabModule, ankiModule],
-      electron: process.versions.electron,
-    }),
-  );
-
-  handle(channels.projectList, () => listProjects());
-
-  handle(channels.projectCreate, (raw) => {
-    // Never trust the renderer. A parse failure throws, which Electron turns
-    // into a rejected promise on the other side — TanStack Query surfaces it
-    // as a mutation error, so no extra plumbing is needed.
-    const input = CreateProjectInputSchema.parse(raw);
-
-    return createProject(input);
-  });
 
   // A compromised page must not be able to push the real lines out of the log.
   let windowStart = 0;

@@ -1,10 +1,11 @@
 import { PROJECT_NAME_MAX_LENGTH } from "@michigo/core/schemas";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createContext, useCallback, useContext, useState, type ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogBody, DialogFooter } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import { useCreateProject } from "@/lib/queries";
+import { orpc } from "@/lib/rpc";
 
 interface NewProjectDialogProps {
   open: boolean;
@@ -13,7 +14,13 @@ interface NewProjectDialogProps {
 
 function NewProjectDialog({ open, onClose }: NewProjectDialogProps) {
   const [name, setName] = useState("");
-  const createProject = useCreateProject();
+  const queryClient = useQueryClient();
+  // The grid and the sidebar both read the list, so invalidating it updates both.
+  const createProject = useMutation(
+    orpc.projects.create.mutationOptions({
+      onSuccess: () => queryClient.invalidateQueries({ queryKey: orpc.projects.key() }),
+    }),
+  );
 
   // Every exit funnels through here, so reopening always starts clean — a
   // stale name or a stale error from the last attempt would both be confusing.

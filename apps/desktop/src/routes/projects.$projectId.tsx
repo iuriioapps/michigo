@@ -4,13 +4,13 @@ import { ArrowLeft } from "lucide-react";
 
 import { PageHeader } from "@/components/page-header";
 import { buttonClasses } from "@/components/ui/button";
-import { projectsQuery } from "@/lib/queries";
+import { orpc } from "@/lib/rpc";
 
 export const Route = createFileRoute("/projects/$projectId")({ component: ProjectPage });
 
 function ProjectPage() {
   const { projectId } = Route.useParams();
-  const projects = useQuery(projectsQuery);
+  const projects = useQuery(orpc.projects.list.queryOptions());
   // Derived from the list rather than fetched on its own. A dedicated
   // `project:get` channel is worth adding once the detail view needs fields the
   // list rows do not carry — right now there are none.

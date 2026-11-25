@@ -5,7 +5,7 @@ import { RefreshCw } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { appInfoQuery } from "@/lib/queries";
+import { orpc } from "@/lib/rpc";
 
 export const Route = createFileRoute("/settings")({ component: SettingsPage });
 
@@ -20,7 +20,7 @@ function DetailRow({ label, value }: { label: string; value: string }) {
 
 function SettingsPage() {
   const queryClient = useQueryClient();
-  const info = useQuery(appInfoQuery);
+  const info = useQuery(orpc.app.info.queryOptions());
 
   return (
     <>
@@ -29,7 +29,7 @@ function SettingsPage() {
           variant="outline"
           disabled={info.isFetching}
           onClick={() => {
-            void queryClient.invalidateQueries({ queryKey: appInfoQuery.queryKey });
+            void queryClient.invalidateQueries({ queryKey: orpc.app.info.key() });
           }}
         >
           <RefreshCw className={info.isFetching ? "animate-spin" : undefined} />

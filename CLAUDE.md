@@ -55,7 +55,7 @@ The main thread of the main process only validates IPC input and passes work on.
 - A Dictionary build runs in a short-lived worker of its own, writes a temporary file and renames it into `reference/`.
 - The tokenizer utility process opens no database. It returns tokens, and the storage worker writes words and occurrences in one transaction.
 - One transaction covers one item (one Source, one CSV import, one Anki update). An action over many items commits each item on its own.
-- Every action that reaches the main process shows a pending state, ignores a repeat while pending and leaves the rest of the window usable. An action longer than about 1 s shows progress, and it can be canceled where it commits item by item.
+- Every action that reaches the main process shows a pending state, ignores a repeat while pending and leaves the rest of the window usable. An action longer than about 1 s shows progress, and it can be canceled where it commits item by item. Such an action is an event iterator procedure (see `.claude/rules/ipc.md`).
 
 ## Quality targets
 
@@ -67,8 +67,8 @@ These files load when you open a file that matches their paths. When you create 
 
 | File | Loads for | Covers |
 | --- | --- | --- |
-| `.claude/rules/ipc.md` | `apps/desktop/electron/`, `apps/desktop/shared/`, `src/lib/queries.ts` | Input validation and the steps to add a channel |
-| `.claude/rules/renderer.md` | `apps/desktop/src/` | Routing and UI components |
+| `.claude/rules/ipc.md` | `apps/desktop/electron/`, `apps/desktop/shared/`, `src/lib/rpc.ts` | The oRPC contract, input validation and the steps to add a procedure |
+| `.claude/rules/renderer.md` | `apps/desktop/src/` | Routing, data from the main process and UI components |
 | `.claude/rules/tokenizer.md` | `packages/tokenizer/` | Lindera and the dictionary build |
 | `.claude/rules/dependencies.md` | `package.json` files, `pnpm-workspace.yaml`, `vite.config.ts`, `.nvmrc`, `dependabot.yml` | Where a dependency goes and the Node version pin |
 

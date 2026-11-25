@@ -7,7 +7,7 @@ import { useNewProject } from "@/components/new-project-dialog";
 import { PageHeader } from "@/components/page-header";
 import { SegmentedControl } from "@/components/segmented-control";
 import { Button } from "@/components/ui/button";
-import { projectsQuery } from "@/lib/queries";
+import { orpc } from "@/lib/rpc";
 
 import { ProjectCard } from "./-components/project-card";
 
@@ -19,7 +19,7 @@ const sortOptions = [
 ] as const;
 
 function ProjectsPage() {
-  const projects = useQuery(projectsQuery);
+  const projects = useQuery(orpc.projects.list.queryOptions());
   const openNewProject = useNewProject();
   // Nothing reads this yet — the card design and its ordering are a separate
   // effort. It is here so the control is wired rather than decorative.
