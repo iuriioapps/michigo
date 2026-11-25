@@ -1,6 +1,6 @@
 # Michigo: working notes
 
-Rules that the code cannot state for itself. Read before adding a feature.
+Rules that the code cannot state for itself. Rules for one area live in `.claude/rules/` and load when you open a file in that area (see "Area rules").
 
 ## Pull request size
 
@@ -9,142 +9,85 @@ Every change ships as a **stack of small PRs** made with `gh stack` (the `gh-sta
 Three checkpoints, each with its own check:
 
 1. Before the first commit, slice the work and create the stack (`gh stack init`, `gh stack add`). Done when every planned slice fits the size above.
-2. Before every push, measure the branch against its parent: `git diff --shortstat <parent>...HEAD -- . ':!pnpm-lock.yaml' ':!**/routeTree.gen.ts'`. Push only when the numbers fit. When they do not, split the branch into a stack first.
+2. Before every push, run `pnpm check` and measure the branch against its parent: `git diff --shortstat <parent>...HEAD -- . ':!pnpm-lock.yaml' ':!**/routeTree.gen.ts'`. Push only when the check passes and the numbers fit. When they do not fit, split the branch into a stack first.
 3. Work that arrives after a PR is open (review fixes, a new request, a follow-up) goes on a new branch stacked on top with `gh stack add`, then through checkpoint 2.
 
-## Package dependency direction
+## Package boundaries
 
-Strictly one way:
+Imports go strictly one way:
 
 ```text
 apps/desktop ─┬─> storage ──────────────> vocab, reference, pitch, audio ─┐
               └─> tokenizer, source, grammar, anki, manifest, log ────────┴─> core
 ```
 
-Decided in `docs/adr/0007-packages-do-not-import-each-other-and-the-app-composes.md`. Only `core`, `vocab`, `anki` and `log` exist today. Create each other package when its first feature lands. The rules for code:
+Decided in `docs/adr/0007-packages-do-not-import-each-other-and-the-app-composes.md`. Create each package when its first feature lands, with the layout of `packages/vocab`: `exports` pointing at `./src/index.ts`, a `typecheck` script and `@michigo/core` as a `workspace:*` dependency. The rules for code:
 
-- `core` imports no other package, and nothing in `packages/` imports from `apps/`.
+- `core` imports no other package, and code in `packages/` imports only packages, never `apps/`.
 - A package imports `core` and nothing else. The one exception is `storage`, which imports the store interfaces of the packages it serves.
-- Where several packages have to be combined, the composition happens in the app. See how `describeRuntime` receives its modules as an argument instead of importing them.
+- Where several packages have to be combined, the app composes them. See how `describeRuntime` receives its modules as an argument instead of importing them.
 - A package that logs takes a `Logger` (a type in `core`) as an argument. Only the app, and the worker entries it owns, import `@michigo/log`.
-- A package that keeps data declares its store as an interface in domain terms. **SQL exists only in `storage`.**
+- A package that keeps data declares its store as an interface in domain terms. **SQL lives only in `storage`.**
 - `core` holds the data shapes that packages and the renderer exchange. Logic goes to the package that owns the capability.
 - Each package declares what it imports in its own `package.json`, so pnpm refuses an import that breaks these rules.
+- Only `packages/tokenizer` imports `lindera`, the native binding. Read ADR 0005 and `.claude/rules/tokenizer.md` before you create that package.
 
-## `@michigo/core` and `@michigo/log` have two entry points
+### Pure and Node entry points
 
-- `@michigo/core/schemas` is **pure**. No `node:*` imports, ever. The Electron renderer imports from here, so a Node built-in would break the browser bundle.
-- `@michigo/core` (the `.` entry) may use Node APIs. Only the main process imports it.
+`@michigo/core` and `@michigo/log` each have two entry points. The renderer bundle breaks on any `node:*` import, so code that the renderer can reach stays pure:
 
-`@michigo/log` has the same split: `@michigo/log/renderer` is pure, and its `.` entry (the logger and the log file) is for the main process and workers.
+| Entry                   | Imported by                      | Node APIs |
+| ----------------------- | -------------------------------- | --------- |
+| `@michigo/core/schemas` | The renderer and everything else | None      |
+| `@michigo/core`         | The main process                 | Allowed   |
+| `@michigo/log/renderer` | The renderer                     | None      |
+| `@michigo/log`          | The main process and workers     | Allowed   |
 
-Keeping new code on the correct side of this split is much cheaper than untangling it later.
-
-## Everything in the app goes in `devDependencies`
-
-Vite bundles `devDependencies`. The Vite build of the Electron main process does not leave `dependencies` external by itself: list each entry of `dependencies` in `rolldownOptions.external` of the main build in `vite.config.ts`, or the build fails on the native `.node` file. One consequence:
-
-- electron-builder copies only `dependencies` into the packaged app, so an empty `dependencies` keeps the app small and avoids pnpm symlink problems.
-
-`dependencies` is reserved for things that genuinely cannot be bundled: native modules, or `electron-updater` when it lands. The native Lindera binding is the first such entry.
-
-## Tokenizer
-
-Decided in `docs/adr/0005-unidic-2025-12-with-the-native-lindera-binding.md`. The rules for code:
-
-- Only `packages/tokenizer` imports `lindera`. It names the binding as a peer dependency, and the desktop app carries it in `dependencies`.
-- Use the native `lindera` binding only, never `lindera-wasm`. The WASM build needs a 2 GB heap for this dictionary, and Lindera's filters do nothing in it.
-- The tokenizer dictionary is never in the repo, the installer or a bundle. It downloads on first start into one folder per build in the shared data folder.
-- One constant names the dictionary build (UniDic version plus Lindera version). The app refuses to tokenize with any other build.
-- Do not change the UniDic version within a major version of Michigo. Lexeme keys differ between versions, so a change is a migration.
-
-## Validate at the IPC boundary
-
-Treat everything arriving from the renderer as untrusted, exactly as a server treats an HTTP body. Parse it with a zod schema inside the handler before use. The schema comes from `@michigo/core`, or from the package that owns the channel's shape (`log:write` uses `RendererLogLineSchema` from `@michigo/log/renderer`). The renderer is a locked-down browser tab; a compromised page or dependency must not be able to drive the main process.
-
-`project:create` in `apps/desktop/electron/ipc.ts` is the reference implementation: it parses with `CreateProjectInputSchema` before touching the argument. Copy it. A parse failure throws, Electron rejects the renderer's promise, and TanStack Query surfaces it as a mutation error; no extra plumbing.
-
-`app:info` takes no arguments, so it has nothing to parse.
-
-Register handlers through the local `handle()` in `registerIpc`, never `ipcMain.handle` directly. `handle()` rejects calls from any frame other than the app's own page.
+Put new code on the correct side of this split from the start. Moving it later is expensive.
 
 ## Threads and I/O
 
 The main thread of the main process only validates IPC input and passes work on. Decided in issue #117 and recorded in ADR 0002. The rules for code:
 
-- No synchronous I/O on the main thread: no `*Sync` file calls and no `DatabaseSync`. Async Node I/O (`fs/promises`, `fetch`, AnkiConnect) is allowed there.
+- The main thread uses async I/O only: `fs/promises`, `fetch`, AnkiConnect. `*Sync` file calls and `DatabaseSync` run in workers.
 - Any step that can take more than about 50 ms runs off the main thread, I/O or CPU. Hashing the tokenizer archive and unzipping a dropped archive use streaming async APIs or a worker.
 - One storage worker (a worker thread) holds the only connection to `michigo.db` and the read-only Dictionary connections. It runs the migrations before it reports ready. The stores reach it through their async ports.
 - A Dictionary build runs in a short-lived worker of its own, writes a temporary file and renames it into `reference/`.
-- The tokenizer utility process never opens a database. It returns tokens, and the storage worker writes words and occurrences in one transaction.
+- The tokenizer utility process opens no database. It returns tokens, and the storage worker writes words and occurrences in one transaction.
 - One transaction covers one item (one Source, one CSV import, one Anki update). An action over many items commits each item on its own.
 - Every action that reaches the main process shows a pending state, ignores a repeat while pending and leaves the rest of the window usable. An action longer than about 1 s shows progress, and it can be canceled where it commits item by item.
 
 ## Quality targets
 
-Every implementation issue meets the performance budgets, accessibility checks, translation rules, `Temporal` rules and logging rules in `docs/quality-targets.md`. Read it before adding a feature.
+Read `docs/quality-targets.md` before you work on any of these: an action with a performance budget, visible UI text, Japanese text, accessibility, dates and times, or anything that logs. Every implementation issue meets its targets, and its PR records the budgets it measured.
 
-## Adding an IPC channel
+## Area rules
 
-Touch these four places, in order:
+These files load when you open a file that matches their paths. When you create the first file of an area, read its rule file first.
 
-1. `apps/desktop/shared/api.ts`: add the method to `DesktopApi` and its name to `channels`. This is where you decide what the feature looks like.
-2. `apps/desktop/electron/ipc.ts`: `handle()`, parsing any input.
-3. `apps/desktop/electron/preload.ts`: expose the function. Forgetting this is a compile error, because the object is typed as `DesktopApi`.
-4. `apps/desktop/src/lib/queries.ts`: a query or mutation, then use it. A fire-and-forget call (`log:write`) or an event that main sends (`app:error`) has no query, and the code that needs it calls `window.michigo` directly.
+| File | Loads for | Covers |
+| --- | --- | --- |
+| `.claude/rules/ipc.md` | `apps/desktop/electron/`, `apps/desktop/shared/`, `src/lib/queries.ts` | Input validation and the steps to add a channel |
+| `.claude/rules/renderer.md` | `apps/desktop/src/` | Routing and UI components |
+| `.claude/rules/tokenizer.md` | `packages/tokenizer/` | Lindera and the dictionary build |
+| `.claude/rules/dependencies.md` | `package.json` files, `pnpm-workspace.yaml`, `vite.config.ts`, `.nvmrc`, `dependabot.yml` | Where a dependency goes and the Node version pin |
 
-Never expose `ipcRenderer` itself to the page, only named functions.
+## Toolchain
 
-## Routing
-
-TanStack Router, file-based, with three constraints the code cannot explain:
-
-- **Hash history, not browser history.** Production loads the renderer from a `file://` URL, where pushState paths do not resolve. Set in `src/router.tsx`.
-- **`src/routeTree.gen.ts` is generated but committed.** The plugin only runs under `vite dev` / `vite build`, and CI runs `turbo run typecheck` on its own. It is excluded from lint and format instead of from git.
-- **`autoCodeSplitting` stays off.** Splitting emits dynamic `import()`s, and Chromium treats `file://` as an opaque origin, so they fail once packaged.
-
-A `-` prefix keeps a path out of the route tree: `src/routes/-components/` is where components used by exactly one route live. Test files are excluded via `routeFileIgnorePattern`, or `settings.test.tsx` would become `/settings/test`.
-
-## UI components
-
-Hand-written styling, no shadcn, no `cva`. Behavior (focus, anchoring, keyboard) comes from Base UI, a headless library; see `docs/adr/0008-base-ui-for-behavior-and-tanstack-for-state-and-tables.md`. A variant is a plain lookup object:
-
-```ts
-const variants = { default: "…", outline: "…" } as const;
-```
-
-Two rules follow from `cn()` being a plain join with no `tailwind-merge`:
-
-- A variant map never repeats a utility the base string already sets.
-- `className` from a caller is for **layout only** (margin, width, grid placement), never to override a variant's padding or color.
-
-There is no `asChild`. A component that others need to borrow the look of exports its class string too, as `button.tsx` exports `buttonClasses()`; a router `<Link>` takes that directly.
-
-## Node version pinning
-
-`.nvmrc` and `@types/node` are both pinned to 24 because Electron 44.11.3 bundles Node 24.22.2. The shared packages execute inside Electron main, so typing them against a newer Node would let code compile that crashes in the packaged app. Bump these when Electron bumps its bundled Node, not before.
-
-Node 24.22.1 is the minimum, because earlier versions have known security vulnerabilities, and Node 25 is the ceiling, because Electron does not bundle a newer Node yet. `engines` in the root `package.json` sets both (`>=24.22.1 <25`), and `engineStrict` in `pnpm-workspace.yaml` makes the install fail outside that range. Dependabot ignores `@types/node` 25 and later for the same reason; raise the ceiling in both places when Electron bumps its bundled Node. The packaged app runs on the Node that Electron bundles, so never move `electron` back to a release that bundles an older Node.
-
-## Toolchain notes
-
-- Lint/format is **Oxlint + Oxfmt**, not ESLint/Prettier: `typescript-eslint` refuses to load against TypeScript 7, whereas `oxlint-tsgolint` builds real TS programs on the Go compiler.
-- `erasableSyntaxOnly` is on, which bans `enum` and constructor parameter properties. Use union types and plain assignment.
-- `apps/desktop/src/components/ui/` is hand-written and linted like everything else. The only excluded file is the generated `src/routeTree.gen.ts`.
-- New dependencies with install scripts must be added to `allowBuilds` in `pnpm-workspace.yaml`, otherwise pnpm fails the install and tells you so.
+- Lint and format with Oxlint and Oxfmt. `typescript-eslint` refuses to load against TypeScript 7, and `oxlint-tsgolint` builds real TS programs on the Go compiler.
+- `erasableSyntaxOnly` is on, so write union types instead of `enum` and assign fields in the constructor body.
 
 ## Writing Markdown
 
-Oxfmt runs with `proseWrap: "never"`, so it joins every paragraph onto one line. Do not hard-wrap by hand; the editor soft-wraps.
+These rules cover docs, issue bodies and PR bodies. Oxfmt runs with `proseWrap: "never"` and joins every paragraph onto one line, so write each paragraph as one line.
 
-- Use headings for anything a reader may want to link to or find in the outline. A finding, a step or a topic gets a heading, not a bold label.
-- Do not start bullets or paragraphs with a bold label (`- **Thing.** text`). If items need labels, use headings or a table.
-- Use bold at most once per section, for the one thing a skimming reader must not miss. No bold for emphasis in the middle of a sentence.
-- No `---` horizontal rules between sections. Headings are the separators.
+- Use headings for anything a reader may want to link to or find in the outline. A finding, a step or a topic gets a heading. Labeled items go in headings or a table, not in bullets that start with a bold label.
+- Use bold at most once per section, for the one thing a skimming reader must not miss.
+- Headings separate sections. Leave out `---` rules.
 - A bullet is one or two lines. If it needs more, make it a paragraph under a heading.
 - Every fenced code block has a language tag. Use `text` for diagrams and trees.
-- Do not number headings (`## 1. Foo`). Numbers break anchors when sections move.
-- No em-dashes. Use a colon, parentheses or a new sentence.
+- Leave headings unnumbered, because numbers break anchors when sections move.
+- Use a colon, parentheses or a new sentence where an em-dash would go.
 - Before you finish a doc, read only its headings. The outline alone must tell the reader what is where.
 
 ## Agent skills

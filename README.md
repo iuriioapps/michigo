@@ -30,16 +30,17 @@ Run `pnpm fmt` to apply formatting; `pnpm check` only verifies it.
 
 ## Layout
 
-```
+```text
 apps/
   desktop/   Electron + React + Tailwind, with hand-written UI components
 packages/
   core/      shared primitives and zod schemas
   vocab/     vocabulary coverage analysis  (scaffold)
   anki/      Anki integration              (scaffold)
+  log/       JSON Lines log for every process
 ```
 
-Dependencies run one way only: `vocab` and `anki` depend on `core`, the desktop app depends on all three, and `core` never depends back. See `CLAUDE.md` for the full rules.
+Dependencies run one way only: every package depends on `core`, the desktop app depends on the packages, and `core` depends on none of them. See `CLAUDE.md` for the full rules.
 
 ## Proof of life
 
