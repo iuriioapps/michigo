@@ -19,8 +19,8 @@ A spike over a Node `MessageChannel` with oRPC 1.16 confirmed the middleware ord
 
 - Raw `ipcMain.handle`, split into one file per domain. Rejected: a channel still touches four places, and progress and cancel need a side channel of our own.
 - A homegrown contract map with a generic register loop and a generic preload. Rejected: about 150 lines of our own code before progress, cancel and query keys, which we would then have to maintain.
-- electron-trpc and its tRPC v11 forks. Rejected: the original targets tRPC v10, and the forks are young with one maintainer each.
-- `@egoist/tipc` and `@electron-toolkit/typed-ipc`. Rejected: they type `invoke` and `send` but bring no input validation, streaming or cancel.
+- electron-trpc and its tRPC v11 forks. Rejected: the original targets tRPC v10, and the v11 support lives in forks outside the original project.
+- `@egoist/tipc` and `@electron-toolkit/typed-ipc`. Rejected: they type the calls, but neither derives TanStack Query options from the contract, and progress and cancel over IPC stay ours to build.
 
 ## Consequences
 
