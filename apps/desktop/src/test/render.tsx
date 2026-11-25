@@ -1,12 +1,11 @@
-import type { CreateProjectInput, Project, RuntimeInfo } from "@michigo/core/schemas";
-import type { ClientContext, ClientLink } from "@orpc/client";
+import type { Project, RuntimeInfo } from "@michigo/core/schemas";
+import { type Client, type ClientContext, type ClientLink, EventPublisher } from "@orpc/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { RouterProvider, createMemoryHistory, createRouter } from "@tanstack/react-router";
 import { render } from "@testing-library/react";
 
-import type { DesktopApi } from "../../shared/api";
 import { RouteError, RouteNotFound } from "../components/route-fallbacks";
-import { setRpcLink } from "../lib/rpc";
+import { type RpcClient, setRpcLink } from "../lib/rpc";
 import { routeTree } from "../routeTree.gen";
 
 export const runtimeInfo: RuntimeInfo = {
@@ -21,15 +20,23 @@ export const runtimeInfo: RuntimeInfo = {
   ],
 };
 
-/** The procedures of the contract and the rest of `window.michigo`, as plain functions. */
-export interface ApiStub {
-  readonly app: { info(): Promise<RuntimeInfo>; onError: DesktopApi["app"]["onError"] };
-  readonly projects: {
-    list(): Promise<Project[]>;
-    create(input: CreateProjectInput): Promise<Project>;
-  };
-  readonly log: DesktopApi["log"];
-}
+type Stub<T> = {
+  readonly [K in keyof T]: T[K] extends Client<
+    infer _Context,
+    infer Input,
+    infer Output,
+    infer _Error
+  >
+    ? (input: Input) => Promise<Streamed<Output>>
+    : Stub<T[K]>;
+};
+
+// A stub streams with any async iterator, not only oRPC's own class.
+type Streamed<Output> =
+  Output extends AsyncIterable<infer Value> ? AsyncIterator<Value> & AsyncIterable<Value> : Output;
+
+/** Every procedure of the contract as a plain function, so a missing one fails to compile. */
+export type ApiStub = Stub<RpcClient>;
 
 /**
  * A stand-in for the main process.
@@ -59,7 +66,11 @@ export function createApiStub(
   seed.forEach(add);
 
   return {
-    app: { info: () => Promise.resolve(runtimeInfo), onError: () => () => undefined },
+    app: {
+      info: () => Promise.resolve(runtimeInfo),
+      // A stream that never yields: main reports no error unless a test publishes one.
+      errors: () => Promise.resolve(new EventPublisher<{ error: string }>().subscribe("error")),
+    },
     projects: {
       list: () => Promise.resolve([...projects]),
       create: (input) => Promise.resolve(add(input.name)),
@@ -92,13 +103,12 @@ function linkTo(api: ApiStub): ClientLink<ClientContext> {
 }
 
 /**
- * The renderer only talks to main through the oRPC client and `window.michigo`,
- * so the whole UI is testable by faking both. No Electron process is started.
+ * The renderer only talks to main through the oRPC client, so the whole UI is
+ * testable by pointing it at a stub. No Electron process is started.
  *
  * Memory history, where the app uses hash history — tests need no URL.
  */
 export function renderRoute(path: string, api: ApiStub = createApiStub()) {
-  window.michigo = { app: { onError: api.app.onError }, log: api.log };
   setRpcLink(linkTo(api));
 
   const queryClient = new QueryClient({

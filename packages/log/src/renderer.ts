@@ -22,7 +22,7 @@ const LogNameSchema = z
   .max(100);
 
 /**
- * The only shape the renderer may send on `log:write`. The main process adds
+ * The only shape the renderer may send on `log.write`. The main process adds
  * the time and the process, and turns `error` into name, code and frames.
  */
 export const RendererLogLineSchema = z.object({

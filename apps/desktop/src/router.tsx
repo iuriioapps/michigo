@@ -2,6 +2,7 @@ import { errorLine } from "@michigo/log/renderer";
 import { createHashHistory, createRouter } from "@tanstack/react-router";
 
 import { RouteError, RouteNotFound } from "./components/route-fallbacks";
+import { rpc } from "./lib/rpc";
 import { routeTree } from "./routeTree.gen";
 
 export const router = createRouter({
@@ -13,7 +14,7 @@ export const router = createRouter({
   defaultNotFoundComponent: RouteNotFound,
   // The error screen shows only a code, so the log keeps what happened.
   defaultOnCatch: (error) => {
-    window.michigo.log.write(errorLine("route.error", error)).catch(() => undefined);
+    rpc.log.write(errorLine("route.error", error)).catch(() => undefined);
   },
 });
 

@@ -5,11 +5,11 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import "./index.css";
-import { connectRpc } from "./lib/rpc";
+import { connectRpc, rpc } from "./lib/rpc";
 import { router } from "./router";
 
 connectRpc();
-logUncaughtErrors(window, (line) => window.michigo.log.write(line));
+logUncaughtErrors(window, (line) => rpc.log.write(line));
 
 const queryClient = new QueryClient({
   // Queries hit local IPC, not a network. A rejection is a deterministic

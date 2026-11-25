@@ -9,8 +9,6 @@ paths:
 
 The IPC API is one oRPC contract, served by main over one MessagePort. Decided in `docs/adr/0010-ipc-is-an-orpc-contract-over-one-message-port.md`.
 
-`log.write` and the `app:error` event still use `handle()` and `channels` in `electron/ipc.ts`, `shared/api.ts` and `preload.ts`. They move to the contract next. Add every new procedure to the contract.
-
 ## Add a procedure
 
 1. `apps/desktop/shared/contract/<domain>.ts`: declare it on `base` with `.input()` and `.output()`. This is where you decide what the feature looks like. A new domain file also goes into `contract` in `shared/contract/index.ts`.
@@ -29,12 +27,13 @@ Treat everything arriving from the renderer as untrusted, exactly as a server tr
 
 ## Trusted sender
 
-The renderer gets its port through one handshake: it posts the port to its own window, `preload.ts` forwards it on `rpc:connect`, and `registerRpc` in `electron/rpc/index.ts` serves it. That handshake is the only access check, so it checks the sender frame against the app's own page and refuses any other frame. Keep it the only way in: features reach main through the contract, and `preload.ts` exposes the port forwarder and named functions only, never `ipcRenderer`.
+The renderer gets its port through one handshake: it posts the port to its own window, `preload.ts` forwards it on `rpc:connect`, and `registerRpc` in `electron/rpc/index.ts` serves it. That handshake is the only access check, so it checks the sender frame against the app's own page and refuses any other frame. Keep it the only way in: features reach main through the contract, and `preload.ts` stays the port forwarder alone, with no `contextBridge` API.
 
 ## Long actions and events
 
 - A procedure that can take more than about 1 s outputs `eventIterator(schema)`, yields progress from an async generator and stops when `signal` aborts. It commits item by item, so a cancel keeps the finished items.
-- An event that main sends to the renderer is an event iterator too, fed from an `EventPublisher`.
+- The logging middleware sees a stream only until main hands it over, so its `ipc.end` marks the start of the stream. A long action logs its own done, canceled and failed events.
+- An event that main sends to the renderer is an event iterator too, fed from an `EventPublisher`. `app.errors` is the reference: `createMainErrors` in `electron/rpc/app.ts`.
 - `electron/rpc/transport.test.ts` shows both working over a real port.
 
 ## Handlers and logging

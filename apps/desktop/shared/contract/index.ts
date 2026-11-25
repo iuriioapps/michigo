@@ -1,4 +1,5 @@
 import { app } from "./app";
+import { log } from "./log";
 import { projects } from "./projects";
 
 /**
@@ -10,6 +11,6 @@ import { projects } from "./projects";
  * The renderer imports this file, so it and its domain files import schemas only
  * from the pure entry points `@michigo/core/schemas` and `@michigo/log/renderer`.
  */
-export const contract = { app, projects };
+export const contract = { app, projects, log };
 
 export type { RpcMeta } from "./base";
