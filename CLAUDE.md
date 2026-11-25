@@ -2,6 +2,16 @@
 
 Rules that the code cannot state for itself. Read before adding a feature.
 
+## Pull request size
+
+Every change ships as a **stack of small PRs** made with `gh stack` (the `gh-stack` skill has the commands). A PR aims at about 500 changed lines and 15 files. It goes up to 1,000 lines or 25 files only for a slice that cannot be split. Generated files (`pnpm-lock.yaml`, `src/routeTree.gen.ts`) do not count.
+
+Three checkpoints, each with its own check:
+
+1. Before the first commit, slice the work and create the stack (`gh stack init`, `gh stack add`). Done when every planned slice fits the size above.
+2. Before every push, measure the branch against its parent: `git diff --shortstat <parent>...HEAD -- . ':!pnpm-lock.yaml' ':!**/routeTree.gen.ts'`. Push only when the numbers fit. When they do not, split the branch into a stack first.
+3. Work that arrives after a PR is open (review fixes, a new request, a follow-up) goes on a new branch stacked on top with `gh stack add`, then through checkpoint 2.
+
 ## Package dependency direction
 
 Strictly one way:
