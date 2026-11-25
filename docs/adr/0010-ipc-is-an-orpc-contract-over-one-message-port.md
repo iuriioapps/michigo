@@ -13,7 +13,7 @@ The renderer reaches the main process through an IPC API. Each channel touched f
 - A long action is an async generator that yields progress. An abort on the client reaches the handler's `signal` over the port. Events from main to the renderer use the same mechanism with `EventPublisher`.
 - `@orpc/tanstack-query` derives query options, mutation options and query keys from the contract, so there is no hand-written query file.
 
-A spike over a Node `MessageChannel` with oRPC 1.16.6 confirmed the middleware order, the validation error (`ORPCError` `BAD_REQUEST` with the zod issues), streaming and the abort reaching the handler.
+A spike over a Node `MessageChannel` with oRPC 1.16 confirmed the middleware order, the validation error (`ORPCError` `BAD_REQUEST` with the zod issues), streaming and the abort reaching the handler.
 
 ## Considered options
 
@@ -24,7 +24,7 @@ A spike over a Node `MessageChannel` with oRPC 1.16.6 confirmed the middleware o
 
 ## Consequences
 
-Four packages are new in `apps/desktop`: `@orpc/contract`, `@orpc/server`, `@orpc/client` and `@orpc/tanstack-query`. They share one version and move together. The sender check no longer runs per call, so the handshake is the only place that grants access, and the preload must accept the port only from its own window.
+Four packages are new in `apps/desktop`: `@orpc/contract`, `@orpc/server`, `@orpc/client` and `@orpc/tanstack-query`. They share one version and move together. oRPC 2 is in beta, so Michigo stays on 1.x until 2 is stable and then upgrades as a deliberate step. The sender check no longer runs per call, so the handshake is the only place that grants access, and the preload must accept the port only from its own window.
 
 A procedure is named by its path, for example `projects.create`, and the log uses that path as `channel`. The oRPC serializer has no Temporal type, so a Temporal object would arrive as an ISO string: an instant still crosses IPC as epoch milliseconds.
 
