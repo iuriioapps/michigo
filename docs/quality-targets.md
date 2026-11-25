@@ -84,7 +84,7 @@ The reasons are in `docs/adr/0009-i18next-with-text-only-in-the-app-catalog.md`.
 ## Dates and times
 
 - Use `Temporal` for all date and time code in the main process, the workers and the renderer. Use `Date` only where an API gives one, such as `fs.stat` or AnkiConnect, and convert it at once with `Temporal.Instant.fromEpochMilliseconds`.
-- Across IPC and in `michigo.db`, an instant is an integer of epoch milliseconds. Structured clone throws `DataCloneError` on a Temporal object, and `Temporal.Instant.toString()` varies its fraction digits, so ISO strings do not sort as text in SQLite.
+- Across IPC and in `michigo.db`, an instant is an integer of epoch milliseconds. The oRPC serializer has no Temporal type and would send a Temporal object as an ISO string, and `Temporal.Instant.toString()` varies its fraction digits, so ISO strings do not sort as text in SQLite.
 - Format dates with `Temporal` and `Intl` in the active language.
 - `lib` includes `esnext.temporal`. Vitest runs on Node 24, which has no `Temporal`, so the test setup loads `temporal-polyfill`. The app always uses the native one in Electron 44.
 
@@ -105,11 +105,11 @@ The log exists so that a person or an AI agent can follow one action through eve
 | `process` | `main`, `storage`, `dictionary-build`, `tokenizer` or `renderer` |
 | `scope` | The package or module, for example `anki` |
 | `event` | A stable name, for example `source.import.done` |
-| `actionId` | The id of one learner action, made in the IPC handler and passed to the storage worker and the tokenizer process |
+| `actionId` | The id of one learner action, made by the logging middleware of the IPC router and passed to the storage worker and the tokenizer process |
 | fields | Ids, counts, `durationMs`, versions, HTTP status codes |
 | `error` | Name, code and stack frames (see "Errors from libraries") |
 
-Every IPC call logs its start and its end with `durationMs` at `info`. The exception is `log:write`, which carries a renderer line: logging that call would add two lines for each line it writes. A failure logs at `error` with its stack. Uncaught errors and unhandled rejections in every process go to the log.
+Every IPC call logs its start and its end with `durationMs` at `info`. The exception is `log.write`, which carries a renderer line: logging that call would add two lines for each line it writes. A failure logs at `error` with its stack. Uncaught errors and unhandled rejections in every process go to the log.
 
 ### What the log never holds
 

@@ -10,7 +10,8 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import type { contract } from "../../shared/contract";
 import { RPC_CONNECT } from "../../shared/ports";
-import { registerRpc, router } from "./index";
+import { createMainErrors } from "./app";
+import { createRpcContext, registerRpc, router } from "./index";
 
 type Listener = (event: unknown) => void;
 
@@ -39,10 +40,13 @@ function setup() {
       dataDir: "/data",
       homeDir: "/home/learner",
     });
-  const log = { main: logger("main"), renderer: logger("renderer") };
+  const context = createRpcContext(
+    { main: logger("main"), renderer: logger("renderer") },
+    createMainErrors(),
+  );
 
   listeners.clear();
-  registerRpc(rendererUrl, log);
+  registerRpc(rendererUrl, context);
 
   const connect = (event: unknown) => {
     const listener = listeners.get(RPC_CONNECT);
@@ -52,7 +56,7 @@ function setup() {
     listener(event);
   };
 
-  return { lines, connect, client: createRouterClient(router, { context: { log } }) };
+  return { lines, connect, client: createRouterClient(router, { context }) };
 }
 
 describe("the oRPC router", () => {

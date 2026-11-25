@@ -6,9 +6,14 @@ import { ZodRealError } from "zod";
 import type { $ZodIssue } from "zod/v4/core";
 
 import { contract } from "../../shared/contract";
+import type { MainErrors } from "./app";
+import type { RendererLineLimit } from "./log";
 
+/** What handlers share. `registerRpc` makes one for the life of the process. */
 export interface RpcContext {
   readonly log: { readonly main: Logger; readonly renderer: Logger };
+  readonly mainErrors: MainErrors;
+  readonly rendererLines: RendererLineLimit;
 }
 
 /** Each domain file implements its part of the contract from here. */

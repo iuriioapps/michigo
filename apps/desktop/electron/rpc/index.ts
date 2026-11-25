@@ -3,11 +3,16 @@ import { ipcMain } from "electron";
 
 import { RPC_CONNECT } from "../../shared/ports";
 import { trustedSender } from "../trusted-sender";
-import { app } from "./app";
+import { type MainErrors, app } from "./app";
 import { type RpcContext, logCalls, os } from "./base";
+import { createRendererLineLimit, log as logRouter } from "./log";
 import { projects } from "./projects";
 
-export const router = os.use(logCalls).router({ app, projects });
+export const router = os.use(logCalls).router({ app, projects, log: logRouter });
+
+export function createRpcContext(log: RpcContext["log"], mainErrors: MainErrors): RpcContext {
+  return { log, mainErrors, rendererLines: createRendererLineLimit(log.main) };
+}
 
 /**
  * Serves the contract on the port that the preload forwards on `rpc:connect`.
@@ -16,7 +21,8 @@ export const router = os.use(logCalls).router({ app, projects });
  * here is the only one: a frame of another page gets no port and one warn line.
  * A reload sends a new port, and the old one closes with the old page.
  */
-export function registerRpc(rendererUrl: string, log: RpcContext["log"]): void {
+export function registerRpc(rendererUrl: string, context: RpcContext): void {
+  const { log } = context;
   const handler = new RPCHandler(router);
   const isTrusted = trustedSender(rendererUrl);
   let warned = false;
@@ -37,7 +43,7 @@ export function registerRpc(rendererUrl: string, log: RpcContext["log"]): void {
     if (port === undefined) {
       return;
     }
-    handler.upgrade(port, { context: { log } });
+    handler.upgrade(port, { context });
     port.start();
   });
 }

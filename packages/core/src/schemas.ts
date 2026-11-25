@@ -47,7 +47,7 @@ export const ProjectSchema = z.object({
 });
 export type Project = z.infer<typeof ProjectSchema>;
 
-/** The only shape the renderer is allowed to send on `project:create`. */
+/** The only shape the renderer is allowed to send on `projects.create`. */
 export const CreateProjectInputSchema = z.object({
   name: z.string().trim().min(1).max(PROJECT_NAME_MAX_LENGTH),
 });

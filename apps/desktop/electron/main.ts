@@ -13,9 +13,8 @@ import {
   shell,
 } from "electron";
 
-import { channels } from "../shared/api";
-import { registerIpc } from "./ipc";
-import { registerRpc } from "./rpc";
+import { createRpcContext, registerRpc } from "./rpc";
+import { createMainErrors } from "./rpc/app";
 
 // import.meta.dirname is unavailable once bundled; derive it from the URL.
 const moduleDir = path.dirname(fileURLToPath(import.meta.url));
@@ -65,25 +64,16 @@ function buildMenu(): Menu {
 
 const MAIN_ERROR = "main.uncaught";
 
-// Set while an error waits for a window that is still loading, or not open yet.
-// Cleared once sent, so a later window or reload does not show it again.
-let pendingMainError = false;
+// Keeps the code while no page listens, for example while a window loads, and
+// hands it to the next page once. A later reload does not show it again.
+const mainErrors = createMainErrors();
 let quitting = false;
 
 function reportMainError(log: Logger): void {
-  const windows = BrowserWindow.getAllWindows();
-
-  for (const window of windows) {
-    if (window.webContents.isLoading()) {
-      pendingMainError = true;
-    } else {
-      window.webContents.send(channels.appError, MAIN_ERROR);
-    }
-  }
-  if (windows.length > 0) {
+  mainErrors.report(MAIN_ERROR);
+  if (BrowserWindow.getAllWindows().length > 0) {
     return;
   }
-  pendingMainError = true;
   // A failure during startup can come before the first window, which would leave only
   // a dock icon. Not while quitting, or a window would flash before exit.
   if (app.isReady() && !quitting) {
@@ -126,14 +116,6 @@ function createWindow(): void {
     openExternally(url);
 
     return { action: "deny" };
-  });
-
-  // An error that came before this page listened would otherwise never show.
-  window.webContents.on("did-finish-load", () => {
-    if (pendingMainError) {
-      pendingMainError = false;
-      window.webContents.send(channels.appError, MAIN_ERROR);
-    }
   });
 
   window.once("ready-to-show", () => {
@@ -196,8 +178,7 @@ if (!app.requestSingleInstanceLock()) {
     });
     session.defaultSession.setPermissionCheckHandler(() => false);
     Menu.setApplicationMenu(buildMenu());
-    registerRpc(rendererUrl, log);
-    registerIpc(rendererUrl, log);
+    registerRpc(rendererUrl, createRpcContext(log, mainErrors));
     createWindow();
 
     app.on("activate", () => {

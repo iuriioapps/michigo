@@ -1,9 +1,12 @@
+import { errorLine } from "@michigo/log/renderer";
+import { consumeEventIterator } from "@orpc/client";
 import { Outlet, createRootRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
 import { NewProjectProvider } from "@/components/new-project-dialog";
 import { RouteError } from "@/components/route-fallbacks";
 import { AppSidebar } from "@/components/sidebar/app-sidebar";
+import { rpc } from "@/lib/rpc";
 
 export const Route = createRootRoute({ component: AppShell });
 
@@ -24,7 +27,19 @@ function AppShell() {
   // An error the main process did not catch arrives as a code only.
   const [mainError, setMainError] = useState<string>();
 
-  useEffect(() => window.michigo.app.onError(setMainError), []);
+  useEffect(() => {
+    const cancel = consumeEventIterator(rpc.app.errors(), {
+      onEvent: setMainError,
+      // Without the stream the page would miss every later main error, so the log keeps why.
+      onError: (error) => {
+        rpc.log.write(errorLine("app.errors.failed", error)).catch(() => undefined);
+      },
+    });
+
+    return () => {
+      void cancel();
+    };
+  }, []);
 
   return (
     <NewProjectProvider>
