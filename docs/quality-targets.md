@@ -109,7 +109,7 @@ The log exists so that a person or an AI agent can follow one action through eve
 | fields | Ids, counts, `durationMs`, versions, HTTP status codes |
 | `error` | Name, code and stack frames (see "Errors from libraries") |
 
-Every IPC call logs its start and its end with `durationMs` at `info`. A failure logs at `error` with its stack. Uncaught errors and unhandled rejections in every process go to the log.
+Every IPC call logs its start and its end with `durationMs` at `info`. The exception is `log:write`, which carries a renderer line: logging that call would add two lines for each line it writes. A failure logs at `error` with its stack. Uncaught errors and unhandled rejections in every process go to the log.
 
 ### What the log never holds
 
@@ -128,9 +128,9 @@ The message of an error from Node, SQLite, zod or another library can hold a fil
 
 - The `error` field holds the error's name, its code (`err.code`, such as `ENOENT` or `SQLITE_CONSTRAINT`) and the stack frames, without the first line of the stack, which repeats the message.
 - The message is logged only for Michigo's own errors, whose message is a code such as `anki.closed`.
-- A zod failure logs the path and code of each issue, never the received value.
+- A zod failure logs the path and code of each issue, never the received value. A path part that is not a short ASCII name (a record key can be the learner's text) is logged as `*`, and at most 10 issues are logged, with the count of all of them.
 - In stack frames, the home folder becomes `~`, as a safety net for the app's own install path.
 
 ### Bug reports
 
-Michigo sends nothing about errors over the network: no telemetry, no crash upload and no Electron `crashReporter` upload. Settings: About and the route error screen have "Open log folder" and "Copy diagnostics". "Copy diagnostics" copies the app version, the OS and architecture, the Electron version, the Tokenizer dictionary build and the last 200 log lines. The learner pastes them into a bug report. A toast confirms the copy. The route error screen shows an error code, never the raw error message. The [high-fidelity canvas](https://claude.ai/artifact/AtuHSDWTQLvM3FHkA3MBD9) draws both places, from [Where do Open log folder and Copy diagnostics appear on the canvas?](https://github.com/iuriioapps/michigo/issues/126).
+Michigo sends nothing about errors over the network: no telemetry, no crash upload and no Electron `crashReporter` upload. Settings: About and the route error screen have "Open log folder" and "Copy diagnostics". "Copy diagnostics" copies the app version, the OS and architecture, the Electron version, the Tokenizer dictionary build and the last 200 log lines. The learner pastes them into a bug report. A toast confirms the copy. The route error screen shows an error code, never the raw error message. An error that the main process does not catch shows the same screen in the content pane, with the code `main.uncaught`, instead of Electron's own error box, which would show the raw message. The [high-fidelity canvas](https://claude.ai/artifact/AtuHSDWTQLvM3FHkA3MBD9) draws both places, from [Where do Open log folder and Copy diagnostics appear on the canvas?](https://github.com/iuriioapps/michigo/issues/126).

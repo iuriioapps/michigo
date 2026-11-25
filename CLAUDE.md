@@ -18,22 +18,25 @@ Strictly one way:
 
 ```text
 apps/desktop ─┬─> storage ──────────────> vocab, reference, pitch, audio ─┐
-              └─> tokenizer, source, grammar, anki, manifest ─────────────┴─> core
+              └─> tokenizer, source, grammar, anki, manifest, log ────────┴─> core
 ```
 
-Decided in `docs/adr/0007-packages-do-not-import-each-other-and-the-app-composes.md`. Only `core`, `vocab` and `anki` exist today. Create each other package when its first feature lands. The rules for code:
+Decided in `docs/adr/0007-packages-do-not-import-each-other-and-the-app-composes.md`. Only `core`, `vocab`, `anki` and `log` exist today. Create each other package when its first feature lands. The rules for code:
 
 - `core` imports no other package, and nothing in `packages/` imports from `apps/`.
 - A package imports `core` and nothing else. The one exception is `storage`, which imports the store interfaces of the packages it serves.
 - Where several packages have to be combined, the composition happens in the app. See how `describeRuntime` receives its modules as an argument instead of importing them.
+- A package that logs takes a `Logger` (a type in `core`) as an argument. Only the app, and the worker entries it owns, import `@michigo/log`.
 - A package that keeps data declares its store as an interface in domain terms. **SQL exists only in `storage`.**
 - `core` holds the data shapes that packages and the renderer exchange. Logic goes to the package that owns the capability.
 - Each package declares what it imports in its own `package.json`, so pnpm refuses an import that breaks these rules.
 
-## `@michigo/core` has two entry points
+## `@michigo/core` and `@michigo/log` have two entry points
 
 - `@michigo/core/schemas` is **pure**. No `node:*` imports, ever. The Electron renderer imports from here, so a Node built-in would break the browser bundle.
 - `@michigo/core` (the `.` entry) may use Node APIs. Only the main process imports it.
+
+`@michigo/log` has the same split: `@michigo/log/renderer` is pure, and its `.` entry (the logger and the log file) is for the main process and workers.
 
 Keeping new code on the correct side of this split is much cheaper than untangling it later.
 
@@ -57,7 +60,7 @@ Decided in `docs/adr/0005-unidic-2025-12-with-the-native-lindera-binding.md`. Th
 
 ## Validate at the IPC boundary
 
-Treat everything arriving from the renderer as untrusted, exactly as a server treats an HTTP body. Parse it with a zod schema from `@michigo/core` inside the handler before use. The renderer is a locked-down browser tab; a compromised page or dependency must not be able to drive the main process.
+Treat everything arriving from the renderer as untrusted, exactly as a server treats an HTTP body. Parse it with a zod schema inside the handler before use. The schema comes from `@michigo/core`, or from the package that owns the channel's shape (`log:write` uses `RendererLogLineSchema` from `@michigo/log/renderer`). The renderer is a locked-down browser tab; a compromised page or dependency must not be able to drive the main process.
 
 `project:create` in `apps/desktop/electron/ipc.ts` is the reference implementation: it parses with `CreateProjectInputSchema` before touching the argument. Copy it. A parse failure throws, Electron rejects the renderer's promise, and TanStack Query surfaces it as a mutation error; no extra plumbing.
 
@@ -88,7 +91,7 @@ Touch these four places, in order:
 1. `apps/desktop/shared/api.ts`: add the method to `DesktopApi` and its name to `channels`. This is where you decide what the feature looks like.
 2. `apps/desktop/electron/ipc.ts`: `handle()`, parsing any input.
 3. `apps/desktop/electron/preload.ts`: expose the function. Forgetting this is a compile error, because the object is typed as `DesktopApi`.
-4. `apps/desktop/src/lib/queries.ts`: a query or mutation, then use it.
+4. `apps/desktop/src/lib/queries.ts`: a query or mutation, then use it. A fire-and-forget call (`log:write`) or an event that main sends (`app:error`) has no query, and the code that needs it calls `window.michigo` directly.
 
 Never expose `ipcRenderer` itself to the page, only named functions.
 

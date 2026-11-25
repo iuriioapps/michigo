@@ -1,10 +1,10 @@
 # Packages do not import each other, and the app composes them
 
-Michigo v1 has eleven packages. Each one imports `core` and no other package, with one exception: `storage` imports the store interfaces of the packages it serves. The desktop app combines the packages itself. It is the only app in v1.
+Michigo v1 has twelve packages. Each one imports `core` and no other package, with one exception: `storage` imports the store interfaces of the packages it serves. The desktop app combines the packages itself. It is the only app in v1.
 
 ```text
 apps/desktop ─┬─> storage ──────────────> vocab, reference, pitch, audio ─┐
-              └─> tokenizer, source, grammar, anki, manifest ─────────────┴─> core
+              └─> tokenizer, source, grammar, anki, manifest, log ────────┴─> core
 ```
 
 Most learner actions need several capabilities. "Update from Anki" reads fields through `anki`, splits them with `tokenizer` and marks words through `vocab`. If packages imported each other for this, the graph would grow layers that are hard to state and easy to break. With one flat rule, a package can be read, tested and replaced alone, and its `package.json` enforces the rule: pnpm refuses an import that the package does not declare.
@@ -24,10 +24,12 @@ Most learner actions need several capabilities. "Update from Anki" reads fields 
 | `anki` | The AnkiConnect client, the maturity rule, and card formats with their markers |
 | `audio` | Audio Sources, one strategy each, and the pipeline that produces a file |
 | `manifest` | Fetch of the Manifest, download with resume, hash check and atomic install |
+| `log` | The logger that every process uses, the log file and its rotation, and the renderer hook for uncaught errors |
 
 ## The rules
 
 - **`core` is not a place for logic.** A thing enters `core` only when it is a data shape that two packages, or a package and the renderer, exchange. Logic goes to the package that owns the capability.
+- A package that logs takes a `Logger` as an argument. `core` declares the `Logger` type, and only the app and the worker entries it owns import `log`.
 - A package that keeps data declares its store, and `storage` implements it. No package but `storage` holds SQL.
 - A package that needs the output of another package takes it as an argument. `grammar` takes tokens, `pitch` takes the pitch rows that `reference` reads from an archive, and `anki` takes the finished values of a card.
 - Only `tokenizer` imports the native binding. It names `lindera` as a peer dependency, and the desktop app carries it in `dependencies`.

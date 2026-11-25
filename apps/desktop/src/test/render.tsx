@@ -47,11 +47,12 @@ export function createApiStub(
   seed.forEach(add);
 
   return {
-    app: { info: () => Promise.resolve(runtimeInfo) },
+    app: { info: () => Promise.resolve(runtimeInfo), onError: () => () => undefined },
     projects: {
       list: () => Promise.resolve([...projects]),
       create: (input) => Promise.resolve(add(input.name)),
     },
+    log: { write: () => Promise.resolve() },
     ...overrides,
   };
 }

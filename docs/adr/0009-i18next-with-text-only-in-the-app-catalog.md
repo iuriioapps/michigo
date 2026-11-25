@@ -7,7 +7,7 @@ The v1 UI is English only, but a later version must be able to add Spanish witho
 - English strings in the code, with no setup. Rejected: adding Spanish later would touch every component.
 - Lingui or Paraglide, with the English text in the code and catalogs extracted by a build plugin. Rejected: the plugin is one more piece in the Vite 8, TypeScript 7 and Oxlint chain, which has had tool friction before. `i18next` needs no build step and runs the same in the main process.
 - FormatJS with full ICU messages. Rejected: more runtime and more verbose code. English and Spanish need only the `Intl.PluralRules` plurals that `i18next` has.
-- One catalog per package (for example, Grammar Pattern text in `packages/grammar`). Rejected: a translation would spread over eleven packages, each with its own loading.
+- One catalog per package (for example, Grammar Pattern text in `packages/grammar`). Rejected: a translation would spread over twelve packages, each with its own loading.
 
 ## Consequences
 
