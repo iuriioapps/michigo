@@ -10,6 +10,9 @@ updates:
         patterns: ["oxlint*", "oxfmt", "turbo", "typescript", "vitest", "@vitest/*"]
       react:
         patterns: ["react", "react-dom", "@types/react", "@types/react-dom"]
+      # Share one version; @orpc/tanstack-query requires the exact @orpc/client.
+      orpc:
+        patterns: ["@orpc/*"]
     ignore:
       # An Electron major changes the bundled Node, so .nvmrc and @types/node
       # must move with it (see .claude/rules/dependencies.md). Bump it

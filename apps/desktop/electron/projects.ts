@@ -8,12 +8,13 @@ import { ProjectSchema, type CreateProjectInput, type Project } from "@michigo/c
  * It lives in `electron/` rather than a shared package because it carries no
  * domain logic yet — there is nothing here for `vocab` or `anki` to reuse. What
  * is meant to survive the move to real persistence is the IPC contract in
- * `shared/api.ts`, not this file.
+ * `shared/contract/`, not this file.
  */
 const projects: Project[] = [];
 
-export function listProjects(): readonly Project[] {
-  return projects;
+// A copy, so a caller cannot change the store through the result.
+export function listProjects(): Project[] {
+  return [...projects];
 }
 
 export function createProject(input: CreateProjectInput): Project {
