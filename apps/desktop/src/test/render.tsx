@@ -1,10 +1,12 @@
-import type { Project, RuntimeInfo } from "@michigo/core/schemas";
+import type { CreateProjectInput, Project, RuntimeInfo } from "@michigo/core/schemas";
+import type { ClientContext, ClientLink } from "@orpc/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { RouterProvider, createMemoryHistory, createRouter } from "@tanstack/react-router";
 import { render } from "@testing-library/react";
 
 import type { DesktopApi } from "../../shared/api";
 import { RouteError, RouteNotFound } from "../components/route-fallbacks";
+import { setRpcLink } from "../lib/rpc";
 import { routeTree } from "../routeTree.gen";
 
 export const runtimeInfo: RuntimeInfo = {
@@ -19,6 +21,16 @@ export const runtimeInfo: RuntimeInfo = {
   ],
 };
 
+/** The procedures of the contract and the rest of `window.michigo`, as plain functions. */
+export interface ApiStub {
+  readonly app: { info(): Promise<RuntimeInfo>; onError: DesktopApi["app"]["onError"] };
+  readonly projects: {
+    list(): Promise<Project[]>;
+    create(input: CreateProjectInput): Promise<Project>;
+  };
+  readonly log: DesktopApi["log"];
+}
+
 /**
  * A stand-in for the main process.
  *
@@ -27,9 +39,9 @@ export const runtimeInfo: RuntimeInfo = {
  * only way the create-then-refetch flow can be tested honestly.
  */
 export function createApiStub(
-  overrides: Partial<DesktopApi> = {},
+  overrides: Partial<ApiStub> = {},
   seed: readonly string[] = [],
-): DesktopApi {
+): ApiStub {
   const projects: Project[] = [];
 
   const add = (name: string): Project => {
@@ -57,15 +69,37 @@ export function createApiStub(
   };
 }
 
+// Calls the stub function at the procedure's path, in place of the port to main.
+function linkTo(api: ApiStub): ClientLink<ClientContext> {
+  return {
+    call: async (path, input) => {
+      let procedure: unknown = api;
+
+      for (const key of path) {
+        procedure =
+          typeof procedure === "object" && procedure !== null
+            ? Reflect.get(procedure, key)
+            : undefined;
+      }
+      if (typeof procedure !== "function") {
+        throw new Error(`The stub has no ${path.join(".")}`);
+      }
+      const output: unknown = await Reflect.apply(procedure, undefined, [input]);
+
+      return output;
+    },
+  };
+}
+
 /**
- * The preload design pays off here: the renderer only ever talks to
- * `window.michigo`, so the whole UI is testable by faking that object. No
- * Electron process is started.
+ * The renderer only talks to main through the oRPC client and `window.michigo`,
+ * so the whole UI is testable by faking both. No Electron process is started.
  *
  * Memory history, where the app uses hash history — tests need no URL.
  */
-export function renderRoute(path: string, api: DesktopApi = createApiStub()) {
-  window.michigo = api;
+export function renderRoute(path: string, api: ApiStub = createApiStub()) {
+  window.michigo = { app: { onError: api.app.onError }, log: api.log };
+  setRpcLink(linkTo(api));
 
   const queryClient = new QueryClient({
     defaultOptions: { queries: { retry: false }, mutations: { retry: false } },

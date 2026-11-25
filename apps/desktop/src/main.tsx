@@ -5,8 +5,10 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import "./index.css";
+import { connectRpc } from "./lib/rpc";
 import { router } from "./router";
 
+connectRpc();
 logUncaughtErrors(window, (line) => window.michigo.log.write(line));
 
 const queryClient = new QueryClient({

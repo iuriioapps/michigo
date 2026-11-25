@@ -15,6 +15,18 @@ TanStack Router, file-based, with three constraints the code cannot explain:
 
 A `-` prefix keeps a path out of the route tree: `src/routes/-components/` holds the components that exactly one route uses. `routeFileIgnorePattern` excludes test files, or `settings.test.tsx` would become `/settings/test`.
 
+## Data from the main process
+
+Reach main through `orpc` and `rpc` from `src/lib/rpc.ts`. Both are derived from the contract in `shared/contract/`, so a call is typed and its query key comes with it:
+
+```ts
+const projects = useQuery(orpc.projects.list.queryOptions());
+const create = useMutation(orpc.projects.create.mutationOptions({ onSuccess }));
+void queryClient.invalidateQueries({ queryKey: orpc.projects.key() });
+```
+
+Use `orpc` inside components and `rpc` for a call outside TanStack Query. Tests render with `renderRoute` from `src/test/render.tsx`, whose stub answers every procedure in place of main. A new procedure gets a stub entry there.
+
 ## UI components
 
 Styling is hand-written, with no shadcn and no `cva`. Behavior (focus, anchoring, keyboard) comes from Base UI, a headless library. See `docs/adr/0008-base-ui-for-behavior-and-tanstack-for-state-and-tables.md`. A variant is a plain lookup object:

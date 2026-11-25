@@ -10,7 +10,6 @@ type Listener = (event: unknown, raw?: unknown) => Promise<unknown>;
 const handlers = new Map<string, Listener>();
 
 vi.mock("electron", () => ({
-  app: { getName: () => "Michigo", getVersion: () => "0.1.0" },
   ipcMain: {
     handle: (channel: string, listener: Listener) => handlers.set(channel, listener),
   },
@@ -53,47 +52,13 @@ describe("registerIpc", () => {
     ipc = setup();
   });
 
-  it("logs the start and the end of project:create with one actionId and a durationMs", async () => {
-    await ipc.call(channels.projectCreate, { name: "Frieren" });
-
-    const [start, end] = ipc.lines;
-    expect(ipc.lines).toHaveLength(2);
-    expect(start).toMatchObject({
-      level: "info",
-      scope: "ipc",
-      event: "ipc.start",
-      channel: "project:create",
-    });
-    expect(end).toMatchObject({
-      level: "info",
-      scope: "ipc",
-      event: "ipc.end",
-      channel: "project:create",
-    });
-    expect(typeof start?.["actionId"]).toBe("string");
-    expect(end?.["actionId"]).toBe(start?.["actionId"]);
-    expect(typeof end?.["durationMs"]).toBe("number");
-    expect(JSON.stringify(ipc.lines)).not.toContain("Frieren");
-  });
-
-  it("logs a failed call at error with the zod issues, and still rejects", async () => {
-    await expect(ipc.call(channels.projectCreate, { name: 42 })).rejects.toThrow("invalid_type");
-
-    expect(ipc.lines.at(-1)).toMatchObject({
-      level: "error",
-      event: "ipc.failed",
-      channel: "project:create",
-      error: { name: "ZodError", issues: [{ path: "name", code: "invalid_type" }] },
-    });
-  });
-
   it("logs a call from another frame at warn and refuses it", async () => {
     await expect(
-      ipc.call(channels.appInfo, undefined, { senderFrame: { url: "https://evil.example/" } }),
+      ipc.call(channels.logWrite, undefined, { senderFrame: { url: "https://evil.example/" } }),
     ).rejects.toThrow("untrusted frame");
 
     expect(ipc.lines).toEqual([
-      expect.objectContaining({ level: "warn", event: "ipc.untrusted", channel: "app:info" }),
+      expect.objectContaining({ level: "warn", event: "ipc.untrusted", channel: "log:write" }),
     ]);
   });
 
@@ -159,7 +124,7 @@ describe("registerIpc", () => {
   it("warns about an untrusted frame once per channel", async () => {
     const evil = { senderFrame: { url: "https://evil.example/" } };
 
-    await Promise.allSettled([1, 2, 3].map(() => ipc.call(channels.appInfo, undefined, evil)));
+    await Promise.allSettled([1, 2, 3].map(() => ipc.call(channels.logWrite, undefined, evil)));
 
     expect(ipc.lines).toHaveLength(1);
   });

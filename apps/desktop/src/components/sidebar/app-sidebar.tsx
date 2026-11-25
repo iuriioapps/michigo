@@ -4,7 +4,7 @@ import { Folder, Layers, List, PanelLeft, Plus, Settings } from "lucide-react";
 
 import { useNewProject } from "@/components/new-project-dialog";
 import { Button } from "@/components/ui/button";
-import { projectsQuery } from "@/lib/queries";
+import { orpc } from "@/lib/rpc";
 import { cn } from "@/lib/utils";
 
 import { NavLink } from "./nav-link";
@@ -27,7 +27,7 @@ const expandedWidth = "w-58";
 export function AppSidebar() {
   // The same query the projects grid reads. Neither view owns the data, so
   // creating a project updates both without either telling the other.
-  const projects = useQuery(projectsQuery);
+  const projects = useQuery(orpc.projects.list.queryOptions());
   const openNewProject = useNewProject();
   const [collapsed, toggleCollapsed] = useSidebarCollapsed();
 
