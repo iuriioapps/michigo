@@ -16,6 +16,10 @@ updates:
       # by hand as a deliberate decision.
       - dependency-name: electron
         update-types: ["version-update:semver-major"]
+      # Node types stay on the Node line that Electron bundles (24), the
+      # same ceiling as `engines` in package.json.
+      - dependency-name: "@types/node"
+        versions: [">=25"]
 
   - package-ecosystem: github-actions
     directory: /
