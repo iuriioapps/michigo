@@ -26,6 +26,6 @@ A spike over a Node `MessageChannel` with oRPC 1.16 confirmed the middleware ord
 
 Four packages are new in `apps/desktop`: `@orpc/contract`, `@orpc/server`, `@orpc/client` and `@orpc/tanstack-query`. They share one version and move together. oRPC 2 is in beta, so Michigo stays on 1.x until 2 is stable and then upgrades as a deliberate step. The sender check no longer runs per call, so the handshake is the only place that grants access, and the preload must accept the port only from its own window.
 
-A procedure is named by its path, for example `projects.create`, and the log uses that path as `channel`. The oRPC serializer has no Temporal type, so a Temporal object would arrive as an ISO string: an instant still crosses IPC as epoch milliseconds.
+Main parses every result against its output schema and serializes it on its own thread, which costs about 100 ms for 50,000 word rows, so a word view fetches a window of rows instead of a whole table. A procedure is named by its path, for example `projects.create`, and the log uses that path as `channel`. The oRPC serializer has no Temporal type, so a Temporal object would arrive as an ISO string: an instant still crosses IPC as epoch milliseconds.
 
 The same handler and link work over a worker's MessagePort, so the storage worker could reuse this contract style later. That is not decided here.
