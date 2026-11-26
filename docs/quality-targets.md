@@ -109,7 +109,7 @@ The log exists so that a person or an AI agent can follow one action through eve
 | fields | Ids, counts, `durationMs`, versions, HTTP status codes |
 | `error` | Name, code and stack frames (see "Errors from libraries") |
 
-Every IPC call logs its start and its end with `durationMs` at `info`. The exception is `log.write`, which carries a renderer line: logging that call would add two lines for each line it writes. A failure logs at `error` with its stack. Uncaught errors and unhandled rejections in every process go to the log.
+Every IPC call logs its start and its end with `durationMs` at `info`. The exception is `log.write`, which carries a renderer line: logging that call would add two lines for each line it writes. A failure logs at `error` with its stack. Once the first window has shown, a block of the main process's thread longer than 50 ms logs `main.stall` at `warn` with its `durationMs`. Uncaught errors and unhandled rejections in every process go to the log.
 
 ### What the log never holds
 
