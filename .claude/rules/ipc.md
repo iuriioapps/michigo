@@ -23,7 +23,19 @@ Treat everything arriving from the renderer as untrusted, exactly as a server tr
 - Every procedure that takes input declares `.input(schema)`. oRPC parses the input before the handler runs, so a handler reads only `input`. `projects.create` is the reference implementation: copy it.
 - The schema comes from `@michigo/core/schemas`, or from the package that owns the shape (`log.write` uses `RendererLogLineSchema` from `@michigo/log/renderer`). The contract is imported by the renderer, so it imports only those pure entry points.
 - A parse failure rejects the call with `BAD_REQUEST`, and TanStack Query surfaces it as an error, with no extra plumbing.
-- `.output(schema)` gives the renderer its types, and main parses the result against it. When a measured budget shows that parse is too slow for a large result, use `type<T>()` from `@orpc/contract` for that output.
+- `.output(schema)` gives the renderer its types, and main parses the result against it.
+
+## Result size
+
+Main parses and serializes every result on its own thread, and the serializing costs the most. Measured on a development machine with 9-field word rows:
+
+| Rows   | Parse | Serialize | Round trip |
+| ------ | ----- | --------- | ---------- |
+| 500    | 1 ms  | 4 ms      | 2 ms       |
+| 7,000  | 2 ms  | 14 ms     | 24 ms      |
+| 50,000 | 20 ms | 99 ms     | 161 ms     |
+
+So a procedure returns what the page shows, never a whole table. A word view asks for a window of rows and the total count, and SQLite sorts and filters, as ADR 0008 says. `type<T>()` from `@orpc/contract` skips only the parse, so it does not rescue a result that is too large.
 
 ## Trusted sender
 
