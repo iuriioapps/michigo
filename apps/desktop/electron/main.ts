@@ -13,6 +13,7 @@ import {
   shell,
 } from "electron";
 
+import { watchMainThread } from "./main-thread-watch";
 import { createRpcContext, registerRpc } from "./rpc";
 import { createMainErrors } from "./rpc/app";
 
@@ -68,6 +69,9 @@ const MAIN_ERROR = "main.uncaught";
 // hands it to the next page once. A later reload does not show it again.
 const mainErrors = createMainErrors();
 let quitting = false;
+// Starts a second after the first window shows. Creating and first painting the window
+// block main for about 80 ms on every launch, and startup has its own budget.
+let watchingMainThread = false;
 
 function reportMainError(log: Logger): void {
   mainErrors.report(MAIN_ERROR);
@@ -78,14 +82,14 @@ function reportMainError(log: Logger): void {
   // a dock icon. Not while quitting, or a window would flash before exit.
   if (app.isReady() && !quitting) {
     try {
-      createWindow();
+      createWindow(log);
     } catch (error) {
       log.error("app", "window.failed", {}, error);
     }
   }
 }
 
-function createWindow(): void {
+function createWindow(log: Logger): void {
   const window = new BrowserWindow({
     width: 1100,
     height: 750,
@@ -120,6 +124,10 @@ function createWindow(): void {
 
   window.once("ready-to-show", () => {
     window.show();
+    if (!watchingMainThread) {
+      watchingMainThread = true;
+      setTimeout(() => watchMainThread(log), 1000).unref();
+    }
   });
 
   void window.loadURL(rendererUrl);
@@ -179,12 +187,12 @@ if (!app.requestSingleInstanceLock()) {
     session.defaultSession.setPermissionCheckHandler(() => false);
     Menu.setApplicationMenu(buildMenu());
     registerRpc(rendererUrl, createRpcContext(log, mainErrors));
-    createWindow();
+    createWindow(log.main);
 
     app.on("activate", () => {
       // macOS keeps the app running with no windows; recreate on dock click.
       if (BrowserWindow.getAllWindows().length === 0) {
-        createWindow();
+        createWindow(log.main);
       }
     });
   });

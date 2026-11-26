@@ -37,6 +37,22 @@ Main parses and serializes every result on its own thread, and the serializing c
 
 So a procedure returns what the page shows, never a whole table. A word view asks for a window of rows and the total count, and SQLite sorts and filters, as ADR 0008 says. `type<T>()` from `@orpc/contract` skips only the parse, so it does not rescue a result that is too large.
 
+### Watching the main thread
+
+`watchMainThread` in `electron/main-thread-watch.ts` logs `main.stall` at `warn` when main's thread was blocked longer than 50 ms, with the longest block as `durationMs`. It reads Node's event-loop delay, so it catches what `logCalls` cannot see, such as serializing a large result after the handler has returned. The `ipc.start` lines just before a stall show which calls ran. It starts a second after the first window shows, because creating that window blocks main on every launch and startup has its own budget.
+
+### When load grows
+
+Reach for these in order, each only when a measurement or a `main.stall` line shows the one before is not enough:
+
+1. Narrow rows: a table's procedure returns the table's columns, and a detail panel fetches the rest of one item.
+2. Cancel stale queries: `queryOptions` passes TanStack Query's `signal` to the call, so a handler hands `signal` on to the storage worker. Debounce a search field.
+3. Prefetch the next window, and keep the previous one on screen with `placeholderData: keepPreviousData`, so scrolling never shows an empty table.
+4. Seek pagination: ask for the rows after a sort key instead of an `OFFSET` deep in the list. Keep offsets for a jump of the scrollbar.
+5. Count apart: the total count as its own cached procedure, invalidated by the mutations that change it.
+6. Bypass main: a second port from the storage worker straight to the page, handed over after the same sender check. Decide it in an ADR before any code.
+7. Transfer buffers: typed arrays moved instead of copied, with oRPC's experimental transfer option. The last resort.
+
 ## Trusted sender
 
 The renderer gets its port through one handshake: it posts the port to its own window, `preload.ts` forwards it on `rpc:connect`, and `registerRpc` in `electron/rpc/index.ts` serves it. That handshake is the only access check, so it checks the sender frame against the app's own page and refuses any other frame. Keep it the only way in: features reach main through the contract, and `preload.ts` stays the port forwarder alone, with no `contextBridge` API.
