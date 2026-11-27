@@ -1,0 +1,250 @@
+[
+  {
+    "id": "kara-iu-to",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added the common 〜から言って, with new example 9 常識から言って",
+      "example 3: en 'he can't possibly do' was loose for はずだ, now 'he'd never do something like that'",
+      "detection: kara-shite described as 為る in the て-form instead of the non-lexeme 為て",
+      "tokens: から (から 助詞-格助詞) + 言う 終止形 + と 接続助詞, 言え 仮定形 + ば, 言っ 促音便 + たら (た 仮定形) and 言っ + て confirmed; passive 言わ + れ + た and quote 」と + 言う + と confirmed for the near misses; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "de-iu-to",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added the colloquial 〜で言ったら, with new example 9 人間で言ったら",
+      "example 7: 天気で言うと on its own read as a literal weather report, now 気分を天気で言うと",
+      "counterexample 4: 心で思うと言うのは was unnatural, replaced with ここで言うとネタバレになる (place で, literal 言うと)",
+      "tokens: で (で 助詞-格助詞) + 言う 終止形 + と 接続助詞, 言え + ば, 言っ + たら confirmed; 言う 連体形 + ところ (所 名詞) + の (格助詞) confirmed; 感じ before って misread as って (つう 助動詞), irrelevant to the match; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "ka-wa-ni-yotte-chigau",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added the written 〜かは〜によって異なる, with new example 9",
+      "example 2: おいしいと感じるかは lacked the question word, now 何をおいしいと感じるかは",
+      "counterexample 3 and why: shidai-da is not an id; N + 次第だ belongs to shidai-de (shidai is the \"as soon as\" entry)",
+      "counterexample 4: いつ着くかは言えないが、人によって運ばれる was unnatural, replaced with 誰が書いたかは、筆跡によって明らかになった (means によって)",
+      "subsumes and confusables: shidai replaced by shidai-de, and shidai-de added to subsumes for the 次第だ variant",
+      "tokens: か (か 助詞-副助詞) + は (係助詞), か + どう (副詞) + か, に (格助詞) + よっ (因る 連用形-促音便) + て + 違う / 異なる, よる (因る 終止形) and 次第 (名詞) + だ/です confirmed; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "wa-betsu-to-shite",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 3: 予算は別枠にして確保した was stiff and no real near miss, replaced with 注文とは別として扱います (と + は + 別として governing a verb)",
+      "detection: the claim that a literal reading cannot be guarded replaced by a guard on と + は + 別 and on a verb right after て",
+      "tokens: は (係助詞) + 別 (別 名詞-普通名詞) + と (格助詞) + し (為る 連用形) + て confirmed; 別 + に (だ 連用形-ニ) + し + て confirmed for 別にして, を別にして and 別に忙しくない; no earlier entry duplicates it (wa-tomokaku and wa-sateoki are separate ids not yet written)"
+    ]
+  },
+  {
+    "id": "ni-kakete-mo",
+    "verdict": "fixed",
+    "changes": [
+      "kept, not rejected: the tokens equal literal 火にかけても, but a closed set of nouns sworn on (命, 名誉, 名, 誇り, プライド, 意地, 威信, 神) gives good precision; not a duplicate of ni-kakete-wa, whose にかけても variant is the 'when it comes to' sense",
+      "variants, meaning and connection: added the oath 〜にかけて without も (more common than にかけても), meaning now 'swearing on ~; with ~ at stake', new example 9 威信にかけて",
+      "examples 1 and 8: loose en ('even if it costs me my life', 'if it's the last thing I do') replaced by 'I swear on my life' and 'On my pride as a detective'",
+      "counterexamples: added the time range 週末から月曜にかけても (kara-ni-kakete)",
+      "detection: rewritten around the closed noun guard",
+      "tokens: に (格助詞) + かけ (掛ける 下一段-カ行 連用形-一般) + て + も (係助詞) confirmed, and identical in every literal near miss (火に, 壁に, 月曜に, 走りに); no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "to-ieru",
+    "verdict": "fixed",
+    "changes": [
+      "register: written changed to neutral; the pattern is common in speech (example 8 is spoken)",
+      "variants: added the written 〜と言えよう, with new example 9",
+      "example 8: en 'surely' did not match じゃないかな, now 'I'd say'",
+      "counterexample 3: はっきり言えば shares no 言える token, replaced with 「ごめん」と言える人 (quote + potential), the real near miss",
+      "detection: 言えよう as one token and the quotation guard added",
+      "tokens: と (格助詞) + 言える (言う 下一段-ア行 終止形/連体形) confirmed, 言え 連用形 + ます, と + も + 言える, 言えよう (言う 意志推量形) confirmed; 言えば is 言う 五段-ワア行 仮定形 as claimed; no earlier entry duplicates it (to-ieba is b11)"
+    ]
+  },
+  {
+    "id": "kangaerarenai",
+    "verdict": "fixed",
+    "changes": [
+      "variants: the bare 考えられない contradicted the detection (same tokens as the potential 'cannot think'), replaced by the casual 〜なんて考えらんない and 〜とは考えられない, with new examples 9 and 10",
+      "connection: added Clause-plain + とは考えられない",
+      "register: spoken changed to neutral; とは/ことは考えられない are common in writing",
+      "detection: the frame now lists なんて, とは and ことは, and the 考えらんない tokens",
+      "tokens: 考え (考える 下一段-ア行 未然形) + られ (られる 助動詞-レル) + ない confirmed; polite られ + ませ + ん; 考えらんない is 考え + らん (られる 未然形-撥音便) + ない; なんて is 助詞-副助詞; no earlier entry duplicates it (nanka-nante is a separate id)"
+    ]
+  },
+  {
+    "id": "de-yuumei",
+    "verdict": "fixed",
+    "changes": [
+      "confusables: de-aru and ni-tsuite are not real confusions, replaced by toshite (として有名 'famous as')",
+      "counterexamples: added 女優としても有名だ (role, not reason)",
+      "counterexample 4: why now names the lexeme 知らす that UniDic gives",
+      "detection: tokenizer misreads sentence-initial あの as a filler in example 3, noted",
+      "tokens: で (格助詞) + 有名 (有名 形状詞-一般) + だ/な/で/だっ confirmed; で + 知ら (知る 未然形) + れ/れる + て + いる confirmed; 有名人 is 有名 + 人 (接尾辞) and 知らさ is 知らす as claimed; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "no-wa-no-hou-da",
+    "verdict": "fixed",
+    "changes": [
+      "example 7: en 'The other side threw the first punch' lost the cleft, now 'They're the ones who threw the first punch'",
+      "counterexample 4: 走るのは嫌いだが、泳ぐ方が好きだ was stiff, replaced with 大事なのは、自分に合う方を選ぶことだ (verb + 方 'option')",
+      "counterexamples: added 探してるのは駅の方にある店だよ (のは + N の方 + に, a direction)",
+      "detection: guard that 方 is followed by だ/です/だった or な + のに/ので",
+      "tokens: の (助詞-準体助詞) + は + N + の (格助詞) + 方 (方 名詞, also for kana ほう) + だ/です confirmed; あの方 is あの (彼の 連体詞) + 方 as claimed; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "to-iu-riyuu-de",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added 〜という理由から and the casual 〜って理由で, with new examples 9 and 10",
+      "example 5: en 'too far' added a meaning not in 遠い, now 'far away'",
+      "counterexample 4: 仕事が忙しいという点で、彼は有名だ was unnatural and mistranslated, replaced with 忙しいという点では、どの部署も同じだ",
+      "detection: から variant and the って misreading added",
+      "tokens: と (格助詞) + いう (言う 五段-ワア行 連体形) + 理由 (名詞) + で (格助詞) confirmed; って in って理由で is misread as つう (助動詞), noted for the matcher; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "to-iu-no-wa-jijitsu-da",
+    "verdict": "fixed",
+    "changes": [
+      "register: written changed to neutral; のは事実だけど is common in speech (example 8)",
+      "counterexample 3: en 'He came yesterday' lost the cleft, now 'It was yesterday that he came'",
+      "detection: token parts named with their 品詞",
+      "tokens: と (格助詞) + いう (言う 連体形) + の (準体助詞) + は + 事実 (事実 名詞-普通名詞) + だ/です confirmed; こと (事) + は + 事実; 事実 + な (だ 連体形) + ん (の) in example 4 as claimed; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "ni-kankei-ga-aru",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added the common verb form 〜と関係している / に関係している, with new example 9",
+      "confusables: ni-yotte replaced with ni-kakawaru, a real near synonym",
+      "detection: the 関係 + し + て + いる route added",
+      "tokens: に/と (格助詞) + 関係 (関係 名詞-普通名詞) + が + ある/あり (有る) and ない (無い 形容詞-非自立可能) confirmed; 関係 + の + ある, には + 関係 + ない and 関係 + なく (無い 連用形) confirmed; 関係者 is 関係 + 者 (接尾辞); no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "iu-made-mo-nai",
+    "verdict": "fixed",
+    "changes": [
+      "subsumes: direction checked, correct (the longer iu-made-mo-nai contains V + までもない of made-mo-nai, not yet written)",
+      "variants: added the kana いうまでもない, with example 5",
+      "example 5: 子供はもちろん、大人も言うまでもなく楽しめる was redundant and unnatural with a garbled en, replaced with いうまでもないけど、このことは誰にも内緒ね",
+      "register: written changed to neutral; it is common in speech",
+      "examples 3, 6 and 8: en tightened ('hardly needs mentioning', 'It goes without saying, but', 'Needless to say')",
+      "counterexample 3: why had a stray space in までもなく",
+      "tokens: 言う/いう (言う 五段-ワア行 連体形) + まで (助詞-副助詞) + も (係助詞) + ない/なく (無い 形容詞-非自立可能) and + あり + ませ + ん confirmed; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "ni-awasete",
+    "verdict": "fixed",
+    "changes": [
+      "variants: 〜に合った is the intransitive 合う 'suit', another lexeme, replaced by 〜に合わせた; connection updated",
+      "example 6: 自分に合った moved to the counterexamples, replaced with お客様の好みに合わせた料理",
+      "counterexample 4: why rewritten (合う 'fit' against 合わせる 'match')",
+      "detection: the 合った route and a confusing sentence about 'two surface forms' removed",
+      "tokens: に (格助詞) + 合わせ (合わせる 下一段-サ行 連用形) + て, 合わせる 連体形 and 合わせ + た confirmed; 会わせて is 会わ (会う) + せ (せる) as claimed; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "ni-ataru",
+    "verdict": "fixed",
+    "changes": [
+      "example 1: en 'a person who counts as my uncle' was unnatural, now 'He's related to me as my uncle'",
+      "confusables: ni-sotte removed, no real confusion",
+      "detection: 'accept ambiguity' replaced by a noun-class guard and a warning on the past 当たった",
+      "tokens: に (格助詞) + 当たる/あたる (当たる 五段-ラ行 終止形/連体形), あたり + ます, 当たっ + て + い + た confirmed; 風に当たる, 頭に当たった, くじに当たったら and にあたって share the same tokens as claimed; 叔父 gets lexeme 伯父, irrelevant; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "to-onaji-de",
+    "verdict": "fixed",
+    "changes": [
+      "example 7: en 'laughed for me' was a gloss, now 'smiled at me the way you used to'",
+      "detection: notes that UniDic tags 同じ as 形状詞 before で/だ and 連体詞 before よう or a noun",
+      "tokens: と (格助詞) + 同じ (形状詞) + で (だ 連用形-一般), 同じく (副詞), 同じ (連体詞) + よう (様) + に (だ 連用形-ニ) confirmed; 同じ部屋で has 連体詞 同じ + 部屋 + で (格助詞) as claimed; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "to-chigatte",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added the written 〜と違い, with new example 9",
+      "example 6: en 'Unlike usual' was unidiomatic, now 'Unlike her usual self'",
+      "counterexample 4: 彼と話して shared no 違う token, replaced with 注文したのと違っていた (predicate と違っている)",
+      "detection: と違い route and the と違っている guard added",
+      "tokens: と (格助詞) + 違っ (違う 五段-ワア行 連用形-促音便) + て, と + は + 違っ + て, と + 違い (連用形-一般) confirmed; いつも is いつ + も; と間違って is 間違う as claimed; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "to-narande",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added the written 〜と並び, with new example 9",
+      "meaning: now names the literal sense the examples use ('side by side with ~') along with 'on a par with ~'",
+      "example 3: 地元の名物と並んで said nothing about what else was popular, now 名物の餃子と並んで with a matching en",
+      "confusables: ni-sotte removed, no real confusion",
+      "detection: と並び route added; literal and figurative senses share tokens and both count",
+      "tokens: と (格助詞) + 並ん (並ぶ 五段-バ行 連用形-撥音便) + で (て 接続助詞), 並ぶ 終止形/連体形 and 並び 連用形-一般 confirmed; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "to-onaji-kurai",
+    "verdict": "fixed",
+    "changes": [
+      "connection: added the predicate N + と同じくらいだ, with new example 9",
+      "detection: 'four tokens' corrected to three (と, 同じ, くらい)",
+      "tokens: と (格助詞) + 同じ (連体詞) + くらい/ぐらい (くらい 助詞-副助詞) confirmed; と同じで has 同じ as 形状詞 + で (だ) as claimed; no earlier entry duplicates it (kurai in b09 is the bare particle)"
+    ]
+  },
+  {
+    "id": "de-yokereba",
+    "verdict": "fixed",
+    "changes": [
+      "example 3: 日本語でよければ、通訳しましょうか made no sense, now 日本語でよければ、案内しますよ",
+      "example 8: second ものでよければ frame replaced with 古いパソコンでよければ、譲りますよ",
+      "examples 1 and 6: en 'If I'm all right for you' and 'If I'm okay with you' were unnatural, now 'If I'll do' and 'If you'd have me'",
+      "counterexample 2: 雨でよかった was odd, replaced with けががこの程度でよかった",
+      "detection: で after もの is tagged だ 連用形, stated as observed",
+      "tokens: で (格助詞) + よけれ (良い 仮定形) + ば, で + よかっ (良い 連用形-促音便) + たら, で + よろしけれ (宜しい 仮定形) + ば confirmed; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "moshimo-tara",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: removed もしも〜ても, which is the concessive 'even if' (temo), not 'if'; added na-Adj + なら to connection",
+      "example 6: もしも誰かに聞かれても moved to the counterexamples, replaced with もしも嫌なら",
+      "subsumes: added nara-conditional for the なら variant; confusables: added temo",
+      "detection: the て + も route removed and named as a reject",
+      "tokens: もし (若し 副詞) + も (係助詞) confirmed; たら (た 仮定形), なら (だ 仮定形), なけれ + ば confirmed; もしもし is one 感動詞 token and もしかしたら is もし + か + し + たら as claimed; あの in example 3 misread as a filler, irrelevant; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "suuryou-wa",
+    "verdict": "fixed",
+    "changes": [
+      "not rejected: the writer proposed reject, but the tokenizer shows a guard on the token right after は (掛かる, 要る, 必要, 越える, 待つ/待たす, 有る) or 少なくとも before the numeral separates the minimum reading from the date, contrast and time near misses with good precision",
+      "example 3: kana いる after は is tokenized as 居る, so 一週間はいるよ became 一週間は必要だよ; en 'at the least' now 'at least'",
+      "example 7: en 'more than a hundred' now 'well over a hundred'",
+      "detection: rewritten around the guard, with the recall it gives up",
+      "tokens: numeral (名詞-数詞) + counter (分/時間/週間/年/度 名詞, 人/つ 接尾辞) + は (係助詞) confirmed; 十五日 is 十 + 五 + 日; 一人 is a single 名詞 token; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "to-natte-iru",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: 優先席となっておりますので、ご遠慮ください told people not to use a priority seat at all, now 必要な方にお譲りください",
+      "counterexample 2: why named a non-existent id ni-natte-iru, now 'the resultant state of になる'",
+      "subsumes: added te-iru, as koto-ni-natte-iru (b10) does",
+      "tokens: と (格助詞) + なっ (成る 五段-ラ行 連用形-促音便) + て + い (居る 上一段-ア行) + ます / いる, and おり (居る 五段-ラ行 連用形) + ます confirmed; まで + と in example 1 noted; no earlier entry duplicates it"
+    ]
+  }
+]
