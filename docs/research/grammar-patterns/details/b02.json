@@ -36,7 +36,7 @@
       {"ja": "朝ご飯を食べないで学校に来た。", "en": "I came to school without eating breakfast.", "why": "ないで means 'without doing' (naide) and no ください or くれ follows."},
       {"ja": "靴を脱がないで入ってください。", "en": "Please come in without taking off your shoes.", "why": "ないで 'without' links to 入って; ください belongs to the next verb (te-kudasai)."},
       {"ja": "お願い、行かないで。", "en": "Please, don't go.", "why": "Bare sentence-final ないで is the casual request naide-request, with no ください or くれ."},
-      {"ja": "よく見てください。", "en": "Please look carefully.", "why": "Positive て + ください is te-kudasai; there is no ない before で."}
+      {"ja": "この本、明日までに読んでください。", "en": "Please read this book by tomorrow.", "why": "で is the voiced て-form of 読む with no ない before it: te-kudasai."}
     ],
     "subsumes": ["naide", "te-kudasai", "te-request"],
     "confusables": ["naide-request", "naide", "te-kudasai", "te-wa-ikenai"],
@@ -93,6 +93,7 @@
     "variants": [
       "〜なくちゃ",
       "〜なきゃ",
+      "〜なくっちゃ",
       "〜なくては (sentence-final)"
     ],
     "meaning": "gotta do ~ (casual, rest of 'must' left unsaid)",
@@ -108,6 +109,7 @@
     "connection": [
       "V-nai-stem + なくちゃ",
       "V-nai-stem + なきゃ",
+      "V-nai-stem + なくっちゃ",
       "V-nai-stem + なくては"
     ],
     "examples": [
@@ -117,7 +119,8 @@
       {"ja": "本当のことを言わなくちゃね。", "match": "言わなくちゃ", "en": "We've got to tell the truth, right?"},
       {"ja": "次こそ、勝たなくては。", "match": "勝たなくては", "en": "This time, I must win."},
       {"ja": "洗濯しなきゃって思ってたのに、すっかり忘れてた。", "match": "しなきゃ", "en": "I kept thinking I had to do the laundry, then totally forgot."},
-      {"ja": "宿題、今日中に終わらせなくちゃ。", "match": "終わらせなくちゃ", "en": "I've got to finish my homework today."}
+      {"ja": "宿題、今日中に終わらせなくちゃ。", "match": "終わらせなくちゃ", "en": "I've got to finish my homework today."},
+      {"ja": "うわ、もうこんな時間！急がなくっちゃ。", "match": "急がなくっちゃ", "en": "Whoa, look at the time! I've got to hurry."}
     ],
     "counterexamples": [
       {"ja": "もう帰らなくちゃいけない。", "en": "I have to go home now.", "why": "いけない follows, so this is the full nakute-wa-ikenai, not the cut-off form."},
@@ -127,7 +130,7 @@
     ],
     "subsumes": ["nakute", "tewa"],
     "confusables": ["nakereba-naranai", "naito-ikenai", "nakute-wa-ikenai", "ba-yokatta"],
-    "detection": "Tokens: verb in 未然形 + the auxiliary ない as なく + ちゃ (ちゃ is one token, a contraction of ては; part of speech ?), as なきゃ (ない in a contracted 仮定形, which UniDic may give as one form of ない or as なけれ + ゃ ?), or as なく + て + は. It counts only when nothing follows but sentence-final particles (ね, よ, な), quotative って or と, punctuation or the end of the line. When いけない, ならない or だめ follows, nakute-wa-ikenai, nakute-wa-naranai or nakereba-naranai match instead; when よかった or a main clause follows, なきゃ is a conditional. The なきゃ variant is also listed under nakereba-naranai, so one of the two entries has to own the cut-off form."
+    "detection": "Tokens: verb in 未然形 + the auxiliary ない as なく + ちゃ or っちゃ (one token, a contraction of ては; part of speech ?), as なきゃ (ない in a contracted 仮定形, which UniDic may give as one form of ない or as なけれ + ゃ ?), or as なく + て + は. It counts only when nothing follows but sentence-final particles (ね, よ, な), quotative って or と, punctuation or the end of the line. When いけない, ならない or だめ follows, nakute-wa-ikenai, nakute-wa-naranai or nakereba-naranai match instead; when よかった or a main clause follows, なきゃ is a conditional. The なきゃ variant is also listed under nakereba-naranai, so one of the two entries has to own the cut-off form."
   },
   {
     "id": "tari",
@@ -149,7 +152,7 @@
     },
     "prototype": true,
     "connection": [
-      "V-ta + り (V-ta + り) + する",
+      "V-ta + り + する",
       "i-Adj-stem + かったり",
       "na-Adj + だったり",
       "N + だったり"
@@ -167,11 +170,11 @@
       {"ja": "このシャツ、サイズがぴったりだ。", "en": "This shirt fits perfectly.", "why": "ぴったり is an adverb; its たり is not the particle."},
       {"ja": "駅のあたりで待ってて。", "en": "Wait for me around the station.", "why": "あたり 'around' is the noun 辺り, not V-ta + り."},
       {"ja": "もしかして、あの人が犯人だったりして。", "en": "What if that guy turns out to be the culprit?", "why": "Sentence-final たりして with no main clause is the hedge tari-shite."},
-      {"ja": "昨日、駅で先生にばったり会った。", "en": "Yesterday I ran into my teacher at the station.", "why": "ばったり is an adverb 'by chance'."}
+      {"ja": "ごめん、千円足りないんだけど貸してくれる？", "en": "Sorry, I'm a thousand yen short. Could you lend it to me?", "why": "足り is the stem of the verb 足りる 'be enough', not V-ta + り."}
     ],
     "subsumes": [],
     "confusables": ["tari-shite", "toka-toka"],
-    "detection": "Tokens: a verb or i-adjective in 連用形 (often a 音便 stem: 飲ん, 歌っ, 暑かっ) or the copula だっ, followed by たり (助詞-副助詞, lexeme たり; spelled だり after voiced stems). One たり is enough, and it is often followed by 為る (する) or by で/だ. Guard: the token before たり must be a verb, adjective or copula; ぴったり, ばったり and あたり (辺り) are single words in UniDic and never split. A sentence-final たりして with no main clause after it is the hedge tari-shite. Often confused with toka-toka, which lists nouns or clauses with とか."
+    "detection": "Tokens: a verb or i-adjective in 連用形 (often a 音便 stem: 飲ん, 歌っ, 暑かっ) or the copula だっ, followed by たり (助詞-副助詞, lexeme たり; spelled だり after voiced stems). One たり is enough, and it is often followed by 為る (する) or by で/だ. Guard: the token before たり must be a verb, adjective or copula; ぴったり, ばったり and あたり (辺り) are single words in UniDic and never split, and 足り (足りる) is a verb stem. A sentence-final たりして with no main clause after it is the hedge tari-shite. Often confused with toka-toka, which lists nouns or clauses with とか."
   },
   {
     "id": "ni-iku",
@@ -228,7 +231,8 @@
       "誰か",
       "どこか",
       "いつか",
-      "どれか"
+      "どれか",
+      "どちらか / どっちか"
     ],
     "meaning": "some- (something, someone, somewhere)",
     "kind": "construction",
@@ -249,7 +253,8 @@
       {"ja": "いつか一緒にパリに行こうね。", "match": "いつか", "en": "Let's go to Paris together someday."},
       {"ja": "この中からどれか一つ選んでください。", "match": "どれか", "en": "Please pick one of these."},
       {"ja": "部屋に誰かいるみたいだよ。", "match": "誰か", "en": "It sounds like someone's in the room."},
-      {"ja": "彼女はどこか寂しそうに見えた。", "match": "どこか", "en": "She looked somehow lonely."}
+      {"ja": "前にどこかで会ったこと、ありませんか？", "match": "どこか", "en": "Haven't we met somewhere before?"},
+      {"ja": "赤と青、どっちか好きなほうを取って。", "match": "どっちか", "en": "Red or blue, take whichever one you like."}
     ],
     "counterexamples": [
       {"ja": "出口はどこか、教えてもらえますか。", "en": "Could you tell me where the exit is?", "why": "どこ is the predicate of an embedded question and か marks the question, not 'somewhere'."},
@@ -259,7 +264,7 @@
     ],
     "subsumes": [],
     "confusables": ["ka-nanika", "nan-counter-ka", "ka-douka"],
-    "detection": "Tokens: an interrogative pronoun (UniDic lexemes 何, 誰, 何処, 何時, 何れ) immediately followed by か (助詞-副助詞). Check whether UniDic also has 何か or 何時か as single tokens (?); if so match those too. Guard: when the question word is the predicate (〜とは何か, 〜はどこか) or か is followed by 分かる, 知る, 教える, 聞く or と思う, it is a direct or embedded question. か何か after another か is ka-nanika, and 何 + counter + か is nan-counter-ka."
+    "detection": "Tokens: an interrogative pronoun (UniDic lexemes 何, 誰, 何処, 何時, 何れ, 何方 ?) immediately followed by か (助詞-副助詞). Check whether UniDic also has 何か or 何時か as single tokens (?); if so match those too. Guard: when the question word is the predicate (〜とは何か, 〜はどこか) or か is followed by 分かる, 知る, 教える, 聞く or と思う, it is a direct or embedded question. どこか before an adjective (どこか寂しい) is the adverb 'somehow', not 'somewhere'. か何か after another か is ka-nanika, and 何 + counter + か is nan-counter-ka."
   },
   {
     "id": "interrogative-mo",
@@ -414,7 +419,7 @@
       {"ja": "クラスの中で田中君が一番背が高い。", "match": "の中で田中君が一番", "en": "Tanaka is the tallest in the class."},
       {"ja": "果物の中で何が一番好き？", "match": "の中で何が一番", "en": "What's your favorite fruit?"},
       {"ja": "家族の中では、父が一番早く起きます。", "match": "の中では、父が一番", "en": "In my family, my father gets up earliest."},
-      {"ja": "日本で富士山が一番高い山です。", "match": "日本で富士山が一番", "en": "Mount Fuji is the tallest mountain in Japan."},
+      {"ja": "うちの店でこれが一番売れてるんですよ。", "match": "店でこれが一番", "en": "This is the best seller in our shop."},
       {"ja": "この中でどれがいちばん安いですか。", "match": "の中でどれがいちばん", "en": "Which of these is the cheapest?"},
       {"ja": "今まで行った国の中で、イタリアが一番楽しかったな。", "match": "の中で、イタリアが一番", "en": "Of all the countries I've been to, Italy was the most fun."},
       {"ja": "三人の中で誰が一番料理が上手だと思う？", "match": "の中で誰が一番", "en": "Of the three, who do you think cooks best?"}
@@ -466,7 +471,7 @@
     ],
     "subsumes": [],
     "confusables": ["ku-suru", "koto-ni-suru", "you-ni-suru", "ni-kimeru"],
-    "detection": "Tokens: a noun (or pronoun, question word, time noun) + に (助詞-格助詞) + 為る (する) in any form. Guard: if the token before に is こと or よう, it is koto-ni-suru or you-ni-suru; if it is a na-adjective stem (きれい, 静か) it is ku-suru 'make something ~'; lexicalized compounds (気にする, 大事にする, 馬鹿にする) are other words. The choosing sense usually has a menu-like context such as は〜にする, 何にする or これにする. Same surface as ku-suru, so the noun class decides."
+    "detection": "Tokens: a noun (or pronoun, question word, time noun) + に (助詞-格助詞) + 為る (する) in any form. Guard: if the token before に is こと or よう, it is koto-ni-suru or you-ni-suru; if it is a na-adjective stem (きれい, 静か) it is ku-suru 'make something ~'; lexicalized compounds (気にする, 大事にする, 馬鹿にする) are other words. The choosing sense usually has a menu-like context such as は〜にする, 何にする or これにする. Same surface as ku-suru, so the noun class decides; X を N にする 'turn X into N' (部屋を書斎にする) is also ku-suru."
   },
   {
     "id": "no-ga-suki",
@@ -518,7 +523,8 @@
     "variants": [
       "〜なくてもいいです",
       "〜なくても大丈夫",
-      "〜なくてもかまわない"
+      "〜なくてもかまわない",
+      "〜なくていい"
     ],
     "meaning": "don't have to do ~",
     "kind": "construction",
@@ -532,10 +538,12 @@
     "prototype": true,
     "connection": [
       "V-nai-stem + なくてもいい",
+      "V-nai-stem + なくていい",
       "i-Adj-stem + くなくてもいい",
       "na-Adj + でなくてもいい",
       "na-Adj + じゃなくてもいい",
-      "N + でなくてもいい"
+      "N + でなくてもいい",
+      "N + じゃなくてもいい"
     ],
     "examples": [
       {"ja": "無理に笑わなくてもいいよ。", "match": "笑わなくてもいい", "en": "You don't have to force a smile."},
@@ -544,17 +552,18 @@
       {"ja": "急いで返さなくてもかまわない。", "match": "返さなくてもかまわない", "en": "There's no rush to give it back."},
       {"ja": "高くなくてもいいから、丈夫な靴がほしい。", "match": "高くなくてもいい", "en": "They don't have to be expensive. I just want sturdy shoes."},
       {"ja": "そんなに謝らなくてもいいのに。", "match": "謝らなくてもいい", "en": "You really don't need to apologize so much."},
-      {"ja": "上手じゃなくてもいいんだよ、楽しめば。", "match": "上手じゃなくてもいい", "en": "It doesn't have to be good. Just enjoy it."}
+      {"ja": "上手じゃなくてもいいんだよ、楽しめば。", "match": "上手じゃなくてもいい", "en": "It doesn't have to be good. Just enjoy it."},
+      {"ja": "明日は早く起きなくていいから、ゆっくり寝てね。", "match": "起きなくていい", "en": "You don't have to get up early tomorrow, so sleep in."}
     ],
     "counterexamples": [
-      {"ja": "雨が降らなくても、試合は中止です。", "en": "Even if it doesn't rain, the game is canceled.", "why": "なくても is concessive 'even if not' (temo), and a different main clause follows."},
+      {"ja": "薬を飲まなくても、熱は下がった。", "en": "The fever went down even without medicine.", "why": "なくても is concessive 'even if not' (temo), and a different main clause follows."},
       {"ja": "ここで写真を撮ってもいい？", "en": "Can I take a picture here?", "why": "Positive て + もいい is permission (te-mo-ii)."},
       {"ja": "明日までに出さなくてはいけない。", "en": "I have to hand it in by tomorrow.", "why": "なくては + いけない is obligation (nakute-wa-ikenai)."},
       {"ja": "お金がなくても、毎日楽しい。", "en": "Even without money, every day is fun.", "why": "なくても from 無い 'not have' is concessive, not 'don't have to'."}
     ],
     "subsumes": ["nakute", "temo", "te-mo-ii"],
     "confusables": ["te-mo-ii", "temo", "nakute-wa-ikenai"],
-    "detection": "Tokens: the negative auxiliary ない after a verb, or 無い after an adjective's く or after で/じゃ, in 連用形 なく + て + も + いい / 良い (lexeme 良い), 大丈夫 or 構う (かまわない). Guard: the evaluative word must follow も directly, or with only です, よ or のに after it; if a new predicate follows なくても, it is concessive temo. A match should stop te-mo-ii, temo and nakute from also counting. Opposite of nakute-wa-ikenai."
+    "detection": "Tokens: the negative auxiliary ない after a verb, or 無い after an adjective's く or after で/じゃ, in 連用形 なく + て + も (often dropped: なくていい) + いい / 良い (lexeme 良い), 大丈夫 or 構う (かまわない). Guard: the evaluative word must follow も directly, or with only です, よ or のに after it; if a new predicate follows なくても, it is concessive temo. A match should stop te-mo-ii, temo and nakute from also counting. Opposite of nakute-wa-ikenai."
   },
   {
     "id": "te-request",
@@ -609,7 +618,10 @@
       "Nの隣",
       "Nの中",
       "Nの上",
-      "Nの下"
+      "Nの下",
+      "Nの外",
+      "Nの近く",
+      "Nの右 / 左"
     ],
     "meaning": "in front of / behind / beside / in / on / under N",
     "kind": "construction",
@@ -626,7 +638,10 @@
       "N + の + 隣",
       "N + の + 中",
       "N + の + 上",
-      "N + の + 下"
+      "N + の + 下",
+      "N + の + 外",
+      "N + の + 近く",
+      "N + の + 右 / 左"
     ],
     "examples": [
       {"ja": "駅の前で待ってるね。", "match": "駅の前", "en": "I'll wait in front of the station."},
@@ -635,7 +650,10 @@
       {"ja": "私の隣、空いてますよ。", "match": "私の隣", "en": "The seat next to me is free."},
       {"ja": "かばんの中に財布がない！", "match": "かばんの中", "en": "My wallet's not in my bag!"},
       {"ja": "鍵なら机の上に置いといたよ。", "match": "机の上", "en": "If you mean the keys, I left them on the desk."},
-      {"ja": "橋の下で雨がやむのを待った。", "match": "橋の下", "en": "We waited under the bridge for the rain to stop."}
+      {"ja": "橋の下で雨がやむのを待った。", "match": "橋の下", "en": "We waited under the bridge for the rain to stop."},
+      {"ja": "猫を家の外に出さないでね。", "match": "家の外", "en": "Don't let the cat out of the house, okay?"},
+      {"ja": "学校の近くに新しいカフェができたんだって。", "match": "学校の近く", "en": "I heard a new café opened near the school."},
+      {"ja": "郵便局は銀行の左です。", "match": "銀行の左", "en": "The post office is to the left of the bank."}
     ],
     "counterexamples": [
       {"ja": "試合の前に少し走っておこう。", "en": "Let's run a bit before the game.", "why": "前 after an event noun is time 'before', the mae-ni pattern."},
@@ -644,7 +662,7 @@
     ],
     "subsumes": [],
     "confusables": ["mae-ni", "no-naka-de", "ue-de", "no-ue-dewa"],
-    "detection": "Tokens: a noun + の (助詞-格助詞) + one of the location nouns 前, 後ろ, 横, 隣, 中, 上, 下 (lexemes as written; 中 read なか, 上 うえ, 下 した), usually followed by に, で, を, の or は. Guard: the first noun should be a place or physical object; after an event or time noun, 前 means 'before' (mae-ni). の上で or の上では with an abstract noun are ue-de and no-ue-dewa, の中で 'among' is no-naka-de, and 下の名前 is a set phrase. Readings such as かみ, しも or じょう are filtered by the UniDic reading."
+    "detection": "Tokens: a noun + の (助詞-格助詞) + one of the location nouns 前, 後ろ, 横, 隣, 中, 上, 下, 外, 近く, 右, 左 (lexemes as written, 近く as 近く ?; 中 read なか, 上 うえ, 下 した, 外 そと), usually followed by に, で, を, の or は. Guard: the first noun should be a place or physical object; after an event or time noun, 前 means 'before' (mae-ni). の上で or の上では with an abstract noun are ue-de and no-ue-dewa, の中で 'among' is no-naka-de, and 下の名前 is a set phrase. Readings such as かみ, しも or じょう are filtered by the UniDic reading."
   },
   {
     "id": "no-ga-jouzu",
@@ -730,7 +748,7 @@
     "counterexamples": [
       {"ja": "下手に動かないほうがいい。", "en": "You'd better not make any rash moves.", "why": "下手に is an adverb 'carelessly'; no skill is marked by が."},
       {"ja": "下手をすると、終電に間に合わないよ。", "en": "If things go badly, you'll miss the last train.", "why": "下手をすると is a set phrase 'if things go wrong'."},
-      {"ja": "主役が下手から登場した。", "en": "The lead entered from stage left.", "why": "This 下手 is read しもて, 'stage left', and が marks the subject."}
+      {"ja": "主役が下手から登場した。", "en": "The lead came on from the audience's left.", "why": "This 下手 is read しもて, the side of the stage on the audience's left, and が marks the subject."}
     ],
     "subsumes": [],
     "confusables": ["no-ga-jouzu", "no-ga-suki"],
@@ -770,7 +788,7 @@
     ],
     "counterexamples": [
       {"ja": "人の悪口を言ってはならない。", "en": "You must not speak ill of others.", "why": "てはならない after a positive verb is prohibition (tewa-naranai)."},
-      {"ja": "彼はこのチームになくてはならない存在だ。", "en": "He's someone this team can't do without.", "why": "No verb precedes: 無い + なくてはならない is the set 'indispensable', modifying 存在."},
+      {"ja": "彼はこのチームになくてはならない存在だ。", "en": "He's someone this team can't do without.", "why": "No verb precedes: なく is 無い itself, and なくてはならない is the set 'indispensable', modifying 存在."},
       {"ja": "明日のことが心配でならない。", "en": "I can't stop worrying about tomorrow.", "why": "でならない after a feeling word is te-naranai 'can't help feeling'."},
       {"ja": "そろそろ行かなくてはいけない。", "en": "I have to get going soon.", "why": "いけない, not ならない, follows: that is nakute-wa-ikenai."}
     ],
@@ -811,7 +829,7 @@
     "counterexamples": [
       {"ja": "先生に聞いてみたらどうですか。", "en": "Why don't you ask your teacher?", "why": "たらどう is the suggestion tara-dou; there is no topic は before どう."},
       {"ja": "このドアはどうやって開けるの？", "en": "How do you open this door?", "why": "どうやって 'by what means' asks about a method."},
-      {"ja": "明日はどうする？", "en": "What are you doing tomorrow?", "why": "どう + する asks what someone will do, not how something is."},
+      {"ja": "明日はどうする？", "en": "So what's the plan for tomorrow?", "why": "どう + する asks what someone will do, not how something is."},
       {"ja": "結果はどうでもいい。", "en": "I don't care about the result.", "why": "どうでもいい is a set phrase 'it doesn't matter'."}
     ],
     "subsumes": [],
