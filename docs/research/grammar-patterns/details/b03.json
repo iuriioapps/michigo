@@ -487,7 +487,7 @@
       { "ja": "春になると、桜が咲きます。", "match": "なると", "en": "When spring comes, the cherry blossoms bloom." },
       { "ja": "このボタンを押すと、ドアが開くよ。", "match": "押すと", "en": "Press this button and the door opens." },
       { "ja": "彼はお酒を飲むと、すぐ顔が赤くなる。", "match": "飲むと", "en": "His face goes red as soon as he drinks." },
-      { "ja": "窓を開けると、海が見えた。", "match": "開けると", "en": "When I opened the window, there was the sea." },
+      { "ja": "窓を開けると、海が見える。", "match": "開けると", "en": "When you open the window, you can see the sea." },
       { "ja": "部屋が静かだと、かえって落ち着かない。", "match": "静かだと", "en": "When the room is quiet, I actually can't relax." },
       { "ja": "一人だと寂しいから、一緒に行こう。", "match": "一人だと", "en": "It's lonely on your own, so let's go together." },
       { "ja": "この道をまっすぐ行くと、右側に駅があります。", "match": "行くと", "en": "Go straight down this road and the station is on your right." }
