@@ -1,0 +1,239 @@
+[
+  {
+    "id": "de-mo-aru",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: 祖父は職人でもあり、よく笑う人だった had no second role for も and the en dropped 'also', replaced with 兄はプロのギタリストでもあり",
+      "detection: 便利 is tagged 名詞-普通名詞, so the tag of the word before で cannot tell a noun from a na-adjective either",
+      "tokens: で (で 助詞-格助詞 after a noun, だ 連用形-一般 after 便利) + も (係助詞) + ある / あり / あっ+た / あり+ます (有る) confirmed; ジュースでもある, ここでもある and それでもある tokenize the same で + も + ある, as detection says; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "de-wa-nakute",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added the common casual 〜じゃなく, with new example 9 コーヒーじゃなく",
+      "connection: V-plain + のではなく widened to Clause-plain, since example 3 attaches to an i-adjective",
+      "example 8: en 'It's not quiet' was loose for the contrast, now 'It's not peaceful here'",
+      "tokens: で (格助詞 after a noun, だ 連用形-一般 after の and na-adjectives) + は + なく (無い 連用形-一般) + て, じゃ (だ 連用形-融合) + なく confirmed; なくなっ is one token 無くなる and なかっ is 無い 連用形-促音便, as detection says; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "dake-shika",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: 合格したのは…僕だけしかいなかった mixed a のは cleft with いなかった, now うちのクラスで合格した人は、僕だけしかいなかった",
+      "detection: the negative list claimed 形容詞 無い after が or は and gave ありません as ませ+ん without the lexeme; rewritten from the tokens",
+      "tokens: だけ (だけ 助詞-副助詞) + しか (しか 助詞-副助詞) confirmed in every example, with the negative as ない (助動詞), なかっ + た, なく + て, ませ + ん (ず 終止形-撥音便) and the contracted 飲ん + で (てる 未然形) + ない; 噂でしかない is で (だ 連用形-一般) + しか + ない (無い 形容詞); no earlier entry duplicates it (shika-nai in b09 is the plain しか)"
+    ]
+  },
+  {
+    "id": "ni-nareru",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the casual 〜に慣れてる, already shown by example 5, and new example 9 にまだ慣れてなくて for the casual negative",
+      "detection: added the casual negative 慣れ + て (てる 未然形) + なく and an adverb between に and 慣れ",
+      "tokens: に (格助詞) + 慣れ (慣れる 動詞-非自立可能 下一段-ラ行) + た / て / てる (てる 助動詞) and 慣れる 終止形 / 連体形 confirmed; 彼になれる is なれる (成る 下一段-ラ行 終止形) and 歩き慣れた has no に, as detection says; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "you-ni-mieru",
+    "verdict": "fixed",
+    "changes": [
+      "example 5: en dropped 少し, now 'He looked a little tired today'",
+      "counterexample 1 and detection: そうに見える is listed as a variant of ni-mieru (b06), not sou-appearance alone; why and detection now say so",
+      "tokens: よう (様 形状詞-助動詞語幹) + に (だ 連用形-ニ) + 見える / 見え + た / ない / ます / は + 見え + なかっ + た confirmed; そう (そう-様態) + に (だ 連用形-ニ), 学生 + に (格助詞) and purpose 見える + よう + に confirmed for the near misses; no earlier entry duplicates it (ni-mieru in b06 already points its ように見える counterexample here)"
+    ]
+  },
+  {
+    "id": "ja-nai-kakunin",
+    "verdict": "fixed",
+    "changes": [
+      "kept after the tokenizer check: じゃん is one 助詞-終助詞 token, and じゃない right after a verb, i-adjective or た / ない in 終止形 cannot be the negative copula, so those guards give good precision; after a noun only じゃないですか, じゃないの or a final ？ are accepted",
+      "detection: rewritten around those guards, with the rejections of a falling noun + じゃない, a following noun or て, janai-ka and ん + じゃない",
+      "counterexample 4: added 帰ったんじゃない？ (ん + じゃない, the guess), the near miss the ん guard rejects",
+      "examples 7 and 8: en 'It's not bad, this idea, is it?' and 'He's kind, actually' were loose, now 'This idea isn't bad at all, is it?' and 'He's surprisingly kind, isn't he?'",
+      "tokens: じゃ (だ 連用形-融合) + ない (無い 終止形-一般; 連体形-一般 before の) + です + か / の (終助詞), じゃん (助詞-終助詞) confirmed; 本物じゃない！ and 私の本じゃない。 tokenize the same as 田中さんじゃない？; じゃんけん is one 名詞 token; no earlier entry duplicates it (janai-ka in b04 sends じゃん here)"
+    ]
+  },
+  {
+    "id": "n-ja-nai",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added the rough 〜んじゃねえ, common in anime and manga, with new example 9 触るんじゃねえ",
+      "counterexample 4: added 雨が降るんじゃない？, a dictionary-form verb + んじゃない that is the guess, not a prohibition",
+      "detection: the verb is 連体形-一般 in every example (not 終止形), ねえ is the lexeme 無い, and a non-human subject marks the guess reading",
+      "tokens: 寝る (連体形-一般) + ん (の 助詞-準体助詞) + じゃ (だ 連用形-融合) + ない (無い 終止形-一般) / ねえ (無い) / あり + ませ + ん confirmed; んじゃなかった (なかっ 無い 連用形-促音便) and んじゃなくて (なく + て) confirmed; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "sete-oku",
+    "verdict": "fixed",
+    "changes": [
+      "connection: the させておく rule said 'a ichidan or suru verb' on a nai-stem; now godan せ, ichidan させ, する → させ and 来る → 来させ",
+      "example 9: added 食べさせておいた, since no example showed the ichidan させ token",
+      "example 2: en 'Let him sleep' for 休ませる, now 'He's tired, so let him rest a little longer'",
+      "detection: the causative token is せ (せる) after godan, させ (させる) after ichidan and さ (為る 未然形-サ) + せ for する; 見せる is 動詞-非自立可能, not 動詞-一般",
+      "tokens: 遊ば + せ (せる 助動詞 連用形-一般) + て + おこう / おい / おけ / おき (置く 動詞-非自立可能), 食べ + させ (させる) and さ + せ + とけ (とく 助動詞) + ば confirmed; 合わせ / 被せ are 動詞-一般 and 見せ 動詞-非自立可能; no earlier entry duplicates it (te-oku in b03, sasete-morau in b13)"
+    ]
+  },
+  {
+    "id": "rarete-shimau",
+    "verdict": "fixed",
+    "changes": [
+      "connection: added する verbs (N + されてしまう / されちゃう), with new example 10 無視されちゃった",
+      "example 6: 切符を切られる alone reads as a ticket inspector punching a ticket, now 違反切符を切られてしまいます for the parking ticket",
+      "detection: removed the false claim of a じゃう contraction (れ / られ end in e, so it is always ちゃう); added that the ichidan potential shares the same られる 助動詞 token",
+      "tokens: 盗ま + れ (れる 助動詞 助動詞-レル 連用形-一般) + て + しまっ (仕舞う) + た, 食べ + られ + ちゃう (ちゃう 助動詞 五段-ワア行), 無視 + さ (為る 未然形-サ) + れ + ちゃっ + た confirmed; 読め is 読む 下一段-マ行 and 褒め + られ + て has no しまう, as the near misses say; 刺され is read with the lexeme 差す, harmless for the match; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "darou-to-omou",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the common casual 〜だろうなと思う, with new example 9 遅れるだろうなと思って",
+      "detection: the guard 'the 格助詞 と, not the 接続助詞 と' was wrong, since the concessive 誰だろうと is also 助詞-格助詞; the guard is now 思う right after と",
+      "examples 3 and 7: en lost the のに regret and the conjecture, now 'And here I thought this would be enough' and 'it would be too early'",
+      "tokens: だろう (だ 助動詞-ダ 意志推量形) + と (格助詞) + 思う / 思い + ます / 思っ + た / 思っ + て confirmed, and だろう + な (終助詞) + と + 思っ for the new variant; 誰 + だろう + と + 、 and だろう + と + 言っ confirmed for the near misses; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "nasasou-da",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added the common 〜じゃなさそう and the contracted 〜てなさそう, with new examples 9 丈夫じゃなさそう and 10 気にしてなさそうだった; the ではなさそう connection had no example",
+      "detection: added the じゃ / では + なさ token sequences and the contracted て + なさ (無い 形容詞) with no てる token",
+      "tokens: なさ (無い 形容詞-非自立可能 語幹-サ; ない 助動詞 語幹-サ after 怒っていない) + そう (そう-様態 形状詞-助動詞語幹) + だ / です / な / に / で confirmed; hearsay ない (連体形-一般) + そう is tagged そう-様態 as well, as detection says; 降りそう is misread with the lexeme 下りる, harmless for the near miss; no earlier entry duplicates it (b03 and b12 point their なさそう near misses here)"
+    ]
+  },
+  {
+    "id": "to-ta-hakken",
+    "verdict": "fixed",
+    "changes": [
+      "kept after the tokenizer check: the tokens are those of to-conditional (V 終止形 + と 接続助詞), but the tense of the main clause (sentence-final た 終止形, not a 連体形 た in a relative clause) gives good precision; the guard is now written into detection",
+      "meaning: with a past main clause, と reports either a discovery or the next action of the same subject, which no token guard can separate, so the meaning now covers both: 'when ~, (I found that) ~; ~, and then ~ (one past event)'",
+      "example 9: added 席を立つと、何も言わずに部屋を出ていった for the next-action reading",
+      "counterexample 4: added 開けると、昨日買った花が見える, a relative-clause た that the tense guard must ignore",
+      "detection: rewritten around the tense guard, the habitual いつも / 毎朝 / よく rejection and the quotative と; notes that to-conditional (b03) example 4 窓を開けると、海が見えた belongs here",
+      "tokens: 開ける / 起きる / 着く / みる (終止形-一般) + と (助詞-接続助詞) + 、 and a final た (終止形-一般) after い, だっ, なかっ and まし confirmed; 帰る is read with the lexeme 返る, harmless for the match; 帰ると言った has と 助詞-格助詞; 買っ + た (連体形-一般) + 花 confirmed; not a duplicate: to-conditional is the general と and this entry subsumes it"
+    ]
+  },
+  {
+    "id": "tari-shite",
+    "verdict": "fixed",
+    "changes": [
+      "meaning: the second sense 'doing things like ~' (one たり + して + predicate) is the form 〜たりして of the entry tari (b02); meaning narrowed to the final guess",
+      "examples 6, 7 and 8: 読んだりして過ごしています, 飲みに行ったりして楽しんでます and 掃除をしたりして、一日が終わった were tari, replaced with 満点取れたりして, 先生だったりして？ and 高かったりして (i-adjective, no example before)",
+      "counterexample 4: added 本を読んだりして過ごしています as the tari near miss",
+      "examples 3 and 4: en 'You haven't left your wallet behind' and 'just my luck' were loose, now 'Don't tell me I forgot my wallet' and 'What if it rains tomorrow?'",
+      "subsumes and confusables: tari added to subsumes; tari-tomo (たりとも 'not even one') and darou-to-omou were not real confusables, replaced with kamoshirenai",
+      "detection: rewritten around the end-of-utterance guard",
+      "tokens: たり / だり (たり 助詞-副助詞) + し (為る 連用形-一般) + て (接続助詞) confirmed, after 知っ + て (てる 連用形), だっ, 高かっ and 取れ; たり + し + たら (た 仮定形) and たり + し + ない + で confirmed for the near misses; not a duplicate: tari covers only the non-final use"
+    ]
+  },
+  {
+    "id": "desu-to",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: ご都合が悪いですと is nonstandard (the polite form is 悪いようでしたら), replaced with このサイズですと; new example 9 不便ですと for the na-adjective",
+      "connection: i-Adj + ですと replaced with na-Adj + ですと; detection notes the i-adjective use as nonstandard",
+      "example 7: en 'At that rate' mistranslated そのやり方, now 'If you do it that way, it'll take far too long'",
+      "counterexample 1: この問題は難しいですと答えた was an unnatural bare quote, replaced with もう大丈夫ですと言っていました",
+      "detection: dropped the meaningless です + た; the 接続助詞 and 格助詞 tags of と are the guard",
+      "tokens: です (です 助動詞-デス 終止形-一般) + と (助詞-接続助詞) confirmed after nouns, こちら, から and 不便 (名詞-普通名詞); quotative and listing と after です are 助詞-格助詞, でしたら is でし + たら (た 仮定形); no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "you-nara",
+    "verdict": "fixed",
+    "changes": [
+      "connection: added the missing N + のようなら, with new example 9 雨のようなら",
+      "counterexample 1: さようなら is one 感動詞 token that no matcher confuses, replaced with 降りそうなら (そう + なら)",
+      "counterexample 3: 雨が降るようになったら read as a habit change and was unnatural, replaced with 一人で歩けるようになったら",
+      "detection: added な / の before よう and the そう + なら rejection",
+      "tokens: よう (様 形状詞-助動詞語幹) + なら (だ 仮定形-一般) and よう + だっ + たら (た 仮定形-一般) confirmed after 連体形 verbs, adjectives, た and ない, and after の; そう (そう-様態) + なら, よう + な + 人 + なら and よう + に + なっ + たら confirmed for the near misses; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "ka-to-omou",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the very common 〜かなと思う and 〜んじゃないかと思う, with new examples 9 知っているんじゃないかと思う and 10 高いかなと思った",
+      "subsumes: added janai-ka, whose じゃないか sits inside 〜んじゃないかと思う and must not also count",
+      "detection: か is 助詞-終助詞 in every example (the 副助詞 alternative is not seen); added the かな and んじゃないか token sequences",
+      "tokens: か (終助詞) + と (格助詞) + 思う / 思い + ます / 思っ + た / 思っ + て confirmed, and か + な (終助詞) + と + 思っ; 思っ + たら (た 仮定形), 思え (仮定形) + ば and か + と + 聞か confirmed for the near misses; no earlier entry duplicates it (ka-to-omottara is a separate id not yet written)"
+    ]
+  },
+  {
+    "id": "te-moratte-mo-ii-desu-ka",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added the very common humble 〜ていただいてもいいですか and 〜ていただいてもよろしいですか (not listed under te-itadakemasen-ka), with new example 9 書いていただいてもよろしいですか",
+      "detection: added the 頂く and 宜しい tokens, and that お待ちいただいても (no て before 頂く) is go-itadaku",
+      "tokens: て + もらっ (貰う 動詞-非自立可能 連用形-促音便) + て + (も) + いい (良い 形容詞-非自立可能) + です / でしょう + か confirmed; て + いただい (頂く 連用形-イ音便) + て + も + よろしい (宜しい 形容詞-一般) confirmed; bare もらっ with no て before it and てもらっても + 、 confirmed for the near misses; no earlier entry duplicates it (b03 te-morau already points its counterexample here)"
+    ]
+  },
+  {
+    "id": "go-itadaku",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the common request ご〜いただけませんか, with new example 10 ご説明いただけませんか; all variants are modern keigo and none is another id's form (te-itadakemasen-ka is the て-form request)",
+      "register: written changed to neutral, since the form is everyday spoken service and business keigo (examples 4, 8 and 10 are spoken)",
+      "example 6: en 'it ended safely' was loose for 無事に終わりました, now 'it went off without a hitch'",
+      "tokens: ご / お (御 接頭辞) + verbal noun (名詞-普通名詞) or verb 連用形 (越し, 待ち) + いただき / いただい / いただく (頂く 五段-カ行) and potential いただけ / いただける / いただけれ (頂く 下一段-カ行) confirmed; ご覧 is one token 御覧 as detection says; お + 水 + いただけ, 送っ + て + いただき and ご近所 … お菓子をいただいた confirmed for the near misses; no earlier entry duplicates it (o-suru, o-ni-naru and o-kudasai are other forms)"
+    ]
+  },
+  {
+    "id": "o-desu",
+    "verdict": "fixed",
+    "changes": [
+      "detection: the claim that the middle token is always a verb 連用形 is wrong: 帰り and 探し are their own 名詞-普通名詞 tokens, so the guard now accepts a verb 連用形 or a listed deverbal noun",
+      "meaning: 'is ~ing' missed the perfect reading of お帰りです and ご到着です, now '(someone respected) is ~ing or has ~ed (honorific)'",
+      "variants and connection: added the common service-speech お〜でしょうか, with new example 9 お困りでしょうか; ご + V-masu-stem replaced with ご + verbal noun and ご存じです; every variant is real modern keigo and none is o-ni-naru's form",
+      "register: written changed to neutral, since the form is mainly spoken service and office keigo",
+      "tokens: お (御 接頭辞) + 待ち / 呼び / 出かけ / 住まい / 困り (動詞 連用形-一般) + です or でしょう + か confirmed; お + 帰り / 探し (名詞-普通名詞) + です; ご + 存じ (存ずる サ行変格 連用形) and ご + 到着 (名詞) confirmed; お + 弁当 / 疲れ (名詞) + 様 / 元気 (名詞) confirmed for the near misses; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "de-irassharu",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the common contracted 〜でいらした, with new example 9 看護師でいらしたんですね; all variants are real modern keigo and none is another id's form",
+      "counterexample 1: ここで先生がいらっしゃる has が between で and いらっしゃる and no matcher would hit it, replaced with 車でいらっしゃいますか (means で + 'come', the same adjacent tokens)",
+      "counterexample 3: why called でございます 'the humbler copula'; it is the polite copula, used of things or oneself",
+      "register: written changed to neutral, since examples 3 and 6 are everyday spoken keigo",
+      "detection: added いらし and the means / place で guard",
+      "tokens: で (だ 連用形-一般, or 助詞-格助詞 after 様, 作家 and 看護師) + いらっしゃる / いらっしゃい + ます / いらっしゃっ + た / て / いらし + た (いらっしゃる 動詞-非自立可能) confirmed; 車で is だ 連用形-一般 + いらっしゃい, identical to the pattern; no earlier entry duplicates it (de-gozaimasu in b06 is ござる)"
+    ]
+  },
+  {
+    "id": "shidai",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 1 and detection: 君次第だ was assigned to shidai-desu, which is 'that is how it came about'; N + 次第だ is the 次第だ variant of shidai-de",
+      "counterexample 5: added お電話した次第です, the real shidai-desu near miss (た + 次第です)",
+      "detection: 次第に is 次第 名詞 + に 格助詞, not one adverb token; added the tokenizer gap for 止む (止み 名詞, やみ read as 闇) in example 7",
+      "tokens: verb 連用形-一般 (でき, 空き, 終わり, 見つかり, 着き) or verbal noun + し (為る 連用形-一般) + 次第 / しだい (次第 名詞-普通名詞) confirmed; example 7 やみ is misread as 闇 名詞, kept since the sentence is natural; 君 + 次第 + だ, 天気 + 次第 + で, の + 次第 and た + 次第 + です confirmed for the near misses; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "kakeru",
+    "verdict": "fixed",
+    "changes": [
+      "detection: the fused-token path accepted any lexeme ending in 掛ける, but 見掛ける, 追い掛ける and 出掛ける are fused 動詞-一般 tokens of the same shape; added a stop list of lexicalized compounds",
+      "counterexample 4: added 見かけた (見掛ける 'spot'), a fused 掛ける compound that is not the pattern",
+      "tokens: 死に / 溶け / 開け + かけ (掛ける 動詞-非自立可能 下一段-カ行) and the fused 言いかけ / 眠りかけ / 乗りかけ / 忘れかけ (…掛ける 動詞-一般) and nouns 読みかけ / 食べかけ / やりかけ (…掛け 名詞-普通名詞) confirmed, as detection says; 話しかける, 見かけ and 追いかけ are fused tokens too; no earlier entry duplicates it (にかけて and にかけても are the noun + に forms)"
+    ]
+  },
+  {
+    "id": "kiru",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: en 'tears came' was unnatural, now 'When I made it all the way to the summit, I cried'",
+      "connection: removed 切れた, the potential 切れる that belongs with kirenai",
+      "detection: the lexicalized 思い切る and 言い切る were 'rejected' as if a guard were needed; they are single 動詞-一般 tokens (also 張り切る, 締め切る, 割り切る), so adjacency already rejects them; added the 五段-ラ行 against 下一段-ラ行 test that separates 切る from the potential 切れる of kirenai",
+      "detection: noted that はさみ in counterexample 1 is misread as 挟む + で (て), harmless for the guard",
+      "tokens: verb 連用形 + 切っ / きっ / 切る / きる (切る 動詞-非自立可能 五段-ラ行) confirmed in all examples; 食べ + きれ (切る 下一段-ラ行 未然形) + ない and 思い切っ (思い切る) confirmed for the near misses; no earlier entry duplicates it (kirenai is b16)"
+    ]
+  }
+]
