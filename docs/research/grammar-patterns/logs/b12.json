@@ -1,0 +1,226 @@
+[
+  {
+    "id": "bakari-de-naku",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the casual ばかりじゃなくて and ばっかじゃなくて, with example 8 for ばっか",
+      "example 4: en tightened to 'Not only is the food good here, it's cheap too'",
+      "counterexample 2: why corrected, noun + ばかりで is bakari (b09 scope), not bakari-de",
+      "counterexample 3: replaced a second noun + ばかりで case with sentence-final ばかりではない 'not all'",
+      "subsumes: added ta-bakari, since example 6 (降ってきたばかりでなく) has た + ばかり; confusables: added dake-de-naku",
+      "tokens: ばかり 副助詞 + で (だ 連用形-一般) + なく (無い 連用形-一般) as claimed; じゃ is だ 連用形-融合, ではなく has は 係助詞, ばっか/ばっかり have lexeme ばかり; ばかりではない ends in ない 終止形; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "bakari-de",
+    "verdict": "fixed",
+    "changes": [
+      "scope: narrowed to a predicate + ばかりで; noun + ばかりで is plain bakari (b09 detection already says so), so the N connection was removed",
+      "examples 1, 4, 6, 7: noun + ばかりで replaced with 言うばっかりで, 派手なばかりで, 笑っているばかりで and 大きいばかりで",
+      "connection: added na-Adj + なばかりで; meaning reworded",
+      "counterexample 3: replaced the weak 漫画ばかり読んでいる with noun + ばかりで (口ばかりで), the real overlap with bakari",
+      "tokens: ばかり 副助詞 + で (だ 連用形-一般) as claimed; the predicate before it is 連体形; 派手 is 名詞-普通名詞 + な (だ 連体形), so the guard checks the token kind before ばかり; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "bakari-da",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: why corrected, noun + ばかりで is plain bakari (not bakari-de)",
+      "detection: past forms spelled out on the real tokens",
+      "tokens: verb 連体形/終止形 + ばかり 副助詞 + だ/です 終止形-一般, past だっ (連用形-促音便) / でし (です 連用形-一般) + た, as claimed; 悪く|なる and 減って|いく put a verb directly before ばかり; no overlap with b09 bakari, which takes only noun + ばかりだ; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "bakari-ni",
+    "verdict": "fixed",
+    "changes": [
+      "connection: N + な + ばかりに corrected to N + であるばかりに",
+      "counterexample 1: the stiff 着いたばかりに見えた replaced with 焼いたばかりにしては (ta-bakari + ni-shite-wa)",
+      "subsumes: added ta-bakari, since た + ばかり sits inside most examples; confusables: added ni-shite-wa",
+      "tokens: ばかり 副助詞 + に 格助詞 as claimed; the た before it is 連体形-一般 except after 多かっ, where UniDic gives 終止形-一般, so detection no longer requires 連体形; ん in 泣かんばかりに is ず 終止形-撥音便; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "ippou-da",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added 一方でした (shown by example 2) and the written 一方である, with example 8",
+      "counterexample 1: why corrected, 一方 there means 'one of the two', not a 接続詞",
+      "tokens: verb 連体形 + 一方 (名詞-普通名詞) + だ/です, as claimed; past でし/だっ + た; 一方である is 一方 + で (だ 連用形-一般) + ある, so the ippou-de guard must check that its で is 格助詞; UniDic tags 一方 接続詞 in 二人のうち、一方だけ; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "ippou-de",
+    "verdict": "fixed",
+    "changes": [
+      "example 3: 生徒思いの先生だ made 生徒思いの優しい先生でもある, so the contrast reads naturally",
+      "example 5: the stiff 一方では賛成する人もいるが replaced with だが一方では",
+      "connection: cleaned up the na-Adj notation; added N + である一方で with example 8, and その + 一方で",
+      "counterexample 5: added sentence-initial 一方、 (接続詞 'meanwhile')",
+      "detection: removed the contradiction about sentence-initial 一方で, which the variants include",
+      "tokens: 一方 名詞-普通名詞 + で 格助詞 in every example, sentence-initial 一方で and だが一方では included; bare 一方、 at sentence start is 接続詞, and so is 一方 in 二人のうち、一方だけ; 一方である has で = だ 連用形-一般 (ippou-da); no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "kara-koso",
+    "verdict": "fixed",
+    "changes": [
+      "example 5: en 'Just because' (a different meaning) corrected to 'Precisely because'",
+      "example 7: en 'decided to part' made 'decided to leave her', with 'precisely'",
+      "counterexample 3: en tightened to 'a full-fledged pro'",
+      "tokens: から 接続助詞 + こそ 係助詞 as claimed; だからこそ is だ (終止形-一般) + から + こそ, also sentence-initially; てこそ and ばこそ put て/ば 接続助詞 before こそ; no earlier entry duplicates it (koso, te-koso, ba-koso are not yet written)"
+    ]
+  },
+  {
+    "id": "dokoro-ka",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the common sentence-initial それどころか, with example 9",
+      "example 5: loose en ('Good weather?') made a real translation",
+      "tokens: どころ 副助詞 + か 副助詞 as claimed; それどころか is それ (其れ) + どころ + か; UniDic mis-tags the suffix in お茶どころ as どころ 副助詞, so only the missing か rejects it; どころではない is どころ + で (だ 連用形) + は + ない; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "ni-kawatte",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 1: 席を代わってもらった (に not next to 代わって, no matcher would hit it) replaced with the phone hand-over お母さんに代わるから",
+      "detection: guards rewritten on the real tokens (clause-final 代わる/代わった, てもらう, 代わり + に)",
+      "tokens: に 格助詞 + 代わっ (lexeme 変わる 五段-ラ行 連用形-促音便) + て as claimed, also for かわって; 代わり is 連用形-一般, 代わる before a noun 連体形-一般 and before から 終止形-一般; 代わり in お茶の代わりに is the noun 代わり; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "ue-de",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the very common N + の上、 (ご確認の上、), with example 8 for the N connection, which no example showed",
+      "examples 3 and 6: stiff 'In living / In carrying out' English rewritten",
+      "detection: N + の + 上 now requires an action noun, replacing the vague no-ue-dewa remark",
+      "tokens: た (連体形) or a 連体形 verb + 上 (名詞-普通名詞, also for うえ) + で (格助詞) as claimed; 上での adds の 格助詞; 上手 is one token; 上に and 上は put に/は after the same 上; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "saichuu-ni",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: the odd 'so don't call' follow-up rewritten as 寝てる最中だったんだよ。こんな時間に電話してこないで, which also covers the casual てる",
+      "connection: added V-te + る (てる) + 最中に",
+      "tokens: 最中 名詞-普通名詞 + に 格助詞 as claimed; before it の 格助詞, いる (居る 連体形-一般) or てる (助動詞 連体形-一般); 真っ is lexeme 真 接頭辞; the sweet 最中 (もなか) shows the same lexeme, so the guard needs the token before it; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "tsuide-ni",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: ambiguous お風呂のついでに (bath or bath cleaning) made お風呂掃除のついでに",
+      "example 7: the unnatural ついでの用事ですから replaced with the common ついでの時に",
+      "example 8: added for the variant ついでだから, which no example showed",
+      "confusables: ni-tsurete (unrelated) replaced with gatera; detection's wrong ni-tsurete remark removed",
+      "tokens: ついで (序で 名詞-普通名詞) + に 格助詞 as claimed; ついでだから is ついで + だ 終止形 + から; 次いで is 次い (次ぐ 連用形-イ音便) + で 接続助詞; ついでではなく has で 格助詞; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "tochuu-de",
+    "verdict": "fixed",
+    "changes": [
+      "example 7: the odd 仕事の途中で悪いんだけど (仕事中に is what people say) replaced with a bare clause-initial 途中でやめるくらいなら",
+      "detection: the rule 'require something before 途中' dropped, since bare 途中で is common",
+      "tokens: 途中 (名詞-普通名詞, one token) + で/に 格助詞 as claimed, after a 連体形 verb, ている or の; 途中から has から 格助詞; 途中経過 is two nouns; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "chuu",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: 本日は準備中です ('closed today' reading, wrong en) replaced with まだ準備中みたい",
+      "tokens: noun + 中 (接尾辞-名詞的, lexeme 中) in every example, as claimed; 一日中 and 一晩中 are 一 + 日/晩 + 中; 箱の中 has 中 名詞-普通名詞; 田中 is one 固有名詞 token and 中学生 is 中学 + 生, so no 中 token appears; the reading is not in the lexeme, as detection says; no earlier entry duplicates it (b02 no-position is the noun なか)"
+    ]
+  },
+  {
+    "id": "kara-ni-kakete",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: the unnatural 春にかけて、だんだん暖かくなる replaced with the weather-report 週末にかけて",
+      "counterexample 1: 壁に鍵をかけて (に not next to かけて) replaced with ハンガーにかけて, a real adjacent near miss",
+      "counterexample 3: 命にかけて約束を守った made the idiomatic 名誉にかけて",
+      "tokens: に 格助詞 + かけ (掛ける 下一段-カ行 連用形-一般) + て 接続助詞 as claimed, から is 格助詞; にかけては / にかけて (oath) / ハンガーにかけて have the same three tokens, so only the noun and the next token decide; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "zuni-wa-irarenai",
+    "verdict": "fixed",
+    "changes": [
+      "detection: the polite form spelled out on the real tokens (られ 連用形-一般 + ませ + ん + でし + た)",
+      "tokens: verb 未然形 + ず (助動詞-ヌ 連用形-一般) + に 格助詞 + (は 係助詞) + い (居る 未然形-一般) + られ (られる) + ない, as claimed; する gives せ 未然形-セ; ずにはおかない/すまない differ only in おか (置く)/すま (済む); てはいられない has て + は and no ず; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "zu-ni",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 5: added 思わず, a fixed adverb that UniDic splits into 思わ + ず, the main false hit of the bare ず variant",
+      "detection: guards for bare ず added (ません's ん is also lexeme ず; 形容詞 + ず; 思わず, 相変わらず stop list)",
+      "tokens: verb 未然形 + ず (助動詞-ヌ 連用形-一般) + に 格助詞 as claimed, せ 未然形-セ for する; 思わず is 思わ + ず, 相変わらず is 相 + 変わら + ず, 少なからず is 形容詞 未然形-補助 + ず; no earlier entry duplicates it (b03 naide is ないで)"
+    ]
+  },
+  {
+    "id": "you-to-shinai",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 5: added 笑おうとしなくていい (ようとする + なくていい), a real near miss with the same しなく tokens as example 3",
+      "detection: し is 連用形-一般 before ませ, not 未然形; guards for なくていい and ないで added; confusables: added nakute-mo-ii",
+      "tokens: 意志推量形 verb (one token) + と 格助詞 + し (為る 未然形-一般) + ない, as claimed; は/も are 係助詞; b09 you-to-suru already says ようとしない is this entry, so no overlap and no duplicate"
+    ]
+  },
+  {
+    "id": "you-to-omowanai",
+    "verdict": "fixed",
+    "changes": [
+      "subsumes: added you-to-omou, whose b06 detection takes と + 思う in any form, so ようと思わない without は/も would count for both ids",
+      "detection: polite 思い 連用形-一般 + ませ + ん added (it said 思わ only)",
+      "counterexample 4: why names you-to-omou",
+      "tokens: 意志推量形 verb + と 格助詞 + (は/も 係助詞) + 思わ (思う 未然形-一般) + ない, as claimed; the belief near miss has する 終止形 before と; not a duplicate of you-to-omou, which lists only positive forms"
+    ]
+  },
+  {
+    "id": "sou-mo-nai",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 3: 'あのレストランは…面白くなさそう' (odd of a restaurant; あの read as a filler) replaced with その映画",
+      "detection: the 止みそうもない oddity written out with its real tokens and a guard that accepts そう 副詞 only after a 連用形 noun such as 止み",
+      "variants: the dropped そうにない and そうにもない have their own ids sou-ni-nai and sou-nimo-nai in final-ids.json, and counterexample 1 keeps そうにない out",
+      "tokens: verb 連用形 + そう (そう-様態 形状詞-助動詞語幹) + も 係助詞 + ない (無い 終止形) in 7 of 8 examples; 止みそうもない is 止み (名詞) + そう (副詞) + も + ない, also for 風が止みそうもない, while 下がりそうもない is normal; そうにない has に = だ 連用形-ニ; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "to-wa-kagiranai",
+    "verdict": "fixed",
+    "changes": [
+      "variants: the rare past とは限らなかった replaced with the casual 限んない; example 5 rewritten to match (the past sentence was unnatural)",
+      "counterexample 5: added ないとも限らない, so the boundary with nai-tomo-kagiranai is tested",
+      "detection: the guard now says plainly that ない before と goes to nai-tomo-kagiranai only, so no sentence counts for two ids",
+      "tokens: と 格助詞 + は/も 係助詞 + 限ら (限る 五段-ラ行 未然形-一般) + ない as claimed; 限り 連用形 + ませ + ん; 限ん is 未然形-撥音便; ないとも限らない has ない 助動詞 before と; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "kanarazushimo-nai",
+    "verdict": "fixed",
+    "changes": [
+      "variants: とは限らない and わけではない removed (they are the separate ids to-wa-kagiranai and wake-de-wa-nai, not forms of this one); added かならずしも and 〜ません",
+      "example 8: the odd 彼女の態度は必ずしも悪くない replaced with a plain verb negative (必要としない)",
+      "detection: rewritten on the real tokens, with the two-id rule stated (the adverb frame and a closing とは限らない are two grammar points)",
+      "tokens: 必ずしも is always 必ず (副詞) + しも (副助詞), as the writer flagged, also for かならず; ではない has で = だ 連用形 after わけ but 格助詞 after 本当/そう, so the guard must not rely on that tag; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "kesshite-nai",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: 必ず約束を守る人だ (no 決して, no matcher would hit it) replaced with 解決して, which contains the string 決して",
+      "counterexample 3: why corrected, the near miss is the other 'never' adverb 二度と, not 決める",
+      "detection: string-match warning added; ないで is ない + で (て 接続助詞)",
+      "tokens: 決して (副詞, also for けっして) + a later negative as claimed: ない 助動詞 or 無い 形容詞, ませ + ん, でし + た, たく + ない; 解決して is 解決 + し + て; no earlier entry duplicates it"
+    ]
+  }
+]
