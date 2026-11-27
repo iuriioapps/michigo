@@ -1,0 +1,237 @@
+[
+  {
+    "id": "o-ii-koto-ni",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: added お年玉をいいことに使いなさい, the literal を + いいことに + 使う with the same four tokens",
+      "detection: named that near miss and its guard (a following goal verb such as 使う)"
+    ]
+  },
+  {
+    "id": "o-kanete",
+    "verdict": "fixed",
+    "changes": [
+      "example 2: replaced, meeting a friend cannot double as a business trip; now 観光を兼ねて…学会",
+      "example 4: en made natural",
+      "counterexample 4: added 社長と営業部長を兼ねている, the main verb with the same を|兼ね|て tokens",
+      "detection: hiragana かねて is tokenized as 予て 副詞, not 兼ねる; corrected and added the 兼ねている guard"
+    ]
+  },
+  {
+    "id": "o-sakai-ni",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the common written 〜を境として, with its connection",
+      "example 6: replaced a second その日を境に with 就任を境として to cover the new variant",
+      "detection: added the 境|と|し|て token sequence"
+    ]
+  },
+  {
+    "id": "o-ki-ni",
+    "verdict": "fixed",
+    "changes": [
+      "example 2: en made natural",
+      "confusables: added o-keiki-ni (を契機に, a separate id)",
+      "detection: UniDic splits 飛行機 and 洗濯機 into 飛行|機, so the guard is the を before 機; rewrote the contradictory sentence about o-kikkake-ni"
+    ]
+  },
+  {
+    "id": "mama-ni",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added V-dict + まま without に (言われるまま、), which mama does not claim",
+      "example 7: replaced a second 〜の向くままに frame with 誘われるまま to cover that variant",
+      "counterexample 4: added 昔のままに残っている, N + のままに in the mama sense",
+      "detection: limited N + のままに to a closed list of will/desire nouns (意, 思い, 心, 欲望) so it stays disjoint from mama; dropped the doubtful 気のままに"
+    ]
+  },
+  {
+    "id": "mo-douzen-da",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the adverbial 〜も同然に named in detection",
+      "example 3: replaced a second 〜たも同然だ frame with 孫も同然にかわいがっている for that variant",
+      "example 8: 出すのも同然 is not idiomatic; now 白紙で出すも同然だね",
+      "example 1: en made accurate (practically a gift)",
+      "detection: tokens confirmed; reworded the に note"
+    ]
+  },
+  {
+    "id": "mo-shinai-de",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added the common 〜もせず without に",
+      "example 8: replaced a second N + もしないで with 休みもせず、 for that variant",
+      "detection: tokens confirmed (し 未然形-一般, せ 未然形-セ); added the bare もせず sequence and replaced a vague guard with 何もせずに"
+    ]
+  },
+  {
+    "id": "wa-sateoki",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added 〜はさておくとして",
+      "example 5: replaced a second 'X aside' frame (お世辞はさておき) with 細かい話はさておくとして",
+      "counterexample 1: replaced the stiff 問題をさておくわけにはいかない with the idiom 何をさておいても",
+      "counterexample 2: replaced さて、お昼 (comma breaks the surface) with さておなかも, a real surface near miss",
+      "detection: tokens confirmed; added the さておく|と|し|て sequence and the new guards"
+    ]
+  },
+  {
+    "id": "wa-oroka",
+    "verdict": "fixed",
+    "changes": [
+      "example 3: en reversed the scale; now 'not even a glass of water, let alone lunch'",
+      "connection: added V-dict + こと + はおろか (example 8)",
+      "counterexample 2: why was wrong (there is a は before おろか); now names 愚か 形状詞 + にも",
+      "counterexample 3: why reworded",
+      "detection: おろそか shares the lexeme 疎か (形状詞), so the guard must use surface or POS, not the lexeme; dokoro-ka stays disjoint by its own tokens"
+    ]
+  },
+  {
+    "id": "wa-socchinoke-de",
+    "verdict": "fixed",
+    "changes": [
+      "example 2: en made natural (guest of honor)",
+      "counterexample 3: replaced そっちを先にして (no shared tokens) with そっちのけが, which UniDic misreads as そっちのけ + が",
+      "detection: そっちをのけて tokenizes as 退ける without に|し; added the そっちのけが misparse and its guard"
+    ]
+  },
+  {
+    "id": "wa-dou-de-are",
+    "verdict": "fixed",
+    "changes": [
+      "counterexamples 1 and 2: en made natural",
+      "confusables: added de-are (で|あれ is inside どうであれ; de-are already rejects it)",
+      "detection: tokens confirmed (で is だ 連用形-一般, あれ is 有る 命令形); noted the boundary with de-are"
+    ]
+  },
+  {
+    "id": "hodo-no-koto-de-wa-nai",
+    "verdict": "fixed",
+    "changes": [
+      "example 7: replaced ほどのことはしていません (a different frame, はする, not listed in variants) with 心配するほどのことはありません",
+      "detection: tokens confirmed; added the polite はありません sequence; subsumes hodo-nai kept (its ほど + negative always matches inside this entry)"
+    ]
+  },
+  {
+    "id": "koto-no-nai-you-ni",
+    "verdict": "fixed",
+    "changes": [
+      "subsumes: removed you-ni; ことのないよう has no に, and you-ni requires a verb or 助動詞 ない before よう, so the ids are disjoint rather than nested",
+      "detection: tokens confirmed (ない is 無い 形容詞 連体形); replaced the precedence sentence with the disjointness reason"
+    ]
+  },
+  {
+    "id": "koto-mo-atte",
+    "verdict": "fixed",
+    "changes": [
+      "examples 2 and 7: en made natural",
+      "counterexample 3: replaced the unnatural こんなこともあってほしくない with the literal paired list 楽しいことも苦しいこともあって",
+      "detection: tokens confirmed; replaced the garbled あってほしい guard with the paired こと|も list guard"
+    ]
+  },
+  {
+    "id": "kurai-no-mono-da",
+    "verdict": "fixed",
+    "changes": [
+      "subsumes: removed mono-da; mono-da requires a verb, adjective or な before もの, and here の precedes it, so no match of this entry contains a mono-da match; kurai kept",
+      "variants: added the casual 〜くらいのもんだ; example 5 now shows it (もん confirmed as 物)",
+      "detection: stated the subsumes reasoning and the もん token"
+    ]
+  },
+  {
+    "id": "uchi-ni-hairanai",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the common 〜うちには入らない; example 3 now shows it",
+      "counterexample 1: replaced the affirmative うちに入りなさい with the negative literal なかなかうちに入らない, the same five tokens",
+      "detection: added the optional は and noted that うち 'home' is tagged 内"
+    ]
+  },
+  {
+    "id": "tokoro-ga-aru",
+    "verdict": "reject",
+    "changes": [
+      "reject: the plain noun ところ 'aspect' + がある; the trait sense has the same tokens as the literal place (星がよく見えるところがある, 静かなところがある) and no token guard separates them, the rule used for earlier vocabulary-like entries",
+      "counterexample 3: why corrected, UniDic tags the conjunctive ところが as 所 + が 格助詞",
+      "detection: stated why no guard works; tokoro ids stay disjoint since this id is out"
+    ]
+  },
+  {
+    "id": "mono-to-omou",
+    "verdict": "fixed",
+    "changes": [
+      "example 3: replaced a non sequitur (meeting canceled, so no umbrella) with 雨は降らないものと思って、傘を持たずに",
+      "counterexample 3: replaced 偽物と思う (no shared もの token) with 遊ぶものだと思う, mono-da + と思う",
+      "detection: tokens confirmed; added the もの|だ|と guard"
+    ]
+  },
+  {
+    "id": "demo-ari-demo-aru",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 2: en and why corrected, ありませんか asks whether there is any, not an offer",
+      "counterexample 3: replaced the unnatural 犯人でもあり得る with a single でもあります (de-mo-aru)",
+      "confusables: added de-mo-aru",
+      "detection: tokens confirmed (で is 格助詞 after a noun); noted the overlap with de-mo-aru and why it is not a subsumes link"
+    ]
+  },
+  {
+    "id": "gatera",
+    "verdict": "fixed",
+    "changes": [
+      "example 4: rewritten, お礼がてら + 近くまで来たので + ご挨拶に伺いました was muddled",
+      "example 8: en made natural",
+      "confusables: added katagata (same meaning, token 方々 名詞)",
+      "detection: がてら 接尾辞-名詞的 and がたい 難い confirmed"
+    ]
+  },
+  {
+    "id": "kanousei-ga-aru",
+    "verdict": "reject",
+    "changes": [
+      "reject: plain vocabulary, the noun 可能性 (可能|性) + ある in its literal meaning; the 'potential' reading (無限の可能性がある) has the same tokens, and no token guard separates a grammar sense",
+      "detection: tokens confirmed (可能 形状詞 + 性 接尾辞); recorded the rejection"
+    ]
+  },
+  {
+    "id": "omoi-o-suru",
+    "verdict": "fixed",
+    "changes": [
+      "kept, not rejected: a one-slot collocation, but 思い|を|為る has no literal reading with the same tokens, so the matcher is precise",
+      "examples 1, 3 and 5: en made natural",
+      "detection: tokens confirmed (さ 未然形-サ + せる); replaced the 'kept because two sources list it' note with the precision reason"
+    ]
+  },
+  {
+    "id": "izen",
+    "verdict": "fixed",
+    "changes": [
+      "restricted to N以前の問題: form, variants, meaning and connection rewritten; 以前に dropped because the abstract 味以前に and the temporal 入社以前に have the same tokens and no noun class separates them",
+      "examples: kept the three 以前の問題 sentences (en made natural), replaced the five 以前に ones with four new 以前の問題 ones (じゃない, かどうか, で, として)",
+      "counterexample 4: added temporal 入社以前に to show why 以前に is not matched",
+      "detection: rewritten for the 以前|の|問題 sequence with the real tokens"
+    ]
+  },
+  {
+    "id": "dani",
+    "verdict": "fixed",
+    "changes": [
+      "example 4: replaced the stiff 王の死を夢にだに考えなかった with the set phrase 夢にだに思わなかった",
+      "example 6: 考えるだに耐えられない made idiomatic (考えるだにぞっとする)",
+      "example 8: replaced the rare 察するだに痛ましい with 聞くだに恐ろしい, mid-sentence",
+      "counterexample 3: replaced すら (no shared surface) with まだにぎやか, a surface だに across words",
+      "detection: noted that UniDic splits 夢にだに思わなかった into だ + に; removed the wrong だ|に|違いない claim; sae stays disjoint by lexeme"
+    ]
+  },
+  {
+    "id": "ni-atte",
+    "verdict": "fixed",
+    "changes": [
+      "examples 3 and 5: replaced so the variants にあっては and にあっても are shown (非常時にあっては, 逆境にあっても)",
+      "connection: added the は and も forms",
+      "counterexample 1: replaced the illogical 引き出しの中にあって見つからなかった with 財布がかばんの中にあって、ほっとした",
+      "detection: tokens confirmed; stated that the noun class is the only guard; ni-atatte stays disjoint by lexeme 当たる"
+    ]
+  }
+]
