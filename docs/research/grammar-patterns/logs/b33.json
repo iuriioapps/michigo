@@ -1,0 +1,204 @@
+[
+  {
+    "id": "tada-nomi",
+    "verdict": "fixed",
+    "changes": [
+      "detection: ただ POS stated as checked (唯 副詞 or 接続詞, not keyed on what follows)",
+      "counterexample added: ただ技術のみならず is nominarazu with ただ"
+    ]
+  },
+  {
+    "id": "nomi-ka",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 1: replaced, 会員のみか、一般の方も has the comma + も clause the guard accepts; now sentence-final 現金のみか。",
+      "example 6: match widened to であるのみか",
+      "detection: か is 副助詞 in the pattern and 終助詞 in a final question (checked); guard rewritten"
+    ]
+  },
+  {
+    "id": "tari-tomo",
+    "verdict": "fixed",
+    "changes": [
+      "example 5: dropped たとえ, redundant and unnatural before たりとも",
+      "example 7: en corrected",
+      "counterexample 4: rewritten as a natural sentence",
+      "detection: corrected which nouns give たり-断定 + とも and which give たり + と + も (only 一円, checked)"
+    ]
+  },
+  {
+    "id": "de-are",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: replaced, bare 学生であれ without たとえ or a pair read oddly",
+      "counterexample 3: en corrected",
+      "detection: forms corrected to 命令形 / 意志推量形 (checked); guard added for the quoted imperative であれ、と; どうであろうと stated as staying here since wa-dou-de-are lists only であれ/あれ"
+    ]
+  },
+  {
+    "id": "de-are-de-are",
+    "verdict": "fixed",
+    "changes": [
+      "detection: 形状詞 vs 名詞 tags before で noted (checked); one noun phrase, not one word, between the halves"
+    ]
+  },
+  {
+    "id": "denakute-nan-darou",
+    "verdict": "fixed",
+    "changes": [
+      "example 7: en made natural",
+      "detection: kana なんであろう is misread as な|ん|で|あろう (checked); 愛で misread confirmed and stated precisely"
+    ]
+  },
+  {
+    "id": "de-wa-arumai-ka",
+    "verdict": "fixed",
+    "changes": [
+      "example 2: en made natural",
+      "detection: when で is 格助詞 vs だ 連用形 stated from the tokenizer; you-ka-mai-ka guard made precise"
+    ]
+  },
+  {
+    "id": "te-yamanai",
+    "verdict": "fixed",
+    "changes": [
+      "example 5: replaced, 悔やんでやまない is an odd verb for this pattern; now 慈しんでやまなかった",
+      "example 4: en made natural",
+      "detection: marked checked, verb list updated"
+    ]
+  },
+  {
+    "id": "te-shikaru-beki-da",
+    "verdict": "fixed",
+    "changes": [
+      "example 4: 彼にも → 彼から, the sentence and en were ambiguous",
+      "detection: lexemes marked checked"
+    ]
+  },
+  {
+    "id": "temo-sashitsukaenai",
+    "verdict": "fixed",
+    "changes": [
+      "detection: verb tokenization of 差し支え marked checked"
+    ]
+  },
+  {
+    "id": "to-ie-domo",
+    "verdict": "fixed",
+    "changes": [
+      "detection: rewritten; every spelling is と + 言う 仮定形 + ど + も (checked), the claimed 言え 下一段 + ども (共) split and the 言え 命令形 reading of といえど are wrong",
+      "variants: added といえど / と言えど, tokenized the same without も",
+      "example 8: now shows といえど",
+      "example 4: この時代 → 現代, more natural",
+      "counterexample 1: now とはいえども, the real near miss that stays with to-wa-ie"
+    ]
+  },
+  {
+    "id": "to-atte",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: 雪が降るとあって → 大雪が予想されるとあって, more natural",
+      "example 3: en dangling modifier fixed",
+      "detection: marked checked"
+    ]
+  },
+  {
+    "id": "to-areba",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 2: 雨が降るとあって (en wrong: it means rain was expected) → 雨の予報とあって",
+      "detection: typo は → ば for the conditional; tags marked checked"
+    ]
+  },
+  {
+    "id": "to-aimatte",
+    "verdict": "fixed",
+    "changes": [
+      "variants/connection: added the common とも相まって and も相まって",
+      "example 3: now shows も相まって; example 8: now とも相俟って",
+      "example 6: en made natural",
+      "detection: と / とも / も before 相 (checked); dropped the guard that rejected とも"
+    ]
+  },
+  {
+    "id": "to-miru-ya",
+    "verdict": "fixed",
+    "changes": [
+      "detection: や is 副助詞 in every example (checked), the claim that it varies is dropped; guard for comitative と + 見ると added",
+      "counterexample 4: why corrected, 逃げたところを見る is literal, not tokoro-o-miru-to",
+      "counterexample added: 友達と見ると (comitative と)"
+    ]
+  },
+  {
+    "id": "towa-utte-kawatte",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 3: 昔とは変わって was ungrammatical; now 昔とはすっかり変わってしまった",
+      "detection: 変わり is only 変わる 連用形 (checked); 代わっ gets lexeme 変わる too (checked), so the ni-kawatte guard rests on the missing 打っ"
+    ]
+  },
+  {
+    "id": "towa-kurabemono-ni-naranai",
+    "verdict": "fixed",
+    "changes": [
+      "variants/connection: added the common と比べものにならない without は; example 8 shows it",
+      "counterexample 2: 兄とは比べて was unnatural; now 兄と比べると",
+      "detection: と with or without は; guards updated"
+    ]
+  },
+  {
+    "id": "to-sareru",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 3: replaced, honorific 冗談とされなかった has the same tokens as the pattern; now the active 中止とします (no れる)",
+      "detection: guard for active と + する added; honorific される stated as token-identical"
+    ]
+  },
+  {
+    "id": "to-mirareru",
+    "verdict": "ok",
+    "changes": []
+  },
+  {
+    "id": "mono-to-omowareru",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: replaced, 大切なものと思われたくない was odd and its な + もの guard contradicted the na-Adj connection; now ものだと思われている (mono-da)",
+      "detection: guard rewritten (もの + だ + と); ownership of ものと考えられる (to-kangaerareru) and ものとされる (mono-to-suru) stated"
+    ]
+  },
+  {
+    "id": "mono-toshite",
+    "verdict": "ok",
+    "changes": []
+  },
+  {
+    "id": "mono-to-suru",
+    "verdict": "ok",
+    "changes": []
+  },
+  {
+    "id": "mo-saru-koto-nagara",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 1: 彼もなかなかさるものだ was unnatural; now the idiom 相手もさるもの",
+      "example 6: en corrected",
+      "detection: marked checked"
+    ]
+  },
+  {
+    "id": "tokoro-kara",
+    "verdict": "fixed",
+    "changes": [
+      "detection: place-vs-inference guard rewritten (verb + ところから can also be a place, told only by the main clause); disjointness with ta-tokoro, ru-tokoro, te-iru-tokoro stated (they need だ/です/end after ところ)"
+    ]
+  },
+  {
+    "id": "koto-tote",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: replaced, しでかしたこととて + 反省 did not hold together as a reason; now 留守にしていたこととて",
+      "detection: とて is 格助詞 after こと and 接続助詞 in tote after た (checked); agreement with tote (b34) stated"
+    ]
+  }
+]
