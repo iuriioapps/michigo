@@ -1,0 +1,201 @@
+[
+  {
+    "id": "shika-nai",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the casual しかねえ, with example 9",
+      "detection: ねえ is the same 無い token",
+      "tokens: ok; しか and っきゃ are both しか 副助詞, ほか is 他 名詞, and the verb is 終止形 before しか and 連体形 before ほか"
+    ]
+  },
+  {
+    "id": "kurai",
+    "verdict": "fixed",
+    "changes": [
+      "example 7: en made natural",
+      "counterexample 2: kanji 暗い replaced with kana くらい (外はもうくらいから), the real collision",
+      "detection: the 'about' use has no entry (was called N5); kana 暗い guard written: the token before くらい must be a noun, pronoun, verb, adjective, auxiliary or a degree adverb, never が/は/も, an adverb like もう or the sentence start",
+      "tokens: kana くらい as 暗い is always tagged 副助詞 くらい (へやがくらいので, 外はもうくらい, くらい部屋), so only the preceding token can reject it; くらく splits into がく + らく"
+    ]
+  },
+  {
+    "id": "bakari",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added the common ばかりの + N, with example 9",
+      "example 3: 売っている made 売ってる to match the casual ばっか",
+      "tokens: ok; ばかり, ばっかり and ばっか are all ばかり 助詞-副助詞, and the ta-bakari and te-bakari guards (た 助動詞, て 接続助詞 before it) hold"
+    ]
+  },
+  {
+    "id": "tara-ii",
+    "verdict": "fixed",
+    "changes": [
+      "meaning and variants: added the common advice use たらいいよ 'you can just ~', with example 10",
+      "example 9: en keeps the hope sense",
+      "tokens: ok; たら is た 仮定形-一般 and いい is 良い 形容詞-非自立可能, 終止形 before な/ね/です/か and 連体形 before の/ん"
+    ]
+  },
+  {
+    "id": "dake-de-naku",
+    "verdict": "fixed",
+    "changes": [
+      "detection: corrected the claim that 英語だけでなく has 格助詞 で; only the ではなく form has 格助詞 で + は",
+      "tokens: だけ 副助詞 + で (だ 連用形-一般) or じゃ (だ 連用形-融合) + なく (無い 連用形-一般) + optional て; だけではなく is だけ + で 格助詞 + は + なく; なくなる is one 無くなる token"
+    ]
+  },
+  {
+    "id": "to-iu",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added the humble と申します (example 10) and the casual spelling ってゆう",
+      "example 4: added a source (事務の人の話では) so ということです reads as hearsay, not to-iu-koto 'it means'",
+      "counterexample 4: why corrected; いい in といい〜といい does come from 言う",
+      "tokens: と 格助詞 or って 副助詞 + いう (言う 連体形-一般); とのこと is と + の 格助詞 + こと (事); in 兄といい弟といい the first いい is tagged 良い and the second 言う"
+    ]
+  },
+  {
+    "id": "tame-ni",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added the common ためにも, with example 9",
+      "counterexample 5: added the set phrase 念のため",
+      "detection: rewritten on the real tokens; the predicate before ため decides purpose against cause, and bare N のため(に) cannot be split by tokens",
+      "tokens: ため is 為 名詞-普通名詞, the verb before it is 連体形 (not 終止形), ためる is 溜める 連用形 + て, 念のため is 念 + の + 為"
+    ]
+  },
+  {
+    "id": "tame-ni-riyuu",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 5: added the set phrase 念のために",
+      "detection: corrected ている (it is て + 居る, not one 助動詞) and removed the wrong rule that the main clause cannot be a request, which example 3 contradicts; guards now rest on the token before ため",
+      "tokens: ため is 為 名詞; cause shows as た, て + いる, 形容詞 連体形, な (だ 連体形) or で + ある before it; 不便 is tagged 名詞, not 形状詞"
+    ]
+  },
+  {
+    "id": "ni-tsuite",
+    "verdict": "fixed",
+    "changes": [
+      "detection: kana ついて kept with token guards on the next token (から, 行く/来る, いる); kanji 着いて and 付いて are separate lexemes",
+      "tokens: について is に + つい (つく 動詞-一般) + て; kana 駅についたら and 先生について行く also give つく, while 着いて is 着く and 付いて is 付く 動詞-非自立可能",
+      "variants: the polite につきまして (concerning) is listed under ni-tsuki in the inventory, so it was not added here",
+      "variant につきまして added with an example: the polite form of について belongs here, not to ni-tsuki"
+    ]
+  },
+  {
+    "id": "ni-yotte",
+    "verdict": "ok",
+    "changes": [
+      "tokens: ok; に + よっ (因る 連用形-促音便) + て, による is 因る 連体形, により is 因る 連用形; コンビニによって (寄る) and により多く are also tagged 因る, as detection says, and によると is 因る 終止形 + 接続助詞 と"
+    ]
+  },
+  {
+    "id": "toshite",
+    "verdict": "fixed",
+    "changes": [
+      "detection: token wording fixed (と + し + て + も, not とし + て + も)",
+      "tokens: ok; として is と 格助詞 + し (為る 連用形) + て, and the near misses としても, ようとして, 降るとして and としては are the same triple after a clause, a 意志推量形 or before も/は"
+    ]
+  },
+  {
+    "id": "ni-taishite",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added the common に対しての + N, with example 9",
+      "tokens: ok; に + 対し (対する 動詞-一般 連用形) + て, に + 対する 連体形, and 対抗/対応/対処 are 名詞 + する"
+    ]
+  },
+  {
+    "id": "mama",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the casual まんま, with example 9",
+      "tokens: ok; まま and まんま are both 侭 名詞, after た/ない 連体形, の or この; ままならない is 侭 + 成る 未然形 + ない, ままごと is 飯事"
+    ]
+  },
+  {
+    "id": "wake-da",
+    "verdict": "fixed",
+    "changes": [
+      "example 2: どうりで moved next to わけだ; the old sentence used どうりで with と思ったら and repeated 寒い awkwardly",
+      "tokens: ok; わけ is 訳 名詞 after 連体形 or な (だ 連体形), then だ/です, ね or the sentence end"
+    ]
+  },
+  {
+    "id": "wake-de-wa-nai",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: en made natural",
+      "detection: the で of わけでもない is tagged 格助詞, not だ",
+      "tokens: わけ (訳) + で (だ 連用形) + は + ない (無い), じゃ (だ 連用形-融合) + ない/なく + て, ありません is で + は + 有る + ます + ず; the dropped というわけではない is to-iu-wake-de-wa-nai in final-ids"
+    ]
+  },
+  {
+    "id": "ni-totte",
+    "verdict": "fixed",
+    "changes": [
+      "detection: the next-token guard also rejects とって + くれる/くる (取ってくれる)",
+      "tokens: ok; に + とっ (取る 連用形-促音便) + て, the same 取る as in 手にとって, とっておく and とってもらう"
+    ]
+  },
+  {
+    "id": "uchi-ni",
+    "verdict": "fixed",
+    "changes": [
+      "example 4: en made less redundant",
+      "tokens: ok; うち is 内 名詞 + に 格助詞 after 連体形, な (だ 連体形) or の, and うち 'home' is the same 内 token, so the modifier before it is the guard"
+    ]
+  },
+  {
+    "id": "nai-uchi-ni",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 3: 分からないうちは、質問して was unnatural; replaced with 慣れないうちは、ゆっくりでいいよ",
+      "tokens: ok; ない is 助動詞 連体形 + うち (内) + に; 時間がない。うちに has 形容詞 無い 終止形 and a full stop between"
+    ]
+  },
+  {
+    "id": "you-to-suru",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the casual ようとしてる, with example 9",
+      "tokens: ok; 意志推量形 verb + と 格助詞 + し/する (為る); in 何を言おうと the と is 接続助詞, which is the you-ga-you-to guard"
+    ]
+  },
+  {
+    "id": "beki-da",
+    "verdict": "ok",
+    "changes": [
+      "tokens: ok; べき is べし 文語助動詞-ベシ 連体形 after 終止形, す is 為る 文語サ行変格, べく is 連用形, べき乗 is 冪乗 and なるべく is 成る可く 副詞"
+    ]
+  },
+  {
+    "id": "ni-chigainai",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: 道に迷ったにちがいない after 来ないのは was ungrammatical; now 迷ったからにちがいない",
+      "detection: kana ちがい also has the lexeme 違い",
+      "tokens: に is 格助詞, or だ 連用形-ニ after a noun like 上手; 違い 名詞 + 無い, or + 有る + ます + ず; あの in two examples is misread as a filler, which does not touch the pattern"
+    ]
+  },
+  {
+    "id": "wake-ga-nai",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the casual わけねえ, with example 9",
+      "counterexample 2 and detection: わけなく is not one adverb token but 訳 + 無い 連用形; the guard rejects 連用形",
+      "tokens: 訳 名詞 + が/は + 無い 終止形, or + 有る + ます + ず; でしょ is です 意志推量形"
+    ]
+  },
+  {
+    "id": "ba-hodo",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 2: 聞けるほどの時間 was unnatural; replaced with 急げば間に合うほどの距離",
+      "detection: second word is 連体形 (not 終止形), and the unclear 'longer second verb' note replaced",
+      "tokens: 仮定形 + ば + the same lexeme in 連体形 + ほど 副助詞; na-adjective is なら (だ 仮定形) + 形状詞 + な + ほど",
+      "variants: bare V + ほど 'the more' was dropped for hodo, but the hodo inventory meaning ('to the extent; about') does not list that sense"
+    ]
+  }
+]
