@@ -1,0 +1,213 @@
+[
+  {
+    "id": "kirenai",
+    "verdict": "fixed",
+    "changes": [
+      "variants/connection: dropped affirmative 切れる (kiru owns the affirmative potential), added 切れなくて",
+      "example 3: replaced, third 食べ frame; now 覚えきれません",
+      "example 7: replaced, second ご飯+食べ frame; now こらえきれず",
+      "example 8: replaced affirmative 食べ切れる (kiru) with 運びきれなくて",
+      "counterexample 2: replaced 縁が切れない (duplicate of 息が切れない) with one-token 売り切れない",
+      "counterexample added: 食べ切れた affirmative potential belongs to kiru",
+      "detection: real lexemes (切る or 切れる, 下一段), negative required after 切れ, ownership split with kiru"
+    ]
+  },
+  {
+    "id": "komu",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 1: replaced unnatural 人混みで道が込んでいる with 朝の電車はいつも込んでいる",
+      "counterexample added: 込めて (込める), the o-komete near miss",
+      "detection: confirmed one-token compounds 五段-マ行, kana 飛びこん, 突っ込む lexeme 突き込む, guards restated with real tokens"
+    ]
+  },
+  {
+    "id": "ageru",
+    "verdict": "fixed",
+    "changes": [
+      "example 2: replaced 盛り上がった (directional, not completion) with 仕上がりました",
+      "example 7: replaced 燃え上がって (directional, odd image) with 編み上げた",
+      "counterexamples added: humble 申し上げます and directional 見上げる, both one token ending in 上げる",
+      "detection: real conjugation types, kana and 描き上げ->書き上げる lexeme, deny list for humble and directional compounds"
+    ]
+  },
+  {
+    "id": "toosu",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: replaced odd 徹夜で勉強し通した with 読み通した",
+      "counterexample 3: replaced third noun+を+通す case with the noun 立ち通しだった",
+      "detection: real tagging of the noun 〜通し (名詞 or 通す 連用形 + だ) and its guard"
+    ]
+  },
+  {
+    "id": "au",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample added: 似合ってる, a one-token 合う lexeme a suffix matcher would hit",
+      "detection: deny list for 間に合う/似合う/釣り合う, kana forms checked (one token or two)"
+    ]
+  },
+  {
+    "id": "tate",
+    "verdict": "fixed",
+    "changes": [
+      "counterexamples added: 書きたてた (verb 書き立てる) and 仕立て (plain noun ending in 立て)",
+      "detection: deny list for one-token 立て nouns (仕立て, debt-collection 取り立て), verbs in 立てる, real lexeme of kana たて (盾)"
+    ]
+  },
+  {
+    "id": "gachi",
+    "verdict": "fixed",
+    "changes": [
+      "example 5: en now says mostly cloudy (がち sense lost)",
+      "counterexample 3: replaced weak 勝ちが決まった with 早い者勝ちだ, noun 勝ち in the N + がち + だ frame",
+      "detection: part-of-speech guard stated with the 早い者勝ち tokens"
+    ]
+  },
+  {
+    "id": "gimi",
+    "verdict": "fixed",
+    "changes": [
+      "detection: added the passive れる 連用形 before 気味 and that 疲れ/焦り tokenize as nouns"
+    ]
+  },
+  {
+    "id": "ppoi",
+    "verdict": "fixed",
+    "changes": [
+      "meaning/connection: added the common casual Clause-plain + っぽい \"seems like\"",
+      "example 9: replaced repeated 子供 frame with 君っぽくない",
+      "examples added: っぽかった (variant had no example) and 来ないっぽい (clause use)",
+      "detection: example tokens corrected to real sentences, clause use added"
+    ]
+  },
+  {
+    "id": "ppanashi",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: replaced redundant 借りたお金を借りっぱなし with 友達に借りっぱなしだ",
+      "example 7: replaced redundant っぱなしのまま with 置きっぱなしの荷物",
+      "counterexample added: やっぱなしで, the surface っぱなし across a word boundary",
+      "detection: じゃ after っぱなし, the やっぱ+なし guard"
+    ]
+  },
+  {
+    "id": "darake",
+    "verdict": "fixed",
+    "changes": [
+      "example 5: replaced 汗だらけ (汗だく/汗まみれ is the natural word) with ゴミだらけで"
+    ]
+  },
+  {
+    "id": "gatai",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample added: 読みにくい, which UniDic tags with the same lexeme 難い",
+      "detection: corrected; lexeme 難い covers にくい too, so surface or reading must decide, kanji 難い is ambiguous"
+    ]
+  },
+  {
+    "id": "teki",
+    "verdict": "fixed",
+    "changes": [
+      "variants/connection: added the common casual 〜的には (私的には, 俺的には)",
+      "example 5: en was a gloss, rewritten",
+      "example added: 俺的には",
+      "detection: 的 after pronouns in casual speech"
+    ]
+  },
+  {
+    "id": "muke",
+    "verdict": "fixed",
+    "changes": [
+      "example 3: a Japanese guide for foreigners was odd; now 英語の案内",
+      "counterexample 2 and detection: に向けて is the verb 向ける, not the ni-mukatte entry itself (no entry lists it)"
+    ]
+  },
+  {
+    "id": "muki",
+    "verdict": "fixed",
+    "changes": [
+      "counterexamples added: noun 向き after の (机の向き) and directional 北東向きの, which tokenizes like the pattern",
+      "detection: POS guard for the noun 向き, deny list of direction words before the suffix"
+    ]
+  },
+  {
+    "id": "toori",
+    "verdict": "fixed",
+    "changes": [
+      "example 7: en was redundant, now \"I think she is right\"",
+      "counterexample added: 駅前の通りに (street + に), same tokens as 説明書の通りに",
+      "detection: the N-の + 通り + に guard did not reject the street reading; now says it is ambiguous and how to narrow it"
+    ]
+  },
+  {
+    "id": "buri-ni",
+    "verdict": "fixed",
+    "changes": [
+      "example 5: この店は → この店には (the place takes に)",
+      "counterexample added: 仕事ぶり, manner ぶり after a noun; confirmed the time-word guard rejects it and 働きぶり (verb 連用形 before ぶり)",
+      "detection: 久し is 形容詞 語幹, non-time noun guard"
+    ]
+  },
+  {
+    "id": "gata",
+    "verdict": "fixed",
+    "changes": [
+      "example 1: replaced, 血液型はA型 had the pattern twice; now 最新型",
+      "example 5: replaced 夜型 (same frame as 朝型) with productive 参加型",
+      "detection: example tokens updated, O tagged 記号-文字"
+    ]
+  },
+  {
+    "id": "doushi",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the common kana spelling 〜どうし, with a new example 人どうしでも",
+      "counterexample 1: どうしたの now follows a noun, the real near miss",
+      "counterexample 3: shop → company, more natural with 同志",
+      "detection: kana どうし is the same 同士 token; どう+し guard stated"
+    ]
+  },
+  {
+    "id": "atari",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 3: くじに当たりが出た was unnatural; now くじを引いたら当たりが出た",
+      "counterexample added: 三時あたりに \"around three\", number + counter + kana あたり, lexeme 辺り",
+      "detection: the number guard alone fails for kana あたり after a time; the lexeme 当たり vs 辺り decides"
+    ]
+  },
+  {
+    "id": "ten",
+    "verdict": "fixed",
+    "changes": [
+      "checked: dropping 〜という点で is right, final-inventory lists it under to-iu-ten-kara",
+      "counterexample added: という点で, the longer pattern that owns the match",
+      "example 4: 優しい点が (ところ is the natural word) replaced with 操作が簡単な点が",
+      "connection: added na-Adj + な + 点"
+    ]
+  },
+  {
+    "id": "nashi",
+    "verdict": "fixed",
+    "changes": [
+      "ownership: nashi keeps なしで/なしでは/なしの/なしだ, nashi-ni keeps なしに/なしには; nashi-ni (not yet detailed) should drop なしで from its variants",
+      "variants/connection: added the common 〜なしでは, with example スマホなしでは",
+      "counterexample 3: replaced 成し遂げた (no shared token) with やっぱなしで, rejected by the noun-before guard",
+      "counterexample 2: 意気地なし tokenizes exactly like the pattern; detection now gives an explicit deny rule (なし after 意気+地)",
+      "detection: で tagged 格助詞 or だ, kana 梨 is tagged 無し, ろくでなし is one token"
+    ]
+  },
+  {
+    "id": "wari-ni",
+    "verdict": "fixed",
+    "changes": [
+      "example 5: en lost the \"considering\" sense; fixed",
+      "example 6: よく太る was odd; now 太りやすいんだ",
+      "counterexample added: adverb わりに \"fairly\", same tokens as the pattern",
+      "detection: guard extended to reject the adverb わりに"
+    ]
+  }
+]
