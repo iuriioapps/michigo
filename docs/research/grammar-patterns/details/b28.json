@@ -1,0 +1,1079 @@
+[
+  {
+    "id": "sobireru",
+    "form": "〜そびれる",
+    "variants": [
+      "〜そびれた",
+      "〜そびれて",
+      "〜そびれちゃう",
+      "〜そびれます"
+    ],
+    "meaning": "miss the chance to",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "V-masu-stem + そびれる"
+    ],
+    "examples": [
+      { "ja": "昨日は忙しくて、お礼を言いそびれてしまった。", "match": "言いそびれて", "en": "I was busy yesterday and never got the chance to say thank you." },
+      { "ja": "あ、名前を聞きそびれた。", "match": "聞きそびれた", "en": "Oh, I missed my chance to ask their name." },
+      { "ja": "昼ごはんを食べそびれて、お腹がぺこぺこだ。", "match": "食べそびれて", "en": "I missed lunch and I'm starving." },
+      { "ja": "今日も彼女に連絡しそびれちゃった。", "match": "しそびれ", "en": "I didn't get around to contacting her again today." },
+      { "ja": "渡しそびれたプレゼントが、まだ引き出しに入っている。", "match": "渡しそびれた", "en": "The present I never got to give is still in my drawer." },
+      { "ja": "会議の資料を印刷しそびれました。", "match": "しそびれました", "en": "I missed the chance to print the materials for the meeting." },
+      { "ja": "電車に乗りそびれると、次は三十分後だよ。", "match": "乗りそびれる", "en": "If you miss your train, the next one is thirty minutes later." },
+      { "ja": "昨日は寝そびれたせいで、一日中眠かった。", "match": "寝そびれた", "en": "I couldn't get to sleep last night, so I was sleepy all day." }
+    ],
+    "counterexamples": [
+      { "ja": "電車に乗り損ねて、遅刻した。", "en": "I missed the train and was late.", "why": "損ねる is the verb of sokonau, a different suffix with the same meaning" },
+      { "ja": "山の上に古い城がそびえている。", "en": "An old castle towers on top of the mountain.", "why": "そびえる (聳える) 'tower' is one verb, not V-stem + そびれる" },
+      { "ja": "話がだんだんそれてきた。", "en": "The talk has been drifting off topic.", "why": "それる (逸れる) 'drift away' is a verb of its own, without そびれ" },
+      { "ja": "乗り遅れないように、早めに家を出た。", "en": "I left home early so as not to miss the train.", "why": "遅れる in a compound verb is another word, with no そびれる" }
+    ],
+    "subsumes": [],
+    "confusables": ["sokonau"],
+    "detection": "Tokens: a verb in 連用形 + そびれ (そびれる, 動詞-非自立可能, 下一段-ラ行) + the ending: 言い|そびれ|て, 聞き|そびれ|た, 乗り|そびれ|た, し|そびれ|ちゃっ|た (ちゃう is its own token), 聞き|そびれ|まし|た. 見そびれる is 見 (見る, 動詞-非自立可能) + そびれる. UniDic never fuses the compound, so the closed list of fused words is empty and every case is two tokens. Require a verb 連用形 directly before そびれ; there is no other word そびれる, so the guard is mainly the lexeme and the preceding verb. 損ねる (損ねる, 動詞-非自立可能, 下一段-ナ行) has the same meaning and belongs to sokonau, and the near-miss 聳える (そびえ) and 逸れる (それ) have different surfaces and lexemes."
+  },
+  {
+    "id": "sokonau",
+    "form": "〜損なう",
+    "variants": [
+      "〜損ねる",
+      "〜損じる",
+      "〜そこなう",
+      "〜そこねる",
+      "〜損なった",
+      "〜損ねた"
+    ],
+    "meaning": "fail to; miss doing",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "V-masu-stem + 損なう",
+      "V-masu-stem + 損ねる",
+      "V-masu-stem + 損じる"
+    ],
+    "examples": [
+      { "ja": "楽しみにしていた映画を見損ねてしまった。", "match": "見損ねて", "en": "I missed the movie I was looking forward to." },
+      { "ja": "寝坊して、朝ごはんを食べ損なった。", "match": "食べ損なった", "en": "I overslept and missed breakfast." },
+      { "ja": "急いでいて、書類に印鑑を押し損ねた。", "match": "押し損ねた", "en": "I was in a hurry and failed to stamp the document." },
+      { "ja": "最後のシュートを決め損ねて、チームは負けた。", "match": "決め損ねて", "en": "He missed the last shot, and the team lost." },
+      { "ja": "手紙を書き損じて、もう一度書き直した。", "match": "書き損じて", "en": "I made a mistake writing the letter and wrote it again." },
+      { "ja": "電話に出損なって、折り返したけど繋がらなかった。", "match": "出損なって", "en": "I missed the call and rang back, but couldn't get through." },
+      { "ja": "バスに乗り損ねたら、次は一時間後だよ。", "match": "乗り損ねたら", "en": "If you miss the bus, the next one is an hour later." },
+      { "ja": "彼の名前を聞きそこねました。", "match": "聞きそこね", "en": "I missed my chance to ask his name." },
+      { "ja": "あの試合は見損なったんだよ。", "match": "見損なった", "en": "I missed that game, you know." }
+    ],
+    "counterexamples": [
+      { "ja": "無理な生活は健康を損なう。", "en": "An unreasonable lifestyle harms your health.", "why": "損なう 'harm' is a main verb after the noun 健康を, with no verb stem before it" },
+      { "ja": "彼の一言で社長は機嫌を損ねた。", "en": "His one remark put the boss in a bad mood.", "why": "損ねる 'spoil' is a main verb with the object 機嫌を, not a suffix" },
+      { "ja": "お前を見損なったよ。", "en": "I misjudged you.", "why": "見損なう 'misjudge' with a person as the object is a lexicalized sense, not 'fail to see'" },
+      { "ja": "電車に乗りそびれて、遅刻した。", "en": "I missed the train and was late.", "why": "そびれる has the same meaning but is the separate entry sobireru" }
+    ],
+    "subsumes": [],
+    "confusables": ["sobireru"],
+    "detection": "Tokens: a verb in 連用形 + 損なう (損なう, 動詞-非自立可能, 五段-ワア行) or 損ね (損ねる, 動詞-非自立可能, 下一段-ナ行) or 損じ (損ずる, 動詞-非自立可能, 上一段-ザ行 or サ行変格): 見|損ね|て, 食べ|損なっ|た, 書き|損じ|て, 聞き|そこね|た (kana そこね keeps the lexeme 損ねる). 見る in 見損なう is 見 (見る, 動詞-非自立可能) + 損なう; no compound is fused into one token, so the closed list of fused words is empty. Two traps: 損なう and 損ねる as main verbs (健康|を|損なう, 機嫌|を|損ねる) have the same POS and lexeme, so the guard is the token before it, which must be a verb in 連用形 and not a noun or を; and the nominal 書き|損じ (損じ 接尾辞-名詞的) and 見|損|ね (損 名詞 + ね) are not the suffix. 見損なう with a person as the object means 'misjudge' and tokenizes the same, so it can be told apart only by that object. 損ねる with そびれる is the separate entry sobireru."
+  },
+  {
+    "id": "tsukusu",
+    "form": "〜尽くす",
+    "variants": [
+      "〜尽くした",
+      "〜尽くして",
+      "〜尽くせない",
+      "〜尽くされた",
+      "〜つくす"
+    ],
+    "meaning": "do completely, exhaust",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "V-masu-stem + 尽くす"
+    ],
+    "examples": [
+      { "ja": "子どもたちが冷蔵庫のお菓子を食べ尽くした。", "match": "食べ尽くした", "en": "The kids ate up every sweet in the fridge." },
+      { "ja": "彼はこの街を知り尽くしている。", "match": "知り尽くして", "en": "He knows this city inside out." },
+      { "ja": "あの店のメニューは食べ尽くしたよ。", "match": "食べ尽くした", "en": "I've eaten everything on that restaurant's menu." },
+      { "ja": "桜の花びらが道を埋め尽くしていた。", "match": "埋め尽くして", "en": "Cherry petals covered the whole road." },
+      { "ja": "この感動は言葉では語り尽くせない。", "match": "語り尽くせない", "en": "Words cannot fully tell this emotion." },
+      { "ja": "火は山全体を焼き尽くすまで止まらなかった。", "match": "焼き尽くす", "en": "The fire did not stop until it had burned the whole mountain." },
+      { "ja": "ゲームの攻略法は調べ尽くしました。", "match": "調べ尽くしました", "en": "I've looked up every strategy for the game." },
+      { "ja": "使い尽くされた道具が、棚の隅に残っていた。", "match": "使い尽くされた", "en": "Tools that had been used up were left in a corner of the shelf." },
+      { "ja": "考えつくしたけど、答えは出なかった。", "match": "考えつくした", "en": "I thought it through completely, but found no answer." }
+    ],
+    "counterexamples": [
+      { "ja": "彼女は恋人に尽くすタイプだ。", "en": "She is the type who devotes herself to her partner.", "why": "尽くす 'devote oneself' is a main verb with に, not a suffix on a verb stem" },
+      { "ja": "最後まで全力を尽くすつもりだ。", "en": "I intend to do my utmost to the end.", "why": "力を尽くす is a noun + を + main verb 尽くす 'exert', not V-stem + 尽くす" },
+      { "ja": "彼は贅沢尽くしの暮らしをしていた。", "en": "He lived a life full of luxury.", "why": "尽くし is the noun suffix 'full of' after a noun, not the verb" },
+      { "ja": "ありとあらゆる手を尽くしたが、だめだった。", "en": "We tried every possible means, but it was no use.", "why": "手を尽くす 'exhaust every means' has the noun 手 before it, not a verb stem" },
+      { "ja": "彼の運は尽きてしまった。", "en": "His luck has run out.", "why": "尽きる is an intransitive verb that does not share the lexeme 尽くす" }
+    ],
+    "subsumes": [],
+    "confusables": ["kiru", "nuku", "owaru"],
+    "detection": "Tokens: a verb in 連用形 + 尽くす (尽くす, 動詞-非自立可能, 五段-サ行): 食べ|尽くし|た, 知り|尽くし|て|いる, 埋め|尽くし|て, 語り|尽くせ|ない (下一段 potential 未然形), 使い|尽くさ|れ|た, and kana 食べ|つくす keeps the lexeme 尽くす. UniDic fuses none of the compounds; 食べ尽くす, 知り尽くす, 埋め尽くす, 覆い尽くす and 見尽くす are all two tokens, so the closed list of fused words is empty. Main-verb 尽くす (恋人|に|尽くす, 力|を|尽くす, 手|を|尽くす) has the same lexeme and POS, so the guard is that the token directly before 尽くす is a verb in 連用形, not a noun or a particle. 贅沢|尽くし is a separate 接尾辞-名詞的 token (尽くし) and 尽きる is another lexeme (尽きる, 動詞-一般). Close in meaning to きる (kiru) and ぬく (nuku), which have their own ids."
+  },
+  {
+    "id": "zu-jimai",
+    "form": "〜ずじまい",
+    "variants": [
+      "〜ずじまいだ",
+      "〜ずじまいで",
+      "〜ずじまいだった",
+      "〜ずじまいになる",
+      "〜ず仕舞い"
+    ],
+    "meaning": "ended up never doing",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "V-nai-stem + ず + じまい"
+    ],
+    "examples": [
+      { "ja": "忙しくて、結局お礼も言えずじまいだった。", "match": "言えずじまい", "en": "I was busy and in the end never managed to thank them." },
+      { "ja": "彼とは一度も会わずじまいで卒業した。", "match": "会わずじまい", "en": "I graduated without ever once meeting him." },
+      { "ja": "買うつもりだった本は、買わずじまいになってしまった。", "match": "買わずじまい", "en": "I never did buy the book I meant to buy." },
+      { "ja": "夏休みの宿題は、結局手をつけずじまいだった。", "match": "つけずじまい", "en": "In the end I never touched my summer homework." },
+      { "ja": "あの人は謝らずじまいで、引っ越していった。", "match": "謝らずじまい", "en": "He moved away without ever apologizing." },
+      { "ja": "忙しかったので、旅行にも行けずじまいです。", "match": "行けずじまい", "en": "I was busy, so I never got to travel." },
+      { "ja": "結局、勉強せずじまいで試験の日を迎えた。", "match": "せずじまい", "en": "In the end I never studied and the exam day arrived." },
+      { "ja": "読まずじまいの本が、棚に何十冊も並んでいる。", "match": "読まずじまい", "en": "Dozens of books I never read stand on the shelf." },
+      { "ja": "結局、母の手料理は食べずじまいになった。", "match": "食べずじまい", "en": "I never got to eat my mother's home cooking in the end." }
+    ],
+    "counterexamples": [
+      { "ja": "何も言わずに帰ってしまった。", "en": "He went home without saying anything.", "why": "ず + に 'without doing' (zu-ni) has no じまい" },
+      { "ja": "もう店じまいの時間ですよ。", "en": "It is closing time already.", "why": "じまい follows the noun 店, a different compound with no ず" },
+      { "ja": "一度も使わず、そのまま売った。", "en": "I never used it and sold it as it was.", "why": "ず is the plain negative stem conjunction, and じまい does not follow" },
+      { "ja": "彼は何も言わずに済んだ。", "en": "He got by without saying anything.", "why": "ずに済む is zu-ni-sumu, a different structure with 済む" }
+    ],
+    "subsumes": [],
+    "confusables": ["zu-ni", "zu-ni-sumu"],
+    "detection": "Tokens: a verb in 未然形 + ず (ず, 助動詞-ヌ, 連用形-一般) + じまい, then だ, で, の, に or なる: 会わ|ず|じまい|だっ|た, 言え|ず|じまい. UniDic tags じまい (lexeme 仕舞い) inconsistently: 接尾辞-名詞的 (言え|ず|じまい|だっ|た), 名詞-普通名詞 (会わ|ず|じまい|で) and, in 行け|ず|じまい|です, the 助動詞 lexeme ちまう. So match the surface じまい (or 仕舞い) directly after ず and not a POS or lexeme. For する the verb is せ (為る, 未然形-セ): せ|ず|じまい. Require ず directly before じまい; ず + に + a verb is zu-ni, and ず + に + 済む is zu-ni-sumu. じまい after a noun (店仕舞い is one noun token) has no ず and is not the pattern."
+  },
+  {
+    "id": "tameshi-ga-nai",
+    "form": "〜ためしがない",
+    "variants": [
+      "〜た試しがない",
+      "〜たためしがありません",
+      "〜たためしはない",
+      "〜たためしもない",
+      "〜たためしがなかった",
+      "〜たためしなんてない"
+    ],
+    "meaning": "has never once (happened)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "V-ta + ためしがない",
+      "V-ta + ためしはない",
+      "V-ta + ためしもない"
+    ],
+    "examples": [
+      { "ja": "あいつが時間通りに来たためしがない。", "match": "来たためしがない", "en": "He has never once come on time." },
+      { "ja": "今まで彼女が約束を守った試しがありません。", "match": "守った試しがありません", "en": "She has never once kept a promise." },
+      { "ja": "私は宝くじに当たったためしがない。", "match": "当たったためしがない", "en": "I have never won the lottery, not once." },
+      { "ja": "兄が掃除を手伝ってくれたためしがないよ。", "match": "くれたためしがない", "en": "My brother has never helped with the cleaning." },
+      { "ja": "彼が人の話を最後まで聞いたためしはない。", "match": "聞いたためしはない", "en": "He has never listened to anyone to the end." },
+      { "ja": "親の言うことを素直に聞いたためしもない。", "match": "聞いたためしもない", "en": "I have never listened to my parents obediently either." },
+      { "ja": "この店は、一度も休んだためしがなかった。", "match": "休んだためしがなかった", "en": "This shop had never once closed." },
+      { "ja": "彼の天気予報が当たった試しがなく、誰も信じていない。", "match": "当たった試しがなく", "en": "His weather forecasts never come true, and nobody believes them." },
+      { "ja": "あの人が自分から謝ったためしなんてないよ。", "match": "謝ったためしなんてない", "en": "That person has never apologized of their own accord." }
+    ],
+    "counterexamples": [
+      { "ja": "新しいソースを試しに使ってみた。", "en": "I tried using the new sauce.", "why": "試し is the noun 'trial' in 試しに, with no verb in the past form and no ない" },
+      { "ja": "そんな高い店に行ったことがない。", "en": "I have never been to such an expensive place.", "why": "た + ことがない is the experience pattern, with こと and not ためし" },
+      { "ja": "彼はしがない会社員だ。", "en": "He is a humble office worker.", "why": "しがない is one adjective 'humble'; it shares only the tail of the kanji spelling 例しがない" },
+      { "ja": "お試しがないと、買う気になれない。", "en": "Without a trial, I can't feel like buying.", "why": "お試し is the noun 'trial', here in the sense of a sample, not 'precedent'" }
+    ],
+    "subsumes": [],
+    "confusables": ["ta-koto-ga-aru", "wake-ga-nai"],
+    "detection": "Tokens: a verb or auxiliary in 連体形 of the past た (た, 助動詞-タ, 連体形-一般) + ためし or 試し (試し, 名詞-普通名詞) + が, は or も + ない (無い, 形容詞-非自立可能) or あり|ませ|ん, なかっ|た: 来|た|ためし|が|ない, 守っ|た|試し|が|あり|ませ|ん, 聞い|た|ためし|は|ない. Require た directly before ためし and a negative after the particle. The kanji spelling 例し is mis-tokenized (例|しがない, 形容詞 しがない), so a matcher may add 例しがない as a closed variant string. 試しに (試し + に) in 試しに食べる is not the pattern, and ことがない (た|こと|が|ない) is the separate experience pattern with a different noun. The pattern strongly implies a negative judgment about the subject."
+  },
+  {
+    "id": "ta-hyoushi-ni",
+    "form": "〜た拍子に",
+    "variants": [
+      "〜た弾みに",
+      "〜たはずみに",
+      "〜た拍子で",
+      "〜た弾みで",
+      "〜の拍子に"
+    ],
+    "meaning": "the moment, in the act of (accident)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "V-ta + 拍子に",
+      "V-ta + 弾みに",
+      "V-ta + はずみに",
+      "N + の + 拍子に"
+    ],
+    "examples": [
+      { "ja": "階段で足を滑らせた拍子に、スマホを落としてしまった。", "match": "滑らせた拍子に", "en": "I slipped on the stairs and dropped my phone." },
+      { "ja": "立ち上がった拍子に、椅子が倒れた。", "match": "立ち上がった拍子に", "en": "The chair fell over as I stood up." },
+      { "ja": "くしゃみをした拍子に、コーヒーをこぼした。", "match": "した拍子に", "en": "I sneezed and spilled my coffee." },
+      { "ja": "振り向いた拍子に、後ろの人と肩がぶつかった。", "match": "振り向いた拍子に", "en": "As I turned around, I bumped shoulders with the person behind me." },
+      { "ja": "転んだはずみに、眼鏡が割れてしまった。", "match": "転んだはずみに", "en": "I fell and my glasses broke." },
+      { "ja": "蓋を開けた弾みに、中身が飛び散った。", "match": "開けた弾みに", "en": "The moment I opened the lid, the contents splashed out." },
+      { "ja": "ふとした拍子に、昔のことを思い出す。", "match": "した拍子に", "en": "Sometimes, at an unexpected moment, I remember the old days." },
+      { "ja": "何かの拍子にスイッチが入ったのか、彼は急に泣き出した。", "match": "の拍子に", "en": "Something must have set him off, because he suddenly burst into tears." },
+      { "ja": "「ぶつかった拍子に落としたんです。」", "match": "ぶつかった拍子に", "en": "\"I dropped it when we bumped into each other.\"" },
+      { "ja": "ちょっとしたはずみで、コップが割れた。", "match": "したはずみで", "en": "A small jolt and the glass broke." }
+    ],
+    "counterexamples": [
+      { "ja": "予想外の結果に拍子抜けした。", "en": "I was let down by the unexpected result.", "why": "拍子抜け is one compound noun-verb, not V-ta + 拍子に" },
+      { "ja": "音楽の拍子に合わせて歩いた。", "en": "I walked in time with the music's beat.", "why": "拍子 is 'rhythm, beat' in 拍子に合わせて, with no verb in the past form" },
+      { "ja": "みんなで手拍子を打った。", "en": "Everyone clapped along.", "why": "手拍子 'handclap' is a compound noun" },
+      { "ja": "ドアを開けた瞬間に、猫が飛び出した。", "en": "The moment I opened the door, the cat ran out.", "why": "瞬間に is ta-shunkan-ni, a neighbor that has no accident sense" },
+      { "ja": "試合に勝って、チームに弾みがついた。", "en": "Winning the game gave the team momentum.", "why": "弾みがつく 'gain momentum' has が after 弾み, not に, and no verb in the past before it" }
+    ],
+    "subsumes": [],
+    "confusables": ["ta-shunkan-ni", "ta-totan"],
+    "detection": "Tokens: a verb in the past (連体形 た, 助動詞-タ) + 拍子 (拍子, 名詞-普通名詞) or 弾み/はずみ (弾み, 名詞-普通名詞) + に (格助詞) or で (だ, 助動詞 連用形-一般): 滑らせ|た|拍子|に, 転ん|だ|はずみ|に, 開け|た|弾み|に, ちょっと|し|た|はずみ|で. Kana はずみ keeps the lexeme 弾み. The variant の拍子に is N + の + 拍子 + に (何か|の|拍子|に). Require た or の directly before the noun. 手|拍子, 拍子|抜け (拍子 + 抜ける), 三拍子 and 拍子に合わせて (a beat) are not the pattern, and 弾み|が|つく is another phrase. Close in meaning to ta-shunkan-ni and ta-totan, but this one describes an accidental side effect."
+  },
+  {
+    "id": "ta-shunkan-ni",
+    "form": "〜た瞬間に",
+    "variants": [
+      "〜た瞬間",
+      "〜た瞬間、",
+      "〜る瞬間に"
+    ],
+    "meaning": "the instant that",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "V-ta + 瞬間(に)",
+      "V-dict + 瞬間(に)"
+    ],
+    "examples": [
+      { "ja": "ドアを開けた瞬間に、猫が飛び出してきた。", "match": "開けた瞬間に", "en": "The instant I opened the door, the cat darted out." },
+      { "ja": "目が合った瞬間、彼女は顔をそらした。", "match": "合った瞬間", "en": "The moment our eyes met, she looked away." },
+      { "ja": "電話を切った瞬間に、涙があふれてきた。", "match": "切った瞬間に", "en": "The instant I hung up, tears came flooding." },
+      { "ja": "家に着いた瞬間、どっと疲れが出た。", "match": "着いた瞬間", "en": "The moment I got home, the exhaustion hit me." },
+      { "ja": "席に座った瞬間に、先生が入ってきたんだよ。", "match": "座った瞬間に", "en": "The instant I sat down, the teacher walked in." },
+      { "ja": "信号が変わった瞬間に、車が一斉に動き出した。", "match": "変わった瞬間に", "en": "The cars all started moving the instant the light changed." },
+      { "ja": "彼の顔を見た瞬間、全部どうでもよくなった。", "match": "見た瞬間", "en": "The second I saw his face, nothing else mattered." },
+      { "ja": "あの人が笑った瞬間に、好きになったんです。", "match": "笑った瞬間に", "en": "I fell for her the moment she smiled." },
+      { "ja": "地面を蹴る瞬間に、足をひねってしまった。", "match": "蹴る瞬間に", "en": "I twisted my foot at the very moment I kicked off the ground." }
+    ],
+    "counterexamples": [
+      { "ja": "決定的な瞬間を写真に収めた。", "en": "I captured the decisive moment in a photo.", "why": "瞬間 is a plain noun 'moment' after な, with no verb before it" },
+      { "ja": "彼は瞬間移動ができるらしい。", "en": "They say he can teleport.", "why": "瞬間移動 'teleportation' is a compound noun" },
+      { "ja": "瞬間的に速度が上がった。", "en": "The speed went up momentarily.", "why": "瞬間的に is an adverbial 'momentarily' with 的" },
+      { "ja": "ドアを開けたとたん、猫が飛び出した。", "en": "As soon as I opened the door, the cat ran out.", "why": "たとたん is the separate entry ta-totan, not 瞬間" }
+    ],
+    "subsumes": [],
+    "confusables": ["ta-totan", "ta-hyoushi-ni"],
+    "detection": "Tokens: a verb or adjective in the past (た, 助動詞-タ, 連体形-一般) + 瞬間 (瞬間, 名詞-普通名詞) + に (格助詞), a comma or nothing: 開け|た|瞬間|に, 合っ|た|瞬間|、, 見|た|瞬間. The variant V-dict + 瞬間 (蹴る|瞬間|に) has the same noun after a verb in 連体形 and means 'at the moment of doing'. Require a verb directly before 瞬間, and reject 瞬間 after な or a noun (決定的|な|瞬間), 瞬間|移動, 瞬間|的|に and 一瞬 (a different word). The noun 瞬間 stands alone as 'that moment' (その|瞬間), which is not this pattern. The sense overlaps ta-totan and the more accidental ta-hyoushi-ni."
+  },
+  {
+    "id": "ta-tsumori-wa-nai",
+    "form": "〜たつもりはない",
+    "variants": [
+      "〜たつもりはありません",
+      "〜たつもりはなかった",
+      "〜たつもりもない",
+      "〜たつもりなんてない"
+    ],
+    "meaning": "had no intention of (having done)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "V-ta + つもりはない",
+      "V-ta + つもりはありません",
+      "V-ta + つもりもない"
+    ],
+    "examples": [
+      { "ja": "君を責めたつもりはないよ。", "match": "責めたつもりはない", "en": "I didn't mean to blame you." },
+      { "ja": "そんな失礼なことを言ったつもりはありません。", "match": "言ったつもりはありません", "en": "I don't think I said anything that rude." },
+      { "ja": "私は何も悪いことをしたつもりはない。", "match": "したつもりはない", "en": "I don't believe I did anything wrong." },
+      { "ja": "彼女を傷つけたつもりはなかったのに、泣かれてしまった。", "match": "傷つけたつもりはなかった", "en": "I never meant to hurt her, yet she burst into tears." },
+      { "ja": "嘘をついたつもりはないけど、誤解させたならごめん。", "match": "ついたつもりはない", "en": "I didn't think I was lying, but sorry if I misled you." },
+      { "ja": "約束を破ったつもりはないんだけどな。", "match": "破ったつもりはない", "en": "I don't remember breaking any promise, though." },
+      { "ja": "手を抜いたつもりはありませんが、結果が出ませんでした。", "match": "抜いたつもりはありません", "en": "I didn't feel I cut corners, but the results didn't come." },
+      { "ja": "勝手に決めたつもりもないんだけど。", "match": "決めたつもりもない", "en": "Nor did I feel I decided it on my own, though." },
+      { "ja": "そんなこと言ったつもりなんてない。", "match": "言ったつもりなんてない", "en": "I have no sense of ever saying anything like that." }
+    ],
+    "counterexamples": [
+      { "ja": "今日は残業するつもりはない。", "en": "I don't intend to work overtime today.", "why": "する + つもりはない is the plain intention pattern tsumori, with no past た" },
+      { "ja": "死んだつもりで頑張ってみる。", "en": "I'll try hard as if I were dead.", "why": "たつもりで 'as if' is the separate entry tsumori-de, with で and no negative" },
+      { "ja": "ちゃんと伝えたつもりだったのに、通じていなかった。", "en": "I thought I had told them properly, but it hadn't got through.", "why": "たつもりだった 'I thought I had' is tsumori-datta, with だ and no ない" },
+      { "ja": "食べたつもりになって、我慢した。", "en": "I pretended I had eaten and held out.", "why": "たつもりになる 'act as if' has になる and no は + ない" }
+    ],
+    "subsumes": ["tsumori"],
+    "confusables": ["tsumori", "tsumori-de", "tsumori-datta"],
+    "detection": "Tokens: a verb in the past (連体形 た, 助動詞-タ) + つもり (積り, 名詞-普通名詞) + は or も or なんて + a negative: ない (無い, 形容詞-非自立可能 終止形), なかっ|た, あり|ませ|ん: 責め|た|つもり|は|ない, 言っ|た|つもり|は|あり|ませ|ん, 傷つけ|た|つもり|は|なかっ|た. Require た directly before つもり and the negative right after the particle. The tokens of the plain intention (行く|つもり|は|ない) lack た and belong to tsumori, which this entry subsumes when た is present. つもり|で (たつもりで) is tsumori-de, and つもり|だっ|た is tsumori-datta, so check the token after つもり."
+  },
+  {
+    "id": "nashi-ni",
+    "form": "〜なしに",
+    "variants": [
+      "〜なしには",
+      "〜もなしに",
+      "〜無しに"
+    ],
+    "meaning": "without",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "N + なしに",
+      "N + なしには",
+      "N + もなしに"
+    ],
+    "examples": [
+      { "ja": "許可なしには、この部屋に入れません。", "match": "なしには", "en": "You cannot enter this room without permission." },
+      { "ja": "断りなしに私の机を使わないでほしい。", "match": "なしに", "en": "Please don't use my desk without asking." },
+      { "ja": "連絡もなしに、彼は三日も休んだ。", "match": "もなしに", "en": "He took three days off without so much as a word." },
+      { "ja": "愛情なしには、子どもは育たない。", "match": "なしには", "en": "Children can't grow without affection." },
+      { "ja": "準備なしに本番に臨むのは無謀だ。", "match": "なしに", "en": "Going into the real thing without preparation is reckless." },
+      { "ja": "理由の説明なしに、突然契約が打ち切られた。", "match": "なしに", "en": "The contract was cut off suddenly, with no explanation." },
+      { "ja": "彼の協力なしには、この計画は成り立たなかった。", "match": "なしには", "en": "Without his cooperation, this plan would not have worked." },
+      { "ja": "前触れもなしに、雨が降り出した。", "match": "もなしに", "en": "Rain started to fall with no warning." },
+      { "ja": "練習なしに上達するわけがない。", "match": "なしに", "en": "There is no way to get better without practice." }
+    ],
+    "counterexamples": [
+      { "ja": "努力することなしに、成功は得られない。", "en": "You can't succeed without making an effort.", "why": "ことなしに follows a verb and is the separate entry koto-nashi-ni" },
+      { "ja": "彼は砂糖なしでコーヒーを飲む。", "en": "He drinks coffee without sugar.", "why": "なしで is owned by nashi, not this entry, which keeps なしに and なしには" },
+      { "ja": "見るともなしにテレビを見ていた。", "en": "I was watching TV without really paying attention.", "why": "ともなしに 'without really meaning to' follows とも, not a noun" },
+      { "ja": "意気地なしに育てた覚えはない。", "en": "I did not raise you to be a coward.", "why": "意気地なし is one noun 'coward' and に belongs to 育てた" },
+      { "ja": "努力なくしては、成功はありえない。", "en": "Without effort, success is impossible.", "why": "なくしては is nakushite-wa, a different form of 'without'" }
+    ],
+    "subsumes": [],
+    "confusables": ["koto-nashi-ni", "nashi", "nakushite-wa", "nuki-de"],
+    "detection": "Tokens: a noun + なし (無し, 名詞-普通名詞) + に (格助詞), optionally + は, with も allowed between the noun and なし: 許可|なし|に|は, 連絡|も|なし|に, 練習|なし|に. A verb in 連用形 can act as the noun (断り|なし|に, where 断り is 断る 動詞-一般 連用形). Guards: reject なし after こと (こと|なし|に is koto-nashi-ni) and after とも (見る|とも|なし|に), reject なし + で and なし + で + は (nashi owns those), and reject fixed nouns such as 意気地なし and 甲斐性なし (意気地|なし|に has the same tokens). なくして and なくしては are nakushite-wa. The kana なし for the fruit 梨 is not followed by に in this sense, but check that the token before なし is a noun that can be 'without X'."
+  },
+  {
+    "id": "koto-nashi-ni",
+    "form": "〜ことなしに",
+    "variants": [
+      "〜ことなしには",
+      "〜こともなしに",
+      "〜事なしに"
+    ],
+    "meaning": "without doing",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "V-dict + ことなしに",
+      "V-dict + ことなしには",
+      "V-dict + こともなしに"
+    ],
+    "examples": [
+      { "ja": "彼は誰にも相談することなしに、会社を辞めた。", "match": "ことなしに", "en": "He quit his job without consulting anyone." },
+      { "ja": "努力することなしに、成功は得られない。", "match": "ことなしに", "en": "You can't succeed without making an effort." },
+      { "ja": "一度も振り返ることなしに、彼女は去っていった。", "match": "ことなしに", "en": "She left without looking back even once." },
+      { "ja": "理由を説明することなしには、誰も納得しないだろう。", "match": "ことなしには", "en": "Nobody will be convinced unless you explain the reason." },
+      { "ja": "痛みを感じることなしに手術を受けられるようになった。", "match": "ことなしに", "en": "It became possible to have surgery without feeling pain." },
+      { "ja": "彼は何も言うことなしに、静かに部屋を出た。", "match": "ことなしに", "en": "He left the room quietly, saying nothing." },
+      { "ja": "人の助けを借りることなしには、この仕事は終わらなかった。", "match": "ことなしには", "en": "This job would not have been finished without the help of others." },
+      { "ja": "彼女は休むこともなしに、働き続けた。", "match": "こともなしに", "en": "She kept working without so much as a rest." },
+      { "ja": "互いに傷つくことなしに、別れることはできなかった。", "match": "ことなしに", "en": "There was no way to part without hurting each other." }
+    ],
+    "counterexamples": [
+      { "ja": "断りなしに私の机を使わないでほしい。", "en": "Please don't use my desk without asking.", "why": "なしに follows a noun, not こと, so it is nashi-ni" },
+      { "ja": "彼は誰にも相談することなく、会社を辞めた。", "en": "He quit his job without consulting anyone.", "why": "ことなく is the separate entry koto-naku, with なく and not なしに" },
+      { "ja": "この味は言うことなしだ。", "en": "This taste leaves nothing to be desired.", "why": "言うことなし is a set phrase meaning 'perfect', with だ after なし and no に" },
+      { "ja": "見るともなしにテレビを見ていた。", "en": "I was watching TV without really paying attention.", "why": "ともなしに follows とも and has no こと" }
+    ],
+    "subsumes": [],
+    "confusables": ["nashi-ni", "koto-naku", "nakushite-wa"],
+    "detection": "Tokens: a verb in 連体形 + こと (事, 名詞-普通名詞) + なし (無し, 名詞-普通名詞) + に (格助詞), optionally + は, with も allowed after こと: 相談する|こと|なし|に, 説明する|こと|なし|に|は, 休む|こと|も|なし|に. The verb is one the learner can read as 'doing X'. Guards: require a verb directly before こと, and require に after なし, so 言う|こと|なし|だ (a set phrase 'perfect') is not matched. This entry takes the こと + なし + に tokens away from nashi-ni, which only accepts a noun other than こと before なし. ことなく (こと|なく, 形容詞 無い) belongs to koto-naku, and とも|なし|に belongs to the ともなく family."
+  },
+  {
+    "id": "nakushite-wa",
+    "form": "〜なくしては",
+    "variants": [
+      "〜なくして",
+      "〜なくしては〜ない"
+    ],
+    "meaning": "without (X, Y is impossible)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "N + なくして",
+      "N + なくしては"
+    ],
+    "examples": [
+      { "ja": "努力なくして、成功はありえない。", "match": "なくして", "en": "Without effort, success is impossible." },
+      { "ja": "彼の協力なくしては、この計画は実現しなかった。", "match": "なくしては", "en": "Without his cooperation, this plan would not have come true." },
+      { "ja": "信頼なくしては、良い関係は築けません。", "match": "なくしては", "en": "Without trust, you cannot build a good relationship." },
+      { "ja": "家族の支えなくして、今の私はなかった。", "match": "なくして", "en": "Without my family's support, I would not be who I am now." },
+      { "ja": "犠牲なくして、平和は訪れない。", "match": "なくして", "en": "Without sacrifice, peace will not come." },
+      { "ja": "愛なくして、人は生きていけないと思う。", "match": "なくして", "en": "I think people cannot live without love." },
+      { "ja": "水なくしては、どんな生き物も生きられない。", "match": "なくしては", "en": "Without water, no living thing can survive." },
+      { "ja": "先人たちの苦労なくしては、今日の繁栄はなかっただろう。", "match": "なくしては", "en": "Without the hardships of our predecessors, today's prosperity would not exist." }
+    ],
+    "counterexamples": [
+      { "ja": "財布をなくしては困る。", "en": "It would be a problem if I lost my wallet.", "why": "なくす 'lose' + ては, with the object 財布を, not 'without'" },
+      { "ja": "鍵をなくして、家に入れなかった。", "en": "I lost my key and couldn't get into the house.", "why": "なくして is the て-form of the verb 無くす 'lose'" },
+      { "ja": "準備なしには、勝てない。", "en": "You can't win without preparation.", "why": "なしには is nashi-ni, a plainer way of saying 'without'" },
+      { "ja": "もっと勉強しなくては、合格できない。", "en": "If I don't study more, I can't pass.", "why": "しなくては is V-nai + くては, not a noun + なくして" }
+    ],
+    "subsumes": [],
+    "confusables": ["nashi-ni", "nakute-wa-naranai"],
+    "detection": "Tokens vary and need three shapes. After most nouns UniDic reads なく (無い, 形容詞-非自立可能, 連用形-一般) + し (為る, 動詞-非自立可能, 連用形-一般) + て (接続助詞) + は (係助詞): 努力|なく|し|て, 協力|なく|し|て|は. After a verb-like noun (支え) it reads なく as the auxiliary ない (助動詞-ナイ, 連用形-一般): 支え|なく|し|て. After some words (彼, 我) it reads なくし (無くす, 動詞-一般, 五段-サ行, 連用形-一般) + て + は, the same tokens as the verb 'lose'. So match the surface なくして(は) directly after a noun, then allow a negative ending in the clause that follows. Guards: reject なくして(は) when the noun before is the object of を (財布|を|なくし|て|は) or the clause is a plain event (鍵|を|なくし|て), where 無くす 'lose' is meant. しなくては (し|なく|て|は, V-nai) is nakute-wa-naranai, and なしには is nashi-ni."
+  },
+  {
+    "id": "atte-no",
+    "form": "〜あっての",
+    "variants": [
+      "〜があっての",
+      "〜あってのこと",
+      "〜あっての物種"
+    ],
+    "meaning": "only possible because of",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "N + あっての + N",
+      "N + が + あっての + N"
+    ],
+    "examples": [
+      { "ja": "家族の支えがあっての成功だと思っています。", "match": "があっての", "en": "I believe my success was possible only thanks to my family's support." },
+      { "ja": "お客様あっての商売だから、愛想は大事だよ。", "match": "あっての", "en": "A shop exists only because of its customers, so being friendly matters." },
+      { "ja": "命あっての物種と言うでしょう。", "match": "あっての", "en": "They say that life comes first, because nothing else is possible without it." },
+      { "ja": "健康あっての仕事です。無理しないでください。", "match": "あっての", "en": "Work is only possible with health, so please don't overdo it." },
+      { "ja": "先生の指導あっての今の私です。", "match": "あっての", "en": "I am who I am now only because of my teacher's guidance." },
+      { "ja": "これも皆さんの応援あってのことです。", "match": "あってのこと", "en": "This too is only thanks to everyone's support." },
+      { "ja": "仲間あっての自分だと、いつも思っている。", "match": "あっての", "en": "I always think I am what I am only because of my friends." },
+      { "ja": "ファンの声援があっての人気だということを忘れてはいけない。", "match": "があっての", "en": "We must not forget that our popularity exists only through the fans' cheering." }
+    ],
+    "counterexamples": [
+      { "ja": "みんなで話し合っての結論だ。", "en": "It is a conclusion we reached by talking together.", "why": "話し合う is one verb, so って の follows 話し合っ and is not あって + の" },
+      { "ja": "雨があっても試合は行う。", "en": "The game will be held even if it rains.", "why": "あっても is the concessive ても form, with no の after あって" },
+      { "ja": "用事があって行けなかった。", "en": "I had something to do and couldn't go.", "why": "あって is the plain て-form of ある, with no の" },
+      { "ja": "そんなことがあってたまるか。", "en": "As if something like that could ever happen.", "why": "あって is the て-form of ある followed by たまる, with no の" }
+    ],
+    "subsumes": [],
+    "confusables": ["okage-de", "te-koso"],
+    "detection": "Tokens: a noun (optionally + が) + あっ (有る, 動詞-非自立可能, 五段-ラ行, 連用形-促音便) + て (接続助詞) + の (格助詞) + a noun or こと: 支え|が|あっ|て|の|成功, 皆|様|あっ|て|の, 応援|あっ|て|の|こと. Require あっ|て|の in sequence directly after a noun or が. The same tokens appear for any ある + て + の, so the guard is the noun that has no particle or that has が before あって, and the following noun. Reject あっ + て + も (雨があっても), あっ + て + a verb or a comma (用事があって行けなかった), and 合っ|て|の inside a verb such as 話し合う (話し合っ|て|の), where the lexeme is 合う and not 有る. A lone あって on its own as an interjection is not a noun phrase."
+  },
+  {
+    "id": "koso-ga",
+    "form": "〜こそ〜が",
+    "variants": [
+      "〜こそ〜けれど",
+      "〜こそ〜けど",
+      "〜こそしたが"
+    ],
+    "meaning": "it is true that X, but",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "N + こそ + Clause-plain + が",
+      "N + こそ + Clause-plain + けれど",
+      "V-masu-stem + こそ + した + が"
+    ],
+    "examples": [
+      { "ja": "派手さこそないが、落ち着いていていい店だ。", "match": "さこそないが", "en": "It's not flashy, but it's a calm and good restaurant." },
+      { "ja": "反対こそしなかったが、賛成もしていなかった。", "match": "こそしなかったが", "en": "He didn't object, but he didn't agree either." },
+      { "ja": "彼とは名前こそ知っているが、顔は知らない。", "match": "こそ知っているが", "en": "I do know his name, but I don't know his face." },
+      { "ja": "努力こそ認めるが、結果が伴っていない。", "match": "こそ認めるが", "en": "I'll grant the effort, but it has no results to show." },
+      { "ja": "味こそ普通だが、量はすごいんだよ。", "match": "こそ普通だが", "en": "The taste is only so-so, but the portions are huge." },
+      { "ja": "遅れこそしたが、荷物は無事に届きました。", "match": "こそしたが", "en": "It was late, but the package arrived safely." },
+      { "ja": "値段こそ高いけど、長く使えると思う。", "match": "こそ高いけど", "en": "It's expensive, but I think you can use it for a long time." },
+      { "ja": "彼は成績こそ良いけれど、協調性に欠ける。", "match": "こそ良いけれど", "en": "He has good grades, but he lacks cooperativeness." },
+      { "ja": "責任こそあるが、全部が彼のせいではない。", "match": "こそあるが", "en": "He does bear responsibility, but it isn't all his fault." }
+    ],
+    "counterexamples": [
+      { "ja": "今度こそ絶対に勝つ。", "en": "This time I will definitely win.", "why": "こそ stresses 今度 'this time' with no concession and no が clause, which is the emphatic こそ" },
+      { "ja": "彼こそが本当の犯人だ。", "en": "He is the real culprit.", "why": "が here is the subject case particle (格助詞) after こそ, not 'but'" },
+      { "ja": "彼には感謝こそすれ、恨みはしない。", "en": "I feel gratitude toward him, not resentment.", "why": "こそすれ is the separate entry koso-sure" },
+      { "ja": "不満こそあれ、反対はしない。", "en": "I have complaints, but I won't object.", "why": "こそあれ is the separate entry koso-are" },
+      { "ja": "努力してこそ成功する。", "en": "You succeed only by making an effort.", "why": "てこそ is the separate entry te-koso" }
+    ],
+    "subsumes": ["koso"],
+    "confusables": ["koso", "koso-sure", "koso-are", "monono"],
+    "detection": "Tokens: a noun (or a verb 連用形 + こそ + し) + こそ (こそ, 助詞-係助詞) + a predicate in the same clause, then が (助詞-接続助詞) or けれど/けど (接続助詞): 派手|さ|こそ|ない|が, 反対|こそ|し|なかっ|た|が, 遅れ|こそ|し|た|が, 名前|こそ|知っ|て|いる|が, 味|こそ|普通|だ|が. Require the が to be 接続助詞 (a conjunction ending the clause) and the clause to contrast with what follows. Reject が as 格助詞 (彼|こそ|が|犯人) and こそ with no concessive clause (今度|こそ|勝つ). Reject こそ|すれ (koso-sure) and こそ|あれ (koso-are), and て|こそ (te-koso). The emphatic koso entry is taken over when this pattern matches. Kept separate from koso-sure and koso-are by the verb: this entry ends in a が or けれど clause."
+  },
+  {
+    "id": "koso-sure",
+    "form": "〜こそすれ",
+    "variants": [
+      "〜こそすれ〜ない",
+      "〜こそすれど",
+      "〜こそすれども"
+    ],
+    "meaning": "may X, but certainly not Y",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "N + こそすれ",
+      "V-masu-stem + こそすれ"
+    ],
+    "examples": [
+      { "ja": "彼の努力には、感心こそすれ、非難する気にはなれない。", "match": "こそすれ", "en": "His effort earns my admiration; I can't bring myself to criticize it." },
+      { "ja": "親は子どもの成功を喜びこそすれ、妬んだりはしない。", "match": "こそすれ", "en": "Parents rejoice in their child's success; they don't envy it." },
+      { "ja": "先生は私たちを励ましこそすれ、叱ることはなかった。", "match": "こそすれ", "en": "The teacher encouraged us and never scolded us." },
+      { "ja": "この制度は、国民の負担を増やしこそすれ、減らしはしない。", "match": "こそすれ", "en": "This system will only increase the people's burden, never reduce it." },
+      { "ja": "彼が反省しているのは分かる。同情こそすれ、責める人はいないだろう。", "match": "こそすれ", "en": "We can see he regrets it. People will sympathize, not blame him." },
+      { "ja": "値上げは、客を遠ざけこそすれ、呼び戻すことはない。", "match": "こそすれ", "en": "A price rise will drive customers away, not bring them back." },
+      { "ja": "誰も彼の話を疑いこそすれ、信じようとはしなかった。", "match": "こそすれ", "en": "Everyone doubted his story, and no one tried to believe it." },
+      { "ja": "感謝こそすれど、恨みなど少しも抱いていない。", "match": "こそすれど", "en": "I feel gratitude, and not a trace of resentment." }
+    ],
+    "counterexamples": [
+      { "ja": "勉強こそしなかったが、試験には合格した。", "en": "I didn't study, but I passed the exam.", "why": "こそ + し + なかった + が is the concessive koso-ga, not すれ" },
+      { "ja": "努力すればこそ、成功できた。", "en": "It was only because I made an effort that I could succeed.", "why": "すれば + こそ is ば-こそ, with the order reversed" },
+      { "ja": "好きこそものの上手なれ。", "en": "What you love is what you get good at.", "why": "this proverb has こそ + なれ, a classical ending, not すれ" },
+      { "ja": "不満こそあれ、反対はしない。", "en": "I have complaints, but I won't object.", "why": "こそあれ is the separate entry koso-are" }
+    ],
+    "subsumes": ["koso"],
+    "confusables": ["koso-are", "koso-ga", "ba-koso"],
+    "detection": "Tokens: a noun or a verb 連用形 + こそ (係助詞) + すれ (為る, 動詞-非自立可能, サ行変格, 仮定形-一般), then a comma and a negative clause, or ど/ども (接続助詞): 感謝|こそ|すれ|、, 励まし|こそ|すれ, 増やし|こそ|すれ|、, 感謝|こそ|すれ|ど. The word before こそ is a verb in 連用形 (励まし, 増やし, 喜び) or a noun (感謝, 同情, 疑い are 名詞), so accept both. Require こそ directly followed by すれ. Reject こそ|し (koso-ga, こそしたが) and すれ|ば|こそ, where こそ comes after ば (ba-koso). This takes precedence over koso when matched."
+  },
+  {
+    "id": "koso-are",
+    "form": "〜こそあれ",
+    "variants": [
+      "〜こそあれ〜ない",
+      "〜こそあれど",
+      "〜こそあれども"
+    ],
+    "meaning": "though there is X, (not Y)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "N + こそあれ"
+    ],
+    "examples": [
+      { "ja": "彼の案には不満こそあれ、反対はしない。", "match": "こそあれ", "en": "I have complaints about his proposal, but I won't oppose it." },
+      { "ja": "この町には、地震の被害こそあれ、希望は失われていない。", "match": "こそあれ", "en": "This town has suffered from the earthquake, but hope has not been lost." },
+      { "ja": "彼女に会いたい気持ちこそあれ、嫌う気持ちはなかった。", "match": "こそあれ", "en": "I felt a longing to see her, never any dislike." },
+      { "ja": "若者には、迷いこそあれ、恐れはない。", "match": "こそあれ", "en": "The young have doubts, but no fear." },
+      { "ja": "この仕事には、苦労こそあれ、後悔したことは一度もない。", "match": "こそあれ", "en": "There was hardship in this job, but never once regret." },
+      { "ja": "彼の態度には、反省すべき点こそあれ、非難される筋合いはない。", "match": "こそあれ", "en": "His attitude has points to reflect on, but he doesn't deserve to be blamed." },
+      { "ja": "古い町並みには、不便さこそあれど、他にない魅力がある。", "match": "こそあれど", "en": "The old townscape is inconvenient, but it has a charm found nowhere else." },
+      { "ja": "才能こそあれ、努力なしに大成した人はいない。", "match": "こそあれ", "en": "Talent they may have, but no one has made it big without effort." }
+    ],
+    "counterexamples": [
+      { "ja": "不満こそあるが、反対はしない。", "en": "I have complaints, but I won't object.", "why": "こそ + ある + が is the concessive koso-ga, with ある and not あれ" },
+      { "ja": "感謝こそすれ、恨みはしない。", "en": "I feel gratitude, not resentment.", "why": "こそすれ is the separate entry koso-sure" },
+      { "ja": "今度こそあれを手に入れる。", "en": "This time I'll get that one.", "why": "あれ is the pronoun 'that' followed by を, not the classical form of ある" },
+      { "ja": "あれこそ本物だ。", "en": "That is the real thing.", "why": "あれ 'that' comes before こそ here, so the order is reversed" }
+    ],
+    "subsumes": ["koso"],
+    "confusables": ["koso-sure", "koso-ga", "koso"],
+    "detection": "Tokens: a noun + こそ (係助詞) + あれ (有る, 動詞-非自立可能, 文語ラ行変格, 已然形-一般), then a comma or ど/ども (接続助詞): 不満|こそ|あれ|、, 気持ち|こそ|あれ|、; before ど it reads 有る 五段-ラ行 仮定形-一般 (不便|さ|こそ|あれ|ど). Warning: at the end of a sentence or without a following comma, UniDic can tag あれ as the pronoun 彼れ (不満|こそ|あれ), and in 今度|こそ|あれ|を the same あれ is the real pronoun 'that'. So accept あれ after こそ only when the next token is 、, ど, ども or ない, and reject あれ followed by を, が, は or も. Reject こそ|ある|が (koso-ga) and こそ|すれ (koso-sure)."
+  },
+  {
+    "id": "nai-de-mo-nai",
+    "form": "〜ないでもない",
+    "variants": [
+      "〜ないでもありません",
+      "〜ないでもなかった"
+    ],
+    "meaning": "it's not that one doesn't; somewhat",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "bunpro": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "V-nai + でもない"
+    ],
+    "examples": [
+      { "ja": "君の言いたいことも、分からないでもない。", "match": "分からないでもない", "en": "I can see in a way what you want to say." },
+      { "ja": "気持ちは理解できないでもないが、やはりやりすぎだ。", "match": "できないでもない", "en": "I do understand how you feel, but you went too far." },
+      { "ja": "そこまで頼まれたら、引き受けないでもないよ。", "match": "引き受けないでもない", "en": "If you ask me that much, I might take it on." },
+      { "ja": "誘われたら、行かないでもない。", "match": "行かないでもない", "en": "If I'm invited, I wouldn't mind going." },
+      { "ja": "反対しないでもないが、条件次第だ。", "match": "しないでもない", "en": "I'm not entirely against it, but it depends on the conditions." },
+      { "ja": "彼の気持ちは、わからないでもなかった。", "match": "わからないでもなかった", "en": "I could sort of understand how he felt." },
+      { "ja": "自分でも、そう思わないでもありません。", "match": "思わないでもありません", "en": "I don't completely deny that I think so, too." },
+      { "ja": "買えないでもない値段だけど、ちょっと高いな。", "match": "買えないでもない", "en": "It's a price I could just about afford, but it's a bit high." },
+      { "ja": "言われてみれば、そんな気がしないでもない。", "match": "しないでもない", "en": "Now that you say it, I kind of feel that way." }
+    ],
+    "counterexamples": [
+      { "ja": "今日は行かないでもいい。", "en": "You don't have to go today.", "why": "ないでもいい is 'need not', with いい in place of the second ない" },
+      { "ja": "何も言わないでも、彼には分かる。", "en": "He understands even without a word.", "why": "ないでも means 'even without', with no second ない" },
+      { "ja": "彼の気持ちも分からないこともない。", "en": "I can sort of understand how he feels too.", "why": "ないこともない is the separate entry nai-koto-wa-nai" },
+      { "ja": "彼の言うことも分からなくもない。", "en": "I can sort of follow what he says.", "why": "なくもない is the separate entry naku-wa-nai" },
+      { "ja": "このことは誰にも言わないでください。", "en": "Please don't tell anyone about this.", "why": "ないで + ください is a request (naide-kudasai)" }
+    ],
+    "subsumes": [],
+    "confusables": ["nai-koto-wa-nai", "naku-wa-nai", "nai-mono-de-mo-nai"],
+    "detection": "Tokens: a verb in 未然形 + ない (ない, 助動詞-ナイ, 終止形-一般) + で (助詞-接続助詞) + も (係助詞) + ない (無い, 形容詞-非自立可能) or あり|ませ|ん, なかっ|た: 分から|ない|で|も|ない, し|ない|で|も|ない, 思わ|ない|で|も|あり|ませ|ん, わから|ない|で|も|なかっ|た. The first ない is the auxiliary (before a noun like 値段 the second ない is 連体形). Require で and も directly after the first ない and a negative right after も; reject いい or a verb after でも (行か|ない|で|も|いい, 分かる). ないこともない (ない|こと|も|ない) is nai-koto-wa-nai, なくもない (なく|も|ない) is naku-wa-nai, and ないものでもない (ない|もの|で|も|ない) is nai-mono-de-mo-nai, which has もの between. ないでください is naide-kudasai."
+  },
+  {
+    "id": "nai-mono-de-mo-nai",
+    "form": "〜ないものでもない",
+    "variants": [
+      "〜ないもんでもない",
+      "〜ないものでもありません",
+      "〜ないものでもなかった"
+    ],
+    "meaning": "it's not impossible that",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "V-nai + ものでもない"
+    ],
+    "examples": [
+      { "ja": "条件次第では、協力しないものでもない。", "match": "しないものでもない", "en": "Depending on the terms, I might be willing to cooperate." },
+      { "ja": "その案は、検討しないものでもありません。", "match": "しないものでもありません", "en": "I would not rule out considering that proposal." },
+      { "ja": "頼まれれば、手伝わないものでもない。", "match": "手伝わないものでもない", "en": "If I'm asked, I might lend a hand." },
+      { "ja": "この方法でも、うまくいかないものでもないだろう。", "match": "いかないものでもない", "en": "This method might work as well." },
+      { "ja": "彼が来ないものでもないから、席を一つ空けておこう。", "match": "来ないものでもない", "en": "He might yet come, so let's keep one seat free." },
+      { "ja": "時間をかければ、解決できないものでもない。", "match": "できないものでもない", "en": "Given time, it's not impossible to solve." },
+      { "ja": "彼女なら、そう言い出さないものでもない。", "match": "言い出さないものでもない", "en": "It's not unthinkable that she would start saying that." },
+      { "ja": "努力すれば、勝てないものでもないと思う。", "match": "勝てないものでもない", "en": "I think that with effort we could possibly win." },
+      { "ja": "彼の言い分も、分からないもんでもない。", "match": "分からないもんでもない", "en": "I can see his point in a way." }
+    ],
+    "counterexamples": [
+      { "ja": "どうにもならないものでも、やってみる価値はある。", "en": "Even for things that cannot be helped, it is worth trying.", "why": "ないもの + でも continues with ある, and no second ない follows でも" },
+      { "ja": "それほど難しいものでもない。", "en": "It isn't that difficult a thing.", "why": "ものでもない follows an adjective with no negative before もの" },
+      { "ja": "彼の言うことも分からないでもない。", "en": "I can sort of see what he says.", "why": "ないでもない without もの is nai-de-mo-nai" },
+      { "ja": "彼の言うことも分からないこともない。", "en": "I can sort of see what he says.", "why": "ないこともない is nai-koto-wa-nai, with こと and not もの" }
+    ],
+    "subsumes": [],
+    "confusables": ["nai-de-mo-nai", "nai-koto-wa-nai", "mono-dewa-nai"],
+    "detection": "Tokens: a verb in 未然形 + ない (ない, 助動詞-ナイ, 連体形-一般) + もの or もん (物, 名詞-普通名詞) + で (助詞-格助詞) + も (係助詞) + ない (無い, 形容詞-非自立可能) or あり|ませ|ん, なかっ|た: 協力|し|ない|もの|で|も|ない, 分から|ない|もん|で|も|ない. The で after もの is 格助詞 here and 接続助詞 in ないでもない, which has no もの. Require もの directly after ない (連体形) and the negative right after でも. Reject ない|もの|で|も + a non-negative continuation (どうにも|なら|ない|もの|で|も|ある), and reject もの after an adjective without ない (難しい|もの|で|も|ない). ないでもない is nai-de-mo-nai and ないこともない is nai-koto-wa-nai, so that もの is the guard that tells the three apart."
+  },
+  {
+    "id": "nai-tomo-kagiranai",
+    "form": "〜ないとも限らない",
+    "variants": [
+      "〜ないとも限りません",
+      "〜ないとも限らなかった"
+    ],
+    "meaning": "it may well happen that",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "V-nai + とも限らない",
+      "i-Adj-ku + ないとも限らない",
+      "N + でないとも限らない"
+    ],
+    "examples": [
+      { "ja": "いつ地震が起こらないとも限らないから、備えておこう。", "match": "起こらないとも限らない", "en": "An earthquake could strike at any time, so let's be prepared." },
+      { "ja": "彼が突然来ないとも限らないので、部屋を片付けた。", "match": "来ないとも限らない", "en": "He might drop by suddenly, so I tidied the room." },
+      { "ja": "今から走れば、まだ間に合わないとも限らない。", "match": "間に合わないとも限らない", "en": "If we run now, we may still make it." },
+      { "ja": "相手は強いが、勝てないとも限らない。", "match": "勝てないとも限らない", "en": "The opponent is strong, but we might still win." },
+      { "ja": "親切そうな人でも、悪い人でないとも限らない。", "match": "悪い人でないとも限らない", "en": "Even a kind-looking person might turn out to be a bad one." },
+      { "ja": "簡単そうに見えるが、難しくないとも限らない。", "match": "難しくないとも限らない", "en": "It looks easy, but it might not be." },
+      { "ja": "事故が起こらないとも限りません。", "match": "起こらないとも限りません", "en": "We cannot rule out that an accident will occur." },
+      { "ja": "彼女が気を変えないとも限らなかった。", "match": "変えないとも限らなかった", "en": "She might have changed her mind." },
+      { "ja": "嘘をつかないとも限らないから、気をつけて。", "match": "つかないとも限らない", "en": "He might lie, so be careful." }
+    ],
+    "counterexamples": [
+      { "ja": "高い店がおいしいとは限らない。", "en": "An expensive restaurant is not always a tasty one.", "why": "とは限らない is a separate entry (to-wa-kagiranai) without the first ない" },
+      { "ja": "彼が来ないとも言えない。", "en": "I can't say he won't come either.", "why": "とも言えない is a different phrase with 言う, not 限る" },
+      { "ja": "人の命にも限りがある。", "en": "Even human life has its limits.", "why": "限り is the noun 'limit' here, not the verb 限る after ないと" },
+      { "ja": "雨が降らないと、困る。", "en": "If it doesn't rain, we're in trouble.", "why": "ないと is the conditional 'if not', with no とも限らない" }
+    ],
+    "subsumes": [],
+    "confusables": ["to-wa-kagiranai", "kamoshirenai", "nai-koto-wa-nai"],
+    "detection": "Tokens: a negated predicate + と (格助詞) + も (係助詞) + 限ら (限る, 動詞-一般, 五段-ラ行, 未然形) + ない, or 限り|ませ|ん, 限ら|なかっ|た: 起こら|ない|と|も|限ら|ない, 来|ない|と|も|限ら|ない, 難しく|ない|と|も|限ら|ない. The negative before と is the auxiliary ない (終止形) after a verb, the adjective ない after く, or で + ない after a noun. Require と + も + 限る directly after ない and a negative right after 限る. Reject と|は|限ら|ない (to-wa-kagiranai, which has no first ない before と) and と|も|言え|ない. Note the sense: a negation that is not certain, so the event may well happen, and the result is positive."
+  },
+  {
+    "id": "nai-made-mo",
+    "form": "〜ないまでも",
+    "variants": [
+      "〜とは言わないまでも",
+      "〜とは言えないまでも"
+    ],
+    "meaning": "even if not (fully), at least",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "V-nai + までも",
+      "i-Adj-ku + (は)ないまでも",
+      "N + ではないまでも"
+    ],
+    "examples": [
+      { "ja": "毎日とは言わないまでも、週に一度は連絡してほしい。", "match": "言わないまでも", "en": "I don't ask for every day, but I'd like you to contact me once a week." },
+      { "ja": "優勝はできないまでも、決勝には残りたい。", "match": "できないまでも", "en": "Even if we can't win, I want us to reach the final." },
+      { "ja": "謝らないまでも、せめて挨拶くらいはするべきだ。", "match": "謝らないまでも", "en": "If he won't apologize, he should at least say hello." },
+      { "ja": "完璧とは言えないまでも、かなり良い出来だと思う。", "match": "言えないまでも", "en": "It may not be perfect, but I think it's well done." },
+      { "ja": "全部覚えないまでも、重要な単語だけは押さえておこう。", "match": "覚えないまでも", "en": "Even if you don't memorize everything, get the key words down." },
+      { "ja": "手伝わないまでも、邪魔だけはしないでくれ。", "match": "手伝わないまでも", "en": "If you won't help, at least don't get in the way." },
+      { "ja": "彼のことを好きとは言えないまでも、嫌いではない。", "match": "言えないまでも", "en": "I can't say I like him, but I don't dislike him." },
+      { "ja": "毎日続けられないまでも、できる日にやればいい。", "match": "続けられないまでも", "en": "Even if you can't keep it up every day, do it on the days you can." },
+      { "ja": "天才ではないまでも、彼の腕前はなかなかのものだ。", "match": "ではないまでも", "en": "He may not be a genius, but his skill is quite something." }
+    ],
+    "counterexamples": [
+      { "ja": "そんなことは言うまでもない。", "en": "That goes without saying.", "why": "言うまでもない is a separate entry (iu-made-mo-nai), with a positive verb before まで" },
+      { "ja": "彼は友達にまでも見放された。", "en": "He was abandoned even by his friends.", "why": "までも 'even' follows a noun and particle, with no ない before" },
+      { "ja": "夜遅くまでも勉強していた。", "en": "He was studying until late at night.", "why": "までも 'even until' follows a time word, not a negative predicate" },
+      { "ja": "彼は謝るまでもなく、許された。", "en": "He was forgiven without even needing to apologize.", "why": "謝る + までもなく is the positive-verb family of iu-made-mo-nai, with no ない before まで" }
+    ],
+    "subsumes": [],
+    "confusables": ["iu-made-mo-nai", "made-even", "made-mo-nai"],
+    "detection": "Tokens: a predicate ending in the negative ない (ない, 助動詞-ナイ, 連体形-一般) + まで (助詞-副助詞) + も (係助詞): 言わ|ない|まで|も, でき|ない|まで|も, 手伝わ|ない|まで|も. After an adjective or noun the negative is the adjective 無い (難しく|は|ない|まで|も, で|は|ない|まで|も). Require まで + も directly after a negative in 連体形, and a clause with the speaker's lower expectation after it, often せめて or くらい. Reject まで|も after a noun or particle (友達|に|まで|も), after a positive verb (言う|まで|も|ない, iu-made-mo-nai) and まで|に. A comparable earlier clause with とは言わない or とは言えない is the common frame."
+  },
+  {
+    "id": "to-ienaku-mo-nai",
+    "form": "〜と言えなくもない",
+    "variants": [
+      "〜といえなくもない",
+      "〜と言えなくはない",
+      "〜と言えなくもありません"
+    ],
+    "meaning": "one could say",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "Clause-plain + と言えなくもない",
+      "N + と言えなくもない"
+    ],
+    "examples": [
+      { "ja": "確かに、彼の言い分にも一理あると言えなくもない。", "match": "あると言えなくもない", "en": "One could say that his argument has some merit." },
+      { "ja": "この結果は、成功と言えなくもない。", "match": "成功と言えなくもない", "en": "You could call this result a success." },
+      { "ja": "見方によっては、彼の行動は正しかったと言えなくもありません。", "match": "と言えなくもありません", "en": "Depending on how you see it, you could say his action was right." },
+      { "ja": "彼女の態度は、少し冷たいと言えなくもない。", "match": "冷たいと言えなくもない", "en": "You could say her attitude is a little cold." },
+      { "ja": "この失敗が、結果的には良かったと言えなくもない。", "match": "良かったと言えなくもない", "en": "In a way, you could say this failure turned out well." },
+      { "ja": "彼は天才といえなくもない。", "match": "といえなくもない", "en": "He could be called a genius, I suppose." },
+      { "ja": "ある意味では、これも一種の愛情表現だと言えなくもないね。", "match": "だと言えなくもない", "en": "In a sense, you could say this is a kind of affection too." },
+      { "ja": "ここまで来れば、ほぼ完成したと言えなくはない。", "match": "したと言えなくはない", "en": "At this point, it's not wrong to say it's nearly finished." },
+      { "ja": "彼の主張は、理屈としては通っていると言えなくもない。", "match": "いると言えなくもない", "en": "As a matter of logic, his claim could be said to hold." }
+    ],
+    "counterexamples": [
+      { "ja": "好きだと言えなくて、黙っていた。", "en": "I couldn't say I liked her and kept silent.", "why": "言えなくて is the て-form of 'cannot say', with no も ない after なく" },
+      { "ja": "彼が勝てるとは言えない。", "en": "I can't say that he will win.", "why": "とは言えない is plain 'cannot say', with no なく + も" },
+      { "ja": "そう言えないこともない。", "en": "One could put it that way too.", "why": "ないこともない is nai-koto-wa-nai, with こと and not なく" },
+      { "ja": "彼の気持ちも分からなくもない。", "en": "I can sort of understand how he feels too.", "why": "なくもない without と言え is naku-wa-nai" }
+    ],
+    "subsumes": ["naku-wa-nai"],
+    "confusables": ["naku-wa-nai", "nai-koto-wa-nai", "to-ieru"],
+    "detection": "Tokens: a clause + と (格助詞) + 言え or いえ (言う, 動詞-一般, 下一段-ア行, 未然形-一般) + なく (ない, 助動詞-ナイ, 連用形-一般) + も or は (係助詞) + ない (無い, 形容詞-非自立可能) or あり|ませ|ん: あると|言え|なく|も|ない, 成功|と|言え|なく|も|ない, 成功|と|いえ|なく|も|ない. Require と + 言え directly before なく and the pair は/も + negative after it. The tokens 言え|なく|も|ない alone are naku-wa-nai, so this entry takes over when と directly precedes 言え. Reject 言え|なく|て (cannot say), と|は|言え|ない (to-ieru is its positive counterpart) and 言え|ない|こと|も|ない (nai-koto-wa-nai)."
+  },
+  {
+    "id": "temo-dou-ni-mo-naranai",
+    "form": "〜てもどうにもならない",
+    "variants": [
+      "〜たってどうにもならない",
+      "〜てもどうにもなりません",
+      "〜てもどうにもならなかった",
+      "〜てもどうにもなんない"
+    ],
+    "meaning": "it's no use doing",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "V-te + も + どうにもならない",
+      "V-ta + って + どうにもならない"
+    ],
+    "examples": [
+      { "ja": "今さら謝ってもどうにもならない。", "match": "謝ってもどうにもならない", "en": "Apologizing now won't change a thing." },
+      { "ja": "泣いたってどうにもならないよ。", "match": "泣いたってどうにもならない", "en": "Crying won't get you anywhere." },
+      { "ja": "いくら悔やんでもどうにもならないことだ。", "match": "悔やんでもどうにもならない", "en": "No matter how much you regret it, it can't be helped." },
+      { "ja": "彼に文句を言ってもどうにもなりません。", "match": "言ってもどうにもなりません", "en": "Complaining to him won't do any good." },
+      { "ja": "一人で悩んでもどうにもならないから、誰かに相談したほうがいい。", "match": "悩んでもどうにもならない", "en": "Worrying alone gets you nowhere, so you'd better talk to someone." },
+      { "ja": "愚痴をこぼしたってどうにもならなかった。", "match": "こぼしたってどうにもならなかった", "en": "Grumbling didn't change anything." },
+      { "ja": "今ここで焦ってもどうにもなんないでしょ。", "match": "焦ってもどうにもなんない", "en": "Panicking here and now won't help, will it?" },
+      { "ja": "過ぎたことを後悔しても、どうにもならない。", "match": "後悔しても、どうにもならない", "en": "Regretting what's past does no good." },
+      { "ja": "私一人が頑張ったって、どうにもならないんだよ。", "match": "頑張ったって、どうにもならない", "en": "Even if I alone do my best, it won't make a difference." }
+    ],
+    "counterexamples": [
+      { "ja": "この渋滞はどうにもならない。", "en": "There's nothing to be done about this traffic jam.", "why": "どうにもならない without a ても clause before it is dou-nimo-nai" },
+      { "ja": "謝ればどうにかなるかもしれない。", "en": "Maybe it will work out if I apologize.", "why": "どうにか is a positive 'somehow', with no も and no negative" },
+      { "ja": "彼を責めても意味がない。", "en": "There's no point in blaming him.", "why": "ても + 意味がない is a different 'no use' phrase, with no どうにもならない" },
+      { "ja": "この子はどうにも憎めない。", "en": "I just can't bring myself to hate this child.", "why": "どうにも + a negative potential, with no ても clause before it" }
+    ],
+    "subsumes": ["dou-nimo-nai"],
+    "confusables": ["dou-nimo-nai", "temo-hajimaranai", "temo-shou-ga-nai"],
+    "detection": "Tokens: a verb in te or ta form + も (係助詞) after て (接続助詞), or たって (たって, 接続助詞), + どう (副詞) + に (格助詞) + も (係助詞) + なら (成る, 動詞-非自立可能, 五段-ラ行, 未然形) + ない: 謝っ|て|も|どう|に|も|なら|ない, 泣い|たって|どう|に|も|なら|ない, 焦っ|て|も|どう|に|も|なん|ない (なん is 成る in 撥音便 未然形), 謝っ|て|も|どう|に|も|なり|ませ|ん. Note that でも after a nasal-sound verb is 悔やん|で(て)|も. Require a ても or たって clause in the same sentence before どうにも, and ならない (or なり|ませ|ん, なら|なかっ|た) right after. When there is no ても clause the tokens are dou-nimo-nai, and どうにか is another word. Sometimes a comma stands between the ても and どうにも."
+  },
+  {
+    "id": "te-kanawanai",
+    "form": "〜て敵わない",
+    "variants": [
+      "〜てかなわない",
+      "〜てはかなわない",
+      "〜ではかなわない",
+      "〜ちゃかなわない",
+      "〜てかなわん"
+    ],
+    "meaning": "unbearably; can't stand it if",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "i-Adj-ku + て + かなわない",
+      "na-Adj + で + かなわない",
+      "V-te + は + かなわない",
+      "N + では + かなわない"
+    ],
+    "examples": [
+      { "ja": "毎日暑くてかなわない。", "match": "暑くてかなわない", "en": "It's so hot every day I can't stand it." },
+      { "ja": "隣の工事の音がうるさくてかなわないよ。", "match": "うるさくてかなわない", "en": "The noise from the construction next door is unbearable." },
+      { "ja": "こう忙しくては敵わない。", "match": "忙しくては敵わない", "en": "I can't cope if it stays this busy." },
+      { "ja": "毎日残業ではかなわない。", "match": "ではかなわない", "en": "Overtime every day is more than I can take." },
+      { "ja": "蚊に刺されて、かゆくてかなわない。", "match": "かゆくてかなわない", "en": "I got bitten by mosquitoes and it itches unbearably." },
+      { "ja": "雨続きで洗濯物が乾かなくてかなわん。", "match": "乾かなくてかなわん", "en": "With all this rain, the laundry won't dry and it's driving me crazy." },
+      { "ja": "待たされちゃかなわないから、先に行くよ。", "match": "ちゃかなわない", "en": "I can't put up with being kept waiting, so I'm going ahead." },
+      { "ja": "毎晩夜中に電話されてはかなわない。", "match": "てはかなわない", "en": "I can't stand getting phone calls in the middle of every night." },
+      { "ja": "眠くてかなわないので、先に寝ます。", "match": "眠くてかなわない", "en": "I'm so sleepy I can't stand it, so I'm going to bed first." }
+    ],
+    "counterexamples": [
+      { "ja": "将棋では、彼には敵わない。", "en": "At shogi, I'm no match for him.", "why": "敵わない 'cannot match' follows に, not a て-form describing a state" },
+      { "ja": "夢が叶わない。", "en": "The dream does not come true.", "why": "叶う 'come true' is a different lexeme, and its kanji differs in 叶わない" },
+      { "ja": "暑くてたまらない。", "en": "It's unbearably hot.", "why": "てたまらない is the separate entry te-tamaranai" },
+      { "ja": "暑くて眠れない。", "en": "It's so hot that I can't sleep.", "why": "て + a potential negative, not かなわない" }
+    ],
+    "subsumes": [],
+    "confusables": ["te-tamaranai", "te-naranai", "te-shou-ga-nai"],
+    "detection": "Tokens: te-form or predicate + (は) + かなわ (敵う, 動詞-一般, 五段-ワア行, 未然形-一般) + ない (助動詞-ナイ) or ん (ず, 助動詞-ヌ): 暑く|て|かなわ|ない, うるさく|て|かなわ|ない, 忙しく|て|は|敵わ|ない, 毎日|残業|で|は|かなわ|ない, 乾か|なく|て|かなわ|ん, 待たさ|れ|ちゃ|かなわ|ない (ちゃ is 接続助詞, lexeme て). The kanji 敵わ and kana かなわ both give the lexeme 敵う. Require a state or situation clause with て (て/で/ちゃ), often with は, directly before かなわ. Reject に|敵わ|ない 'cannot match' (彼|に|は|敵わ|ない). Kana かなわない for 'come true' also gets 敵う (願い|が|かなわ|ない), so check the subject, and 叶う in kanji is another lexeme."
+  },
+  {
+    "id": "te-sumu-koto-de-wa-nai",
+    "form": "〜て済むことではない",
+    "variants": [
+      "〜て済む問題じゃない",
+      "〜て済む話ではない",
+      "〜て済むことじゃない",
+      "〜て済む問題ではない",
+      "〜で済むことではない"
+    ],
+    "meaning": "not something that can be settled by",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "V-te + 済むことではない",
+      "V-te + 済む問題ではない",
+      "N + で + 済むことではない"
+    ],
+    "examples": [
+      { "ja": "謝って済むことではないが、本当に申し訳なかった。", "match": "謝って済むことではない", "en": "Apologizing doesn't settle this, but I am truly sorry." },
+      { "ja": "今さら泣いて済む問題じゃない。", "match": "泣いて済む問題じゃない", "en": "It's not a matter that tears can fix now." },
+      { "ja": "嘘をついて済む話ではありません。", "match": "ついて済む話ではありません", "en": "This is not something you can get away with by lying." },
+      { "ja": "お金を払って済むことじゃないだろう。", "match": "払って済むことじゃない", "en": "Paying money doesn't settle this, does it?" },
+      { "ja": "一言「ごめん」で済むことではないと分かっている。", "match": "で済むことではない", "en": "I know a simple \"sorry\" doesn't settle it." },
+      { "ja": "「忘れていました」で済む問題ではありません。", "match": "で済む問題ではありません", "en": "\"I forgot\" does not settle the matter." },
+      { "ja": "笑って済むことではないよ、これは大事故だ。", "match": "笑って済むことではない", "en": "You can't laugh this off; it's a serious accident." },
+      { "ja": "知らなかったで済む話ではないぞ。", "match": "で済む話ではない", "en": "\"I didn't know\" won't be an excuse." },
+      { "ja": "反省して済む問題ではなく、責任を取るべきだ。", "match": "反省して済む問題ではなく", "en": "Reflecting on it isn't enough; you should take responsibility." }
+    ],
+    "counterexamples": [
+      { "ja": "謝って済んだことだ。", "en": "It was settled with an apology.", "why": "済んだ is a positive past 'was settled', with no ではない" },
+      { "ja": "薬を飲まないで済んだ。", "en": "I managed without taking the medicine.", "why": "ないで済む is zu-ni-sumu, a positive 'got by without', with no ことではない" },
+      { "ja": "電話して済む用事だった。", "en": "It was an errand that a call could settle.", "why": "て済む (te-sumu) is positive, without ではない" },
+      { "ja": "罰金では済まない問題だ。", "en": "It's a matter that a fine won't settle.", "why": "では済まない is de-wa-sumanai, with 済まない and not 済むことではない" }
+    ],
+    "subsumes": ["te-sumu"],
+    "confusables": ["te-sumu", "de-wa-sumanai", "zu-ni-sumu"],
+    "detection": "Tokens: a verb in て-form (て, 接続助詞) or a noun/quote + で (格助詞) + 済む (済む, 動詞-一般, 五段-マ行, 連体形-一般) + こと (事) or 問題 or 話 (名詞-普通名詞) + で (だ, 助動詞 連用形-一般, or 格助詞 で) + は + ない (無い, 形容詞-非自立可能) or あり|ませ|ん; じゃ for では: 謝っ|て|済む|こと|で|は|ない, 泣い|て|済む|問題|じゃ|ない, 知ら|なかっ|た|で|済む|話|で|は|ない. Require 済む directly before こと, 問題 or 話, and a negative of ではない/じゃない after it. Reject 済ん|だ|こと|だ (positive past), ない|で|済ん|だ and 済む|こと|が|ない. This takes over te-sumu when it matches. de-wa-sumanai (では|済ま|ない) and zu-ni-sumu have the negation on the verb 済む."
+  },
+  {
+    "id": "de-wa-sumanai",
+    "form": "〜では済まない",
+    "variants": [
+      "〜じゃ済まない",
+      "〜では済まされない",
+      "〜ではすまない",
+      "〜では済みません"
+    ],
+    "meaning": "won't end with just X",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "N + では + 済まない",
+      "V-ta + だけ + では + 済まない"
+    ],
+    "examples": [
+      { "ja": "謝罪だけでは済まない問題だ。", "match": "だけでは済まない", "en": "An apology alone does not settle the matter." },
+      { "ja": "この損害は罰金では済まないだろう。", "match": "では済まない", "en": "A fine won't be the end of it for this damage." },
+      { "ja": "遅刻までしたのに、一言の謝罪じゃ済まないぞ。", "match": "じゃ済まない", "en": "After being late too, a brief apology won't cut it." },
+      { "ja": "あの事故は、ちょっとした怪我では済まなかったかもしれない。", "match": "では済まなかった", "en": "That accident might not have ended with a minor injury." },
+      { "ja": "今回のミスは、始末書では済まされない。", "match": "では済まされない", "en": "This time the mistake can't be settled with a written apology." },
+      { "ja": "頭を下げただけでは済まされないと思う。", "match": "では済まされない", "en": "I think bowing your head alone won't be enough." },
+      { "ja": "部長に知られたら、叱られるだけでは済みません。", "match": "では済みません", "en": "If the manager finds out, a scolding won't be all you get." },
+      { "ja": "冗談では済まされないことを言ってしまった。", "match": "では済まされない", "en": "I said something that can't be passed off as a joke." },
+      { "ja": "弁償では済まない額の損害が出た。", "match": "では済まない", "en": "The damage came to more than compensation can cover." }
+    ],
+    "counterexamples": [
+      { "ja": "謝らずには済まない状況だった。", "en": "It was a situation where I couldn't get away without apologizing.", "why": "ずには済まない is the separate entry zu-ni-wa-sumanai, with ず and not では" },
+      { "ja": "謝って済むことではない。", "en": "An apology does not settle it.", "why": "て済む + ことではない is te-sumu-koto-de-wa-nai, with 済む affirmative" },
+      { "ja": "三日では済ませられない仕事だ。", "en": "It's a job that can't be finished in three days.", "why": "済ませる 'finish' is a transitive verb (済ま + せ + られ), not 済む" },
+      { "ja": "これで済んだと思うな。", "en": "Don't think this is the end of it.", "why": "済んだ is positive, with no では and no ない" }
+    ],
+    "subsumes": [],
+    "confusables": ["zu-ni-wa-sumanai", "te-sumu-koto-de-wa-nai", "zu-ni-sumu"],
+    "detection": "Tokens: a noun (or だけ) + で (格助詞) + は (係助詞) + 済ま (済む, 動詞-一般, 五段-マ行, 未然形-一般) + ない, or 済み|ませ|ん, or 済ま|なかっ|た. With じゃ it reads 謝罪|じゃ(で 格助詞)|済ま|ない. The passive 済まされない reads 済まさ (済ます, 五段-サ行, 未然形) + れ (れる) + ない: 頭|を|下げ|た|だけ|で|は|済まさ|れ|ない, so accept both 済む and 済ます lexemes. Guards: reject ず|に|は|済ま|ない and ない|で(だ)|は|済ま|ない (zu-ni-wa-sumanai), 済ま|せ|られ|ない (済ませる, 'finish'), and 済む|こと|で|は|ない (te-sumu-koto-de-wa-nai). The で is preceded by a noun, だけ or a quoted phrase."
+  },
+  {
+    "id": "zu-ni-wa-sumanai",
+    "form": "〜ずには済まない",
+    "variants": [
+      "〜ないでは済まない",
+      "〜ずにはすまない",
+      "〜ずには済まされない",
+      "〜ずには済みません",
+      "〜ずには済まなかった"
+    ],
+    "meaning": "cannot get away without",
+    "kind": "construction",
+    "register": "written",
+    "level": "N1",
+    "sources": {
+      "jlptsensei": "N1",
+      "bunpro": "N1",
+      "tanos": "N1",
+      "jt4y": "N1"
+    },
+    "prototype": false,
+    "connection": [
+      "V-nai-stem + ずには + 済まない",
+      "V-nai + ないでは + 済まない"
+    ],
+    "examples": [
+      { "ja": "この事件は、責任者を処分せずには済まない。", "match": "せずには済まない", "en": "This incident cannot be settled without punishing the person responsible." },
+      { "ja": "あれだけ迷惑をかけたのだから、謝らずには済まないだろう。", "match": "謝らずには済まない", "en": "After causing that much trouble, he can't get away without apologizing." },
+      { "ja": "事情を説明せずには済まされない状況だった。", "match": "せずには済まされない", "en": "It was a situation where we couldn't avoid explaining." },
+      { "ja": "約束を破ったからには、叱らずには済まない。", "match": "叱らずには済まない", "en": "Since he broke his promise, I won't let it pass without a scolding." },
+      { "ja": "あの人に借りがある以上、手を貸さずには済まない。", "match": "貸さずには済まない", "en": "Since I owe that person, I can't get out of lending a hand." },
+      { "ja": "命を賭けずには済まない戦いが始まった。", "match": "賭けずには済まない", "en": "A battle began that could not be got through without risking our lives." },
+      { "ja": "話さないでは済まないと思って、すべて打ち明けた。", "match": "話さないでは済まない", "en": "I felt I could not get by without telling, so I confessed everything." },
+      { "ja": "先生に報告せずにはすまなかった。", "match": "せずにはすまなかった", "en": "There was no way to avoid reporting it to the teacher." },
+      { "ja": "誰かが責任を取らずには済みません。", "match": "取らずには済みません", "en": "Someone has to take responsibility; it won't end otherwise." }
+    ],
+    "counterexamples": [
+      { "ja": "彼女の話を聞かずにはいられなかった。", "en": "I couldn't help listening to her story.", "why": "ずにはいられない is the separate entry zuni-wa-irarenai, with いられない and not 済まない" },
+      { "ja": "薬を飲まずに済んだ。", "en": "I managed without taking the medicine.", "why": "ずに済む is zu-ni-sumu, a positive 'got by without', with no は and no ない after 済む" },
+      { "ja": "罰金では済まない問題だ。", "en": "It's a matter that a fine won't settle.", "why": "では済まない is de-wa-sumanai, with a noun and で rather than ず" },
+      { "ja": "彼は何も言わずに帰ってしまった。", "en": "He went home without saying anything.", "why": "ず + に is zu-ni, with no 済まない" }
+    ],
+    "subsumes": ["zu-ni"],
+    "confusables": ["zu-ni-sumu", "zuni-wa-irarenai", "de-wa-sumanai", "zu-ni-wa-okanai"],
+    "detection": "Tokens: a verb in 未然形 + ず (ず, 助動詞-ヌ, 連用形-一般) + に (格助詞) + は (係助詞) + 済ま (済む, 動詞-一般, 五段-マ行, 未然形-一般) + ない (or なかっ|た, or 済み|ませ|ん): 叱ら|ず|に|は|済ま|ない, 謝ら|ず|に|は|済ま|ない. For する the verb is せ (為る, 未然形-セ): せ|ず|に|は|済ま|ない. Kana すま gives the same lexeme 済む (言わ|ず|に|は|すま|ない). The passive reads 済まさ (済ます) + れ + ない. The variant ないでは is ない (助動詞-ナイ) + で (だ, 助動詞 連用形-一般) + は + 済ま + ない: 話さ|ない|で|は|済ま|ない. Require ず|に|は (or ない|で|は) directly before 済ま. Reject ず|に|済ん|だ (zu-ni-sumu), ず|に|は|い|られ|ない (zuni-wa-irarenai) and N|で|は|済ま|ない (de-wa-sumanai), where で follows a noun and not ない."
+  }
+]
