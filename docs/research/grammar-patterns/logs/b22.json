@@ -158,7 +158,8 @@
     "verdict": "fixed",
     "changes": [
       "example 6: replaced, repeated 言おうものなら of example 3; now 触ろうもんなら covers the variant ようもんなら",
-      "detection: もん after the volitional is もの 助詞-終助詞, after a potential it is 物; both confirmed by the tokenizer"
+      "detection: もん after the volitional is もの 助詞-終助詞, after a potential it is 物; both confirmed by the tokenizer",
+      "b26 review: volitional ようものなら moved to you-mono-nara; removed its variants, connection and 4 examples, added 2 potential-verb examples, a volitional counterexample and the confusable"
     ]
   },
   {

@@ -528,33 +528,32 @@
   {
     "id": "mono-nara",
     "form": "〜ものなら",
-    "variants": ["〜もんなら", "〜ようものなら", "〜ようもんなら"],
-    "meaning": "if one could ~ / if you dare ~",
+    "variants": ["〜もんなら"],
+    "meaning": "if (it were) possible to ~ / if you think you can ~",
     "kind": "construction",
     "register": "neutral",
     "level": "N2",
     "sources": { "jlptsensei": "N2", "bunpro": "N2", "jt4y": "N2", "kanzen": "N2" },
     "prototype": false,
-    "connection": ["V-potential-dict + ものなら", "V-vol + ものなら", "V-potential-dict + もんなら", "V-vol + もんなら"],
+    "connection": ["V-potential-dict + ものなら", "V-potential-dict + もんなら"],
     "examples": [
       { "ja": "行けるものなら、今すぐ行きたい。", "match": "行けるものなら", "en": "If I could go, I would go right now." },
       { "ja": "できるものなら、あの頃に戻りたい。", "match": "できるものなら", "en": "If it were possible, I'd go back to those days." },
-      { "ja": "そんなことを言おうものなら、みんなに笑われる。", "match": "言おうものなら", "en": "If you dared say that, everyone would laugh at you." },
-      { "ja": "遅刻しようものなら、部長にひどく怒られる。", "match": "しようものなら", "en": "If you were late even once, the manager would tell you off severely." },
+      { "ja": "やれるもんなら、やってみなよ。", "match": "やれるもんなら", "en": "Go ahead and try, if you think you can." },
+      { "ja": "代われるものなら、代わってあげたいよ。", "match": "代われるものなら", "en": "If I could take your place, I would." },
       { "ja": "勝てるもんなら、勝ってみろよ。", "match": "勝てるもんなら", "en": "If you think you can win, go ahead and try." },
-      { "ja": "うちの猫は、しっぽに触ろうもんなら、すぐ噛みついてくる。", "match": "触ろうもんなら", "en": "Touch my cat's tail and she bites you right away." },
-      { "ja": "会えるものなら、もう一度会いたい。", "match": "会えるものなら", "en": "If I could meet him, I'd like to see him once more." },
-      { "ja": "部屋に勝手に入ろうものなら、すごい剣幕で怒られた。", "match": "入ろうものなら", "en": "If anyone so much as walked into the room uninvited, they were scolded furiously." }
+      { "ja": "会えるものなら、もう一度会いたい。", "match": "会えるものなら", "en": "If I could meet him, I'd like to see him once more." }
     ],
     "counterexamples": [
       { "ja": "安いものなら買ってもいい。", "en": "If it's something cheap, I'm willing to buy it.", "why": "もの is a plain 'thing' after an adjective, with なら as ordinary 'if it is'" },
       { "ja": "これが君のものなら、持って帰りなさい。", "en": "If this is yours, take it home.", "why": "の + もの is the pronoun 'one (yours)' + なら, not a potential/volitional + ものなら" },
       { "ja": "忙しかったものだから、連絡できなかった。", "en": "I was busy, so I couldn't get in touch.", "why": "ものだから is the entry mono-dakara" },
-      { "ja": "ここで見たものなら、全部覚えている。", "en": "If it is something I saw here, I remember all of it.", "why": "見た is a past-tense verb, not a potential or volitional, so もの is the plain noun 'thing'" }
+      { "ja": "ここで見たものなら、全部覚えている。", "en": "If it is something I saw here, I remember all of it.", "why": "見た is a past-tense verb, not a potential or volitional, so もの is the plain noun 'thing'" },
+      { "ja": "しっぽに触ろうものなら、すぐ噛みつかれるよ。", "en": "Touch its tail and you'll get bitten right away.", "why": "a volitional verb before ものなら is the separate entry you-mono-nara" }
     ],
     "subsumes": [],
-    "confusables": ["mono-dakara", "mono-da"],
-    "detection": "Tokens: a potential verb in 連体形 (行ける, できる, 勝てる: 下一段 potentials) or a verb in the volitional (言おう, しよう, 触ろう: 意志推量形) + もの (物, 名詞-普通名詞) or もん + なら (だ 仮定形-一般). The volitional is a single token (言おう, 遅刻|しよう). Tokenizer gap, confirmed: after the volitional, もん is tagged as lexeme もの 助詞-終助詞, not 物 (触ろう|もん|なら, とろう|もん|なら), so accept もん with either tag there; after a potential (勝てる|もん) it stays 物. Guard: the verb before もの must be a potential or a volitional, otherwise it is an ordinary 'thing' with なら (安いものなら, 君のものなら). Reject もの + だ + から (mono-dakara) and a past-tense verb + ものなら (見たものなら). Often confused with mono-dakara and mono-da."
+    "confusables": ["mono-dakara", "mono-da", "you-mono-nara"],
+    "detection": "Tokens: a potential verb in 連体形 (行ける, できる, 勝てる, やれる, 代われる: 下一段 potentials) + もの (物, 名詞-普通名詞) or もん (also 物 here: 勝てる|もん, やれる|もん) + なら (だ 仮定形-一般). A volitional verb (意志推量形) before ものなら/もんなら is the separate entry you-mono-nara, so reject it here to keep the two disjoint. Guard: the verb before もの must be a potential, otherwise it is an ordinary 'thing' with なら (安いものなら, 君のものなら). Reject もの + だ + から (mono-dakara) and a past-tense verb + ものなら (見たものなら). Often confused with mono-dakara and mono-da."
   },
   {
     "id": "monono",
