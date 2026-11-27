@@ -1,0 +1,194 @@
+[
+  {
+    "id": "nagara-mo",
+    "verdict": "fixed",
+    "changes": [
+      "connection: na-Adj-stem is not in the notation, changed to na-Adj",
+      "example 2: 狭いながら、楽しい我が家 echoes the well-known lyric 狭いながらも楽しい我が家, replaced with このカメラは小さいながら",
+      "example 7: 静かながらも、活気がある contradicts itself, replaced with シンプルながらも上品なデザイン",
+      "detection: 陰ながら is 名詞 + ながら 接続助詞 and would match, added to the exclusion list with 恥ずかしながら, 及ばずながら, 涙ながら; dropped the made-up 幸いながら",
+      "tokens: ながら (助詞-接続助詞) + も (係助詞) after 連用形, 形容詞 終止形, 形状詞 and 名詞 confirmed; 昔ながら is 乍ら 接尾辞-名詞的"
+    ]
+  },
+  {
+    "id": "amari",
+    "verdict": "fixed",
+    "changes": [
+      "connection: added na-Adj + なあまり (慎重なあまり), a common shape that was missing",
+      "example 7: replaced the fourth のあまり example with 慎重なあまり to cover the na-Adj connection",
+      "counterexample: added ご飯のあまりで, の + あまり 'leftovers' (形状詞), a real token near miss",
+      "confusables: removed ni-yotte, which is unrelated",
+      "detection: the negative-predicate guard would reject 心配するあまり、夜も眠れなかった; limited it to unattached あまり",
+      "detection: 千円のあまり is not real Japanese; replaced with 千人あまり (名詞) and ご飯のあまり (形状詞), and required 副詞 after の",
+      "tokens: の + 余り (副詞), 連体形 + 余り (副詞), 余り (形状詞) + の + N + に, あまり + に (だ 連用形-ニ) confirmed"
+    ]
+  },
+  {
+    "id": "kekka",
+    "verdict": "fixed",
+    "changes": [
+      "duplicate check: no other entry has 結果 in its form; ta-tokoro-kekka is 〜たところ, not a duplicate",
+      "example 6: 検査の結果が出る is the plain noun 'test results', moved to counterexamples and replaced with 調査の結果、新しい遺跡が見つかった",
+      "example 8: 練習を重ねた結果が、この優勝です is the plain noun, replaced with いろいろ比べた結果、結局一番安いのを買っちゃった",
+      "detection: added the guard for 結果 + が/は/を/copula (plain noun) and the 読点 or clause-start requirement",
+      "detection: ta-tokoro-kekka was described as 〜たところ、結果; it is 〜たところ with no 結果",
+      "tokens: た (タ 連体形, だ after 撥音便) + 結果 (名詞-普通名詞), の + 結果, 其の + 結果, 的 (接尾辞-形状詞的) confirmed"
+    ]
+  },
+  {
+    "id": "yori-zutto",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added the common よりもずっと",
+      "example 8: changed to 姉よりもずっと to show the よりも variant",
+      "counterexample 3: 去年より少し暑い has no ずっと and no matcher would hit it, replaced with ずっと前から (time expression)",
+      "detection: ずっと is not always directly before the predicate (私よりずっと背が高い), and 楽 is tagged 名詞-普通名詞, not 形状詞; stated both",
+      "tokens: より (格助詞) + optional も + ずっと (副詞) confirmed"
+    ]
+  },
+  {
+    "id": "mono-mon",
+    "verdict": "fixed",
+    "changes": [
+      "duplicate check: no other entry has sentence-final もの/もん (終助詞); mono-da, mono-dakara and mono-ka use the noun 物",
+      "example 2: changed 子供なんだもの to 子供だもの so the N + だもの variant is shown (んだもの is still in example 6)",
+      "detection: added the N + だ + もの token sequence",
+      "tokens: もの/もん (もの 助詞-終助詞) after 終止形, after ん (の 準体助詞) + だ, and after N + だ confirmed; もんか is 物 (名詞) + か"
+    ]
+  },
+  {
+    "id": "nanka-nante",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: なんでもいいよ tokenizes as 何 + で + も and no matcher would hit it, replaced with sentence-initial exclamatory なんてきれいな夜景なんだろう, which is the same なんて 副助詞 token",
+      "detection: added the guard for exclamatory なんて (require a noun or predicate before it)",
+      "detection: noted that nado lists なんか as its casual variant, so the なんか token is shared and only context separates them",
+      "confusables: removed darake, which is unrelated",
+      "tokens: なんか / なんて (助詞-副助詞) as single tokens confirmed; なんか 'somehow' is 何 (代名詞) + か, 何て is 何 + って"
+    ]
+  },
+  {
+    "id": "hodo",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: 身の程 is one token written in kanji and no matcher would hit it, replaced with わがままにもほどがある (程 名詞, the entry nimo-hodo-ga-aru)",
+      "confusables: added nimo-hodo-ga-aru",
+      "detection: 'or the clause stops' was wrong (ほど is followed by a predicate in most examples); noted ほどほど is one token",
+      "tokens: ほど (助詞-副助詞) after 連体形, 名詞 and number + counter confirmed; ほどなく and ほどがある are 程 (名詞-普通名詞)"
+    ]
+  },
+  {
+    "id": "sae",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample さえない (冴えない) kept: tokens tell it apart, since the token before さえ is か (副助詞) or 読点 where the particle needs a noun, で, a case particle or a verb stem; detection now states this guard",
+      "detection: 冴えない is not always さえ + ない; it is also tagged 冴える (動詞) in いつもさえない, stated both",
+      "detection: で before さえ is だ 連用形 after 子供 but で 格助詞 after 彼; stated both",
+      "counterexample 4: 鳥のさえずり is one token 囀り that no token matcher could hit, replaced with 君さえよければ (sae-ba with an adjective ば-form)",
+      "tokens: さえ (助詞-副助詞) + optional も (係助詞) confirmed"
+    ]
+  },
+  {
+    "id": "koso",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: a second こちらこそ reused the frame of example 3, replaced with 小さなことこそ、丁寧にやるべきだ",
+      "example 7: en 'for real' was a loose gloss, rewritten",
+      "tokens: こそ (助詞-係助詞) after 名詞, 代名詞 and に; からこそ, てこそ and こそが carry the same こそ token, こそこそ is one 副詞 token; detection confirmed"
+    ]
+  },
+  {
+    "id": "tte-shudai",
+    "verdict": "fixed",
+    "changes": [
+      "duplicate check: no other entry has bare topic って; to-iu-no-wa covers only ってのは / っていうのは, added it to confusables",
+      "example 4: no example showed the Clause-plain + って connection, replaced あの子って with 一人で暮らすって",
+      "example 8: en 'Boyfriends always say that' misread 彼氏ってさ, which means 'my boyfriend', rewritten",
+      "detection: って感じ after a verb is tagged つう (助動詞), not 副助詞; stated it",
+      "detection: added the clause connection and widened the sentence-final guard to all final って (hearsay and emphasis), not only after だ",
+      "tokens: って (助詞-副助詞) after 名詞, 固有名詞 + さん and 終止形; ってさ is って + さ (終助詞) confirmed"
+    ]
+  },
+  {
+    "id": "kke",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the common だったっけ; example 5 changed from なんだっけ (a second だっけ) to なんだったっけ",
+      "example 8: en 'didn't I' misread the nostalgic っけなあ, rewritten as 'I remember'",
+      "detection: added the だっ + た + っけ sequence and noted that あっけない, そっけない, ほっけ are surface near misses only",
+      "tokens: っけ (lexeme け, 助詞-終助詞) after た 終止形, だ 終止形 and でし/まし + た confirmed; あの in example 5 is misread as a filler, which does not affect the match"
+    ]
+  },
+  {
+    "id": "zutsu",
+    "verdict": "fixed",
+    "changes": [
+      "detection: づつ is tokenized with the lexeme ずつ, so the matcher should match the lexeme; noted that 一人 and 円 are not 名詞-数詞",
+      "tokens: ずつ (助詞-副助詞) after 数詞 + counter, 一人, 少し and ちょっと confirmed",
+      "counterexamples kept: ずつ is one unambiguous token, so only surface or slot near misses exist"
+    ]
+  },
+  {
+    "id": "kiri",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: 寝たきり is a lexicalized word 'bedridden', not 'since ~', replaced with 朝ご飯を食べたきり、何も食べていない",
+      "counterexample 1: もう終わりだよ、きりがないから was stiff, rewritten as 文句を言い出したらきりがない",
+      "counterexample 3: きりん is one token no matcher would hit, replaced with 使いきりのコンタクト, which UniDic mis-tags 使い (名詞) + きり (副助詞)",
+      "detection: added the 使いきり false positive and its guard, 思いっきり (one 名詞 token), and a list exclusion for 寝たきり",
+      "tokens: きり / っきり (きり 助詞-副助詞) after た 連体形, 二人, 一人 and それ confirmed; きりがない is 切り (名詞)"
+    ]
+  },
+  {
+    "id": "dake-gendo",
+    "verdict": "fixed",
+    "changes": [
+      "duplicate check: dake lists できるだけ only as a counterexample, no overlap",
+      "example 1: できるだけ早く来てください repeated the frame of a dake counterexample, replaced with できるだけ毎日歩くようにしている",
+      "connection: added i-Adj (欲しい) + だけ, used by example 8 but missing",
+      "counterexamples: added ただ一人になりたいだけなんだ (たい + limiting だけ) and 話せるだけで (dake-de), the real near misses with the same preceding forms",
+      "detection: たい was called volitional; it is desiderative. Added the guard on what follows だけ (だ/なんだ/で reject, verb or adverb accept)",
+      "confusables: added dake-de",
+      "tokens: だけ (助詞-副助詞) after 連体形 potentials, たい 連体形, 欲しい and 好き + な confirmed"
+    ]
+  },
+  {
+    "id": "tte-kyouchou",
+    "verdict": "reject",
+    "changes": [
+      "reject: sentence-final insistent って has exactly the tokens of sentence-final hearsay って (大丈夫|だ|って and 雨|だ|って, もう|行く|って！ said of a third person are both predicate + って 副助詞 + 句点), so no token rule separates them with good precision",
+      "reject: the meaning 'I'm telling you!' is the entry tteba (ってば / ったら); the bare って form adds no detectable structure",
+      "tokens: って (って 助詞-副助詞) after 終止形 and だ 終止形 confirmed in all examples"
+    ]
+  },
+  {
+    "id": "baai-ni-yotte-wa",
+    "verdict": "fixed",
+    "changes": [
+      "meaning: 'depending on the case' missed the 'in some cases, if need be' sense, rewritten",
+      "example 5: 場合によっては、手術が必要になる nearly repeated a counterexample of another entry (b07), replaced with 警察に相談したほうがいい",
+      "counterexample 2: named a nonexistent id ni-yotte-wa; it is the によっては variant of ni-yotte",
+      "confusables: removed nara-iza-shirazu and temo-nakutemo, which are unrelated",
+      "tokens: 場合 + に (格助詞) + よっ (因る 連用形-促音便) + て + は (係助詞) confirmed"
+    ]
+  },
+  {
+    "id": "sou-nimo-nai",
+    "verdict": "reject",
+    "changes": [
+      "reject: duplicate; そうにもない has the same meaning as そうにない and そうもない, and the inventory entry sou-ni-nai (batch b23) already lists 〜そうにもない as its variant",
+      "note for b23: sou-ni-nai should keep そうにもない (そう + に + も + ない) as a variant and drop そうもない, which sou-mo-nai (b12) owns; these examples can be reused there",
+      "tokens: V 連用形 + そう (そう-様態 形状詞-助動詞語幹) + に (だ 連用形-ニ) + も (係助詞) + ない (無い) / あり+ませ+ん / なかっ+た confirmed; そうにも + 見える is the same run before an affirmative verb"
+    ]
+  },
+  {
+    "id": "you-ni",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: 遅れないようにと、母は何度も言った is a reported request (you-ni-iu), not purpose; replaced with 道に迷わないようにと、兄が地図を描いてくれた",
+      "counterexample: added さっき言ったように 'as I said' (past た + ように), a real token near miss",
+      "detection: added the guards for past た + ように and for ようにと + 言う/頼む",
+      "tokens: 連体形 + よう (様 形状詞-助動詞語幹) + に (だ 連用形-ニ) + optional と (格助詞) confirmed"
+    ]
+  }
+]
