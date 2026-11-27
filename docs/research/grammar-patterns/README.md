@@ -52,6 +52,7 @@ Commit the details and logs for each batch on this branch, then tick the batch i
 | `tools/validate.mjs` | Checks the keys, counts and references of details files |
 | `tools/tokenize.mjs` | Prints the UniDic 2025.12 tokens of an entry's sentences, the match marked, and lists matches that cut a token |
 | `tools/render.mjs` | Writes a review page that shows each entry as the learner's grammar tab will |
+| `tools/split-issues.mjs` | Writes one implementation issue body per group of about 15 shipped entries of a level |
 
 ### Set up the tokenizer
 
@@ -66,6 +67,10 @@ node docs/research/grammar-patterns/tools/tokenize.mjs te-iru
 node docs/research/grammar-patterns/tools/tokenize.mjs --misaligned b01
 node docs/research/grammar-patterns/tools/tokenize.mjs --text 何してるの？
 ```
+
+## Agent prompts
+
+The `agents/` folder holds the prompts that wrote and reviewed b09 onward, and the token pass that rechecked the early reviews. `agents/NOTES.md` records which entry owns a form that several entries share, for batches not yet written. Before you reuse a prompt, change its `LINDERA` and `UNIDIC` paths to your own.
 
 ## Limits
 
