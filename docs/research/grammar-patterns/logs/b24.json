@@ -1,0 +1,225 @@
+[
+  {
+    "id": "ue-wa",
+    "verdict": "fixed",
+    "changes": [
+      "variants/connection: added 〜上からは",
+      "example 7: replaced casual 見られちゃった上は (register clash) with a 上からは example",
+      "counterexample 5: replaced unnatural 雨な上に with 道が狭い上に",
+      "detection: added the 上|から|は token sequence; token claims confirmed"
+    ]
+  },
+  {
+    "id": "jou",
+    "verdict": "fixed",
+    "changes": [
+      "variants: replaced the example words 法律上/歴史上 with the forms 〜上の/〜上は",
+      "counterexamples 2-3: replaced single-token 上司/上手 (no matcher confuses them) with spatial 画面上に and conjunction その上",
+      "confusables: removed unrelated tte-kyouchou",
+      "detection: the spatial suffix 'on' shares the 接尾辞-名詞的 tag; a stop list is needed"
+    ]
+  },
+  {
+    "id": "ijou-wa",
+    "verdict": "fixed",
+    "changes": [
+      "confusables: removed unrelated kara-ni-kakete",
+      "connection: added na-Adj + である + 以上",
+      "detection: guard for 以上 with nothing before (report opener/closer) restated; token claims confirmed"
+    ]
+  },
+  {
+    "id": "ijou-ni",
+    "verdict": "fixed",
+    "changes": [
+      "example 5: replaced unnatural 誰以上に (natives say 誰よりも) with 期待以上に",
+      "connection: removed i-Adj + 以上に (no example, rare)",
+      "detection: token claims confirmed"
+    ]
+  },
+  {
+    "id": "tsutsu-mo",
+    "verdict": "fixed",
+    "changes": [
+      "connection: removed i-Adj + つつも (つつ takes only the verb stem)",
+      "example 6: replaced marginal 分かりつつも (stative verb) with 承知しつつも",
+      "counterexample 4: replaced 知りつつ (concessive in sense, why was wrong) with つつ + adverb もう",
+      "detection: added the つつ|もう surface trap"
+    ]
+  },
+  {
+    "id": "tsutsu-aru",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added 〜つつあった (shown by example 4)",
+      "counterexample 3: replaced 机の上に本がある (no matcher confuses it) with つつ、ある (prenoun 或る)",
+      "detection: added the 或る 連体詞 guard; token claims confirmed"
+    ]
+  },
+  {
+    "id": "chittomo-nai",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: replaced 全く分からない (another word, no token overlap) with ちっとは + negative request",
+      "detection: ちっとは (ちっ|と|は) and ちっと (一寸) are not 些とも; token claims confirmed",
+      "b18 sukoshi-mo-nai: removed variant and connection ちっとも, moved its two ちっとも examples out (one kept as a counterexample), detection now rejects ちっとも, added chittomo-nai to confusables"
+    ]
+  },
+  {
+    "id": "nanimo-nai",
+    "verdict": "reject",
+    "changes": [
+      "duplicate of interrogative-mo (b02), which lists 何も〜ない as a variant with the same 何 代名詞 + も + negative tokens and the same 'nothing' meaning (an N5 point)",
+      "the N2 sense 何も〜ことはない / 何も〜なくても ('no need to go that far') is not what this entry describes; koto-wa-nai already owns 〜ことはない",
+      "token claims checked and correct"
+    ]
+  },
+  {
+    "id": "roku-ni-nai",
+    "verdict": "fixed",
+    "changes": [
+      "variants/connection: added colloquial ろくすっぽ〜ない with one example",
+      "counterexamples: replaced 少しも and 全然 (other words, no token overlap) with ろくでなし (noun 陸でなし)",
+      "counterexample 陸に: why notes it is an old spelling of ろくに",
+      "confusables: removed rejected nanimo-nai",
+      "detection: ろくすっぽ and ろくでなし tokens added; other claims confirmed"
+    ]
+  },
+  {
+    "id": "bakari-approx",
+    "verdict": "fixed",
+    "changes": [
+      "detection: removed the dubious 一人ばかり 'just one' claim; stated the real counter tags (接尾辞-名詞的 or 名詞-普通名詞 after 名詞-数詞) and that the counter must touch ばかり",
+      "counterexample 5: added 百円玉ばかり (number present, but 'only')"
+    ]
+  },
+  {
+    "id": "bakari-ka",
+    "verdict": "fixed",
+    "changes": [
+      "example 5: en was wrong ('let alone'); now 'not only ... not even'",
+      "example 3: replaced 降ったばかりか with nonpast 破るばかりか to vary forms",
+      "example 7: 怒るばかりか → 怒ったばかりか (tense clashed with the past main clause)",
+      "detection: ta-bakari must not count た + ばかり + か 副助詞"
+    ]
+  },
+  {
+    "id": "niwa-purpose",
+    "verdict": "fixed",
+    "changes": [
+      "counterexamples 4-5: replaced two more noun + には location topics (same near miss three times) with dictionary-form のには理由がある and 言うには 'according to'",
+      "confusables: added kara-niwa",
+      "detection: added guards for 言うには and fact-のには; token claims confirmed"
+    ]
+  },
+  {
+    "id": "tamae",
+    "verdict": "fixed",
+    "changes": [
+      "counterexamples 2-3: removed the made-up classical 守りたまえり and the unnatural 怒りたまうな; added た + まま as a surface near miss",
+      "detection: UniDic tags the name たまえ as 給う 命令形 too; noted the prayer use with the same tokens; other claims confirmed"
+    ]
+  },
+  {
+    "id": "te-choudai",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: replaced いただき (no ちょうだい at all) with 喜んで頂戴します, a て-form + humble 頂戴する near miss",
+      "detection: the 頂戴 + する/いたす guard applies after a て-form too; token claims confirmed"
+    ]
+  },
+  {
+    "id": "ba-to-omoimasu",
+    "verdict": "fixed",
+    "changes": [
+      "variants/connection: added the common 〜たらと思います with one example",
+      "counterexample 4: why rewritten (たらと思うと 'when I imagine'), since たらと思います is now a variant",
+      "counterexamples 2-3: en fixed",
+      "detection: たら token and the 思う + と guard added; other claims confirmed"
+    ]
+  },
+  {
+    "id": "keikou-ga-aru",
+    "verdict": "fixed",
+    "changes": [
+      "example 1: replaced この薬には眠くなる傾向がある (a drug does not 'tend'; natives say 眠くなりやすい) with 行きたがらない傾向がある",
+      "counterexample 4: replaced 恐れがある (no 傾向 token) with 傾向がある程度, which UniDic tokenizes as 有る + 程度",
+      "detection: fixed the claim that なく is a form of 有る (the negative is 無い); added the ある程度 guard"
+    ]
+  },
+  {
+    "id": "to-iu-ten-kara",
+    "verdict": "fixed",
+    "changes": [
+      "variants/connection: added 〜という点では with an example; meaning adds 'in that ~' (examples 4 and 7 use it)",
+      "counterexample 4: replaced という話 (no 点, no matcher confuses it) with という点が, which is the ten entry",
+      "detection: という点で/では/から belong here; という点が/は stay with ten (decided by batch note)",
+      "b16 ten: detection guard now hands only という点 + で/では/から to this entry and keeps という点が/は"
+    ]
+  },
+  {
+    "id": "ato-number",
+    "verdict": "fixed",
+    "changes": [
+      "kept with the tight guard from the batch note: あと + 名詞-数詞 + counter, then a predicate; あと少し and あとの + N left to vocabulary",
+      "variants/connection: removed 後の〜, あと + 少し and あとの + N",
+      "examples: removed あと少し and あとの二人, added あと二回勝てば",
+      "counterexample 6: added た + あと + 三人 ('after'), the real near miss of the guard",
+      "detection: rewritten with the real counter tags, the one-token 二人, and the 'あと must not be modified' guard; removed the 'matcher need not apply it' hedge"
+    ]
+  },
+  {
+    "id": "jaku-kyou",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 3: 弱火で十分煮る was ambiguous (UniDic and readers take 十分 as じゅうぶん 'enough'); now 十五分",
+      "counterexample 2: replaced 強い風 (duplicate of the adjective case) with 震度五強, same tokens but a scale level",
+      "detection: added the 震度 guard; token claims confirmed"
+    ]
+  },
+  {
+    "id": "te-kono-kata",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: replaced unnatural 去年の春このかた with この十年このかた (period noun + このかた); connection now N-period",
+      "example 6: en fixed (実家に帰っている is staying, not going back)",
+      "detection: kanji てこの方 comes out as て|この|方 and a matcher must accept it; token claims confirmed"
+    ]
+  },
+  {
+    "id": "mai",
+    "verdict": "fixed",
+    "changes": [
+      "examples: added 見まい and replaced 泣くまいと with 笑うまいと, so both misread shapes have a test case",
+      "example 3: en fixed ('Surely nobody knows')",
+      "detection: states the exact misread tokens (見舞い with surface 見まい; 笑 + 旨い) and the surface fallback for each; added すまい tokens; まいか stays with you-ka-mai-ka / de-wa-arumai-ka"
+    ]
+  },
+  {
+    "id": "datte",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 5: 先生だって言ってたよ was ambiguous (most natural reading is 'even the teacher said so', the pattern); replaced with 無理だって言ってた",
+      "detection: confirmed the つう tag for って (彼だって悪気は); narrowed the quotation guard; other claims confirmed",
+      "kept disjoint from n-datte (ん + だ + って), tatte (た + って) and tte-shudai"
+    ]
+  },
+  {
+    "id": "nomi",
+    "verdict": "fixed",
+    "changes": [
+      "detection: corrected the split claim (関係者のみ tokenizes as のみ; the の + み(御) split happens before some nouns, e.g. 学生|の|み|割引) and stated the fallback",
+      "example 9: added 学生のみ割引 as a test case for that split; all other examples checked as matchable のみ tokens",
+      "kept disjoint from nominarazu (のみ + なら + ず) and nomi-ka (のみ + か)"
+    ]
+  },
+  {
+    "id": "nominarazu",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: replaced non-standard 優秀なのみならず with i-Adj 狭いのみならず; connection drops na-Adj + な, adds N + である",
+      "counterexample 4: replaced ばかりでなく (no のみ token) with のみなら conditional (なら is だ 仮定形, no ず), the real near miss",
+      "detection: added the のみ + なら(だ) guard; token claims confirmed"
+    ]
+  }
+]

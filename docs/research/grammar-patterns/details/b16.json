@@ -644,7 +644,7 @@
     ],
     "subsumes": [],
     "confusables": ["to-iu-ten-kara", "teki"],
-    "detection": "The noun 点 (名詞, lexeme 点) after a demonstrative (その, この, あの), a modifying clause or adjective (ない点, 簡単+な+点), or N+の (値段の点, 安全+性+の点, いくつかの点), then で, では, が, に, も, については or a comma. Guard: reject 点 right after a number (九十点, 一点差: the score counter) and the verb 点く (点い+た, lexeme 付く). The entry is not 〜という点で (to-iu-ten-kara), which has its own id: when 点 follows という, let to-iu-ten-kara take it instead of counting both."
+    "detection": "The noun 点 (名詞, lexeme 点) after a demonstrative (その, この, あの), a modifying clause or adjective (ない点, 簡単+な+点), or N+の (値段の点, 安全+性+の点, いくつかの点), then で, では, が, に, も, については or a comma. Guard: reject 点 right after a number (九十点, 一点差: the score counter) and the verb 点く (点い+た, lexeme 付く). The entry is not 〜という点で (to-iu-ten-kara), which has its own id: when 点 follows という and is followed by で, では or から, let to-iu-ten-kara take it instead of counting both; という点が and という点は stay with this entry."
   },
   {
     "id": "nashi",

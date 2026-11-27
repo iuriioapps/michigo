@@ -2,32 +2,31 @@
   {
     "id": "sukoshi-mo-nai",
     "form": "少しも〜ない",
-    "variants": ["すこしも〜ない", "ちっとも〜ない", "少しも〜ません"],
+    "variants": ["すこしも〜ない", "少しも〜ません"],
     "meaning": "not even a little ~",
     "kind": "construction",
     "register": "neutral",
     "level": "N2",
     "sources": { "bunpro": "N4", "jlptsensei": "N2", "jt4y": "N2" },
     "prototype": false,
-    "connection": ["少しも + V-nai", "少しも + i-Adj-stem + くない", "少しも + na-Adj + じゃない", "少しも + V-masu-stem + ません", "ちっとも + V-nai"],
+    "connection": ["少しも + V-nai", "少しも + i-Adj-stem + くない", "少しも + na-Adj + じゃない", "少しも + V-masu-stem + ません"],
     "examples": [
       { "ja": "少しも疲れていないよ。", "match": "少しも疲れていない", "en": "I'm not tired at all." },
       { "ja": "彼の話は少しも面白くなかった。", "match": "少しも面白くなかった", "en": "His story wasn't the least bit interesting." },
-      { "ja": "ちっとも知らなかった。", "match": "ちっとも知らなかった", "en": "I had no idea at all." },
       { "ja": "すこしも反省していないようです。", "match": "すこしも反省していない", "en": "He doesn't seem sorry in the least." },
       { "ja": "こんな山道、少しも怖くありません。", "match": "少しも怖くありません", "en": "A mountain road like this isn't scary at all." },
-      { "ja": "ちっとも連絡が来ないんだけど。", "match": "ちっとも連絡が来ない", "en": "I haven't heard from him at all, though." },
       { "ja": "君のことなんて少しも気にしてないよ。", "match": "少しも気にしてない", "en": "I don't care about you one bit." },
       { "ja": "少しも勉強しない息子に困っている。", "match": "少しも勉強しない", "en": "I'm at a loss with my son, who never studies at all." }
     ],
     "counterexamples": [
       { "ja": "少しもらえますか。", "en": "Could I have a little?", "why": "少し + もらう (貰う); the も is part of もらえ, not the particle も" },
       { "ja": "少し休まないと倒れるよ。", "en": "You'll collapse if you don't rest a little.", "why": "少し without も; ない belongs to the ないと condition" },
-      { "ja": "少しでも早く寝ないとだめだよ。", "en": "You have to get to bed even a little earlier.", "why": "少しでも is a different phrase (even a little, as a minimum), not 少しも" }
+      { "ja": "少しでも早く寝ないとだめだよ。", "en": "You have to get to bed even a little earlier.", "why": "少しでも is a different phrase (even a little, as a minimum), not 少しも" },
+      { "ja": "ちっとも連絡が来ないんだけど。", "en": "I haven't heard from him at all, though.", "why": "ちっとも is the entry chittomo-nai, not 少し + も" }
     ],
     "subsumes": [],
-    "confusables": ["zenzen-nai", "mattaku-nai"],
-    "detection": "Tokens: 少し (少し, 副詞; すこし has the same lexeme) + も (助詞-係助詞), or ちっとも (些とも, 副詞) as one token, and later a negative in the same clause: ない (助動詞-ナイ) after a verb (疲れ|て|い|ない, 気|に|し|て|ない where て is てる 助動詞), ない (無い, 形容詞-非自立可能) after an adjective 連用形 (面白く|なかっ|た) or a noun + じゃ, or ませ + ん (ます + ず 終止形-撥音便) in the polite form (怖く|あり|ませ|ん). The 少し + も sequence must be adjacent; ちっとも is itself the adverb and needs no も token. Require a negative before the next sentence boundary and reject 少し + もらえ (貰う, a verb that starts with も), 少し + でも and a plain 少し + ない without も, which is not this pattern. Kept apart from zenzen-nai and mattaku-nai by the adverb."
+    "confusables": ["chittomo-nai", "zenzen-nai", "mattaku-nai"],
+    "detection": "Tokens: 少し (少し, 副詞; すこし has the same lexeme) + も (助詞-係助詞), and later a negative in the same clause: ない (助動詞-ナイ) after a verb (疲れ|て|い|ない, 気|に|し|て|ない where て is てる 助動詞), ない (無い, 形容詞-非自立可能) after an adjective 連用形 (面白く|なかっ|た) or a noun + じゃ, or ませ + ん (ます + ず 終止形-撥音便) in the polite form (怖く|あり|ませ|ん). The 少し + も sequence must be adjacent. Reject ちっとも (些とも, one 副詞 token), which is chittomo-nai. Require a negative before the next sentence boundary and reject 少し + もらえ (貰う, a verb that starts with も), 少し + でも and a plain 少し + ない without も, which is not this pattern. Kept apart from zenzen-nai and mattaku-nai by the adverb."
   },
   {
     "id": "ni-kagiru",
