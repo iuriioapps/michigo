@@ -9,7 +9,7 @@
     "level": "N2",
     "sources": { "jlptsensei": "N2", "bunpro": "N2", "jt4y": "N2", "kanzen": "N2" },
     "prototype": false,
-    "connection": ["V-dict + か + V-nai + ない + か + のうちに / で","V-ta + か + V-nai + ない + か + のうちに"],
+    "connection": ["V-dict + か + V-nai + かのうちに","V-dict + か + V-nai + かで","V-ta + か + V-nai + かのうちに"],
     "examples": [
       { "ja": "玄関を出るか出ないかのうちに、雨が降り出した。", "match": "出るか出ないかのうちに", "en": "I had barely stepped out the door when it started to rain." },
       { "ja": "電車に乗るか乗らないかのうちに、ドアが閉まった。", "match": "乗るか乗らないかのうちに", "en": "The doors shut the instant I got on the train." },
@@ -27,7 +27,7 @@
     ],
     "subsumes": [],
     "confusables": ["nai-uchi-ni","uchi-ni","ta-totan","ta-shunkan-ni"],
-    "detection": "The tokens are a verb (終止形, or た for the past) + か (助詞 副助詞; after a verb 言うか UniDic may tag it 終助詞) + the same verb in 未然形 + ない (助動詞 ナイ 終止形) + か (副助詞) + の (格助詞) + うち (内, 名詞) + に (格助詞), or the short form that ends in か + で (格助詞) right after the second か. A suru verb repeats as し + ない (送信 し た か し ない か), and a compound repeats whole (鳴り 終わる か 終わら ない か). Require the same lexeme on both sides of the first か. Reject か + ない + か with no のうちに or で after it (迷っている: a plain 'whether' alternative), and reject ない (連体形) + うち + に with no か before ない, which is nai-uchi-ni 'before ~ happens'. Also keep apart ta-totan and ta-shunkan-ni, which say the same thing with a single verb."
+    "detection": "The tokens are a verb (終止形, or た for the past) + か (助詞 副助詞; after 言う UniDic tags the first か 終助詞, so accept both) + the same verb in 未然形 + ない (助動詞 ナイ 終止形) + か (副助詞) + の (格助詞) + うち (内, 名詞) + に (格助詞), or the short form that ends in か + で (格助詞) right after the second か. A suru verb repeats as し + ない (送信 し た か し ない か), and a compound repeats whole (鳴り 終わる か 終わら ない か). Require the same lexeme on both sides of the first か. Reject か + ない + か with no のうちに or で after it (迷っている: a plain 'whether' alternative), and reject ない (連体形) + うち + に with no か before ない, which is nai-uchi-ni 'before ~ happens'. Also keep apart ta-totan and ta-shunkan-ni, which say the same thing with a single verb."
   },
   {
     "id": "ni-atatte",
@@ -56,7 +56,7 @@
     ],
     "subsumes": [],
     "confusables": ["ni-saishite","ni-sakidachi","ni-ataru","sai-ni"],
-    "detection": "The tokens are に (格助詞) + 当たる (動詞-一般 五段-ラ行, surface あたっ, あたり, 当たっ or 当たり) in 連用形 (あたっ, 当たっ with て 接続助詞, or あたり, 当たり with nothing after) and optionally は or の after て. The word before に is an action noun (開店, 留学, 引っ越し) or a verb in 終止形 (開く, 始める). Reject あたる in 終止形 or 連体形 (三丁目に あたる, the separate entry ni-ataru 'corresponds to') and 未然形 + ない. Literal contact has the same tokens (頭 に 当たっ て), so require an event or action noun, or a verb, before に and no physical object or person: に当たる 'vent at' takes a person (私に). Often confused with ni-saishite and ni-sakidachi, ni-sakidachi means 'before' while this one means 'on the occasion of'."
+    "detection": "The tokens are に (格助詞) + 当たる (動詞-一般 五段-ラ行, surface あたっ, あたり, 当たっ or 当たり) in 連用形 (あたっ, 当たっ with て 接続助詞, or あたり, 当たり with nothing after) and optionally は or の after て. The word before に is an action noun (開店, 留学, 引っ越し) or a verb in 終止形 (開く, 始める). Reject あたる in 終止形 or 連体形 (三丁目に あたる, the separate entry ni-ataru 'corresponds to') and 未然形 + ない. Literal contact has the same tokens (頭 に 当たっ て), so require an event or action noun, or a verb, before に and no physical object or person: に当たる 'vent at' takes a person (私に). Often confused with ni-saishite and ni-sakidachi; ni-sakidachi means 'before' while this one means 'on the occasion of'."
   },
   {
     "id": "ni-saishite",
@@ -130,7 +130,7 @@
       { "ja": "試合に先立って、選手たちが国歌を歌った。", "match": "に先立って", "en": "Before the match, the players sang the national anthem." },
       { "ja": "開会に先立ち、黙祷を捧げます。", "match": "に先立ち", "en": "Before the opening, we will observe a moment of silence." },
       { "ja": "工事の着工に先立ち、近隣住民への説明会が開かれた。", "match": "に先立ち", "en": "A briefing for the neighbors was held before construction began." },
-      { "ja": "発表するのに先立って、資料を全員に配っておいた。", "match": "に先立って", "en": "I handed the materials out to everyone before the announcement." },
+      { "ja": "発表するに先立って、資料を全員に配っておいた。", "match": "に先立って", "en": "Before giving the presentation, I handed the materials out to everyone." },
       { "ja": "決勝戦に先立つ前夜祭には、たくさんの人が集まった。", "match": "に先立つ", "en": "A lot of people came to the festival held on the eve of the final." },
       { "ja": "新店舗の開店に先立っての内覧会に、招待された。", "match": "に先立っての", "en": "I was invited to the preview event ahead of the new store's opening." },
       { "ja": "入学式に先立ち、新入生は教室で待機した。", "match": "に先立ち", "en": "Before the entrance ceremony, the new students waited in their classroom." }
@@ -142,7 +142,7 @@
     ],
     "subsumes": [],
     "confusables": ["ni-atatte","ni-saishite"],
-    "detection": "The tokens are に (格助詞) + 先立つ (動詞-一般 五段-タ行) in 連用形 (先立ち, or 先立っ + て 接続助詞, optionally followed by の or は) or 連体形 (に 先立つ + noun). The word before に is an event noun (試合, 開会, 着工) or a verb in 終止形 (発表する のに). Reject 先立た + れ (未然形 + 受身 れる, 父に先立たれて), where に marks the one who died first, and reject 先立つ without に (先立つ もの 'money'). 先に立って is 先 (名詞) + に + 立つ, not this verb, so the lexeme 先立つ is the key. Do not confuse with ni-atatte and ni-saishite, which mean 'on the occasion of' while this means 'before'."
+    "detection": "The tokens are に (格助詞) + 先立つ (動詞-一般 五段-タ行) in 連用形 (先立ち, or 先立っ + て 接続助詞, optionally followed by の or は) or 連体形 (に 先立つ + noun). The word before に is an event noun (試合, 開会, 着工) or a verb in 終止形 (発表する). Reject 先立た + れ (未然形 + 受身 れる, 父に先立たれて), where に marks the one who died first, and reject 先立つ without に (先立つ もの 'money'). 先に立って is 先 (名詞) + に + 立つ, not this verb, so the lexeme 先立つ is the key. Do not confuse with ni-atatte and ni-saishite, which mean 'on the occasion of' while this means 'before'."
   },
   {
     "id": "nimo-kakawarazu",
@@ -184,7 +184,7 @@
     "level": "N2",
     "sources": { "jlptsensei": "N2", "bunpro": "N2", "jt4y": "N2", "kanzen": "N2" },
     "prototype": false,
-    "connection": ["N + にかかわらず","V-dict + V-nai + にかかわらず","i-Adj + i-Adj-neg + にかかわらず","N + にかかわりなく"],
+    "connection": ["N + にかかわらず","V-dict + V-nai + にかかわらず","i-Adj + i-Adj-stem + くない + にかかわらず","N + にかかわりなく"],
     "examples": [
       { "ja": "年齢にかかわらず、誰でも参加できます。", "match": "にかかわらず", "en": "Anyone can take part, regardless of age." },
       { "ja": "天気に関わらず、試合は予定どおり行います。", "match": "に関わらず", "en": "The match will go ahead as scheduled, whatever the weather." },
@@ -208,13 +208,13 @@
     "id": "ni-kakawaru",
     "form": "〜にかかわる",
     "variants": ["〜に関わる","〜にかかわって","〜に関わった","〜に関わっている"],
-    "meaning": "concerning ~ / affecting ~",
+    "meaning": "affecting ~ / to do with ~ / involved in ~",
     "kind": "construction",
     "register": "written",
     "level": "N2",
     "sources": { "jlptsensei": "N2", "bunpro": "N2", "jt4y": "N2" },
     "prototype": false,
-    "connection": ["N + にかかわる","N + にかかわる + N"],
+    "connection": ["N + にかかわる","N + にかかわる + N","N + にかかわって + V"],
     "examples": [
       { "ja": "命にかかわる大けがだったが、手術は成功した。", "match": "にかかわる", "en": "It was a life-threatening injury, but the surgery was a success." },
       { "ja": "この仕事は、会社の信用に関わる大事な案件だ。", "match": "に関わる", "en": "This job is a major matter that affects the company's credibility." },
@@ -261,7 +261,7 @@
     ],
     "subsumes": [],
     "confusables": ["ni-oujite","ni-taishite","ni-motozuite"],
-    "detection": "The tokens are に (格助詞) + 応える (UniDic lexeme 答える, 動詞-一般 下一段-ア行; surface 応え, こたえ or 応える) in 連用形 + て (接続助詞), in bare 連用形 (応え), or in 連体形/た 連体形 before a noun (応える形で, 応えた成績). The lexeme 答える also covers the plain answer 質問に答えて, so the lexeme cannot tell the two apart. Prefer the kanji 応 or a noun of expectation, request or voice before に (期待, 要望, 声援, 願い), and reject a noun of a question or a call (質問, 問い) for the plain 'answer'. こたえる in 体にこたえる (堪える) has the same lexeme and no て, so reject it by the noun 体 or by 終止形. Reject に + 応じ + て (応ずる), which is the separate entry ni-oujite."
+    "detection": "The tokens are に (格助詞) + 応える (UniDic lexeme 答える, 動詞-一般 下一段-ア行; surface 応え, こたえ or 応える) in 連用形-一般 + て (接続助詞), in bare 連用形 (応え), or in 連体形 / 連用形 + た before a noun (応える形で, 応えた成績). The lexeme 答える also covers the plain answer (質問 に 答え て), the 堪える sense (体 に こたえる) and a kana reply (インタビュー に こたえ て), so the lexeme alone cannot find the pattern. Two guards give good precision: accept when the verb surface is written with 応, and accept a kana こたえ or a 答え surface only when the noun right before に is one of expectation, request or support (期待, 要望, 要求, 要請, ニーズ, 声, 声援, 願い, 信頼, 求め), which cannot be the object of a plain answer. Reject every other noun, including 質問, 問い, インタビュー and 体 or 身 (堪える). Reject に + 応じ + て (応ずる), which is the separate entry ni-oujite."
   },
   {
     "id": "ni-kuwaete",
@@ -273,7 +273,7 @@
     "level": "N2",
     "sources": { "jlptsensei": "N2", "bunpro": "N2", "jt4y": "N2" },
     "prototype": false,
-    "connection": ["N + に加えて","V-plain + の + に加えて","i-Adj + の + に加えて"],
+    "connection": ["N + に加えて","V-plain + の + に加えて","i-Adj + の + に加えて","na-Adj + な + の + に加えて"],
     "examples": [
       { "ja": "英語に加えて、中国語も話せます。", "match": "に加えて", "en": "On top of English, I can speak Chinese." },
       { "ja": "家賃に加え、光熱費も毎月かかる。", "match": "に加え", "en": "In addition to the rent, utilities cost money every month." },
@@ -289,8 +289,8 @@
       { "ja": "彼女は力を加えてドアを押した。", "en": "She pushed the door, putting force into it.", "why": "加えて is the て-form of the verb with the object 力を, and there is no に before it" }
     ],
     "subsumes": [],
-    "confusables": ["ue-ni","ni-tsuke"],
-    "detection": "The tokens are に (格助詞, or だ 連用形-ニ after a noun with a 形状詞 reading such as 強い風 / 寒さ) + 加える (動詞-一般 下一段-ア行) in 連用形 加え + て (接続助詞), bare 加え, or て + の (に加えての + noun). The variant のに加えて is 準体助詞 の + に + 加え + て after a plain verb or adjective. Reject a clause where 加える has its own を object: 水 に 塩 を 加え て and 彼 を 仲間 に 加え て use に as the goal of 加える, while the real pattern has no を object and the noun before に is the base item that something is added to. Reject 加え + て with no に (力を加えて). Confusable with ue-ni (うえに)."
+    "confusables": ["ue-ni","dake-de-naku"],
+    "detection": "The tokens are に (格助詞; after 強い風 UniDic tags it だ 連用形-ニ, so accept both) + 加える (動詞-一般 下一段-ア行) in 連用形 加え + て (接続助詞), bare 加え, or て + の (に加えての + noun). The variant のに加えて is 準体助詞 の + に + 加え + て after a plain verb or adjective. Reject a clause where 加える has its own を object: 水 に 塩 を 加え て and 彼 を 仲間 に 加え て use に as the goal of 加える, while the real pattern has no を object and the noun before に is the base item that something is added to. Reject 加え + て with no に (力を加えて). Confusable with ue-ni (うえに)."
   },
   {
     "id": "o-moto-ni",
@@ -325,7 +325,7 @@
     "id": "ni-mukatte",
     "form": "〜に向かって",
     "variants": ["〜に向けて","〜に向かい","〜に向かう","〜に向けた","〜に向かっての"],
-    "meaning": "toward ~",
+    "meaning": "toward ~ / aimed at ~",
     "kind": "construction",
     "register": "neutral",
     "level": "N2",
@@ -340,7 +340,7 @@
       { "ja": "子どもたちは先生に向かって元気よく挨拶した。", "match": "に向かって", "en": "The children greeted the teacher cheerfully." },
       { "ja": "目標に向けた準備が、ようやく整った。", "match": "に向けた", "en": "The preparations for the goal were finally in place." },
       { "ja": "駅に向かう途中で、昔の友達に会った。", "match": "に向かう", "en": "On my way to the station, I ran into an old friend." },
-      { "ja": "選手団は大会に向かい、昨日出発した。", "match": "に向かい", "en": "The team set off yesterday for the tournament." }
+      { "ja": "一行はバスで空港に向かい、そこで解散した。", "match": "に向かい", "en": "The group took a bus to the airport and split up there." }
     ],
     "counterexamples": [
       { "ja": "向かいの店でコーヒーを飲んだ。", "en": "I had a coffee at the shop across the street.", "why": "向かい is the noun 'opposite side', with no に before it" },
@@ -354,7 +354,7 @@
   {
     "id": "ni-oujite",
     "form": "〜に応じて",
-    "variants": ["〜に応じ","〜に応じた","〜に応じては","〜に応じての","〜に応じる"],
+    "variants": ["〜に応じ","〜に応じた","〜に応じての","〜に応じる"],
     "meaning": "according to ~ / in response to ~",
     "kind": "construction",
     "register": "written",
@@ -370,7 +370,7 @@
       { "ja": "天気に応じて、予定を変えるかもしれない。", "match": "に応じて", "en": "I may change the plans depending on the weather." },
       { "ja": "体力に応じた運動を続けることが大切だ。", "match": "に応じた", "en": "It's important to keep up exercise that suits your strength." },
       { "ja": "必要に応じて、資料を追加でお送りします。", "match": "に応じて", "en": "We will send additional materials if needed." },
-      { "ja": "人数に応じては、会場を変更することもあります。", "match": "に応じては", "en": "Depending on the number of people, we may change the venue." }
+      { "ja": "店は常連客の要望に応じる形で、メニューを増やした。", "match": "に応じる", "en": "The shop added to its menu in response to its regulars' requests." }
     ],
     "counterexamples": [
       { "ja": "声援に応えて、選手は手を振った。", "en": "Answering the cheers, the player waved.", "why": "に応えて is the separate entry ni-kotaete 'respond to expectations'; 応える is a different verb" },
@@ -379,7 +379,7 @@
     ],
     "subsumes": [],
     "confusables": ["ni-kotaete","ni-yotte","ni-shitagatte","ni-awasete"],
-    "detection": "The tokens are に (格助詞) + 応ずる (動詞-一般 サ行変格; surface 応じ, 連用形) followed by て (接続助詞, optionally + は), by た (連体形) before a noun, by 連体形 応じる, or by nothing (に応じ). Surface 応じ and the lexeme 応ずる are unique to this verb, so the lexeme is a safe key. Before に stands a noun of a variable thing (収入, 状況, 年齢, 必要). The same verb also gives 'respond to a request' (招待に応じて), which is the same entry. Reject に + 応え (答える), the separate entry ni-kotaete, and the suru compounds 適応/対応 + し, which only share the kanji 応. Kept apart from ni-yotte, which is によって."
+    "detection": "The tokens are に (格助詞) + 応ずる (動詞-一般 サ行変格; surface 応じ, 連用形) followed by て (接続助詞), by た (連体形) before a noun, or by nothing (に応じ). The form 応じる keeps the lexeme 応ずる but is tagged 上一段-ザ行 連体形 (要望 に 応じる 形), so do not key on the conjugation type. Surface 応じ and the lexeme 応ずる are unique to this verb, so the lexeme is a safe key. Before に stands a noun of a variable thing (収入, 状況, 年齢, 必要). The same verb also gives 'respond to a request' (招待に応じて), which is the same entry. Reject に + 応え (答える), the separate entry ni-kotaete, and the suru compounds 適応/対応 + し, which only share the kanji 応. Kept apart from ni-yotte, which is によって."
   },
   {
     "id": "ni-sotte",
@@ -473,13 +473,13 @@
     "id": "ni-tsuke",
     "form": "〜につけ",
     "variants": ["〜につけて","〜につけても","〜につけ〜につけ","〜何かにつけて"],
-    "meaning": "whenever ~",
+    "meaning": "whenever ~ / whether ~ or ~",
     "kind": "construction",
     "register": "written",
     "level": "N2",
     "sources": { "jlptsensei": "N2", "bunpro": "N2", "jt4y": "N2", "kanzen": "N2" },
     "prototype": false,
-    "connection": ["V-dict + につけ","i-Adj + につけ","何か + につけて","V-dict + につけても"],
+    "connection": ["V-dict + につけ","i-Adj + につけ","何か + につけて","V-dict + につけても","i-Adj + につけ + i-Adj + につけ","N + につけ + N + につけ"],
     "examples": [
       { "ja": "この写真を見るにつけ、あの頃の楽しさを思い出す。", "match": "につけ", "en": "Whenever I look at this photo, I remember how fun those days were." },
       { "ja": "母の苦労を思うにつけ、感謝の気持ちが深まる。", "match": "につけ", "en": "The more I think of my mother's hardships, the deeper my gratitude grows." },
@@ -497,7 +497,7 @@
     ],
     "subsumes": [],
     "confusables": ["ni-tsuki","ni-tsuite","ni-ki-o-tsukeru","ni-tsurete"],
-    "detection": "The tokens are に (格助詞) + つけ (付ける, 動詞-非自立可能 下一段-カ行 連用形) with optional て (+ も), after a verb in 終止形 (見る, 聞く, 思う), an i-adjective in 終止形, or か in 何かにつけて. In the doubled form 良いにつけ悪いにつけ both halves are the pattern, and UniDic reads the first につけ after a 連体形 i-adjective (良い, 美しい) as one noun token 煮付け, so accept that token too. Reject a を object between に and つけ (犬に首輪をつけて, ni-ki-o-tsukeru's 気をつけて), and reject 私につけておいて 'put on my tab', where a person stands before に. Kept apart from ni-tsuki (つく 連用形 つき) and ni-tsuite (つい + て), and often confused with ni-tsurete."
+    "detection": "The tokens are に (格助詞) + つけ (付ける, 動詞-非自立可能 下一段-カ行 連用形-一般) with optional て (+ も), after a verb in 終止形 (見る, 聞く, 思う, 耳にする), an i-adjective, or か in 何かにつけて. In the doubled form both halves are the pattern, but UniDic often misreads the first half: after 良い, いい, よい and 美しい (tagged 連体形) the string につけ becomes one noun token 煮付け, while 嬉しいにつけ splits normally, so a matcher must also accept a 煮付け token right after an adjective and followed by a second adjective + に + つけ. In the noun pair 雨につけ風につけ the second half comes out as だ (連用形-ニ) + つけ with the lexeme 浸ける, so accept 浸ける there too. Reject a を object between に and つけ (犬に首輪をつけて, and 気をつけて, which is ni-ki-o-tsukeru), and reject 私につけておいて 'put on my tab', where a person stands before に. Kept apart from ni-tsuki (つく 連用形 つき) and ni-tsuite (つい + て), and often confused with ni-tsurete."
   },
   {
     "id": "ni-tsuki",
@@ -513,10 +513,10 @@
     "examples": [
       { "ja": "本日は祝日につき、休業いたします。", "match": "につき", "en": "As today is a holiday, we are closed." },
       { "ja": "改装中につき、しばらく休業いたします。", "match": "につき", "en": "As we are under renovation, we will be closed for a while." },
-      { "ja": "満席につき、ご入場をお断りしております。", "match": "につき", "en": "Because we are full, we are turning away new entries." },
+      { "ja": "満席につき、ご入場をお断りしております。", "match": "につき", "en": "We are full, so we cannot let anyone else in." },
       { "ja": "参加費は一人につき千円です。", "match": "につき", "en": "The fee is 1,000 yen per person." },
       { "ja": "一回につき三十分まで利用できます。", "match": "につき", "en": "You can use it for up to 30 minutes per session." },
-      { "ja": "このクーポンは、お一人様につき一枚限り有効です。", "match": "につき", "en": "This coupon is valid for one sheet per customer." },
+      { "ja": "このクーポンは、お一人様につき一枚限り有効です。", "match": "につき", "en": "This coupon is limited to one per customer." },
       { "ja": "台風接近につき、本日の運行を見合わせます。", "match": "につき", "en": "Because a typhoon is approaching, today's service is suspended." },
       { "ja": "一日につき三錠を目安に飲んでください。", "match": "につき", "en": "Please take about three tablets a day." }
     ],
@@ -551,7 +551,7 @@
       { "ja": "数十年に渡って、その町は人々に愛されてきた。", "match": "に渡って", "en": "For decades, that town has been loved by people." }
     ],
     "counterexamples": [
-      { "ja": "橋を渡って、向こう岸へ行った。", "en": "I crossed the bridge to the opposite bank.", "why": "渡って is the plain verb 渡る 'cross', with を橋 before it and no に before 渡って" },
+      { "ja": "橋を渡って、向こう岸へ行った。", "en": "I crossed the bridge to the opposite bank.", "why": "渡って is the plain verb 渡る 'cross', with 橋を before it and no に before 渡って" },
       { "ja": "この手紙を彼に渡してくれる？", "en": "Could you hand this letter to him?", "why": "渡す is a different verb 'hand over', with に marking the recipient" },
       { "ja": "渡り鳥が日本に渡ってくる季節だ。", "en": "It's the season when migratory birds come over to Japan.", "why": "に渡る is literal 'travel across to' with a destination, not an extent over time or space" }
     ],
@@ -565,7 +565,7 @@
     "variants": ["〜にしろ","〜どちらにせよ","〜いずれにせよ","〜どっちにしろ"],
     "meaning": "even if ~ / whatever ~",
     "kind": "construction",
-    "register": "written",
+    "register": "neutral",
     "level": "N2",
     "sources": { "jlptsensei": "N2", "bunpro": "N2", "jt4y": "N2", "kanzen": "N2" },
     "prototype": false,
@@ -582,12 +582,12 @@
     ],
     "counterexamples": [
       { "ja": "行くにしろ来るにしろ、電話はしてね。", "en": "Whether you come or go, please call.", "why": "the doubled 〜にしろ〜にしろ is the separate entry ni-shiro-ni-shiro" },
-      { "ja": "全員、速やかに避難せよ。", "en": "Everyone, evacuate immediately.", "why": "せよ is the imperative of する with no に before it" },
+      { "ja": "うるさい、静かにしろ！", "en": "Shut up, keep it down!", "why": "静かにしろ is the imperative 'be quiet' (静か + に + しろ), not a concession" },
       { "ja": "この部屋を書斎にしろと言われた。", "en": "I was told to make this room a study.", "why": "にしろ is に + the imperative しろ of する 'make it a ~', with を object and a quotation と" }
     ],
     "subsumes": [],
     "confusables": ["ni-shiro-ni-shiro","ni-shite-mo","ni-shitemo-ni-shitemo","ni-shitatte"],
-    "detection": "The tokens are に (格助詞) + せよ or しろ (為る, 動詞-非自立可能 サ行変格 命令形) after a noun, a wh-word (何, どちら, どっち, いずれ) or a plain verb or adjective, with no second にせよ or にしろ in the same clause. Reject the doubled pair 行く に しろ 来る に しろ, which is ni-shiro-ni-shiro, and reject に + し + て + も (にしても, ni-shite-mo) and にしたって (ni-shitatte). Reject the real imperative: 避難 せよ has no に, and 書斎 に しろ と 言わ れ た is 'make it a ~' after a を object, so reject a を-noun + に + しろ followed by と. Confusable with ni-shitemo-ni-shitemo, which has the て + も form twice."
+    "detection": "The tokens are に (格助詞) + せよ or しろ (為る, 動詞-非自立可能 サ行変格 命令形) after a noun, a wh-word (何, どちら, どっち, いずれ) or a plain verb or adjective, with no second にせよ or にしろ in the same clause. Reject the doubled pair 行く に しろ 来る に しろ, which is ni-shiro-ni-shiro, and reject に + し + て + も (にしても, ni-shite-mo) and にしたって (ni-shitatte). Reject the real imperative: 静か に しろ ！ (に is だ 連用形-ニ after a 形状詞) and 書斎 に しろ と 言わ れ た ('make it a ~' after a を object) end the sentence or come before と / って, while the concessive にせよ is followed by a comma or a further clause. Confusable with ni-shitemo-ni-shitemo, which has the て + も form twice."
   },
   {
     "id": "ni-shiro-ni-shiro",
@@ -599,7 +599,7 @@
     "level": "N2",
     "sources": { "jlptsensei": "N2", "bunpro": "N2", "jt4y": "N2", "kanzen": "N2" },
     "prototype": false,
-    "connection": ["N + にしろ + N + にしろ","V-plain + にしろ + V-nai + にしろ","i-Adj + にしろ + i-Adj + にしろ","N + にせよ + N + にせよ"],
+    "connection": ["N + にしろ + N + にしろ","V-plain + にしろ + V-nai + にしろ","V-plain + にしろ + V-plain + にしろ","i-Adj + にしろ + i-Adj + にしろ","na-Adj + にしろ + na-Adj + にしろ","N + にせよ + N + にせよ"],
     "examples": [
       { "ja": "行くにしろ行かないにしろ、一度は連絡してください。", "match": "行くにしろ行かないにしろ", "en": "Whether you go or not, please get in touch once." },
       { "ja": "男にしろ女にしろ、約束は守るべきだ。", "match": "男にしろ女にしろ", "en": "Man or woman, you should keep your promises." },
@@ -613,11 +613,11 @@
     "counterexamples": [
       { "ja": "行くにしても行かないにしても、連絡はしてね。", "en": "Whether you go or not, do get in touch.", "why": "the doubled 〜にしても〜にしても is the separate entry ni-shitemo-ni-shitemo" },
       { "ja": "どっちにしろ、僕は行くよ。", "en": "Either way, I'm going.", "why": "a single にしろ is the entry ni-seyo, with no second にしろ" },
-      { "ja": "荷物は右にしろ、いや左にしろと、現場で指示が飛んだ。", "en": "Orders flew on site: put the load on the right, no, on the left.", "why": "each しろ is the imperative of する 'make it ~', not the concessive にしろ" }
+      { "ja": "部屋をきれいにしろ、宿題を先にしろって、母は毎日うるさい。", "en": "Clean your room, do your homework first: Mom nags me every day.", "why": "each しろ is the imperative of する after a を object, not the concessive pair" }
     ],
     "subsumes": ["ni-seyo"],
     "confusables": ["ni-seyo","ni-shitemo-ni-shitemo","ni-shite-mo"],
-    "detection": "The tokens are two clauses that each end in に (格助詞, or だ 連用形-ニ after 好き / 嫌い) + しろ or せよ (為る 命令形): X に しろ Y に しろ, X に せよ Y に せよ, or mixed. X and Y are opposed or parallel nouns, a verb and its V-nai (行く / 行か ない), or two adjectives, and the second half follows the first directly with no verb in between. The single にしろ/にせよ is ni-seyo, so require the second pair, and let this entry take precedence over ni-seyo. Reject the て + も form (行くにしても行かないにしても, ni-shitemo-ni-shitemo) and reject imperatives that follow a を object or end in と (右にしろ、いや左にしろと), where しろ is a real command."
+    "detection": "The tokens are two clauses that each end in に (格助詞, or だ 連用形-ニ after 好き / 嫌い) + しろ or せよ (為る 命令形): X に しろ Y に しろ, X に せよ Y に せよ, or mixed. X and Y are opposed or parallel nouns, a verb and its V-nai (行く / 行か ない), or two adjectives, and the second half follows the first directly with no verb in between. The single にしろ/にせよ is ni-seyo, so require the second pair, and let this entry take precedence over ni-seyo. Reject the て + も form (行くにしても行かないにしても, ni-shitemo-ni-shitemo) and reject imperatives that follow a を object or end in と / って (部屋 を きれい に しろ 、 宿題 を 先 に しろ って), where しろ is a real command."
   },
   {
     "id": "ni-shitemo-ni-shitemo",
@@ -645,9 +645,9 @@
       { "ja": "行くにしろ行かないにしろ、連絡はしてね。", "en": "Whether you go or not, do get in touch.", "why": "the doubled にしろ〜にしろ is the separate entry ni-shiro-ni-shiro" },
       { "ja": "それにしても、よく降りますね。", "en": "Even so, it really is pouring.", "why": "それにしても is a sentence-initial conjunction 'even so', not a doubled concession" }
     ],
-    "subsumes": ["ni-shite-mo"],
+    "subsumes": ["ni-shite-mo","ni-shitatte"],
     "confusables": ["ni-shite-mo","ni-shiro-ni-shiro","ni-shitatte"],
-    "detection": "The tokens are X に + し (為る 連用形) + て (接続助詞) + も (係助詞), repeated for Y: 肉 に し て も 魚 に し て も. Casual にしたって is に + し + たって (one 接続助詞 token) and also repeats. X and Y are opposed or parallel nouns, a verb with its V-nai, or two adjectives (高い, 安い), and the second half follows the first directly. Let this entry take precedence over the single ni-shite-mo. Reject a single にしても (忙しいにしても, ni-shite-mo), the にしろ pair (ni-shiro-ni-shiro), and a sentence-initial それ + に + し + て + も 'even so'."
+    "detection": "The tokens are X に + し (為る 連用形) + て (接続助詞) + も (係助詞), repeated for Y: 肉 に し て も 魚 に し て も. Casual にしたって is に + し + たって (one token, 助詞-接続助詞) and also repeats; this pair contains two ni-shitatte matches, so it subsumes ni-shitatte too. X and Y are opposed or parallel nouns, a verb with its V-nai, or two adjectives (高い, 安い), and the second half follows the first directly. Let this entry take precedence over the single ni-shite-mo and ni-shitatte. Reject a single にしても (忙しいにしても, ni-shite-mo), the にしろ pair (ni-shiro-ni-shiro), and a sentence-initial それ + に + し + て + も 'even so'."
   },
   {
     "id": "ni-shitara",
@@ -677,7 +677,7 @@
     ],
     "subsumes": [],
     "confusables": ["ni-shite-mireba","ni-totte","ni-shite-wa"],
-    "detection": "The tokens are a noun of a person or party (親, 私, 彼, 子ども, 店) or a clause ending in a noun + に (格助詞) + し (為る 連用形) + たら (た 仮定形), or に + すれ (為る 仮定形) + ば (接続助詞); the sentence then gives the person's feeling or judgment. Reject に + し + て + み + れ + ば (にしてみれば), which is the separate entry ni-shite-mireba, and reject the choice senses: a food or item noun + に + したら (カレーにしたら, 'how about'), and an adverb or adjective stem + に + すれば (簡単にすれば, where に is だ 連用形-ニ). The key is that the noun before に can hold a viewpoint, so a person, group or role is required."
+    "detection": "The tokens are a noun of a person or party (親, 私, 彼, 子ども, 店) or a clause ending in a noun + に (格助詞) + し (為る 連用形) + たら (た 仮定形), or に + すれ (為る 仮定形) + ば (接続助詞); the sentence then gives the person's feeling or judgment. Reject に + し + て + み + れ + ば or + み + たら (にしてみれば, にしてみたら), which belong to the separate entry ni-shite-mireba, and reject the choice senses: a food or item noun + に + したら (カレーにしたら, 'how about'), and an adverb or adjective stem + に + すれば (簡単にすれば, where に is だ 連用形-ニ). The key is that the noun before に can hold a viewpoint, so a person, group or role is required."
   },
   {
     "id": "o-megutte",
@@ -733,10 +733,10 @@
     "counterexamples": [
       { "ja": "事故をきっかけに、安全管理を見直した。", "en": "Prompted by the accident, we reviewed safety management.", "why": "をきっかけに is the separate entry o-kikkake-ni; 契機 is a different word" },
       { "ja": "先生を目標にして、毎日勉強している。", "en": "I study every day, aiming to be like my teacher.", "why": "を目標にして is 'make X the goal' with the noun 目標, not 契機" },
-      { "ja": "契約に反するとして、書類を却下した。", "en": "The document was rejected as violating the contract.", "why": "契約に is a different noun 契約 'contract'; only the kanji 契 is shared" }
+      { "ja": "あの事故が、町の改革の契機となった。", "en": "That accident became the trigger for reforming the town.", "why": "契機となる 'become the trigger' has the event as subject, with の and no を before 契機" }
     ],
     "subsumes": [],
     "confusables": ["o-kikkake-ni","o-toshite","ni-yotte"],
-    "detection": "The tokens are を (格助詞) + 契機 (名詞-普通名詞) + に (格助詞), or を + 契機 + と (格助詞) + し (為る 連用形) + て / た (連体形, before a noun) / する. The noun before を is an event (事故, 結婚, 転職). The noun 契機 is unique, so it is the key; reject を きっかけ に (o-kikkake-ni, a different noun), を + 目標 + に + し + て, and other nouns that only share the kanji 契 (契約). Close to o-toshite when と + し + て follows, but 契機 is required here."
+    "detection": "The tokens are を (格助詞) + 契機 (名詞-普通名詞) + に (格助詞), or を + 契機 + と (格助詞) + し (為る 連用形) + て / た (連体形, before a noun) / する. The noun before を is an event (事故, 結婚, 転職). The noun 契機 is unique, so it is the key; reject を きっかけ に (o-kikkake-ni, a different noun) and を + 目標 + に + し + て, and require を right before 契機: 改革 の 契機 と なっ た has the noun but not the pattern. Close to o-toshite when と + し + て follows, but 契機 is required here."
   }
 ]

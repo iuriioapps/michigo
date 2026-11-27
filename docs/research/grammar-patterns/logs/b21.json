@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ka-nai-ka-no-uchi-ni",
+    "verdict": "fixed",
+    "changes": [
+      "connection: V-nai already includes ない, dropped the doubled ない and split the で form into its own line",
+      "detection: the first か after 言う is tagged 終助詞 (confirmed), not 'may be'; other tokens confirmed"
+    ]
+  },
+  {
+    "id": "ni-atatte",
+    "verdict": "fixed",
+    "changes": [
+      "detection: fixed a comma splice in the confusables sentence; tokens に|当たる 連用形-促音便|て and あたり 連用形-一般 confirmed"
+    ]
+  },
+  {
+    "id": "ni-saishite",
+    "verdict": "ok",
+    "changes": [
+      "tokens に|際し (際する 動詞-一般 サ行変格 連用形-一般)|て and まし|て confirmed"
+    ]
+  },
+  {
+    "id": "sai-ni",
+    "verdict": "ok",
+    "changes": [
+      "tokens 際 名詞-普通名詞 after の or a 連体形 verb confirmed; 窓際 and 実際 are single tokens"
+    ]
+  },
+  {
+    "id": "ni-sakidachi",
+    "verdict": "fixed",
+    "changes": [
+      "example 4: 発表するのに先立って is unnatural, changed to 発表するに先立って and reworded en",
+      "detection: dropped のに from the verb example; 先立つ 動詞-一般 五段-タ行 連用形-一般/促音便 confirmed"
+    ]
+  },
+  {
+    "id": "nimo-kakawarazu",
+    "verdict": "ok",
+    "changes": [
+      "tokens に|も|関わら 未然形|ず (助動詞-ヌ 連用形) confirmed for all three spellings"
+    ]
+  },
+  {
+    "id": "ni-kakawarazu",
+    "verdict": "fixed",
+    "changes": [
+      "connection: i-Adj-neg is not in the notation, wrote i-Adj + i-Adj-stem + くない",
+      "detection: noun 関わり in 昼夜にかかわりなく and verb 関わり plus だ 連用形-ニ in 好き嫌いに関わりなく confirmed"
+    ]
+  },
+  {
+    "id": "ni-kakawaru",
+    "verdict": "fixed",
+    "changes": [
+      "meaning: added 'involved in', which four examples use",
+      "connection: added the て-form shape (教育に関わってきた) that the examples show",
+      "detection: に as だ 連用形-ニ after 安全 and the noun 関わり in the counterexample confirmed"
+    ]
+  },
+  {
+    "id": "ni-kotaete",
+    "verdict": "fixed",
+    "changes": [
+      "detection: kept the entry; a guard of 応 in the surface, or an expectation noun (期待, 要望, ニーズ, 声, 声援, 願い) before に for kana こたえ, gives good precision; checked ニーズにこたえる and インタビューにこたえて, all 答える 下一段-ア行",
+      "detection: 体にこたえる (堪える) also has the lexeme 答える, now rejected by the noun guard rather than by 'no て'"
+    ]
+  },
+  {
+    "id": "ni-kuwaete",
+    "verdict": "fixed",
+    "changes": [
+      "detection: に after 寒さ is 格助詞, only 強い風 gets だ 連用形-ニ; corrected the claim",
+      "confusables: ni-tsuke 'whenever' is not confusable, replaced with dake-de-naku",
+      "connection: added na-Adj + な + のに加えて"
+    ]
+  },
+  {
+    "id": "o-moto-ni",
+    "verdict": "ok",
+    "changes": [
+      "tokens を|もと/元 (元 名詞)|に|し|て and のもとに with lexeme 下 confirmed"
+    ]
+  },
+  {
+    "id": "ni-mukatte",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: 大会に向かい、昨日出発した has an odd order and heads for an event, replaced with 空港に向かい",
+      "meaning: added 'aimed at ~' for the に向けて / に向けた forms",
+      "tokens 向かう 五段-ワア行, 向ける 下一段-カ行 and 向く in the counterexamples confirmed"
+    ]
+  },
+  {
+    "id": "ni-oujite",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: 人数に応じては is unnatural (によっては is the natural form), replaced with 要望に応じる形で, which covers the 応じる variant",
+      "variants: dropped 〜に応じては",
+      "detection: 応じる is lexeme 応ずる but 上一段-ザ行 連体形, not サ行変格; dropped the て + は note"
+    ]
+  },
+  {
+    "id": "ni-sotte",
+    "verdict": "ok",
+    "changes": [
+      "tokens に|沿っ|て, 沿い, 沿う confirmed; 添っ also gets the lexeme 沿う as the detection says; 川沿い is one token"
+    ]
+  },
+  {
+    "id": "ni-tomonatte",
+    "verdict": "ok",
+    "changes": [
+      "tokens に|伴っ|て, 伴い, 伴う 連体形 (五段-ワア行) confirmed; につれて is 連れる"
+    ]
+  },
+  {
+    "id": "ni-hanshite",
+    "verdict": "ok",
+    "changes": [
+      "tokens に|反し (反する サ行変格)|て and 反る 五段-ラ行 in the counterexample confirmed"
+    ]
+  },
+  {
+    "id": "ni-tsuke",
+    "verdict": "fixed",
+    "changes": [
+      "detection: 煮付け misreading confirmed for 良い, いい, よい and 美しい (not for 嬉しい); a matcher must accept a 煮付け token after an adjective, so the kept 良いにつけ悪いにつけ example is matchable",
+      "detection: 雨につけ風につけ gives だ + つけ (浸ける) for the second half; noted",
+      "meaning: added 'whether ~ or ~' for the doubled form",
+      "connection: added the doubled i-Adj and N forms"
+    ]
+  },
+  {
+    "id": "ni-tsuki",
+    "verdict": "fixed",
+    "changes": [
+      "example 3 and 6: en reworded (turning away new entries, one sheet per customer)",
+      "checked: no につきまして in examples or variants, which ni-tsuite (b09) owns; tokens つく 五段-カ行 and 付く in 一日につき confirmed"
+    ]
+  },
+  {
+    "id": "ni-watatte",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 1: why said を橋, corrected to 橋を",
+      "tokens に|わたっ|て, わたり, わたる with 渡る 動詞-非自立可能 五段-ラ行 confirmed"
+    ]
+  },
+  {
+    "id": "ni-seyo",
+    "verdict": "fixed",
+    "changes": [
+      "register: written to neutral; どっちにしろ and 何にせよ are everyday speech",
+      "counterexample 2: 速やかに避難せよ has 避難 between に and せよ, so no matcher would hit it; replaced with 静かにしろ (だ 連用形-ニ + しろ 命令形)",
+      "detection: rewrote the imperative guard around sentence end and と / って; 為る サ行変格 命令形 confirmed for せよ and しろ"
+    ]
+  },
+  {
+    "id": "ni-shiro-ni-shiro",
+    "verdict": "fixed",
+    "changes": [
+      "subsumes: kept ni-seyo; the rule is exactly this case (the single にしろ / にせよ sits twice inside the pair and must not also count), and the direction is right (the longer entry subsumes the shorter)",
+      "connection: added V-plain + V-plain (勝つにせよ負けるにせよ) and na-Adj (好きにせよ嫌いにせよ), which the examples use",
+      "counterexample 3: 荷物は右にしろ is unnatural Japanese, replaced with a pair of real imperatives after を objects",
+      "detection: だ 連用形-ニ after 好き / 嫌い confirmed"
+    ]
+  },
+  {
+    "id": "ni-shitemo-ni-shitemo",
+    "verdict": "fixed",
+    "changes": [
+      "subsumes: kept ni-shite-mo (it sits twice inside the pair and must not also count) and added ni-shitatte, which the にしたって variant contains twice",
+      "detection: たって is one 助詞-接続助詞 token, confirmed"
+    ]
+  },
+  {
+    "id": "ni-shitara",
+    "verdict": "fixed",
+    "changes": [
+      "checked: only にしたら and にすれば are kept; にしてみれば stays a counterexample for ni-shite-mireba (b29)",
+      "detection: named にしてみたら with にしてみれば as ni-shite-mireba forms; tokens し|たら (た 仮定形) and すれ|ば confirmed, 簡単に is だ 連用形-ニ"
+    ]
+  },
+  {
+    "id": "o-megutte",
+    "verdict": "ok",
+    "changes": [
+      "tokens を|めぐっ|て, めぐり, めぐる 連体形 (巡る 五段-ラ行) confirmed; literal 'tour' gives the same tokens, as the detection says"
+    ]
+  },
+  {
+    "id": "o-keiki-ni",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 3: 契約に反する shares only a kanji and no matcher would hit it; replaced with 改革の契機となった, which has 契機 without を",
+      "detection: guard now requires を right before 契機; を|契機|と|し|て/た confirmed"
+    ]
+  }
+]
