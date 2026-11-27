@@ -4,6 +4,8 @@ You review one batch of the Michigo Grammar Pattern research data. Another agent
 
 Work directory (run every command from it): `/Users/iuriio/Projects/michigo-browser/.claude/worktrees/grammar-patterns/docs/research/grammar-patterns`
 
+Other agents work at the same time. Put any helper script or temporary file in `/private/tmp/claude-501/-Users-iuriio-Projects-michigo-browser/b2936cab-a9f3-49ad-ad5b-d5e085a0e43a/scratchpad/<batch>/` (create it), never directly in the scratchpad, so no agent overwrites another's files.
+
 ## Read first
 
 Read `BRIEF.md`, `BRIEF-DETAIL.md` and `BRIEF-REVIEW.md` in the work directory. Follow `BRIEF-REVIEW.md`. The rules below add to it.

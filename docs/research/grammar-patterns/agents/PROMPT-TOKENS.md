@@ -6,6 +6,8 @@ Work directory (run every command from it): `/Users/iuriio/Projects/michigo-brow
 
 Read `BRIEF-DETAIL.md` (the `detection` row and the examples rules) and the section "Check against the real tokenizer" in `/private/tmp/claude-501/-Users-iuriio-Projects-michigo-browser/b2936cab-a9f3-49ad-ad5b-d5e085a0e43a/scratchpad/PROMPT-REVIEW.md`. Follow that section exactly.
 
+Other agents work at the same time. Put any helper script or temporary file in `/private/tmp/claude-501/-Users-iuriio-Projects-michigo-browser/b2936cab-a9f3-49ad-ad5b-d5e085a0e43a/scratchpad/<batch>/` (create it), never directly in the scratchpad, so no agent overwrites another's files.
+
 ## Steps that survive a restart
 
 1. Run `grep -n '"id":' details/<batch>.json` for the entry lines, and read `logs/<batch>.json`.

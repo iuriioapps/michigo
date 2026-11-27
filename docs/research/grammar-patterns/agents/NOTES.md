@@ -5,3 +5,4 @@
 - b18: `ni-kakete-mo` (b14) shipped and owns にかけても and the oath にかけて after a closed noun set (命, 名誉, 名, 誇り, 意地, 威信, 神). If `ni-kakete-wa` keeps にかけても ("when it comes to"), its guard must exclude those nouns.
 - b28: `nashi` (b16) owns なしで, なしでは, なしの and なしだ. `nashi-ni` keeps only なしに and なしには.
 - b23: `sou-ni-nai` keeps そうにもない (sou-nimo-nai was rejected as its duplicate) and must not list そうもない, which `sou-mo-nai` (b12) owns.
+- b29: `ni-shite-mireba` owns にしてみれば and にしてみたら; `ni-shitara` (b21) keeps にしたら and にすれば.
