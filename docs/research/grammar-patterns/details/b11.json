@@ -181,7 +181,7 @@
   {
     "id": "ni-shite-mo",
     "form": "〜にしても",
-    "variants": ["〜にしたって"],
+    "variants": [],
     "meaning": "even if ~; even granting ~; even for ~",
     "kind": "construction",
     "register": "neutral",
@@ -197,7 +197,7 @@
       { "ja": "いくら安いにしても、品質が悪くては意味がない。", "match": "にしても", "en": "However cheap it is, there is no point if the quality is bad." },
       { "ja": "引っ越すにしても、来年の話になるでしょう。", "match": "にしても", "en": "Even if we move, it would be next year." },
       { "ja": "社長にしても、現場のことまでは把握していないはずだ。", "match": "にしても", "en": "Even the president probably doesn't know the details on the ground." },
-      { "ja": "謝るにしたって、言い方ってものがあるでしょ。", "match": "にしたって", "en": "Even if you're apologizing, there's a right way to say it." },
+      { "ja": "謝るにしても、言い方ってものがあるでしょ。", "match": "にしても", "en": "Even if you're apologizing, there's a right way to say it." },
       { "ja": "仕事が大変にしても、休みくらいは取りなさい。", "match": "にしても", "en": "Even if work is tough, at least take some time off." }
     ],
     "counterexamples": [
@@ -208,7 +208,7 @@
     ],
     "subsumes": [],
     "confusables": ["ni-shite-wa", "ni-seyo", "ni-shitemo-ni-shitemo", "temo"],
-    "detection": "The tokens are に + し (為る サ行変格 連用形-一般) + て (助詞-接続助詞) + も (助詞-係助詞); casual にしたって is に + し + たって (one token, 助詞-接続助詞). After a noun, verb or i-adjective the に is 助詞-格助詞, but after a na-adjective (大変, 不便) it is だ 助動詞-ダ 連用形-ニ, so accept both. A sentence-initial それ に し て も is the conjunction 'still', so reject it when それ opens the sentence. A matcher can only tell the concession from the literal する by context: reject a hit with a を object earlier in the clause (主役にしても, 半分にしても, きれいにしても), where the word before に is the result of する, and accept it when a plain clause or a noun of a person, thing or amount stands as the premise. The doubled にしてもにしても has its own entry, and にしろ and にせよ belong to ni-seyo. Confusable with the plain concessive ても (temo)."
+    "detection": "The tokens are に + し (為る サ行変格 連用形-一般) + て (助詞-接続助詞) + も (助詞-係助詞); casual にしたって (に + し + たって, one 助詞-接続助詞 token) belongs to ni-shitatte, so reject たって. After a noun, verb or i-adjective the に is 助詞-格助詞, but after a na-adjective (大変, 不便) it is だ 助動詞-ダ 連用形-ニ, so accept both. A sentence-initial それ に し て も is the conjunction 'still', so reject it when それ opens the sentence. A matcher can only tell the concession from the literal する by context: reject a hit with a を object earlier in the clause (主役にしても, 半分にしても, きれいにしても), where the word before に is the result of する, and accept it when a plain clause or a noun of a person, thing or amount stands as the premise. The doubled にしてもにしても has its own entry, and にしろ and にせよ belong to ni-seyo. Confusable with the plain concessive ても (temo)."
   },
   {
     "id": "to-ittemo",

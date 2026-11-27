@@ -1,0 +1,240 @@
+[
+  {
+    "id": "zu-ni-wa-okanai",
+    "verdict": "fixed",
+    "changes": [
+      "meaning: added the speaker's-will use (will not rest until I do) beside 'bound to cause'",
+      "example 7: replaced 噂が耳に入らずにはおかない (odd with a non-causative event verb) with 白状させずにはおかない, the will use",
+      "example 6: en 'couldn't help but' (that is ずにはいられない) → 'was bound to'",
+      "detection: described the subject and causative verb of both uses; tokens confirmed (置く 未然形, ずにおいた is 於く 動詞-一般)"
+    ]
+  },
+  {
+    "id": "zu-tomo",
+    "verdict": "fixed",
+    "changes": [
+      "meaning: added the concessive 'even if (it) does not' that example 4 shows",
+      "detection: 言わずとも is ず + とも 接続助詞 like the rest, not と + も (checked); 少なく is 形容詞 連用形, not a stem",
+      "counterexample 3: why said 'counter suffix'; と + も after a count",
+      "counterexample 4: why named 少なくとも as a fixed adverb"
+    ]
+  },
+  {
+    "id": "ni-nai",
+    "verdict": "fixed",
+    "changes": [
+      "example 1: en rewritten (it invented a 'too sad to laugh' idiom)",
+      "example 5: en 'could neither get up nor leave' → wanted to leave my seat but couldn't",
+      "example 7: replaced 高いものを借りて返すに返せない (no reason why it can't be returned) with 断るに断れない",
+      "counterexample 4: 言うことが言えない is unnatural; now 言いたいことが言えない",
+      "confusables: dropped to-iu-koto-wa and ni-suru (unrelated); added wake-ni-wa-ikanai, ni-chigainai, ni-atai-suru from the counterexamples",
+      "detection: lexeme list matches the tokens (帰る is lexeme 返る); 立てず is 立てる as claimed"
+    ]
+  },
+  {
+    "id": "you-ni-yotte-wa",
+    "verdict": "fixed",
+    "changes": [
+      "example 7: replaced 進めようによって (stiff; 進め方によって is the normal phrase) whose en added 'should succeed', with 取りようによって",
+      "detection: after a 一段 意志推量形 token に is 格助詞, not だ 連用形-ニ (checked); noted that 意志推量形 + に is safe to accept"
+    ]
+  },
+  {
+    "id": "nara-iza-shirazu",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: replaced プロ/素人 (same frame as the 子供/大人 example) with a clause before なら, 知らなかったならいざ知らず, which the connection lists but no example showed",
+      "example 5: en 'Back then maybe' was unclear; now 'It may have been different in the old days'",
+      "detection: token claims confirmed (いざ 感動詞-一般, 知る 未然形, ず 連用形)"
+    ]
+  },
+  {
+    "id": "wa-wa",
+    "verdict": "fixed",
+    "changes": [
+      "example 9: added 落とすわ、止まるわ、降られるわで for the variant 〜わ〜わ〜わ, which had no example",
+      "detection: replaced the vague 'tell them apart by whether the predicates repeat' guard with three accepted shapes (same verb twice, わで, わ + 、 + more sentence) and the rejection of わ before よ/ね/。, so feminine わ pairs like いいわ、わかったわ fail",
+      "detection: the 輪 + だ misreading of 強いわで confirmed by the tokenizer; わで is で 接続詞 elsewhere"
+    ]
+  },
+  {
+    "id": "yare-yare",
+    "verdict": "fixed",
+    "changes": [
+      "variants/connection: added やれ〜だの、やれ〜だのと and a dano-dano subsume so the two ids stay disjoint on that common combination; example 7 added for it",
+      "counterexample 4: replaced あれこれ (no やれ, no matcher would hit it) with two imperative やれ in one sentence",
+      "detection: the second やれ is 遣る 命令形 after だ + 、 too (example 6), not only after の; と after だ can be 格助詞 (checked)",
+      "examples 4 and 6: smoother en",
+      "connection: V-plain → Clause-plain (the example is a command clause)"
+    ]
+  },
+  {
+    "id": "nan-to-iu",
+    "verdict": "fixed",
+    "changes": [
+      "meaning: added the sentence-opening なんと、 'believe it or not' use, which example 2 shows and the meaning did not cover",
+      "example 7: replaced a second なんと、 (surprise) example with なんと + na-adjective (なんと見事な腕前), the exclamation the connection lists",
+      "detection: token claims confirmed (なん 何 代名詞 + と, なんて 副助詞, なん + て(って) in the question); noted a topic may precede the word"
+    ]
+  },
+  {
+    "id": "to-iu-kyouchou",
+    "verdict": "fixed",
+    "changes": [
+      "kept as its own entry: no to-iu id covers the repeated noun or 何百 shapes, and both are precise (identical noun on both sides; 何/数 numeral 名詞-数詞 before と)",
+      "example 6: replaced the odd 日本中という日本中 with 本屋という本屋",
+      "example 3: replaced a third 何十 frame with 何百人という to show a counter",
+      "example 4: 朝から…売り切れていた read stiffly; now 開店から一時間で…売り切れた",
+      "example 5: en smoother",
+      "connection/detection: named the tokens (何百 one token, 何 名詞-数詞 + 万, counter 人 接尾辞), excluded a bare numeral (3という数字) and told 何 代名詞 (nan-to-iu) apart; removed the open 'judgment call' note"
+    ]
+  },
+  {
+    "id": "to-kite-iru",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: added 手頃ときて for the variant 〜ときて, which had no example",
+      "counterexample 4: replaced a third とき (時) near miss with 友達と来ている, the literal と + 来る with identical tokens",
+      "detection: added the guard against the literal reading (kana き, a predicate or 形状詞 before と, and a listing cue after a bare noun); token claims confirmed",
+      "example 3: en no longer says 'on top of it' twice"
+    ]
+  },
+  {
+    "id": "toshita-koto-ga",
+    "verdict": "fixed",
+    "changes": [
+      "example 7: replaced 医者としたことが…無頓着だった (a habitual state; the pattern comments on a one-off blunder) with ベテランの彼としたことが…初歩的なミス",
+      "detection: added the guard for counterexample 4 (を + N + とした 'treat as', こと + が as a subject) and the comma after が; token claims confirmed"
+    ]
+  },
+  {
+    "id": "tomo-arou-mono-ga",
+    "verdict": "fixed",
+    "changes": [
+      "example 4: replaced 警察官…飲酒運転をするとは許されない (〜とは許されない is off) with プロともあろう選手が, showing a noun other than 者/人",
+      "example 8: added 社長ともあろう人に, ともあろう with a particle other than が; connection widened to match",
+      "subsumes: dropped tomo; tomo needs the single とも 接続助詞 token and rejects と + も, which is what this pattern has (checked), so they never overlap",
+      "detection: stated that disjointness; token claims confirmed"
+    ]
+  },
+  {
+    "id": "tomo-naku",
+    "verdict": "fixed",
+    "changes": [
+      "meaning: added the wh-word use (some ... or other) that four examples show",
+      "detection: 考えるともなしに tokenizes as 連体形 + 共 (名詞) + 無し + に, not と + も (checked); matcher must accept that split",
+      "subsumes: dropped tomo; tomo needs the single とも 接続助詞 token and itself rejects ともなく",
+      "example 7: en said 'us' for 二人は; now 'the two of them'"
+    ]
+  },
+  {
+    "id": "tomo-tomo",
+    "verdict": "fixed",
+    "changes": [
+      "detection: うれしいとも is one とも 接続助詞 token and 家族とも is 共 接尾辞 (checked); the matcher must accept those splits as well as と + も",
+      "meaning: 'can't tell whether X or Y' instead of the misleading 'neither X nor Y'",
+      "examples 3 and 4: en rewritten (noun-for-noun glosses)",
+      "counterexample 3: why said 'counter suffix'"
+    ]
+  },
+  {
+    "id": "to-iwazu",
+    "verdict": "fixed",
+    "changes": [
+      "meaning: the old line ('not only X or Y but everywhere') did not cover the time use (昼といわず夜といわず); rewritten",
+      "connection: added the wh-word + といわず shape that two examples show",
+      "detection: a single といわず counts only after a wh-word; after one ordinary noun it is literal",
+      "counterexample 2: replaced 何も言わず (no と, no matcher would hit) with 友達と言わず, a single noun + と言わず"
+    ]
+  },
+  {
+    "id": "to-shitatte",
+    "verdict": "fixed",
+    "changes": [
+      "detection: added the guard that a predicate or だ must precede と (a bare noun + としたって is the 'even for X' sense), mirroring toshitemo's ownership rule; checked that toshitemo (b20) owns としても and lists no たって form, so both sides agree",
+      "example 2: en clearer",
+      "tokens confirmed: たって is one 接続助詞 token; としたところで is し + た + ところ + で"
+    ]
+  },
+  {
+    "id": "ni-shitatte",
+    "verdict": "fixed",
+    "changes": [
+      "connection: added V-dict + にしたって, the 'even if' sense the meaning names but no example showed; example 2 replaced (先生, same frame as プロ) with 引っ越すにしたって",
+      "example 1: en 'Even he didn't mean any harm' → 'He didn't mean any harm either'",
+      "detection: checked ni-shitemo-ni-shitemo (b21) subsumes ni-shitatte and lists the paired form, so they agree; found ni-shite-mo (b11) still lists 〜にしたって as a variant, a double count, noted in detection (b11 not edited)",
+      "tokens confirmed: たって one 接続助詞 token"
+    ]
+  },
+  {
+    "id": "ni-shite-mireba",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: replaced にしたって (another entry, no matcher would confuse it) with the literal 短めにしてみれば？, which has the same tokens",
+      "detection: added the guard for the literal reading (person noun, に 格助詞 not だ 連用形-ニ, no を object); にすれば is すれ + ば, not する + ば",
+      "checked ni-shitara (b21): it keeps にしたら/にすれば and rejects にしてみれば/にしてみたら, so both sides agree"
+    ]
+  },
+  {
+    "id": "ni-iwasereba",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 3: replaced にしてみれば (no token overlap) with the literal causative 本人に言わせればいい, which has the same tokens",
+      "detection: added the guard against the literal causative (いい/済む right after, a quoted or を object)",
+      "example 1: 私の部屋は部屋ではない was odd; now ただの物置",
+      "example 6: en rewritten (it said the master would be 'a cat')"
+    ]
+  },
+  {
+    "id": "ni-kakatte-iru",
+    "verdict": "fixed",
+    "changes": [
+      "detection: the noun guard named the wrong slot (成否, 勝敗 are the topic, not the noun before に) and was not precise; rewrote it as an outcome-topic or かどうか requirement plus a reject list (disease, trap, doctor, place, が-subject)",
+      "counterexample 3: replaced 鍵がかかっている (が, not に) with 医者にかかっている, a same-token literal use",
+      "tokens confirmed: 掛かる 連用形-促音便 + て + いる / てる"
+    ]
+  },
+  {
+    "id": "ni-kakatte-wa",
+    "verdict": "fixed",
+    "changes": [
+      "detection: 'a capable person or thing' was not a usable guard; now a person noun is required and illness, trap, place, doctor/hospital and a が-subject are rejected, with the どんな〜も / など cue",
+      "counterexample 5: added 医者にかかれば (a person noun with the literal 'see a doctor' sense), the case the old guard would have accepted",
+      "tokens confirmed for all four forms (て + は, かかれ + ば, かかっ + たら, かかる + と)"
+    ]
+  },
+  {
+    "id": "ni-kamakete",
+    "verdict": "fixed",
+    "changes": [
+      "detection: 遊び before に is 遊ぶ 動詞 連用形, so the slot before に must not require a 名詞 tag (checked); かまける lexeme confirmed",
+      "example 5: en 'contacted my parents' home' rewritten"
+    ]
+  },
+  {
+    "id": "ni-kagitta-koto-de-wa-nai",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the common 〜に限った話ではない; example 4 now shows it and detection accepts 話 after 限っ + た",
+      "example 5: en 'isn't just for today' rewritten",
+      "checked disjointness: ni-kagiru (限る 終止形 / 限り + ます), ni-kagitte (限っ + て, rejects 限っ + た) and ni-kagirazu (限ら + ず) all exclude this run"
+    ]
+  },
+  {
+    "id": "ni-wa-muri-ga-aru",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: replaced この計画に無理がある (same meaning, only は missing, so not a real 'different structure') with 彼には無理を言ってしまった, には + 無理 + を",
+      "detection: the noun slot was misdescribed (計画 is the topic in the examples, the verb before には is the usual slot); added the past あっ + た",
+      "tokens confirmed: 無理 名詞-普通名詞 + が + 有る"
+    ]
+  },
+  {
+    "id": "ni-wa-oyobanai",
+    "verdict": "fixed",
+    "changes": [
+      "example 9: added 師匠には及ばず for the variant 〜には及ばず, which had no example",
+      "detection: 及ばず must not be followed by ながら (the humble 及ばずながら); tokens confirmed (及ぶ 未然形 + ない, 及び + ませ + ん)"
+    ]
+  }
+]
