@@ -96,7 +96,7 @@
     "id": "kedo",
     "form": "〜けど",
     "variants": ["〜けれど", "〜けれども", "〜だけど", "〜けども"],
-    "meaning": "but ~ / although ~",
+    "meaning": "but ~ / although ~; at the end, softens a statement left open",
     "kind": "construction",
     "register": "spoken",
     "level": "N5",
@@ -178,7 +178,7 @@
     ],
     "subsumes": [],
     "confusables": ["no-darou-ka", "darou-to-omou", "kamoshirenai", "janai-ka", "kana"],
-    "detection": "でしょう is です in 意志推量形 (でしょ) plus the auxiliary う; だろう is だ in 意志推量形 (だろ) plus う. Casual でしょ/だろ drop the う, often with a rising question mark. Tell it from ましょう by the lexeme: ましょう is ます + う. Longer entries take precedence: のだろうか/んでしょうか (no-darou-ka) and だろうと思う (darou-to-omou). Repeated だろうと…だろうと or だろうが…だろうが is concessive; guard against と or が right after だろう when the frame repeats."
+    "detection": "UniDic writes でしょう as one token, です in 意志推量形, and だろう as だ in 意志推量形; the う belongs to the form (as in 行こう), not to a separate auxiliary. Casual でしょ/だろ drop the う and may come out as the same 意志推量形 or as 未然形 (?); test both. Tell it from ましょう by the lexeme: ましょう is ます in 意志推量形. Longer entries take precedence: のだろうか/んでしょうか (no-darou-ka) and だろうと思う (darou-to-omou). Repeated だろうと…だろうと or だろうが…だろうが is concessive; guard against と or が right after だろう when the frame repeats."
   },
   {
     "id": "tai",
@@ -236,19 +236,19 @@
     ],
     "subsumes": [],
     "confusables": ["o-kudasai", "naide-kudasai", "sasete-kudasai", "te-request", "te-itadakemasen-ka", "nasai"],
-    "detection": "V-te (て/で, 助詞 接続助詞) followed by 下さる (動詞 非自立可能) in 命令形 ください, optionally + ませ + ん + か. The surface ください also occurs in 連用形 before ます (くださいました), which states a kind act; check the conjugation form, or that no ます follows. ないで + ください (naide-kudasai) and させて + ください (sasete-kudasai) take precedence. N + を + ください, with no て, is o-kudasai."
+    "detection": "V-te (て/で, 助詞 接続助詞) followed by 下さる (動詞 非自立可能) in 命令形 ください, or in 連用形 ください + ませ + ん + か for the polite question. The 連用形 ください before ます/ました (くださいました) states a kind act; accept a following ます only in the ませんか frame. ないで + ください (naide-kudasai) and させて + ください (sasete-kudasai) take precedence. N + を + ください, with no て, is o-kudasai."
   },
   {
     "id": "ga-aru",
     "form": "〜がある",
-    "variants": ["〜があります", "〜はある", "〜もある"],
+    "variants": ["〜があります", "〜はある", "〜もある", "〜がない"],
     "meaning": "there is ~ / to have ~ (things, events)",
     "kind": "construction",
     "register": "neutral",
     "level": "N5",
     "sources": { "jlptsensei": "N5", "bunpro": "N5", "marumori": "N5", "jt4y": "N5", "tanos": "N5" },
     "prototype": false,
-    "connection": ["N + がある", "N + はある", "N + もある"],
+    "connection": ["N + がある", "N + はある", "N + もある", "N + がない"],
     "examples": [
       { "ja": "明日、数学のテストがある。", "match": "テストがある", "en": "I have a math test tomorrow." },
       { "ja": "すみません、質問があります。", "match": "質問があります", "en": "Excuse me, I have a question." },
@@ -256,17 +256,19 @@
       { "ja": "駅の近くに大きな本屋があるよ。", "match": "本屋がある", "en": "There's a big bookstore near the station." },
       { "ja": "冷蔵庫にプリンもあるよ。", "match": "プリンもある", "en": "There's pudding in the fridge too." },
       { "ja": "何か問題があったら、すぐ言ってね。", "match": "問題があった", "en": "If there's any problem, tell me right away." },
-      { "ja": "彼には不思議な魅力がある。", "match": "魅力がある", "en": "He has a strange kind of charm." }
+      { "ja": "彼には不思議な魅力がある。", "match": "魅力がある", "en": "He has a strange kind of charm." },
+      { "ja": "今月はお金がないから、外食はやめとく。", "match": "お金がない", "en": "I'm short on money this month, so I'll skip eating out." }
     ],
     "counterexamples": [
       { "ja": "一度だけ京都に行ったことがある。", "en": "I've been to Kyoto just once.", "why": "たことがある is the experience entry ta-koto-ga-aru" },
       { "ja": "もっと練習する必要がある。", "en": "I need to practice more.", "why": "必要がある is the entry hitsuyou-ga-aru 'need to'" },
       { "ja": "机の上に手紙が置いてある。", "en": "A letter has been left on the desk.", "why": "ある is the auxiliary of てある (te-aru); が marks the subject of 置いて" },
-      { "ja": "庭に犬がいる。", "en": "There's a dog in the yard.", "why": "animate beings take いる (ga-iru), not ある" }
+      { "ja": "庭に犬がいる。", "en": "There's a dog in the yard.", "why": "animate beings take いる (ga-iru), not ある" },
+      { "ja": "確かに便利ではあるけど、高すぎる。", "en": "Sure, it's convenient, but it's too expensive.", "why": "ではある is the copula である split by は, not existence" }
     ],
     "subsumes": [],
     "confusables": ["ga-iru", "ta-koto-ga-aru", "koto-ga-aru", "hitsuyou-ga-aru", "te-aru"],
-    "detection": "A noun (or noun phrase) marked by が, は or も, followed by 有る (動詞) in any inflection. Allow an adverb between the particle and ある (まだ, いっぱい, 少し). Guards: ある right after て/で is te-aru; こと after た + が + ある is ta-koto-ga-aru; こと after a dictionary form is koto-ga-aru; 必要 + が + ある is hitsuyou-ga-aru. Those and other fixed N + がある entries (可能性がある, 恐れがある, 傾向がある) take precedence. Do not confuse with いる for people and animals (ga-iru)."
+    "detection": "A noun (or noun phrase) marked by が, は or も, followed by 有る (動詞) in any inflection. The plain negative ない is the adjective 無い (形容詞) in UniDic, not a form of 有る, so match N + が/は/も + 無い as well; ありません stays 有る + ます + ん. Allow an adverb between the particle and ある (まだ, いっぱい, 少し). Guards: the particle must follow a noun directly, because で + は + ある (便利ではある) and く + は + ある (高くはある) are the copula or an adjective split by は; ある right after て/で is te-aru; こと after た + が + ある is ta-koto-ga-aru; こと after a dictionary form is koto-ga-aru; 必要 + が + ある is hitsuyou-ga-aru. Those and other fixed N + がある entries (可能性がある, 恐れがある, 傾向がある) take precedence. Do not confuse with いる for people and animals (ga-iru)."
   },
   {
     "id": "ga-iru",
@@ -327,7 +329,7 @@
   {
     "id": "mashou",
     "form": "〜ましょう",
-    "variants": [],
+    "variants": ["〜ましょ"],
     "meaning": "let's do ~",
     "kind": "construction",
     "register": "neutral",
@@ -341,7 +343,8 @@
       { "ja": "ちょっと休みましょうよ。", "match": "休みましょう", "en": "Come on, let's take a break." },
       { "ja": "ゴミは分別して出しましょう。", "match": "出しましょう", "en": "Please sort your trash before putting it out." },
       { "ja": "早く帰りましょうって言ったのに、誰も聞かなかった。", "match": "帰りましょう", "en": "I said we should go home early, but nobody listened." },
-      { "ja": "じゃあ、駅で待ち合わせしましょうね。", "match": "しましょう", "en": "So let's meet at the station, okay?" }
+      { "ja": "じゃあ、駅で待ち合わせしましょうね。", "match": "しましょう", "en": "So let's meet at the station, okay?" },
+      { "ja": "もう遅いし、そろそろ帰りましょ。", "match": "帰りましょ", "en": "It's getting late, so let's head home." }
     ],
     "counterexamples": [
       { "ja": "その荷物、持ちましょうか。", "en": "Shall I carry that bag for you?", "why": "ましょうか is the offer entry mashou-ka" },
@@ -350,7 +353,7 @@
     ],
     "subsumes": [],
     "confusables": ["mashou-ka", "masen-ka", "deshou-darou"],
-    "detection": "ます in 意志推量形 (ましょ) followed by the auxiliary う, right after a verb in 連用形. Do not match when the 終助詞 か follows: that is mashou-ka, a separate entry. Do not match ましょう after でござい (でございましょう), which is a polite guess. Tell it from でしょう (です + う) by the lexeme ます."
+    "detection": "ます in 意志推量形, one token ましょう in UniDic (the う is part of the form), right after a verb in 連用形. Casual ましょ may come out as the same form or as ます 未然形 (?); test both. Do not match when the 終助詞 か follows: that is mashou-ka, a separate entry. Do not match ましょう after でござい (でございましょう), which is a polite guess. Tell it from でしょう (です in 意志推量形) by the lexeme ます."
   },
   {
     "id": "te-mo-ii",
@@ -676,6 +679,6 @@
     ],
     "subsumes": ["mashou"],
     "confusables": ["mashou", "masen-ka", "kana"],
-    "detection": "ます in 意志推量形 (ましょ) + う + 終助詞 か, or a plain verb in 意志推量形 + う/よう + か. Guards: か must end the sentence or come before a quote (と, って); か + な (かな) is the speaker musing (kana), and ようか followed by a verb such as 迷う or 考える is an embedded question. でしょうか is です + う + か, not ます. When this matches, mashou must not also count."
+    "detection": "ます in 意志推量形 (one token ましょう in UniDic) + 終助詞 か, or a plain verb in 意志推量形 (行こう, 始めよう, しよう; one token, with the う/よう inside the form (?)) + か. Guards: か must end the sentence or come before a quote (と, って); か + な (かな) is the speaker musing (kana), and ようか followed by a verb such as 迷う or 考える is an embedded question. でしょうか is です in 意志推量形 + か, not ます. When this matches, mashou must not also count."
   }
 ]
