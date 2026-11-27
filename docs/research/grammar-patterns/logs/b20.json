@@ -1,0 +1,222 @@
+[
+  {
+    "id": "to-iu-mono-da",
+    "verdict": "fixed",
+    "changes": [
+      "example 4: 悔しいというものです was odd (というものだ marks a natural judgment, not a feeling), replaced with もったいないというものです",
+      "counterexample 2: dropped the stray comma in 医者というものは忙しい",
+      "detection: stated the real って split (副助詞 after a noun, つう after いい), でしょ as です 意志推量形, もったいない as 勿体 + 無い; added じゃない to the guard so to-iu-mono-dewa-nai stays disjoint",
+      "tokens: と|いう(言う)|もの(物)|だ/です and って|もん(物)|だ/でしょ confirmed in all examples"
+    ]
+  },
+  {
+    "id": "to-iu-mono-dewa-nai",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: 何でも食べるというものだ was not a natural sentence, replaced with 黙って人の物を使うのは、失礼というものだ",
+      "detection: ありません is 有る + ます + ず (助動詞-ヌ 撥音便), not ぬ",
+      "tokens: で(だ)|は|ない, で(格助詞)|も|ない, じゃ(だ 連用形-融合)|ない and って(つう)|もん confirmed"
+    ]
+  },
+  {
+    "id": "to-iu-koto-wa",
+    "verdict": "fixed",
+    "changes": [
+      "register: spoken to neutral, ということは is common in writing too; ってことは is the spoken variant",
+      "example 1: en reworded",
+      "detection: って is つう 助動詞 in every example, also sentence-initial ってことは; a matcher should still accept 副助詞 って",
+      "tokens: と|いう(言う)|こと(事)|は and って|こと|は confirmed"
+    ]
+  },
+  {
+    "id": "fuu-ni",
+    "verdict": "fixed",
+    "changes": [
+      "connection: dropped N + の + ふうに (not natural), added こんな/そんな/あんな/どんな + ふうに, the most common one, and na-Adj + な + ふうに",
+      "example 2: 怒っているふうな顔 was stiff, replaced with どんなふうな人がタイプなの",
+      "example 5: 何事もなかったような風に doubled よう and ふう, replaced with そういう風に考えたことはなかった",
+      "counterexample 3: 封に shares no token with the pattern, replaced with 風になって (wind)",
+      "detection: に after 風 is だ 連用形-ニ both in the pattern and in 風になって, so its POS is not a guard; the guard is the token before 風",
+      "tokens: ふう/風(風 名詞)|に(だ 連用形-ニ) and ふう|な(だ 連体形) confirmed"
+    ]
+  },
+  {
+    "id": "to-itta",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 3: 今日は水泳といったところだ was unnatural, replaced with 五分五分といったところだ",
+      "example 7: en reworded",
+      "tokens: と|いっ(言う 連用形-促音便)|た(連体形) + noun, and といったような with よう(様)|な(だ) confirmed; これといった is 此れ|と|いっ|た"
+    ]
+  },
+  {
+    "id": "to-kangaerareru",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added 〜と考えられていた, which example 8 shows",
+      "detection: stated the real tokens, 考え 未然形 + られる 助動詞-レル, and いる as 居る"
+    ]
+  },
+  {
+    "id": "toka-hearsay",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: added 見るとかしよう, とか after a clause as an example softener before する",
+      "detection: removed the nonword どうにかとか, named the する and toka-toka guards, noted the てる misreading in 言ってました"
+    ]
+  },
+  {
+    "id": "tokoro-ni",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: 山の上のところに was unnatural, replaced with 駅を出たところに交番がある, a literal place with the same tokens as the pattern",
+      "detection: stated the tokens, the place reading after V-ta and its existence-verb hint; confirmed ところを is rejected by the に/へ guard (tokoro-o stays disjoint)"
+    ]
+  },
+  {
+    "id": "tokoro-o-miru-to",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 5: added the literal habitual 料理しているところを見ると、いつも感心する, which shares every token with the pattern",
+      "detection: stated that only the guessing main clause separates the literal reading; tokens ところ(所)|を|見る/みる(見る 終止形)|と(接続助詞) confirmed"
+    ]
+  },
+  {
+    "id": "toshitemo",
+    "verdict": "fixed",
+    "changes": [
+      "connection: dropped Clause-plain + だとしても (だ does not follow a verb clause)",
+      "counterexample 2: 買おうとしても、お金がない was illogical, replaced with 何度思い出そうとしても、名前が出てこない",
+      "detection: ownership stated, this entry takes と|し|て|も only after a predicate or だ; noun + としても stays with toshite",
+      "b09 toshite (edited for the batch note): variants gained 〜としても, example 9 女優としても added, detection now rejects と|し|て|も only after a predicate or だ and names the toshite-wa and toshite-nai shapes it rejects"
+    ]
+  },
+  {
+    "id": "toshite-wa",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added the polite 〜としましては; example 6 replaced with 弊社としましては",
+      "counterexample 2: やめてを繰り返した was ungrammatical, replaced with 言おうとしては、黙り込んだ",
+      "detection: added と|し|まし|て|は; ownership stated, noun + として + は is owned here and toshite already rejects it",
+      "tokens: と|し(為る)|て|は and と|し|ちゃ(て) confirmed"
+    ]
+  },
+  {
+    "id": "toshite-nai",
+    "verdict": "fixed",
+    "changes": [
+      "example 3: 同じ日は一日としてない made the tokenizer read て as てる + ない; replaced with the more natural 一日として同じ日はない",
+      "detection: noted the てる misreading of としてない, added 何一つとして, stated that toshite rejects this shape",
+      "tokens: 一人/誰|一人/一|日/度/晩/つ + と|し|て confirmed"
+    ]
+  },
+  {
+    "id": "tomo",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: 早くとも来月にならなければ stacked two limits awkwardly, replaced with 結果が出るのは、早くとも来月になります",
+      "detection: とも is 助詞-接続助詞 (lexeme とも), the same token in ますとも and ずとも, so those guards rest on the token before"
+    ]
+  },
+  {
+    "id": "mo-kamawazu",
+    "verdict": "fixed",
+    "changes": [
+      "connection: dropped V-dict + の, already covered by V-plain + の",
+      "tokens: も|構わ/かまわ(構う 未然形)|ず(連用形) confirmed; お構いなく is 構い(名詞) + 無く"
+    ]
+  },
+  {
+    "id": "mo-ba-mo",
+    "verdict": "fixed",
+    "changes": [
+      "connection: N + も + na-Adj + であれば was wrong; replaced with i-Adj-ku + もあれば〜もある and na-Adj + でもあれば〜でもある",
+      "variants: added 〜もあれば〜もある, which example 4 shows",
+      "detection: stated that the required ば token keeps mo-nara-mo-da (なら, no ば) disjoint; tokens confirmed"
+    ]
+  },
+  {
+    "id": "wa-moto-yori",
+    "verdict": "fixed",
+    "changes": [
+      "examples 4 and 5: en used 'let alone' and 'never mind' in positive sentences, reworded",
+      "counterexample 4: 若者はもとい、老人も参加できる was not a real sentence, replaced with 危険なことはもとより承知している (は + adverb もとより, same tokens)",
+      "detection: 元より spelling gives the same token, lexeme 固より; tokens は|もとより(固より 副詞) confirmed"
+    ]
+  },
+  {
+    "id": "wa-tomokaku",
+    "verdict": "ok",
+    "changes": [
+      "tokens: は|ともかく(兎も角 副詞) and はともかく|と|し|て confirmed; ともに is とも(共 名詞)|に; disjoint from nara-tomokaku through は against なら(だ 仮定形)"
+    ]
+  },
+  {
+    "id": "nara-tomokaku",
+    "verdict": "fixed",
+    "changes": [
+      "variants: dropped 〜ならいいけど, an ordinary conditional + けど and no concession (それならいいけど); its two examples replaced by 暇ならともかく and removed",
+      "connection: dropped ならいいけど, added na-Adj + ならともかく",
+      "counterexample 3: replaced with それならいいけど、本当に大丈夫？ to mark ならいいけど as not this entry",
+      "detection: rewritten for the dropped variant; tokens なら(だ 仮定形)|ともかく(兎も角) confirmed"
+    ]
+  },
+  {
+    "id": "nara-madashimo",
+    "verdict": "fixed",
+    "changes": [
+      "example 5: 本当にそう言ったのだ gave no worse case to contrast, replaced with わざと無視するのはひどい",
+      "detection: しも is 助詞-副助詞; stated that requiring しも/いい after まだ keeps nara-tomokaku (dropped ならともかく) disjoint; tokens confirmed"
+    ]
+  },
+  {
+    "id": "yara-yara",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: お菓子やらを買ってきた was stiff, replaced with お菓子やらジュースを買ってきた",
+      "detection: で after the second やら confirmed as だ 連用形; やらせて is 遣る 未然形; やら 助詞-副助詞 confirmed"
+    ]
+  },
+  {
+    "id": "yori-hoka-nai",
+    "verdict": "fixed",
+    "changes": [
+      "confusables: added shika-nai",
+      "tokens: より(格助詞)|ほか(他)|(は)|ない(無い), より|仕方|が|ない and より|しかたない(仕方無い, one token) confirmed"
+    ]
+  },
+  {
+    "id": "you-dewa",
+    "verdict": "fixed",
+    "changes": [
+      "connection: added i-Adj + ようでは, which example 4 (つらいようでは) shows",
+      "detection: ようじゃ gives じゃ as 助動詞-ジャ with lexeme じゃ; よう(様)|で(だ)|は confirmed; the よう(様) token keeps it disjoint from you-dewa-nai-ka"
+    ]
+  },
+  {
+    "id": "you-dewa-nai-ka",
+    "verdict": "fixed",
+    "changes": [
+      "register: written to neutral, the じゃないか form is everyday speech",
+      "counterexample 1: あの人は日本人のようではないか was stiff, replaced with まるで夢のようではないか",
+      "detection: で is 格助詞 after some volitional verbs and だ after others; stated that no 意志推量形 token in 約束したではないか keeps the reproach out"
+    ]
+  },
+  {
+    "id": "you-ka-mai-ka",
+    "verdict": "fixed",
+    "changes": [
+      "detection: まい is 助動詞-マイ and each か comes out as 副助詞 or 終助詞, so a matcher must accept both; tokens confirmed in every example"
+    ]
+  },
+  {
+    "id": "no-dewa-nai-darou-ka",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added 〜のではないでしょうか, which two examples show",
+      "counterexample 4 (約束したではないか): kept, the tokenizer gives し|た|で(格助詞)|は|ない|か with no の/ん, so it does not share the pattern's tokens; why reworded as a reproach",
+      "detection: the claim that the reproach has the same tokens was wrong; guard stated: require の/ん after a predicate and allow bare ではないか only after a noun; で after a noun is tagged 格助詞",
+      "tokens: の|で(だ)|は|ない|だろう/でしょう|か and ん|じゃ(だ 融合)|ない|か|な confirmed"
+    ]
+  }
+]

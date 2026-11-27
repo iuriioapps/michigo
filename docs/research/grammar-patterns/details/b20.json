@@ -14,7 +14,7 @@
       { "ja": "失敗して初めて分かることもある。それが経験というものだ。", "match": "というものだ", "en": "Some things you only understand after failing. That's what experience is." },
       { "ja": "約束した以上、守るのが大人というものだよ。", "match": "というものだ", "en": "Once you've promised, keeping your word is what being an adult means." },
       { "ja": "たまには休むのも仕事のうちってもんだよ。", "match": "ってもんだ", "en": "Taking a break now and then is part of the job, you know." },
-      { "ja": "あれだけ頑張って落ちたら、悔しいというものです。", "match": "というものです", "en": "After working that hard, it's only natural to be frustrated when you fail." },
+      { "ja": "一度の失敗で全部諦めるのは、もったいないというものです。", "match": "というものです", "en": "Giving up on everything after one failure is simply a waste." },
       { "ja": "毎日同じ道を歩くのも、慣れてしまえば楽というものだ。", "match": "というものだ", "en": "Even walking the same road every day is just easy once you get used to it." },
       { "ja": "ここは素直にお礼を言っておくのが筋ってもんでしょ。", "match": "ってもんでしょ", "en": "The proper thing here is to just say thanks, right?" },
       { "ja": "これが青春というもの！", "match": "というもの", "en": "This is what youth is all about!" },
@@ -22,13 +22,13 @@
     ],
     "counterexamples": [
       { "ja": "人生はそういうものだ。", "en": "That's how life is.", "why": "そういう is the adverb そう + 言う 'to be so', with no quotative と" },
-      { "ja": "医者というものは、忙しい。", "en": "Doctors are busy people.", "why": "というもの is followed by the topic は, 'such a thing as a doctor', not a sentence-final judgment" },
+      { "ja": "医者というものは忙しい。", "en": "Doctors are busy people.", "why": "というもの is followed by the topic は, 'such a thing as a doctor', not a sentence-final judgment" },
       { "ja": "この一年というもの、休みなく働いた。", "en": "For this whole past year I worked without a day off.", "why": "というもの after a period of time is the separate entry to-iu-mono" },
       { "ja": "高ければいいというものではない。", "en": "Being expensive doesn't make it good.", "why": "というものではない is the separate entry to-iu-mono-dewa-nai" }
     ],
     "subsumes": [],
     "confusables": ["to-iu-mono", "to-iu-mono-dewa-nai", "to-iu-wake-da", "to-iu"],
-    "detection": "Tokens: と(格助詞) + いう(言う, 連体形) + もの(物) + だ/です (助動詞) or a sentence end, or the contracted って + もん + だ/です/でしょ. After a noun or plain predicate, って is 副助詞 (lexeme って, 筋ってもん) and after a verb or adjective it can be the 助動詞 つう (連体形); accept both before もん/もの. Guards: the token before と is a noun or clause, not そう/こう/ああ (そういうものだ is そう + 言う); the token after もの is だ/です/でしょう/だろう, a sentence-final particle or the end, not は/を/が/の/で+は/で+も+ない, because というものは/というものの and というものではない are different. Do not match after a time expression (この一年というもの, entry to-iu-mono) and leave というものではない/ってもんじゃない to to-iu-mono-dewa-nai."
+    "detection": "Tokens: と(格助詞) + いう(言う 連体形) + もの(物 名詞) + だ/です (助動詞, でしょ is です 意志推量形) or a sentence end, or the contracted って + もん(物) + だ/です/でしょ. After a noun (うちってもん, 筋ってもん) the tokenizer gives って 副助詞 (lexeme って); after a verb or adjective (いいってもん) it gives the 助動詞 つう (連体形); accept both before もん/もの. 楽/失礼 before と are 名詞, and もったいない splits into もったい(勿体) + ない(無い). Guards: the token before と is a noun or clause, not そう/こう/ああ (そういうものだ is そう + 言う); the token after もの is だ/です/でしょう/だろう, a sentence-final particle or the end, not は/を/が/の/で+は/で+も/じゃ(だ 連用形-融合) + ない, because というものは/というものの and というものではない are different. Do not match after a time expression (この一年というもの, entry to-iu-mono) and leave というものではない/ってもんじゃない to to-iu-mono-dewa-nai."
   },
   {
     "id": "to-iu-mono-dewa-nai",
@@ -55,11 +55,11 @@
       { "ja": "そういうものではないと思う。", "en": "I don't think it's like that.", "why": "そういう is そう + 言う 'to be so', not the quotative と + いう" },
       { "ja": "これは私のものではない。", "en": "This is not mine.", "why": "もの here is the nominal 'one that is mine' after の, with no というもの or ってもん before it" },
       { "ja": "安いというものの、実際は高かった。", "en": "It was supposedly cheap, but in fact it was expensive.", "why": "というものの is the conjunction 'although', not というもの + ではない" },
-      { "ja": "何でも食べるというものだ。", "en": "That's what eating anything means.", "why": "というものだ without ない is the separate entry to-iu-mono-da" }
+      { "ja": "黙って人の物を使うのは、失礼というものだ。", "en": "Using someone's things without asking is just rude.", "why": "というものだ without ない is the separate entry to-iu-mono-da" }
     ],
     "subsumes": ["to-iu-mono-da"],
     "confusables": ["to-iu-mono-da", "to-iu-wake-de-wa-nai", "to-wa-kagiranai", "to-iu-mono"],
-    "detection": "Tokens: と(格助詞) + いう(言う) + もの(物) + then either で(だ 連用形 助動詞, in では/じゃ) + は + ない(無い), or で(格助詞) + も(係助詞) + ない(無い), or ありません (有る + ます + ぬ); the contracted form is って(つう 助動詞 連体形) + もん(物) + じゃ(だ 連用形-融合)/で+も + ない. Note で is the copula after では but 格助詞 in でも. Before と there is usually a conditional or a bare clause (高ければいい, 勝てばいい), but any plain clause or noun is allowed. Guards: そういうものではない is そう + 言う and not this; 私のものではない has の before もの; というものの is a conjunction. Where this matches, to-iu-mono-da must not count, and to-iu-wake-de-wa-nai (というわけではない) is a different noun."
+    "detection": "Tokens: と(格助詞) + いう(言う) + もの(物) + then either で(だ 連用形 助動詞, in では/じゃ) + は + ない(無い), or で(格助詞) + も(係助詞) + ない(無い), or あり(有る) + ませ(ます) + ん(ず 助動詞 撥音便) in ではありません; the contracted form is って(つう 助動詞 連体形) + もん(物) + じゃ(だ 連用形-融合)/で+も + ない. Note で is the copula after では but 格助詞 in でも. Before と there is usually a conditional or a bare clause (高ければいい, 勝てばいい), but any plain clause or noun is allowed. Guards: そういうものではない is そう + 言う and not this; 私のものではない has の before もの; というものの is a conjunction. Where this matches, to-iu-mono-da must not count, and to-iu-wake-de-wa-nai (というわけではない) is a different noun."
   },
   {
     "id": "to-iu-koto-wa",
@@ -67,13 +67,13 @@
     "variants": ["〜ってことは"],
     "meaning": "that means ~ / so ~",
     "kind": "construction",
-    "register": "spoken",
+    "register": "neutral",
     "level": "N2",
     "sources": { "jlptsensei": "N2", "bunpro": "N2", "jt4y": "N2" },
     "prototype": false,
     "connection": ["Clause-plain + ということは", "N + ということは", "Clause-plain + ってことは"],
     "examples": [
-      { "ja": "ということは、犯人はまだ中にいるのか。", "match": "ということは", "en": "Which means the culprit is still inside?" },
+      { "ja": "ということは、犯人はまだ中にいるのか。", "match": "ということは", "en": "So that means the culprit is still inside?" },
       { "ja": "今日は来ないってことは、まだ怒ってるのかな。", "match": "ってことは", "en": "If he's not coming today, does that mean he's still angry?" },
       { "ja": "明日が休みということは、今夜は夜更かししてもいいわけだ。", "match": "ということは", "en": "Tomorrow is a day off, so I can stay up late tonight." },
       { "ja": "ってことは、もう結婚してるってこと？", "match": "ってことは", "en": "So does that mean you're already married?" },
@@ -90,7 +90,7 @@
     ],
     "subsumes": ["to-iu-koto", "to-iu"],
     "confusables": ["to-iu-koto", "to-iu", "to-iu-wake-da"],
-    "detection": "Tokens: と(格助詞) + いう(言う 連体形) + こと(事) + は(係助詞), or って(つう 助動詞 連体形, or 副助詞 after a noun) + こと(事) + は, often followed by a comma and a conclusion; sentence-initial ということは/ってことは is common. There is no one-token ってことは, so match the three tokens. Guards: reject ということだ (hearsay, entry to-iu), そういうこと (そう + 言う), ってことが/を/に (to-iu-koto), and treat ということは as a plain topic of a nominalized clause when no conclusion follows the comma; that last distinction cannot be made from tokens alone, so a matcher may only use the comma-plus-conclusion shape as a hint. Longer than to-iu-koto and to-iu, so this entry wins when は follows."
+    "detection": "Tokens: と(格助詞) + いう(言う 連体形) + こと(事) + は(係助詞), or って + こと(事) + は; the tokenizer gives って as つう(助動詞 連体形) in every example, also sentence-initially and after ない/てる, but accept 副助詞 って too, often followed by a comma and a conclusion; sentence-initial ということは/ってことは is common. There is no one-token ってことは, so match the three tokens. Guards: reject ということだ (hearsay, entry to-iu), そういうこと (そう + 言う), ってことが/を/に (to-iu-koto), and treat ということは as a plain topic of a nominalized clause when no conclusion follows the comma; that last distinction cannot be made from tokens alone, so a matcher may only use the comma-plus-conclusion shape as a hint. Longer than to-iu-koto and to-iu, so this entry wins when は follows."
   },
   {
     "id": "fuu-ni",
@@ -102,13 +102,13 @@
     "level": "N2",
     "sources": { "jlptsensei": "N2", "bunpro": "N2", "jt4y": "N2" },
     "prototype": false,
-    "connection": ["V-plain + ふうに", "N + の + ふうに", "i-Adj + ふうに", "Clause-plain + というふうに", "V-plain + ふうな"],
+    "connection": ["V-plain + ふうに", "こんな/そんな/あんな/どんな + ふうに", "na-Adj + な + ふうに", "i-Adj + ふうに", "Clause-plain + というふうに", "V-plain + ふうな"],
     "examples": [
       { "ja": "そんなふうに言わないでよ。", "match": "ふうに", "en": "Don't talk like that." },
-      { "ja": "彼は怒っているふうな顔をしていた。", "match": "ふうな", "en": "He had a look on his face as if he were angry." },
+      { "ja": "どんなふうな人がタイプなの？", "match": "ふうな", "en": "What kind of person is your type?" },
       { "ja": "誰が悪いというふうには考えたくない。", "match": "というふうに", "en": "I don't want to think of it as a matter of who's to blame." },
       { "ja": "好きなふうにやっていいよ。", "match": "ふうに", "en": "You can do it however you like." },
-      { "ja": "彼女は何事もなかったような風に笑ってみせた。", "match": "風に", "en": "She smiled as if nothing had happened." },
+      { "ja": "そういう風に考えたことはなかった。", "match": "風に", "en": "I'd never thought of it that way." },
       { "ja": "どんなふうに見えますか。", "match": "ふうに", "en": "How does it look to you?" },
       { "ja": "こんなふうに、毎日楽しく暮らせたらいいな。", "match": "ふうに", "en": "I wish I could live happily every day like this." },
       { "ja": "上司には、遅れたのは私のせいというふうに言われた。", "match": "というふうに", "en": "My boss put it as if the delay was my fault." }
@@ -116,11 +116,11 @@
     "counterexamples": [
       { "ja": "冷たい風に吹かれながら歩いた。", "en": "I walked, blown by the cold wind.", "why": "風 here is 'wind' (かぜ), not the manner word ふう" },
       { "ja": "彼のように歩いてみた。", "en": "I tried walking like him.", "why": "ように is the comparison ようだ, a different word from ふうに" },
-      { "ja": "手紙の封に印を押した。", "en": "I stamped the seal of the letter.", "why": "封 (ふう) is 'seal', followed by the particle に" }
+      { "ja": "風になって空を飛びたい。", "en": "I want to become the wind and fly through the sky.", "why": "風 is かぜ 'wind', the subject of なる; nothing before it sets up a manner" }
     ],
     "subsumes": [],
     "confusables": ["you-ni", "you-da", "to-iu-yori"],
-    "detection": "Tokens: ふう(風 名詞) + に(だ 助動詞 連用形-ニ), or ふう + な(だ 連体形) before a noun, or 風 (read ふう) + に; the というふうに form is と + いう(言う) + ふう(風) + に. The lexeme of ふう is 風, the same as かぜ 'wind', so the token cannot tell them apart: require the reading ふう in the surface (ふう in kana, or 風 after a clause or a noun + の/よう/な) and a following に (or な before a noun). Guards: 風 + に(格助詞) after an adjective like 冷たい is the wind (かぜ); ように is よう(様 形状詞-助動詞語幹) + に(だ), not ふう. A bare ふう + を (ふうを装う) is outside this entry."
+    "detection": "Tokens: ふう(風 名詞) + に(だ 助動詞 連用形-ニ), or ふう + な(だ 連体形) before a noun, or 風 (read ふう) + に; the というふうに form is と + いう(言う) + ふう(風) + に. The lexeme of ふう is 風, the same as かぜ 'wind', so the token cannot tell them apart: require the reading ふう in the surface (ふう in kana, or 風 after a clause or a noun + の/よう/な) and a following に (or な before a noun). The tokenizer gives に as だ 連用形-ニ after ふう in every example, but also after the wind in 風になって, while 冷たい風に吹かれ gives に 格助詞, so the POS of に is a hint, not a guard. Guards: 風 written in kanji counts only after こんな/そんな/あんな/どんな, という or a clause in 連体形 (そういう風に); 風 at a sentence start or after an adjective like 冷たい is the wind (かぜ); ように is よう(様 形状詞-助動詞語幹) + に(だ), not ふう. A bare ふう + を (ふうを装う) is outside this entry."
   },
   {
     "id": "to-itta",
@@ -140,13 +140,13 @@
       { "ja": "ラーメン、カレーといった、こってりした料理ばかり食べている。", "match": "といった", "en": "All I eat is rich food like ramen and curry." },
       { "ja": "東京や大阪といった大都市には、外国人観光客が多い。", "match": "といった", "en": "Big cities like Tokyo and Osaka have many foreign tourists." },
       { "ja": "不安やストレスといった問題を抱える人が増えている。", "match": "といった", "en": "More and more people have problems such as anxiety and stress." },
-      { "ja": "ネットで買い物をしたり動画を見たりといった生活が続いている。", "match": "といった", "en": "My days keep going like this: shopping online, watching videos and so on." },
+      { "ja": "ネットで買い物をしたり動画を見たりといった生活が続いている。", "match": "といった", "en": "My days are all online shopping, watching videos and the like." },
       { "ja": "寿司や天ぷらといった日本料理を作れるようになりたいです。", "match": "といった", "en": "I want to be able to cook Japanese dishes such as sushi and tempura." }
     ],
     "counterexamples": [
       { "ja": "彼は明日行くといった。", "en": "He said he would go tomorrow.", "why": "いった is 言った 'said' in kana, quoting speech, not a listing of examples" },
       { "ja": "これといった理由はない。", "en": "There is no particular reason.", "why": "これといった is a fixed phrase 'any particular', not an example list" },
-      { "ja": "今日は水泳といったところだ。", "en": "Today it's about swimming, roughly.", "why": "といったところだ is the separate entry to-iu-tokoro-da" },
+      { "ja": "成功する確率は五分五分といったところだ。", "en": "The odds of success are about fifty-fifty.", "why": "といったところだ is the separate entry to-iu-tokoro-da" },
       { "ja": "社長は「やめる」と言った。", "en": "The president said, \"I quit.\"", "why": "と言った is the plain past of the quotative, not a listing" }
     ],
     "subsumes": [],
@@ -156,7 +156,7 @@
   {
     "id": "to-kangaerareru",
     "form": "〜と考えられる",
-    "variants": ["〜と考えられている", "〜と考えられます"],
+    "variants": ["〜と考えられている", "〜と考えられていた", "〜と考えられます"],
     "meaning": "it is thought that ~",
     "kind": "construction",
     "register": "written",
@@ -181,7 +181,7 @@
     ],
     "subsumes": [],
     "confusables": ["kangaerarenai", "to-iwarete-iru", "to-ieru"],
-    "detection": "Tokens: と(格助詞) + 考え(考える, 下一段) + られる(られる 助動詞 レル/ラレル), conjugated as られる, られ + て + いる (or い + た), られ + ます. Variants are と考えられている, と考えられていた and と考えられます. The clause before と ends in a plain form or a noun, and the passive/potential られる must come directly after 考え with nothing between. Guards: reject とは + 考えられない (unthinkable, entry kangaerarenai), 考えられない without と (potential 'cannot think'), and が/も考えられる, where 考えられる means 'is conceivable' with no quotative と. The negative と考えられない is a different meaning too, so do not count it. Often confused with to-omou-like quotatives such as と思われる, which are not in this entry."
+    "detection": "Tokens: と(格助詞) + 考え(考える 下一段 未然形) + られる(られる 助動詞-レル), conjugated as られる, られ + て + いる(居る) (or い + た), られ + ます; confirmed by the tokenizer in every example. Variants are と考えられている, と考えられていた and と考えられます. The clause before と ends in a plain form or a noun, and the passive/potential られる must come directly after 考え with nothing between. Guards: reject とは + 考えられない (unthinkable, entry kangaerarenai), 考えられない without と (potential 'cannot think'), and が/も考えられる, where 考えられる means 'is conceivable' with no quotative と. The negative と考えられない is a different meaning too, so do not count it. Often confused with to-omou-like quotatives such as と思われる, which are not in this entry."
   },
   {
     "id": "toka-hearsay",
@@ -207,11 +207,12 @@
     "counterexamples": [
       { "ja": "お肉とか野菜とかを買ってきた。", "en": "I bought things like meat and vegetables.", "why": "とか〜とか is the listing entry toka-toka, not hearsay" },
       { "ja": "お昼はパスタとかにしようか。", "en": "Shall we have something like pasta for lunch?", "why": "とか after one noun softens an example; it does not report hearsay" },
-      { "ja": "何とか間に合った。", "en": "I managed to make it somehow.", "why": "何とか is the adverb 'somehow', a fixed word and not とか after a clause" }
+      { "ja": "何とか間に合った。", "en": "I managed to make it somehow.", "why": "何とか is the adverb 'somehow', a fixed word and not とか after a clause" },
+      { "ja": "週末は映画を見るとかしようよ。", "en": "Let's do something like watch a movie this weekend.", "why": "とか after a clause and before する offers an example activity; nothing is reported" }
     ],
     "subsumes": [],
     "confusables": ["toka-toka", "to-iu", "sou-hearsay", "rashii"],
-    "detection": "Tokens: と(格助詞) + か(副助詞), two separate tokens, with nothing following but a sentence end, a comma, で (とかで), 言う/聞く, or いう (とかいう + noun); after a noun predicate だ comes first (留守だとか), so the sequence is だ + と + か. Hearsay とか follows a full clause (plain form, past or だ) or ends the sentence; とかで gives a hearsay reason, とかいう means 'someone or something called'. Guards: とか repeated (お肉とか野菜とか) is toka-toka; とか after one noun and followed by に/は/を (パスタとかに) is an example softener; 何/どこ/いつ + と + か (何とか, どうにかとか) is a fixed adverb and not this. The tokens と + か are identical in all of these, so use the context: clause or だ before, sentence end or で/言う/聞く/いう after."
+    "detection": "Tokens: と(格助詞) + か(副助詞), two separate tokens, with nothing following but a sentence end, a comma, で (とかで), 言う/聞く, or いう (とかいう + noun); after a noun predicate だ comes first (留守だとか), so the sequence is だ + と + か. Hearsay とか follows a full clause (plain form, past or だ) or ends the sentence; とかで gives a hearsay reason, とかいう means 'someone or something called'. Guards: とか repeated (お肉とか野菜とか) is toka-toka; とか after one noun and followed by に/は/を (パスタとかに) is an example softener; 何/どこ/いつ + と + か (何とか) is a fixed adverb; a clause + とか + する (見るとかしよう) is an example softener, and Vとか Vないとか is toka-toka and not this. The tokens と + か are identical in all of these, so use the context: clause or だ before, sentence end or で/言う/聞く/いう after. The tokenizer confirms と(格助詞) + か(副助詞) in every example and near miss; in 言ってました it misreads て as てる, which does not touch the pattern."
   },
   {
     "id": "tokoro-ni",
@@ -238,11 +239,11 @@
       { "ja": "困ったら私のところに来てください。", "en": "If you're in trouble, please come to me.", "why": "ところ is 'place' after a possessive noun, not the moment of an event" },
       { "ja": "家に着いたところ、誰もいなかった。", "en": "When I got home, nobody was there.", "why": "たところ without に is the discovery entry ta-tokoro-kekka" },
       { "ja": "泣いているところを見られてしまった。", "en": "I got seen while I was crying.", "why": "ところを is the separate entry tokoro-o" },
-      { "ja": "山の上のところに小さな小屋がある。", "en": "There is a small hut at the top of the mountain.", "why": "ところ is a literal place and に marks location" }
+      { "ja": "駅を出たところに交番がある。", "en": "There's a police box right outside the station.", "why": "出たところ is the place just past the exit, and に marks where the police box is" }
     ],
     "subsumes": [],
     "confusables": ["tokoro-o", "te-iru-tokoro", "ta-tokoro-kekka", "ru-tokoro", "tokoro-ga-aru"],
-    "detection": "Tokens: ところ(所 名詞) + に(格助詞) or へ(格助詞), after a verb clause that shows a situation in progress: V-te + いる/い + た (困っていた), V-vol + と + し + (て) + (い) + た (出よう + と + し + た), かけ + て + い + た, or V-ta; the clause before ところ is always a verb in 連体形 or a て-form chain. Longer forms like ているところに are still this entry; te-iru-tokoro and ru-tokoro (ところだ) end in だ/です. Guards: reject ところ after a noun or a possessive (私のところに is a place), ところ + を (tokoro-o), ところ with no particle (ta-tokoro-kekka, たところ、〜) and ところが (a conjunction). The pattern is followed by an event that interrupts, which a token matcher cannot check; the shape verb-plain + ところ + に/へ is the guard. ところを is covered by tokoro-o, not here."
+    "detection": "Tokens: ところ(所 名詞) + に(格助詞) or へ(格助詞), after a verb clause that shows a situation in progress: V-te + いる/い + た (困っていた), V-vol + と + し + (て) + (い) + た (出よう + と + し + た), かけ + て + い + た, or V-ta; the clause before ところ is always a verb in 連体形 or a て-form chain. Longer forms like ているところに are still this entry; te-iru-tokoro and ru-tokoro (ところだ) end in だ/です. Guards: reject ところ after a noun or a possessive (私のところに is a place), ところ + を (tokoro-o), ところ with no particle (ta-tokoro-kekka, たところ、〜) and ところが (a conjunction). The pattern is followed by an event that interrupts, which a token matcher cannot check; the shape verb-plain + ところ + に/へ is the guard. ところを is covered by tokoro-o, not here, and the guard on the particle (に/へ only) keeps the two disjoint. After V-ta, ところ + に can also be a literal place (駅を出たところに交番がある, same tokens 出|た|ところ(所)|に); a following existence verb ある/いる is a hint for that reading. Tokens confirmed: ところ(所 名詞-普通名詞) + に/へ(格助詞) in every example."
   },
   {
     "id": "tokoro-o-miru-to",
@@ -269,11 +270,12 @@
       { "ja": "泣いているところを見られてしまった。", "en": "I got seen while I was crying.", "why": "ところを + 見られる is the passive 'seen in the act' (tokoro-o), with no と after 見る" },
       { "ja": "相手の良いところを見るようにしている。", "en": "I try to look at the other person's good points.", "why": "ところ is a literal 'point/aspect' and 見る is meant literally, without と" },
       { "ja": "彼が走っているところを見て、驚いた。", "en": "I was surprised to see him running.", "why": "ところを見て is the literal 'saw (him) in the act', with て instead of と" },
-      { "ja": "盗み食いをしているところを見つけた。", "en": "I caught him stealing food.", "why": "ところを + 見つける is a different verb and no と follows" }
+      { "ja": "盗み食いをしているところを見つけた。", "en": "I caught him stealing food.", "why": "ところを + 見つける is a different verb and no と follows" },
+      { "ja": "父が料理をしているところを見ると、いつも感心する。", "en": "Whenever I watch my father cook, I'm impressed.", "why": "見る is literal 'watch' and と is habitual 'whenever'; the main clause states a reaction, not a guess" }
     ],
     "subsumes": ["tokoro-o"],
     "confusables": ["tokoro-o", "kara-suru-to", "kara-miru-to", "kara-shite", "rashii"],
-    "detection": "Tokens: ところ(所 名詞) + を(格助詞) + 見る(見る 動詞, 終止形; also kana みる) + と(接続助詞, not 格助詞), preceded by a verb or adjective clause in 連体形 (急いでいる, ついていない). The longer match must beat tokoro-o, which is ところ + を alone. Guards: the verb must be 終止形 見る directly followed by と, so reject ところを見られる/見て/見つける/見るようにする (all different), and ところ after a noun or adjective as a literal 'point' (良いところを見る). The clause before ところ describes an observed state, and the sentence ends with a guess (らしい, ようだ, はずだ, 違いない, だろう), which can serve as a hint. Not the same as から見ると/からすると (kara-miru-to, kara-suru-to), where the evidence is a noun."
+    "detection": "Tokens: ところ(所 名詞) + を(格助詞) + 見る(見る 動詞, 終止形; also kana みる) + と(接続助詞, not 格助詞), preceded by a verb or adjective clause in 連体形 (急いでいる, ついていない). The longer match must beat tokoro-o, which is ところ + を alone. Guards: the verb must be 終止形 見る directly followed by と, so reject ところを見られる/見て/見つける/見るようにする (all different), and ところ after a noun or adjective as a literal 'point' (良いところを見る). The clause before ところ describes an observed state, and the sentence ends with a guess (らしい, ようだ, はずだ, 違いない, だろう), which can serve as a hint. The literal 'whenever I watch' (料理しているところを見ると、いつも感心する) has the same tokens, ところ(所)|を|見る(終止形)|と(接続助詞), so only that guess ending, or its absence with いつも/たびに, tells them apart. Tokens confirmed in every example, kana みる included (lexeme 見る). Not the same as から見ると/からすると (kara-miru-to, kara-suru-to), where the evidence is a noun."
   },
   {
     "id": "toshitemo",
@@ -285,7 +287,7 @@
     "level": "N2",
     "sources": { "jlptsensei": "N2", "bunpro": "N2", "jt4y": "N2", "kanzen": "N2" },
     "prototype": false,
-    "connection": ["V-plain + としても", "i-Adj + としても", "Clause-plain + だとしても", "na-Adj + だとしても", "N + だとしても"],
+    "connection": ["V-plain + としても", "i-Adj + としても", "na-Adj + だとしても", "N + だとしても"],
     "examples": [
       { "ja": "たとえ今から走ったとしても、電車には間に合わないよ。", "match": "としても", "en": "Even if you ran from now, you wouldn't catch the train." },
       { "ja": "彼が犯人だとしても、証拠がなければ逮捕できない。", "match": "としても", "en": "Even if he is the culprit, he can't be arrested without evidence." },
@@ -298,45 +300,45 @@
     ],
     "counterexamples": [
       { "ja": "彼は父親としても、教師としても尊敬されている。", "en": "He is respected both as a father and as a teacher.", "why": "として + も after a role noun means 'also as ~' (entry toshite), not 'even if'" },
-      { "ja": "買おうとしても、お金がない。", "en": "Even if I try to buy it, I have no money.", "why": "と + しても after a volitional form is ようとしても 'try to' (you-to-suru), not 'even if'" },
+      { "ja": "何度思い出そうとしても、名前が出てこない。", "en": "However hard I try to remember, the name won't come.", "why": "と + しても after a volitional form is ようとしても 'try to' (you-to-suru), not 'even if'" },
       { "ja": "彼女は歌手としては有名だ。", "en": "She is famous as a singer.", "why": "としては is the separate entry toshite-wa" },
       { "ja": "彼にしても、迷っているはずだ。", "en": "He too must be hesitating.", "why": "にしても is the separate entry ni-shite-mo, with に before し" }
     ],
     "subsumes": ["toshite"],
     "confusables": ["toshite", "toshite-wa", "temo", "ni-shite-mo", "you-to-suru"],
-    "detection": "Tokens: と + し(為る, 連用形) + て(接続助詞) + も(係助詞); UniDic never reads として as one token, so the sequence is four tokens, the same for としても 'even if' and the 'also as ~' use. Use the token before と: a verb in 終止形 or 連体形 (走った, 行く), an adjective, or だ (彼が犯人だとしても) means 'even if' and is this entry. A bare noun right before と (父親としても, 教師としても) is toshite + も (the role 'also as'), and a volitional form (買おう/行こう + と + し + ても) is ようとしても, entry you-to-suru. Also reject に + し + て + も (ni-shite-mo) and と + し + て + は (toshite-wa), which differ in one token. This entry takes precedence over toshite when the guard on the preceding token holds."
+    "detection": "Tokens: と + し(為る, 連用形) + て(接続助詞) + も(係助詞); UniDic never reads として as one token, so the sequence is four tokens, the same for としても 'even if' and the 'also as ~' use. Use the token before と: a verb in 終止形 or 連体形 (走った, 行く), an adjective, or だ (彼が犯人だとしても) means 'even if' and is this entry. A bare noun right before と (父親としても, 教師としても) is toshite + も (the role 'also as'), and a volitional form (買おう/行こう + と + し + ても) is ようとしても, entry you-to-suru. Also reject に + し + て + も (ni-shite-mo) and と + し + て + は (toshite-wa), which differ in one token. Ownership: this entry owns と + し + て + も only after a predicate or だ; noun + としても (女優としても) stays with toshite, so one sentence never counts for both. Tokens と(格助詞)|し(為る 連用形)|て(接続助詞)|も(係助詞) confirmed in every example."
   },
   {
     "id": "toshite-wa",
     "form": "〜としては",
-    "variants": ["〜としちゃ"],
+    "variants": ["〜としちゃ", "〜としましては"],
     "meaning": "as for ~ / for a ~",
     "kind": "construction",
     "register": "neutral",
     "level": "N2",
     "sources": { "bunpro": "N2", "jt4y": "N2" },
     "prototype": false,
-    "connection": ["N + としては", "N + としちゃ"],
+    "connection": ["N + としては", "N + としちゃ", "N + としましては"],
     "examples": [
       { "ja": "私としては、この案には反対です。", "match": "としては", "en": "Personally, I'm against this plan." },
       { "ja": "プロとしては、そんなミスは許されない。", "match": "としては", "en": "For a professional, a mistake like that is unacceptable." },
       { "ja": "親としては、娘の将来が心配です。", "match": "としては", "en": "As a parent, I worry about my daughter's future." },
       { "ja": "ここは学生街としては有名だが、夜は静かだ。", "match": "としては", "en": "As a student district it's well known, but it's quiet at night." },
       { "ja": "あたしとしちゃ、そこが一番気に入らないね。", "match": "としちゃ", "en": "As for me, that's the part I like least." },
-      { "ja": "会社としては、今回の件を重く受け止めております。", "match": "としては", "en": "As a company, we take this matter seriously." },
+      { "ja": "弊社としましては、今回の件を重く受け止めております。", "match": "としましては", "en": "We as a company take this matter seriously." },
       { "ja": "個人としては賛成だが、全体の意見も聞きたい。", "match": "としては", "en": "Personally I agree, but I also want to hear everyone's opinion." },
       { "ja": "彼は日本人としては背が高いほうだ。", "match": "としては", "en": "He is on the tall side for a Japanese person." },
       { "ja": "これは試作品としては十分な出来だ。", "match": "としては", "en": "As a prototype, this is good enough." }
     ],
     "counterexamples": [
       { "ja": "彼は教師として働いている。", "en": "He works as a teacher.", "why": "として without は is the plain 'as' entry toshite" },
-      { "ja": "買おうとしては、やめてを繰り返した。", "en": "I kept starting to buy it and giving up.", "why": "と + して + は here is ようとする + ては, 'trying to' (tewa-tewa), not 'as for'" },
+      { "ja": "彼は何か言おうとしては、黙り込んだ。", "en": "He kept starting to say something, then falling silent.", "why": "と + して + は after a volitional form is ようとする + ては, a repeated attempt, not 'as for'" },
       { "ja": "教師としての責任を感じている。", "en": "I feel my responsibility as a teacher.", "why": "としての is the attributive form of toshite, with の instead of は" },
       { "ja": "そう言ったとしても、本心とは限らない。", "en": "Even if he said so, it isn't necessarily what he means.", "why": "としても after a plain predicate is the hypothetical entry toshitemo" }
     ],
     "subsumes": ["toshite"],
     "confusables": ["toshite", "toshitemo", "ni-shite-wa", "ni-totte", "tewa-tewa"],
-    "detection": "Tokens: と + し(為る, 連用形) + て(接続助詞) + は(係助詞), or the casual と + し + ちゃ (ちゃ is 接続助詞 with lexeme て); there is no single token for として. The token before と is a noun (私, 親, プロ, 日本人), so the structure is noun + として + は and the match is 'as/for ~'. Guards: reject a volitional or verb form before と (買おう + と + し + て + は is ようとしては with ては, entry tewa-tewa or you-to-suru), a plain predicate or だ before と + し + て + も (toshitemo), and として + の (としての), として + も. This entry wins over the prototype toshite, which only needs と + し + て; the は must follow directly."
+    "detection": "Tokens: と + し(為る, 連用形) + て(接続助詞) + は(係助詞), or the casual と + し + ちゃ (ちゃ is 接続助詞 with lexeme て), or the polite と + し + まし(ます) + て + は (弊社としましては); there is no single token for として. The token before と is a noun (私, 親, プロ, 日本人), so the structure is noun + として + は and the match is 'as/for ~'. Guards: reject a volitional or verb form before と (買おう + と + し + て + は is ようとしては with ては, entry tewa-tewa or you-to-suru), a plain predicate or だ before と + し + て + も (toshitemo), and として + の (としての), として + も. This entry wins over the prototype toshite, which only needs と + し + て; the は must follow directly. Ownership: noun + として + は is this entry's exact sense, so toshite rejects it and only this entry counts. Tokens confirmed in every example."
   },
   {
     "id": "toshite-nai",
@@ -352,7 +354,7 @@
     "examples": [
       { "ja": "誰一人として、その事実を知らなかった。", "match": "誰一人として", "en": "Not a single person knew that fact." },
       { "ja": "彼女は一日として休んだことがない。", "match": "一日として", "en": "She has never taken even one day off." },
-      { "ja": "同じ日は一日としてない。", "match": "一日として", "en": "No two days are the same." },
+      { "ja": "一日として同じ日はない。", "match": "一日として", "en": "No two days are ever the same." },
       { "ja": "この中に、一人として彼を信じる者はいなかった。", "match": "一人として", "en": "Not one of them believed him." },
       { "ja": "私は一度として彼女に嘘をついたことはありません。", "match": "一度として", "en": "I have never lied to her, not even once." },
       { "ja": "その答えを覚えている生徒は、一人としていなかった。", "match": "一人として", "en": "There was not a single student who remembered that answer." },
@@ -367,7 +369,7 @@
     ],
     "subsumes": ["toshite"],
     "confusables": ["toshite", "mo-nai", "sukoshi-mo-nai", "nanimo-nai"],
-    "detection": "Tokens: a counter or 'one' word + と + し(為る, 連用形) + て(接続助詞) with a negative predicate later in the same clause: 一人(一人 名詞, one token) + として + い + ない, 誰 + 一人 + として, 一 + 日 + として, 一 + つ + として, 一 + 度 + として, 一 + 晩 + として. Require the numeral 一 (or 一人) directly before the counter and the counter directly before と, and ない (無い or 助動詞 ない, also ありません/なかった) after it; both the verb negative (知らなかった) and 無い (一日としてない) count. Reject 家族の一人として + a positive predicate (the 'as one of' reading), and reject 一人も〜ない, which is the separate entry mo-nai. This entry takes precedence over the plain toshite when the counter and the negation are present."
+    "detection": "Tokens: a counter or 'one' word + と + し(為る, 連用形) + て(接続助詞) with a negative predicate later in the same clause: 一人(一人 名詞, one token) + として + い + ない, 誰 + 一人 + として, 一 + 日 + として, 一 + つ + として, 一 + 度 + として, 一 + 晩 + として. Require the numeral 一 (or 一人) directly before the counter and the counter directly before と, and ない (無い or 助動詞 ない, also ありません/なかった) after it; both the verb negative (知らなかった) and 無い (一日としてない) count. Reject 家族の一人として + a positive predicate (the 'as one of' reading), and reject 一人も〜ない, which is the separate entry mo-nai. This entry takes precedence over the plain toshite when the counter and the negation are present, and toshite rejects that shape. 何一つとして is 何 + 一 + つ + として. Tokens confirmed; note that 一日としてない (with no word between) misreads て as てる + ない(助動詞), so a matcher should also accept that split."
   },
   {
     "id": "tomo",
@@ -388,7 +390,7 @@
       { "ja": "多くとも十人程度でしょう。", "match": "多くとも", "en": "There will be ten people at the most." },
       { "ja": "たとえ失敗しようとも、後悔はしない。", "match": "しようとも", "en": "Even if I fail, I won't regret it." },
       { "ja": "若くとも、彼の判断力は確かだ。", "match": "若くとも", "en": "Young as he is, his judgment is sound." },
-      { "ja": "早くとも来月にならなければ、結果は出ません。", "match": "早くとも", "en": "The results won't be out before next month at the earliest." }
+      { "ja": "結果が出るのは、早くとも来月になります。", "match": "早くとも", "en": "The results will come out next month at the earliest." }
     ],
     "counterexamples": [
       { "ja": "三人ともまだ来ていない。", "en": "None of the three has come yet.", "why": "とも after a number is the suffix 'all of them', not 'even if'" },
@@ -398,7 +400,7 @@
     ],
     "subsumes": [],
     "confusables": ["zu-tomo", "nari-tomo", "tari-tomo", "tomo-naku", "tomo-tomo", "to-tomo-ni", "temo"],
-    "detection": "Tokens: とも(助詞, one token, lexeme とも) attached to an adjective in 連用形 (遅く, 少なく, 多く, 早く, 苦しく, 若く) or to a volitional/意志推量形 verb (言おう, しよう, 降ろう); the sequence is adjective-ku + とも or V-vol + とも. 遅くとも/少なくとも/多くとも are common fixed adverbs, but they tokenize like any other adjective + とも, so one rule covers them. Guards: とも must be a single token (reject と + も as in 彼とも, 三人とも); reject ます/です + とも (emphatic 'of course') and ず + とも (zu-tomo), which share the same とも token; also reject ともに/ともなう (to-tomo-ni), ともなく (tomo-naku), ともなると (tomo-naru-to) and とも〜とも (tomo-tomo), which are other entries with their own surfaces."
+    "detection": "Tokens: とも(助詞-接続助詞, one token, lexeme とも; confirmed in every example) attached to an adjective in 連用形 (遅く, 少なく, 多く, 早く, 苦しく, 若く) or to a volitional/意志推量形 verb (言おう, しよう, 降ろう); the sequence is adjective-ku + とも or V-vol + とも. 遅くとも/少なくとも/多くとも are common fixed adverbs, but they tokenize like any other adjective + とも, so one rule covers them. Guards: とも must be a single token (reject と + も as in 彼とも, 三人とも); reject ます/です + とも (emphatic 'of course') and ず + とも (zu-tomo), which share the same とも 接続助詞 token (the tokenizer gives ますとも and ずとも exactly that); also reject ともに/ともなう (to-tomo-ni), ともなく (tomo-naku), ともなると (tomo-naru-to) and とも〜とも (tomo-tomo), which are other entries with their own surfaces."
   },
   {
     "id": "mo-kamawazu",
@@ -410,7 +412,7 @@
     "level": "N2",
     "sources": { "jlptsensei": "N2", "bunpro": "N2", "jt4y": "N2", "kanzen": "N2" },
     "prototype": false,
-    "connection": ["N + もかまわず", "V-dict + の + もかまわず", "V-plain + の + もかまわず"],
+    "connection": ["N + もかまわず", "V-plain + の + もかまわず"],
     "examples": [
       { "ja": "彼は人目もかまわず、大声で泣き出した。", "match": "もかまわず", "en": "He burst into loud tears, not caring who was watching." },
       { "ja": "雨に濡れるのも構わず、彼女は走り続けた。", "match": "も構わず", "en": "She kept running, not caring that she was getting wet in the rain." },
@@ -433,14 +435,14 @@
   {
     "id": "mo-ba-mo",
     "form": "〜も〜ば〜も",
-    "variants": [],
+    "variants": ["〜もあれば〜もある"],
     "meaning": "both ~ and ~",
     "kind": "construction",
     "register": "neutral",
     "level": "N2",
     "sources": { "bunpro": "N2", "jt4y": "N2", "jlptsensei": "N3" },
     "prototype": false,
-    "connection": ["N + も + V-ba + N + も + V", "N + も + i-Adj-ba + N + も + i-Adj", "N + も + na-Adj + であれば + N + も + na-Adj"],
+    "connection": ["N + も + V-ba + N + も + V", "N + も + i-Adj-ba + N + も + i-Adj", "i-Adj-ku + もあれば + i-Adj-ku + もある", "na-Adj + でもあれば + na-Adj + でもある"],
     "examples": [
       { "ja": "この店は味も良ければ、値段も安い。", "match": "も良ければ、値段も", "en": "This restaurant has good food and low prices." },
       { "ja": "彼女は料理もできれば、掃除も得意だ。", "match": "もできれば、掃除も", "en": "She can cook and she's good at cleaning, too." },
@@ -459,7 +461,7 @@
     ],
     "subsumes": [],
     "confusables": ["mo-nara-mo-da", "mo-emphasis", "shi", "nara-conditional"],
-    "detection": "Tokens: noun/verb-stem phrase + も(係助詞) + a predicate in 仮定形 + ば(接続助詞), then a comma (optional), then a second noun or phrase + も(係助詞) + a predicate; the two も and one ば must occur within one sentence in this order. The predicate before ば is a verb in 仮定形 (できれ, 話せれ, 降れ), an adjective in 仮定形 (良けれ, 速けれ) or あれ (有る) after a く-form (優しくもあれば). Guards: require も before ば and another も after it in the same sentence, so 走れば、汗も出る (one も) is rejected; ば + し (し 助詞) lists and ば〜ば without も are not this entry. The same-noun form 親も親なら、子も子だ is mo-nara-mo-da (なら is だ 仮定形), and the plain も〜も listed with し is not covered here."
+    "detection": "Tokens: noun/verb-stem phrase + も(係助詞) + a predicate in 仮定形 + ば(接続助詞), then a comma (optional), then a second noun or phrase + も(係助詞) + a predicate; the two も and one ば must occur within one sentence in this order. The predicate before ば is a verb in 仮定形 (できれ, 話せれ, 降れ), an adjective in 仮定形 (良けれ, 速けれ) or あれ (有る) after a く-form (優しくもあれば). Guards: require も before ば and another も after it in the same sentence, so 走れば、汗も出る (one も) is rejected; ば + し (し 助詞) lists and ば〜ば without も are not this entry. The same-noun form 親も親なら、子も子だ is mo-nara-mo-da (なら is だ 仮定形), and the plain も〜も listed with し is not covered here. Because the matcher requires a ば(接続助詞) token between the two も, the なら of mo-nara-mo-da (no ば) never matches here, so the two entries stay disjoint. Tokens confirmed: 良けれ/できれ/話せれ/あれ etc. are 仮定形 + ば(接続助詞), and both も are 係助詞."
   },
   {
     "id": "wa-moto-yori",
@@ -476,8 +478,8 @@
       { "ja": "彼女は日本語はもとより、中国語も話せる。", "match": "はもとより", "en": "She speaks Chinese, not to mention Japanese." },
       { "ja": "この町は、国内はもとより海外からも観光客が訪れる。", "match": "はもとより", "en": "Tourists come to this town from abroad as well as from within the country." },
       { "ja": "社員はもとより、その家族も招待された。", "match": "はもとより", "en": "Not only the employees but also their families were invited." },
-      { "ja": "ここは夏はもとより、冬も人でにぎわう。", "match": "はもとより", "en": "It is crowded in winter, let alone in summer." },
-      { "ja": "彼は国内はもとより、世界中で知られている。", "match": "はもとより", "en": "He is known all over the world, never mind in Japan." },
+      { "ja": "ここは夏はもとより、冬も人でにぎわう。", "match": "はもとより", "en": "It's busy in winter too, not just in summer." },
+      { "ja": "彼は国内はもとより、世界中で知られている。", "match": "はもとより", "en": "He is known not only at home but all over the world." },
       { "ja": "この映画は子供はもとより、大人も楽しめる。", "match": "はもとより", "en": "This film can be enjoyed by adults as well as children." },
       { "ja": "彼は勉強はもとより、スポーツも万能だ。", "match": "はもとより", "en": "He is good at sports, to say nothing of his studies." },
       { "ja": "基本的なマナーはもとより、敬語の使い方も学びます。", "match": "はもとより", "en": "You will learn the use of honorifics as well as basic manners." }
@@ -486,11 +488,11 @@
       { "ja": "彼はもとより悪い人ではない。", "en": "He is not a bad person to begin with.", "why": "もとより is the adverb 'originally' after a topic は, not 'not to mention'" },
       { "ja": "もとより承知の上です。", "en": "I was aware of it from the start.", "why": "もとより is a sentence adverb and no は precedes it" },
       { "ja": "彼は日本語はもちろん、英語も話せる。", "en": "He speaks English, of course, and Japanese too.", "why": "はもちろん is the separate entry wa-mochiron" },
-      { "ja": "若者はもとい、老人も参加できる。", "en": "Young people, or rather, old people can also take part.", "why": "もとい is a different word 'rather', not もとより" }
+      { "ja": "危険なことはもとより承知している。", "en": "I've known all along that it's dangerous.", "why": "は marks the topic and もとより is the adverb 'from the start' modifying 承知; no second item with も follows" }
     ],
     "subsumes": [],
     "confusables": ["wa-mochiron", "wa-oroka", "nominarazu", "wa-sateoki"],
-    "detection": "Tokens: は(係助詞) + もとより(固より 副詞), two tokens, after a noun (日本語, 国内, 社員), usually followed by a comma and a second noun with も (or から/まで/に + も). The match is は + もとより only; the second part is optional, since the pattern alone identifies it. Guards: reject もとより with no は before it (sentence-initial もとより承知の上) and 彼はもとより悪い人ではない, where は marks the topic and もとより is the adverb 'originally'; the guard is a following も (clause with も or から/にも within the sentence) and a noun right before は, not a pronoun topic followed directly by a predicate. Reject はもちろん (wa-mochiron), はおろか (wa-oroka) and もとい (感動詞), which are other words."
+    "detection": "Tokens: は(係助詞) + もとより(固より 副詞), two tokens, after a noun (日本語, 国内, 社員), usually followed by a comma and a second noun with も (or から/まで/に + も). The match is は + もとより only; the second part is optional, since the pattern alone identifies it. Guards: reject もとより with no は before it (sentence-initial もとより承知の上) and 彼はもとより悪い人ではない, where は marks the topic and もとより is the adverb 'originally'; the guard is a following も (clause with も or から/にも within the sentence) and a noun right before は, not a pronoun topic followed directly by a predicate. Reject はもちろん (wa-mochiron) and はおろか (wa-oroka), which are other words. The kanji spelling 元より gives the same token (lexeme 固より), so accept it; tokens confirmed in every example."
   },
   {
     "id": "wa-tomokaku",
@@ -525,14 +527,14 @@
   {
     "id": "nara-tomokaku",
     "form": "〜ならともかく",
-    "variants": ["〜ならいいけど"],
+    "variants": [],
     "meaning": "~ would be one thing, but",
     "kind": "construction",
     "register": "neutral",
     "level": "N2",
     "sources": { "bunpro": "N2" },
     "prototype": false,
-    "connection": ["N + ならともかく", "V-plain + ならともかく", "i-Adj + ならともかく", "N/V-plain/i-Adj + ならいいけど"],
+    "connection": ["N + ならともかく", "V-plain + ならともかく", "i-Adj + ならともかく", "na-Adj + ならともかく"],
     "examples": [
       { "ja": "子供ならともかく、大人がそんな嘘をつくなんて信じられない。", "match": "ならともかく", "en": "A child, maybe, but I can't believe an adult would tell such a lie." },
       { "ja": "一度や二度ならともかく、毎日遅刻されては困る。", "match": "ならともかく", "en": "Once or twice would be fine, but I can't have you late every day." },
@@ -540,19 +542,18 @@
       { "ja": "冗談ならともかく、本気で言っているなら許せない。", "match": "ならともかく", "en": "If it were a joke, fine, but if you mean it, I can't forgive that." },
       { "ja": "お金がないならともかく、あるのに払わないのは問題だ。", "match": "ならともかく", "en": "If you had no money, fair enough, but not paying when you have it is a problem." },
       { "ja": "友達同士ならともかく、初対面の人にそんな態度は失礼ですよ。", "match": "ならともかく", "en": "Between friends, maybe, but that attitude toward someone you've just met is rude." },
-      { "ja": "少しならいいけど、そんなにたくさんは困るよ。", "match": "ならいいけど", "en": "A little would be fine, but that many is too much." },
       { "ja": "夏ならともかく、真冬に半袖で出かけたら風邪をひくよ。", "match": "ならともかく", "en": "In summer, maybe, but going out in short sleeves in midwinter will give you a cold." },
-      { "ja": "一回ならいいけど、毎週頼まれるのはちょっとね。", "match": "ならいいけど", "en": "Once would be okay, but being asked every week is a bit much." }
+      { "ja": "暇ならともかく、今は手伝えないよ。", "match": "ならともかく", "en": "If I were free, maybe, but I can't help right now." }
     ],
     "counterexamples": [
       { "ja": "見た目はともかく、味は最高だ。", "en": "Never mind how it looks, it tastes great.", "why": "はともかく is the separate entry wa-tomokaku" },
       { "ja": "それなら、ともかく急ごう。", "en": "In that case, let's hurry anyway.", "why": "なら and ともかく are separated by a comma and ともかく is the adverb 'anyway'" },
-      { "ja": "これならいいですよ。", "en": "This one is fine.", "why": "ならいい without けど is a plain acceptance, with no 'but' contrast" },
+      { "ja": "それならいいけど、本当に大丈夫？", "en": "If so, fine, but are you really okay?", "why": "ならいいけど is an ordinary conditional + けど, 'if so, fine', not this entry, which needs ともかく" },
       { "ja": "冬ならまだしも、夏にこの寒さは異常だ。", "en": "In winter maybe, but this cold in summer is abnormal.", "why": "ならまだしも is the separate entry nara-madashimo" }
     ],
     "subsumes": [],
     "confusables": ["nara-madashimo", "wa-tomokaku", "nara-conditional", "nara-iza-shirazu"],
-    "detection": "Tokens: なら(だ 助動詞 仮定形) + ともかく(兎も角 副詞), with a noun, verb or adjective before なら; the variant is なら + いい(良い) + けど(けれど 接続助詞), where the clause after けど states the problem. UniDic reads なら as the 仮定形 of だ, not as a particle. Guards: なら and ともかく must be adjacent (それなら、ともかく is a comma-separated adverb 'anyway'); reject は + ともかく (wa-tomokaku) and ならまだしも (nara-madashimo, tokens なら + まだ + しも); for ならいいけど require けど (or けれど) right after いい, so これならいいですよ is plain acceptance. The inventory variant ならともかく also appears under nara-madashimo, and a matcher should assign it to this id only."
+    "detection": "Tokens: なら(だ 助動詞 仮定形) + ともかく(兎も角 副詞), with a noun, verb or adjective before なら. UniDic reads なら as the 仮定形 of だ, not as a particle. Guards: なら and ともかく must be adjacent (それなら、ともかく is a comma-separated adverb 'anyway'); reject は + ともかく (wa-tomokaku) and ならまだしも (nara-madashimo, tokens なら + まだ + しも). ならいいけど (なら + 良い + けれど) is an ordinary conditional with けど and is not counted here (dropped as a variant: それならいいけど is no concession). The inventory variant ならともかく also appears under nara-madashimo, and a matcher should assign it to this id only."
   },
   {
     "id": "nara-madashimo",
@@ -570,7 +571,7 @@
       { "ja": "一人で行くならまだしも、子供を連れては無理だ。", "match": "ならまだしも", "en": "Going alone might be possible, but with children it's impossible." },
       { "ja": "友達の誕生日ならまだしも、赤の他人にプレゼントなんてしないよ。", "match": "ならまだしも", "en": "For a friend's birthday maybe, but I wouldn't give a present to a total stranger." },
       { "ja": "遅刻ならまだいいが、無断欠勤は許されない。", "match": "ならまだいいが", "en": "Being late would be one thing, but not showing up without notice is not allowed." },
-      { "ja": "聞き間違いならまだしも、本当にそう言ったのだ。", "match": "ならまだしも", "en": "A mishearing would be understandable, but he really did say so." },
+      { "ja": "聞き間違いならまだしも、わざと無視するのはひどい。", "match": "ならまだしも", "en": "Mishearing me would be one thing, but ignoring me on purpose is just mean." },
       { "ja": "雨ならまだしも、台風の中で試合をやるなんて。", "match": "ならまだしも", "en": "In rain maybe, but holding the game in a typhoon?" },
       { "ja": "寝坊ならまだいいんですが、事故にあったのではと心配で。", "match": "ならまだいい", "en": "If he just overslept it would be fine, but I'm worried he may have had an accident." },
       { "ja": "小さな傷ならまだしも、これでは修理に何万円もかかる。", "match": "ならまだしも", "en": "A small scratch would be one thing, but this will cost tens of thousands of yen to repair." }
@@ -582,7 +583,7 @@
     ],
     "subsumes": [],
     "confusables": ["nara-tomokaku", "nara-conditional", "wa-tomokaku", "nara-iza-shirazu", "kurai-nara"],
-    "detection": "Tokens: なら(だ 仮定形) + まだ(未だ 副詞) + しも(しも 助詞), three tokens; the variant is なら + まだ + いい(良い) + が (or んですが). The clause before なら is a noun or a verb in 連体形, and a contrasting clause with a worse case follows. Guards: なら + まだ must be followed by しも or いい, so それならまだ間に合う and あの人ならまだ来ていません (まだ = 'still/yet') are rejected. ならともかく is the id nara-tomokaku, not a variant of this one. Often confused with nara-iza-shirazu and the conditional nara-conditional, which differ in the token after なら."
+    "detection": "Tokens: なら(だ 仮定形) + まだ(未だ 副詞) + しも(しも 助詞-副助詞), three tokens (confirmed in every example); the variant is なら + まだ + いい(良い) + が (or んですが). The clause before なら is a noun or a verb in 連体形, and a contrasting clause with a worse case follows. Guards: なら + まだ must be followed by しも or いい, so それならまだ間に合う and あの人ならまだ来ていません (まだ = 'still/yet') are rejected. ならともかく (なら + ともかく(兎も角 副詞)) is the id nara-tomokaku, not a variant of this one; requiring しも or いい right after まだ keeps the two disjoint. Often confused with nara-iza-shirazu and the conditional nara-conditional, which differ in the token after なら."
   },
   {
     "id": "yara-yara",
@@ -603,7 +604,7 @@
       { "ja": "寒いやら眠いやらで、授業に集中できなかった。", "match": "寒いやら眠いやら", "en": "Between the cold and my sleepiness, I couldn't concentrate in class." },
       { "ja": "彼は買い物に行くやら、料理を作るやら、一日中動き回っていた。", "match": "行くやら、料理を作るやら", "en": "He was on the go all day, shopping, cooking and so on." },
       { "ja": "財布やらカギやら、大事なものを全部なくしてしまった。", "match": "やらカギやら", "en": "I lost everything important, my wallet, my keys and more." },
-      { "ja": "コンビニでお菓子やらを買ってきた。", "match": "お菓子やら", "en": "I bought snacks and stuff at the convenience store." }
+      { "ja": "コンビニでお菓子やらジュースを買ってきた。", "match": "お菓子やら", "en": "I picked up snacks, juice and such at the convenience store." }
     ],
     "counterexamples": [
       { "ja": "何やら外が騒がしい。", "en": "Something is noisy outside.", "why": "何やら is the indefinite 'something', not a listing やら" },
@@ -613,7 +614,7 @@
     ],
     "subsumes": [],
     "confusables": ["no-yara", "no-yara-no-yara", "toka-toka", "tari", "nado"],
-    "detection": "Tokens: やら(やら 助詞 副助詞) after a noun, an adjective in 終止形 or a verb in 終止形/連体形, usually twice (A + やら + B + やら), then で or a predicate; the second やら often precedes で (だ 連用形) as in 就職やらで. The variant is a single やら after one noun (お菓子やらを). Guards: reject 何/誰/どこ + やら (indefinite 'something'), の + やら (no-yara, no-yara-no-yara) and やる (遣る) in 未然形 やら + せ/れ (やらせる, やられる), which has lexeme 遣る, not やら. Single やら is weak evidence: accept it only after a noun with no preceding question word."
+    "detection": "Tokens: やら(やら 助詞-副助詞, confirmed) after a noun, an adjective in 終止形 or a verb in 終止形/連体形, usually twice (A + やら + B + やら), then で or a predicate; the second やら often precedes で (だ 連用形) as in 就職やらで. The variant is a single やら after the first noun only (お菓子やらジュースを). Guards: reject 何/誰/どこ + やら (indefinite 'something'), の + やら (no-yara, no-yara-no-yara) and やる (遣る) in 未然形 やら + せ/れ (やらせる, やられる), which has lexeme 遣る, not やら. Single やら is weak evidence: accept it only after a noun with no preceding question word."
   },
   {
     "id": "yori-hoka-nai",
@@ -643,7 +644,7 @@
       { "ja": "彼の他に頼れる人はいない。", "en": "There is no one to rely on besides him.", "why": "の他に + いない 'besides' has no より, so it is not the 'no choice but' pattern" }
     ],
     "subsumes": [],
-    "confusables": ["ni-hoka-naranai", "wake-ni-wa-ikanai"],
+    "confusables": ["ni-hoka-naranai", "wake-ni-wa-ikanai", "shika-nai"],
     "detection": "Tokens: より(より 助詞) + ほか(他 名詞) + ない(無い) or は + ない, ありません (有る + ます + ず), なかった; the variants are より + 仕方(仕方 名詞) + が + ない(無い) and より + しかたない (仕方無い 形容詞, one token). The verb before より is in 終止形/連体形 (やる, 謝る, 帰る). Guards: require より directly followed by ほか/仕方/しかた, with ほか not followed by の/に (私より他の人 is a comparison, 彼の他に is 'besides'), and a verb before より; reject より先に and しかたがない without より. Do not count the same sentence for ni-hoka-naranai or a bare しかたがない."
   },
   {
@@ -656,7 +657,7 @@
     "level": "N2",
     "sources": { "jlptsensei": "N2", "bunpro": "N2", "jt4y": "N2" },
     "prototype": false,
-    "connection": ["V-plain + ようでは", "V-nai + ようでは", "V-plain + ようじゃ"],
+    "connection": ["V-plain + ようでは", "V-nai + ようでは", "V-plain + ようじゃ", "i-Adj + ようでは"],
     "examples": [
       { "ja": "こんな簡単な問題が解けないようでは、合格は難しいよ。", "match": "ようでは", "en": "If you can't solve a problem this easy, passing will be hard." },
       { "ja": "約束も守れないようでは、信用されない。", "match": "ようでは", "en": "If you can't even keep a promise, no one will trust you." },
@@ -674,7 +675,7 @@
     ],
     "subsumes": [],
     "confusables": ["you-dewa-nai-ka", "you-da", "you-nara", "tewa-naranai", "nara-conditional"],
-    "detection": "Tokens: よう(様 形状詞-助動詞語幹, a separate token) + で(だ 連用形) + は(係助詞), or よう + じゃ (じゃ 助動詞, lexeme じゃ or だ), after a verb or adjective in plain form, most often ない (解けない + よう + で + は); the second clause states a negative result. Note で is だ here but can appear as 格助詞 で in some contexts, so match the surface よう + で/じゃ + は. Guards: reject volitional + では, where よう is inside the verb token (合わせよう + で + は + ない + か, entry you-dewa-nai-ka); reject の + よう + で + は + ない (ようだ negated, 'does not seem') and ようではなかった, which negate the comparison ようだ. The distinguishing mark of this entry is a following conclusion clause (negative or hopeless), not a ない immediately after では."
+    "detection": "Tokens: よう(様 形状詞-助動詞語幹, a separate token) + で(だ 連用形) + は(係助詞), or よう + じゃ (じゃ 助動詞-ジャ, lexeme じゃ, as the tokenizer gives it in both examples), after a verb or adjective in plain form, most often ない (解けない + よう + で + は); the second clause states a negative result. Note で is だ here but can appear as 格助詞 で in some contexts, so match the surface よう + で/じゃ + は. Guards: reject volitional + では, where よう is inside the verb token (合わせよう + で + は + ない + か, entry you-dewa-nai-ka); reject の + よう + で + は + ない (ようだ negated, 'does not seem') and ようではなかった, which negate the comparison ようだ. The distinguishing mark of this entry is a following conclusion clause (negative or hopeless), not a ない immediately after では."
   },
   {
     "id": "you-dewa-nai-ka",
@@ -682,7 +683,7 @@
     "variants": ["〜ようじゃないか", "〜ようではありませんか"],
     "meaning": "let's ~ (rallying call)",
     "kind": "construction",
-    "register": "written",
+    "register": "neutral",
     "level": "N2",
     "sources": { "jlptsensei": "N2", "bunpro": "N2" },
     "prototype": false,
@@ -698,13 +699,13 @@
       { "ja": "約束どおり、正々堂々と勝負しようじゃないか。", "match": "しようじゃないか", "en": "As agreed, let's settle this fair and square." }
     ],
     "counterexamples": [
-      { "ja": "あの人は日本人のようではないか。", "en": "Doesn't he seem to be Japanese?", "why": "ようではないか after a plain form is a rhetorical ようだ 'seems', not a volitional call" },
+      { "ja": "まるで夢のようではないか。", "en": "Isn't it just like a dream?", "why": "の + よう(様) + ではないか is a rhetorical ようだ 'like', not a volitional call" },
       { "ja": "もしかして、彼が犯人ではないか。", "en": "Isn't he perhaps the culprit?", "why": "ではないか after a noun is the soft assertion no-dewa-nai-darou-ka, with no volitional" },
       { "ja": "こんな簡単な問題が解けないようでは、合格は難しい。", "en": "If you can't solve a problem this easy, passing is hard.", "why": "ようでは without ないか is the conditional entry you-dewa" }
     ],
     "subsumes": [],
     "confusables": ["you-dewa", "no-dewa-nai-darou-ka", "you-da", "mashou"],
-    "detection": "Tokens: a verb in 意志推量形 as one token (乗り越えよう, 飲もう, 戦おう, しよう, みよう) + で(だ/で) + は + ない(無い) + か, or じゃ + ない + か, or で + は + あり + ませ + ん + か. UniDic folds よう into the volitional verb token, so there is no separate よう(様) token here, which is how to tell this entry from you-dewa and from ようではないか 'doesn't it seem' (よう(様) + で + は + ない + か, after の or a plain form). Guards: require the volitional token immediately before で/じゃ and か (or ん + か) at the end; reject 犯人ではないか (a noun before では, entry no-dewa-nai-darou-ka) and 約束したではないか (past plain form + では, a reminder). The register is a speech or dramatic line, and sentence-final か is often the end of the sentence."
+    "detection": "Tokens: a verb in 意志推量形 as one token (乗り越えよう, 飲もう, 戦おう, しよう, みよう) + で + は + ない(無い) + か(終助詞) (the tokenizer reads this で as 格助詞 after some verbs and as だ 連用形 after others, so accept both), or じゃ + ない + か, or で + は + あり + ませ + ん + か. UniDic folds よう into the volitional verb token, so there is no separate よう(様) token here, which is how to tell this entry from you-dewa and from ようではないか 'doesn't it seem' (よう(様) + で + は + ない + か, after の or a plain form). Guards: require the volitional token immediately before で/じゃ and か (or ん + か) at the end; reject 犯人ではないか (a noun before では, entry no-dewa-nai-darou-ka) and 約束したではないか (past plain form + では, a reproach); neither has a 意志推量形 token, so this entry stays disjoint from you-dewa (よう(様) token) and no-dewa-nai-darou-ka. The register is a speech or dramatic line, and sentence-final か is often the end of the sentence."
   },
   {
     "id": "you-ka-mai-ka",
@@ -734,12 +735,12 @@
     ],
     "subsumes": [],
     "confusables": ["you-ga-mai-ga", "you-to-suru", "you-to-omou"],
-    "detection": "Tokens: V-vol (one 意志推量形 token: 行こう, しよう, 買おう) + か(か) + V (dict form or ます-stem) + まい(まい 助動詞) + か(か), e.g. 行こう + か + 行く + まい + か, 食べよう + か + 食べ + まい + か, しよう + か + する + まい + か. The same verb lexeme appears on both sides of か. Guards: reject ようか alone (何を食べようか), まい without a volitional before か (行くまいと決めた), and ようか〜ようか with two volitional forms (行こうか、やめようか). A following 迷う/悩む/考える is typical but not required, so do not make it part of the match. Often confused with you-ga-mai-ga (ようがまいが), which has が, not か."
+    "detection": "Tokens: V-vol (one 意志推量形 token: 行こう, しよう, 買おう) + か + V (dict form or ます-stem) + まい(まい 助動詞-マイ) + か; the tokenizer tags each か as 副助詞 or 終助詞 depending on what follows, so accept both, e.g. 行こう + か + 行く + まい + か, 食べよう + か + 食べ + まい + か, しよう + か + する + まい + か. The same verb lexeme appears on both sides of か. Guards: reject ようか alone (何を食べようか), まい without a volitional before か (行くまいと決めた), and ようか〜ようか with two volitional forms (行こうか、やめようか). A following 迷う/悩む/考える is typical but not required, so do not make it part of the match. Often confused with you-ga-mai-ga (ようがまいが), which has が, not か."
   },
   {
     "id": "no-dewa-nai-darou-ka",
     "form": "〜のではないだろうか",
-    "variants": ["〜のではないか", "〜ではないか", "〜んじゃないかな"],
+    "variants": ["〜のではないか", "〜のではないでしょうか", "〜ではないか", "〜んじゃないかな"],
     "meaning": "isn't it that ~ / I suspect ~",
     "kind": "construction",
     "register": "neutral",
@@ -761,10 +762,10 @@
       { "ja": "一緒に頑張ろうではないか。", "en": "Let's do our best together.", "why": "volitional + ではないか is the separate entry you-dewa-nai-ka" },
       { "ja": "彼は学生ではない。", "en": "He is not a student.", "why": "ではない is the plain negative of だ and there is no か, so no suspicion" },
       { "ja": "行くのではなく、残ることにした。", "en": "I decided to stay rather than go.", "why": "のではなく is 'not ~ but', a negation with no ない + か" },
-      { "ja": "約束したではないか。", "en": "But you promised!", "why": "past + ではないか is an exclamatory reminder 'didn't you?', not a soft guess" }
+      { "ja": "約束したではないか。", "en": "But you promised!", "why": "a predicate (した) directly before ではないか, with no の/ん, is a reproach 'didn't you?', not a soft guess" }
     ],
     "subsumes": [],
     "confusables": ["you-dewa-nai-ka", "no-darou-ka", "de-wa-arumai-ka", "kamoshirenai", "de-wa-nakute"],
-    "detection": "Tokens: の(準体助詞) + で(だ 連用形) + は(係助詞) + ない(無い) + だろう/でしょう (だ/です 意志推量形) + か(か), or の + で + は + ない + か; casual な/ん + じゃ(だ 連用形-融合) + ない + か + な, and plain ではないか after a noun (犯人 + で + は + ない + か). Before の is a verb, adjective or auxiliary clause in plain form (na-adjectives and nouns take な + の). Guards: reject volitional + ではないか (ようではないか, entry you-dewa-nai-ka, where a one-token 意志推量形 precedes で); reject ではない with no か (plain negation, 学生ではない) and のではなく (negated の, と + 無い 連用形 なく); and treat past + ではないか (約束したではないか) as a reminder, not a guess; that last case has the same tokens, so only context separates it. Related to no-darou-ka (のだろうか), which has no negative ない."
+    "detection": "Tokens: の(準体助詞) + で(だ 連用形) + は(係助詞) + ない(無い) + だろう/でしょう (だ/です 意志推量形) + か(か), or の + で + は + ない + か; casual な/ん + じゃ(だ 連用形-融合) + ない + か + な, and plain ではないか after a noun (犯人 + で + は + ない + か, where the tokenizer tags で as 格助詞). Before の is a verb, adjective or auxiliary clause in plain form (na-adjectives and nouns take な + の). Guards: reject volitional + ではないか (ようではないか, entry you-dewa-nai-ka, where a one-token 意志推量形 precedes で); reject ではない with no か (plain negation, 学生ではない) and のではなく (negated の, と + 無い 連用形 なく); and reject the reproach 約束したではないか, which the tokenizer gives as し + た(終止形) + で(格助詞) + は + ない + か: it differs in having no の/ん between the predicate and で, so the guard is to require の/ん after any verb, adjective or た, and to allow bare ではないか only directly after a noun (a noun + ではないか can still be a reproach, 嘘ではないか, which tokens cannot separate). Related to no-darou-ka (のだろうか), which has no negative ない."
   }
 ]

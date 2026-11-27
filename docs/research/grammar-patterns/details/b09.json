@@ -324,7 +324,7 @@
   {
     "id": "toshite",
     "form": "〜として",
-    "variants": ["〜としての"],
+    "variants": ["〜としての", "〜としても"],
     "meaning": "as ~; in the role of ~",
     "kind": "construction",
     "register": "neutral",
@@ -340,7 +340,8 @@
       { "ja": "趣味として、毎週ギターを弾いている。", "match": "として", "en": "I play the guitar every week as a hobby." },
       { "ja": "この建物は、昔は学校として使われていた。", "match": "として", "en": "This building used to be used as a school." },
       { "ja": "友達として言うけど、その仕事は断ったほうがいい。", "match": "として", "en": "Speaking as your friend, you should turn that job down." },
-      { "ja": "チームの一員としてがんばります。", "match": "として", "en": "I'll do my best as a member of the team." }
+      { "ja": "チームの一員としてがんばります。", "match": "として", "en": "I'll do my best as a member of the team." },
+      { "ja": "彼女は女優としても活躍している。", "match": "としても", "en": "She is also active as an actress." }
     ],
     "counterexamples": [
       { "ja": "雨が降ったとしても、行きます。", "en": "Even if it rains, I'll go.", "why": "としても 'even if' is the separate entry toshitemo" },
@@ -350,7 +351,7 @@
     ],
     "subsumes": [],
     "confusables": ["toshite-wa", "toshitemo", "toshite-nai", "o-toshite", "mono-toshite", "you-to-suru"],
-    "detection": "UniDic gives と (格助詞) + し (lexeme 為る, 動詞-非自立可能 サ行変格 連用形) + て (接続助詞), so match that triple directly after a noun (医者 と し て, 親 と し て の). After a clause the same triple means 'supposing' or is ようとして. Guard: reject と + し + て + も (toshitemo) and と + し + て + は (toshite-wa), which belong to their own entries, and reject と + し + て after a volitional verb 意志推量形 (開けよう と し て, you-to-suru). In お土産として the noun is a role, a use or a capacity, which is what separates it from the quoting と + する 'regard as' of o-toshite (を〜として)."
+    "detection": "UniDic gives と (格助詞) + し (lexeme 為る, 動詞-非自立可能 サ行変格 連用形) + て (接続助詞), so match that triple directly after a noun (医者 と し て, 親 と し て の). After a clause the same triple means 'supposing' or is ようとして. Ownership: after a noun, として + も 'also as' (女優としても) stays here, while と + し + て + も after a predicate or だ is toshitemo 'even if'; noun + と + し + て/まし + て + は is toshite-wa; 一 + counter or 誰一人 + として with a negative predicate later is toshite-nai. Guard: reject those three, and reject と + し + て after a volitional verb 意志推量形 (開けよう と し て, you-to-suru). In お土産として the noun is a role, a use or a capacity, which is what separates it from the quoting と + する 'regard as' of o-toshite (を〜として)."
   },
   {
     "id": "ni-taishite",
