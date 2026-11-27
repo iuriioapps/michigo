@@ -9,7 +9,7 @@
   {"id": "temo", "verdict": "fixed", "changes": ["example 5: en said handy or not, which is not concessive ても; now even if it is handy"]},
   {"id": "noni", "verdict": "ok", "changes": []},
   {"id": "sou-appearance", "verdict": "ok", "changes": []},
-  {"id": "you-da", "verdict": "fixed", "changes": ["example 5: replaced, 寒いようです about the speaker's own room is unnatural; now an inference from what others wear", "detection: the volitional 起きよう is one 意志推量形 verb token, not stem + 助動詞 よう"]},
+  {"id": "you-da", "verdict": "fixed", "changes": ["example 5: replaced, 寒いようです about the speaker's own room is unnatural; now an inference from what others wear", "detection: the volitional 起きよう is one 意志推量形 verb token, not stem + 助動詞 よう", "detection (b04 review): owner split with no-you-na by the token after よう; だ/です/で/だっ/でし is you-da even in a likeness sense, な/に is no-you-na"]},
   {"id": "mitai-da", "verdict": "fixed", "changes": ["detection: added the guard that みたい after て / が / を is 見る + たい, since hiragana みたい may come out fused"]},
   {"id": "te-kureru", "verdict": "fixed", "changes": ["example 6: 勝手に (without asking, negative) replaced with 自動で for an app reminder", "detection, confusables: imperative てくれ belongs to te-request"]},
   {"id": "te-iku", "verdict": "ok", "changes": []},

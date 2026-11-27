@@ -33,7 +33,7 @@
     ],
     "subsumes": [],
     "confusables": ["nagara-mo", "nagara-ni", "tsutsu", "aida", "aida-ni"],
-    "detection": "ながら is 助詞-接続助詞, lexeme ながら, and counts only directly after a verb in 連用形 (including する → し and auxiliaries such as させ). Exclude ながらも (nagara-mo) and ながらに (nagara-ni). ながら after a noun, an adjective, or a stative verb (知る, 分かる, ある, いる) is concessive and belongs to nagara-mo even without も. 昔ながら and 生まれながら may be lexicalized; check that the token before ながら is a 動詞 or 助動詞."
+    "detection": "ながら is 助詞-接続助詞, lexeme ながら, and counts only directly after a verb in 連用形 (including する → し and auxiliaries such as させ). Exclude ながらも (nagara-mo) and ながらに (nagara-ni). ながら after a noun, an adjective, or a stative verb (知る, 分かる, ある, いる) is concessive and belongs to nagara-mo even without も; the tokens cannot tell 知りながら from 見ながら, so the guard needs that list of verbs. In 昔ながら and 涙ながらに the token is a different lexeme, 乍ら 接尾辞-名詞的, so a lexeme check on ながら (助詞-接続助詞) already rejects them; also check that the token before ながら is a 動詞 or 助動詞 in 連用形."
   },
   {
     "id": "rashii",
@@ -67,12 +67,12 @@
     ],
     "subsumes": [],
     "confusables": ["rashii-typical", "sou-hearsay", "you-da", "mitai-da", "to-iu"],
-    "detection": "Hearsay らしい should be tagged 助動詞 with lexeme らしい, while the \"typical of\" らしい is 接尾辞 (形容詞的), lexeme らしい (? check both tags in UniDic 2025.12). Words such as 素晴らしい, かわいらしい and 憎らしい are single 形容詞 tokens and never match. After a plain verb, an adjective or た, らしい is hearsay. After a bare noun the two readings share a surface (子供らしい), so rely on the POS tag and leave the rest ambiguous."
+    "detection": "Hearsay らしい is one token, lexeme らしい, 助動詞 (活用型 助動詞-ラシイ: らしい, らしく, らしかっ + た), while the \"typical of\" らしい is lexeme らしい, 接尾辞-形容詞的. Match the 助動詞 tag only. Words such as 素晴らしい, 可愛らしい (かわいらしい) and 憎らしい are single 形容詞-一般 tokens and never match. After a plain verb, an adjective or た, らしい is hearsay. After a bare noun the two readings share a surface; the tokenizer tags them by context (犯人はあの男らしい gives 助動詞, 子供らしい笑顔 gives 接尾辞), so trust the tag and accept its errors."
   },
   {
     "id": "te-ageru",
     "form": "〜てあげる",
-    "variants": ["〜てあげます", "〜てあげた", "〜てさしあげる"],
+    "variants": ["〜てあげます", "〜てあげた", "〜てさしあげる", "〜たげる"],
     "meaning": "do ~ for someone",
     "kind": "construction",
     "register": "neutral",
@@ -93,7 +93,8 @@
       { "ja": "写真、撮ってあげましょうか？", "match": "てあげましょう", "en": "Shall I take a picture for you?" },
       { "ja": "何か作ってあげたいけど、冷蔵庫が空っぽなんだ。", "match": "てあげたい", "en": "I'd like to make you something, but the fridge is empty." },
       { "ja": "絵本を読んであげると、娘はすぐに寝てしまう。", "match": "であげる", "en": "When I read her a picture book, my daughter falls asleep right away." },
-      { "ja": "先生にお茶をいれてさしあげました。", "match": "てさしあげました", "en": "I made tea for the teacher." }
+      { "ja": "先生にお茶をいれてさしあげました。", "match": "てさしあげました", "en": "I made tea for the teacher." },
+      { "ja": "しょうがないな、教えたげる。", "match": "たげる", "en": "Oh, fine. I'll tell you." }
     ],
     "counterexamples": [
       { "ja": "友達に本を貸して、ノートもあげた。", "en": "I lent my friend a book and gave her a notebook too.", "why": "貸して ends a clause; あげた is the main verb \"gave\" with its own object." },
@@ -103,12 +104,12 @@
     ],
     "subsumes": [],
     "confusables": ["te-kureru", "te-morau", "te-yaru", "ageru"],
-    "detection": "Tokens: 助詞-接続助詞 て/で, then the verb あげる with lexeme 上げる (非自立可能), or さしあげる with lexeme 差し上げる. Require the て/で to follow a verb 連用形 with no comma between て and あげる. 挙げる and 揚げる are separate lexemes and never match. A verb 連用形 directly + 上げる/上がる with no て is the compound ageru. てやる (te-yaru) and てくれる (te-kureru) are the confusable siblings."
+    "detection": "Tokens: 助詞-接続助詞 て/で, then the verb あげる with lexeme 上げる (非自立可能), or さしあげる with lexeme 差し上げる. Require the て/で to follow a verb 連用形 with no comma between て and あげる. UniDic gives 挙げ and 揚げ the same lexeme 上げる, so つけて揚げた has the same tokens as the pattern: also require the surface of the verb to be kana あげ (or 上げ), never 挙げ or 揚げ. The casual contraction たげる (教えたげる) is one token, lexeme たげる, 助動詞, right after the verb 連用形; the rarer だげる (読んだげる) is misread as だ + げる (けり), so a matcher misses it. A verb 連用形 directly + 上げる/上がる with no て is the compound ageru. てやる (te-yaru) and てくれる (te-kureru) are the confusable siblings."
   },
   {
     "id": "nakereba-naranai",
     "form": "〜なければならない",
-    "variants": ["〜なければいけない", "〜なければなりません", "〜なきゃいけない", "〜なきゃならない", "〜なければ (sentence-final)"],
+    "variants": ["〜なければいけない", "〜なければなりません", "〜なきゃいけない", "〜なきゃならない", "〜なければだめ", "〜なきゃだめ", "〜なければ (sentence-final)"],
     "meaning": "must do ~",
     "kind": "construction",
     "register": "neutral",
@@ -126,8 +127,9 @@
       { "ja": "もう行かなきゃいけないんだ、ごめん。", "match": "なきゃいけない", "en": "I've got to go now, sorry." },
       { "ja": "リーダーは誰よりも冷静でなければならない。", "match": "なければならない", "en": "A leader has to stay calmer than anyone else." },
       { "ja": "この薬は毎日飲まなければなりませんか？", "match": "なければなりません", "en": "Do I have to take this medicine every day?" },
-      { "ja": "今夜中にこれを終わらせなきゃならないなんて、無理だよ。", "match": "なきゃならない", "en": "No way I can finish this by tonight." },
-      { "ja": "……行かなければ。彼女が待っている。", "match": "なければ", "en": "...I must go. She's waiting for me." }
+      { "ja": "今夜中にこれを終わらせなきゃならないなんて、無理だよ。", "match": "なきゃならない", "en": "I have to finish this by tonight? No way." },
+      { "ja": "……行かなければ。彼女が待っている。", "match": "なければ", "en": "...I must go. She's waiting for me." },
+      { "ja": "野菜もちゃんと食べなきゃだめだよ。", "match": "なきゃだめ", "en": "You have to eat your vegetables too, you know." }
     ],
     "counterexamples": [
       { "ja": "雨が降らなければ、試合は予定通りです。", "en": "If it doesn't rain, the game goes ahead as planned.", "why": "なければ is a negative conditional \"if not\" followed by a result, with no ならない or いけない." },
@@ -137,7 +139,7 @@
     ],
     "subsumes": [],
     "confusables": ["nakute-wa-ikenai", "nakute-wa-naranai", "nakucha", "neba-naranai", "naito-ikenai", "ba-yokatta"],
-    "detection": "Tokens: 助動詞 ない in 仮定形 なけれ, 接続助詞 ば, then 動詞 なる (lexeme 成る) or いける (lexeme 行ける) + ない / ません. After an adjective's く or after で, ない is tagged 形容詞 (lexeme 無い), so accept both tags. なきゃ is likely a single contracted token of ない (? check UniDic); match it only when いけない or ならない follows, since bare なきゃ is nakucha. Bare なければ counts only at the end of a sentence (before 。, ！, …, or the end of the line); elsewhere it is a conditional. なければよかった is ba-yokatta."
+    "detection": "Tokens: 助動詞 ない in 仮定形 なけれ, 接続助詞 ば, then 動詞 なる (lexeme 成る) or いけ (lexeme 行く, 動詞-非自立可能 下一段-カ行, not 行ける) + ない / ません, or だめ (駄目, 名詞-普通名詞). After an adjective's く or after で, ない is tagged 形容詞 (lexeme 無い), so accept both tags. なきゃ is one token, lexeme ない, 仮定形-融合; match it only when いけない, ならない or だめ follows, since bare なきゃ is nakucha. Bare なければ counts only at the end of a sentence (before 。, ！, …, or the end of the line); elsewhere it is a conditional. なければよかった is ba-yokatta."
   },
   {
     "id": "naito-ikenai",
@@ -153,14 +155,15 @@
       "jlptsensei": "N5"
     },
     "prototype": false,
-    "connection": ["V-nai + といけない", "V-nai + とだめ", "i-Adj-stem + くないといけない", "N + じゃないといけない"],
+    "connection": ["V-nai + といけない", "V-nai + とだめ", "i-Adj-stem + くないといけない", "na-Adj + じゃないといけない", "N + じゃないといけない"],
     "examples": [
       { "ja": "そろそろ帰らないといけない。", "match": "ないといけない", "en": "I need to head home soon." },
       { "ja": "明日までにレポートを出さないといけないんです。", "match": "ないといけない", "en": "I have to hand in my report by tomorrow." },
       { "ja": "パスポートは、有効期限が六か月以上残っていないといけません。", "match": "ないといけません", "en": "Your passport must be valid for at least six more months." },
       { "ja": "毎日練習しないとだめだよ。", "match": "ないとだめ", "en": "You've got to practice every day." },
       { "ja": "洗濯物を取り込まないといけないから、先に帰るね。", "match": "ないといけない", "en": "I've got to bring the laundry in, so I'll head home first." },
-      { "ja": "もっと早く起きないといけなかったのに、寝坊した。", "match": "ないといけなかった", "en": "I should have got up earlier, but I overslept." }
+      { "ja": "もっと早く起きないといけなかったのに、寝坊した。", "match": "ないといけなかった", "en": "I should have got up earlier, but I overslept." },
+      { "ja": "図書館では静かじゃないといけないよ。", "match": "ないといけない", "en": "You have to be quiet in the library." }
     ],
     "counterexamples": [
       { "ja": "急がないと、電車に遅れるよ。", "en": "If we don't hurry, we'll miss the train.", "why": "ないと is the conditional \"if not\" followed by a result clause (nai-to), not いけない." },
@@ -169,12 +172,12 @@
     ],
     "subsumes": ["to-conditional", "nai-to"],
     "confusables": ["nai-to", "nakereba-naranai", "nakute-wa-ikenai", "to-ii"],
-    "detection": "Tokens: 助動詞 ない (終止形), 接続助詞 と, then 動詞 いける (lexeme 行ける) + 助動詞 ない / ます+ん, or the 形状詞 だめ (lexeme 駄目). After an adjective's く or after で/じゃ, ない is tagged 形容詞 (lexeme 無い); accept it there. と followed by a comma and another clause is to-conditional / nai-to \"unless\", and ないといい is to-ii. Bare sentence-final ないと is left to nai-to."
+    "detection": "Tokens: 助動詞 ない (終止形), 接続助詞 と, then いけ (lexeme 行く, 動詞-非自立可能 下一段-カ行, not 行ける) + 助動詞 ない / ませ + ん, or だめ (lexeme 駄目, 名詞-普通名詞). After an adjective's く or after で/じゃ, ない is tagged 形容詞 (lexeme 無い); accept it there, and accept と as 助詞-格助詞 too, since the tagger sometimes gives that after 無い (暗くないと眠れない). と followed by a comma and another clause is to-conditional / nai-to \"unless\", and ないといい is to-ii. Bare sentence-final ないと is left to nai-to."
   },
   {
     "id": "hazu",
     "form": "〜はずだ",
-    "variants": ["〜はず", "〜はずです", "〜はずだった"],
+    "variants": ["〜はず", "〜はずです", "〜はずだった", "〜はずじゃなかった"],
     "meaning": "should be ~ / is expected to ~",
     "kind": "construction",
     "register": "neutral",
@@ -193,22 +196,23 @@
       { "ja": "鍵、ここに置いたはずなんだけどな。", "match": "はず", "en": "I'm sure I left the key here." },
       { "ja": "簡単なはずの仕事に、丸一日かかってしまった。", "match": "はず", "en": "A job that should have been easy took me a whole day." },
       { "ja": "本当なら今ごろハワイにいるはずだったのに。", "match": "はずだった", "en": "I was supposed to be in Hawaii right now." },
-      { "ja": "あなたなら、きっと分かるはずよ。", "match": "はず", "en": "You of all people should understand." }
+      { "ja": "あなたなら、きっと分かるはずよ。", "match": "はず", "en": "You of all people should understand." },
+      { "ja": "こんなはずじゃなかったのに……。", "match": "はず", "en": "It wasn't supposed to turn out like this..." }
     ],
     "counterexamples": [
       { "ja": "そんなことがあるはずがない。", "en": "There's no way that could happen.", "why": "はずがない is the separate pattern hazu-ga-nai \"no way\"." },
       { "ja": "恥ずかしくて顔が上げられない。", "en": "I'm too embarrassed to look up.", "why": "はず is only part of the adjective 恥ずかしい." },
       { "ja": "転んだはずみに眼鏡が飛んだ。", "en": "When I fell, my glasses flew off.", "why": "はずみ (弾み, momentum) is a different noun." },
-      { "ja": "くじはまたはずれだった。", "en": "The lottery ticket was another dud.", "why": "はずれ is the noun 外れ \"miss\", not はず." }
+      { "ja": "くじはまたはずれだった。", "en": "The lottery ticket was another dud.", "why": "はずれ is 外れる \"miss\" (a 動詞 token in 連用形), not はず." }
     ],
     "subsumes": [],
     "confusables": ["hazu-ga-nai", "beki-da", "ni-chigainai", "deshou-darou"],
-    "detection": "はず is a 名詞 (普通名詞, used as a formal noun) with lexeme 筈. Matching on the lexeme rules out 恥ずかしい, 外れ and 弾み. It follows a verb or adjective 連体形, な after a na-adjective, or の after a noun, and is usually followed by だ, です, なのに, だった or の. If が/は/も + ない follows (or ない directly), it is hazu-ga-nai."
+    "detection": "はず is a 名詞 (普通名詞, used as a formal noun) with lexeme 筈. Matching on the lexeme rules out 恥ずかしい, 外れる (はずれ) and 弾み, which are all single tokens of their own. It follows a verb or adjective 連体形, な after a na-adjective, or の after a noun, and is usually followed by だ, です, なのに, だった or の. If が/は/も + ない follows (or ない directly), it is hazu-ga-nai; はずじゃない and はずではない (筈 + だ 連用形-融合 じゃ or で + 無い) deny an expectation and stay hazu (こんなはずじゃなかった)."
   },
   {
     "id": "te-hoshii",
     "form": "〜てほしい",
-    "variants": ["〜てほしいです", "〜ないでほしい", "〜て欲しい", "〜てほしかった"],
+    "variants": ["〜てほしいです", "〜ないでほしい", "〜て欲しい", "〜てほしかった", "〜てほしくない"],
     "meaning": "want someone to do ~",
     "kind": "construction",
     "register": "neutral",
@@ -225,9 +229,10 @@
       { "ja": "もう少しゆっくり話してほしい。", "match": "てほしい", "en": "I wish you'd speak a little more slowly." },
       { "ja": "母には長生きしてほしいです。", "match": "てほしいです", "en": "I want my mother to live a long life." },
       { "ja": "誰にも言わないでほしいんだけど、実は転職するんだ。", "match": "ないでほしい", "en": "Please don't tell anyone, but I'm actually changing jobs." },
-      { "ja": "一緒に来てほしかったな。", "match": "てほしかった", "en": "I wish you'd come with me." },
+      { "ja": "一緒に来てほしかったな。", "match": "てほしかった", "en": "I wanted you to come with me." },
       { "ja": "手伝って欲しいことがあるなら、遠慮なく言って。", "match": "て欲しい", "en": "If there's anything you want help with, just say so." },
-      { "ja": "先生に作文を読んでほしいと思っています。", "match": "でほしい", "en": "I'd like my teacher to read my essay." }
+      { "ja": "先生に作文を読んでほしいと思っています。", "match": "でほしい", "en": "I'd like my teacher to read my essay." },
+      { "ja": "君にだけは、そんなこと言ってほしくなかった。", "match": "てほしくなかった", "en": "You're the last person I wanted to hear that from." }
     ],
     "counterexamples": [
       { "ja": "新しいパソコンがほしい。", "en": "I want a new computer.", "why": "N + がほしい is wanting a thing (ga-hoshii), with no て-form." },
@@ -236,7 +241,7 @@
     ],
     "subsumes": [],
     "confusables": ["ga-hoshii", "te-morau", "te-kudasai", "tai"],
-    "detection": "Tokens: 助詞-接続助詞 て/で right after a verb 連用形 (or after 助動詞 ない for ないで), then 形容詞 ほしい with lexeme 欲しい (非自立可能). A comma or sentence break between て and ほしい cancels the match. ほしい after a noun + が/は/も is ga-hoshii. てもらいたい means the same but belongs to te-morau with tai."
+    "detection": "Tokens: 助詞-接続助詞 て/で right after a verb 連用形 (or after 助動詞 ない for ないで), then 形容詞 ほしい with lexeme 欲しい (形容詞-非自立可能, any form: ほしい, ほしく + ない, ほしかっ + た). ga-hoshii uses the same token, so the て/で before it is the only sign. A comma or sentence break between て and ほしい cancels the match. ほしい after a noun + が/は/も is ga-hoshii. てもらいたい means the same but belongs to te-morau with tai."
   },
   {
     "id": "te-aru",
@@ -266,11 +271,11 @@
     "counterexamples": [
       { "ja": "彼は優秀な学生である。", "en": "He is an excellent student.", "why": "である is the formal copula (de-aru) after a noun, not a verb て-form + ある." },
       { "ja": "駅まで歩いて、ある店に入った。", "en": "I walked to the station and went into a certain shop.", "why": "歩いて ends the clause; ある is the prenominal \"a certain\"." },
-      { "ja": "窓が開いている。", "en": "The window is open.", "why": "Intransitive verb + ている (te-iru) describes the state without implying someone did it." }
+      { "ja": "財布をなくして、あるのは小銭だけだ。", "en": "I lost my wallet, and all I have is loose change.", "why": "なくして ends the clause; ある is the main verb \"have\" of the next one, with the same lexeme 有る." }
     ],
     "subsumes": [],
     "confusables": ["te-iru", "te-oku", "de-aru"],
-    "detection": "Tokens: 助詞-接続助詞 て/で right after a verb 連用形, then 動詞 ある with lexeme 有る (非自立可能). で after a noun or na-adjective is 助動詞 だ (copula), so で + ある there is de-aru. ある as 連体詞 (lexeme 或る) is a different POS and never matches. Usually the verb is transitive; ている on an intransitive verb is te-iru."
+    "detection": "Tokens: 助詞-接続助詞 て/で right after a verb 連用形, then 動詞 ある with lexeme 有る (動詞-非自立可能; ある, あり + ます, あっ + た). The main verb ある has the same lexeme and tag, so require て and ある to be adjacent with no comma. で after a noun or na-adjective is 助動詞 だ (copula), so で + ある there is de-aru. ある as 連体詞 (lexeme 或る) is a different POS and never matches. Usually the verb is transitive; ている on an intransitive verb is te-iru."
   },
   {
     "id": "ka-douka",
@@ -304,7 +309,7 @@
     ],
     "subsumes": [],
     "confusables": ["ka-ina-ka", "interrogative-ka", "ka-to-omou"],
-    "detection": "Tokens: 助詞 か, 副詞 どう (lexeme 如何), 助詞 か; UniDic may also treat どうか as one adverb (? check). The first か must follow a plain-form predicate or a noun, not an interrogative such as 何 or 誰 (interrogative-ka). Standalone どうか \"please\" has no か before it. か否か is the separate entry ka-ina-ka."
+    "detection": "Tokens: か (助詞-副助詞, sometimes tagged 助詞-終助詞, so accept both), どう (lexeme どう, 副詞), か (助詞-副助詞); どうか is never one token, also not in the standalone \"please\" (どう + か). The first か must follow a plain-form predicate or a noun, not an interrogative such as 何 or 誰 (interrogative-ka). Standalone どうか \"please\" has no か before it, and in 何かどうしても the token after どう is し, not か. か否か is the separate entry ka-ina-ka."
   },
   {
     "id": "toki",
@@ -338,7 +343,7 @@
     ],
     "subsumes": [],
     "confusables": ["koro", "aida-ni", "tara", "baai-wa", "uchi-ni"],
-    "detection": "とき/時 is 名詞-普通名詞-副詞可能 with lexeme 時, reading トキ. Count it only when the token before ends a modifying clause: a verb, adjective or auxiliary in 連体形, な after a na-adjective, or の after a noun. 時 after a numeral is the counter ジ (check the reading); その/この/あの/どの時, 時々 and compounds such as 時計 never count."
+    "detection": "とき/時 is 名詞-普通名詞-副詞可能 with lexeme 時, reading トキ. Count it only when the token before ends a modifying clause: a verb, adjective or auxiliary in 連体形, な after a na-adjective, or の after a noun. 時 after a numeral has the same lexeme 時 but reading ジ and 名詞-普通名詞-助数詞可能 (とき is 副詞可能, reading トキ), so check the reading or the 名詞-数詞 before it; その/この/あの/どの時 never count, and 時々 (ときどき) and 時計 are single tokens of their own lexeme."
   },
   {
     "id": "sou-hearsay",
@@ -373,7 +378,7 @@
     ],
     "subsumes": [],
     "confusables": ["sou-appearance", "rashii", "to-iu", "to-kiita", "toka-hearsay"],
-    "detection": "The token before decides it: hearsay そう follows a 終止形 (plain verb or adjective, or だ/だった after a noun or na-adjective); appearance そう follows a verb 連用形 or an adjective stem. UniDic may tag hearsay as 助動詞 そうだ and appearance as 形状詞-助動詞語幹 そう (? check). Hearsay has no そうな or そうに forms, so those are always appearance. そう at the start of a sentence or after a comma is the adverb 然う."
+    "detection": "The token before decides it: hearsay そう follows a 終止形 (plain verb or adjective, or だ/だった after a noun or na-adjective); appearance そう follows a verb 連用形 or an adjective stem. UniDic gives them different lexemes: hearsay is そう-伝聞 (名詞-助動詞語幹) + だ/です/で, appearance is そう-様態 (形状詞-助動詞語幹), so the lexeme alone decides. Hearsay has no そうな or そうに forms, so those are always appearance. そう at the start of a sentence or after a comma is the adverb そう (lexeme そう, 副詞)."
   },
   {
     "id": "you-ni-naru",
@@ -394,7 +399,7 @@
     "connection": ["V-dict + ようになる", "V-nai + ようになる", "V-nai-stem + なくなる"],
     "examples": [
       { "ja": "日本語の新聞が読めるようになった。", "match": "ようになった", "en": "I can read Japanese newspapers now." },
-      { "ja": "最近、よく眠れるようになりました。", "match": "ようになりました", "en": "I've been sleeping well lately." },
+      { "ja": "最近、よく眠れるようになりました。", "match": "ようになりました", "en": "I've started sleeping well lately." },
       { "ja": "毎朝走るようになってから、体の調子がいい。", "match": "ようになって", "en": "Since I started running every morning, I've felt great." },
       { "ja": "練習すれば、誰でも弾けるようになりますよ。", "match": "ようになります", "en": "With practice, anyone can learn to play it." },
       { "ja": "子どもが野菜を食べるようになるまで、ずいぶんかかった。", "match": "ようになる", "en": "It took ages before my kid would eat vegetables." },
@@ -407,7 +412,7 @@
     ],
     "subsumes": ["you-ni", "ku-ni-naru"],
     "confusables": ["you-ni-suru", "ku-ni-naru", "you-ni", "no-you-na", "koto-ni-naru"],
-    "detection": "Tokens: よう (形状詞-助動詞語幹, lexeme 様? check), に (助動詞 だ 連用形), then 動詞 なる (lexeme 成る). Require a verb 連体形 or 助動詞 ない directly before よう; の before よう means likeness (no-you-na). The negative variant is 助動詞 ない in 連用形 なく after a verb 未然形, then 成る. The verb 無くなる (after が or at a clause start) is a different word. When this matches, the ように and になる inside must not also count as you-ni or ku-ni-naru."
+    "detection": "Tokens: よう (lexeme 様, 形状詞-助動詞語幹), に (lexeme だ, 助動詞, 連用形-ニ), then なる (lexeme 成る, 動詞-非自立可能). Require a verb 連体形 or 助動詞 ない directly before よう; の before よう means likeness (no-you-na). The negative variant is 助動詞 ない in 連用形 なく after a verb 未然形, then 成る. The verb なくなる \"disappear\" is one token with lexeme 無くなる, so it never matches the two tokens なく + なる. When this matches, the ように and になる inside must not also count as you-ni or ku-ni-naru."
   },
   {
     "id": "koto-ga-dekiru",
@@ -445,7 +450,7 @@
   {
     "id": "ru-tokoro",
     "form": "〜るところだ (about to)",
-    "variants": ["〜ところ", "〜ところです"],
+    "variants": ["〜ところ", "〜ところです", "〜とこ"],
     "meaning": "about to do ~",
     "kind": "construction",
     "register": "neutral",
@@ -464,22 +469,24 @@
       { "ja": "映画、もう始まるところだよ。早く座って！", "match": "ところだ", "en": "The movie's about to start. Sit down, quick!" },
       { "ja": "「もう寝た？」「ううん、これから寝るところ。」", "match": "ところ", "en": "\"Are you asleep?\" \"No, I'm about to go to bed.\"" },
       { "ja": "これから会議が始まるところなので、後でかけ直します。", "match": "ところ", "en": "A meeting's about to start, so I'll call you back later." },
-      { "ja": "これから彼女にプロポーズするところなんだ。緊張するよ。", "match": "ところ", "en": "I'm about to propose to her. I'm so nervous." }
+      { "ja": "これから彼女にプロポーズするところなんだ。緊張するよ。", "match": "ところ", "en": "I'm about to propose to her. I'm so nervous." },
+      { "ja": "今から出るとこだよ。", "match": "とこ", "en": "I'm just heading out now." }
     ],
     "counterexamples": [
       { "ja": "今、ご飯を食べているところです。", "en": "I'm in the middle of eating.", "why": "ている + ところ is \"in the middle of\" (te-iru-tokoro)." },
       { "ja": "さっき帰ってきたところだ。", "en": "I just got back.", "why": "た + ところ is \"just did\" (ta-tokoro)." },
       { "ja": "駅に近いところに住みたい。", "en": "I want to live somewhere near the station.", "why": "ところ is the noun \"place\"." },
-      { "ja": "もう少しで車にひかれるところだった。", "en": "I was nearly hit by a car.", "why": "もう少しで〜ところだった is \"almost\" (tokoro-datta)." }
+      { "ja": "もう少しで車にひかれるところだった。", "en": "I was nearly hit by a car.", "why": "もう少しで〜ところだった is \"almost\" (tokoro-datta)." },
+      { "ja": "終電を逃して、今夜は寝るところもない。", "en": "I missed the last train, and I don't even have a place to sleep tonight.", "why": "寝るところ is \"a place to sleep\"; ところ is the noun \"place\" with も after it." }
     ],
     "subsumes": [],
     "confusables": ["te-iru-tokoro", "ta-tokoro", "tokoro-datta", "tokoro-ni", "tokoro-o", "you-to-suru"],
-    "detection": "Tokens: a verb in non-past 連体形, then 名詞 ところ (lexeme 所), then だ/です/なんだ/なので or the end of the sentence. Exclude when the verb is ている/てる (te-iru-tokoro) or when 助動詞 た comes before ところ (ta-tokoro). ところだった is tokoro-datta, and ところに/へ/を/で belong to other patterns. ところ as \"place\" follows an adjective or takes に住む-style verbs; cues such as これから, 今から, ちょうど or もう make the \"about to\" reading safe."
+    "detection": "Tokens: a verb in non-past 連体形, then 名詞 ところ or the casual とこ (both lexeme 所, 名詞-普通名詞), then だ/です/なんだ/なので or the end of the sentence. ところ + が/も/は after a verb is usually \"place\" (寝るところもない). Exclude when the verb is ている (居る) or the 助動詞 てる (te-iru-tokoro) or when 助動詞 た comes before ところ (ta-tokoro). ところだった is tokoro-datta, and ところに/へ/を/で belong to other patterns. ところ as \"place\" follows an adjective or takes に住む-style verbs; cues such as これから, 今から, ちょうど or もう make the \"about to\" reading safe."
   },
   {
     "id": "te-iru-tokoro",
     "form": "〜ているところだ",
-    "variants": ["〜ているところ", "〜てるところ", "〜ているところです"],
+    "variants": ["〜ているところ", "〜てるところ", "〜ているところです", "〜てるとこ"],
     "meaning": "in the middle of doing ~",
     "kind": "construction",
     "register": "neutral",
@@ -498,7 +505,8 @@
       { "ja": "その件については、現在調査しているところでございます。", "match": "ているところ", "en": "We are currently looking into that matter." },
       { "ja": "ちょうどあなたのことを話しているところだったの。", "match": "ているところ", "en": "We were just talking about you." },
       { "ja": "電車で移動してるところなんで、あとでかけ直しますね。", "match": "てるところ", "en": "I'm on the train right now, so I'll call you back later." },
-      { "ja": "ちょうどその本を読んでいるところなんだ。", "match": "でいるところ", "en": "I'm actually reading that book right now." }
+      { "ja": "ちょうどその本を読んでいるところなんだ。", "match": "でいるところ", "en": "I'm actually reading that book right now." },
+      { "ja": "いま髪乾かしてるとこだから、ちょっと待って。", "match": "てるとこ", "en": "I'm drying my hair right now, so hang on." }
     ],
     "counterexamples": [
       { "ja": "彼が住んでいるところは駅から遠い。", "en": "The place he lives is far from the station.", "why": "ところ is the noun \"place\" modified by a ている clause." },
@@ -507,12 +515,12 @@
     ],
     "subsumes": ["te-iru"],
     "confusables": ["ru-tokoro", "ta-tokoro", "tokoro-ni", "saichuu-ni", "te-iru"],
-    "detection": "Tokens: 助詞-接続助詞 て/で, 動詞 いる (lexeme 居る) or the contraction てる (? may be one token with lexeme 居る), then 名詞 ところ (lexeme 所), then だ/です/でございます/なんだ or the end of the sentence. ところ followed by に/へ/を is tokoro-ni or a scene object, and ところ followed by は/が/の, or used with location verbs, is the noun \"place\". When this matches, te-iru must not also count."
+    "detection": "Tokens: 助詞-接続助詞 て/で, 動詞 いる (lexeme 居る, 動詞-非自立可能), or instead of both the contraction てる (one token, lexeme てる, 助動詞, right after the verb 連用形), then 名詞 ところ or the casual とこ (both lexeme 所), then だ/だった/です/でございます/なんだ or the end of the sentence. ているところだった (\"was in the middle of\") stays here; tokoro-datta \"almost\" follows a plain non-past verb. ところ followed by に/へ/を is tokoro-ni or a scene object, and ところ followed by は/が/の, or used with location verbs, is the noun \"place\". When this matches, te-iru must not also count."
   },
   {
     "id": "ta-tokoro",
     "form": "〜たところ",
-    "variants": ["〜たところだ", "〜たところです"],
+    "variants": ["〜たところだ", "〜たところです", "〜たとこ"],
     "meaning": "just did ~",
     "kind": "construction",
     "register": "neutral",
@@ -531,7 +539,8 @@
       { "ja": "「もしもし、今どこ？」「家に帰ってきたところ。」", "match": "たところ", "en": "\"Hello, where are you?\" \"I just got home.\"" },
       { "ja": "試合はさっき始まったところだから、まだ間に合うよ。", "match": "たところだ", "en": "The game only just started, so you can still make it." },
       { "ja": "薬を飲んだところだから、少し休むね。", "match": "だところ", "en": "I just took my medicine, so I'll rest a bit." },
-      { "ja": "会議がたった今終わったところですので、すぐに伺います。", "match": "たところです", "en": "The meeting has just ended, so I'll come over right away." }
+      { "ja": "会議がたった今終わったところですので、すぐに伺います。", "match": "たところです", "en": "The meeting has just ended, so I'll come over right away." },
+      { "ja": "ごめん、今起きたとこ。", "match": "たとこ", "en": "Sorry, I just woke up." }
     ],
     "counterexamples": [
       { "ja": "先生に相談したところ、すぐに返事をくれた。", "en": "When I asked my teacher for advice, they replied right away.", "why": "たところ、+ result clause is \"when I did ~\" (ta-tokoro-kekka)." },
@@ -540,7 +549,7 @@
     ],
     "subsumes": [],
     "confusables": ["ta-bakari", "ta-tokoro-kekka", "ta-tokoro-de", "ru-tokoro", "te-iru-tokoro"],
-    "detection": "Tokens: 助動詞 た/だ (lexeme た), then 名詞 ところ (lexeme 所), then だ/です/なんだ/だから or the end of the sentence. ところ followed by a comma and a past-tense clause is ta-tokoro-kekka. ところで is ta-tokoro-de, and ところに/へ/を or a location verb after it means \"place\" or another pattern. Learners confuse it with ta-bakari, which allows a longer gap since the action."
+    "detection": "Tokens: 助動詞 た/だ (lexeme た, 連体形), then 名詞 ところ or the casual とこ (both lexeme 所), then だ/です/なんだ/だから or the end of the sentence. ところ followed by a comma and a past-tense clause is ta-tokoro-kekka. ところで is ta-tokoro-de, and ところに/へ/を or a location verb after it means \"place\" or another pattern. Learners confuse it with ta-bakari, which allows a longer gap since the action."
   },
   {
     "id": "you-ni-suru",
@@ -563,17 +572,17 @@
       { "ja": "遅刻しないようにしてください。", "match": "ようにしてください", "en": "Please make sure you're not late." },
       { "ja": "これからはもっと早く寝るようにする。", "match": "ようにする", "en": "From now on I'll try to go to bed earlier." },
       { "ja": "夜は甘いものを食べないようにしてるんだけど、なかなか難しい。", "match": "ようにしてる", "en": "I try not to eat sweets at night, but it's tough." },
-      { "ja": "なるべく階段を使うようにしたら、少し痩せた。", "match": "ようにした", "en": "I started taking the stairs when I could, and lost a bit of weight." },
+      { "ja": "なるべく階段を使うようにしたら、少し痩せた。", "match": "ようにしたら", "en": "I started taking the stairs when I could, and lost a bit of weight." },
       { "ja": "次からは気をつけるようにします。", "match": "ようにします", "en": "I'll be more careful next time." }
     ],
     "counterexamples": [
       { "ja": "遅れないように、早めに家を出た。", "en": "I left home early so I wouldn't be late.", "why": "Purpose ように (you-ni) followed by a separate action, not する." },
       { "ja": "早く帰るように言われた。", "en": "I was told to come home early.", "why": "ように + 言う is a reported request (you-ni-iu)." },
-      { "ja": "じゃあ、私は赤いのにする。", "en": "Then I'll go with the red one.", "why": "の + にする is choosing (ni-suru), with no よう." }
+      { "ja": "兄が言うようにしたら、本当にうまくいった。", "en": "I did it the way my brother said, and it really worked.", "why": "言うように is \"the way he says\" and する is \"do it\"; nothing is a habit or an effort." }
     ],
     "subsumes": ["you-ni", "ni-suru"],
     "confusables": ["you-ni-naru", "you-ni", "you-ni-iu", "koto-ni-suru"],
-    "detection": "Tokens: よう (形状詞-助動詞語幹, lexeme 様? check), に (助動詞 だ 連用形), then 動詞 する (lexeme 為る). Require a verb 連体形 or 助動詞 ない directly before よう; N + のように is likeness (no-you-na). ように followed by 言う, 頼む, 祈る or 伝える is you-ni-iu / you-ni-inoru, and ように followed by a comma or another verb is purpose you-ni. When this matches, the ように and にする inside must not also count."
+    "detection": "Tokens: よう (lexeme 様, 形状詞-助動詞語幹), に (lexeme だ, 助動詞, 連用形-ニ), then する (lexeme 為る, 動詞-非自立可能). Require a verb 連体形 or 助動詞 ない directly before よう; N + のように is likeness (no-you-na). ように followed by 言う, 頼む, 祈る or 伝える is you-ni-iu / you-ni-inoru, and ように followed by a comma or another verb is purpose you-ni. After 言う, 書く or 教わる + ように, ようにする can mean \"do it the way ~ says\" with the same tokens (兄が言うようにしたら); accept that rare false positive. When this matches, the ように and にする inside must not also count."
   },
   {
     "id": "no-you-na",
@@ -593,7 +602,7 @@
     "prototype": false,
     "connection": ["N + のような", "N + のように", "V-plain + ような", "V-plain + ように"],
     "examples": [
-      { "ja": "彼女は天使のような人だ。", "match": "のような", "en": "She's an angel of a person." },
+      { "ja": "彼女は天使のような人だ。", "match": "のような", "en": "She's like an angel." },
       { "ja": "雪のように白い肌をしている。", "match": "のように", "en": "Her skin is white as snow." },
       { "ja": "夢を見ているような気分です。", "match": "ような", "en": "I feel like I'm dreaming." },
       { "ja": "その子はまるで赤ちゃんのように泣き出した。", "match": "のように", "en": "The kid burst into tears like a baby." },
@@ -603,16 +612,17 @@
     "counterexamples": [
       { "ja": "風邪をひかないように気をつけて。", "en": "Take care not to catch a cold.", "why": "ように after a negative verb is purpose (you-ni), not likeness." },
       { "ja": "どうやら彼は留守のようだ。", "en": "It seems he's not home.", "why": "Sentence-final のようだ is inference (you-da), not likeness." },
-      { "ja": "漢字が少し読めるようになった。", "en": "I can read a few kanji now.", "why": "ようになる is \"come to\" (you-ni-naru)." }
+      { "ja": "漢字が少し読めるようになった。", "en": "I can read a few kanji now.", "why": "ようになる is \"come to\" (you-ni-naru)." },
+      { "ja": "その笑顔は、まるで花が咲いたようだった。", "en": "Her smile was like a flower coming into bloom.", "why": "Predicative ようだ/ようだった belongs to you-da even in a likeness reading; this entry owns only ような and ように." }
     ],
     "subsumes": [],
     "confusables": ["you-da", "mitai-da", "you-ni", "rashii"],
-    "detection": "Tokens: の (格助詞) after a noun, or a verb 連体形, then よう (形状詞-助動詞語幹, lexeme 様? check), then な or に (助動詞 だ). よう + だ/です at the end is inference (you-da). ように followed by なる, する or 言う is you-ni-naru, you-ni-suru or you-ni-iu, and ように after a negative or potential verb in a purpose clause is you-ni. まるで before it signals likeness. Likeness ような after a verb shares its surface with the ような form of you-da, so the two overlap."
+    "detection": "Tokens: の (助詞-格助詞) after a noun, or a verb or auxiliary in 連体形 (often た), then よう (lexeme 様, 形状詞-助動詞語幹), then な (lexeme だ, 連体形-一般) or に (lexeme だ, 連用形-ニ). The token after よう decides the owner against you-da: よう + な or に is this entry, also after a verb where the sense is a guess (何か隠しているような顔), and よう + だ, です, で, だっ or でし is you-da, also in a likeness sense (まるで夢のようだ). ように followed by なる, する, 言う, 祈る or 見える is you-ni-naru, you-ni-suru, you-ni-iu, you-ni-inoru or you-ni-mieru, ような + 気がする is you-na-ki-ga-suru, and ように after a non-past negative or potential verb is purpose you-ni. まるで before it signals likeness."
   },
   {
     "id": "janai-ka",
     "form": "〜じゃないか",
-    "variants": ["〜ではないか", "〜ではありませんか", "〜ようじゃないか"],
+    "variants": ["〜ではないか", "〜ではありませんか", "〜ようじゃないか", "〜じゃねえか"],
     "meaning": "isn't it? / come on, let's ~",
     "kind": "construction",
     "register": "spoken",
@@ -631,7 +641,8 @@
       { "ja": "よし、やってやろうじゃないか。", "match": "じゃないか", "en": "All right, let's show them what we can do." },
       { "ja": "結構うまいじゃないか、この店。", "match": "じゃないか", "en": "This place is pretty good, isn't it?" },
       { "ja": "約束したではないか。なぜ来なかったのだ。", "match": "ではないか", "en": "You promised, didn't you? Why didn't you come?" },
-      { "ja": "皆で力を合わせて、この町を守ろうではありませんか。", "match": "ではありませんか", "en": "Let us all join forces and protect this town." }
+      { "ja": "皆で力を合わせて、この町を守ろうではありませんか。", "match": "ではありませんか", "en": "Let us all join forces and protect this town." },
+      { "ja": "なんだよ、全然平気じゃねえか。", "match": "じゃねえか", "en": "What the heck, you're totally fine!" }
     ],
     "counterexamples": [
       { "ja": "これは私のかばんじゃない。", "en": "This isn't my bag.", "why": "じゃない without か is a plain negative copula." },
@@ -641,7 +652,7 @@
     ],
     "subsumes": [],
     "confusables": ["ja-nai-kakunin", "n-ja-nai", "no-dewa-nai-darou-ka", "ka-to-omou"],
-    "detection": "Tokens: じゃ (助動詞 だ + は contracted; UniDic may give lexeme だ, ? check) or で + は, then ない (形容詞, lexeme 無い, 非自立) or あり + ませ + ん, then 終助詞 か. Exclude when ん/の comes right before (a guess, no-dewa-nai-darou-ka), when と思う follows (ka-to-omou), and when かな follows. A volitional form before it gives the \"let's\" reading. じゃん and じゃないですか are ja-nai-kakunin."
+    "detection": "Tokens: じゃ (lexeme だ, 助動詞, 連用形-融合) or で + は (で is 助動詞 だ after a noun, but 助詞-格助詞 after た: 約束したではないか, so accept both), then ない (lexeme 無い, 形容詞-非自立可能; the casual ねえ and ねー get the same lexeme) or あり + ませ + ん, then か (助詞-終助詞). Exclude when ん/の comes right before (a guess, no-dewa-nai-darou-ka), when と思う follows (ka-to-omou), and when かな follows. A volitional form before it gives the \"let's\" reading. じゃん and じゃないですか are ja-nai-kakunin."
   },
   {
     "id": "koto-ni-suru",
@@ -665,7 +676,7 @@
       { "ja": "毎朝三十分歩くことにしている。", "match": "ことにしている", "en": "I make it a rule to walk for thirty minutes every morning." },
       { "ja": "お酒はしばらく飲まないことにしたんだ。", "match": "ことにした", "en": "I've decided to stay off alcohol for a while." },
       { "ja": "迷ったけど、引っ越すことにして、先週部屋を決めた。", "match": "ことにして", "en": "I went back and forth, but I decided to move and picked a place last week." },
-      { "ja": "じゃあ、今回は割り勘にすることにしよう。", "match": "ことにしよう", "en": "OK, let's split the bill this time." }
+      { "ja": "じゃあ、今日は早めに切り上げることにしよう。", "match": "ことにしよう", "en": "OK, let's wrap up early today." }
     ],
     "counterexamples": [
       { "ja": "何もなかったことにしよう。", "en": "Let's pretend nothing happened.", "why": "V-ta + ことにする is \"treat as if\" (ta-koto-ni-suru)." },
@@ -695,7 +706,7 @@
     "connection": ["V-dict + ことになる", "V-nai + ことになる", "V-ta + ことになる"],
     "examples": [
       { "ja": "来月から大阪で働くことになりました。", "match": "ことになりました", "en": "I'll be working in Osaka from next month." },
-      { "ja": "結局、私が幹事をやることになった。", "match": "ことになった", "en": "In the end, I got stuck organizing the party." },
+      { "ja": "結局、私が幹事をやることになった。", "match": "ことになった", "en": "In the end, I ended up as the one organizing it." },
       { "ja": "一日三時間勉強すれば、一年で千時間以上勉強することになる。", "match": "ことになる", "en": "Three hours a day adds up to over a thousand hours a year." },
       { "ja": "契約を破れば、違約金を払うことになりますよ。", "match": "ことになります", "en": "If you break the contract, you'll end up paying a penalty." },
       { "ja": "二人は来年の春に結婚することになったそうです。", "match": "ことになった", "en": "I hear the two of them are getting married next spring." },
@@ -742,12 +753,12 @@
     ],
     "subsumes": [],
     "confusables": ["hou-ga-ii", "yori-hou-ga"],
-    "detection": "Count 方 tagged 接尾辞 with lexeme 方, reading カタ, directly after a verb 連用形; 名詞 方 read ホウ (side, comparison) and 方 カタ \"person\" are different. Some forms such as 読み方 or やり方 may be a single noun token in UniDic (? check), so also accept a noun token ending in 方/かた whose reading ends in カタ. 仕方 (lexeme 仕方) counts only as N + の + 仕方; exclude 仕方がない and 仕方ない."
+    "detection": "Count 方 or かた tagged 接尾辞-名詞的 with lexeme 方 directly after a verb 連用形; 読み方, やり方 and 使いかた all split into the verb + this suffix. The noun 方 (名詞-普通名詞, ほう \"side, comparison\" or かた \"person\") has the same lexeme but another tag, so the 接尾辞 tag and the verb before it decide. 仕方 (lexeme 仕方) counts only as N + の + 仕方; exclude 仕方がない and 仕方ない."
   },
   {
     "id": "ta-bakari",
     "form": "〜たばかり",
-    "variants": ["〜たばかりだ", "〜たばっかり", "〜たばかりの"],
+    "variants": ["〜たばかりだ", "〜たばっかり", "〜たばっか", "〜たばかりの"],
     "meaning": "just did ~",
     "kind": "construction",
     "register": "neutral",
@@ -767,16 +778,17 @@
       { "ja": "買ったばっかりのスマホを落としちゃった。", "match": "たばっかり", "en": "I dropped my brand-new phone." },
       { "ja": "生まれたばかりの赤ちゃんって、本当に小さいね。", "match": "たばかり", "en": "Newborn babies are so tiny, aren't they?" },
       { "ja": "まだ始めたばかりだから、うまくできなくて当然だよ。", "match": "たばかり", "en": "You've only just started, so of course you can't do it well yet." },
-      { "ja": "この前読んだばかりの小説が、もう映画になるらしい。", "match": "だばかり", "en": "The novel I just read is apparently being made into a movie already." }
+      { "ja": "この前読んだばかりの小説が、もう映画になるらしい。", "match": "だばかり", "en": "The novel I just read is apparently being made into a movie already." },
+      { "ja": "ごめん、まだ家を出たばっかなんだ。", "match": "たばっか", "en": "Sorry, I've only just left the house." }
     ],
     "counterexamples": [
-      { "ja": "弟は毎日ゲームばかりしている。", "en": "My little brother does nothing but play games all day.", "why": "N + ばかり is \"only\" (bakari)." },
+      { "ja": "弟は毎日ゲームばかりしている。", "en": "My little brother does nothing but play games every day.", "why": "N + ばかり is \"only\" (bakari)." },
       { "ja": "彼女は泣いてばかりいる。", "en": "She does nothing but cry.", "why": "て + ばかり is \"doing nothing but\" (te-bakari)." },
       { "ja": "駅で三十分ばかり待った。", "en": "I waited at the station for about thirty minutes.", "why": "Number + ばかり is an approximation (bakari-approx)." },
       { "ja": "財布を落としたばかりか、携帯までなくした。", "en": "Not only did I lose my wallet, I lost my phone too.", "why": "たばかりか is \"not only\" (bakari-ka)." }
     ],
     "subsumes": ["bakari"],
     "confusables": ["ta-tokoro", "te-bakari", "bakari", "bakari-ka", "bakari-ni"],
-    "detection": "Tokens: 助動詞 た/だ (lexeme た), then 副助詞 ばかり (lexeme 許り; ばっかり is probably a variant form of the same lexeme, ? check). ばかり after a noun or a て-form is bakari / te-bakari, after a numeral it is bakari-approx, and たばかりか / たばかりに are bakari-ka / bakari-ni. When this matches, bakari must not also count."
+    "detection": "Tokens: 助動詞 た/だ (lexeme た), then ばかり, ばっかり or ばっか, all one token with lexeme ばかり, 助詞-副助詞. ばかり after a noun or a て-form is bakari / te-bakari, after a numeral it is bakari-approx, and たばかりか / たばかりに are bakari-ka / bakari-ni. When this matches, bakari must not also count."
   }
 ]
