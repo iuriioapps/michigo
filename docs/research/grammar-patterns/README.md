@@ -45,8 +45,30 @@ A different agent from the one that wrote the batch reviews it with `BRIEF-REVIE
 
 Commit the details and logs for each batch on this branch, then tick the batch in its issue. The branch is never merged.
 
+## Tools
+
+| Tool | What it does |
+| --- | --- |
+| `tools/validate.mjs` | Checks the keys, counts and references of details files |
+| `tools/tokenize.mjs` | Prints the UniDic 2025.12 tokens of an entry's sentences, the match marked, and lists matches that cut a token |
+| `tools/render.mjs` | Writes a review page that shows each entry as the learner's grammar tab will |
+
+### Set up the tokenizer
+
+`tokenize.mjs` needs the native `lindera` 6.2.0 package and a built UniDic 2025.12 dictionary, both outside the repo.
+
+1. Install the package in an empty folder: `npm install lindera@6.2.0`.
+2. Re-run the `UniDic build spike` workflow of the `research/tokenizer-spike` branch, and download its `unidic-202512-lindera` artifact. The artifact is kept for 3 days.
+3. Set `LINDERA` to the package folder and `UNIDIC` to the dictionary folder.
+
+```text
+node docs/research/grammar-patterns/tools/tokenize.mjs te-iru
+node docs/research/grammar-patterns/tools/tokenize.mjs --misaligned b01
+node docs/research/grammar-patterns/tools/tokenize.mjs --text 何してるの？
+```
+
 ## Limits
 
-- No UniDic 2025.12 build was available, so the `detection` hints come from the model's knowledge of UniDic. A lexeme marked `?` is a guess. The implementation checks every matcher against the real tokenizer.
+- The detail step ran without a UniDic 2025.12 build, so its `detection` hints came from the model's knowledge of UniDic. The reviews check them against the real tokens with `tools/tokenize.mjs`. A lexeme still marked `?` was not confirmed. The implementation checks every matcher against the real tokenizer.
 - Some sites could not be read (tanos.co.uk is down, JapaneseTest4You blocks automated access, Marumori needs a login for some pages), so some level votes rest on archived copies or on fewer sources. Each inventory entry's `sources` shows which ones.
 - The order inside each inventory (most common first) is the model's estimate, not a count from real text.
