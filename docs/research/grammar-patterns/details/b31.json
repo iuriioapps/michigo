@@ -3,7 +3,7 @@
     "id": "ni-shite",
     "form": "〜にして",
     "variants": ["〜にしてようやく", "〜にして初めて", "〜にして〜"],
-    "meaning": "only at (a stage, a moment); both X and Y",
+    "meaning": "at (an age, a stage) or in (a mere moment); X and also Y",
     "kind": "construction",
     "register": "written",
     "level": "N1",
@@ -18,18 +18,19 @@
       { "ja": "この歳にして初めて、親の苦労が分かりました。", "match": "歳にして", "en": "It is only at this age that I have come to understand what my parents went through." },
       { "ja": "彼女は十七歳にして世界王者の座に就いた。", "match": "十七歳にして", "en": "She took the world title at just seventeen." },
       { "ja": "一瞬にして、街じゅうが闇に包まれた。", "match": "一瞬にして", "en": "In an instant the whole town was plunged into darkness." },
-      { "ja": "五年かかって、この年にしてようやく本が完成した。", "match": "年にしてようやく", "en": "It took five years, but only this year did the book finally get finished." }
+      { "ja": "結婚して十年目にしてようやく、二人で海外旅行に行けた。", "match": "十年目にしてようやく", "en": "Only in our tenth year of marriage did the two of us finally manage a trip abroad." }
     ],
     "counterexamples": [
       { "ja": "夕食はカレーにして、早めに寝た。", "en": "I went with curry for dinner and turned in early.", "why": "に + する + て 'choose', the choosing verb する in the て-form (ni-suru), not the stage marker" },
       { "ja": "彼は部屋を書斎にして使っている。", "en": "He uses the room as a study.", "why": "を-object + に + して 'make X into N', the result of する (ni-suru)" },
       { "ja": "彼にしては、ずいぶん早く着いたね。", "en": "For him, you got here quite early.", "why": "にしては is the separate entry ni-shite-wa" },
       { "ja": "彼にしても、悪気はなかったのだろう。", "en": "He too probably meant no harm.", "why": "にしても is the separate entry ni-shite-mo" },
-      { "ja": "髪を短くして出かけた。", "en": "I cut my hair short and went out.", "why": "く + して is the adjective stem + する, with no に" }
+      { "ja": "親にしてみれば、心配するのは当然だ。", "en": "From a parent's point of view, it's only natural to worry.", "why": "にしてみれば is the separate entry ni-shite-mireba" },
+      { "ja": "事故の現場を目にして、言葉を失った。", "en": "Seeing the scene of the accident, I was lost for words.", "why": "目にする 'see' in the て-form, the noun 目 is the object idiom, not a stage" }
     ],
-    "subsumes": [],
-    "confusables": ["ni-shite-mo", "ni-shite-wa", "ni-shite-mireba", "ni-shitara", "ni-suru", "ni-shiro-ni-shiro"],
-    "detection": "Tokens: a noun of an age, a time span or a stage (四十, 今, 一夜, 一瞬, 歳, 年) + に (助詞-格助詞) + し (為る, 動詞-非自立可能, サ行変格, 連用形-一般) + て (助詞-接続助詞), often followed by ようやく (副詞, lexeme 漸く), 初めて or a verb such as 思えば. The second sense joins two nouns of one subject (学者にして政治家), so the same four tokens sit between two nouns. Because UniDic gives the same tokens as ni-suru plus て (カレーにして寝た), the matcher needs the noun class: accept time, age and number nouns or a person noun that is followed directly by another noun or a copula, and reject a noun that is the result of a を-object (書斎にして使う). Reject に + し + て + は (ni-shite-wa), に + し + て + も (ni-shite-mo), に + し + て + み (ni-shite-mireba) and に + し + たら, which are other entries, and reject く + し + て, where the word before し is an adjective in 連用形 with no に."
+    "subsumes": ["te-hajimete"],
+    "confusables": ["ni-shite-mo", "ni-shite-wa", "ni-shite-mireba", "ni-shitara", "ni-suru", "ni-shiro-ni-shiro", "te-hajimete"],
+    "detection": "Tokens: a noun of an age, a time span or a stage + に (助詞-格助詞) + し (為る, 動詞-非自立可能, サ行変格, 連用形-一般) + て (助詞-接続助詞), often followed by ようやく (漸く 副詞), 初めて (初めて 副詞) or 思え + ば. The noun is 名詞-数詞 (四十), a 数詞 run closed by 接尾辞 歳 or 目 (十七歳, 十年目), or a time noun (今, 一夜, 一瞬, 歳 with lexeme 年). The second sense joins two nouns of one subject (学者にして、有能な政治家), so the same four tokens follow a person noun that the next clause names again; a matcher can only take this sense with a noun-class list and should not guess it. UniDic gives the same tokens for ni-suru + て (カレーにして, 書斎にして) and for 目 (名詞-普通名詞, not 接尾辞) + にして 'see', so reject nouns outside the class. Reject に + し + て + は (ni-shite-wa), + も (ni-shite-mo, ni-shitemo-ni-shitemo), + み + れ + ば (ni-shite-mireba), and に + し + たら or + ろ, which are other entries. When にして is followed by 初めて, this match covers し + て + 初めて, so te-hajimete must not count too."
   },
   {
     "id": "ni-todomarazu",
@@ -50,38 +51,38 @@
       { "ja": "彼女の才能は演技にとどまらず、脚本や演出にも表れている。", "match": "にとどまらず", "en": "Her talent shows not only in her acting but in the scripts and direction too." },
       { "ja": "人気は国内に留まらない。海外でも同じように売れている。", "match": "に留まらない", "en": "Its popularity does not stop at home; it sells just as well abroad." },
       { "ja": "この流行は一時的なものにとどまらないだろう。", "match": "にとどまらない", "en": "This trend will probably turn out to be more than a passing one." },
-      { "ja": "彼が責められたのは遅刻したことにとどまらず、連絡もしなかったからだ。", "match": "にとどまらず", "en": "He was blamed not just for being late but for not getting in touch either." }
+      { "ja": "彼は文句を言うにとどまらず、ついには会社を訴えた。", "match": "にとどまらず", "en": "He didn't stop at complaining; in the end he sued the company." }
     ],
     "counterexamples": [
-      { "ja": "電車は小さな駅にとどまらず、そのまま通過した。", "en": "The train did not stop at the small station and went straight through.", "why": "留まる in its literal sense 'stay, stop at a place', not 'not limited to'" },
+      { "ja": "この店は週末に限らず、平日も混んでいる。", "en": "This shop is crowded on weekdays too, not just at weekends.", "why": "に限らず is the separate entry ni-kagirazu; the verb before ず is 限る, not 留まる" },
       { "ja": "被害は軽傷にとどまった。", "en": "The damage was limited to minor injuries.", "why": "affirmative にとどまる 'be limited to', with no negative なら/ず" },
       { "ja": "彼は部屋にとどまらずに外へ出て行った。", "en": "He didn't stay in the room and went outside.", "why": "留まる 'stay in a place'; the に marks the place where one stays" },
       { "ja": "年齢や経験にかかわらず、誰でも参加できる。", "en": "Anyone can take part, regardless of age or experience.", "why": "にかかわらず is the separate entry ni-kakawarazu (regardless of)" }
     ],
     "subsumes": [],
     "confusables": ["ni-sugi-nai", "ni-kagirazu", "nominarazu"],
-    "detection": "Tokens: に (助詞-格助詞) + とどまら / 留まら (留まる, 動詞-一般, 五段-ラ行, 未然形-一般) + ず (助動詞 ず, 連用形) or ない (助動詞, 終止形 or 連体形). UniDic gives the lexeme 留まる for both spellings (とどまら and 留まら). The word before に is a noun (地域, 音楽, 若者) or a nominalized clause (こと, の, もの); the next clause usually adds the larger scope with も, まで or も. Reject the affirmative に + とどまっ + た / とどまる (被害は軽傷にとどまった), which means 'was limited to' and has no ず or ない, and reject the literal 'not stay' (駅にとどまらず通過した), where に marks a place and the subject is a person or a vehicle; the matcher can only separate that by context, so lower confidence when the noun before に is a place. The related ni-kagirazu (に限らず) and ni-kakawarazu share the に + ず shape but have another verb before ず (限る, 関わる)."
+    "detection": "Tokens: に (助詞-格助詞) + とどまら / 留まら (留まる, 動詞-一般, 五段-ラ行, 未然形-一般) + ず (助動詞 ず, 連用形) or ない (助動詞, 終止形 or 連体形). UniDic gives the lexeme 留まる for both spellings (とどまら and 留まら). The word before に is a noun (地域, 音楽, 若者), もの or こと, or a verb in 終止形 (言う); the next clause usually adds the larger scope with も or まで. Reject the affirmative に + とどまっ + た / とどまる (被害は軽傷にとどまった), which means 'was limited to' and has no ず or ない, and reject the literal 'not stay' (部屋にとどまらずに外へ出た), where に marks a place and the subject is a person; the tokens are the same, so lower confidence when the noun before に is a place or ず is followed by に. The related ni-kagirazu (に限らず) and ni-kakawarazu share the に + ず shape but have another verb before ず (限る, 関わる)."
   },
   {
     "id": "ni-matsuwaru",
     "form": "〜にまつわる",
-    "variants": ["〜にまつわって", "〜にまつわった", "〜にまつわります"],
-    "meaning": "related to (stories, rumors)",
+    "variants": [],
+    "meaning": "connected with, surrounding (stories, rumors, memories)",
     "kind": "construction",
     "register": "neutral",
     "level": "N1",
     "sources": { "jlptsensei": "N1", "bunpro": "N1", "jt4y": "N1" },
     "prototype": false,
-    "connection": ["N + にまつわる + N", "N + にまつわって + clause"],
+    "connection": ["N + にまつわる + N"],
     "examples": [
       { "ja": "この町には、古い寺にまつわる伝説がいくつも残っている。", "match": "にまつわる", "en": "This town has a number of legends tied to the old temple." },
       { "ja": "彼の死にまつわる噂は、今も絶えない。", "match": "にまつわる", "en": "Rumors surrounding his death still haven't died down." },
-      { "ja": "お金にまつわるトラブルは、家族の間でも起こりやすい。", "match": "にまつわる", "en": "Money troubles are easy to come by even within a family." },
+      { "ja": "お金にまつわるトラブルは、家族の間でも起こりやすい。", "match": "にまつわる", "en": "Trouble over money easily breaks out even within a family." },
       { "ja": "祖母は戦争にまつわる話をほとんどしなかった。", "match": "にまつわる", "en": "My grandmother hardly ever told stories about the war." },
-      { "ja": "この祭りにまつわって、不思議な言い伝えがあるんです。", "match": "にまつわって", "en": "There is a strange tale connected to this festival." },
+      { "ja": "お二人の結婚にまつわるエピソードを聞かせてください。", "match": "にまつわる", "en": "Please tell us a story about how you two got married." },
       { "ja": "名前にまつわる思い出を、作文に書いた。", "match": "にまつわる", "en": "I wrote about memories connected with my name in my essay." },
       { "ja": "この地名にまつわる由来をご存じですか。", "match": "にまつわる", "en": "Do you know the story behind this place name?" },
-      { "ja": "その事件にまつわった謎は、結局解かれなかった。", "match": "にまつわった", "en": "The mystery surrounding that case was never solved in the end." }
+      { "ja": "この刀にまつわる不吉な話、知ってる？", "match": "にまつわる", "en": "Do you know the ominous story attached to this sword?" }
     ],
     "counterexamples": [
       { "ja": "足にまつわりつく猫を抱き上げた。", "en": "I picked up the cat that was clinging to my legs.", "why": "まつわりつく is a different verb 'cling to' (纏わり付く), not まつわる" },
@@ -90,7 +91,7 @@
     ],
     "subsumes": [],
     "confusables": ["ni-kakawaru", "ni-kanshite", "ni-tsuite"],
-    "detection": "Tokens: a noun + に (助詞-格助詞) + まつわる (纏わる, 動詞-一般, 五段-ラ行) in 連体形 (まつわる + noun) or 連用形-促音便 まつわっ + て / た. UniDic reads the hiragana and the kanji 纏わる alike. The noun before に names a topic (伝説, 噂, 死, 話, 由来), and the next token is usually a noun that is modified. Reject まつわりつい (纏わり付く, lexeme 纏わり付く) and まつわり + つく, which mean 'cling' and are a different verb. Reject に + かかわる (関わる, ni-kakawaru) and に + 関する (ni-kanshite): they share に + a verb ending in わる/する but have other lexemes. A hit of にまつわって with a following clause is the same pattern, not a different entry."
+    "detection": "Tokens: a noun + に (助詞-格助詞) + まつわる (纏わる, 動詞-一般, 五段-ラ行, 連体形-一般) + the noun it modifies (伝説, 噂, 話, エピソード, 由来). UniDic gives the lexeme 纏わる for the hiragana and the kanji spelling. The 連用形 forms まつわっ + て / た are the same verb and rare in this sense; a matcher may accept them. Reject まつわりつく, which UniDic gives as one token 纏わり付く (動詞-一般, 五段-カ行) 'cling to'; a lexeme match on 纏わる does not hit it, only a surface match does. Reject に + かかわる (関わる, ni-kakawaru) and に + 関する (ni-kanshite): they share に + a verb ending in わる/する but have other lexemes. A hit of にまつわって with a following clause is the same pattern, not a different entry."
   },
   {
     "id": "ni-hikikae",
@@ -102,13 +103,13 @@
     "level": "N1",
     "sources": { "jlptsensei": "N1", "bunpro": "N1", "tanos": "N1", "jt4y": "N1" },
     "prototype": false,
-    "connection": ["N + に引き換え", "Clause-plain + のに引き換え", "i-Adj / na-Adj + のに引き換え"],
+    "connection": ["N + に引き換え", "Clause-plain + のに引き換え", "i-Adj + のに引き換え", "na-Adj + な + のに引き換え"],
     "examples": [
       { "ja": "兄は社交的なのに引き換え、弟は人前に出るのも苦手だ。", "match": "のに引き換え", "en": "My older brother is sociable, whereas my younger brother hates even appearing in front of people." },
       { "ja": "去年の猛暑に引き換え、今年の夏は驚くほど涼しい。", "match": "に引き換え", "en": "In contrast to last year's scorching heat, this summer is surprisingly cool." },
       { "ja": "賑やかな都会にひきかえ、この村は夜になると静まり返る。", "match": "にひきかえ", "en": "Unlike the lively city, this village falls dead silent at night." },
       { "ja": "優秀な姉に引き換え、私は何をやっても中途半端だ。", "match": "に引き換え", "en": "Compared with my brilliant sister, I do everything halfway." },
-      { "ja": "昨日の晴天に引き換え、今日は朝から土砂降りだ。", "match": "に引き換え", "en": "After yesterday's clear skies, it has been pouring since morning." },
+      { "ja": "昨日の晴天に引き換え、今日は朝から土砂降りだ。", "match": "に引き換え", "en": "Unlike yesterday's clear skies, today it has been pouring since morning." },
       { "ja": "浮かれている周りの人々に引き換え、彼だけは真剣な顔をしていた。", "match": "に引き換え", "en": "Unlike the people around him who were swept up in the mood, he alone wore a serious face." },
       { "ja": "去年は赤字だったのに引き換え、今年は過去最高の利益を記録しました。", "match": "のに引き換え", "en": "Whereas last year ended in the red, this year recorded the highest profit ever." },
       { "ja": "大都市に引き替え、地方は人口が減る一方です。", "match": "に引き替え", "en": "In contrast to the big cities, the population in the provinces keeps falling." }
@@ -119,8 +120,8 @@
       { "ja": "古い切符を新しいものに引き換えてもらった。", "en": "I had the old ticket exchanged for a new one.", "why": "に引き換える is the literal verb 'exchange for' with a て-form, not the contrast phrase" }
     ],
     "subsumes": [],
-    "confusables": ["ni-taishite", "ni-hanshite", "ni-kawatte"],
-    "detection": "Tokens: a noun, or a clause ending in の (の, 準体助詞), + に (助詞-格助詞) + 引き換え / ひきかえ / 引き替え (引き替える, 動詞-一般, 下一段-ア行, 連用形-一般). UniDic gives the lexeme 引き替える for every spelling of the verb; the sentence usually continues after a comma with a contrasting clause. Reject the noun 引き換え (lexeme 引き換え, 名詞) in 引き換え券 and in と + 引き換え + に (命と引き換えに 'in exchange for'), where the particle before 引き換え is と or the word is a noun. Reject に + 引き換え + て + (もらう / くれる / いる), the literal verb 'exchange X for Y' (切符を新しいものに引き換えてもらった), which continues with て. With の before に (去年は赤字だったのに引き換え), keep の + に as part of the match and do not mistake it for the concessive のに (noni): here the clause after the comma contrasts and does not state a surprise. Other contrast entries that a learner may mix up are ni-taishite, ni-hanshite and ni-kawatte."
+    "confusables": ["ni-taishite", "ni-hanshite", "ni-kawatte", "noni"],
+    "detection": "Tokens: a noun, or a clause ending in の (の, 準体助詞), + に (助詞-格助詞) + 引き換え / ひきかえ / 引き替え (引き替える, 動詞-一般, 下一段-ア行, 連用形-一般). UniDic gives the lexeme 引き替える for every spelling of the verb; the sentence usually continues after a comma with a contrasting clause. Reject the noun 引き換え (lexeme 引き換え, 名詞) in 引き換え券 and in と + 引き換え + に (命と引き換えに 'in exchange for'), where the particle before 引き換え is と or the word is a noun. Reject に + 引き換え + て + (もらう / くれる / いる), the literal verb 'exchange X for Y' (切符を新しいものに引き換えてもらった), which continues with て. With の before に (去年は赤字だったのに引き換え), UniDic splits の (準体助詞) + に (格助詞), so keep の + に as part of the match and do not mistake it for the concessive のに (noni): here the clause after the comma contrasts and does not state a surprise. Other contrast entries that a learner may mix up are ni-taishite, ni-hanshite and ni-kawatte."
   },
   {
     "id": "ni-taeru",
@@ -138,10 +139,10 @@
       { "ja": "彼の演奏は、とても聞くに堪えない代物だった。", "match": "に堪えない", "en": "His playing was something I could not stand to listen to." },
       { "ja": "皆様のご厚意には、感謝に堪えません。", "match": "に堪えません", "en": "We cannot thank you enough for your kindness." },
       { "ja": "この作品は、今でも十分に鑑賞に耐える。", "match": "に耐える", "en": "This work still holds up well enough to be worth viewing." },
-      { "ja": "あの失言は、まことに遺憾に堪えない。", "match": "に堪えない", "en": "That slip of the tongue is truly deeply regrettable." },
+      { "ja": "あの失言は、まことに遺憾に堪えない。", "match": "に堪えない", "en": "That slip of the tongue is truly regrettable." },
       { "ja": "その惨状は、見るにたえないものだった。", "match": "にたえない", "en": "The devastation was too terrible to look at." },
       { "ja": "素人の文章だが、読むに耐える出来ではある。", "match": "に耐える", "en": "It is an amateur's writing, but it is good enough to be worth reading." },
-      { "ja": "実用に耐える品質まで高めるのが、今回の課題です。", "match": "に耐える", "en": "The challenge this time is to raise the quality to something fit for practical use." }
+      { "ja": "実用に耐えうる品質まで高めるのが、今回の課題です。", "match": "に耐えうる", "en": "The challenge this time is to raise the quality to something fit for practical use." }
     ],
     "counterexamples": [
       { "ja": "彼は寒さに耐えて、春を待った。", "en": "He endured the cold and waited for spring.", "why": "耐える is the main verb 'endure' after a plain noun, in the て-form" },
@@ -151,7 +152,7 @@
     ],
     "subsumes": [],
     "confusables": ["ni-taru", "ni-katakunai", "ni-shinobinai", "ni-atai-suru"],
-    "detection": "Tokens: に (助詞-格助詞) + 耐え / 堪え (耐える, 動詞-一般, 下一段-ア行) + ない (ない, 助動詞) or なかっ + た, or 耐える in 終止形/連体形; the polite 堪え + ませ + ん is the same pattern, though UniDic gives that 堪え the lexeme 堪える, so accept both 耐える and 堪える. Hiragana たえない is 絶える (lexeme 絶える), so accept に + たえ (絶える) + ない too. The word before に is a verb in 終止形 of perception (見る, 聞く, 読む), or a noun: a feeling noun with 堪えない (感謝, 遺憾, 痛恨) or a use noun with 耐える (鑑賞, 実用). After a na-adjective-like noun such as 遺憾 the に is だ 連用形 (助動詞), not 助詞, so accept either. Reject the plain verb 'endure' after a thing that is endured (寒さに耐えて, 痛みに耐えられず) and 耐え + かね (耐えかねる). 人通りのたえない has たえ + ない with no に directly before it, and ni-taru (に足る) and ni-katakunai (に難くない) have other lexemes."
+    "detection": "Tokens: に (助詞-格助詞) + 耐え / 堪え (耐える, 動詞-一般, 下一段-ア行) + ない (ない, 助動詞) or なかっ + た, or 耐える in 終止形/連体形, or 耐え (連用形) + うる (得る, 動詞-非自立可能) for に耐えうる; the polite 堪え + ませ + ん is the same pattern, though UniDic gives that 堪え the lexeme 堪える, so accept both 耐える and 堪える. UniDic reads hiragana たえ as 絶える 'cease' (見るにたえない), so a matcher must also accept に + たえ (絶える) + ない, while 絶え in kanji never belongs to the pattern. The word before に is a verb in 終止形 of perception (見る, 聞く, 読む), or a noun: a feeling noun with 堪えない (感謝, 遺憾, 痛恨) or a use noun with 耐える (鑑賞, 実用). After a na-adjective-like noun such as 遺憾 the に is だ 連用形 (助動詞), not 助詞, so accept either. Reject the plain verb 'endure' after a thing that is endured (寒さに耐えて, 痛みに耐えられず) and 耐え + かね (耐えかねる). 人通りのたえない has たえ + ない with no に directly before it, and ni-taru (に足る) and ni-katakunai (に難くない) have other lexemes."
   },
   {
     "id": "ni-katakunai",
@@ -172,22 +173,22 @@
       { "ja": "このまま放置すれば事態が悪化することは、想像にかたくない。", "match": "にかたくない", "en": "It is easy to see that things will get worse if this is left alone." },
       { "ja": "彼が申し出を断るであろうことは、予想するに難くなかった。", "match": "に難くなかった", "en": "It was not hard to predict that he would turn down the offer." },
       { "ja": "生活が苦しかったことは、写真の古さからも想像に難くない。", "match": "に難くない", "en": "That life was hard back then is easy to imagine even from how old the photos look." },
-      { "ja": "犯人が内部の人間だと考える理由は、推測に難くない。", "match": "に難くない", "en": "The reason for thinking the culprit is an insider is not hard to guess." }
+      { "ja": "犯人が内部の人間であることは、状況から推測に難くない。", "match": "に難くない", "en": "From the circumstances, it is easy to infer that the culprit is an insider." }
     ],
     "counterexamples": [
       { "ja": "この問題は、難しくない。", "en": "This problem is not difficult.", "why": "難しい 'difficult' is a different adjective, with no に before it" },
-      { "ja": "彼の苦労は、想像に及ばないものだった。", "en": "His hardships were beyond imagination.", "why": "想像に + 及ぶ is a different verb phrase; the shared 想像に is not enough" },
-      { "ja": "この結び目はあまり固くない。", "en": "This knot is not very tight.", "why": "固い 'hard, tight' is a homophone adjective with no に before it" }
+      { "ja": "それは君の想像にすぎない。", "en": "That's nothing more than your imagination.", "why": "想像に + 過ぎない is ni-sugi-nai; the shared 想像に is not enough" },
+      { "ja": "彼の決心は、意外に固くなかった。", "en": "His resolve turned out to be surprisingly weak.", "why": "固い 'firm' after 意外に, where に is the adverbial だ of a na-adjective, not に + 難い" }
     ],
     "subsumes": [],
-    "confusables": ["ni-taeru", "ni-taranai", "ni-wa-oyobanai"],
-    "detection": "Tokens: に (助詞-格助詞) + 難く (難い, 形容詞-一般, 連用形-一般) + ない (無い, 形容詞) in 終止形, or なかっ + た (無い 連用形-促音便), or あり + ませ + ん in the polite form (有る / ます / ず). In hiragana かたく is read as the lexeme 固い, so accept both 難い and 固い when the token before is に and the one after is ない or ありません. The word before に is a noun of understanding or guessing (想像, 理解, 推測, 予想, 察する as a verb in 終止形). Reject 難しい (lexeme 難しい) and 固い without に right before it (結び目が固くない), and reject 想像に + 及ば + ない (及ぶ) and ni-wa-oyobanai."
+    "confusables": ["ni-taeru", "ni-taranai", "ni-sugi-nai"],
+    "detection": "Tokens: に (助詞-格助詞) + 難く (難い, 形容詞-一般, 連用形-一般) + ない (無い, 形容詞) in 終止形, or なかっ + た (無い 連用形-促音便), or あり + ませ + ん in the polite form (有る / ます / ず). UniDic reads hiragana かたく as 固い (想像にかたくない), so a matcher must accept 固い when its surface is かたく, the token before is に (助詞-格助詞) and the noun or verb before that is one of understanding or guessing (想像, 理解, 推測, 予想, or 察する / 想像する in 終止形). Reject kanji 固く, and reject 意外に固くなかった, where に is だ (助動詞, 連用形-ニ) after a 形状詞. Reject 難しい (lexeme 難しい) and 想像に + すぎ + ない (ni-sugi-nai)."
   },
   {
     "id": "ni-taru",
     "form": "〜に足る",
-    "variants": ["〜に足りる", "〜に足らぬ"],
-    "meaning": "worth, sufficient for",
+    "variants": ["〜に足りる"],
+    "meaning": "worth (doing), deserving of",
     "kind": "construction",
     "register": "written",
     "level": "N1",
@@ -208,16 +209,16 @@
       { "ja": "千円あれば足りる。", "en": "A thousand yen will be enough.", "why": "足りる is the plain verb 'suffice', with no に before it" },
       { "ja": "彼の功績は称賛に値する。", "en": "His achievements deserve praise.", "why": "に値する is the separate entry ni-atai-suru" },
       { "ja": "そんな話は、取るに足らない。", "en": "That kind of talk is not worth bothering with.", "why": "に足らない is the negative entry ni-taranai" },
-      { "ja": "この量なら三人に足りる。", "en": "This amount will go around for three people.", "why": "に足りる means 'suffice for (a number)', with a counter before に, not 'worth ~ing'" }
+      { "ja": "これだけあれば、十分に足りるでしょう。", "en": "If we have this much, it should be plenty.", "why": "plain 足りる 'suffice' after 十分に, where に is the adverbial だ of a na-adjective" }
     ],
     "subsumes": [],
     "confusables": ["ni-taranai", "ni-atai-suru", "ni-taeru"],
-    "detection": "Tokens: に (助詞-格助詞) + 足る (足る, 動詞-一般, 五段-ラ行, 連体形/終止形) or 足りる (足りる, 動詞-一般, 上一段-ラ行), both after a noun (信頼, 称賛, 尊敬) or a verb in 終止形 (恐れる, 頼る, 聞く, 語る). The pattern is affirmative and is followed by a noun or ends the clause. Reject the negative に + 足ら / 足り + ない (ni-taranai) and に + 足らぬ, and reject 足りる with no に directly before it (千円あれば足りる). A noun that is a number or a counter before に足りる (三人に足りる, 'suffice for') means 'be enough for', so reject it when the noun before に is a quantity. The senses 'worth ~ing' and the literal 'be sufficient' can only be separated by this noun class and by whether the clause is evaluative. Confusable with ni-atai-suru (に値する, lexeme 値する via 値 + する)."
+    "detection": "Tokens: に (助詞-格助詞) + 足る (足る, 動詞-一般, 五段-ラ行, 連体形/終止形) or 足りる (足りる, 動詞-一般, 上一段-ラ行), both after a noun (信頼, 称賛, 尊敬) or a verb in 終止形 (恐れる, 頼る, 聞く, 語る). The pattern is affirmative and is followed by a noun or ends the clause. Reject the negative に + 足ら / 足り + ない (ni-taranai) and に + 足らぬ, and reject 足りる with no に directly before it (千円あれば足りる). Reject 十分に足りる, where に is だ (助動詞, 連用形-ニ) after the 形状詞 十分, not 助詞. The pattern needs a noun of evaluation (信頼, 称賛, 尊敬, 検討) or a verb in 終止形 before に; a noun of amount or purpose (旅費に足りる 'enough for the fare') is the literal 'suffice' and can only be told apart by that noun class. Confusable with ni-atai-suru (に値する, lexeme 値する via 値 + する)."
   },
   {
     "id": "ni-taranai",
     "form": "〜に足らない",
-    "variants": ["〜に足りない", "取るに足らない", "〜に足りません"],
+    "variants": ["〜に足りない", "取るに足らない", "〜に足らぬ", "〜に足りません"],
     "meaning": "not worth, trivial",
     "kind": "construction",
     "register": "written",
@@ -230,7 +231,7 @@
       { "ja": "私など、ここで語るに足らない存在です。", "match": "に足らない", "en": "I am nobody worth mentioning here." },
       { "ja": "彼の批判は、取るに足りないものとして無視された。", "match": "取るに足りない", "en": "His criticism was dismissed as not worth taking up." },
       { "ja": "心配するに足らない。ただの風邪だよ。", "match": "に足らない", "en": "There is no need to worry. It's just a cold." },
-      { "ja": "この程度の失敗は、驚くに足りない。", "match": "に足りない", "en": "A failure of this size is nothing to be surprised at." },
+      { "ja": "この程度の失敗は、驚くに足りません。", "match": "に足りません", "en": "A failure of this size is nothing to be surprised at." },
       { "ja": "取るに足らない噂に振り回されるな。", "match": "取るに足らない", "en": "Don't let yourself be pushed around by worthless rumors." },
       { "ja": "あの人のしたことは、怒るに足りない些細なことです。", "match": "に足りない", "en": "What he did is a petty matter not worth getting angry about." },
       { "ja": "彼らは、恐れるに足らぬ相手だった。", "match": "に足らぬ", "en": "They were opponents not worth fearing." }
@@ -238,12 +239,12 @@
     "counterexamples": [
       { "ja": "予算が足りない。", "en": "The budget is short.", "why": "足りない is the plain verb 'be insufficient', with no に before it" },
       { "ja": "私に足りないのは自信だ。", "en": "What I lack is confidence.", "why": "に marks the one who lacks something, and 足りない is 'insufficient'" },
-      { "ja": "これでは三人に足りないよ。", "en": "This isn't enough for three people.", "why": "に + a counter + 足りない 'not enough for', not 'not worth ~ing'" },
+      { "ja": "点数が合格点に足りなかった。", "en": "My score fell short of the passing mark.", "why": "に marks the standard that is not reached, 足りない 'fall short of', not 'not worth ~ing'" },
       { "ja": "彼は信頼に足る人物だ。", "en": "He is a person worth trusting.", "why": "affirmative に足る is the separate entry ni-taru" }
     ],
     "subsumes": [],
     "confusables": ["ni-taru", "ni-sugi-nai", "ni-wa-ataranai"],
-    "detection": "Tokens: に (助詞-格助詞) + 足ら (足る, 動詞-一般, 五段-ラ行, 未然形-一般) + ない (ない, 助動詞), or 足り (足りる, 上一段-ラ行, 未然形-一般) + ない, or 足ら + ぬ (ず, 助動詞) in written Japanese, or ませ + ん for the polite form. The word before に is a verb in 終止形 (取る, 語る, 恐れる, 驚く) or a noun; 取るに足らない is the common fixed phrase, in which 取る + に + 足ら + ない is followed by a noun such as 問題, 噂 or もの. Reject plain 足りない 'be short' with no に right before it (予算が足りない), and reject に足りない where に marks the one who lacks something or a quantity before it (私に足りないのは自信だ, 三人に足りない); the matcher can tell these by a verb in 終止形 before に, or a noun that names an object of evaluation. The affirmative に足る / に足りる belongs to ni-taru."
+    "detection": "Tokens: に (助詞-格助詞) + 足ら (足る, 動詞-一般, 五段-ラ行, 未然形-一般) + ない (ない, 助動詞), or 足り (足りる, 上一段-ラ行, 未然形-一般) + ない, or 足ら + ぬ (ず, 助動詞) in written Japanese, or ませ + ん for the polite form. The word before に is a verb in 終止形 (取る, 語る, 恐れる, 驚く) or a noun; 取るに足らない is the common fixed phrase, in which 取る + に + 足ら + ない is followed by a noun such as 問題, 噂 or もの. Reject plain 足りない 'be short' with no に right before it (予算が足りない), and reject に足りない where に marks the one who lacks something or a quantity before it (私に足りないのは自信だ) or the standard not reached (合格点に足りなかった); the matcher can tell these by a verb in 終止形 before に, or a noun that names an object of evaluation. The affirmative に足る / に足りる belongs to ni-taru."
   },
   {
     "id": "ni-atai-suru",
@@ -260,7 +261,7 @@
       { "ja": "彼の勇気は称賛に値する。", "match": "に値する", "en": "His courage deserves praise." },
       { "ja": "この映画は、一度見るに値する作品だ。", "match": "に値する", "en": "This film is worth seeing at least once." },
       { "ja": "そんな要求は、検討に値しない。", "match": "に値しない", "en": "A demand like that does not deserve consideration." },
-      { "ja": "この問題は議論に値すると思います。", "match": "に値する", "en": "I think this issue deserves discussion." },
+      { "ja": "あの日の彼の走りは、金メダルに値した。", "match": "に値した", "en": "His run that day was worthy of a gold medal." },
       { "ja": "彼の行為は、厳しい非難に値します。", "match": "に値します", "en": "His conduct deserves harsh criticism." },
       { "ja": "あの店のラーメンは、並ぶに値する味だ。", "match": "に値する", "en": "The ramen at that shop is worth waiting in line for." },
       { "ja": "彼は信用に値しない人間だ。", "match": "に値しない", "en": "He is not a man who deserves trust." },
@@ -298,13 +299,13 @@
     ],
     "counterexamples": [
       { "ja": "店に寄らずに、まっすぐ帰った。", "en": "I went straight home without stopping at the shop.", "why": "に + 寄る 'drop in' + ず: 寄ら is a different verb, with a place before に" },
-      { "ja": "彼女はピカソによる作品を集めている。", "en": "She collects works by Picasso.", "why": "による is the passive-agent use, the entry ni-yotte (による), not 'regardless'" },
+      { "ja": "彼女はピカソによる作品を集めている。", "en": "She collects works by Picasso.", "why": "による + noun marks the author or cause (ni-yotte family), with no ず after よる" },
       { "ja": "地震によって電車が止まった。", "en": "The train stopped because of the earthquake.", "why": "によって is 'because of / by means of', the entry ni-yotte" },
       { "ja": "彼の話によると、店は来週閉まるらしい。", "en": "According to him, the shop closes next week.", "why": "によると 'according to' is a source marker with と, not 'regardless'" }
     ],
     "subsumes": [],
     "confusables": ["ni-kakawarazu", "ni-kagirazu", "ni-yotte"],
-    "detection": "Tokens: noun + に (助詞-格助詞) + よら (因る, 動詞-一般, 五段-ラ行, 未然形-一般) + ず (ず, 助動詞, 連用形) or ない (助動詞); the kanji spelling 依らず is the same lexeme. The noun is a category or a scale that the sentence says does not matter (年齢, 男女, 天候, 国籍, 大小, 何事, 有無). Reject に + 寄ら (寄る, 'drop in') + ず, whose lexeme is 寄る and whose noun is a place (店に寄らずに), and reject に + よっ + て (ni-yotte), に + よる + と ('according to') and に + より, which have the lexeme 因る but a different form after it. Keep ni-kakawarazu (にかかわらず) and ni-kagirazu (に限らず) apart: they have the lexemes 関わる and 限る before ず."
+    "detection": "Tokens: noun + に (助詞-格助詞) + よら (因る, 動詞-一般, 五段-ラ行, 未然形-一般) + ず (ず, 助動詞, 連用形) or ない (助動詞); the kanji spelling 依らず is the same lexeme. The noun is a category or a scale that the sentence says does not matter (年齢, 男女, 天候, 国籍, 大小, 何事, 有無). Reject に + 寄ら (寄る, 'drop in') + ず, whose lexeme is 寄る and whose noun is a place (店に寄らずに), and reject に + よっ + て (ni-yotte), に + よる + と ('according to') and に + より, which have the lexeme 因る but a different form after it. Keep ni-kakawarazu (にかかわらず) and ni-kagirazu (に限らず) apart: they have the lexemes 関わる and 限る before ず. The same tokens also mean 'not by means of' (話し合いによらず力で解決した); only a noun of method rather than a category tells it apart, so a matcher will count it."
   },
   {
     "id": "ni-terashite",
@@ -319,7 +320,7 @@
     "connection": ["N (rule, law, fact, experience) + に照らして / に照らすと / に照らせば / に照らし / に照らした"],
     "examples": [
       { "ja": "過去の判例に照らして、今回の訴えは認められないだろう。", "match": "に照らして", "en": "In light of past rulings, this suit will probably not be upheld." },
-      { "ja": "法律に照らすと、この行為は違法に当たる。", "match": "に照らすと", "en": "Judged against the law, this act is illegal." },
+      { "ja": "法律に照らすと、この行為は明らかに違法だ。", "match": "に照らすと", "en": "Judged against the law, this act is clearly illegal." },
       { "ja": "自分の経験に照らして考えても、その方法は無理がある。", "match": "に照らして", "en": "Even judging by my own experience, that method is unreasonable." },
       { "ja": "常識に照らせば、そんな要求は通らない。", "match": "に照らせば", "en": "By common sense, a demand like that won't be accepted." },
       { "ja": "規則に照らし、彼の処分が決まった。", "match": "に照らし", "en": "Measured against the rules, his punishment was decided." },
@@ -335,7 +336,7 @@
     ],
     "subsumes": [],
     "confusables": ["ni-shitagatte", "ni-motozuite", "ni-sokushite", "ni-nottotte"],
-    "detection": "Tokens: noun + に (助詞-格助詞) + 照らし (照らす, 動詞-一般, 五段-サ行, 連用形-一般) + て (接続助詞), or 照らす (終止形) + と, 照らせ (仮定形) + ば, 照らし alone (連用形, clause break), 照らし + た (助動詞). The noun is a standard against which something is judged (法律, 規則, 判例, 常識, 事実, 基準, 経験). Reject を + 照らす and に + 照らさ + れ (passive: 月明かりに照らされた), where a light lights something, and reject 光に照らして (literal 'hold up to the light') by checking that the noun before に is not a source of light (光, 灯り, 太陽, 月). The entries ni-shitagatte, ni-motozuite, ni-sokushite and ni-nottotte have other lexemes (従う, 基づく, 即す, 則る) after に."
+    "detection": "Tokens: noun + に (助詞-格助詞) + 照らし (照らす, 動詞-一般, 五段-サ行, 連用形-一般) + て (接続助詞), or 照らす (終止形) + と, 照らせ (仮定形) + ば, 照らし alone (連用形, clause break), 照らし + た (助動詞). The noun is a standard against which something is judged (法律, 規則, 判例, 常識, 事実, 基準, 経験). Reject を + 照らす and に + 照らさ + れ (passive: 月明かりに照らされた), where a light lights something, and reject 光に照らして (literal 'hold up to the light') by checking that the noun before に is not a source of light (光, 灯り, 太陽, 月). The entries ni-shitagatte, ni-motozuite, ni-sokushite and ni-nottotte have other lexemes (従う, 基づく, 即する, 則る) after に."
   },
   {
     "id": "ni-sakigakete",
@@ -359,13 +360,13 @@
       { "ja": "公開に先駆けて、監督のインタビューが配信されています。", "match": "に先駆けて", "en": "An interview with the director is being streamed ahead of the release." }
     ],
     "counterexamples": [
-      { "ja": "犬が友達に先に駆けて行った。", "en": "The dog ran on ahead of his friends.", "why": "に + 先に + 駆ける are separate words: に先に駆ける is literal running ahead, not the fixed 先駆ける" },
+      { "ja": "この作品は、後のアニメブームの先駆けになった。", "en": "This work became the forerunner of the later anime boom.", "why": "先駆け is the noun 'forerunner' (名詞), followed by に + なる, not に + the verb 先駆ける" },
       { "ja": "彼は音楽界の先駆者として知られる。", "en": "He is known as a pioneer of the music world.", "why": "先駆者 is the noun 'pioneer', with no に + 先駆ける" },
       { "ja": "開会に先立って、挨拶があった。", "en": "A greeting was given before the opening.", "why": "に先立って is the separate entry ni-sakidachi" }
     ],
     "subsumes": [],
     "confusables": ["ni-sakidachi", "ni-saishite", "ni-atatte"],
-    "detection": "Tokens: noun + に (助詞-格助詞) + 先駆け (先駆ける, 動詞-一般, 下一段-カ行, 連用形-一般) + て (接続助詞), or 先駆け alone before a comma, or 先駆け + た (助動詞) before a noun. UniDic keeps 先駆ける as one verb token. Reject に + 先 (名詞) + に + 駆け (駆ける) + て, where 先に and 駆けて are separate words and the sentence is literal running ahead, and reject the noun 先駆 + 者 (先駆者). Reject に + 先立っ (先立つ) + て and に + 先立ち, which are ni-sakidachi, and reject に + 際し + て (ni-saishite) and に + 当たっ + て (ni-atatte). The noun before に is an event, a time or a rival (発売, 他社, 全国, 時代)."
+    "detection": "Tokens: noun + に (助詞-格助詞) + 先駆け (先駆ける, 動詞-一般, 下一段-カ行, 連用形-一般) + て (接続助詞), or 先駆け alone before a comma, or 先駆け + た (助動詞) before a noun. UniDic keeps 先駆ける as one verb token. Reject the noun 先駆け (lexeme 先駆け, 名詞-普通名詞) in の + 先駆け + に + なる, where に follows instead of preceding it, and the noun 先駆 + 者 (先駆者). Reject に + 先立っ (先立つ) + て and に + 先立ち, which are ni-sakidachi, and reject に + 際し + て (ni-saishite) and に + 当たっ + て (ni-atatte). The noun before に is an event, a time or a rival (発売, 他社, 全国, 時代)."
   },
   {
     "id": "ni-wa-ataranai",
@@ -377,7 +378,7 @@
     "level": "N1",
     "sources": { "jlptsensei": "N1", "bunpro": "N1", "tanos": "N1", "jt4y": "N1" },
     "prototype": false,
-    "connection": ["V-dict + には当たらない / に当たらない", "N (Sino-Japanese verbal noun) + には当たらない"],
+    "connection": ["V-dict + には当たらない / に当たらない", "N (verbal noun of reaction: 心配, 非難) + には当たらない"],
     "examples": [
       { "ja": "彼が優勝したのは、驚くには当たらない。", "match": "には当たらない", "en": "There is no need to be surprised that he won." },
       { "ja": "あの程度の失敗で、彼を責めるには当たらないと思う。", "match": "には当たらない", "en": "I don't think he should be blamed for a mistake of that size." },
@@ -391,12 +392,12 @@
     "counterexamples": [
       { "ja": "くじには当たらなかったが、残念賞はもらえた。", "en": "I didn't win the lottery, but I got a consolation prize.", "why": "当たる is the literal 'win a prize' with くじ, not the 'no need to' construction" },
       { "ja": "投げたボールは、彼には当たらなかった。", "en": "The ball I threw did not hit him.", "why": "当たる 'hit', after a person marked by に + は; a literal verb of hitting" },
-      { "ja": "その行為は、違反には当たらない。", "en": "That act does not constitute a violation.", "why": "に当たらない 'does not fall under' after a noun category, the negative of ni-ataru, not a verb of reaction" },
+      { "ja": "この鉢は、直射日光に当たらない場所に置いてください。", "en": "Please keep this pot somewhere out of direct sunlight.", "why": "literal 当たる 'be exposed to (sun)' after the noun 日光, modifying 場所; no verb of reaction before に" },
       { "ja": "今日は祖父の誕生日に当たる。", "en": "Today falls on my grandfather's birthday.", "why": "affirmative に当たる 'fall on', the entry ni-ataru" }
     ],
     "subsumes": [],
     "confusables": ["ni-ataru", "ni-atatte", "ni-taranai", "ni-sugi-nai"],
-    "detection": "Tokens: verb in 終止形 or a noun + に (助詞-格助詞) + は (係助詞) + 当たら / あたら (当たる, 動詞-一般, 五段-ラ行, 未然形-一般) + ない (助動詞), or 当たり + ませ + ん in the polite form; the variant without は is に + 当たら + ない. UniDic reads the hiragana あたら as 当たる too. The word before には is a verb of reaction or judgment (驚く, 責める, 慌てる, 失望する, 感心する) or a verbal noun with する (礼を言う). Reject くじ / 懸賞 + には + 当たら + なかっ + た (literal 'win a prize'), 彼 + に + は + 当たら (a ball hits), and a noun category such as 違反 + には + 当たらない 'does not fall under', which is the negative of ni-ataru; the matcher can tell them by a reaction verb before に. Do not count に + 当たっ + て (ni-atatte) or に + 当たる without ない."
+    "detection": "Tokens: verb in 終止形 or a noun + に (助詞-格助詞) + は (係助詞) + 当たら / あたら (当たる, 動詞-一般, 五段-ラ行, 未然形-一般) + ない (助動詞), or 当たり + ませ + ん in the polite form; the variant without は is に + 当たら + ない. UniDic reads the hiragana あたら as 当たる too. The guard is the token before に: accept a verb in 終止形 (驚く, 責める, 慌てる, 言う, する of 失望する), and accept a noun only from a short list of reaction nouns (心配, 非難, 驚き). Reject every other noun before に: くじ + には + 当たら + なかっ + た (literal 'win'), 彼 + に + は + 当たら (a ball hits), 日光 + に + 当たら + ない (exposed to sun), and a category noun such as 違反 + には + 当たらない 'does not fall under', which shares all tokens with the pattern and is the negative of ni-ataru. Do not count に + 当たっ + て (ni-atatte) or に + 当たる without ない."
   },
   {
     "id": "ni-hajinai",
@@ -408,15 +409,15 @@
     "level": "N1",
     "sources": { "bunpro": "N1" },
     "prototype": false,
-    "connection": ["N (名, 伝統, 期待) + に恥じない + N", "N + に恥じぬ + N"],
+    "connection": ["N (名, 伝統, 看板) + に恥じない + N", "N + に恥じぬ + N"],
     "examples": [
-      { "ja": "彼は名に恥じない働きぶりを見せた。", "match": "に恥じない", "en": "He showed work that lived up to his name." },
+      { "ja": "彼は背番号10に恥じない活躍を見せた。", "match": "に恥じない", "en": "He played in a way worthy of the number 10 shirt." },
       { "ja": "王者の名に恥じない、堂々とした戦いだった。", "match": "に恥じない", "en": "It was a commanding fight, worthy of the champion's name." },
       { "ja": "親の名に恥じぬよう、精一杯努力します。", "match": "に恥じぬ", "en": "I will do my very best so as not to disgrace my parents' name." },
       { "ja": "世界一の名に恥じない味だった。", "match": "に恥じない", "en": "The taste was worthy of the title of the world's best." },
       { "ja": "先輩たちの伝統に恥じない演奏をしよう。", "match": "に恥じない", "en": "Let's give a performance that does justice to our seniors' tradition." },
       { "ja": "この賞に恥じない作品を作りたいです。", "match": "に恥じない", "en": "I want to make a work worthy of this prize." },
-      { "ja": "君の期待に恥じない結果を出すよ。", "match": "に恥じない", "en": "I'll deliver results that live up to your expectations." },
+      { "ja": "プロの看板に恥じない仕事をしてくれ。", "match": "に恥じない", "en": "Do work that lives up to the name of a professional." },
       { "ja": "彼は教師の肩書きに恥じない立派な人だった。", "match": "に恥じない", "en": "He was a fine man who lived up to the title of teacher." }
     ],
     "counterexamples": [
@@ -426,7 +427,7 @@
     ],
     "subsumes": [],
     "confusables": ["ni-atai-suru", "ni-taru", "ni-kotaete"],
-    "detection": "Tokens: noun + に (助詞-格助詞) + 恥じ (恥じる, 動詞-一般, 上一段-ダ行, 未然形-一般) + ない (助動詞), or 恥じ + ぬ (ず, 助動詞), or 恥じ + ませ + ん, 恥じ + なかっ + た, with a noun that follows (働きぶり, 味, 作品) or よう. The noun before に is a name, a title or a standard to live up to (名, 伝統, 賞, 期待, 肩書き). Reject を + 恥じ + ない 'is not ashamed of' (過去を恥じない, 無知を恥じて), where the noun is the thing one is ashamed of, and the affirmative に + 恥じる (名に恥じる行い), which means the opposite. The pattern 'does not feel ashamed before others' (人に恥じない生き方) has the same tokens and may be counted as this entry."
+    "detection": "Tokens: noun + に (助詞-格助詞) + 恥じ (恥じる, 動詞-一般, 上一段-ザ行, 連用形-一般 as UniDic tags it) + ない (助動詞), or 恥じ + ぬ (ず, 助動詞), or 恥じ + ませ + ん, 恥じ + なかっ + た, with a noun that follows (活躍, 味, 作品) or よう. The noun before に is a name, a title or a standard to live up to (名, 伝統, 賞, 看板, 肩書き, 背番号). Reject を + 恥じ + ない 'is not ashamed of' (過去を恥じない, 無知を恥じて), where the noun is the thing one is ashamed of, and the affirmative に + 恥じる (名に恥じる行い), which means the opposite. The pattern 'does not feel ashamed before others' (人に恥じない生き方) has the same tokens and may be counted as this entry."
   },
   {
     "id": "ni-itaru",
@@ -457,7 +458,7 @@
     ],
     "subsumes": [],
     "confusables": ["ni-itaru-made", "ni-itatte-wa", "ni-itatte-mo", "ni-noboru"],
-    "detection": "Tokens: noun, or a verb in 終止形, + に (助詞-格助詞) + 至っ / 至り / 至ら / 至る (至る, 動詞-一般, 五段-ラ行) in 終止形, 連用形-促音便 (至っ + た / て), 連用形-一般 (至り) or 未然形 (至ら + ない). The next token is not まで, and not て + は or て + も: に + 至る + まで is ni-itaru-made, に + 至っ + て + は is ni-itatte-wa, and に + 至っ + て + も is ni-itatte-mo, so reject those three. Reject the adverb 至っ + て (至って健康, 至る lexeme but with no に before it and a following adjective), and the noun 至る所 (one token). Keep the noun before に an outcome or a stage (合意, 訴訟, 辞職する, 殴り合い, 境地, ここ), the 'come to' sense."
+    "detection": "Tokens: noun, or a verb in 終止形, + に (助詞-格助詞) + 至っ / 至り / 至ら / 至る (至る, 動詞-一般, 五段-ラ行) in 終止形, 連用形-促音便 (至っ + た / て), 連用形-一般 (至り) or 未然形 (至ら + ない). The next token is not まで, and not て + は or て + も: に + 至る + まで is ni-itaru-made, に + 至っ + て + は is ni-itatte-wa, and に + 至っ + て + も is ni-itatte-mo, so reject those three, and also 至り + まし + て + は (the polite ni-itatte-wa) and 至り + まし + て + も. Reject the adverb 至っ + て (至って健康, 至る lexeme but with no に before it and a following adjective), and the noun 至る所 (one token). Keep the noun before に an outcome or a stage (合意, 訴訟, 辞職する, 殴り合い, 境地, ここ), the 'come to' sense."
   },
   {
     "id": "ni-itaru-made",
@@ -488,7 +489,7 @@
     ],
     "subsumes": [],
     "confusables": ["ni-itaru", "ni-itatte-wa", "ni-itatte-mo", "made-ni"],
-    "detection": "Tokens: noun + に (助詞-格助詞) + 至る (至る, 動詞-一般, 五段-ラ行, 連体形-一般) + まで (まで, 助詞-副助詞). After 詳細 the に is the copula だ (連用形-ニ) rather than 助詞, because 詳細 behaves like a na-noun, so accept either. Often から + A + に至るまで gives a range (子どもから大人に至るまで), and 今に至るまで means 'to this day'. A following の (に至るまでの + noun) is the same pattern. Reject に + 至る + noun, に + 至っ + て + (は / も), and に + 至っ + た, which belong to ni-itaru, ni-itatte-wa and ni-itatte-mo, and reject に + 着く + まで or に + なる + まで, whose verb lexemes are 着く and 成る, not 至る. Let this entry take precedence over ni-itaru when まで follows directly."
+    "detection": "Tokens: noun + に (助詞-格助詞) + 至る (至る, 動詞-一般, 五段-ラ行, 連体形-一般) + まで (まで, 助詞-副助詞); UniDic tags the に after 細部, 点, 今 and 端数 as 助詞-格助詞. Often から + A + に至るまで gives a range (子どもから大人に至るまで), and 今に至るまで means 'to this day'. A following の (に至るまでの + noun) is the same pattern. Reject に + 至る + noun, に + 至っ + て + (は / も), and に + 至っ + た, which belong to ni-itaru, ni-itatte-wa and ni-itatte-mo, and reject に + 着く + まで or に + なる + まで, whose verb lexemes are 着く and 成る, not 至る. Let this entry take precedence over ni-itaru when まで follows directly."
   },
   {
     "id": "ni-itatte-wa",
@@ -506,7 +507,7 @@
       { "ja": "食器も壊れ、テレビに至っては画面が割れていた。", "match": "に至っては", "en": "The dishes were broken, and the TV had a cracked screen to top it off." },
       { "ja": "この店は値段も高いし、接客に至っては最悪だ。", "match": "に至っては", "en": "This shop is expensive, and the service is the worst of all." },
       { "ja": "部員は皆やる気がなく、部長に至っては顔さえ出さない。", "match": "に至っては", "en": "None of the club members are motivated, and the club head doesn't even show his face." },
-      { "ja": "町の被害は大きく、港に至っては跡形もなかった。", "match": "に至っては", "en": "The town was badly hit, and the harbor was left without a trace." },
+      { "ja": "今年は全国的に雨が少なく、九州地方に至りましては、平年の半分にも届いておりません。", "match": "に至りましては", "en": "Rainfall has been low nationwide this year, and in Kyushu it has not reached even half the usual amount." },
       { "ja": "彼の部屋は散らかり放題で、冷蔵庫の中に至っては何が入っているか分からない。", "match": "に至っては", "en": "His room is a mess, and no one knows what is in the fridge." },
       { "ja": "彼の浪費癖はひどく、ブランド品の収集に至っては、もう病気としか言いようがない。", "match": "に至っては", "en": "His spending habit is awful, and as for his collecting designer goods, it can only be called an illness." },
       { "ja": "父は無口だが、祖父に至っては、ほとんど口をきかない。", "match": "に至っては", "en": "My father says little, and my grandfather hardly speaks at all." }
@@ -515,11 +516,11 @@
       { "ja": "辞職するに至って、ようやく事の重大さに気づいた。", "en": "Only when it came to resigning did he realize how serious it was.", "why": "に至って is the て-form of ni-itaru, with no は after it" },
       { "ja": "ここに至っても、彼は何も語らなかった。", "en": "Even now he said nothing.", "why": "に至っても is the separate entry ni-itatte-mo" },
       { "ja": "今に至るまで、その謎は解かれていない。", "en": "To this day that mystery has not been solved.", "why": "に至るまで is the separate entry ni-itaru-made" },
-      { "ja": "駅に着いては、すぐ時計を見る癖がある。", "en": "Whenever he reaches the station, he checks his watch right away.", "why": "に着いては is the verb 着く in a repeated て + は, not 至る" }
+      { "ja": "この件に関しては、後でご連絡します。", "en": "I'll get back to you on this matter later.", "why": "に関しては is ni-kanshite + は; the verb is 関する, not 至る" }
     ],
     "subsumes": [],
     "confusables": ["ni-itaru", "ni-itatte-mo", "ni-itaru-made", "ni-shite-wa"],
-    "detection": "Tokens: noun, or a verb in 終止形, + に (助詞-格助詞) + 至っ (至る, 動詞-一般, 五段-ラ行, 連用形-促音便) + て (接続助詞) + は (係助詞). The polite variant is 至り + まし + て + は. The word before に is the last and most extreme item of a list or contrast (弟, テレビ, 接客, 部長, 港), and the clause after は describes it more strongly than the earlier items. Require は directly after て. Reject に + 至っ + て with no は (ni-itaru, 辞職するに至って), に + 至っ + て + も (ni-itatte-mo), に + 至る + まで (ni-itaru-made), and に + 着い + て + は (駅に着いては), whose verb is 着く. Confusable with ni-shite-wa (にしては), which has し (為る) instead of 至っ (至る)."
+    "detection": "Tokens: noun, or a verb in 終止形, + に (助詞-格助詞) + 至っ (至る, 動詞-一般, 五段-ラ行, 連用形-促音便) + て (接続助詞) + は (係助詞). The polite variant is 至り + まし + て + は. The word before に is the last and most extreme item of a list or contrast (弟, テレビ, 接客, 部長, 九州地方), and the clause after は describes it more strongly than the earlier items. Require は directly after て. Reject に + 至っ + て with no は (ni-itaru, 辞職するに至って), に + 至っ + て + も (ni-itatte-mo), に + 至る + まで (ni-itaru-made), and に + 関し + て + は (この件に関しては), whose verb is 関する. Confusable with ni-shite-wa (にしては), which has し (為る) instead of 至っ (至る)."
   },
   {
     "id": "ni-itatte-mo",
@@ -566,7 +567,7 @@
     "examples": [
       { "ja": "彼は仕事にかこつけて、毎週のように出張に出かけている。", "match": "にかこつけて", "en": "He keeps going on business trips almost every week on the excuse of work." },
       { "ja": "病気にかこつけて、会議を欠席した。", "match": "にかこつけて", "en": "He skipped the meeting, using illness as a pretext." },
-      { "ja": "部長は接待にかこつけて、高級な店に通っていた。", "match": "にかこつけて", "en": "The department head kept going to expensive restaurants under the pretext of entertaining clients." },
+      { "ja": "部長は接待にかこつけ、高級な店に通っていた。", "match": "にかこつけ", "en": "The department head kept going to expensive restaurants under the pretext of entertaining clients." },
       { "ja": "彼女は勉強にかこつけて、家事をさぼっている。", "match": "にかこつけて", "en": "She is dodging housework with the excuse of studying." },
       { "ja": "子どもの世話にかこつけて、夫は飲み会を断った。", "match": "にかこつけて", "en": "My husband turned down the drinking party, using the kids as an excuse." },
       { "ja": "彼は同窓会に託けて、昔の恋人に会いに行ったらしい。", "match": "に託けて", "en": "He apparently went to see an old girlfriend under cover of a class reunion." },
@@ -580,7 +581,7 @@
     ],
     "subsumes": [],
     "confusables": ["ni-kamakete", "ni-kakete-wa", "ni-kakete-mo"],
-    "detection": "Tokens: noun, or a clause ending in の, + に (助詞-格助詞) + かこつけ / 託け (託ける, 動詞-一般, 下一段-カ行, 連用形-一般) + て (接続助詞). UniDic gives the lexeme 託ける for both the hiragana and the kanji spelling. The noun before に is the excuse (仕事, 病気, 接待, 祭り, 忙しいの), and the clause after て states what the speaker or subject really does. Reject にかまけて (かまける, ni-kamakete), かこっ + て (託つ 'grumble'), and かこま + れ + て (囲む, passive 'be surrounded'); the lexemes 託ける, 託つ and 囲む tell them apart. Often confused with ni-kakete-wa and ni-kakete-mo, which have かける (掛ける) after に + も / は."
+    "detection": "Tokens: noun, or a clause ending in の, + に (助詞-格助詞) + かこつけ / 託け (託ける, 動詞-一般, 下一段-カ行, 連用形-一般) + て (接続助詞), or かこつけ alone before a comma in written style. UniDic gives the lexeme 託ける for both the hiragana and the kanji spelling. The noun before に is the excuse (仕事, 病気, 接待, 祭り, 忙しいの), and the clause after て states what the speaker or subject really does. Reject にかまけて (かまける, ni-kamakete), かこっ + て (託つ 'grumble'), and かこま + れ + て (囲む, passive 'be surrounded'); the lexemes 託ける, 託つ and 囲む tell them apart. Often confused with ni-kakete-wa and ni-kakete-mo, which have かけ (掛ける) + て + は / も after に."
   },
   {
     "id": "ni-shinobinai",
@@ -592,7 +593,7 @@
     "level": "N1",
     "sources": { "jlptsensei": "N1" },
     "prototype": false,
-    "connection": ["V-dict + に忍びない", "V-dict (見る, 聞く, 捨てる) + に忍びなかった"],
+    "connection": ["V-dict + に忍びない"],
     "examples": [
       { "ja": "苦しむ動物の姿は、見るに忍びない。", "match": "に忍びない", "en": "The sight of suffering animals is more than I can bear to look at." },
       { "ja": "彼の悲痛な叫びは、聞くに忍びなかった。", "match": "に忍びなかった", "en": "I could not bring myself to listen to his anguished cries." },
@@ -605,13 +606,13 @@
     ],
     "counterexamples": [
       { "ja": "泥棒は屋根に忍び込んだ。", "en": "The burglar crept onto the roof.", "why": "忍び込む is a compound verb 'sneak in', where 忍び is its first element" },
-      { "ja": "彼らは夜の闇に忍んで城を抜け出した。", "en": "They slipped out of the castle, hiding in the dark of night.", "why": "に忍ぶ is the verb 忍ぶ 'hide, sneak', a different lexeme from 忍びる + ない" },
+      { "ja": "彼らは夜の闇に忍んで城を抜け出した。", "en": "They slipped out of the castle, hiding in the dark of night.", "why": "忍ん + で is 忍ぶ 'hide, sneak' in the て-form after a place noun, with no ない or ず after it" },
       { "ja": "猫が忍び足で近づいてきた。", "en": "The cat approached on tiptoe.", "why": "忍び足 is a noun 'stealthy steps', not 忍びない" },
       { "ja": "その音は聞くに堪えない。", "en": "I can't stand to listen to that noise.", "why": "に堪えない is the separate entry ni-taeru" }
     ],
     "subsumes": [],
-    "confusables": ["ni-taeru", "ni-katakunai", "ni-itaru"],
-    "detection": "Tokens: a verb in 終止形 (見る, 聞く, 捨てる, 責める, 断る) + に (助詞-格助詞) + 忍び (忍びる, 動詞-一般, 上一段-バ行) + ない / なかっ + た / なく (+ て), and in the written variants 忍び + ず, or 忍び + ませ + ん. UniDic gives the lexeme 忍びる for the stem before ない, and 忍ぶ for 忍び + ず and 忍び + ませ + ん, so accept both lexemes and require に directly before. The hiragana しのびない is one token whose lexeme is 忍び泣く (a wrong analysis), so match the surface に + しのびない as well. Reject 忍び込ん (忍び込む), 忍び足 (名詞), and に + 忍ん + で (忍ぶ 'hide', with a place or a darkness before に), and reject に + 堪え / 耐え + ない (ni-taeru). The verb before に is a perception or an act of cruelty that the speaker cannot bring themselves to do."
+    "confusables": ["ni-taeru", "ni-katakunai"],
+    "detection": "Tokens: a verb in 終止形 (見る, 聞く, 捨てる, 責める, 断る) + に (助詞-格助詞) + 忍び (忍びる, 動詞-一般, 上一段-バ行) + ない / なかっ + た / なく (+ て), and in the written variants 忍び + ず, or 忍び + ませ + ん. UniDic gives the lexeme 忍びる for the stem before ない, and 忍ぶ for 忍び + ず and 忍び + ませ + ん, so accept both lexemes and require に directly before. UniDic misreads hiragana しのびない as one token with the lexeme 忍び泣く (動詞, 連用形-イ音便), so a matcher must also accept に + that token when its surface is しのびない; hiragana しのびなかった splits normally into しのび (忍ぶ) + なかっ + た. Reject 忍び込ん (忍び込む), 忍び足 (名詞), and に + 忍ん + で (忍ぶ 'hide', with a place or a darkness before に), and reject に + 堪え / 耐え + ない (ni-taeru). The verb before に is a perception or an act of cruelty that the speaker cannot bring themselves to do."
   },
   {
     "id": "nimo-mashite",
@@ -665,13 +666,13 @@
       { "ja": "作法に則って、お茶をたてた。", "match": "に則って", "en": "I prepared the tea following the proper etiquette." }
     ],
     "counterexamples": [
-      { "ja": "ハッカーがサーバーを乗っ取った。", "en": "A hacker took over the server.", "why": "乗っ取る 'hijack' only sounds the same as のっとって; it has no に before it" },
+      { "ja": "あいつ、会社をのっとってボスになる気だぞ。", "en": "That guy means to take over the company and become the boss.", "why": "のっとる here is 乗っ取る 'take over' with を, not に + 則る" },
       { "ja": "事実に基づいて、結論を出した。", "en": "We drew the conclusion based on the facts.", "why": "に基づいて is the separate entry ni-motozuite" },
       { "ja": "現実に即して、計画を見直す。", "en": "We will review the plan to fit reality.", "why": "に即して is the separate entry ni-sokushite (即する, not 則る)" }
     ],
     "subsumes": [],
     "confusables": ["ni-sokushite", "ni-motozuite", "ni-terashite", "ni-shitagatte"],
-    "detection": "Tokens: noun + に (助詞-格助詞) + 則っ / のっとっ (則る, 動詞-一般, 五段-ラ行, 連用形-促音便) + て, or 則り (連用形-一般), or 則っ + た (連体形). UniDic gives the lexeme 則る for the kanji 則 and for the kana のっと-. The noun before に is a rule, a law, a custom or a manual (規約, 法律, 古式, 伝統, 作法). Reject 乗っ取っ (乗り取る) in 乗っ取って 'hijack', whose lexeme is 乗り取る and which has no に directly before it, and reject に + 即し (即する, ni-sokushite) and に + 基づい (基づく, ni-motozuite). The lexeme 則る versus 即する is the safest guard between this entry and ni-sokushite: both have に, a stem and て, but the kanji 則 and 即 and the lexemes differ."
+    "detection": "Tokens: noun + に (助詞-格助詞) + 則っ / のっとっ (則る, 動詞-一般, 五段-ラ行, 連用形-促音便) + て, or 則り (連用形-一般), or 則っ + た (連体形). UniDic gives the lexeme 則る for the kanji 則 and for the kana のっと-. The noun before に is a rule, a law, a custom or a manual (規約, 法律, 古式, 伝統, 作法). Kanji 乗っ取っ gets the lexeme 乗り取る, but hiragana のっとっ 'take over' (会社をのっとって) gets 則る, so require に (助詞-格助詞) directly before and reject を + のっとっ; also reject に + 即し (即する, ni-sokushite) and に + 基づい (基づく, ni-motozuite). The lexeme 則る versus 即する is the safest guard between this entry and ni-sokushite: both have に, a stem and て, but the kanji 則 and 即 and the lexemes differ."
   },
   {
     "id": "ni-sokushite",
@@ -695,7 +696,7 @@
       { "ja": "実情に即した議論をしよう。", "match": "に即した", "en": "Let's hold a discussion that suits actual conditions." }
     ],
     "counterexamples": [
-      { "ja": "彼は即座に答えた。", "en": "He answered immediately.", "why": "即座 is one noun 'at once' and に after it is the adverbial particle; no 即する" },
+      { "ja": "彼は即座に答えた。", "en": "He answered immediately.", "why": "即 belongs to the noun 即座 'at once', followed by に (助詞-格助詞); no 即する after に" },
       { "ja": "彼は即興で歌を作った。", "en": "He made up a song on the spot.", "why": "即興 is a noun, with no に + 即する" },
       { "ja": "規則に則って審査を行う。", "en": "We carry out the screening in accordance with the rules.", "why": "に則って is the separate entry ni-nottotte (則る, not 即する)" }
     ],
@@ -745,7 +746,7 @@
     "prototype": false,
     "connection": ["Clause-plain (with a question word) + のやら", "Clause-plain + ものやら", "V-dict (どうなる, 間に合う) + ことやら"],
     "examples": [
-      { "ja": "あの子は今、どこで何をしているのやら。", "match": "のやら", "en": "I wonder where he is and what he's up to now." },
+      { "ja": "あの子は今、どこで何をしているのやら。", "match": "のやら", "en": "I wonder where that kid is right now and what they're up to." },
       { "ja": "彼は、いつになったら帰ってくるのやら。", "match": "のやら", "en": "I wonder when on earth he will come home." },
       { "ja": "この先、どうなることやら。", "match": "ことやら", "en": "I wonder how things will turn out from here." },
       { "ja": "誰が来るのやら、まったく見当がつかない。", "match": "のやら", "en": "I have no idea who is coming." },
@@ -764,6 +765,6 @@
     ],
     "subsumes": [],
     "confusables": ["no-yara-no-yara", "yara-yara", "no-darou-ka", "kashira"],
-    "detection": "Tokens: a clause with a question word (何, どこ, 誰, いつ, どれ, なぜ, どう) ending in a plain predicate, + の (の, 助詞-準体助詞) + やら (やら, 助詞-副助詞), or ん (lexeme の) + やら in speech, or もの (物, 名詞) / こと (事, 名詞) + やら. The clause is a verb (in 終止形 or the contracted てる), an adjective or a noun-like phrase, and the sentence usually ends at やら or goes on after a comma with a statement of ignorance or worry (さっぱり分からない, 先が思いやられる). Reject a pair のやら + のやら (行くのやら行かないのやら), which is no-yara-no-yara, a pair 〜やら〜やら (嬉しいやら悲しいやら), which is yara-yara, and 何やら / どこやら (何 + やら, indefinite 'something', no の before やら). Reject 思いやら (思い遣る, 動詞) in 思いやられる, where やら is inside the verb. The 'wondering' sense needs a question word nearby, which separates it from the plain explanatory のだ, and ka-shira or no-darou-ka are the weaker 'I wonder' forms that learners may mix up with it."
+    "detection": "Tokens: a clause with a question word (何, どこ, 誰, いつ, どれ, なぜ, どう) ending in a plain predicate, + の (の, 助詞-準体助詞) + やら (やら, 助詞-副助詞), or ん (lexeme の) + やら in speech, or もの (物, 名詞) / こと (事, 名詞) + やら. The clause is a verb (in 終止形 or the contracted てる), an adjective or a noun-like phrase, and the sentence usually ends at やら or goes on after a comma with a statement of ignorance or worry (さっぱり分からない, 先が思いやられる). Reject a pair のやら + のやら (行くのやら行かないのやら), which is no-yara-no-yara: when a second のやら follows in the same clause chain, leave both to that entry; a pair 〜やら〜やら (嬉しいやら悲しいやら), which is yara-yara, and 何やら / どこやら (何 + やら, indefinite 'something', no の before やら). Reject 思いやら (思い遣る, 動詞) in 思いやられる, where やら is inside the verb. The 'wondering' sense needs a question word nearby, which separates it from the plain explanatory のだ, and kashira or no-darou-ka are the weaker 'I wonder' forms that learners may mix up with it."
   }
 ]

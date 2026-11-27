@@ -1,0 +1,215 @@
+[
+  {
+    "id": "ni-shite",
+    "verdict": "fixed",
+    "changes": [
+      "meaning: one line naming both inventory senses (stage/moment, X and also Y)",
+      "example 8: replaced, この年にして was ambiguous between 'this year' and 'at this age'",
+      "counterexample 5: replaced 短くして (no に, no matcher hit) with にしてみれば (ni-shite-mireba)",
+      "counterexample 6: added 目にして 'see', same tokens as the pattern",
+      "subsumes: added te-hajimete (にして初めて contains し + て + 初めて)",
+      "confusables: added te-hajimete",
+      "detection: real noun classes (数詞 + 接尾辞 歳/目, 歳 lexeme 年), 目 名詞 guard, all にして-family surfaces rejected"
+    ]
+  },
+  {
+    "id": "ni-todomarazu",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: replaced, にとどまらず inside a のは〜からだ reason clause was awkward; new one shows the V-dict connection",
+      "counterexample 1: replaced, 電車が駅にとどまる is unnatural (止まる) and duplicated counterexample 3; now に限らず (ni-kagirazu)",
+      "detection: fixed the repeated も, named the V-dict case, literal guard now cites the kept counterexample"
+    ]
+  },
+  {
+    "id": "ni-matsuwaru",
+    "verdict": "fixed",
+    "changes": [
+      "variants: removed にまつわって / にまつわった / にまつわります, marginal or unnatural in this sense; connection reduced to N + にまつわる + N",
+      "meaning: clarified",
+      "example 3 en: 'easy to come by' meant the opposite",
+      "example 5: replaced, この祭りにまつわって、言い伝えがある is unnatural",
+      "example 8: replaced, にまつわった謎 is unidiomatic",
+      "detection: まつわりつく is one token 纏わり付く (五段-カ行), not まつわり + つく; 連用形 forms noted as acceptable"
+    ]
+  },
+  {
+    "id": "ni-hikikae",
+    "verdict": "fixed",
+    "changes": [
+      "connection: na-Adj needs な before のに引き換え",
+      "example 5 en: now states the contrast",
+      "confusables: added noni (の + に before 引き換え)",
+      "detection: confirmed の 準体助詞 + に 格助詞 split"
+    ]
+  },
+  {
+    "id": "ni-taeru",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: now に耐えうる, covering that variant (耐え + うる 得る)",
+      "example 5 en: removed 'truly deeply'",
+      "detection: added 耐え + うる tokens; stated that hiragana たえ (絶える) must be accepted and kanji 絶え not"
+    ]
+  },
+  {
+    "id": "ni-katakunai",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: replaced, 'the reason ... is not hard to guess' was semantically off",
+      "counterexample 2: replaced 想像に及ばない (unidiomatic) with 想像にすぎない (ni-sugi-nai)",
+      "counterexample 3: replaced 固くない with no に by 意外に固くなかった, a real に + 固く + なかっ near miss",
+      "confusables: ni-wa-oyobanai replaced by ni-sugi-nai",
+      "detection: when to accept 固い (hiragana かたく after に 格助詞 and a guessing noun), and the だ 連用形-ニ guard"
+    ]
+  },
+  {
+    "id": "ni-taru",
+    "verdict": "fixed",
+    "changes": [
+      "variants: removed 〜に足らぬ, a negative form that belongs to ni-taranai",
+      "meaning: 'worth (doing), deserving of', since the literal 'sufficient for' sense is a counterexample",
+      "counterexample 4: replaced unnatural 三人に足りる with 十分に足りる (に is だ 連用形-ニ)",
+      "detection: replaced the quantity guard with the だ 連用形-ニ guard and the noun-class limit"
+    ]
+  },
+  {
+    "id": "ni-taranai",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added 〜に足らぬ, which example 8 shows",
+      "example 5: now polite に足りません, covering that variant",
+      "counterexample 3: replaced unnatural 三人に足りない with 合格点に足りなかった 'fall short of'",
+      "detection: guard text follows the new counterexample"
+    ]
+  },
+  {
+    "id": "ni-atai-suru",
+    "verdict": "fixed",
+    "changes": [
+      "example 4: replaced a frame that repeated example 1 with one showing the past variant に値した",
+      "level: left at N1 (bunpro N2, the other sources N1)"
+    ]
+  },
+  {
+    "id": "ni-yorazu",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 2 why: ピカソによる marks the author, not a passive agent",
+      "detection: noted the 'not by means of' reading with the same tokens"
+    ]
+  },
+  {
+    "id": "ni-terashite",
+    "verdict": "fixed",
+    "changes": [
+      "example 2: 違法に当たる was awkward, now 明らかに違法だ",
+      "detection: lexeme of 即して is 即する, not 即す"
+    ]
+  },
+  {
+    "id": "ni-sakigakete",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 1: replaced 友達に先に駆けて (ungrammatical, no surface overlap) with the noun 先駆け + に + なる",
+      "detection: guard for the noun 先駆け (名詞-普通名詞) instead of the removed sentence"
+    ]
+  },
+  {
+    "id": "ni-wa-ataranai",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 3: replaced 違反には当たらない (all tokens shared, noun-class only) with 直射日光に当たらない, rejected by the noun-before-に guard",
+      "connection: N limited to reaction verbal nouns",
+      "detection: states the guard (verb in 終止形 or a reaction noun before に) and that a category noun like 違反 shares all tokens"
+    ]
+  },
+  {
+    "id": "ni-hajinai",
+    "verdict": "fixed",
+    "changes": [
+      "example 1: replaced bare 名に恥じない (needs a possessor) and a fourth 名 frame with 背番号10に恥じない",
+      "example 7: replaced 期待に恥じない (期待 takes 応える) with プロの看板に恥じない",
+      "detection: 恥じる is 上一段-ザ行 and tagged 連用形-一般, not ダ行 未然形"
+    ]
+  },
+  {
+    "id": "ni-itaru",
+    "verdict": "fixed",
+    "changes": [
+      "detection: also reject polite 至り + まし + て + は / も, so ni-itatte-wa's polite variant stays disjoint"
+    ]
+  },
+  {
+    "id": "ni-itaru-made",
+    "verdict": "fixed",
+    "changes": [
+      "detection: removed a stale claim about 詳細 + だ; the tokenizer tags every に in the examples 助詞-格助詞"
+    ]
+  },
+  {
+    "id": "ni-itatte-wa",
+    "verdict": "fixed",
+    "changes": [
+      "example 5: replaced with a sentence for the polite variant に至りましては, which no example showed",
+      "counterexample 4: replaced unnatural 駅に着いては…癖がある with に関しては (ni-kanshite + は)",
+      "detection: guard follows the new counterexample"
+    ]
+  },
+  {
+    "id": "ni-itatte-mo",
+    "verdict": "ok",
+    "changes": []
+  },
+  {
+    "id": "ni-kakotsukete",
+    "verdict": "fixed",
+    "changes": [
+      "example 3: now shows the variant にかこつけ, which no example covered",
+      "detection: ni-kakete-wa / ni-kakete-mo are に + かけ (掛ける) + て + は / も, not に + も / は + かける"
+    ]
+  },
+  {
+    "id": "ni-shinobinai",
+    "verdict": "fixed",
+    "changes": [
+      "connection: dropped the redundant past-tense line",
+      "counterexample 2 why: 忍ぶ is also the lexeme of 忍び + ず / ませ in the examples, so the guard is the form, not the lexeme",
+      "confusables: removed ni-itaru, not a real confusion",
+      "detection: しのびない misread as 忍び泣く must be accepted by surface; しのびなかった tokenizes as 忍ぶ + なかっ"
+    ]
+  },
+  {
+    "id": "nimo-mashite",
+    "verdict": "ok",
+    "changes": []
+  },
+  {
+    "id": "ni-nottotte",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 1: replaced kanji 乗っ取った (lexeme 乗り取る, no overlap) with hiragana 会社をのっとって, which UniDic tags 則る",
+      "detection: the に-before guard is what rejects hiragana のっとる 'take over'"
+    ]
+  },
+  {
+    "id": "ni-sokushite",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 1 why: UniDic tags the に after 即座 as 格助詞, not an adverbial particle"
+    ]
+  },
+  {
+    "id": "ni-o-kasanete",
+    "verdict": "ok",
+    "changes": []
+  },
+  {
+    "id": "no-yara",
+    "verdict": "fixed",
+    "changes": [
+      "example 1 en: あの子 is 'that kid', not 'he'",
+      "detection: id typo ka-shira -> kashira; a paired のやら goes wholly to no-yara-no-yara, keeping it disjoint from yara-yara and no-yara-no-yara"
+    ]
+  }
+]
