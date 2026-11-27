@@ -5,7 +5,9 @@
     "variants": [
       "〜ばよかったのに",
       "〜たらよかった",
-      "〜なきゃよかった"
+      "〜なきゃよかった",
+      "〜なけりゃよかった",
+      "〜ならよかった"
     ],
     "meaning": "I should have ~ / I wish I had ~",
     "kind": "construction",
@@ -22,7 +24,10 @@
       "V-ba + よかった",
       "i-Adj-stem + ければよかった",
       "V-ta + らよかった",
-      "V-nai-stem + なきゃよかった"
+      "V-nai-stem + なきゃよかった",
+      "V-nai-stem + なけりゃよかった",
+      "N + ならよかった",
+      "na-Adj + ならよかった"
     ],
     "examples": [
       {
@@ -57,8 +62,18 @@
       },
       {
         "ja": "値段がもう少し安ければよかったんだけどね。",
-        "match": "ければよかった",
+        "match": "安ければよかった",
         "en": "I just wish it had been a bit cheaper."
+      },
+      {
+        "ja": "こんな店、入らなけりゃよかった。",
+        "match": "なけりゃよかった",
+        "en": "I never should have walked into this place."
+      },
+      {
+        "ja": "今日が日曜ならよかったのに。",
+        "match": "ならよかった",
+        "en": "If only today were Sunday."
       }
     ],
     "counterexamples": [
@@ -84,7 +99,8 @@
       }
     ],
     "subsumes": [
-      "tara"
+      "tara",
+      "nara-conditional"
     ],
     "confusables": [
       "ba-ii",
@@ -92,7 +108,7 @@
       "te-yokatta",
       "tara-ii"
     ],
-    "detection": "A verb or adjective in 仮定形 + 接続助詞 ば (lexeme ば), then 形容詞 良い in 連用形 + 助動詞 た (よかった). The たら variant is 助動詞 た in 仮定形 (たら/だら) + 良い + た; なきゃ is a contraction of なければ that UniDic may tag as ない in a fused 仮定形 (?). Guard: よかった must follow ば or たら directly and be past; present ばいい is ba-ii, and てよかった is te-yokatta. ばよかったのに is also listed under ba-noni, so one of the two must own it."
+    "detection": "The fixed tail is 良い (形容詞-非自立可能, surface よかっ or 良かっ, 連用形-促音便) + 助動詞 た. Before it comes one of: 接続助詞 ば after a 仮定形 (出れ ば, 安けれ ば, なけれ ば); 助動詞 た in 仮定形 たら; だ in 仮定形 なら; or a single 仮定形-融合 token that holds the ば (なきゃ and なけりゃ are ない, ときゃ is とく). Guard: 良い must directly follow that conditional and be past; ば + present いい is ba-ii, て + よかった is te-yokatta, and よかっ + たら is the conditional of いい. This entry owns ばよかったのに and たらよかったのに; ba-noni covers only the present ばいいのに forms."
   },
   {
     "id": "to-ii",
@@ -103,7 +119,7 @@
       "〜といいですね",
       "〜といいんだけど"
     ],
-    "meaning": "I hope ~ / it'd be good if ~",
+    "meaning": "I hope ~ / it'd be good if ~ / it helps to ~",
     "kind": "construction",
     "register": "neutral",
     "level": "N4",
@@ -190,7 +206,7 @@
       "to-ii-to-ii",
       "to-conditional"
     ],
-    "detection": "接続助詞 と after a plain non-past predicate, then 形容詞 良い (surface いい or 良い) closing the clause, optionally followed by ね, な, なあ, よ, けど, んだけど or です. Guard: いい must not modify a following noun (いい匂い, いい時間); いい followed by ます or いう forms is the verb 言う (lexeme 言う), and と must be 接続助詞, not the 格助詞 と 'with'. A second といい in the same sentence makes it to-ii-to-ii. tara-ii also lists といい variants, so the two entries must agree on who owns them."
+    "detection": "接続助詞 と after a plain non-past predicate (晴れる, ない, 静か だ), then 良い (形容詞-非自立可能, surface いい or 良い) in 終止形, or 連体形 before ん (といいんだけど), optionally followed by ね, な, なあ, よ, けど or です. Guard: 良い must not be 連体形 before a noun (いい 匂い, いい 時間); after 格助詞 と, いい is often 言う 連用形 (田中 と いい ます, 兄 と いい 、 弟 と いい), and the paired form is to-ii-to-ii. This entry owns と + いい; tara-ii keeps only the たら forms."
   },
   {
     "id": "tara-dou",
@@ -241,7 +257,7 @@
       {
         "ja": "文句ばかり言ってないで、自分でやってみたらどうなの。",
         "match": "たらどう",
-        "en": "Stop complaining and try doing it yourself."
+        "en": "Instead of just complaining, why not try doing it yourself?"
       },
       {
         "ja": "雨が降りそうですから、傘を持っていったらいかがですか。",
@@ -269,6 +285,11 @@
         "ja": "このまま雨が降り続いたらどうなるの？",
         "en": "What happens if it keeps raining like this?",
         "why": "どう belongs to the verb どうなる; たら is a condition."
+      },
+      {
+        "ja": "「もし雨が降ったら？」「そのときは中止だね。」",
+        "en": "\"What if it rains?\" \"Then we call it off.\"",
+        "why": "Bare たら？ asks 'what if' about a condition; nobody is told what to do."
       }
     ],
     "subsumes": [
@@ -280,7 +301,7 @@
       "hou-ga-ii",
       "te-goran"
     ],
-    "detection": "助動詞 た in 仮定形 (たら/だら) + 副詞 どう (lexeme どう) or いかが (lexeme 如何?), optionally + です/でしょう/か/の/かな, then end of sentence. The bare variant is たら directly before ？ or the end of a line. Guard: if a verb follows どう (どうする, どうなる, どうしよう, どうすれば), it is a conditional plus a question; a たら followed by more clause is tara. Must be matched before tara."
+    "detection": "助動詞 た in 仮定形 (surface たら or だら) + 副詞 どう, or + いかが (lexeme 如何, 形状詞-一般), optionally + です/でしょう/か/だ/な + の/かな, then end of sentence. The bare variant is たら directly before ？ or the end of a line. Guard: if a verb follows どう (どう すれ ば, どう しよう, どう なる), it is a conditional plus a question; a たら followed by more clause is tara. Bare たら？ is also the 'what if ~?' question (もし雨が降ったら？), so a matcher should prefer a second-person action verb and reject もし before it. Must be matched before tara."
   },
   {
     "id": "te-sumimasen",
@@ -290,7 +311,9 @@
       "〜てごめん",
       "〜て申し訳ありません",
       "〜てすみませんでした",
-      "〜て申し訳ございません"
+      "〜て申し訳ございません",
+      "〜てすいません",
+      "〜て申し訳ない"
     ],
     "meaning": "sorry for ~",
     "kind": "construction",
@@ -333,7 +356,7 @@
       },
       {
         "ja": "部屋が汚くてごめんなさい、適当に座ってください。",
-        "match": "くてごめんなさい",
+        "match": "汚くてごめんなさい",
         "en": "Sorry the place is a mess. Sit anywhere you like."
       },
       {
@@ -350,6 +373,16 @@
         "ja": "お返事が遅くなって申し訳ございません。",
         "match": "て申し訳ございません",
         "en": "I apologize for the late reply."
+      },
+      {
+        "ja": "朝早くから押しかけてすいません。",
+        "match": "てすいません",
+        "en": "Sorry for barging in so early in the morning."
+      },
+      {
+        "ja": "変なこと聞いて申し訳ない。",
+        "match": "て申し訳ない",
+        "en": "Sorry for asking something weird."
       }
     ],
     "counterexamples": [
@@ -376,7 +409,7 @@
       "te-kurete-arigatou",
       "te-cause"
     ],
-    "detection": "A て-form (接続助詞 て/で, or くて/で after adjectives) immediately followed by an apology: すみません (UniDic splits すみ + ませ + ん; lexeme 済む), ごめん / ごめんなさい (lexeme 御免?), or 申し訳 + ない/ありません/ございません (lexeme 申し訳). Only でした, ね or a comma may follow inside the match. Guard: a sentence boundary (。) between the て and the apology breaks it; 済む with a subject or after が/で in the sense 'be settled' (済む問題, で済む) is the literal verb."
+    "detection": "接続助詞 て/で (after a verb or an adjective's く) immediately followed by an apology: すみ/すい (済む 連用形) + ませ + ん (lexeme ず), optionally + でし + た; ごめん (lexeme 御免, 名詞), optionally + なさい (為さる 命令形); or 申し訳 (名詞) + ない (無い), あり ませ ん (有る) or ござい ませ ん (御座る). After a na-adjective or a noun the で is tagged 格助詞 (下手 で すみ ませ ん), so the matcher must accept 格助詞 で there. Guard: a 。 or a quote between the て and the apology breaks it (下げ て 、 ごめん なさい と 言っ た); 済む as a plain verb ('be settled', 謝っ て 済む 問題) is not followed by ます + ん."
   },
   {
     "id": "te-kurete-arigatou",
@@ -384,7 +417,8 @@
     "variants": [
       "〜てくださってありがとうございます",
       "〜てくれてありがとうございます",
-      "〜てくれてありがと"
+      "〜てくれてありがと",
+      "〜ていただいてありがとうございます"
     ],
     "meaning": "thank you for ~",
     "kind": "construction",
@@ -398,7 +432,8 @@
     "prototype": false,
     "connection": [
       "V-te + くれてありがとう",
-      "V-te + くださってありがとうございます"
+      "V-te + くださってありがとうございます",
+      "V-te + いただいてありがとうございます"
     ],
     "examples": [
       {
@@ -435,6 +470,11 @@
         "ja": "ずっと待っててくれてありがとう。",
         "match": "てくれてありがとう",
         "en": "Thanks for waiting for me all this time."
+      },
+      {
+        "ja": "遠いところ、わざわざ来ていただいてありがとうございます。",
+        "match": "ていただいてありがとうございます",
+        "en": "Thank you for coming all this way."
       }
     ],
     "counterexamples": [
@@ -455,14 +495,15 @@
       }
     ],
     "subsumes": [
-      "te-kureru"
+      "te-kureru",
+      "te-morau"
     ],
     "confusables": [
       "te-sumimasen",
       "te-kureru",
       "te-yokatta"
     ],
-    "detection": "A て-form + 補助動詞 くれる (lexeme 呉れる) or くださる (lexeme 下さる) in 連用形 + 接続助詞 て, then ありがとう (UniDic may tag it 感動詞 or as 形容詞 有り難い in ウ音便 ?), optionally + ございます/ございました. Allow a comma or one adverb (本当に, いつも) between くれて and ありがとう. Guard: くれ must follow a て/で; くれて after a noun + を is the main verb くれる. If anything other than ありがとう follows くれて, it is plain te-kureru."
+    "detection": "接続助詞 て/で + くれ (呉れる 連用形), くださっ (下さる 連用形-促音便) or いただい (頂く 連用形-イ音便) + 接続助詞 て, then ありがとう or ありがと (one token, lexeme 有り難う, 感動詞-一般), optionally + ござい (御座る) + ます. Allow a comma or 本当 + に between て and ありがとう. Guard: the 補助動詞 must follow a 接続助詞 て; プレゼント を くれ て is the main verb くれる (UniDic tags both 動詞-非自立可能, so only the preceding て tells them apart). If anything other than ありがとう follows the second て, it is plain te-kureru or te-morau."
   },
   {
     "id": "te-itadakemasen-ka",
@@ -472,7 +513,8 @@
       "〜てもらえませんか",
       "〜てもらえますか",
       "〜ていただけないでしょうか",
-      "〜てもらえない？"
+      "〜てもらえない？",
+      "〜てもらえる？"
     ],
     "meaning": "could you please ~?",
     "kind": "construction",
@@ -489,7 +531,8 @@
       "V-te + いただけませんか",
       "V-te + いただけますか",
       "V-te + もらえませんか",
-      "V-te + もらえない？"
+      "V-te + もらえない？",
+      "V-te + もらえる？"
     ],
     "examples": [
       {
@@ -521,6 +564,11 @@
         "ja": "この荷物、少し見ていてもらえますか。トイレに行きたいので。",
         "match": "てもらえますか",
         "en": "Could you watch my bag for a bit? I need the restroom."
+      },
+      {
+        "ja": "ごめん、これちょっと持っててもらえる？",
+        "match": "てもらえる？",
+        "en": "Sorry, could you hold this for a sec?"
       }
     ],
     "counterexamples": [
@@ -553,9 +601,10 @@
       "te-kudasai",
       "te-moratte-mo-ii-desu-ka",
       "masen-ka",
-      "sasete-kudasai"
+      "sasete-kudasai",
+      "te-kurenai"
     ],
-    "detection": "A て-form + the potential of 頂く or 貰う; UniDic short units give いただける and もらえる as their own potential verbs (lexemes 頂ける? and 貰える?). Then ます + ん + か, ます + か, ない + でしょう + か, or ない + ？. Guard: a question marker (か or ？) must close the match; いただけませんでした and a plain もらえない。 are statements. いただく/もらう right after a noun + を/も is the main verb. Must be matched before te-morau and masen-ka."
+    "detection": "接続助詞 て/で + いただけ or もらえ. UniDic keeps the lexeme of the base verb and marks the potential only by the 活用型: いただけ is 頂く 下一段-カ行 and もらえ is 貰う 下一段-ア行 (the plain verbs are 五段). Then ませ + ん (ず) + か, ます + か, ない + でしょう + か, or ない/もらえる + ？. Guard: a question marker (か or ？) must close the match; いただけ ませ ん でし た and a plain もらえ ない 。 are statements. いただけ right after a noun + を/も (私 も いただけ ます か) is the main verb. Must be matched before te-morau and masen-ka."
   },
   {
     "id": "o-ni-naru",
@@ -647,7 +696,7 @@
       "o-desu",
       "ku-ni-naru"
     ],
-    "detection": "接頭辞 お/ご (lexeme 御) + a verb in 連用形 or a サ変可能 noun + 格助詞 に + 動詞 成る (lexeme 成る) in any form, including the potential なれる. ご覧になる (honorific of 見る) counts. Guard: お + an ordinary noun + になる (お医者さん, お時間, ご迷惑) is 'become'; お世話になる is a fixed phrase. Since UniDic tags ご + 漢語 as a noun either way, a stoplist of nouns like 世話, 迷惑, 時間 is needed. Must be matched before ku-ni-naru."
+    "detection": "接頭辞 お/ご (lexeme 御) + a verb 連用形 (読み, 書き, 着き, 掛け) or a noun (利用, and 帰り, which UniDic tags as the noun 帰り) + 格助詞 に + 成る in any form, including the potential なれ (成る 下一段-ラ行). ご覧 is one token (御覧, 名詞) with no separate ご, and ご覧 + に + なる counts. Guard: お + an ordinary noun + に + なる (お 医者 さん, お 時間, お 世話) is 'become' or a fixed phrase, and the noun tags look the same, so a stoplist of such nouns is needed; ご 迷惑 に なる tags に as だ 連用形-ニ, which also rules it out. Must be matched before ku-ni-naru."
   },
   {
     "id": "o-suru",
@@ -687,7 +736,7 @@
       {
         "ja": "この前の本、お返ししますね。",
         "match": "お返しします",
-        "en": "Here's the book you lent me the other day."
+        "en": "I'll give you back that book from the other day."
       },
       {
         "ja": "ご乗車の皆様にご案内いたします。",
@@ -734,14 +783,15 @@
       "o-desu",
       "o-kudasai"
     ],
-    "detection": "接頭辞 お/ご (lexeme 御) + a verb in 連用形 or a サ変可能 noun + 動詞 為る (する) or 致す (いたす) in any form. The speaker or their side is the doer. Guard: if に + なる follows, it is o-ni-naru; if ください or いただく follows, it is o-kudasai or go-itadaku. Nouns that take a polite お and an ordinary する (お茶, お化粧, お掃除, お洗濯, お昼寝) need a stoplist, since UniDic gives them the same tokens."
+    "detection": "接頭辞 お/ご (lexeme 御) + a verb 連用形 (持ち, 返し, 待ち) or a noun (連絡, 案内, 説明, and 手伝い, which UniDic tags as the noun 手伝い) + 為る (する) or 致す (いたす) in any form. The speaker or their side is the doer. Guard: if に + なる follows, it is o-ni-naru; if ください or いただく follows, it is o-kudasai or go-itadaku. Nouns that take a polite お and an ordinary する (お 茶, お 化粧, お 掃除, お 昼寝) get the same tags (御 接頭辞 + 名詞 + 為る), so they need a stoplist."
   },
   {
     "id": "de-gozaimasu",
     "form": "〜でございます",
     "variants": [
       "〜でござる",
-      "〜でございました"
+      "〜でございました",
+      "〜でございましょう"
     ],
     "meaning": "is ~ (very polite copula)",
     "kind": "construction",
@@ -787,6 +837,11 @@
         "ja": "お支払いは現金のみでございますので、ご了承ください。",
         "match": "でございます",
         "en": "Please note that we only accept cash."
+      },
+      {
+        "ja": "お料理のお味はいかがでございましょうか。",
+        "match": "でございましょう",
+        "en": "How is everything tasting?"
       }
     ],
     "counterexamples": [
@@ -811,7 +866,7 @@
       "de-aru",
       "de-irassharu"
     ],
-    "detection": "Copula だ in 連用形 (で) + 動詞 御座る (lexeme 御座る?) + 助動詞 ます in any form (ございます, ございました, ございますか). でござる is the same without ます and appears in samurai-style role language. Guard: UniDic may tag the で as 格助詞 instead of 助動詞 だ, so check that a noun or na-adjective stem precedes and no other predicate follows. ございます after に, が or は is the polite existence verb, and after the ウ音便 of an adjective (ありがとう, おはよう) it is a set phrase."
+    "detection": "で tagged as 助動詞 だ 連用形-一般 + ござい (御座る, 連用形-イ音便) + 助動詞 ます in any form (ます, まし た, ましょう); でござる is で + ござる (御座る 終止形) without ます, in samurai-style role language. In every example UniDic tags this で as だ, not 格助詞, so the matcher can require だ. Guard: ござい after に, が or は is the polite existence verb (三階 に ござい ます, 質問 は ござい ます か), and after ありがとう (有り難う, 感動詞) it is a set phrase."
   },
   {
     "id": "de-aru",
@@ -820,7 +875,8 @@
       "〜であった",
       "〜であり",
       "〜であろう",
-      "〜であって"
+      "〜であって",
+      "〜であれば"
     ],
     "meaning": "is ~ (written copula)",
     "kind": "construction",
@@ -871,6 +927,11 @@
         "ja": "子供であっても、ルールは守らなければならない。",
         "match": "であって",
         "en": "Even children have to follow the rules."
+      },
+      {
+        "ja": "必要であれば、いつでも連絡してください。",
+        "match": "であれば",
+        "en": "If you need anything, get in touch any time."
       }
     ],
     "counterexamples": [
@@ -902,7 +963,7 @@
       "te-aru",
       "no-da"
     ],
-    "detection": "Copula だ in 連用形 (で, 助動詞) + 動詞 有る (ある) in any form: ある, あった, あり, あって, あろう. UniDic may tag this で as 格助詞, so check what precedes: a noun, a na-adjective stem or の, and no place or means reading. Guard: で after a 撥音便 verb stem (込んで, 読んで, 遊んで) is 接続助詞 て, which makes te-aru; ある as 連体詞 (ある程度, ある日) is not the verb. でもある is de-mo-aru, and のである overlaps the explanatory no-da."
+    "detection": "で tagged as 助動詞 だ 連用形-一般 + 有る (動詞-非自立可能) in any form: ある, あっ た, あり, あっ て, あろう, あれ ば. UniDic tags this で as だ in every example, and tags the place で (体育 館 で) as 格助詞, so the tag does most of the work. Guard: で after a 撥音便 verb stem (詰め込ん で) is 接続助詞 て (lexeme て), which makes te-aru; でもある tags で as 格助詞 and is de-mo-aru. UniDic misreads 電車である程度 as だ + 有る 連体形 + 程度, so the matcher needs a guard for ある + 程度 (in ある日 it correctly gives 或る 連体詞). のである overlaps the explanatory no-da."
   },
   {
     "id": "koto-ga-aru",
@@ -927,7 +988,9 @@
     "connection": [
       "V-dict + ことがある",
       "V-nai + ことがある",
-      "i-Adj + ことがある"
+      "i-Adj + ことがある",
+      "na-Adj + なことがある",
+      "N + のことがある"
     ],
     "examples": [
       {
@@ -964,6 +1027,16 @@
         "ja": "あの店って、たまに閉まってることあるよね。",
         "match": "ことある",
         "en": "That shop is closed now and then, isn't it?"
+      },
+      {
+        "ja": "この辺りは、九月になっても暑いことがある。",
+        "match": "ことがある",
+        "en": "Around here it can still be hot even in September."
+      },
+      {
+        "ja": "あの店、平日でも休みのことがあるから、電話してから行ってね。",
+        "match": "ことがある",
+        "en": "That shop is sometimes closed even on weekdays, so call before you go."
       }
     ],
     "counterexamples": [
@@ -998,7 +1071,7 @@
       "koto-wa-ga",
       "tokoro-ga-aru"
     ],
-    "detection": "A non-past plain predicate (verb 連体形, ない, or an i-adjective) + 名詞 事 (こと, lexeme 事) + が/も/は or nothing + 動詞 有る. Guard: if the word before こと is 助動詞 た, it is ta-koto-ga-aru; ことはない and こともない are koto-wa-nai. The literal 'there is something to ~' (話したいことがある, やることがたくさんある) has the same tokens; lower confidence when こと follows たい or a quantity word stands between こと and ある. ことは + verb again (行くことは行く) is koto-wa-ga."
+    "detection": "A non-past 連体形 (verb, ない, てる, an i-adjective, na-adjective + な, or noun + の) + こと (事, 名詞-普通名詞) + が/も/は or nothing + 有る (動詞-非自立可能) in any form. Guard: if the token before こと is 助動詞 た, it is ta-koto-ga-aru; こと は ない (無い 形容詞) is koto-wa-nai. The literal 'there is something to ~' (話し たい こと が ある, やる こと が たくさん ある) has the same tokens; lower confidence when こと follows たい or a word stands between が and ある. N の こと が ある can also be 'there is the matter of N' (彼 の こと が ある から), so the N slot needs the most care. ことは + the same verb again (行く こと は 行く) is koto-wa-ga."
   },
   {
     "id": "hitsuyou-ga-aru",
@@ -1007,7 +1080,8 @@
       "〜必要はない",
       "〜必要があります",
       "〜必要がない",
-      "〜必要もない"
+      "〜必要もない",
+      "〜必要ない"
     ],
     "meaning": "need to ~",
     "kind": "construction",
@@ -1059,6 +1133,11 @@
         "ja": "会員の方は、チケットを買う必要がありません。",
         "match": "必要がありません",
         "en": "Members don't need to buy a ticket."
+      },
+      {
+        "ja": "わざわざ謝る必要ないって。",
+        "match": "必要ない",
+        "en": "There's no need to go out of your way to apologize."
       }
     ],
     "counterexamples": [
@@ -1092,7 +1171,7 @@
       "nakute-mo-ii",
       "nakereba-naranai"
     ],
-    "detection": "A plain non-past verb (連体形) or a noun + の, then 名詞 必要 (lexeme 必要), then が/は/も, then 動詞 有る or 形容詞 無い (ない, ありません). Guard: require the verb or N の directly before 必要; 必要 + な/に/だ is the adjective use, a noun + が必要 is ga-hitsuyou, and 必要以上 / 必要性 are compounds. The ない after 必要は is 形容詞 無い, not 助動詞 ない."
+    "detection": "A plain non-past verb (連体形) or a noun + の, then 必要 (名詞-普通名詞, lexeme 必要), then が/は/も or nothing (casual 必要 ない), then 有る or 無い (形容詞). Guard: require the verb or N の directly before 必要; UniDic tags 必要 as a noun even in 必要 な 物 (な is だ 連体形), so the following な/に/だ marks the adjective use; a noun + が + 必要 is ga-hitsuyou, and 必要 以上 is two nouns. The ない after 必要 is 形容詞 無い, not 助動詞 ない."
   },
   {
     "id": "ga-hitsuyou",
@@ -1170,7 +1249,7 @@
       "hitsuyou-ga-aru",
       "ga-hoshii"
     ],
-    "detection": "格助詞 が + 名詞 必要 (lexeme 必要), optionally + だ/です/な/なの/か or end of clause. The thing marked by が is what is needed. Guard: 必要 must not be followed by が/は + ある (hitsuyou-ga-aru), by と + する (the verb 'to need', where が marks the needer), or by 以上/性/経費 forming a compound. のが必要 after a verb still counts."
+    "detection": "格助詞 が + 必要 (名詞-普通名詞, lexeme 必要), optionally + だ/です/な (だ 連体形)/か or end of clause. The thing marked by が is what is needed. Guard: 必要 must not be followed by が/は + 有る (hitsuyou-ga-aru), by と (格助詞) + 為る (the verb 'to need', where が marks the needer), or by a noun such as 以上 or 性 (UniDic gives 必要 以上 as two nouns). のが必要 after a verb still counts."
   },
   {
     "id": "to-iwarete-iru",
@@ -1179,7 +1258,8 @@
       "〜と言われています",
       "〜と言われる",
       "〜と言われてきた",
-      "〜と思われている"
+      "〜と思われている",
+      "〜って言われてる"
     ],
     "meaning": "it is said that ~ / ~ is believed to be",
     "kind": "construction",
@@ -1226,6 +1306,11 @@
         "ja": "よく笑う人は長生きすると言われる。",
         "match": "と言われる",
         "en": "People who laugh a lot are said to live longer."
+      },
+      {
+        "ja": "あそこのラーメン、この辺じゃ一番うまいって言われてるよ。",
+        "match": "って言われてる",
+        "en": "People say that ramen place is the best around here."
       }
     ],
     "counterexamples": [
@@ -1260,7 +1345,7 @@
       "sou-hearsay",
       "to-iu"
     ],
-    "detection": "Quotative 格助詞 と + 動詞 言う (lexeme 言う) or 思う (lexeme 思う) in 未然形 + 助動詞 れる (passive), then + て + 動詞 居る (いる), or plain る, or て + 来る. Guard: a に-marked agent (先生に, 母に) makes it a direct passive about one event; the general reading has no agent or a generic one. Past 言われた without ている is usually a direct passive. と考えられている is to-kangaerareru and とされている is to-sareru, so do not count them here."
+    "detection": "Quotative と (格助詞) or って (副助詞) + 言わ/思わ (言う or 思う, 未然形) + れ/れる (助動詞 れる, 助動詞-レル), then 接続助詞 て + いる (居る) or き (来る) + た, the casual てる (one token, lexeme てる), or plain れる. Guard: a に-marked agent (先生 に, 母 に) makes it a direct passive about one event; the general reading has no agent or a generic one. Past 言わ れ た without いる is usually a direct passive. と 考え られ て いる is to-kangaerareru and と さ れ て いる is to-sareru, so do not count them here."
   },
   {
     "id": "ni-mieru",
@@ -1289,7 +1374,7 @@
     "examples": [
       {
         "ja": "彼女は年のわりに若く見える。",
-        "match": "く見える",
+        "match": "若く見える",
         "en": "She looks young for her age."
       },
       {
@@ -1309,7 +1394,7 @@
       },
       {
         "ja": "部屋を片付けたら、ずいぶん広く見えるようになった。",
-        "match": "く見える",
+        "match": "広く見える",
         "en": "Once I tidied up, the room looked a lot bigger."
       },
       {
@@ -1352,7 +1437,7 @@
       "mitai-da",
       "to-mieru"
     ],
-    "detection": "Three shapes before 動詞 見える (lexeme 見える): 格助詞 に after a noun, に after a na-adjective stem (UniDic may tag it 助動詞 だ 連用形), or an i-adjective in 連用形 (く). Optional は/も may stand between に/く and 見える. Guard: に after よう is you-ni-mieru; a noun + に naming a person who sees (先生に見える所) is literal; よく見える is usually the adverb 良く 'well', so lower confidence for it. が見える and から見える are literal visibility."
+    "detection": "Three shapes before 見える (動詞-一般, lexeme 見える) in any form: 格助詞 に after a noun (写真 に, 羊 に); に tagged as だ 連用形-ニ after a na-adjective, そう (様態) or a noun that UniDic reads as one (真剣 に); or an i-adjective in 連用形-一般 (若く, 広く). Optional は/も may stand between に/く and 見える. Guard: よう + に (だ) + 見える is you-ni-mieru, and みたい + に is mitai-da territory; a noun + に naming the person who sees (先生 に 見える ところ) is literal; よく before 見える is tagged 良く 副詞, not 形容詞, so requiring 形容詞 連用形 rejects it. が 見える and から 見える are literal visibility."
   },
   {
     "id": "to-mieru",
@@ -1410,9 +1495,9 @@
     ],
     "counterexamples": [
       {
-        "ja": "この部屋から海が見える。",
-        "en": "You can see the sea from this room.",
-        "why": "が見える is literal 'be visible'; there is no quotative と."
+        "ja": "警察は、彼が犯人だと見ている。",
+        "en": "The police believe he's the culprit.",
+        "why": "と見る (lexeme 見る) is the agent's own judgment, a different verb from 見える."
       },
       {
         "ja": "彼と見る夕日は特別だ。",
@@ -1432,7 +1517,7 @@
       "rashii",
       "you-ni-mieru"
     ],
-    "detection": "Quotative 格助詞 と right after a plain clause or a noun, then 動詞 見える (lexeme 見える) as みえる, みえて, みえ or 見える. The clause before と is the speaker's inference from visible signs. Guard: と meaning 'with' (彼と) or conditional と followed by a が-marked thing that is seen is literal sight. It belongs to narration and writing; in speech the same idea is usually らしい or ようだ."
+    "detection": "格助詞 と right after a plain clause (降っ た, いる, ある) or a noun, then 見える (動詞-一般, lexeme 見える, also for kana みえ) as みえる, みえ + て, みえ or 見える. The clause before と is the speaker's inference from visible signs. Guard: と + 見る (lexeme 見る: 犯人 だ と 見 て いる) is someone's judgment, not this pattern; と 'with' + 見る (彼 と 見る) has the same lexeme split; 接続助詞 と + a が-marked thing + 見える (着く と 、 町 が 見え た) is literal sight. It belongs to narration and writing; in speech the same idea is usually らしい or ようだ."
   },
   {
     "id": "ga-suru",
@@ -1603,7 +1688,8 @@
     "variants": [
       "〜はずはない",
       "〜はずない",
-      "〜はずがありません"
+      "〜はずがありません",
+      "〜はずもない"
     ],
     "meaning": "there's no way that ~",
     "kind": "construction",
@@ -1651,6 +1737,11 @@
         "ja": "嫌いなはずがないでしょ。ずっと一緒にいたんだから。",
         "match": "はずがない",
         "en": "Of course I don't hate you. We've been together all this time."
+      },
+      {
+        "ja": "あの頑固な父が、自分から謝るはずもない。",
+        "match": "はずもない",
+        "en": "My stubborn dad would never apologize first."
       }
     ],
     "counterexamples": [
@@ -1683,7 +1774,7 @@
       "wake-ga-nai",
       "ni-chigainai"
     ],
-    "detection": "名詞 筈 (はず, lexeme 筈) + が/は/nothing + 形容詞 無い (ない, なかった) or 動詞 有る + ます + ん. Guard: the negation must come after はず; a ない before はず (知らないはず) is hazu. Trailing でしょ, じゃん, よ still count. Must be matched before hazu. Close in meaning to わけがない, which uses 訳."
+    "detection": "はず (筈, 名詞-普通名詞) + が/は/も or nothing + 無い (形容詞: ない, なかっ た) or 有る + ませ + ん. Guard: the negation must come after はず; a 助動詞 ない before はず (知ら ない はず だ) is hazu. Trailing でしょ, じゃん, よ still count. Must be matched before hazu. UniDic sometimes tags ある before はず as 或る 連体詞 (そんなこと、あるはずもない), so do not require a verb tag before はず. Close in meaning to わけがない, which uses 訳."
   },
   {
     "id": "dake-de",
@@ -1754,6 +1845,11 @@
         "ja": "お昼はおにぎりだけです。",
         "en": "Lunch is just rice balls.",
         "why": "Plain だけ 'only' followed by です; no で particle."
+      },
+      {
+        "ja": "必要なのはやる気だけで、経験はいらない。",
+        "en": "All you need is motivation; experience isn't required.",
+        "why": "で is the copula linking two clauses ('it is only X, and'), not 'just by'."
       }
     ],
     "subsumes": [
@@ -1765,7 +1861,7 @@
       "dake-shika",
       "bakari-de"
     ],
-    "detection": "副助詞 だけ (lexeme 丈?) + 格助詞 で, optionally + も or は. Guard: で that UniDic tags as 助動詞 だ (でした, である, でしょう after だけ) is the copula; だけでなく and だけじゃなく are dake-de-naku. Must be matched before dake. The tagger may not split 格助詞 で from copula で reliably here, so check what follows: a predicate clause, not した/しょう/ある."
+    "detection": "副助詞 だけ (lexeme だけ) + で, optionally + も or は. UniDic tags this で inconsistently: 格助詞 で after a noun or する (子供 だけ で, タッチ する だけ で), but だ 連用形-一般 after a plain verb or た (聞く だけ で, 考え た だけ で), so the tag cannot tell the pattern from the copula. Decide by what follows: でし た / です are separate tokens and never this pattern; で + なく (無い) or じゃ + なく is dake-de-naku; a copula で that links two clauses (やる気 だけ で 、 経験 は いら ない) has the same tags and needs a subject-は frame guard (Xのは … だけで). Must be matched before dake."
   },
   {
     "id": "te-bakari",
@@ -1851,9 +1947,10 @@
       "bakari",
       "ta-bakari",
       "bakari-approx",
-      "te-iru"
+      "te-iru",
+      "te-bakari-wa-irarenai"
     ],
-    "detection": "接続助詞 て/で + 副助詞 ばかり (also ばっかり, ばっか; lexeme 許り?) + optionally 動詞 居る (いる) in any form, or だ/じゃ/で/の. Guard: ばかり after 助動詞 た is ta-bakari; after a noun it is bakari; after a number it is bakari-approx. Must be matched before bakari and te-iru, because the いる after ばかり is the same auxiliary as in ている."
+    "detection": "接続助詞 て/で + 副助詞 ばかり (surfaces ばかり, ばっかり, ばっか all have lexeme ばかり) + optionally 居る (いる) in any form, or だ/じゃ/で/の. Guard: ばかり after 助動詞 た is ta-bakari; after a noun it is bakari; after a number it is bakari-approx. Must be matched before bakari and te-iru, because the いる after ばかり is the same auxiliary as in ている. てばかりは + いられない is te-bakari-wa-irarenai."
   },
   {
     "id": "yotei-da",
@@ -1942,7 +2039,8 @@
       "〜おうと思う",
       "〜ようと思っている",
       "〜ようと思います",
-      "〜ようと思って"
+      "〜ようと思って",
+      "〜ようと思ってる"
     ],
     "meaning": "I'm thinking of doing ~",
     "kind": "construction",
@@ -1975,7 +2073,7 @@
       },
       {
         "ja": "寝ようと思ったら、電話が鳴った。",
-        "match": "寝ようと思った",
+        "match": "寝ようと思ったら",
         "en": "Just as I was about to go to bed, the phone rang."
       },
       {
@@ -2020,6 +2118,6 @@
       "tsumori",
       "ka-to-omou"
     ],
-    "detection": "A verb in 意志推量形 + 助動詞 う or よう (lexeme う / よう?), then 格助詞 と + 動詞 思う (lexeme 思う) in any form (思う, 思って, 思ってる, 思います, 思った). Guard: the う must be volitional, not the conjecture in だろう/でしょう (lexeme だ / です); か between the volitional and と is ka-to-omou; ようと + する is you-to-suru. Must be matched before to-omou."
+    "detection": "A verb in 活用形 意志推量形, which UniDic keeps as one token with no separate う/よう (しよう is 為る, 行こう is 行く, 辞めよう is 止める), then 格助詞 と + 思う in any form (思う, 思っ て, 思っ てる, 思い ます, 思っ たら). Guard: the 意志推量形 token must be a verb, not だろう (だ) or でしょう (です), which are conjecture (darou-to-omou); か (終助詞) between the volitional and と is ka-to-omou; と + 為る is you-to-suru. Must be matched before to-omou."
   }
 ]
