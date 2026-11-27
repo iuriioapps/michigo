@@ -1,0 +1,669 @@
+[
+  {
+    "id": "ni-tsurete",
+    "form": "〜につれて",
+    "variants": ["〜につれ"],
+    "meaning": "as ~ changes, so does ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["V-dict + につれて", "V-dict + につれ", "N (change, progress) + につれて"],
+    "examples": [
+      { "ja": "年をとるにつれて、体力が落ちてきた。", "match": "につれて", "en": "My strength has been declining as I get older." },
+      { "ja": "夜が深まるにつれ、だんだん冷え込んできた。", "match": "につれ", "en": "It got colder and colder as the night deepened." },
+      { "ja": "走るにつれて息が苦しくなる。", "match": "につれて", "en": "The more I run, the harder it gets to breathe." },
+      { "ja": "物語が進むにつれて、登場人物の関係が見えてきます。", "match": "につれて", "en": "As the story goes on, the relationships between the characters come into view." },
+      { "ja": "子供が成長するにつれて、親の悩みも変わっていく。", "match": "につれて", "en": "As children grow up, their parents' worries change too." },
+      { "ja": "時間が経つにつれ、あの日の記憶は薄れていった。", "match": "につれ", "en": "As time passed, my memory of that day faded." },
+      { "ja": "町の発展につれて、昔ながらの店は少しずつ消えていった。", "match": "につれて", "en": "As the town developed, the old-fashioned shops disappeared little by little." }
+    ],
+    "counterexamples": [
+      { "ja": "犬を連れて公園へ行った。", "en": "I went to the park with my dog.", "why": "連れて is the verb 'to take along' with an object (を), with no に before it" },
+      { "ja": "友達に連れて行ってもらった。", "en": "A friend took me along.", "why": "に marks the person who takes me, and 連れて行く is a verb phrase, not a changing-together pattern" },
+      { "ja": "彼女に連れられて店に入った。", "en": "She took me into the shop.", "why": "に連れられて is the passive 連れられる 'be taken', not につれて" }
+    ],
+    "subsumes": [],
+    "confusables": ["ni-shitagatte", "to-tomo-ni"],
+    "detection": "The tokens are the particle に, the verb 連れる (下一段-ラ行) in 連用形 つれ, and optionally the conjunctive て (接続助詞, lexeme て). The bare form につれ ends a clause with a comma or goes straight into the next clause. The guard is the word before に: it must be a verb in 終止/連体形 or a noun of change (発展, 成長), the thing that changes. Reject a person or animal noun before に (友達に連れて行く, 彼女に連れられて) and reject 連れて directly after を (犬を連れて), because those are the literal verb 'to take along'. Confusable with にしたがって and とともに, which have their own entries."
+  },
+  {
+    "id": "to-tomo-ni",
+    "form": "〜とともに",
+    "variants": ["〜と共に"],
+    "meaning": "together with ~; at the same time as ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["N + とともに", "V-dict + とともに"],
+    "examples": [
+      { "ja": "春の訪れとともに、街に活気が戻ってきた。", "match": "とともに", "en": "With the arrival of spring, life came back to the town." },
+      { "ja": "年齢を重ねるとともに、物の見方も変わってきた。", "match": "とともに", "en": "My outlook has changed as I have grown older." },
+      { "ja": "友人と共に、小さな店を始めた。", "match": "と共に", "en": "I started a small shop together with a friend." },
+      { "ja": "彼女は喜びとともに、少しの不安も感じていた。", "match": "とともに", "en": "Along with her joy, she also felt some anxiety." },
+      { "ja": "日が昇るとともに、鳥たちが鳴き始めた。", "match": "とともに", "en": "The birds began to sing as the sun rose." },
+      { "ja": "家族とともに過ごす時間が、何よりの宝物です。", "match": "とともに", "en": "The time I spend with my family is my greatest treasure." },
+      { "ja": "医療の進歩とともに、平均寿命は大きく延びた。", "match": "とともに", "en": "Average life expectancy has risen greatly along with medical progress." }
+    ],
+    "counterexamples": [
+      { "ja": "両親ともに教師をしています。", "en": "Both of my parents are teachers.", "why": "とも is the suffix 'both' after 両親, not と + 共に" },
+      { "ja": "先生と共通点が多くて驚いた。", "en": "I was surprised that I had a lot in common with my teacher.", "why": "共通 is one noun; と is a case particle before it, not the とともに pattern" },
+      { "ja": "彼と一緒に行くのは嫌だ。", "en": "I don't want to go with him.", "why": "と一緒に is the plain 'together with'; it has no 共に" }
+    ],
+    "subsumes": [],
+    "confusables": ["ni-tsurete", "ni-shitagatte", "tomo"],
+    "detection": "The tokens are the particle と (格助詞), the noun 共 (lexeme 共, 名詞-普通名詞, written 共 or とも) and the particle に (格助詞). The kanji 共に and the hiragana ともに give the same noun 共, so match on the lexeme. The thing before と is a noun or a verb in 終止/連体形. Reject とも after a noun with no と before it (両親ともに, 二人とも), where とも is the suffix 共 (接尾辞-名詞的), not the noun, and reject 共通 or 共同, whose first token is a single longer noun. Confusable with につれて, which only means change in step, and with 一緒に, which has no entry."
+  },
+  {
+    "id": "ni-shitagatte",
+    "form": "〜にしたがって",
+    "variants": ["〜に従って", "〜にしたがい", "〜に従い"],
+    "meaning": "as ~ goes on; in accordance with ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N2", "marumori": "N3", "jt4y": "N2" },
+    "prototype": false,
+    "connection": ["V-dict + にしたがって", "N + にしたがって", "N + に従い"],
+    "examples": [
+      { "ja": "山を登るにしたがって、空気が薄くなっていった。", "match": "にしたがって", "en": "The air got thinner as we climbed the mountain." },
+      { "ja": "先生の指示に従って、実験を進めてください。", "match": "に従って", "en": "Please carry out the experiment following the teacher's instructions." },
+      { "ja": "規則に従い、すべての書類を提出しました。", "match": "に従い", "en": "In accordance with the rules, I handed in all the documents." },
+      { "ja": "夜が更けるにしたがって、雨はひどくなった。", "match": "にしたがって", "en": "The rain got heavier as the night wore on." },
+      { "ja": "経験を積むにしたがい、仕事が楽しくなってきた。", "match": "にしたがい", "en": "The more experience I gain, the more I enjoy the work." },
+      { "ja": "案内の矢印にしたがって進むと、出口に着きます。", "match": "にしたがって", "en": "If you follow the guide arrows, you will reach the exit." },
+      { "ja": "説明書に従って組み立てたのに、うまく立たない。", "match": "に従って", "en": "I assembled it following the manual, but it won't stand up properly." }
+    ],
+    "counterexamples": [
+      { "ja": "彼は上司の命令に従わなかった。", "en": "He did not obey his boss's order.", "why": "従わ is the plain negative of the verb 従う 'obey', not the て/連用形 of the pattern" },
+      { "ja": "したがって、結果は次の通りです。", "en": "Therefore, the results are as follows.", "why": "sentence-initial したがって is a conjunction 'therefore' with no に before it" },
+      { "ja": "従来のやり方では間に合わない。", "en": "The conventional way will not be in time.", "why": "従来 is a noun; 従 here is not the verb 従う" }
+    ],
+    "subsumes": [],
+    "confusables": ["ni-tsurete", "to-tomo-ni"],
+    "detection": "The tokens are the particle に, the verb 従う (五段-ワア行) in 連用形 (促音便 したがっ before て, or したがい), and the conjunctive て when present. Match the lexeme 従う for both the kanji and the hiragana spellings. A verb in 終止/連体形 before に gives the 'as ~ goes on' reading; a noun of rule, order or instruction gives 'in accordance with'. Reject the sentence-initial conjunction したがって, which is the same verb 従う plus て but has no に before it, and reject 従う in other forms such as 従わない, 従った or 従う. The noun 従来 is a separate token. Confusable with につれて and with ni-yotte."
+  },
+  {
+    "id": "ni-oite",
+    "form": "〜において / 〜における",
+    "variants": ["〜においては", "〜においても"],
+    "meaning": "in ~; at ~ (formal)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["N + において", "N + における + N", "N + においては", "N + においても"],
+    "examples": [
+      { "ja": "本大会は、東京において開催されます。", "match": "において", "en": "This tournament will be held in Tokyo." },
+      { "ja": "現代社会における情報の役割は大きい。", "match": "における", "en": "Information plays a large role in modern society." },
+      { "ja": "学生時代においては、勉強より友人関係に悩んだ。", "match": "においては", "en": "In my student days I worried more about friendships than about studying." },
+      { "ja": "彼は料理の分野においても才能を発揮した。", "match": "においても", "en": "He showed talent in the field of cooking as well." },
+      { "ja": "江戸時代において、庶民の娯楽といえば芝居だった。", "match": "において", "en": "In the Edo period, the entertainment of ordinary people meant the theater." },
+      { "ja": "日本における高齢化の問題を調べています。", "match": "における", "en": "I am researching the problem of the aging population in Japan." },
+      { "ja": "式は第二会議室において行います。", "match": "において", "en": "The ceremony will be held in the second meeting room." }
+    ],
+    "counterexamples": [
+      { "ja": "こちらにおいでください。", "en": "Please come this way.", "why": "おいで is the honorific 'come/go' (お出で), a noun after に, not におい+て" },
+      { "ja": "荷物を駅においてきた。", "en": "I left my luggage at the station.", "why": "に + 置く (て-form, written in kana) 'to put/leave', the verb 置く, not 於く" },
+      { "ja": "ベンチにおいてある傘は誰のですか？", "en": "Whose umbrella is the one left on the bench?", "why": "に + 置く (て-form in kana) + ある 'is placed', the verb 置く, not the formal particle phrase" }
+    ],
+    "subsumes": [],
+    "confusables": [],
+    "detection": "The tokens are the particle に and the verb 於く (lexeme 於く, 五段-カ行) in 連用形 イ音便 おい followed by て, then は or も when present. The attributive form における is tokenized as おけ (於く, 文語四段-カ行 命令形) + る (lexeme り, 文語助動詞-リ 連体形), so match on those lexemes. The word before に is a noun of place, time or field. The tokenizer reads hiragana おいて/おける as 於く even when the word is 置く 'to put' (荷物を駅においてきた, 棚における), while the kanji 置いて gives the lexeme 置く, so a hiragana hit needs a guard: no object noun with を or a following ある/いる/くる, and a noun of place, time or field before に. Reject おいで (お + いで, lexeme 出でる). Prefer the longer においては and においても over において plus は or も, and the where particle で is the spoken equivalent."
+  },
+  {
+    "id": "o-tooshite",
+    "form": "〜を通して / 〜を通じて",
+    "variants": ["〜を通し", "〜を通じ"],
+    "meaning": "through ~; via ~; throughout ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N2", "marumori": "N3", "try": "N3" },
+    "prototype": false,
+    "connection": ["N + を通して", "N + を通じて", "N + を通し", "N + を通じ"],
+    "examples": [
+      { "ja": "友人を通して、彼女と知り合った。", "match": "を通して", "en": "I got to know her through a friend." },
+      { "ja": "一年を通じて、この地方は雨が少ない。", "match": "を通じて", "en": "This region gets little rain all year round." },
+      { "ja": "留学を通して、自分の弱さに気づいた。", "match": "を通して", "en": "Studying abroad made me realize my own weakness." },
+      { "ja": "通訳を通してしか話せなかった。", "match": "を通して", "en": "We could only talk through an interpreter." },
+      { "ja": "彼は音楽を通じ、多くの人とつながった。", "match": "を通じ", "en": "He connected with many people through music." },
+      { "ja": "インターネットを通じて、世界中の人と話せる。", "match": "を通じて", "en": "You can talk to people all over the world via the internet." },
+      { "ja": "冬を通して、この部屋はずっと寒かった。", "match": "を通して", "en": "This room stayed cold throughout the winter." }
+    ],
+    "counterexamples": [
+      { "ja": "すみません、道を通してもらえませんか。", "en": "Excuse me, could you let me through?", "why": "通す is the verb 'let pass', with もらう; the noun before を is a place being passed, not a medium" },
+      { "ja": "針に糸を通して、ボタンを付けた。", "en": "I threaded the needle and sewed on the button.", "why": "糸を通す is the literal verb 'pass thread through', the object is the thing passed" },
+      { "ja": "電話が通じないので、メールを送った。", "en": "The phone would not connect, so I sent an email.", "why": "通じる 'to get through' with が, with no を before it" }
+    ],
+    "subsumes": [],
+    "confusables": ["o-tsuujite", "o-toshite", "ni-yotte"],
+    "detection": "The tokens are を (格助詞), then either 通す (lexeme 通す, 五段-サ行, tokens 通し + て) or 通ずる (lexeme 通ずる, サ行変格, 連用形 通じ + て), and the bare 連用形 通し or 通じ before a comma also counts. Here 通じて is lexeme 通ずる and 通して is 通す, both tagged 動詞 and often 非自立可能 for 通す. The word before を is a noun naming a medium, a period or an experience. Reject 通す in its literal sense (道を通してもらう, 糸を通して) and 通じる without を. Confusable with the entry o-tsuujite, which lists the same forms, and with をとして (o-toshite)."
+  },
+  {
+    "id": "ni-shite-wa",
+    "form": "〜にしては",
+    "variants": [],
+    "meaning": "for ~; considering ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["N + にしては", "V-plain + にしては", "i-Adj + にしては"],
+    "examples": [
+      { "ja": "初めてにしては、よくできたね。", "match": "にしては", "en": "That came out well for a first try." },
+      { "ja": "子供にしては、ずいぶん大人びたことを言う。", "match": "にしては", "en": "He says quite grown-up things for a child." },
+      { "ja": "あの人、先生にしては若いですね。", "match": "にしては", "en": "That person is young for a teacher, isn't he?" },
+      { "ja": "三日も何も食べていないにしては、元気そうですね。", "match": "にしては", "en": "You look well for someone who hasn't eaten for three days." },
+      { "ja": "冬にしては暖かい日が続いている。", "match": "にしては", "en": "We keep having warm days for the middle of winter." },
+      { "ja": "この値段にしては、量がけっこう多い。", "match": "にしては", "en": "The portion is pretty big for this price." },
+      { "ja": "留学して半年にしては、敬語がちゃんと使えている。", "match": "にしては", "en": "You use honorifics properly for someone who has studied abroad for only six months." }
+    ],
+    "counterexamples": [
+      { "ja": "この部屋を物置にしては、もったいない。", "en": "It would be a waste to turn this room into a storeroom.", "why": "に + する (連用形 し) + て + は means 'if you make it ~', not 'considering'" },
+      { "ja": "子供にしてはいけないことを、先に教えておく。", "en": "I tell them first what must not be done to children.", "why": "にして + はいけない: する 'to do (to)' in the prohibition てはいけない" },
+      { "ja": "彼は医者にして、画家でもある。", "en": "He is both a doctor and a painter.", "why": "にして is the literal-style 'being both', with no は after て" }
+    ],
+    "subsumes": [],
+    "confusables": ["ni-shite-mo", "te-wa-ikenai", "ni-suru"],
+    "detection": "The tokens are に (格助詞), し (為る 連用形), て (接続助詞) and は (係助詞), after a noun, a verb in plain form or an adjective. Match the four tokens in a row and require a clause after it that contrasts with what is expected. Reject when the next token is いけ/ない/なら (てはいけない, てはならない), which is te-wa-ikenai, and reject a に that follows a を-object as in 物置にしては, where the noun after に is the result of making something, not a standard of comparison. にして without は (医者にして) is a different written-style phrase."
+  },
+  {
+    "id": "ni-shite-mo",
+    "form": "〜にしても",
+    "variants": [],
+    "meaning": "even if ~; even though ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["N + にしても", "V-plain + にしても", "i-Adj + にしても", "na-Adj + にしても"],
+    "examples": [
+      { "ja": "忙しいにしても、連絡くらいはできるはずだ。", "match": "にしても", "en": "Even if you're busy, you should be able to get in touch." },
+      { "ja": "行くにしても、まず電話してからにしよう。", "match": "にしても", "en": "Even if we do go, let's call first." },
+      { "ja": "彼が悪かったにしても、あの言い方はひどい。", "match": "にしても", "en": "Even if he was in the wrong, the way she put it was harsh." },
+      { "ja": "冗談にしても、笑えない話だよ。", "match": "にしても", "en": "Even as a joke, that's not funny." },
+      { "ja": "いくら安いにしても、品質が悪くては意味がない。", "match": "にしても", "en": "However cheap it is, there is no point if the quality is bad." },
+      { "ja": "引っ越すにしても、来年の話になるでしょう。", "match": "にしても", "en": "Even if we move, it would be next year." },
+      { "ja": "社長にしても、現場のことまでは把握していないはずだ。", "match": "にしても", "en": "Even the president can't know everything about the shop floor." }
+    ],
+    "counterexamples": [
+      { "ja": "彼女を主役にしても、いいですか？", "en": "May I make her the lead?", "why": "に + する + てもいい: 'make her the lead' plus 'it is fine'" },
+      { "ja": "彼は医者にして、画家でもある。", "en": "He is both a doctor and a painter.", "why": "にして is the written 'being both', and も belongs to でも" },
+      { "ja": "これを半分にしても、まだ多い。", "en": "Even if I halve this, it is still a lot.", "why": "に + する (make into) + ても, a result with する, not a concession about a premise" }
+    ],
+    "subsumes": [],
+    "confusables": ["ni-shite-wa", "ni-seyo", "ni-shitemo-ni-shitemo", "temo"],
+    "detection": "The tokens are に (格助詞), し (為る 連用形), て (接続助詞) and も (係助詞), after a noun, a plain-form verb or an adjective. A matcher can only tell the concession from the literal する by context: reject a に that directly follows the object of an action (主役にしても, 半分にしても) where the noun is the result, and accept it when a plain clause or a noun of a person, thing or amount stands as the premise. The doubled にしてもにしても has its own entry, and にしろ and にせよ belong to ni-seyo. Confusable with the plain concessive ても (temo)."
+  },
+  {
+    "id": "to-ittemo",
+    "form": "〜と言っても",
+    "variants": ["〜といっても", "〜って言っても"],
+    "meaning": "even though I say ~; although ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["Clause-plain + と言っても", "N + と言っても"],
+    "examples": [
+      { "ja": "料理ができると言っても、卵焼きを焼ける程度です。", "match": "と言っても", "en": "I say I can cook, but it's only to the level of making an omelet." },
+      { "ja": "旅行に行ったといっても、日帰りだけどね。", "match": "といっても", "en": "I did go on a trip, but it was only a day trip." },
+      { "ja": "大金持ちって言っても、毎日節約して暮らしてるらしいよ。", "match": "って言っても", "en": "He may be called a billionaire, but apparently he lives frugally every day." },
+      { "ja": "山と言っても、ハイキングで登れるくらいの低い山だ。", "match": "と言っても", "en": "It is a mountain, yes, but a low one you can climb on a hike." },
+      { "ja": "英語を話せると言っても、日常会話だけです。", "match": "と言っても", "en": "I can speak English, but only everyday conversation." },
+      { "ja": "知り合いといっても、一度会っただけです。", "match": "といっても", "en": "I may call him an acquaintance, but we only met once." },
+      { "ja": "休みと言っても、家で仕事をしているようなものだ。", "match": "と言っても", "en": "It's called a day off, but it's like working at home." }
+    ],
+    "counterexamples": [
+      { "ja": "そんなこと、誰が言っても同じだよ。", "en": "It's the same no matter who says that.", "why": "言っても with no と before it: the verb 言う plus ても 'even if one says'" },
+      { "ja": "「行く」と言ってもらえますか。", "en": "Could you say 'I'll go' for me?", "why": "と言って + もらう: the て-form of 言う followed by the benefactive もらう" },
+      { "ja": "何と言っても、彼女の歌が一番だ。", "en": "Whatever anyone says, her singing is the best.", "why": "何と言っても is a fixed phrase 'above all', not the concessive pattern" }
+    ],
+    "subsumes": [],
+    "confusables": ["to-ittemo-ii", "to-ieba", "to-iu-to", "temo"],
+    "detection": "The tokens are と (格助詞) or って (副助詞), the verb 言う (lexeme 言う, 五段-ワア行) in 連用形 促音便 (言っ, written いっ in hiragana) and ても, which is て (接続助詞) + も (係助詞). In UniDic the hiragana いっ after と is still lexeme 言う. The word before と is a plain clause or a noun. Reject a 言っても with no と or って before it, and a 言って followed by もらう/くれる/おく (and 言ってもいい, which is to-ittemo-ii). The fixed phrase 何と言っても should be rejected."
+  },
+  {
+    "id": "to-ieba",
+    "form": "〜と言えば",
+    "variants": ["〜といえば", "〜って言えば", "そう言えば"],
+    "meaning": "speaking of ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["N + と言えば", "N + といえば", "N + って言えば"],
+    "examples": [
+      { "ja": "京都と言えば、やっぱりお寺ですね。", "match": "と言えば", "en": "Speaking of Kyoto, it has to be the temples." },
+      { "ja": "夏といえば、花火と海でしょう。", "match": "といえば", "en": "Summer means fireworks and the sea, doesn't it?" },
+      { "ja": "日本の食べ物って言えば、まず寿司が思い浮かぶ。", "match": "って言えば", "en": "When it comes to Japanese food, sushi comes to mind first." },
+      { "ja": "そういえば、田中さん結婚したらしいよ。", "match": "そういえば", "en": "Come to think of it, I hear Tanaka got married." },
+      { "ja": "冬と言えば、こたつにみかんが定番だ。", "match": "と言えば", "en": "For winter, a kotatsu with mandarin oranges is the classic." },
+      { "ja": "彼女と言えば、先週駅前でばったり会ったよ。", "match": "と言えば", "en": "Speaking of her, I ran into her in front of the station last week." },
+      { "ja": "日本のアニメと言えば、あの監督の作品は外せない。", "match": "と言えば", "en": "Where Japanese anime is concerned, that director's work is a must." }
+    ],
+    "counterexamples": [
+      { "ja": "何か言えば、また怒られるだけだ。", "en": "If I say anything, I'll just get scolded again.", "why": "言えば is the conditional of 言う with no と before it" },
+      { "ja": "大丈夫だと言えば、彼も安心するだろう。", "en": "If you tell him it's all right, he will be relieved.", "why": "と is the quotation particle and 言えば is the literal 'if you say'" },
+      { "ja": "よく言えば慎重、悪く言えば臆病だ。", "en": "Put kindly he is careful, put badly he is timid.", "why": "言えば follows an adverb (よく, 悪く), not a topic noun with と" }
+    ],
+    "subsumes": [],
+    "confusables": ["to-iu-to", "to-ittara"],
+    "detection": "The tokens are と (格助詞) or って (副助詞), the verb 言う (lexeme 言う, 五段-ワア行) in 仮定形 言え (written いえ in hiragana) and ば (接続助詞). The word before と is a noun, usually a topic about to be developed, and the clause after it names an association or adds a thought. そういえば is そう + いえ + ば with no と. Reject a 言えば with no と (何か言えば, よく言えば) and a と that follows a quoted clause or だ (大丈夫だと言えば), which is the literal 'if you say'. Confusable with というと and と言ったら, which have their own entries."
+  },
+  {
+    "id": "to-iu-to",
+    "form": "〜と言うと",
+    "variants": ["〜というと", "〜っていうと"],
+    "meaning": "speaking of ~; when you say ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "marumori": "N3", "try": "N3" },
+    "prototype": false,
+    "connection": ["N + と言うと", "N + というと", "N + っていうと"],
+    "examples": [
+      { "ja": "北海道というと、広い大地とおいしい海の幸を思い出す。", "match": "というと", "en": "Hokkaido makes me think of wide land and good seafood." },
+      { "ja": "「アジア」と言うと、中国やインドを思い浮かべる人が多い。", "match": "と言うと", "en": "Many people picture China or India when they hear 'Asia'." },
+      { "ja": "日本のお祭りっていうと、やっぱり夏祭りかな。", "match": "っていうと", "en": "When it comes to Japanese festivals, I guess it's the summer ones." },
+      { "ja": "鎌倉というと、大仏が有名ですね。", "match": "というと", "en": "Kamakura is famous for its Great Buddha, isn't it?" },
+      { "ja": "「勉強」というと、嫌な顔をする子供も多い。", "match": "というと", "en": "Many children pull a face at the word 'studying'." },
+      { "ja": "ラーメンっていうと、俺は豚骨だな。", "match": "っていうと", "en": "When it comes to ramen, I go for tonkotsu." },
+      { "ja": "冬のスポーツというと、スキーを思い浮かべます。", "match": "というと", "en": "Winter sports make me think of skiing." }
+    ],
+    "counterexamples": [
+      { "ja": "先生が帰るぞと言うと、みんな席に着いた。", "en": "When the teacher said they were leaving, everyone sat down.", "why": "と is the quotation particle and 言うと is the literal 'when someone said'" },
+      { "ja": "そう言うと思ったよ。", "en": "I thought you would say that.", "why": "言う + と思う: 言う is a plain verb inside the thought, と is the quotation particle" },
+      { "ja": "言うと怒られそうだから、黙っておこう。", "en": "I'd probably get scolded if I said it, so I'll keep quiet.", "why": "言うと with no と before it: the verb 言う plus the conditional と" }
+    ],
+    "subsumes": [],
+    "confusables": ["to-ieba", "to-ittara", "ka-to-iu-to", "to-conditional"],
+    "detection": "The tokens are と (格助詞) or って (副助詞), the verb 言う (lexeme 言う, 五段-ワア行, 終止形 言う or いう) and と (接続助詞). The first と follows a noun or a quoted word that is the topic, and the clause after it states an association. Reject a quoted clause ending in だ, ぞ or a verb plus と言うと, which is the literal 'when someone said', unless the quote is a single noun-like word, and reject 言うと with no first と. Also reject 言う + と思う and という (と + 言う + 連体形, the entry to-iu). Confusable with と言えば and と言ったら."
+  },
+  {
+    "id": "to-ittara",
+    "form": "〜と言ったら",
+    "variants": ["〜といったら", "〜ことといったら"],
+    "meaning": "speaking of ~; when it comes to ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "marumori": "N3", "try": "N3" },
+    "prototype": false,
+    "connection": ["N + と言ったら", "N + といったら", "i-Adj + ことといったら"],
+    "examples": [
+      { "ja": "彼の歌のうまさといったら、プロも顔負けだ。", "match": "といったら", "en": "As for how good he is at singing, even professionals would be put to shame." },
+      { "ja": "昨日の暑さといったら、外に出るのも嫌になるほどだった。", "match": "といったら", "en": "Yesterday's heat was so bad that I hated even going outside." },
+      { "ja": "あの店の行列と言ったら、二時間待ちは当たり前だ。", "match": "と言ったら", "en": "As for the line at that shop, a two-hour wait is normal." },
+      { "ja": "久しぶりに会えたうれしさといったら、言葉にならなかった。", "match": "といったら", "en": "I can't put into words how happy I was to meet again after so long." },
+      { "ja": "その時の彼女の怒りようといったら、見ていられなかった。", "match": "といったら", "en": "Her anger at that moment was more than I could bear to watch." },
+      { "ja": "寒いことといったら、手の感覚がなくなるほどだった。", "match": "ことといったら", "en": "It was so cold that I lost the feeling in my hands." },
+      { "ja": "日本の夏と言ったら、やっぱりスイカでしょう。", "match": "と言ったら", "en": "When it comes to a Japanese summer, it has to be watermelon." }
+    ],
+    "counterexamples": [
+      { "ja": "あいつにそんなことを言ったら、怒るに決まってる。", "en": "If you say that to him, he's sure to get angry.", "why": "言ったら is the conditional of 言う 'if you say' with no と" },
+      { "ja": "寒いと言ったら、彼が上着を貸してくれた。", "en": "When I said I was cold, he lent me his jacket.", "why": "と marks a quoted remark, and 言ったら is the literal 'when I said'" },
+      { "ja": "行くと言ったら、必ず行く人だ。", "en": "He's someone who always goes when he says he will.", "why": "quoted 行く plus と言ったら is literal 'once he says he'll go'" }
+    ],
+    "subsumes": [],
+    "confusables": ["to-ieba", "to-iu-to", "tara"],
+    "detection": "The tokens are と (格助詞), 言う (lexeme 言う, 五段-ワア行, 連用形 促音便 言っ or いっ) and たら (lexeme た, 助動詞-タ 仮定形). The ことといったら variant is こと (事) + と + いっ + たら. The word before と is a noun that names the thing being described, often a noun made from an adjective (暑さ, うまさ), and the clause after it states a strong degree. Reject 言ったら with no と before it, and reject a quoted remark or a 'said that' clause where the matter is one specific sentence spoken by someone. Confusable with と言えば and と言うと."
+  },
+  {
+    "id": "ka-to-iu-to",
+    "form": "〜かというと",
+    "variants": ["〜かといえば", "なぜかというと"],
+    "meaning": "if you ask why/what ~, it's that ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["Clause-plain + かというと", "N + かというと", "na-Adj + かというと"],
+    "examples": [
+      { "ja": "なぜかというと、昨日の夜ほとんど寝ていないからだ。", "match": "かというと", "en": "The reason is that I hardly slept last night." },
+      { "ja": "この店がなぜ人気かというと、値段が安いからです。", "match": "かというと", "en": "The reason this shop is popular is that it is cheap." },
+      { "ja": "彼が何をしたかというと、黙って席を立っただけだった。", "match": "かというと", "en": "As for what he did, he just got up from his seat in silence." },
+      { "ja": "好きかといえば、嫌いではないけど、特別でもない。", "match": "かといえば", "en": "Do I like it? I don't dislike it, but it's nothing special." },
+      { "ja": "英語が得意かというと、そうでもないんです。", "match": "かというと", "en": "Am I good at English? Not really." },
+      { "ja": "なぜこの町を選んだかといえば、海が近かったからだ。", "match": "かといえば", "en": "The reason I chose this town is that the sea was close." },
+      { "ja": "では、実際に使いやすいかというと、少し疑問が残る。", "match": "かというと", "en": "So is it actually easy to use? I still have some doubts." }
+    ],
+    "counterexamples": [
+      { "ja": "何かというと文句ばかり言う人だ。", "en": "He is someone who complains at every chance.", "why": "何かというと is a fixed idiom 'at the slightest thing', not a question being answered" },
+      { "ja": "「来るか」と言うと、犬が走ってきた。", "en": "When I said 'come here', the dog ran up.", "why": "か is part of a quoted command, and と言うと is the literal 'when I said'" },
+      { "ja": "なぜかと聞かれると、答えに詰まる。", "en": "When I'm asked why, I am at a loss for an answer.", "why": "かと聞かれる: passive of 聞く with と, not 言う" }
+    ],
+    "subsumes": [],
+    "confusables": ["to-iu-to", "to-ieba", "ka-douka"],
+    "detection": "The tokens are か (助詞-終助詞), と (格助詞), the verb 言う (lexeme 言う, 終止形 言う or いう, or 仮定形 いえ + ば) and と (接続助詞) or ば (接続助詞). The か follows a question word clause, or a clause the speaker is about to answer. In UniDic the か before と is 助詞-終助詞 here, but 助詞-副助詞 in the idiom 何かというと. Reject the idiom 何かというと (何 + か + いう + と), a か inside a quoted command, and かと + other verbs such as 聞く or 思う. So なぜかというと is なぜ + か + と + いう + と. Confusable with と言うと, which has no か."
+  },
+  {
+    "id": "koto-ni",
+    "form": "〜ことに",
+    "variants": [],
+    "meaning": "to my (surprise, relief) ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N2", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["V-ta + ことに", "i-Adj + ことに", "na-Adj + なことに"],
+    "examples": [
+      { "ja": "驚いたことに、彼は一言も英語が話せなかった。", "match": "驚いたことに", "en": "Surprisingly, he could not speak a word of English." },
+      { "ja": "残念なことに、今回の旅行は中止になった。", "match": "残念なことに", "en": "Unfortunately, this trip was called off." },
+      { "ja": "嬉しいことに、第一志望の大学に合格した。", "match": "嬉しいことに", "en": "To my joy, I got into my first-choice university." },
+      { "ja": "困ったことに、財布を家に忘れてきてしまった。", "match": "困ったことに", "en": "Trouble is, I left my wallet at home." },
+      { "ja": "不思議なことに、その夢は毎晩同じ場面で終わる。", "match": "不思議なことに", "en": "Strangely, that dream ends at the same scene every night." },
+      { "ja": "ありがたいことに、近所の人がたくさん助けてくれた。", "match": "ありがたいことに", "en": "Thankfully, the neighbors helped a lot." },
+      { "ja": "悔しいことに、あと一点で負けてしまった。", "match": "悔しいことに", "en": "It was frustrating: we lost by a single point." }
+    ],
+    "counterexamples": [
+      { "ja": "来月から毎日走ることにした。", "en": "I decided to run every day starting next month.", "why": "ことにする is the decision pattern koto-ni-suru" },
+      { "ja": "三月に引っ越すことになった。", "en": "It has been decided that I will move in March.", "why": "ことになる is the arrangement pattern koto-ni-naru" },
+      { "ja": "勝つことに意味がある。", "en": "There is meaning in winning.", "why": "こと is the nominalizer and に is the particle marking where the meaning lies, with no feeling word before it" }
+    ],
+    "subsumes": [],
+    "confusables": ["koto-ni-suru", "koto-ni-naru", "koto-nominalizer", "o-ii-koto-ni"],
+    "detection": "The tokens are a feeling word (an adjective, a な-adjective with な, or a past-tense verb such as 驚いた) in 連体形, the noun こと (事) and the case particle に (格助詞), then a comma and a statement of fact. Require the word before こと to be a word of emotion or evaluation (驚く, 残念, 嬉しい, 困る, 不思議, 悔しい, ありがたい). Reject こと + に when the next token is する or なる (為る or 成る, the entries koto-ni-suru and koto-ni-naru), and reject こと + に after a plain action verb. The entry o-ii-koto-ni is the specific 運のいいことに type."
+  },
+  {
+    "id": "koto-ka",
+    "form": "〜ことか",
+    "variants": ["〜ことだろう"],
+    "meaning": "how very ~!",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N2", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["V-plain + ことか", "i-Adj + ことか", "na-Adj + なことか", "V-plain + ことだろう"],
+    "examples": [
+      { "ja": "どれほど心配したことか。", "match": "ことか", "en": "You can't imagine how worried I was." },
+      { "ja": "あの人にどれだけ助けられたことか分からない。", "match": "ことか", "en": "I can't say how much that person has helped me." },
+      { "ja": "彼がどんなに喜んだことだろう。", "match": "ことだろう", "en": "How happy he must have been!" },
+      { "ja": "合格の知らせを聞いて、母がどれほど嬉しかったことか。", "match": "ことか", "en": "How happy my mother was when she heard I had passed." },
+      { "ja": "何度同じ話を聞かされたことか。", "match": "ことか", "en": "How many times I have had to listen to the same story!" },
+      { "ja": "一人暮らしを始めた頃は、どんなに心細かったことでしょう。", "match": "ことでしょう", "en": "How lonely it must have felt when you first started living alone." },
+      { "ja": "あの日をどれほど待ち望んだことか分からない。", "match": "ことか", "en": "I can't tell you how much I waited for that day." }
+    ],
+    "counterexamples": [
+      { "ja": "これは誰のことか知っていますか。", "en": "Do you know who this is about?", "why": "こと + か is an indirect question 'whom does it concern', not exclamation" },
+      { "ja": "大切なことかどうか、よく考えてください。", "en": "Please think carefully about whether it is important.", "why": "ことか is followed by どうか, the whether-or-not question ka-douka" },
+      { "ja": "どんなことか想像もできない。", "en": "I can't even imagine what it is like.", "why": "どんなこと is 'what kind of thing', an indirect question, with no degree clause before こと" }
+    ],
+    "subsumes": [],
+    "confusables": ["ka-douka", "koto-ni", "koto-nominalizer"],
+    "detection": "The tokens are a predicate in 連体形 (often past た), the noun こと (事) and か (助詞-終助詞), or こと + だろう/でしょう (だ or です in 意志推量形, one token each). A degree word (どれほど, どれだけ, どんなに, 何度) usually stands earlier in the sentence. Require that degree word or an exclamatory tone: the sentence is an emotional statement, not a request for information. Reject こと + か where the thing before こと is a noun-like phrase (誰のこと, どんなこと) and where か is followed by どうか. When the sentence is only こと + だろう with no degree word, it is the plain guess 'it is probably so'."
+  },
+  {
+    "id": "koto-da",
+    "form": "〜ことだ",
+    "variants": ["〜ことです"],
+    "meaning": "you should ~ (advice)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N2", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["V-dict + ことだ", "V-nai + ことだ", "V-dict + ことです"],
+    "examples": [
+      { "ja": "合格したいなら、毎日少しずつでも勉強することだ。", "match": "することだ", "en": "If you want to pass, study a little every day." },
+      { "ja": "風邪をひきたくなければ、早く寝ることです。", "match": "寝ることです", "en": "If you don't want to catch a cold, go to bed early." },
+      { "ja": "痩せたいなら、まず間食をやめることだ。", "match": "やめることだ", "en": "If you want to lose weight, first stop snacking." },
+      { "ja": "上達するには、とにかく人前で話してみることだよ。", "match": "みることだ", "en": "To get better, the thing to do is to try speaking in front of people." },
+      { "ja": "嫌なことは、早く忘れることです。", "match": "忘れることです", "en": "The best thing to do with unpleasant matters is to forget them quickly." },
+      { "ja": "試験の前は、無理をしないことだ。", "match": "しないことだ", "en": "Before an exam, don't overdo it." },
+      { "ja": "疲れたときは、何も考えずに眠ることだ。", "match": "眠ることだ", "en": "When you're tired, the thing to do is to sleep without thinking about anything." }
+    ],
+    "counterexamples": [
+      { "ja": "私が言いたいのは、そのことだ。", "en": "That is what I want to say.", "why": "そのこと is the noun 'that matter', not advice after a verb" },
+      { "ja": "問題は、彼が約束を破ったことだ。", "en": "The problem is that he broke his promise.", "why": "past た + ことだ states a fact as the identification of a topic, not advice" },
+      { "ja": "まったく困ったことだ。", "en": "That really is troublesome.", "why": "困ったことだ is an exclamation about a state of affairs, with a past-form adjective-like verb, not advice" }
+    ],
+    "subsumes": [],
+    "confusables": ["koto-nominalizer", "koto-ka", "hou-ga-ii", "wa-koto-na-no-da"],
+    "detection": "The tokens are a verb in 連体形 (dictionary or the negative ない in 連体形) followed by the noun こと (事) and だ or です (助動詞) at the end of a sentence, often after a conditional or purpose clause (なら, たければ, には). Require the verb to be non-past and to carry the speaker's advice about what the listener should do. Reject past た before こと (彼が破ったことだ), a noun or そのこと/同じこと before だ, and a topic-は identification (問題は~ことだ), which is wa-koto-na-no-da territory. Confusable with ほうがいい, which gives softer advice."
+  },
+  {
+    "id": "koto-kisoku",
+    "form": "〜こと",
+    "variants": ["〜ないこと"],
+    "meaning": "must ~ (written rules and instructions)",
+    "kind": "construction",
+    "register": "written",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["V-dict + こと", "V-nai + こと"],
+    "examples": [
+      { "ja": "提出期限を必ず守ること。", "match": "守ること", "en": "Make sure to keep to the submission deadline." },
+      { "ja": "教室内では飲食をしないこと。", "match": "しないこと", "en": "Do not eat or drink in the classroom." },
+      { "ja": "欠席する場合は、前日までに連絡すること。", "match": "連絡すること", "en": "If you will be absent, get in touch by the day before." },
+      { "ja": "遅刻した者は、事務室で届けを出すこと。", "match": "出すこと", "en": "Anyone who arrives late must file a notice at the office." },
+      { "ja": "試験中は、携帯電話の電源を切っておくこと。", "match": "おくこと", "en": "During the exam, keep your mobile phone switched off." },
+      { "ja": "ごみは分別して出すこと。", "match": "出すこと", "en": "Sort the garbage before putting it out." },
+      { "ja": "ここに自転車を止めないこと。", "match": "止めないこと", "en": "Do not park bicycles here." }
+    ],
+    "counterexamples": [
+      { "ja": "彼が来ることが大事だ。", "en": "It is important that he comes.", "why": "こと is the nominalizer followed by the particle が, not a sentence-final order" },
+      { "ja": "毎日本を読むことはいい習慣だ。", "en": "Reading books every day is a good habit.", "why": "こと nominalizes the clause as the topic with は" },
+      { "ja": "休みの日はよく映画を見ることがある。", "en": "On days off I often watch movies.", "why": "ことがある 'there are times when' is koto-ga-aru" }
+    ],
+    "subsumes": [],
+    "confusables": ["koto-nominalizer", "koto-da", "koto-ga-aru"],
+    "detection": "The tokens are a verb in 連体形 (non-past, or the negative ない in 連体形), the noun こと (事) and a sentence boundary: 。, a line break or the end of a line directly after こと, with no だ, です, よ, ね or case particle. The text is a notice, a rule or a set of instructions. Reject こと before が, は, を, に, も or で, and こと + だ/です, which is koto-da when advice or the nominalizer. A bare こと at the end of a short subtitle line can also be the spoken feminine particle こと, so require a plain verb before it."
+  },
+  {
+    "id": "koto-kara",
+    "form": "〜ことから",
+    "variants": [],
+    "meaning": "from the fact that ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["V-plain + ことから", "i-Adj + ことから", "na-Adj + なことから", "N + であることから"],
+    "examples": [
+      { "ja": "足跡が残っていたことから、犯人は男だと分かった。", "match": "ことから", "en": "From the fact that footprints were left, it became clear the culprit was a man." },
+      { "ja": "この通りは桜が多いことから、桜通りと呼ばれている。", "match": "ことから", "en": "This street is called Sakura Street because it has so many cherry trees." },
+      { "ja": "彼の名前が書かれていたことから、持ち主が分かった。", "match": "ことから", "en": "Since his name was written on it, we found out who the owner was." },
+      { "ja": "地面が濡れていることから、夜に雨が降ったと考えられる。", "match": "ことから", "en": "Judging from the wet ground, it seems it rained during the night." },
+      { "ja": "毎朝この時間に電車が混むことから、時差通勤を始める人が増えた。", "match": "ことから", "en": "Because the trains are crowded at this hour every morning, more people have started staggered commuting." },
+      { "ja": "彼が昔から運動が得意だったことから、みんなは彼が優勝すると思っていた。", "match": "ことから", "en": "Since he had always been good at sports, everyone thought he would win." },
+      { "ja": "窓が割られていたことから、警察は強盗事件として調べている。", "match": "ことから", "en": "Because the window had been smashed, the police are investigating it as a robbery." }
+    ],
+    "counterexamples": [
+      { "ja": "彼のことから話を始めた。", "en": "I started the talk with him.", "why": "彼のこと is 'the matter of him', a noun with the starting-point から" },
+      { "ja": "まず、寝ることから始めよう。", "en": "Let's start with sleeping first.", "why": "こと nominalizes 寝る and から means 'starting from', not a basis for a conclusion" },
+      { "ja": "やることから先に片付ける。", "en": "I clear the things I have to do first.", "why": "やること is a noun phrase 'things to do' with から as the starting point" }
+    ],
+    "subsumes": [],
+    "confusables": ["kara-because", "koto-nominalizer", "kara-shite", "kara-suru-to"],
+    "detection": "The tokens are a predicate in 連体形 (a past た, an adjective, な after a na-adjective, or である), the noun こと (事) and the case particle から (格助詞). The clause before こと states a fact, and the main clause after it draws a conclusion, gives a name's origin or states a reason. Reject こと when it follows の (彼のこと) or a demonstrative, which makes it 'the matter of ~', and reject こと + から when the から marks a starting point after a nominalized action (寝ることから始める), which takes verbs such as 始める, 考える or 取りかかる in the main clause. Confusable with the sentence-linking から."
+  },
+  {
+    "id": "koto-wa-ga",
+    "form": "〜ことは〜が",
+    "variants": ["〜ことは〜けど"],
+    "meaning": "it is ~, but ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N2", "marumori": "N3", "jt4y": "N2" },
+    "prototype": false,
+    "connection": ["V-plain + ことは + V-plain + が/けど", "i-Adj + ことは + i-Adj + が/けど", "na-Adj + なことは + na-Adj + だが/だけど"],
+    "examples": [
+      { "ja": "好きなことは好きだが、毎日は食べたくない。", "match": "好きなことは好きだが", "en": "I do like it, but I don't want it every day." },
+      { "ja": "行くことは行ったけど、すぐ帰ってきた。", "match": "行くことは行ったけど", "en": "I did go, but I came right back." },
+      { "ja": "読んだことは読んだんですが、内容はほとんど覚えていません。", "match": "読んだことは読んだんですが", "en": "I did read it, but I hardly remember what was in it." },
+      { "ja": "高いことは高いけど、それだけの価値はあると思う。", "match": "高いことは高いけど", "en": "It is expensive, but I think it is worth it." },
+      { "ja": "分かったことは分かったが、納得はしていない。", "match": "分かったことは分かったが", "en": "I did understand, but I'm not convinced." },
+      { "ja": "この映画、面白いことは面白いんだけど、ちょっと長すぎる。", "match": "面白いことは面白いんだけど", "en": "This movie is interesting, all right, but it's a bit too long." },
+      { "ja": "安いことは安いですが、すぐ壊れそうです。", "match": "安いことは安いですが", "en": "It is cheap, but it looks like it will break soon." }
+    ],
+    "counterexamples": [
+      { "ja": "泳ぐことはできるが、潜るのは苦手だ。", "en": "I can swim, but I'm bad at diving.", "why": "ことは is followed by a different predicate (できる), not the same word repeated" },
+      { "ja": "彼が来たことは知っているが、会ってはいない。", "en": "I know he came, but I haven't met him.", "why": "ことは + 知る: こと nominalizes a clause as the object, with no repeated predicate" },
+      { "ja": "その店に行ったことはあるけど、何も買わなかった。", "en": "I have been to that shop, but I bought nothing.", "why": "ことはある is the experience pattern ta-koto-ga-aru" }
+    ],
+    "subsumes": [],
+    "confusables": ["koto-nominalizer", "ta-koto-ga-aru", "ga-but"],
+    "detection": "The tokens are a predicate X in 連体形 (or a な-adjective stem plus な), こと (事), は (係助詞), the same predicate X again in 終止形 or the same inflection with the polite です/ます and then a contrastive が or けど/けれど (助詞-接続助詞) such as んですが. Require the two X to share one lexeme, which UniDic gives as the same 語彙素 (好き, 行く, 高い). Reject ことは followed by a different verb (できる, 知っている, ある, ない), because the repetition is what makes it a concession. The first X is usually present or past matching the second."
+  },
+  {
+    "id": "wa-koto-na-no-da",
+    "form": "〜は〜ことなのだ",
+    "variants": ["〜ということなのだ", "〜ことなんだ", "〜ことなのです"],
+    "meaning": "~ means that ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["Clause-plain + ということなのだ", "V-plain + ことなのだ", "Clause-plain + ことなんだ"],
+    "examples": [
+      { "ja": "彼が来ないということは、この話はなくなったということなのだ。", "match": "ということなのだ", "en": "That he is not coming means that the plan has fallen through." },
+      { "ja": "勝つということは、誰かが負けるということなんだ。", "match": "ということなんだ", "en": "To win means that somebody loses." },
+      { "ja": "諦めるのは、自分を信じていないことなのだ。", "match": "ことなのだ", "en": "Giving up means you do not believe in yourself." },
+      { "ja": "生きるとは、毎日選び続けることなのです。", "match": "ことなのです", "en": "To live is to keep choosing every day." },
+      { "ja": "反対しないのは、賛成しているということなんだ。", "match": "ということなんだ", "en": "Not objecting means that you agree." },
+      { "ja": "彼が黙っているのは、まだ怒っているということなんでしょう。", "match": "ということなんでしょう", "en": "His silence must mean that he is still angry." },
+      { "ja": "ここに靴があるのは、まだ中にいるということなんだ。", "match": "ということなんだ", "en": "The shoes being here means they are still inside." }
+    ],
+    "counterexamples": [
+      { "ja": "それは大事なことなのだ。", "en": "That is an important matter.", "why": "こと is the noun 'matter', modified by 大事な, not a statement of what something means" },
+      { "ja": "昨日のことなのに、もう忘れた。", "en": "It was only yesterday, and I have already forgotten.", "why": "のことなのに is 'a matter of yesterday' with のに, not an explanation" },
+      { "ja": "そういうことなら、手伝うよ。", "en": "If that's how it is, I'll help.", "why": "ことなら is a conditional on the situation, with no の/ん + だ" }
+    ],
+    "subsumes": ["no-da"],
+    "confusables": ["no-da", "to-iu-koto", "koto-da", "wake-da"],
+    "detection": "The tokens are a clause or noun phrase marked by は (the thing that has a meaning), then a predicate in 連体形, こと (事), な (だ 連体形), の or ん (準体助詞) and だ/です (or でしょう) at the end; ということなのだ adds という (言う 連体形, と + 言う) before こと, as in 勝つ + と + いう + こと + な + の + だ. Require a clause that states an event or condition and a following clause that draws a consequence from it. Reject こと modified by a noun or an adjective that names a matter (大事なこと, 昨日のこと) and reject ことなら and ことなのに, which have different tokens after な. It contains the explanatory のだ, so the matcher should not report no-da on the same tokens."
+  },
+  {
+    "id": "te-hajimete",
+    "form": "〜て初めて",
+    "variants": ["〜てはじめて"],
+    "meaning": "only after ~; not until ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["V-te + 初めて"],
+    "examples": [
+      { "ja": "親になって初めて、親のありがたみが分かった。", "match": "て初めて", "en": "It was only when I became a parent that I understood how much parents do." },
+      { "ja": "病気になって初めて、健康の大切さに気づいた。", "match": "て初めて", "en": "Only after I fell ill did I realize how important health is." },
+      { "ja": "実際に会ってみて初めて、彼の人柄が分かった。", "match": "て初めて", "en": "Only after actually meeting him did I understand his character." },
+      { "ja": "日本を出て初めて、日本の良さが見えてきた。", "match": "て初めて", "en": "It was only after leaving Japan that I started to see what is good about it." },
+      { "ja": "失ってはじめて、その人がどれほど大事だったか分かる。", "match": "てはじめて", "en": "You only realize how much that person mattered once you have lost them." },
+      { "ja": "自分で作ってみて初めて、料理の大変さを知りました。", "match": "て初めて", "en": "I only learned how hard cooking is after trying to make it myself." },
+      { "ja": "映画館で見て初めて、この作品のすごさを実感した。", "match": "て初めて", "en": "Only after seeing it in a cinema did I feel how great this work is." }
+    ],
+    "counterexamples": [
+      { "ja": "彼女に初めて会ったのは三年前だ。", "en": "It was three years ago that I first met her.", "why": "初めて is the adverb 'for the first time' with no て-form before it" },
+      { "ja": "写真を見て、初めての町を想像した。", "en": "I looked at a photo and imagined a town I had never been to.", "why": "初めての is the adjectival 'first-time' modifying 町, and the comma separates it from て" },
+      { "ja": "日本に来てから初めて雪を見た。", "en": "I saw snow for the first time since coming to Japan.", "why": "てから ends the clause, and 初めて is the adverb 'for the first time' (te-kara)" }
+    ],
+    "subsumes": [],
+    "confusables": ["te-kara", "te-kara-de-nai-to"],
+    "detection": "The tokens are a verb in 連用形 plus て (接続助詞), directly followed by 初めて (lexeme 初めて, 副詞, one token whether written 初めて or はじめて), usually with a comma after it, and a main clause that states the realization or the change. Reject 初めて after から (てから初めて), 初めて followed by の (初めての), and 初めて with no て-form directly before it. The て must be the verb's own て, as in 見て初めて; a comma between て and 初めて breaks the pattern. Confusable with てから, which only states order."
+  },
+  {
+    "id": "te-kara-de-nai-to",
+    "form": "〜てからでないと",
+    "variants": ["〜てからでなければ", "〜てからじゃないと"],
+    "meaning": "not until after ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N2", "marumori": "N3", "try": "N3", "jt4y": "N2", "kanzen": "N2" },
+    "prototype": false,
+    "connection": ["V-te + からでないと", "V-te + からでなければ", "V-te + からじゃないと"],
+    "examples": [
+      { "ja": "医者に診てもらってからでないと、運動はできません。", "match": "てからでないと", "en": "You can't exercise until a doctor has examined you." },
+      { "ja": "相談してからでなければ、返事はできない。", "match": "てからでなければ", "en": "I can't give an answer until I have talked it over." },
+      { "ja": "親に聞いてからじゃないと、決められないよ。", "match": "てからじゃないと", "en": "I can't decide until I've asked my parents." },
+      { "ja": "食べてからでないと、この薬は飲めない。", "match": "てからでないと", "en": "I can't take this medicine until after I have eaten." },
+      { "ja": "現地を見てからでないと、判断のしようがない。", "match": "てからでないと", "en": "There is no way to judge until we have seen the site." },
+      { "ja": "宿題を終わらせてからじゃないと、遊びに行かせないわよ。", "match": "てからじゃないと", "en": "I won't let you go out to play until you have finished your homework." },
+      { "ja": "全部読んでからでなければ、感想は言えません。", "match": "読んでからでなければ", "en": "I can't give my impressions until I have read it all." }
+    ],
+    "counterexamples": [
+      { "ja": "ご飯を食べてから出ないと間に合わない。", "en": "If I don't leave after eating, I won't make it.", "why": "出ない is the negative of 出る 'leave', not the copula で + ない" },
+      { "ja": "駅に着いてから連絡する。", "en": "I'll get in touch after I arrive at the station.", "why": "plain てから 'after ~ing' with no でないと (te-kara)" },
+      { "ja": "彼でないと困る。", "en": "It has to be him, or there's trouble.", "why": "でないと follows a noun, with no てから before it" }
+    ],
+    "subsumes": ["te-kara", "nai-to"],
+    "confusables": ["te-kara", "nai-to", "nakereba-naranai"],
+    "detection": "The tokens are the verb in 連用形 + て (接続助詞), から (格助詞), then the copula だ in 連用形 (で, 連用形-一般, or じゃ, 連用形-融合) followed by ない (lexeme 無い, 形容詞-非自立可能 終止形) and と (格助詞), or で + なけれ (無い, 仮定形) + ば (接続助詞). All four spellings give the lexeme だ for で and じゃ and 無い for the negative. Require the て-form of a verb directly before から and the copula directly after, and reject 出ない (lexeme 出る) in place of で + ない. Contains the pieces of te-kara and nai-to, so the matcher should not report those two on the same tokens."
+  },
+  {
+    "id": "o-hajime",
+    "form": "〜をはじめ",
+    "variants": ["〜をはじめとして", "〜をはじめとする"],
+    "meaning": "starting with ~; including ~",
+    "kind": "construction",
+    "register": "written",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["N + をはじめ", "N + をはじめとして", "N + をはじめとする + N"],
+    "examples": [
+      { "ja": "東京をはじめ、全国の主要都市で大雪が降った。", "match": "をはじめ", "en": "Heavy snow fell in major cities across the country, starting with Tokyo." },
+      { "ja": "校長先生をはじめとして、先生方が全員出席してくださった。", "match": "をはじめとして", "en": "All the teachers, the principal included, attended." },
+      { "ja": "彼女は、ピアノをはじめ、いろいろな楽器を演奏できる。", "match": "をはじめ", "en": "She can play various instruments, the piano among them." },
+      { "ja": "日本をはじめとする多くの国が、この協定に参加している。", "match": "をはじめとする", "en": "Many countries, Japan among them, take part in this agreement." },
+      { "ja": "首相をはじめとする政府関係者が会場に到着した。", "match": "をはじめとする", "en": "Government officials, led by the prime minister, arrived at the venue." },
+      { "ja": "家族をはじめ、友人や同僚にも本当に感謝しています。", "match": "をはじめ", "en": "I am truly grateful to my family first of all, and also to friends and colleagues." },
+      { "ja": "このアプリは、英語をはじめ十か国語に対応しています。", "match": "をはじめ", "en": "This app supports ten languages, starting with English." }
+    ],
+    "counterexamples": [
+      { "ja": "来週から新しい仕事をはじめる。", "en": "I start a new job next week.", "why": "はじめる is the verb 始める 'to start', with 仕事 as its object" },
+      { "ja": "そろそろ勉強をはじめます。", "en": "I'll start studying soon.", "why": "をはじめ + ます is the verb 始める in 連用形, not the listing pattern" },
+      { "ja": "その人をはじめて見たのは雨の日だった。", "en": "The first time I saw that person was on a rainy day.", "why": "はじめて is the adverb 初めて 'for the first time', not はじめ" }
+    ],
+    "subsumes": [],
+    "confusables": ["hajimeru", "to-iu"],
+    "detection": "The tokens are を (格助詞) and はじめ (lexeme 始め, 名詞-普通名詞), optionally followed by と + し (為る 連用形) + て, or と + する (為る 連体形). The tokenizer gives the noun 始め here, not the verb 始める, for all three forms. Reject the verb 始める after を (仕事をはじめる, 勉強をはじめます), which UniDic tags as a verb, and reject はじめて (lexeme 初めて, 副詞). The noun before を is the first and chief example, and a list of others follows."
+  },
+  {
+    "id": "wa-mochiron",
+    "form": "〜はもちろん",
+    "variants": ["〜はもちろん〜も", "〜はもちろんのこと"],
+    "meaning": "not to mention ~; ~ of course, and also",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3", "try": "N3" },
+    "prototype": false,
+    "connection": ["N + はもちろん", "N + はもちろんのこと"],
+    "examples": [
+      { "ja": "英語はもちろん、中国語も話せます。", "match": "はもちろん", "en": "I can speak English, of course, and Chinese too." },
+      { "ja": "この店はランチはもちろん、夜のメニューも充実している。", "match": "はもちろん", "en": "This place has a rich lunch menu, and the evening menu is full too." },
+      { "ja": "日本人はもちろんのこと、外国人観光客にも人気がある。", "match": "はもちろんのこと", "en": "It is popular with Japanese people, not to mention foreign tourists." },
+      { "ja": "彼は勉強はもちろん、スポーツもできる。", "match": "はもちろん", "en": "He is good at studying, and at sports as well." },
+      { "ja": "肉はもちろん、野菜もたっぷり入ってるよ。", "match": "はもちろん", "en": "There's meat, of course, and plenty of vegetables too." },
+      { "ja": "子供はもちろん、大人でも楽しめる映画だ。", "match": "はもちろん", "en": "It's a film that children enjoy, and adults can too." },
+      { "ja": "家族はもちろん、友達にも話していません。", "match": "はもちろん", "en": "I haven't told my family, let alone my friends." }
+    ],
+    "counterexamples": [
+      { "ja": "彼はもちろん知っているよ。", "en": "Of course he knows.", "why": "もちろん is the adverb 'of course' for the whole statement; は marks the subject and no second item is added" },
+      { "ja": "勝つのはもちろん私だ。", "en": "Of course it is me who will win.", "why": "もちろん is an adverb in front of the predicate, giving 'of course', not a listing of items" },
+      { "ja": "明日はもちろん行きます。", "en": "I will of course go tomorrow.", "why": "明日は is a time topic and もちろん emphasises the verb; there is no は + もちろん + も list" }
+    ],
+    "subsumes": [],
+    "confusables": ["wa-tomokaku", "wa-oroka", "nominarazu"],
+    "detection": "The tokens are a noun, は (係助詞) and もちろん (lexeme 勿論, 副詞), then a comma and a second item marked by も, にも, でも or まで, and a predicate shared by both. The variant はもちろんのこと adds の (格助詞) and こと (事). Require the noun before は to be a listed item that has a second item after the comma, and reject sentences where もちろん sits directly before the predicate and nothing is added (彼はもちろん知っている), where it is a plain adverb 'of course'. Lexeme 勿論 covers both もちろん and its kanji form."
+  }
+]
