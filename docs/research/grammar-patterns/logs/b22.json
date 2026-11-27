@@ -1,0 +1,230 @@
+[
+  {
+    "id": "o-kikkake-ni",
+    "verdict": "fixed",
+    "changes": [
+      "example 2: replaced, repeated the 一言 frame of example 1; now covers がきっかけとなって",
+      "example 8: replaced, repeated をきっかけにして; now covers をきっかけとした",
+      "counterexample 4: replaced, 契機 shares no tokens with the pattern; now その + きっかけ + に",
+      "connection: added をきっかけとした and がきっかけとなって",
+      "detection: token sequence for となって confirmed by tokenizer; guard for その + きっかけ + に"
+    ]
+  },
+  {
+    "id": "o-nozoite",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added を除いた + N and を除いては",
+      "register: written to neutral, を除いて is common in speech too",
+      "example 5: replaced, repeated example 1's を除いて; now covers を除いた",
+      "example 6: now covers を除いては",
+      "counterexample 2: 覗いて見た to 覗いてみた (subsidiary みる in kana)",
+      "detection: kana のぞいて → 覗く confirmed by tokenizer; added 除いては and 除いた tokens"
+    ]
+  },
+  {
+    "id": "o-towazu",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 3: why corrected, the sentence does have は before 問わず; the guard is the following 語り",
+      "detection: tokenizer confirms 問わ + ず, 問い + ませ + ん; noted that 問わず語り has the exact は + 問わ + ず tokens"
+    ]
+  },
+  {
+    "id": "o-tsuujite",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 3: replaced, 英語は通じる shares only the verb; now を + 通じ合う, which a surface matcher would hit",
+      "detection: tokenizer confirms 通じ = 通ずる サ行変格 連用形; guard against the 通じ合う token"
+    ]
+  },
+  {
+    "id": "o-komete",
+    "verdict": "fixed",
+    "changes": [
+      "example 7: いつもの感謝 to the set phrase 日頃の感謝; en fixed",
+      "example 8: en fixed ('a late mother')",
+      "counterexample 4: replaced, 詰め込んで shares no 込め surface; now をやり込めて (one token 遣り込める)",
+      "detection: compound-verb guard updated to the tokenizer's lexemes"
+    ]
+  },
+  {
+    "id": "o-toshite",
+    "verdict": "reject",
+    "changes": [
+      "reject: one source only; the として form duplicates toshite, and the comitative N + と + する (ゲームを弟としていた) has identical tokens, so no token guard gives good precision",
+      "counterexample 4: replaced を〜に任命 (shares no と) with the comitative と + する near miss",
+      "detection: states the identical comitative tokens confirmed by the tokenizer"
+    ]
+  },
+  {
+    "id": "o-ni-makaseru",
+    "verdict": "fixed",
+    "changes": [
+      "meaning: added the 'let anger/momentum drive one' sense of に任せて",
+      "example 3: 受けてみた had no object; now 面接に臨んだ",
+      "example 7: match extended to cover the variant 任せきり",
+      "example 8: replaced, repeated に任せた; now 怒りに任せて",
+      "counterexample 4: replaced, さぼって shares no tokens; now the one-token noun 人任せ",
+      "detection: tokenizer confirms 任せ = 任せる 下一段-サ行; noted 人任せ, 出任せ and きり tokens"
+    ]
+  },
+  {
+    "id": "no-moto-de",
+    "verdict": "fixed",
+    "changes": [
+      "example 3: 監督のもとに一つになった is unnatural with に; now 正義の名のもとに",
+      "counterexample 3: 'a cat under his room' made no sense; now ベッドの下に",
+      "detection: tokenizer confirms kana もと → 下 and 元 → 元"
+    ]
+  },
+  {
+    "id": "no-ue-dewa",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: replaced, bare 計算の上で after a サ変 noun reads as ue-de 'after calculating' and repeated example 1's noun; now 統計の上で",
+      "detection: stated the boundary with ue-de (では/でも here; bare の上で after an action noun goes to ue-de); tokens confirmed"
+    ]
+  },
+  {
+    "id": "naka-o",
+    "verdict": "fixed",
+    "changes": [
+      "register: written to neutral, お忙しい中 and 寒い中 are everyday speech",
+      "connection: added N + の中、 and i-Adj + 中を",
+      "counterexample 2: en corrected, 午前中に is 'in the morning', not 'by noon'",
+      "detection: tokens confirmed (中 名詞-普通名詞 vs 中 接尾辞-名詞的, kana なか → 中)"
+    ]
+  },
+  {
+    "id": "sue-ni",
+    "verdict": "fixed",
+    "changes": [
+      "detection: tokenizer confirms 末 名詞-普通名詞 after た 連体形 or の, and one-token 週末, 年末, 末っ子; added that the ageku boundary is the lexeme"
+    ]
+  },
+  {
+    "id": "ageku",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 1: replaced, it copied example 1 of sue-ni word for word",
+      "detection: removed the unrealistic 挙げ + 句 guard and the 'result must be negative' rule; tokenizer confirms kana あげく and 挙句 → 挙げ句"
+    ]
+  },
+  {
+    "id": "shidai-de",
+    "verdict": "fixed",
+    "changes": [
+      "detection: tokenizer shows 使い方次第 has the suffix 方 before 次第, so the guard accepts noun suffixes; added the 止み/やみ noun gap that belongs to shidai"
+    ]
+  },
+  {
+    "id": "kai-ga-aru",
+    "verdict": "fixed",
+    "changes": [
+      "connection: added N + の + 甲斐がある",
+      "detection: the カイ proper-noun tag after た is confirmed on all た examples; 甲斐の国 is 普通名詞, so the guard is the preceding た or の"
+    ]
+  },
+  {
+    "id": "osore-ga-aru",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: replaced, 恐れる気持ちがある shares no 恐れ + ある; now 死への恐れはある (noun 'fear', same tokens)",
+      "detection: guard against 恐れ 'fear' after への; tokens and kana おそれ → 恐れ confirmed"
+    ]
+  },
+  {
+    "id": "mono-ga-aru",
+    "verdict": "fixed",
+    "changes": [
+      "connection: V-te-iru-plain is not in the notation (V-plain covers it); added na-Adj + なものがある",
+      "detection: reworded the literal-reading guard; tokens もの = 物 + が + 有る confirmed"
+    ]
+  },
+  {
+    "id": "mono-dewa-nai",
+    "verdict": "fixed",
+    "changes": [
+      "meaning: added the 'not something one can easily do' sense (potential + ものではない)",
+      "register: spoken to neutral, ものではない is used in writing too",
+      "example 8: replaced, a second ではありません rebuke; now the potential sense 変えられるものじゃない",
+      "counterexample 4: replaced, the double negative was stiff and had no もの; now adjective + ものじゃない",
+      "detection: tokens confirmed (で/じゃ = だ, ない = 無い); guard for adjective + もの"
+    ]
+  },
+  {
+    "id": "mono-nara",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: replaced, repeated 言おうものなら of example 3; now 触ろうもんなら covers the variant ようもんなら",
+      "detection: もん after the volitional is もの 助詞-終助詞, after a potential it is 物; both confirmed by the tokenizer"
+    ]
+  },
+  {
+    "id": "monono",
+    "verdict": "fixed",
+    "changes": [
+      "connection: na-Adj takes な before ものの; replaced the redundant Clause-plain line with N + であるものの",
+      "example 6: replaced, repeated したものの of example 1; now an example with no comma after ものの",
+      "example 7: match extended to ではあるものの, the listed variant",
+      "detection: the 'clause not starting with a noun' guard was wrong (ものの体が starts with a noun); now next token not modifiable by の, noun case left as a known miss; tokens 物 + の 格助詞 confirmed"
+    ]
+  },
+  {
+    "id": "koto-dakara",
+    "verdict": "fixed",
+    "changes": [
+      "connection: removed Clause-plain + ことだから, which is the counterexample's plain reason, not this pattern",
+      "example 8: replaced, repeated example 1 (Knowing him); now a question with あなた",
+      "counterexample 3: replaced, ことだ。だから shares no adjacent tokens; now the literal 家族のことだから with the same tokens",
+      "detection: guard for the literal 'matter of N' reading; tokens confirmed"
+    ]
+  },
+  {
+    "id": "koto-naku",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 1: replaced, そんなことなくても is unnatural; now 変わったこともなく (た before こと)",
+      "counterexample 2: replaced, あんなことなくて lacks が and is unnatural; now 大したこともなく (連体詞 before こと)",
+      "detection: guard restated with the tokenizer's tokens for both near misses"
+    ]
+  },
+  {
+    "id": "koto-niwa-naranai",
+    "verdict": "ok",
+    "changes": []
+  },
+  {
+    "id": "ga-ki-ni-naru",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added は気になる and も気になる (topic and 'also')",
+      "example 7: replaced, a fourth が気になって; now は気になる",
+      "counterexample 2: replaced, 気になる点 is the same expression with a relativized subject; now 元気になった (one-token 元気)",
+      "detection: tokenizer shows 元気, 本気, やる気 as one token with に = だ; その気 guard kept; relative-clause use noted"
+    ]
+  },
+  {
+    "id": "ni-ki-o-tsukeru",
+    "verdict": "fixed",
+    "changes": [
+      "register: spoken to neutral, に気をつけてください is common in signs and announcements",
+      "counterexample 3: replaced, 気づいて shares only 気; now に気をつかう, which shares the surface",
+      "detection: tokenizer gives 食べ過ぎに with に = だ 連用形-ニ; guard on the verb 付ける vs 使う"
+    ]
+  },
+  {
+    "id": "ki",
+    "verdict": "fixed",
+    "changes": [
+      "kept, narrowed: non-past V + 気 + が/は/も + ある/ない, 気がしない, 気になれない, 気だ/気でいる has good precision and shares no surface with ga-ki-ni-naru, ni-ki-o-tsukeru, ni-ki-ga-tsuku or you-na-ki-ga-suru",
+      "variants and connection: dropped やる気 (one noun token) and その気 (idiom); added 気がしない, 気だ, 気でいる",
+      "example 4: replaced やる気満々 with 食べる気がしない",
+      "example 6: replaced その気になれば with 辞める気なの",
+      "example 8: replaced, repeated 気がない; now 気でいる",
+      "counterexample 3: replaced 気が強い (no verb, no near miss) with V-ta + 気がする (you-na-ki-ga-suru)",
+      "detection: rewritten with the tokenizer's tokens and the ownership boundaries"
+    ]
+  }
+]
