@@ -28,7 +28,7 @@
     ],
     "subsumes": [],
     "confusables": ["n-dakedo", "no-darou-ka", "n-datte", "wake-da", "node", "no-wa-da"],
-    "detection": "The pattern is the nominalizer の (or its contraction ん) right after a predicate, followed by the copula だ/です or ending the sentence. In UniDic ん is a form of the lexeme の (助詞, 準体助詞), and the copula is だ or です (助動詞); after a noun or na-adjective a な (だ in 連体形) comes before の. Require a verb, adjective, auxiliary or that な directly before の: の after a bare noun is possessive or the pronoun 'one' (私のです). A bare の counts only at the end of a sentence or before よ/ね/か. The longer entries n-dakedo (んだけど), no-darou-ka (のだろうか) and n-datte (んだって) take precedence."
+    "detection": "The pattern is the nominalizer の (or its contraction ん) right after a predicate, followed by the copula だ/です or ending the sentence. In UniDic ん is a form of the lexeme の (助詞, 準体助詞), and the copula is だ or です (助動詞); after a noun or na-adjective a な (だ in 連体形) comes before の. Require a verb, adjective, auxiliary or that な directly before の: の after a bare noun is possessive or the pronoun 'one' (私のです). A bare の counts only at the end of a sentence or before よ/ね/か, and there UniDic tags it 助詞 終助詞 (どうしたの, 黙ってるの), not 準体助詞; the ん/の before だ/です is 準体助詞, the same tag as the nominalizer in 作るのが好きだ, so the guard is the next token (だ/です or sentence end), not the tag. The contracted てる is one 助動詞 token (疲れてるんだ). The longer entries n-dakedo (んだけど), no-darou-ka (のだろうか) and n-datte (んだって) take precedence."
   },
   {
     "id": "te-iru",
@@ -60,7 +60,7 @@
     ],
     "subsumes": [],
     "confusables": ["te-ita", "te-aru", "ga-iru", "te-iru-tokoro", "mada-te-inai"],
-    "detection": "V-te followed by the auxiliary いる: て/で (助詞, 接続助詞, lexeme て), then 居る as 動詞 非自立可能 in any inflection (います, いない). Contracted てる/でる may come out as て/で + る or as one token depending on the dictionary build (?); test both. Guard: nothing (no comma, no other word) between て and いる, and the lexeme must be 居る, not 要る 'need' or 入る (はいる). Past ていた is the separate entry te-ita, and ているところ (te-iru-tokoro) and まだ〜ていない (mada-te-inai) take precedence. Do not confuse with てある (te-aru) or existence がいる (ga-iru)."
+    "detection": "V-te followed by the auxiliary いる: て/で (助詞, 接続助詞, lexeme て), then 居る as 動詞 非自立可能 in any inflection (います, いない). Contracted てる/でる is one 助動詞 token with lexeme てる (下一段; してます is し + て(てる, 連用形) + ます), so match that token as a second route. Guard: nothing (no comma, no other word) between て and いる. UniDic gives 居る also to 'need' 要る (体力がいる), so the lexeme does not separate them: require the て/で token directly before. Past ていた is the separate entry te-ita, and ているところ (te-iru-tokoro) and まだ〜ていない (mada-te-inai) take precedence. Do not confuse with てある (te-aru) or existence がいる (ga-iru)."
   },
   {
     "id": "kara-because",
@@ -90,7 +90,7 @@
     ],
     "subsumes": [],
     "confusables": ["node", "te-kara", "kara-koso", "mono-dakara"],
-    "detection": "から as 助詞 接続助詞 (lexeme から) right after a plain or polite predicate: a verb, an adjective, an auxiliary (た, ない, ます) or the copula だ/です. UniDic tags the 'from' から after nouns as 格助詞, which is the main guard; also check that the token before is not a noun. から after the て/で 接続助詞 is te-kara. A sentence-initial だから/ですから is 接続詞 and does not count. からこそ (kara-koso) and ものだから (mono-dakara) are longer entries that take precedence."
+    "detection": "から as 助詞 接続助詞 (lexeme から) right after a plain or polite predicate: a verb, an adjective, an auxiliary (た, ない, ます) or the copula だ/です. UniDic tags the 'from' から after nouns as 格助詞, which is the main guard; also check that the token before is not a noun. から after the て/で 接続助詞 is te-kara and is tagged 格助詞 there (食べてから), so the tag already rejects it. Sentence-initial だから is not a 接続詞 token: it is だ (助動詞) + から (接続助詞), so it passes the tag test; reject it by position (だ at the start of the sentence, or after 、/。 with no predicate before it). からこそ (kara-koso) and ものだから (mono-dakara) are longer entries that take precedence."
   },
   {
     "id": "kedo",
@@ -119,7 +119,7 @@
     ],
     "subsumes": [],
     "confusables": ["ga-but", "noni", "n-dakedo"],
-    "detection": "けど/けれど/けれども/けども as 助詞 接続助詞 after a plain or polite predicate (lexeme けれど?; UniDic may give けれども a lexeme of its own). Require a predicate token (verb, adjective, or auxiliary だ/です/ます/た/ない) directly before it. Words that contain the characters (やけど 火傷) are one noun token and do not match. Sentence-initial だけど/けど is 接続詞 and does not count. んだけど/んですけど is n-dakedo and takes precedence; ga-but and noni are close in meaning."
+    "detection": "けど/けれど/けれども/けども as 助詞 接続助詞 after a plain or polite predicate (lexeme けれど for all of けど/けれど/けども; けれども and けども split into けれど/けど + も 係助詞, so match the first token and allow a following も). Require a predicate token (verb, adjective, or auxiliary だ/です/ます/た/ない) directly before it. Words that contain the characters (やけど 火傷) are one noun token and do not match. Sentence-initial だけど is not a 接続詞 token: it is だ (助動詞) + けど (接続助詞, lexeme けれど), so it passes the tag test; reject it by position (だ with nothing before it in the sentence). んだけど/んですけど is n-dakedo and takes precedence; ga-but and noni are close in meaning."
   },
   {
     "id": "ga-but",
@@ -148,7 +148,7 @@
     ],
     "subsumes": [],
     "confusables": ["kedo", "noni", "n-dakedo"],
-    "detection": "が as 助詞 接続助詞 (lexeme が), which UniDic keeps apart from the subject marker が (格助詞). Require a predicate directly before it: a verb, an adjective, or the auxiliary です/ます/だ/た/ない. が after a noun or after the nominalizer の is the case particle. Sentence-initial が/だが/ですが is 接続詞 and does not count. Learners confuse it with kedo, which means the same in casual speech; のですが/んですが is n-dakedo."
+    "detection": "が as 助詞 接続助詞 (lexeme が), which UniDic keeps apart from the subject marker が (格助詞). Require a predicate directly before it: a verb, an adjective, or the auxiliary です/ます/だ/た/ない. が after a noun or after the nominalizer の is the case particle. Sentence-initial だが/ですが is not a 接続詞 token: it is だ/です (助動詞) + が (接続助詞), so it passes the tag test; reject it by position (nothing before the だ/です in the sentence). ません is ませ + ん (lexeme ず, 助動詞), also a valid predicate end before が. Learners confuse it with kedo, which means the same in casual speech; のですが/んですが is n-dakedo."
   },
   {
     "id": "deshou-darou",
@@ -178,7 +178,7 @@
     ],
     "subsumes": [],
     "confusables": ["no-darou-ka", "darou-to-omou", "kamoshirenai", "janai-ka", "kana"],
-    "detection": "UniDic writes でしょう as one token, です in 意志推量形, and だろう as だ in 意志推量形; the う belongs to the form (as in 行こう), not to a separate auxiliary. Casual でしょ/だろ drop the う and may come out as the same 意志推量形 or as 未然形 (?); test both. Tell it from ましょう by the lexeme: ましょう is ます in 意志推量形. Longer entries take precedence: のだろうか/んでしょうか (no-darou-ka) and だろうと思う (darou-to-omou). Repeated だろうと…だろうと or だろうが…だろうが is concessive; guard against と or が right after だろう when the frame repeats."
+    "detection": "UniDic writes でしょう as one token, です in 意志推量形, and だろう as だ in 意志推量形; the う belongs to the form (as in 行こう), not to a separate auxiliary. Casual でしょ/だろ drop the う and are still 意志推量形 of です/だ (でしょ, だろ), so match the form, not the surface. Tell it from ましょう by the lexeme: ましょう is ます in 意志推量形. Longer entries take precedence: のだろうか/んでしょうか (no-darou-ka) and だろうと思う (darou-to-omou). Repeated だろうと…だろうと or だろうが…だろうが is concessive; guard against と or が right after だろう when the frame repeats."
   },
   {
     "id": "tai",
@@ -207,7 +207,7 @@
     ],
     "subsumes": [],
     "confusables": ["tagaru", "te-hoshii", "ga-hoshii", "you-to-omou"],
-    "detection": "The auxiliary たい (助動詞, lexeme たい) right after a verb in 連用形; it inflects like an i-adjective (たくない, たかった, たくて). On tokens the guard is the part of speech: adjectives that end in たい (冷たい, ありがたい, 重たい, めでたい) are single 形容詞 tokens. たがる (tagaru) is a different auxiliary with its own entry. てほしい (te-hoshii) and がほしい (ga-hoshii) are often confused with it in meaning."
+    "detection": "The auxiliary たい (助動詞, lexeme たい) right after a verb in 連用形; it inflects like an i-adjective: たく (連用形) + ない (形容詞 無い), たかっ (連用形-促音便) + た, たい (終止形/連体形). たがる is also a 助動詞 token (lexeme たがる), so test the lexeme, not the surface. On tokens the guard is the part of speech: adjectives that end in たい (冷たい, ありがたい, 重たい, めでたい) are single 形容詞 tokens. たがる (tagaru) is a different auxiliary with its own entry. てほしい (te-hoshii) and がほしい (ga-hoshii) are often confused with it in meaning."
   },
   {
     "id": "te-kudasai",
@@ -236,7 +236,7 @@
     ],
     "subsumes": [],
     "confusables": ["o-kudasai", "naide-kudasai", "sasete-kudasai", "te-request", "te-itadakemasen-ka", "nasai"],
-    "detection": "V-te (て/で, 助詞 接続助詞) followed by 下さる (動詞 非自立可能) in 命令形 ください, or in 連用形 ください + ませ + ん + か for the polite question. The 連用形 ください before ます/ました (くださいました) states a kind act; accept a following ます only in the ませんか frame. ないで + ください (naide-kudasai) and させて + ください (sasete-kudasai) take precedence. N + を + ください, with no て, is o-kudasai."
+    "detection": "V-te (て/で, 助詞 接続助詞) followed by 下さる (動詞 非自立可能) in 命令形 ください, or in 連用形 ください (連用形-イ音便) + ませ (ます 未然形) + ん (lexeme ず, 助動詞) + か for the polite question. The 命令形 ください is also the token in 下さい (連絡して下さい). The 連用形 ください before ます/ました (くださいました) states a kind act; accept a following ます only in the ませんか frame. ないで + ください (naide-kudasai) and させて + ください (sasete-kudasai) take precedence. N + を + ください, with no て, is o-kudasai."
   },
   {
     "id": "ga-aru",
@@ -255,7 +255,7 @@
       { "ja": "今、時間はある？", "match": "時間はある", "en": "Do you have a minute?" },
       { "ja": "駅の近くに大きな本屋があるよ。", "match": "本屋がある", "en": "There's a big bookstore near the station." },
       { "ja": "冷蔵庫にプリンもあるよ。", "match": "プリンもある", "en": "There's pudding in the fridge too." },
-      { "ja": "何か問題があったら、すぐ言ってね。", "match": "問題があった", "en": "If there's any problem, tell me right away." },
+      { "ja": "何か問題があったら、すぐ言ってね。", "match": "問題があったら", "en": "If there's any problem, tell me right away." },
       { "ja": "彼には不思議な魅力がある。", "match": "魅力がある", "en": "He has a strange kind of charm." },
       { "ja": "今月はお金がないから、外食はやめとく。", "match": "お金がない", "en": "I'm short on money this month, so I'll skip eating out." }
     ],
@@ -296,7 +296,7 @@
     ],
     "subsumes": [],
     "confusables": ["ga-aru", "te-iru"],
-    "detection": "A noun marked by が, は or も, then 居る (動詞) as the main verb, not after a て-form. Allow a quantity or an adverb in between (兄が二人いる, まだ学生がいる). Guards: kana いる may be 要る 'need' (お金がいる, 根気がいる), so check the lexeme; はいる may be the one verb 入る. いる after て/で is the auxiliary of te-iru. Do not confuse with ga-aru for inanimate things."
+    "detection": "A noun marked by が, は or も, then 居る (動詞) as the main verb, not after a て-form. Allow a quantity or an adverb in between (兄が二人いる, まだ学生がいる). Guards: UniDic gives 居る also to 要る 'need' (根気がいる, お風呂はいる is 入る), so the lexeme cannot separate them: the subject noun must be a person or animal, and the animacy check is on the noun, not the token. いる after て/で is the auxiliary of te-iru. Do not confuse with ga-aru for inanimate things."
   },
   {
     "id": "node",
@@ -324,7 +324,7 @@
     ],
     "subsumes": [],
     "confusables": ["kara-because", "no-da", "mono-dakara"],
-    "detection": "ので after a plain or polite predicate; after a noun or na-adjective the copula な comes first (なので). UniDic may give ので as one 助詞 接続助詞 token or as の + で (だ, 連用形) (?); handle both. Casual んで is ん + で after a predicate in 連体形; it must not be the て-form ending of a godan verb (読んで, 死んで), which tokenizes as verb + で (助詞 接続助詞). の + では/でも (のではない) and the pronoun の + instrument で are not the pattern. Confused with kara-because, which has the same meaning."
+    "detection": "ので after a plain or polite predicate; after a noun or na-adjective the copula な comes first (なので). UniDic never gives ので as one token: it is の (助詞 準体助詞, or ん, same lexeme の) + で (助動詞 だ 連用形), so match that pair (雨なので is な + の + で). Casual んで is ん + で after a predicate in 連体形; it must not be the て-form ending of a godan verb (読んで, 死んで), which tokenizes as verb + で (助詞 接続助詞), so the で must be 助動詞 だ. の + で + は/も (のではない, 準体助詞 の + で + は) is not the pattern: reject when は/も follows. The pronoun の + instrument で (新しいので撮って) gives the very same tokens as the pattern, so the tokens cannot reject it; only the meaning does. Confused with kara-because, which has the same meaning."
   },
   {
     "id": "mashou",
@@ -353,7 +353,7 @@
     ],
     "subsumes": [],
     "confusables": ["mashou-ka", "masen-ka", "deshou-darou"],
-    "detection": "ます in 意志推量形, one token ましょう in UniDic (the う is part of the form), right after a verb in 連用形. Casual ましょ may come out as the same form or as ます 未然形 (?); test both. Do not match when the 終助詞 か follows: that is mashou-ka, a separate entry. Do not match ましょう after でござい (でございましょう), which is a polite guess. Tell it from でしょう (です in 意志推量形) by the lexeme ます."
+    "detection": "ます in 意志推量形, one token ましょう in UniDic (the う is part of the form), right after a verb in 連用形. Casual ましょ is the same 意志推量形 of ます (surface ましょ). Do not match when the 終助詞 か follows: that is mashou-ka, a separate entry. Do not match ましょう after でござい (でございましょう), which is a polite guess. Tell it from でしょう (です in 意志推量形) by the lexeme ます."
   },
   {
     "id": "te-mo-ii",
@@ -384,7 +384,7 @@
     ],
     "subsumes": ["temo"],
     "confusables": ["temo", "nakute-mo-ii", "temo-kamawanai", "te-wa-ikenai", "demo"],
-    "detection": "て/で (助詞 接続助詞) + も (係助詞) + 良い (形容詞, written いい or よい), or よろしい (lexeme 宜しい). Casual speech drops も (入っていい). Guards: いい must be the predicate, not an attributive before a noun (いいこと, いい人), which leaves a plain concessive temo. なくてもいい is nakute-mo-ii and takes precedence, and でもいい after a question word (何でも, どこでも) is demo. ても構わない is the separate entry temo-kamawanai."
+    "detection": "て/で (助詞 接続助詞) + も (係助詞) + 良い (形容詞, written いい or よい), or よろしい (lexeme 宜しい). Casual speech drops も (入っていい). The いい token is 良い 形容詞 非自立可能 in 終止形; before a noun (いいこと) it is 連体形, which is the guard that leaves a plain concessive temo. A noun + でも + いい (明日でもいい) is not て/で 接続助詞: it is で (格助詞) + も (係助詞), so it needs its own route (noun + で 格助詞 + も + 良い); the same tokens come from どこでもいい, which is not the pattern (the question word is the guard). なくてもいい is nakute-mo-ii and takes precedence, and でもいい after a question word (何でも, どこでも) is demo. ても構わない is the separate entry temo-kamawanai."
   },
   {
     "id": "mae-ni",
@@ -412,7 +412,7 @@
     ],
     "subsumes": ["no-position"],
     "confusables": ["ato-de", "made-ni", "uchi-ni", "no-position"],
-    "detection": "名詞 前 (lexeme 前) followed by 格助詞 に, preceded either by a verb in dictionary form or by a noun + の. Require the non-past form before 前; a time-span noun directly before 前 (三年, 二日) means 'ago'. For Nの前に, the noun must name an event or time (食事, 会議, 試合); a place or object noun (駅, 家, 目) is the spatial no-position. 前に with nothing before it is an adverb and does not count."
+    "detection": "名詞 前 (lexeme 前) followed by 格助詞 に, preceded either by a verb in dictionary form or by a noun + の. Require the non-past form (連体形) before 前; the lexeme is 前 also when written まえ (なるまえに); a time-span noun directly before 前 (三年, 二日) means 'ago'. For Nの前に, the noun must name an event or time (食事, 会議, 試合); a place or object noun (駅, 家, 目) is the spatial no-position. 前に with nothing before it is an adverb and does not count."
   },
   {
     "id": "ta-koto-ga-aru",
@@ -441,7 +441,7 @@
     ],
     "subsumes": ["ga-aru", "koto-ga-aru", "koto-nominalizer"],
     "confusables": ["koto-ga-aru", "ga-aru"],
-    "detection": "The past auxiliary た/だ, then 名詞 事 (こと, lexeme 事), then optional が/は (casual speech drops it), then 有る, or the adjective 無い for the negative. The past た before こと is the key guard: non-past + ことがある is koto-ga-aru. A time word that pins the event to one recent moment (さっき, 今朝) points to a literal こと 'matter'; a matcher cannot fully tell, so treat that as low confidence. When this matches, ga-aru, koto-ga-aru and koto-nominalizer must not also count."
+    "detection": "The past auxiliary た (lexeme た, 連体形; 泳いだ and 読んだ are the same lexeme with surface だ), then 名詞 事 (こと, lexeme 事), then optional が/は (casual speech drops it), then 有る, or the adjective 無い for the negative. The past た before こと is the key guard: non-past + ことがある is koto-ga-aru. A time word that pins the event to one recent moment (さっき, 今朝) points to a literal こと 'matter'; a matcher cannot fully tell, so treat that as low confidence. When this matches, ga-aru, koto-ga-aru and koto-nominalizer must not also count."
   },
   {
     "id": "te-kara",
@@ -469,7 +469,7 @@
     ],
     "subsumes": ["kara-because"],
     "confusables": ["ato-de", "te-kara-de-nai-to", "te-irai", "te-hajimete"],
-    "detection": "V-te (て/で, 助詞 接続助詞) directly followed by から (UniDic tags this から as 格助詞?). The guard is the token before から: it must be the て/で 接続助詞 attached to a verb, not a noun ending in て (果て, 手), and not いる/てる before から, which is reason kara-because. てからでないと/てからでなければ is te-kara-de-nai-to and takes precedence. Confused with ato-de, which follows the た-form."
+    "detection": "V-te (て/で, 助詞 接続助詞) directly followed by から (UniDic tags this から as 格助詞, unlike the reason から 接続助詞). The guard is the token before から: it must be the て/で 接続助詞 attached to a verb, not a noun (果て is one noun token + から 格助詞), and not the 助動詞 てる (寝てるから is てる + から 接続助詞), which is reason kara-because. Test the pair て (接続助詞) + から (格助詞), not the surface てから. てからでないと/てからでなければ is te-kara-de-nai-to and takes precedence. Confused with ato-de, which follows the た-form."
   },
   {
     "id": "hou-ga-ii",
@@ -497,7 +497,7 @@
     ],
     "subsumes": [],
     "confusables": ["yori-hou-ga", "ba-ii", "tara-ii", "beki-da", "hou-ga-mashi-da"],
-    "detection": "A verb in た-form or ない-form, then 名詞 方 (ほう, lexeme 方), が, and 良い (いい/よい) as the predicate in any form (いいです, いいよ, よかった). Guards: the token before ほう must be た/だ or ない after a verb, since N + の + ほう is the comparison of yori-hou-ga; and いい must not be attributive before a noun. A dictionary form + ほうがいい also occurs in speech with nearly the same meaning; decide whether to accept it."
+    "detection": "A verb followed by the 助動詞 た or ない (both 連体形 here, lexemes た and ない), then 名詞 方 (ほう or 方, lexeme 方), が, and 良い (いい/よい) as the predicate in any form (いいです, いいよ, よかった). Guards: the token before ほう must be た/だ or ない after a verb, since N + の + ほう is the comparison of yori-hou-ga; and いい (良い 非自立可能) must not be attributive before a noun: 連体形 いい before a 名詞 (いい経験) rejects, but 連体形 before ん/の (いいんじゃない) is still the predicate. A dictionary form + ほうがいい also occurs in speech with nearly the same meaning; decide whether to accept it."
   },
   {
     "id": "ku-ni-naru",
@@ -529,7 +529,7 @@
     ],
     "subsumes": [],
     "confusables": ["you-ni-naru", "koto-ni-naru", "ku-suru", "ga-ki-ni-naru"],
-    "detection": "An i-adjective (or ない) in 連用形 (く) followed by 成る, or a noun / na-adjective stem + 格助詞 に + 成る. Require に directly before なる; に before another verb marks a place or target. Exclude よう + に + なる (you-ni-naru), こと + に + なる (koto-ni-naru) and 気 + に + なる (ga-ki-ni-naru), which take precedence, and kana なる with the lexeme 生る or 鳴る. Shop-counter になります 'this is' cannot be told apart on tokens; accept the false match."
+    "detection": "An i-adjective in 連用形 (寒く) or the 助動詞 ない in 連用形 (なく, as in 見かけなくなる) followed by 成る, or a noun + 格助詞 に + 成る, or a na-adjective stem (形状詞) + に as 助動詞 だ 連用形 (きれいに) + 成る. Require に directly before なる; に before another verb marks a place or target. Exclude よう + に + なる (you-ni-naru), こと + に + なる (koto-ni-naru) and 気 + に + なる (ga-ki-ni-naru), which take precedence, and the fruit/ripening なる, which UniDic also lemmatizes as 成る (みかんがなった), so the lexeme does not separate it; the missing preceding adjective/に is the guard. Shop-counter になります 'this is' cannot be told apart on tokens; accept the false match."
   },
   {
     "id": "masen-ka",
@@ -558,7 +558,7 @@
     ],
     "subsumes": [],
     "confusables": ["mashou", "mashou-ka", "te-itadakemasen-ka"],
-    "detection": "ます in 未然形 (ませ) + the negative ん (lexeme ず?) + 終助詞 か, right after a verb in 連用形. The casual forms are the plain negative ない (助動詞, lexeme ない) at sentence end with a question mark, or ない + か. Guards: potential forms (食べられ), past ませんでした, and まだ before the verb point to a real negative question; a non-action verb (ある, わかる) rarely invites. てもらえませんか and ていただけませんか are requests (te-itadakemasen-ka). The plain ない？ form is low confidence."
+    "detection": "ます in 未然形 (ませ) + the negative ん (助動詞, lexeme ず, 終止形-撥音便) + 終助詞 か, right after a verb in 連用形. The casual forms are the plain negative ない (助動詞, lexeme ない) at sentence end with a question mark, or ない + か. Guards: potential forms (食べられ), past ませんでした, and まだ before the verb point to a real negative question; a non-action verb (ある, わかる) rarely invites. てもらえませんか and ていただけませんか are requests (te-itadakemasen-ka). The plain ない？ form is low confidence."
   },
   {
     "id": "tsumori",
@@ -587,7 +587,7 @@
     ],
     "subsumes": [],
     "confusables": ["tsumori-de", "tsumori-datta", "ta-tsumori-wa-nai", "yotei-da", "you-to-omou"],
-    "detection": "名詞 つもり (lexeme 積もり?) after a verb in dictionary form or ない-form, usually followed by だ/です, な/の, or は + ない. Guards: past た before つもり (行ったつもり) is tsumori-de or ta-tsumori-wa-nai; つもり + だった/でした is tsumori-datta; つもり + で is tsumori-de. Those take precedence. The verb 積もる in 連用形 (積もり) has a verb part of speech and does not match."
+    "detection": "名詞 つもり (lexeme 積り, 名詞 普通名詞; kana and 積もり both give it) after a verb in dictionary form or ない-form, usually followed by だ/です, な/の, or は + ない. Guards: past た before つもり (行ったつもり) is tsumori-de or ta-tsumori-wa-nai; つもり + だっ (だ 連用形-促音便) + た, or でし + た, is tsumori-datta; つもり + で (格助詞) is tsumori-de. Those take precedence. The verb 積もる in 連用形 (積もり) has a verb part of speech and does not match."
   },
   {
     "id": "te-wa-ikenai",
@@ -618,7 +618,7 @@
     ],
     "subsumes": [],
     "confusables": ["nakute-wa-ikenai", "tewa-naranai", "na-prohibitive", "te-mo-ii", "naito-ikenai"],
-    "detection": "V-te + 係助詞 は + 行ける (動詞, lexeme 行ける) in a negative form (いけない, いけません), or + 駄目 (だめ, ダメ). The contractions ちゃ/じゃ may be single tokens (lexeme ては? or ちゃ?); match those too. Guard: the て-form must attach to a verb, not to なく (なくてはいけない is nakute-wa-ikenai, obligation), and てはならない is tewa-naranai. じゃ after a noun is the copula では, not this pattern. Confused with te-mo-ii, its permission counterpart."
+    "detection": "V-te + 係助詞 は + いけ (lexeme 行く, 動詞 非自立可能, 下一段-カ行, not 行ける) in a negative form (いけ 未然形 + ない, or いけ 連用形 + ませ + ん), or + 駄目 (名詞, lexeme 駄目; だめ, ダメ). The contractions ちゃ/じゃ are one 助詞 接続助詞 token each with lexeme て (寝ちゃ, 泳いじゃ), replacing both て and は; match those too. Guard: the て-form must attach to a verb, not to なく (なくてはいけない is nakute-wa-ikenai, obligation), and てはならない is tewa-naranai. じゃ after a noun is the copula では, not this pattern. Confused with te-mo-ii, its permission counterpart."
   },
   {
     "id": "sugiru",
@@ -649,7 +649,7 @@
     ],
     "subsumes": [],
     "confusables": ["ni-sugi-nai"],
-    "detection": "過ぎる (動詞 非自立可能, lexeme 過ぎる) after a verb in 連用形, an i-adjective stem, or a na-adjective stem; すぎ is its noun form (名詞, lexeme 過ぎ?). For ない and よい the stem gets さ (なさすぎる, よさすぎる). Guards: 過ぎる after a noun + を/が, or on its own, is the verb 'pass'; すぎ after a time or age noun (三時すぎ, 三十すぎ) is 'past'; に + すぎない is ni-sugi-nai. 通り過ぎる may come out as one compound or as two tokens; exclude 通る + 過ぎる."
+    "detection": "過ぎる (動詞 非自立可能, lexeme 過ぎる) after a verb in 連用形, an i-adjective stem (大き, 高: 形容詞 語幹-一般), or a na-adjective stem (静か: 形状詞). The すぎ after a verb or さ in noun use is a different token: 過ぎ 接尾辞-形状詞的 (働きすぎです, 考えすぎだ, なさすぎ), so accept both routes. For ない and よい the stem gets さ (なさ: 無い 語幹-サ). Guards: 過ぎる after a noun + を/が, or on its own, is the verb 'pass'; すぎ after a time or age noun (三時すぎ) is 過ぎ-時間 接尾辞-名詞的, a different lexeme, which rejects it; に + すぎ + ない is ni-sugi-nai (すぎ is 過ぎる 未然形 there, so check the に before it). 通り過ぎる is one 動詞 token (lexeme 通り過ぎる), so it does not match."
   },
   {
     "id": "mashou-ka",
@@ -679,6 +679,6 @@
     ],
     "subsumes": ["mashou"],
     "confusables": ["mashou", "masen-ka", "kana"],
-    "detection": "ます in 意志推量形 (one token ましょう in UniDic) + 終助詞 か, or a plain verb in 意志推量形 (行こう, 始めよう, しよう; one token, with the う/よう inside the form (?)) + か. Guards: か must end the sentence or come before a quote (と, って); か + な (かな) is the speaker musing (kana), and ようか followed by a verb such as 迷う or 考える is an embedded question. でしょうか is です in 意志推量形 + か, not ます. When this matches, mashou must not also count."
+    "detection": "ます in 意志推量形 (one token ましょう in UniDic) + 終助詞 か, or a plain verb in 意志推量形 (行こう, 始めよう, しよう; one token, with the う/よう inside the form) + か. Guards: か must be 助詞 終助詞 (the か of どうしようか迷う and 何か飲もうか is 副助詞, an embedded question), and it must end the sentence or come before a quote (と, って); か + な (かな) is the speaker musing (kana), and ようか followed by a verb such as 迷う or 考える is an embedded question. でしょうか is です in 意志推量形 + か, not ます. When this matches, mashou must not also count."
   }
 ]
