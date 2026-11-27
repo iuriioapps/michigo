@@ -1,0 +1,217 @@
+[
+  {
+    "id": "tsutsu",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: replaced 押しつ押されつの人混み (crowds take 押し合いへし合い) with 押しつ押されつの展開",
+      "counterexample 4: replaced the stiff 持たれる側 sentence with two 接続助詞 つつ, a real near miss",
+      "detection: token sequence confirmed (副助詞 つ twice; つつ is 接続助詞); added that sentence-initial 抜き is read as a noun and 追いつ breaks"
+    ]
+  },
+  {
+    "id": "to-wa",
+    "verdict": "fixed",
+    "changes": [
+      "variants/connection: removed なんて (owned by nanka-nante, this entry owns bare とは only); added 〜とはね",
+      "example 6: replaced the なんて example with a mid-sentence とは",
+      "example 3: added 単なる so the Japanese matches 'not just'",
+      "confusables: added nanka-nante and tte-shudai",
+      "detection: token claims confirmed; stated the なんて and って boundaries"
+    ]
+  },
+  {
+    "id": "to-iu-ka",
+    "verdict": "fixed",
+    "changes": [
+      "variants/connection: added the common casual っつーか, ってか and てか",
+      "examples 9-10: added てか and っつーか examples",
+      "detection: token claims confirmed (clipped て is って 副助詞; つー, っつー, ってか, てか are つう 助動詞 + か); noted kanji と言うか"
+    ]
+  },
+  {
+    "id": "te-miseru",
+    "verdict": "fixed",
+    "changes": [
+      "example 7: en now carries the 'proved it' nuance of みせた",
+      "detection: token claims confirmed; noted kanji 見せる; corrected the claim that a third-person action points away from the pattern (example 7 is third-person past)"
+    ]
+  },
+  {
+    "id": "te-yaru-ketsui",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: replaced 見てろよ、いつか…てやる (same frame as example 4 and te-miseru) with a で-form 挑んでやる",
+      "detection: token claims confirmed; で is lexeme て; the last sentence contradicted subsumes (now: report only one of te-yaru and this entry)"
+    ]
+  },
+  {
+    "id": "to-naru-to",
+    "verdict": "ok",
+    "changes": []
+  },
+  {
+    "id": "to-iu-wake-da",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 2: replaced the stiff 許すというわけにはいかない (with a wrong why) with the connective というわけで, a near miss the guards name",
+      "detection: token claims confirmed (って is つう 助動詞 連体形); boundary with wake-da checked against b09"
+    ]
+  },
+  {
+    "id": "hou-ga-mashi-da",
+    "verdict": "fixed",
+    "changes": [
+      "variants: replaced the duplicate of form with 〜ほうがましです; added 〜ほうがまだまし (example 8)",
+      "connection: added i-Adj",
+      "counterexample 4: replaced a plain comparison with no まし (no matcher confuses it) with ましな + ほうがいい in one sentence",
+      "detection: token claims confirmed (まし is 増し 形状詞); allowed an adverb (まだ, よっぽど) between が and まし"
+    ]
+  },
+  {
+    "id": "kurai-nara",
+    "verdict": "fixed",
+    "changes": [
+      "connection: removed V-ta + くらいなら (not used in the 'rather than' sense, no example)",
+      "counterexample 4: replaced a bare な-adjective なら (no くらい, no matcher confuses it) with the small-degree 待つくらいなら平気, the real near miss after a verb",
+      "detection: token claims confirmed; stated the degree reading after a verb and its cue; boundary with kurai and hou-ga-mashi-da kept"
+    ]
+  },
+  {
+    "id": "nai-mono-ka",
+    "verdict": "fixed",
+    "changes": [
+      "example 5: en 'Is there really no way at all?' read it as a negation; now a wish",
+      "counterexample 4: added the literal ないものですか question",
+      "detection: token claims confirmed; named the ない lexemes; rewrote guard 1 (負けるものか has no ない); added the もの + です + か guard"
+    ]
+  },
+  {
+    "id": "ta-tokoro-de",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 3: 出会ったところで、昼ご飯を食べた also reads as 'just as we met'; replaced with an unambiguous place reading",
+      "detection: token claims confirmed; だ is lexeme た"
+    ]
+  },
+  {
+    "id": "you-ga-you-to",
+    "verdict": "fixed",
+    "changes": [
+      "variants/connection: added the common 〜だろうと, 〜であろうと and かろうが",
+      "example 9: added a であろうと example",
+      "counterexample 4: why named you-ka-mai-ka for a sentence with no まい; now the plain 'whether to' か",
+      "detection: removed the false claim that 何があろうと is misparsed (it tokenizes as あろう + と); added the real misparses 負け|よう(良い) and 野郎; added guards for the まい pair and ようとも (tomo)"
+    ]
+  },
+  {
+    "id": "you-ga-mai-ga",
+    "verdict": "fixed",
+    "changes": [
+      "subsumes: added you-ga-you-to, whose single V-vol + が/と sits inside the pair",
+      "detection: しまい misparse happens only sentence-initially (勉強|し|まい is correct); added sentence-initial やろう → 野郎; 見まい → 見舞い and 来ようが confirmed"
+    ]
+  },
+  {
+    "id": "mono-o",
+    "verdict": "fixed",
+    "changes": [
+      "example 1: rewrote the ungrammatical en",
+      "counterexample 4: replaced ものではない (shares no ものを) with noun もの + を + comma + verb, which beats a comma-only guard",
+      "detection: token claims confirmed; the comma test alone is not enough, the conditional before it is the cue"
+    ]
+  },
+  {
+    "id": "ka-to-omoikiya",
+    "verdict": "fixed",
+    "changes": [
+      "detection: 思い|き|や split confirmed; き is 助動詞 文語助動詞-キ; 思いきり is one 名詞 token, not a verb"
+    ]
+  },
+  {
+    "id": "nari-ni",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: replaced ながらに (shares no なり) with 言いなりになる, which has the same 形 接尾辞 + に tokens",
+      "confusables: removed nagara-ni",
+      "detection: token claims confirmed; the second なり of nari-nari is tagged 形 接尾辞 too (guard now looks back, not ahead); added the 言いなり guard; 帰るなり is 接続助詞"
+    ]
+  },
+  {
+    "id": "nagara-ni",
+    "verdict": "fixed",
+    "changes": [
+      "variants/connection: added the common 〜ながらにして (いながらにして, 生まれながらにして)",
+      "example 9: added an いながらにして example",
+      "counterexample 4: replaced 私なりに (shares no ながら) with 食べながらにこにこ, a surface ながらに near miss",
+      "confusables: removed nari-ni",
+      "detection: token claims confirmed (乍ら 接尾辞 after nouns, 接続助詞 after 生まれ and いつも); added the ながら|に|し|て rule"
+    ]
+  },
+  {
+    "id": "nara-de-wa",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 3: replaced この部屋では (no なら, no matcher confuses it) with 晴れならでかけよう, which UniDic also tags なり-断定 + で",
+      "detection: なり-断定 + で(接続助詞) + は confirmed; corrected the claim that the conditional never gets なり-断定, so the full なら|で|は sequence is required"
+    ]
+  },
+  {
+    "id": "mamire",
+    "verdict": "fixed",
+    "changes": [
+      "kept: the suffix まみれ (塗れ 接尾辞) is productive in real text (借金, 嘘, 砂, ゴミ, 矛盾, インク, ケチャップ…), like darake",
+      "detection: listed the closed set of ten fused lexemes from UniDic (血塗れ 形状詞; 泥, 汗, 粉, 油, 埃, 土, 涙, 雪, 金塗れ 名詞); noted 煤まみれ (unknown word) and 欲まみれ (欲しい 語幹) misparses; dropped the 'could be vocabulary' remark",
+      "variants: replaced the example words 血/泥/汗まみれ with the forms まみれの/で/になる",
+      "counterexample 2: replaced a second darake sentence (no まみれ) with the verb まみれる + ながら"
+    ]
+  },
+  {
+    "id": "tara-saigo",
+    "verdict": "fixed",
+    "changes": [
+      "variants: replaced the non-form 〜ら最後 with 〜だら最後 / 〜だが最後",
+      "example 9: added a だら最後 example",
+      "counterexamples 3-4: replaced sentences without たら+最後 (no matcher confuses them) with たら|最後|に 'lastly' and た|が|最後|まで 'but … to the end'",
+      "detection: token claims confirmed; dropped the unverified 接続詞 たら remark; noted だら is lexeme た"
+    ]
+  },
+  {
+    "id": "ba-sore-made-da",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 2: 間に合えば、それまでに has no time for それ to refer to; replaced with a deadline sentence",
+      "detection: token claims confirmed; rewrote the garbled sentence about the concessive clause"
+    ]
+  },
+  {
+    "id": "dewa-arumai-shi",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 2: en reversed the meaning of ではあるまいか ('Isn't this perhaps no coincidence?'); now 'Might this not be a mere coincidence?'",
+      "detection: corrected で: UniDic tags it 格助詞 in examples 3 and 6, not only だ 連用形; rest confirmed"
+    ]
+  },
+  {
+    "id": "demo-nan-demo-nai",
+    "verdict": "ok",
+    "changes": []
+  },
+  {
+    "id": "nimo-hodo-ga-aru",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: replaced 身の程 (one token, no にも/がある, no matcher confuses it) with にも … ほどの差がある, where the words are present but not adjacent",
+      "detection: に is だ 連用形-ニ after a na-adjective (わがまま, 無茶), not only 格助詞; rest confirmed"
+    ]
+  },
+  {
+    "id": "to-ittara-nai",
+    "verdict": "fixed",
+    "changes": [
+      "variants/connection: cleaned 〜ったら（ありゃしない） to 〜ったらありゃしない; added 〜といったらありゃしない",
+      "example 9: added a といったらありゃしない example",
+      "counterexample 4: replaced 怒ったらこわい (no ない, no matcher confuses it) with the exasperated topic ったら, the same 副助詞 token",
+      "detection: ありゃ is misread as 彼れ only after ったら, correct 有る 連用形-融合 after といったら; added the topic ったら guard"
+    ]
+  }
+]
