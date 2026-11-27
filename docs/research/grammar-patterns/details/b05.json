@@ -26,7 +26,7 @@
     ],
     "subsumes": [],
     "confusables": ["hajimeru"],
-    "detection": "A verb in 連用形 directly followed by the verb 出す (lexeme 出す, often tagged 非自立可能), in any conjugation. UniDic keeps many compounds as one token (思い出す, 取り出す, 飛び出す, 言い出す?), and those are lexicalized words that should not match; only match when 出す is a separate token after a verb stem. Some start-sense compounds may also be one token (降り出す?, 泣き出す?), so the matcher may need a short list of single-token start compounds. Exclude 出す after a noun or particle, which is the main verb 'take out, send'. Learners confuse it with 〜始める; 出す adds a sense of suddenness."
+    "detection": "A verb in 連用形 directly followed by the verb 出す (lexeme 出す, often tagged 非自立可能), in any conjugation. UniDic keeps many compounds as one token (思い出す, 取り出す, 飛び出す), and those are lexicalized words that should not match; only match when 出す is a separate token after a verb stem. Start-sense compounds such as 降り出す, 泣き出す, 言い出す and 笑い出す are split into verb + 出す, so they match without a list. The tag 動詞-非自立可能 does not tell the uses apart (the main verb 出す in 手紙を出した has it too), so exclude 出す after a noun or particle, which is the main verb 'take out, send'. Learners confuse it with 〜始める; 出す adds a sense of suddenness."
   },
   {
     "id": "hajimeru",
@@ -42,7 +42,7 @@
     "examples": [
       { "ja": "去年からピアノを習い始めました。", "match": "始めました", "en": "I started learning the piano last year." },
       { "ja": "雪が降り始めたから、早く帰ろう。", "match": "始めた", "en": "It's started to snow, so let's head home." },
-      { "ja": "この本、読みはじめたら止まらなくなった。", "match": "はじめた", "en": "Once I started this book, I couldn't put it down." },
+      { "ja": "この本、読みはじめたら止まらなくなった。", "match": "はじめたら", "en": "Once I started this book, I couldn't put it down." },
       { "ja": "いつからタバコを吸い始めたんですか？", "match": "始めた", "en": "When did you start smoking?" },
       { "ja": "彼が東京に住み始めて、もう十年になる。", "match": "始めて", "en": "It's been ten years since he started living in Tokyo." },
       { "ja": "桜が咲き始める頃に、また会おうね。", "match": "始める", "en": "Let's meet again around when the cherry blossoms start to bloom." }
@@ -83,7 +83,7 @@
     ],
     "subsumes": [],
     "confusables": ["te-iru", "ppanashi"],
-    "detection": "A verb in 連用形 followed by the verb 続ける (lexeme 続ける, 非自立可能) in any conjugation, written 続ける or つづける. Guard: the token before must be a verb 連用形; after を or a noun it is the main verb 'continue'. 続けて directly before a number or a verb with no stem in front is the adverb 'in a row'. The intransitive 続く after a stem is rare and should not match."
+    "detection": "A verb in 連用形 followed by the verb 続ける (lexeme 続ける, 非自立可能) in any conjugation, written 続ける or つづける. Guard: the token before must be a verb 連用形; after を or a noun it is the main verb 'continue'. 続けて 'in a row' is not a separate token: UniDic reads it as 続け (続ける, 連用形) + て, so it matches the pattern shape; reject it when it comes before a number or counter and no verb stem precedes it. The intransitive 続く after a stem is rare and should not match."
   },
   {
     "id": "owaru",
@@ -98,7 +98,7 @@
     "connection": ["V-masu-stem + 終わる", "V-masu-stem + 終える"],
     "examples": [
       { "ja": "この本、やっと読み終わった。", "match": "終わった", "en": "I finally finished reading this book." },
-      { "ja": "食べ終わったら、お皿を片付けてね。", "match": "終わった", "en": "When you've finished eating, clear your plate, okay?" },
+      { "ja": "食べ終わったら、お皿を片付けてね。", "match": "終わったら", "en": "When you've finished eating, clear your plate, okay?" },
       { "ja": "レポートはもう書き終わりましたか？", "match": "終わりました", "en": "Have you finished writing the report yet?" },
       { "ja": "彼が話しおわるまで、誰も口を開かなかった。", "match": "おわる", "en": "Nobody said a word until he finished speaking." },
       { "ja": "宿題をやり終わってから、ゲームしていいよ。", "match": "終わって", "en": "You can play games once you've finished your homework." },
@@ -140,7 +140,7 @@
     ],
     "subsumes": [],
     "confusables": ["nikui", "gachi"],
-    "detection": "A verb in 連用形 followed by the adjective やすい (lexeme 易い?, 形容詞 非自立可能) in any conjugation (やすく, やすかった, やすさ). Guard: the token before must be a verb 連用形; otherwise やすい is the adjective 安い (lexeme 安い) 'cheap'. In kana the two share the surface, so the guard is essential. Compound adjectives like 気安い are single tokens and do not match."
+    "detection": "A verb in 連用形 followed by the adjective やすい (lexeme 易い, tagged 接尾辞-形容詞的) in any conjugation (やすく, やすかった, やすさ). Guard: the token before must be a verb 連用形; otherwise やすい is the adjective 安い (lexeme 安い) 'cheap'. In kana the two share the surface, so the guard is essential. Compound adjectives like 気安い are single tokens and do not match."
   },
   {
     "id": "nikui",
@@ -168,7 +168,7 @@
     ],
     "subsumes": [],
     "confusables": ["zurai", "gatai", "yasui"],
-    "detection": "A verb in 連用形 followed by the adjective にくい (lexeme 難い?, 形容詞 非自立可能) in any conjugation (にくく, にくかった). Guard: the token before must be a verb in 連用形; otherwise にくい may be 憎い 'hateful' (lexeme 憎い), or に + a word starting with く. Written 難い it is usually read がたい (gatai) in writing, so prefer the kana form and check the reading when kanji is used. Close in meaning to 〜づらい and 〜がたい."
+    "detection": "A verb in 連用形 followed by the adjective にくい (lexeme 難い, tagged 接尾辞-形容詞的) in any conjugation (にくく, にくかった). Guard: the token before must be a verb in 連用形; otherwise にくい may be 憎い 'hateful' (lexeme 憎い, 形容詞-一般), or に + a word starting with く. Written 難い it is usually read がたい (gatai) in writing, so prefer the kana form and check the reading when kanji is used. A noun before it (心にくい) is still tagged 難い, so the verb check is required. Close in meaning to 〜づらい and 〜がたい."
   },
   {
     "id": "aida-ni",
@@ -226,7 +226,7 @@
     ],
     "subsumes": [],
     "confusables": ["aida-ni", "nagara", "uchi-ni"],
-    "detection": "The noun 間 (lexeme 間, reading アイダ) as its own token after a clause in 連体形 or N + の, followed by a comma, は or the main clause, but not by に (that is aida-ni, match it first). Guard: the modifier must express a time span; A と B の間 is spatial. UniDic gives 間 several readings (マ, カン, ケン); only the reading アイダ counts, and compounds such as 人間, 時間 or 間もなく are separate words. 長い間 is a common fixed use and does match."
+    "detection": "The noun 間 (lexeme 間, reading アイダ) as its own token after a clause in 連体形 or N + の, followed by a comma, は or the main clause, but not by に (that is aida-ni, match it first). Guard: the modifier must express a time span; A と B の間 is spatial. UniDic gives 間 several readings (マ, カン, ケン); only the reading アイダ counts, and compounds such as 人間 and 時間 are single tokens, but 間もなく is three tokens (間 + も + なく), so reject 間 followed by も. 長い間 is a common fixed use and does match."
   },
   {
     "id": "ga-hoshii",
@@ -255,7 +255,7 @@
     ],
     "subsumes": [],
     "confusables": ["te-hoshii", "tai", "garu"],
-    "detection": "The adjective ほしい (lexeme 欲しい, 形容詞) in any conjugation, after a noun phrase marked by が, を, は or no particle. Guard: if the token before ほしい is the て/で particle (or ないで), it is te-hoshii, so do not match; if ほしい is followed by がる it is garu. In kana, ほしい can begin a longer noun such as ほしいも (干し芋), so check that UniDic tags it as the adjective. Learners confuse it with 〜たい (want to do) and 〜てほしい."
+    "detection": "The adjective ほしい (lexeme 欲しい, tagged 形容詞-非自立可能 in every example, kana or kanji) in any conjugation, after a noun phrase marked by が, を, は or no particle. Guard: if the token before ほしい is the て/で particle (or ないで), it is te-hoshii, so do not match; if ほしい is followed by がる it is garu. UniDic splits ほしいも (干し芋) into ほしい + も and still tags ほしい as the adjective, so reject ほしい followed by も and then を or a verb; て + ほしい (手伝ってほしい) is te-hoshii and 欲し + がっ (欲しがって) is garu. Learners confuse it with 〜たい (want to do) and 〜てほしい."
   },
   {
     "id": "tagaru",
@@ -283,7 +283,7 @@
     ],
     "subsumes": ["garu"],
     "confusables": ["tai"],
-    "detection": "A verb in 連用形 followed by the auxiliary たがる (lexeme たがる?, 助動詞) in any conjugation (たがって, たがらない, たがります). UniDic may instead split it into たい (語幹 た) + がる; accept both segmentations and treat the pair as one match. Guard: the token before must be a verb 連用形, which rules out verbs like 跨る or 群がる that contain the kana. Match before garu, which this subsumes. ほしがる is ほしい + がる and belongs to garu, not here."
+    "detection": "A verb in 連用形 followed by the auxiliary たがる (lexeme たがる, 助動詞, 五段-ラ行) as one token in any conjugation (たがって, たがらない, たがります); UniDic does not split it into たい + がる. Guard: the token before must be a verb 連用形. The verb またがる is its own token, so it cannot match. Match before garu, which this subsumes. ほしがる is ほしい + がる and belongs to garu, not here."
   },
   {
     "id": "garu",
@@ -311,7 +311,7 @@
     ],
     "subsumes": [],
     "confusables": ["tagaru", "gari", "ga-hoshii"],
-    "detection": "The suffix がる (lexeme がる?, 接尾辞 動詞的) in any conjugation, right after the stem of an i-adjective or a na-adjective of feeling (怖, 寒, 欲し, 嫌, 恥ずかし, 面白). Guard: the token before must be an adjective stem; verbs such as 下がる, 上がる, 繋がる are single tokens and must not match. When the stem is the た of たい, match tagaru instead. Some common forms may be single verb tokens in UniDic (嫌がる?, 怖がる?, 欲しがる?), so match those lexemes too. The noun suffix がり (寒がり) is the separate entry gari."
+    "detection": "The suffix がる (lexeme がる, 接尾辞-動詞的, 五段-ラ行) in any conjugation, right after the stem of an i-adjective or a na-adjective of feeling (怖, 寒, 欲し, 嫌, 恥ずかし, 面白). Guard: the token before must be an adjective stem; verbs such as 下がる, 上がる, 繋がる are single tokens and must not match. The stems are separate tokens (怖 + がる, 嫌 + がる, 寒 + がっ, ほし + がっ), so there are no single-token forms to list. たがる is its own 助動詞 token and never reaches this entry. The noun suffix がり (寒がり) is the separate entry gari."
   },
   {
     "id": "sasete-kudasai",
@@ -328,11 +328,11 @@
       { "ja": "今日は私に払わせてください。", "match": "せてください", "en": "Please let me pay today." },
       { "ja": "ちょっと考えさせてください。", "match": "させてください", "en": "Let me think about it for a bit." },
       { "ja": "一言だけ言わせてくれ。", "match": "せてくれ", "en": "Just let me say one thing." },
-      { "ja": "次の試合、俺に出させてくれない？", "match": "させてくれない", "en": "Won't you let me play in the next match?" },
+      { "ja": "次の試合、俺に出させてくれない？", "match": "出させてくれない", "en": "Won't you let me play in the next match?" },
       { "ja": "まず、簡単に自己紹介させてください。", "match": "させてください", "en": "First, allow me to briefly introduce myself." },
       { "ja": "少しだけ休ませてもらえませんか。", "match": "せてもらえませんか", "en": "Could you let me rest for a little while?" },
       { "ja": "お願いだから行かせてください、もう決めたんです。", "match": "せてください", "en": "Please, let me go. I've already made up my mind." },
-      { "ja": "ねえ、私にもやらせて！", "match": "やらせて", "en": "Hey, let me have a go too!" }
+      { "ja": "ねえ、私にもやらせて！", "match": "もやらせて", "en": "Hey, let me have a go too!" }
     ],
     "counterexamples": [
       { "ja": "子どもたちに野菜を食べさせてください。", "en": "Please make the kids eat their vegetables.", "why": "The causee is a third person (子どもたち), so it asks the listener to make others act, not to let the speaker act." },
@@ -341,7 +341,7 @@
     ],
     "subsumes": ["te-kudasai", "te-request", "te-kurenai", "te-itadakemasen-ka", "sasete-morau"],
     "confusables": ["te-moratte-mo-ii-desu-ka"],
-    "detection": "A causative auxiliary (lexeme させる or せる, 助動詞) in て-form, then a request verb: ください (lexeme 下さる), くれ or くれない？ (lexeme 呉れる), or もらえませんか (lexeme 貰える?). For する-verbs UniDic gives the noun + させる (させる may be tagged as the verb 為る in causative; check). Guard: an explicit causee other than the speaker (X に where X is not 私 or 俺) usually means 'make X do', not 'let me'; when no causee is stated, assume the speaker. The casual bare causative て (やらせて！) counts only at the end of the sentence, as in te-request. Match before te-kudasai, te-kurenai and sasete-morau, which this subsumes."
+    "detection": "A causative auxiliary (lexeme させる or せる, 助動詞) in て-form, then a request verb: ください (lexeme 下さる), くれ or くれない？ (lexeme 呉れる), or もらえませんか (もらえ is lexeme 貰う, 下一段 potential form). The causative is せる after a godan stem (払わ + せ) and させる after an ichidan stem (考え + させ). For a する-verb the tokens are noun + さ (為る, 未然形) + せ (せる), so match せる, not only させる. In やらせて the tokenizer misreads the sentence 私にもやらせて as も + 靄る (もやら) + せ, so a matcher may miss that bare form. Guard: an explicit causee other than the speaker (X に where X is not 私 or 俺) usually means 'make X do', not 'let me'; when no causee is stated, assume the speaker. The casual bare causative て (やらせて！) counts only at the end of the sentence, as in te-request. Match before te-kudasai, te-kurenai and sasete-morau, which this subsumes."
   },
   {
     "id": "te-kurenai",
@@ -370,7 +370,7 @@
     ],
     "subsumes": ["te-kureru", "te-morau"],
     "confusables": ["te-itadakemasen-ka", "masen-ka", "te-request"],
-    "detection": "A て-form followed by くれる (lexeme 呉れる) or もらえる (lexeme 貰える?, potential of 貰う) in a question: negative ない or ません + か, or plain くれる with a question mark or rising tone. Guard: require a request signal at the end of the clause (？, か, かな, sentence end with question intonation); a negative くれない in a statement (全然, 誰も, past tense) is a complaint, not a request. The polite いただけませんか form belongs to te-itadakemasen-ka. Do not also count te-kureru or te-morau when this matches."
+    "detection": "A て-form followed by くれる (lexeme 呉れる) or もらえる (UniDic lexeme 貰う, the potential form もらえ/もらえる) in a question: negative ない or ません + か, or plain くれる with a question mark or rising tone. Guard: require a request signal at the end of the clause (？, か, かな, sentence end with question intonation); a negative くれない in a statement (全然, 誰も, past tense) is a complaint, not a request. The polite いただけませんか form belongs to te-itadakemasen-ka. Do not also count te-kureru or te-morau when this matches."
   },
   {
     "id": "no-darou-ka",
@@ -427,7 +427,7 @@
     ],
     "subsumes": ["no-da", "kedo", "ga-but"],
     "confusables": ["noni"],
-    "detection": "Tokens: ん or の (lexeme の, 準体助詞), then だ or です, then けど/けれど (lexeme けれど?) or が (接続助詞). Guard: ん must be the nominalizer, not the onbin of a verb past (読んだ, 死んだ, 飛んだ are 読む + だ(た)); UniDic tags those as 助動詞 た with surface だ, so require a 助詞 の before だ. A noun or pronoun before の (私の) is possessive. The clause after it is often missing, so the pattern may end the sentence."
+    "detection": "Tokens: ん or の (lexeme の, 準体助詞), then だ or です, then けど/けれど (lexeme けれど) or が (接続助詞). Guard: ん must be the nominalizer, not the onbin of a verb past (読んだ, 死んだ, 飛んだ are 読む + だ(た)); UniDic tags those as 助動詞 た with surface だ, so require a 助詞 の before だ. A noun or pronoun before の (私の) is possessive. The clause after it is often missing, so the pattern may end the sentence."
   },
   {
     "id": "to-iu-koto",
@@ -456,7 +456,7 @@
     ],
     "subsumes": ["koto-nominalizer", "to-iu"],
     "confusables": ["to-iu-koto-wa", "to-iu-no-wa"],
-    "detection": "Tokens: the quoting particle と (or って, lexeme って?), the verb 言う (lexeme 言う, often written いう), and the noun こと (lexeme 事, 形式名詞); ってこと drops 言う. Guard: が, は or を before 言う with a real speaker means the literal 'what X says'. At the start of a sentence, ということは is to-iu-koto-wa; after a hearsay source (によると, 話では) a final ということだ is to-iu. Do not also count koto-nominalizer or to-iu when this matches."
+    "detection": "Tokens: the quoting particle と (助詞-格助詞), the verb 言う (lexeme 言う, 動詞-一般, surface いう in kana), and the noun こと (lexeme 事, 名詞-普通名詞). The short ってこと drops 言う: after a predicate UniDic reads って as the auxiliary つう (助動詞, 五段-ワア行 連体形), and after a quoted clause it can be the particle って (助詞-副助詞) followed by いう, so accept both. Guard: が, は or を before 言う with a real speaker means the literal 'what X says'. At the start of a sentence, ということは is to-iu-koto-wa; after a hearsay source (によると, 話では) a final ということだ is to-iu. Do not also count koto-nominalizer or to-iu when this matches."
   },
   {
     "id": "nasai",
@@ -484,7 +484,7 @@
     ],
     "subsumes": [],
     "confusables": ["na-command", "te-request", "o-kudasai"],
-    "detection": "A verb in 連用形 (or a noun + し for する-verbs) followed by なさい, the imperative of なさる (lexeme 為さる). Guard: なさい must be 命令形 and not followed by ます; exclude the fixed greetings おやすみなさい, おかえりなさい, ごめんなさい, which UniDic may tokenize as one 感動詞 or as お + noun + なさい; a noun rather than a verb stem before なさい is the sign. The casual stem + な (早く寝な) is na-command, not this entry."
+    "detection": "A verb in 連用形 (or a noun + し for する-verbs) followed by なさい, the imperative of なさる (lexeme 為さる, 動詞-非自立可能, 五段-ラ行 命令形). Guard: なさい must be 命令形; before ます it is 連用形-イ音便 (なさいます, the honorific main verb). The greetings are not one token: おやすみなさい is お (御, prefix) + やすみ (休む, 連用形) + なさい, おかえりなさい is お + かえり (返る) + なさい, and ごめんなさい is ごめん (御免, noun) + なさい. So reject a verb stem that has the prefix お right before it, and reject the noun ごめん. The casual stem + な (早く寝な) is na-command, not this entry."
   },
   {
     "id": "te-yokatta",
@@ -554,11 +554,11 @@
     "prototype": false,
     "connection": ["i-Adj-stem + くする", "na-Adj + にする", "N + にする"],
     "examples": [
-      { "ja": "音をもう少し小さくしてくれない？", "match": "くして", "en": "Could you turn the volume down a little?" },
-      { "ja": "部屋をきれいにしたら、気分がすっきりした。", "match": "にした", "en": "Once I tidied up my room, I felt refreshed." },
-      { "ja": "思い切って髪を短くしました。", "match": "くしました", "en": "I took the plunge and cut my hair short." },
+      { "ja": "音をもう少し小さくしてくれない？", "match": "小さくして", "en": "Could you turn the volume down a little?" },
+      { "ja": "部屋をきれいにしたら、気分がすっきりした。", "match": "にしたら", "en": "Once I tidied up my room, I felt refreshed." },
+      { "ja": "思い切って髪を短くしました。", "match": "短くしました", "en": "I took the plunge and cut my hair short." },
       { "ja": "図書館ではもう少し静かにしてください。", "match": "にして", "en": "Please keep it down a bit in the library." },
-      { "ja": "スープをもっと甘くすると、子どもも喜ぶよ。", "match": "くする", "en": "If you make the soup sweeter, the kids will like it too." },
+      { "ja": "スープをもっと甘くすると、子どもも喜ぶよ。", "match": "甘くする", "en": "If you make the soup sweeter, the kids will like it too." },
       { "ja": "この部屋を子ども部屋にしようと思ってるんだ。", "match": "にしよう", "en": "I'm thinking of turning this room into a kids' room." }
     ],
     "counterexamples": [
@@ -569,7 +569,7 @@
     ],
     "subsumes": [],
     "confusables": ["ku-ni-naru", "ni-suru", "you-ni-suru", "koto-ni-suru"],
-    "detection": "An i-adjective in 連用形 (ending く) followed by the verb する (lexeme 為る), or a na-adjective stem or noun followed by に and する. Guard: for に + する, require an object being changed (X を) or a na-adjective stem before に; a bare noun + にする with no を-object is usually ni-suru 'decide on'. Exclude こと, よう and の before に, which are koto-ni-suru, you-ni-suru and similar entries. くなる and になる (ku-ni-naru) have the same first token and differ only in the verb."
+    "detection": "An i-adjective in 連用形 (ending く) followed by the verb する (lexeme 為る), or a na-adjective followed by に (lexeme だ, 助動詞 連用形-ニ, as in 静かにして) or a noun followed by に (格助詞, as in 子ども部屋にしよう), then する in any form (lexeme 為る, 動詞-非自立可能: し, する, しよう, して). Guard: for に + する, require an object being changed (X を) or a na-adjective stem before に; a bare noun + にする with no を-object is usually ni-suru 'decide on'. Exclude こと, よう and の before に, which are koto-ni-suru, you-ni-suru and similar entries. くなる and になる (ku-ni-naru) have the same first token and differ only in the verb."
   },
   {
     "id": "nakute",
@@ -597,7 +597,7 @@
     ],
     "subsumes": [],
     "confusables": ["naide", "nakute-mo-ii", "nakute-wa-ikenai", "de-wa-nakute"],
-    "detection": "The negative auxiliary ない (lexeme ない, 助動詞) or the adjective ない after く, in 連用形 なく, followed by the particle て (or って in なくって). Guard: if も or は follows directly and then いい, いけない, ならない or similar, it is a longer obligation or permission pattern; match those first. After a noun or na-adjective with じゃ/では, なくて is usually 'not A but B' (de-wa-nakute), so the reason use is limited here to verbs and i-adjectives. The reason sense is common when the next clause is a feeling (困る, 心配, ごめん)."
+    "detection": "The negative auxiliary ない (lexeme ない, 助動詞 連用形) in なく after a verb 未然形, or the adjective 無い (形容詞-非自立可能 連用形) in なく after an i-adjective's く form, followed by the particle て (lexeme て). なくって is one token なくっ (促音便) + て, not って. Guard: if も or は follows directly and then いい, いけない, ならない or similar, it is a longer obligation or permission pattern; match those first. After a noun or na-adjective with じゃ/では, なくて is usually 'not A but B' (de-wa-nakute), so the reason use is limited here to verbs and i-adjectives. The reason sense is common when the next clause is a feeling (困る, 心配, ごめん)."
   },
   {
     "id": "te-cause",
@@ -653,6 +653,6 @@
     ],
     "subsumes": [],
     "confusables": ["naide", "naide-kudasai", "na-prohibitive"],
-    "detection": "The negative auxiliary ない (lexeme ない) in 連用形 or 終止形 followed by the particle で (接続助詞), at the end of a clause: followed by sentence end, ！, a sentence-final particle (ね, よ, な), a comma before a new clause such as お願い, or a quote marker. Guard: a following predicate (行った, 寝た) makes it naide 'without doing'; ください, くれ, ほしい after it belong to longer entries, match those first. This entry owns the bare sentence-final ないで (with ね, よ); naide-kudasai covers only ないでください, ないでくれ and their polite forms."
+    "detection": "The negative auxiliary ない (lexeme ない) in 連用形 or 終止形 followed by the particle で (UniDic lexeme て, 助詞-接続助詞, surface で), at the end of a clause: followed by sentence end, ！, a sentence-final particle (ね, よ, な), a comma before a new clause such as お願い, or a quote marker. Guard: a following predicate (行った, 寝た) makes it naide 'without doing'; ください, くれ, ほしい after it belong to longer entries, match those first. This entry owns the bare sentence-final ないで (with ね, よ); naide-kudasai covers only ないでください, ないでくれ and their polite forms."
   }
 ]
