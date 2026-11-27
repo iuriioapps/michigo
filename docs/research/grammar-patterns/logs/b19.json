@@ -1,0 +1,256 @@
+[
+  {
+    "id": "dake-no-koto-wa-aru",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: 名門校だけある、生徒の… was a comma splice, rewritten as さすが名門校だけあるね。",
+      "detection: named な as だ 助動詞 連体形 and the で of the だけのことで near miss as だ 連用形",
+      "tokens: だけ|の|こと(事)|は|ある(有る) in all forms confirmed; だけのことはあって owned here, dake-atte (b18) rejects it and bare だけある"
+    ]
+  },
+  {
+    "id": "dake-wa",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added 〜るだけは〜た, the past shape most examples use",
+      "connection: dropped V-potential (not in the notation, covered by V-dict) and Clause-plain (covered by N); V + だけは + V notes the verb repeats",
+      "example 7: 味噌汁だけは replaced with 言うだけは言ってみた; the entry had six N examples and two V + だけは + V",
+      "detection: removed the claim できる|だけ|は|やっ|た, the tokenizer gives できる|だけ|はやっ(流行る)|た; stated how a matcher can still catch it",
+      "tokens: やるだけはやった and できるだけはやった give だけ|はやっ(流行る) confirmed; やれるだけはやりました and all kept examples split だけ|は"
+    ]
+  },
+  {
+    "id": "dake-mashi-da",
+    "verdict": "fixed",
+    "changes": [
+      "connection: replaced N + だった + だけましだ with N / na-Adj + なだけましだ (軽傷なだけましだ), the common noun shape",
+      "counterexample 3: 雨だけ降らなければましだ was unnatural (さえ is needed), replaced with 少しだけましになった, a degree だけ next to まし",
+      "example 5, 8: en rewritten; 5 dropped the rain-and-wind point, 8 was stiff",
+      "detection: corrected 'まし is never the ます auxiliary': bare まし before 。 is まじ (文語助動詞) and before 、 is ます 連用形; added the 少しだけ guard",
+      "tokens: だけ|まし(増し 形状詞)|だ/です/だっ|た confirmed"
+    ]
+  },
+  {
+    "id": "nai-dewa-irarenai",
+    "verdict": "fixed",
+    "changes": [
+      "detection: じゃ replaces では, not ては",
+      "detection: the で of the pattern is だ 助動詞 連用形, while the で of ないで 'without' is て 接続助詞; stated this as the guard that keeps it disjoint from tewa-irarenai",
+      "tokens: ない|で(だ)|は|い(居る)|られ|ない/なかっ|た/ませ|ん and ない|じゃ|い|られ|ない confirmed"
+    ]
+  },
+  {
+    "id": "tewa-irarenai",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added 〜じゃいられない and the full 〜ていられない; てられない was listed but its uncontracted form was missing",
+      "connection: ちゃ replaces て + は, so V-masu-stem + ちゃいられない; dropped the redundant polite line; added V-te + いられない",
+      "example 9: added 黙っていられない for the variant without は",
+      "example 7: en 'couldn't stay at work' changed to 'couldn't just keep working'",
+      "subsumes: te-iru, since ていられない and てられない contain its tokens",
+      "detection: added 遊ん|じゃ(て)|い|られ|ない and 見|て(てる 助動詞)|られ|ない; the guard against nai-dewa-irarenai is the で tag (だ 助動詞 there, 接続助詞 here)",
+      "tokens: て(接続助詞)|は|い(居る)|られ|ない, ちゃ = て 接続助詞, で of 遊んでられない = てる 助動詞 未然形 confirmed"
+    ]
+  },
+  {
+    "id": "te-bakari-wa-irarenai",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: 寝てばかりはいけません is unnatural (ではいけない is needed), replaced with 寝てばかりいないで, a ばかり|い|ない near miss",
+      "subsumes: removed tewa-irarenai; its tokens never occur inside this form because ばかり separates て and は",
+      "example 7: en 'stay moved' rewritten",
+      "detection: restated disjointness from tewa-irarenai and the guards with real tokens (ばかり|で(だ)|は, ばかり|い|ない|で)",
+      "tokens: て|ばかり|は/も|い(居る)|られ|ない/ませ|ん and て|ばかり|い|られ|ない confirmed"
+    ]
+  },
+  {
+    "id": "te-naranai",
+    "verdict": "fixed",
+    "changes": [
+      "detection: added guards for なく|て|なら|ない (obligation without は) and ね|ば so the naranai family stays disjoint",
+      "tokens: て(接続助詞)|なら(成る 未然形)|ない, なり|ませ|ん, なら|なかっ|た confirmed; after a noun 心配|で is で 格助詞 as stated",
+      "detection: reject a て token with surface ちゃ/じゃ (忘れ|ちゃ|なら|ない), which belongs to tewa-naranai"
+    ]
+  },
+  {
+    "id": "tewa-naranai",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the common spoken 〜ちゃならない / 〜じゃならない",
+      "connection: dropped the redundant polite line, added V-masu-stem + ちゃならない",
+      "example 9: added 忘れちゃならない for the contracted variant",
+      "detection: ちゃ/じゃ is one て 接続助詞 token, so 忘れ|ちゃ|なら|ない has te-naranai's token shape; the surface decides (te-naranai detection updated to match)",
+      "tokens: て|は|なら(成る)|ない, なり|ませ|ん, なら|ぬ(ず) confirmed"
+    ]
+  },
+  {
+    "id": "kagiri",
+    "verdict": "fixed",
+    "changes": [
+      "meaning: kept ない限り in this entry, since 'unless' is 'as long as not'; one line now reads 'as long as ~ / as far as ~ (with ない: unless ~)'",
+      "connection: removed N + の + 限り, which detection rejects (力の限り is the noun 'limit'); added na-Adj + な + 限り",
+      "example 7: match ある限り widened to である限り",
+      "counterexample 6: added 今日を限りに (o-kagiri-ni); detection now rejects を|限り|に and states kagiri-da needs だ/です at clause end, so neither id owns a form of this entry",
+      "detection: できる限り counts here; に|限り (ni-kagitte) and を|限り|に excluded",
+      "tokens: 限り is 名詞-普通名詞 (lexeme 限り) in every example; 限りでは = 限り|で(格助詞)|は confirmed"
+    ]
+  },
+  {
+    "id": "ni-kagitte",
+    "verdict": "fixed",
+    "changes": [
+      "example 7: en rewritten; 'only on the days' lost the 'of all days' sense",
+      "detection: に限ります tokenizes 限り(限る 連用形)|ます, the same 限り as this entry's に限り; added the guard that 限り + ます is ni-kagiru",
+      "tokens: に|限っ(限る 連用形-促音便)|て(|は) and に|限り(限る 動詞 連用形-一般) confirmed; kagiri's 限り is the noun, so the families stay disjoint"
+    ]
+  },
+  {
+    "id": "ni-kagirazu",
+    "verdict": "fixed",
+    "changes": [
+      "example 7: 男性に限らず女性も、…人は多い had a broken subject structure, replaced with この仕事は男性に限らず、女性にも人気がある",
+      "example 2: en reordered into natural English",
+      "detection: ず is 連用形-一般, not 終止形",
+      "tokens: に|限ら/かぎら(限る 未然形)|ず confirmed; 限り|が is the noun, かかわら is 関わる, as stated"
+    ]
+  },
+  {
+    "id": "te-demo",
+    "verdict": "fixed",
+    "changes": [
+      "variants: replaced 〜にしてでも (just にする + てでも) with the voiced 〜んででも; example 1 match にしてでも narrowed to してでも",
+      "example 5: third する example 無理をしてでも replaced with 頼み込んででも to cover the voiced shape",
+      "counterexample 2: 疲れて、でも楽しかった is unnatural, replaced with 待って、でもそれって変じゃない？",
+      "detection: 頼み込ん|で|で|も gives the second で as 格助詞, not だ; the conjunction でも also tokenizes で(格助詞)|も, so adjacency to the て token is the guard, not the で tag",
+      "tokens: て|で(だ 連用形)|も confirmed after する, 這う, 嫌われる, 代える, 歩く"
+    ]
+  },
+  {
+    "id": "te-made",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: 五時までに had て and まで in separate phrases, so no matcher would hit it; replaced with 隅から隅までして, a range まで + する that shares the までして tokens",
+      "detection: added the range guard for N + まで + し + て (から before it, 最後まで)",
+      "tokens: て|まで(副助詞)(|も) and N|まで|し(為る)|て confirmed"
+    ]
+  },
+  {
+    "id": "te-koso",
+    "verdict": "fixed",
+    "changes": [
+      "variants: dropped 〜てこそ初めて (a redundant blend of てこそ and て初めて); added 〜でこそ and 〜てこその",
+      "example 4: 会ってこそ初めて rewritten without 初めて; example 9 added for てこその + noun",
+      "counterexample 5: added 知ってこそいるが, こそ stressing ている before a contrast, a real て|こそ near miss",
+      "confusables: added te-hajimete",
+      "detection: removed the 初めて claim, added てこその and the こそ|いる|が guard",
+      "tokens: て(接続助詞)|こそ(係助詞) confirmed; こそこそ is one 副詞 token"
+    ]
+  },
+  {
+    "id": "te-irai",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 1: てから shares no token with the pattern (a confusable, already listed), replaced with 十年来の親友, the suffix 来 after a span",
+      "detection: added the 来 接尾辞 guard",
+      "tokens: て(接続助詞)|以来(名詞-普通名詞) and N|以来 confirmed; 以降 and 以後 are their own nouns"
+    ]
+  },
+  {
+    "id": "te-touzen-da",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 2: 疑われても当然だ is the pattern after all (ても当然 has the same sense; its en was wrong), replaced with 親として当然だ, whose と|し|て|当然|だ a naive matcher hits",
+      "variants, connection: added 〜ても当然だ; example 9 added for it",
+      "example 8: en 'catching a cold is natural' rewritten",
+      "detection: て + も + 当然 now counts; added the として guard and the punctuation guard",
+      "tokens: て(接続助詞)|当然/当たり前(形状詞-一般)|だ/です confirmed; のも当然 has の 準体助詞, so the family stays disjoint"
+    ]
+  },
+  {
+    "id": "no-mo-touzen-da",
+    "verdict": "fixed",
+    "changes": [
+      "variants, connection: dropped the weak N + も当然だ (plain 'also' + 当然, too loose); added na-Adj + なのも当然だ",
+      "example 5: 彼の怒りも当然だ replaced with 食欲がないのも当然だ (i-Adj)",
+      "detection: the adverb 当然 in 私も当然行きます is tagged 副詞, so the POS (形状詞) is the guard; ても当然 (te-touzen-da) has て, not の, before も",
+      "tokens: の(準体助詞)|も|当然/当たり前(形状詞)|だ/です/だっ|た and の|は|当然 confirmed; 同然 is a different noun"
+    ]
+  },
+  {
+    "id": "no-mo-mottomo-da",
+    "verdict": "fixed",
+    "changes": [
+      "example 5: 叱られるのも → 叱られたのも, the scolding had already happened",
+      "tokens: の(準体助詞)|も/は|もっとも(尤も 形状詞)|だ/です/な|話 confirmed; sentence-initial もっとも is 尤も 接続詞 and もっとも安い is 最も 副詞, as stated"
+    ]
+  },
+  {
+    "id": "ni-hoka-naranai",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 3: 天気が雨にならないといいね is stiff (天気が is odd here), rewritten as 明日、雨にならないといいね",
+      "detection: 'from + に' clarified as から (接続助詞) + に; ほかならぬ has no に and ぬ is ず 連体形",
+      "tokens: に|ほか/他(他 名詞)|なら(成る)|ない, なり|ませ|ん, なら|なかっ|た confirmed"
+    ]
+  },
+  {
+    "id": "de-shika-nai",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 2: 彼でしかできない is unnatural (にしかできない is the norm), replaced with 現金でしか払えない",
+      "detection: the tokenizer gives で as 格助詞 in 4 of 8 examples (同僚, 存在, 雑音) and だ in the rest, so only しか directly followed by ない/あり/なかっ is a guard",
+      "tokens: で|しか(副助詞)|ない(無い 形容詞) and で|しか|あり|ませ|ん confirmed"
+    ]
+  },
+  {
+    "id": "ni-koshita-koto-wa-nai",
+    "verdict": "fixed",
+    "changes": [
+      "example 4: お金より健康に越したことはない mixed in a より comparison the pattern does not take, replaced with 道具は丈夫に越したことはない (na-Adj)",
+      "example 8: 入っておくに越したことはなかった is not idiomatic (〜ばよかった is), replaced with 歩かないに越したことはありません; variant なかった swapped for ないです",
+      "connection: added V-nai + に越したことはない, a common shape",
+      "counterexample 4: 彼女に越したこと (for 引っ越した) was unnatural, replaced with 峠を越したことは",
+      "detection: after a na-adjective or noun に is tagged だ 連用形-ニ, not 格助詞",
+      "tokens: に|越し/こし(越す)|た|こと|は|ない/あり|ませ|ん confirmed"
+    ]
+  },
+  {
+    "id": "nai-koto-niwa",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 1: 好きなことには had no ない, replaced with 謝らないことには驚いた, the same ない|こと|に|は tokens with に governed by 驚く",
+      "detection: i-adjective form is 明るく|ない (無い), not なく + ない; after N/na-Adj ない is the adjective 無い",
+      "detection: ないこともない belongs to nai-koto-wa-nai, not naku-wa-nai",
+      "tokens: ない(助動詞 連体形)|こと(事)|に(格助詞)|は confirmed"
+    ]
+  },
+  {
+    "id": "naku-wa-nai",
+    "verdict": "fixed",
+    "changes": [
+      "variants: dropped 〜ないこともない, which nai-koto-wa-nai (b10) already owns as a variant; added 〜なくもありません",
+      "examples 6, 7: the two ないこともない examples replaced with 面白くなくはない (i-Adj) and 似ていなくもない",
+      "connection: dropped V-nai + こともない; na-Adj + ではなくはない corrected to でなくはない; added N + が + なくもない for example 8",
+      "detection: removed the ないこともない token description, stated that both ないことは/もない go to nai-koto-wa-nai; fixed 好き|で|は|なく|は|ない to 好き|で|なく|は|ない",
+      "tokens: なく(ない 助動詞 連用形)|は/も|ない(無い) after verbs and なく(無い) after adjectives confirmed"
+    ]
+  },
+  {
+    "id": "zu-ni-sumu",
+    "verdict": "fixed",
+    "changes": [
+      "detection: zu-ni-wa-sumanai is ず|に|は|済ま|ない, not ずに + 済まない; the guard now requires 済む directly after に with no ない after it, and rejects ずに + another verb",
+      "tokens: ず(助動詞-ヌ 連用形)|に(格助詞)|済む, ない|で(て)|済む, なく|て|済む confirmed"
+    ]
+  },
+  {
+    "id": "neba-naranai",
+    "verdict": "fixed",
+    "changes": [
+      "examples 7, 8: 言わねば伝わらない and 急がねば、終電に… are the conditional 'if not', not 'must'; replaced with sentence-final 行かねば。 and 守らねば！, the elliptical must",
+      "counterexample 4: ないといけない shared no tokens, replaced with the conditional 急がねば、終電に間に合わない",
+      "connection, detection: bare ねば counts only at sentence end; with a following main clause it is rejected",
+      "tokens: ね(ず 仮定形)|ば|なら|ない/ぬ/なかっ|た/なり|ませ|ん confirmed; せ is 為る 未然形-セ, 来 is tagged 連用形-一般"
+    ]
+  }
+]
