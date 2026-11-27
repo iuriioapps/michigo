@@ -272,11 +272,11 @@
       { "ja": "忙しいからこそ、時間を大切にしたい。", "en": "It's precisely because I'm busy that I want to value my time.", "why": "からこそ is the compound entry kara-koso" },
       { "ja": "頑張ってこそ、意味があるんだ。", "en": "It only means something if you try hard.", "why": "てこそ is the entry te-koso" },
       { "ja": "彼は物陰でこそこそ話している。", "en": "He's whispering furtively in the shadows.", "why": "こそこそ is one adverb token, not the particle こそ" },
-      { "ja": "愛情こそが、子供を育てる力だと思う。", "en": "I think love is precisely what raises a child.", "why": "こそが is the entry koso-ga" }
+      { "ja": "派手さこそないが、落ち着いていていい店だ。", "en": "It isn't flashy, but it's a calm, nice place.", "why": "こそ + a predicate + が is the concession koso-ga, not emphasis" }
     ],
     "subsumes": [],
     "confusables": ["kara-koso", "te-koso", "ba-koso", "koso-ga", "koso-sure"],
-    "detection": "こそ is one token, 助詞-係助詞, lexeme こそ, after a noun or pronoun (今度|こそ, こちら|こそ), after a case particle (に|こそ), and sometimes followed by は. Guards: こそこそ is a single 副詞 token and does not contain the particle. Reject こそ when it is directly preceded by から (kara-koso), by て/で (te-koso), by ば (ba-koso), or followed by が (koso-ga), あれ or すれ (koso-are, koso-sure), because those compounds have their own entries and take precedence. こちらこそ, 今度こそ and これこそ are plain noun + こそ."
+    "detection": "こそ is one token, 助詞-係助詞, lexeme こそ, after a noun or pronoun (今度|こそ, こちら|こそ), after a case particle (に|こそ), and sometimes followed by は. Guards: こそこそ is a single 副詞 token and does not contain the particle. Reject こそ when it is directly preceded by から (kara-koso), by て/で (te-koso), by ば (ba-koso), or followed by あれ or すれ (koso-are, koso-sure), because those compounds have their own entries and take precedence. こそ + が directly (愛情|こそ|が) is plain koso with the subject particle; koso-ga is こそ + a predicate + が/けど (派手さ|こそ|ない|が), so reject only when a predicate and a clause-final が or けど follow before the next 。. こちらこそ, 今度こそ and これこそ are plain noun + こそ."
   },
   {
     "id": "tte-shudai",

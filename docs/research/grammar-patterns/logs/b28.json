@@ -1,0 +1,215 @@
+[
+  {
+    "id": "sobireru",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: replaced 乗り遅れる (no shared tokens) with 寝そべる, one token next to 寝そびれる",
+      "detection: named 寝そべる among the near misses"
+    ]
+  },
+  {
+    "id": "sokonau",
+    "verdict": "fixed",
+    "changes": [
+      "detection: 損ずる is サ行変格, confirmed by the tokenizer",
+      "detection: dropped the unverified 見|損|ね claim; 書き損じ noun confirmed as 接尾辞-名詞的",
+      "detection: stated a realistic guard for 見損なう 'misjudge' (pronoun or person object) and that a bare 見損なったぞ stays ambiguous",
+      "detection: fixed garbled sentence about sobireru"
+    ]
+  },
+  {
+    "id": "tsukusu",
+    "verdict": "fixed",
+    "changes": [
+      "example 3: replaced a second 食べ尽くした with 読み尽くしちゃった (new verb, covers ちゃう)",
+      "example 5: en made natural"
+    ]
+  },
+  {
+    "id": "zu-jimai",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: rewritten, 忙しかったので repeated example 1; kept the ちまう-tagged じまいです case",
+      "example 9: replaced with a more natural context",
+      "counterexample 3: why reworded",
+      "detection: added that kanji 仕舞い is tagged as the verb 仕舞う and that surface matching after ず is safe"
+    ]
+  },
+  {
+    "id": "tameshi-ga-nai",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: replaced unnatural お試しがないと with 試したことがない (verb 試す)",
+      "detection: noted the verb 試し surface and to check the noun lexeme"
+    ]
+  },
+  {
+    "id": "ta-hyoushi-ni",
+    "verdict": "fixed",
+    "changes": [
+      "detection: で after 拍子/弾み is 助詞-格助詞, not だ",
+      "connection: added V-ta + 弾みで for the listed variant"
+    ]
+  },
+  {
+    "id": "ta-shunkan-ni",
+    "verdict": "ok",
+    "changes": []
+  },
+  {
+    "id": "ta-tsumori-wa-nai",
+    "verdict": "fixed",
+    "changes": [
+      "meaning: たつもりはない is 'not think one did', not 'no intention'",
+      "examples 6-9: en corrected to the 'don't think I did' sense",
+      "counterexample 2: en fixed for the idiom 死んだつもりで",
+      "subsumes: removed tsumori, which only takes V-dict and V-nai, so the entries are disjoint",
+      "detection: stated the disjointness"
+    ]
+  },
+  {
+    "id": "nashi-ni",
+    "verdict": "fixed",
+    "changes": [
+      "detection: 意気地なし splits 意気|地|なし, not 意気地|なし; added 甲斐性 and ろくでなし (one token)",
+      "detection: also reject なしの and なしだ, owned by nashi"
+    ]
+  },
+  {
+    "id": "koto-nashi-ni",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: replaced 何も言うことなしに, which overlaps the set phrase 言うことなし",
+      "detection: する verbs are two tokens (相談|する)"
+    ]
+  },
+  {
+    "id": "nakushite-wa",
+    "verdict": "fixed",
+    "changes": [
+      "detection: the 無くす reading after a pronoun confirmed with 彼 and あなた; dropped the unverified 我",
+      "example 2: en made natural"
+    ]
+  },
+  {
+    "id": "atte-no",
+    "verdict": "fixed",
+    "changes": [
+      "detection: お客様 tokens are お|客|様, not 皆|様",
+      "detection: dropped a sentence about an interjection あって that no example or guard needs"
+    ]
+  },
+  {
+    "id": "koso-ga",
+    "verdict": "fixed",
+    "changes": [
+      "example 1: match now starts at 派手さ, not at the suffix さ",
+      "counterexample 1: replaced 今度こそ勝つ (no が, no matcher would hit it) with 今度こそ勝ちたいが, a real emphatic-こそ near miss",
+      "connection and detection: added V-te + こそ + いる + が, which te-koso rejects, so the two stay disjoint",
+      "detection: guard for emphatic こそ before a が clause",
+      "confusables: added te-koso",
+      "example 10: added for V-te + こそ + いる + が"
+    ]
+  },
+  {
+    "id": "koso-sure",
+    "verdict": "fixed",
+    "changes": [
+      "example 7: 誰も with an affirmative clause replaced by 皆"
+    ]
+  },
+  {
+    "id": "koso-are",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: rewritten, the topic of 才能こそあれ did not match the main clause",
+      "example 9: added 程度の差こそあれ, the most frequent use",
+      "detection: sentence-final あれ is 有る 命令形, not the pronoun 彼れ; guard rewritten to accept lexeme 有る and reject 彼れ"
+    ]
+  },
+  {
+    "id": "nai-de-mo-nai",
+    "verdict": "fixed",
+    "changes": [
+      "example 5: replaced 反対しないでもない, whose en had the opposite sense",
+      "examples 1, 2, 7: en made accurate and natural",
+      "checked: no ないこともない or なくもない form is listed; both are counterexamples naming nai-koto-wa-nai and naku-wa-nai"
+    ]
+  },
+  {
+    "id": "nai-mono-de-mo-nai",
+    "verdict": "ok",
+    "changes": []
+  },
+  {
+    "id": "nai-tomo-kagiranai",
+    "verdict": "fixed",
+    "changes": [
+      "connection: i-Adj-ku is not in the notation; written as i-Adj-stem + く",
+      "example 3: replaced まだ間に合わないとも限らない, which natives read both ways, with a typical warning",
+      "example 8: replaced unnatural 気を変える",
+      "checked: ids and tokens confirmed"
+    ]
+  },
+  {
+    "id": "nai-made-mo",
+    "verdict": "fixed",
+    "changes": [
+      "connection: i-Adj-ku written as i-Adj-stem + く",
+      "example 5: 全部覚えないまでも was unnatural; replaced",
+      "counterexample 3: replaced unnatural 夜遅くまでも with ないままでも, a real surface near miss",
+      "detection: added the ない|まま|で|も guard"
+    ]
+  },
+  {
+    "id": "to-ienaku-mo-nai",
+    "verdict": "fixed",
+    "changes": [
+      "detection: token split ある|と, not あると",
+      "detection: corrected the garbled to-ieru remark"
+    ]
+  },
+  {
+    "id": "temo-dou-ni-mo-naranai",
+    "verdict": "fixed",
+    "changes": [
+      "detection: たって after こぼし is た + って (副助詞), not the 接続助詞 たって"
+    ]
+  },
+  {
+    "id": "te-kanawanai",
+    "verdict": "fixed",
+    "changes": [
+      "detection: かなわん's ん is tagged 文語助動詞-ム, not ず",
+      "connection: i-Adj-ku written as i-Adj-stem + くて; added V-te + かなわない",
+      "example 10: added 減ってかなわない for the V-te connection",
+      "counterexample 2: replaced kanji 叶わない (no matcher would hit it) with kana 願ってもかなわない, which tags as 敵う",
+      "detection: guard against も between て and かなわ"
+    ]
+  },
+  {
+    "id": "te-sumu-koto-de-wa-nai",
+    "verdict": "ok",
+    "changes": []
+  },
+  {
+    "id": "de-wa-sumanai",
+    "verdict": "fixed",
+    "changes": [
+      "connection: V-ta + だけ widened to V-plain (example 7 has 叱られるだけ)",
+      "examples 4, 5: en made accurate",
+      "counterexample 3: why corrected, UniDic reads 済ませられない as 済む + せる + られる",
+      "detection: guard for the causative せ restated with the real tokens",
+      "checked: disjoint from zu-ni-wa-sumanai (ない|で(だ)|は rejected) and zu-ni-sumu"
+    ]
+  },
+  {
+    "id": "zu-ni-wa-sumanai",
+    "verdict": "fixed",
+    "changes": [
+      "connection: V-nai + ないでは doubled ない; now V-nai + では",
+      "example 6: en made natural",
+      "checked: disjoint from zu-ni-sumu (b19 rejects ず|に|は|済ま|ない)"
+    ]
+  }
+]

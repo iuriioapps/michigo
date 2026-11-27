@@ -94,7 +94,8 @@
     "changes": [
       "example 8: a second こちらこそ reused the frame of example 3, replaced with 小さなことこそ、丁寧にやるべきだ",
       "example 7: en 'for real' was a loose gloss, rewritten",
-      "tokens: こそ (助詞-係助詞) after 名詞, 代名詞 and に; からこそ, てこそ and こそが carry the same こそ token, こそこそ is one 副詞 token; detection confirmed"
+      "tokens: こそ (助詞-係助詞) after 名詞, 代名詞 and に; からこそ, てこそ and こそが carry the same こそ token, こそこそ is one 副詞 token; detection confirmed",
+      "b28 review: こそが is plain koso with the subject particle; the guard now rejects only こそ + predicate + が/けど (koso-ga), and the counterexample is now 派手さこそないが"
     ]
   },
   {
