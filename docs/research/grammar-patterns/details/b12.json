@@ -457,7 +457,7 @@
     ],
     "subsumes": [],
     "confusables": ["ni-kakete-wa", "ni-kakete-mo", "ni-kagitte"],
-    "detection": "Tokens: に (助詞-格助詞) + かけ (動詞-非自立可能, lexeme 掛ける, 下一段-カ行 連用形-一般) + て (助詞-接続助詞), usually after から: 今夜|から|明日|の|朝|に|かけ|て. The full pattern is から + a time or place noun + にかけて with the span noun close to から; the bare variant is a time or place noun + にかけて (週末|に|かけ|て), and にかけて + の + noun (東北にかけての地域) is the adnominal form. から is 格助詞 here. Guard: the noun before に must be a time or place, not an object to hang something on (ハンガー|に|かけ|て), and the next token must not be は or も (ni-kakete-wa, ni-kakete-mo). Reject 名誉にかけて (an oath) and から + まで."
+    "detection": "Tokens: に (助詞-格助詞) + かけ (動詞-非自立可能, lexeme 掛ける, 下一段-カ行 連用形-一般) + て (助詞-接続助詞), usually after から: 今夜|から|明日|の|朝|に|かけ|て. The full pattern is から + a time or place noun + にかけて with the span noun close to から; the bare variant is a time or place noun + にかけて (週末|に|かけ|て), and にかけて + の + noun (東北にかけての地域) is the adnominal form. から is 格助詞 here. Guard: the noun before に must be a time or place, not an object to hang something on (ハンガー|に|かけ|て), and a following は or も stays with this entry (週末|に|かけ|て|は), since ni-kakete-wa takes a skill or field noun and ni-kakete-mo an oath noun (命, 名誉, 誇り), so the noun decides, not the next token. Reject 名誉にかけて (an oath) and から + まで."
   },
   {
     "id": "zuni-wa-irarenai",

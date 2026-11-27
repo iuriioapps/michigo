@@ -1,0 +1,245 @@
+[
+  {
+    "id": "sukoshi-mo-nai",
+    "verdict": "fixed",
+    "changes": [
+      "connection: added 少しも + na-Adj + じゃない (少しも平気じゃない), missing",
+      "detection: ない after an adjective is 無い 形容詞-非自立可能, not 助動詞; noted the contracted て (てる 助動詞) in 気にしてない",
+      "tokens: 少し|も 副詞 + 係助詞, ちっとも = 些とも 副詞, ませ|ん = ます + ず confirmed; counterexample tokens 少し|もらえ and 少し|で|も confirmed"
+    ]
+  },
+  {
+    "id": "ni-kagiru",
+    "verdict": "fixed",
+    "changes": [
+      "example 3: second 寝るに限る, replaced with 温かくして休むに限ります to vary the verb",
+      "example 7: かき氷 repeated the 寒い日は鍋 frame, replaced with 関わらないに限る to cover V-nai",
+      "connection: added V-nai + に限る, a common shape that was missing",
+      "detection: added ない 終止形 before に; tokens に|限る and 限り|ます confirmed"
+    ]
+  },
+  {
+    "id": "tatte",
+    "verdict": "fixed",
+    "changes": [
+      "detection: 急いだって is not one たって token; after a ガ行 イ音便 UniDic gives だ (た 助動詞-タ) + って (副助詞), so the matcher must accept that split too",
+      "detection: the n-datte note cited 食べたって聞いた, which has no ん; replaced with 食べたんだって",
+      "connection: dropped the non-notation V-te(voiced) + だって, covered by V-ta + って (読んだ + って)",
+      "tokens: たって 助詞-接続助詞 after 促音便, イ音便 (泣い), 撥音便 (読ん|だって) and 形容詞 連用形 confirmed"
+    ]
+  },
+  {
+    "id": "te-shou-ga-nai",
+    "verdict": "fixed",
+    "changes": [
+      "example 3: この暑さ、暑くて仕方がない repeats itself, replaced with 腰が痛くて仕方がない",
+      "example 5: second 気になってしょうがない, replaced with 腹が減ってしょうがねえ",
+      "variants: added 〜て仕方ない (without が), very common; example 7 now shows it",
+      "counterexample 3: 食べてしまったものはしょうがない has no adjacent て + しょう, replaced with 止まって、しょうがないから, a clause break",
+      "detection: で is だ 助動詞-ダ 連用形, not a 助詞; 仕方ない without が is one token 仕方無い 形容詞-一般; added the comma guard"
+    ]
+  },
+  {
+    "id": "tokoro-datta",
+    "verdict": "fixed",
+    "changes": [
+      "example 3: no example showed the listed variant 〜ないところだった, replaced 骨を折る with 締め切りに間に合わないところだった",
+      "counterexample 3: 今 with ところだった is odd, replaced with 電話が鳴ったとき、ちょうど家に着いたところだった",
+      "tokens: 連体形 + ところ (所 名詞-普通名詞) + だっ|た or でし|た confirmed; ない 連体形 before ところ confirmed"
+    ]
+  },
+  {
+    "id": "ni-motozuite",
+    "verdict": "fixed",
+    "changes": [
+      "detection: said to add いる of 基づいている to the match, but example 2's match ends at 基づいて; now the match ends at 基づい|て and いる stays te-iru",
+      "detection: noted the suffix noun in 契約|書|に and other forms of 基づく (基づか|ない)",
+      "tokens: に + 基づく 動詞-一般 五段-カ行 in 連用形-イ音便, 連用形-一般 and 連体形 confirmed; を|基|に and に|沿っ|て confirmed"
+    ]
+  },
+  {
+    "id": "ni-kakete-wa",
+    "verdict": "fixed",
+    "changes": [
+      "example 7: 足の速さにかけても repeated the 速さ / 勝てる人はいない frame of examples 2 and 5, replaced with 持久力にかけても誰にも負けない",
+      "counterexample 3: 壁に絵をかけては has 絵を between に and かけ, so no matcher would hit it; replaced with 絵を壁にかけては外して, adjacent に|かけ|て|は",
+      "counterexample 4: added 週末にかけては, a time span with は and no から",
+      "detection: the oath-noun guard matches the closed set of ni-kakete-mo (b14) and now applies with or without も; added the time or place noun guard, since the から check alone misses 週末にかけては",
+      "detection: the を-object guard now covers the whole clause, not only the token before かけ",
+      "note: kara-ni-kakete (b12) rejects a following は or も, so 週末にかけては is claimed by neither entry; its guard should key on the noun, not on は",
+      "tokens: に|かけ (掛ける 下一段-カ行 連用形)|て|は and かけ|ちゃ (ちゃ = て 接続助詞) confirmed"
+    ]
+  },
+  {
+    "id": "mono-ka",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: a second するものか, replaced with こんな仕事、楽しいもんか to cover the listed i-Adj connection",
+      "detection: named the adjective and な (だ 連体形) predicates and the もん lexeme 物",
+      "tokens: か is 助詞-終助詞 in the pattern and 助詞-副助詞 in 誰のものか分からない and どんなものか、, so the guard the writer proposed holds"
+    ]
+  },
+  {
+    "id": "ni-kimatte-iru",
+    "verdict": "fixed",
+    "changes": [
+      "example 4: 絶対に勝つに決まっています doubles the certainty and is stiff, replaced with うまくいくに決まってます",
+      "example 8: 世界で一番に決まってるでしょ has no subject and 一番 is 副詞 here, replaced with 無理に決まってるでしょ",
+      "variants: added the contracted polite 〜に決まってます",
+      "detection: 決まっ|て|ます has て = てる 連用形; after 無理 the に is だ 助動詞 連用形-ニ, not 格助詞, so the matcher must accept both",
+      "tokens: 決まる 五段-ラ行 連用形-促音便 + て|いる or てる confirmed"
+    ]
+  },
+  {
+    "id": "te-tamaranai",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: 明日の発表が緊張して has the wrong particle for 緊張する, replaced with 明日の発表を思うと、緊張してたまらない",
+      "counterexample 3: 彼女にはたまらなく会いたい is unnatural, replaced with 一人になって、たまらなく寂しくなった, a て + たまら near miss across a comma",
+      "detection: added the comma guard and the adverbial たまらなく + predicate",
+      "tokens: 堪る 五段-ラ行 未然形 + ない / ん (ず 撥音便) confirmed; で after 楽しみ is 助詞-格助詞, as the detection allowed"
+    ]
+  },
+  {
+    "id": "mono-dakara",
+    "verdict": "fixed",
+    "changes": [
+      "example 5: match かったもんだから cut the token 嬉しかっ, widened to 嬉しかったもんだから",
+      "counterexample 4: added 寝坊したもんで, the mono-de near miss (もん + で, だ 連用形, no から)",
+      "detection: the guard now requires から after だ or です and names the tokens of mono-de and of sentence-final もん (助詞-終助詞, lexeme もの, mono-mon)",
+      "tokens: もの/もん (物 名詞-普通名詞) + だ 終止形 or です + から 接続助詞 confirmed"
+    ]
+  },
+  {
+    "id": "kkonai",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 1: 鬼ごっこ is a single noun token and has no ない, so no matcher would hit it; replaced with このネギ、根っこないじゃん, which has the surface っこない",
+      "detection: names なし as 無し 名詞 and the noun tokens 根っこ, 隅っこ, 鬼ごっこ that a surface matcher would hit",
+      "tokens: 連用形 + っこ (接尾辞-名詞的) + 無い 形容詞-非自立可能 or 有る|ませ|ん confirmed; 信じ is 信ずる サ行変格 連用形 in UniDic"
+    ]
+  },
+  {
+    "id": "kara-to-itte",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added sentence-initial だからといって, very common and missing",
+      "example 6: repeated the とは限らない frame of example 5, replaced with 確かに疲れてる。だからといって、休むわけにはいかない",
+      "counterexample 3: 忙しいから、また後でね shares only から, replaced with sentence-final 来られないからって (hearsay), the same から|って tokens as the casual variant",
+      "detection: added the sentence-initial だ|から|と|いっ|て and the sentence-final からって guard",
+      "tokens: から 接続助詞 + と|いっ (言う 連用形-促音便)|て and から|って (副助詞) confirmed"
+    ]
+  },
+  {
+    "id": "to-iu-wake-de-wa-nai",
+    "verdict": "fixed",
+    "changes": [
+      "example 3: 毎日料理が好き makes no sense with 毎日, replaced with 料理が特別好きというわけじゃありません",
+      "counterexample 2: why cited という訳で but the sentence has そういう訳で, corrected",
+      "boundary: this entry owns every わけではない with と|いう, って|いう or the contracted って (つう 助動詞 連体形) right before わけ; subsumes wake-de-wa-nai is the right direction (the shorter pattern sits inside this one)",
+      "b09 edit: the guard in the detection of wake-de-wa-nai rejected only と + いう before わけ; it now also rejects って + いう and the contracted って (つう), so ってわけじゃない counts only here",
+      "tokens: ってわけ is って (lexeme つう, 助動詞 連体形) + 訳 confirmed; でもない has で as 格助詞"
+    ]
+  },
+  {
+    "id": "ka-to-omottara",
+    "verdict": "fixed",
+    "changes": [
+      "example 2: 静かになったかと思うと、赤ちゃんが寝ていた is a discovery, not a sudden change; replaced the second clause with 隣の部屋でまた騒ぎ始めた",
+      "example 3: 暑いかと思えば、急に寒くなる is stiff, replaced with 暖かい日が続くかと思えば、急に冷え込む日もある",
+      "example 4: 泣いているかと思ったら reads as 'I thought she was crying, but'; changed to さっきまで泣いていたかと思ったら so it is the 'no sooner' sense",
+      "example 5: 始めた twice in one sentence, second clause now ゲームに夢中になっていた",
+      "detection: added the non-past 'I thought ~, but actually' reading as a lower-confidence case",
+      "tokens: か 終助詞 + と 格助詞 + 思っ|たら, 思う|と (接続助詞), 思え|ば confirmed; 何か has か 副助詞"
+    ]
+  },
+  {
+    "id": "ka-no-you-ni",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: added ヨーロッパのどこかのようだ, the exact tokens か|の|よう|だ after the pronoun どこ",
+      "detection: added the guard that the token before か must be a predicate, not a pronoun (どこか, 何か)",
+      "tokens: か 副助詞 + の 格助詞 + よう (様 形状詞-助動詞語幹) + に (だ 連用形-ニ) / な / だっ|た confirmed"
+    ]
+  },
+  {
+    "id": "ni-sugi-nai",
+    "verdict": "fixed",
+    "changes": [
+      "connection: na-Adj + なに過ぎない is ungrammatical, changed to na-Adj + であるに過ぎない",
+      "tokens: に 格助詞 + 過ぎ (過ぎる 上一段-ガ行 未然形) + ない, すぎ|ず and すぎ (連用形)|ませ|ん confirmed; 食べ|すぎ|ない has no に"
+    ]
+  },
+  {
+    "id": "you-ga-nai",
+    "verdict": "ok",
+    "changes": []
+  },
+  {
+    "id": "dokoro-dewa-nai",
+    "verdict": "fixed",
+    "changes": [
+      "example 5: のに clashes with the conclusion ではないでしょう, changed to 借金を抱えているんだから",
+      "detection: after a verb, どころ is 所 名詞 and the following で is 助詞-格助詞, not だ; after a noun, どころ is 助詞-副助詞 and で is だ 連用形, as the tokenizer shows",
+      "tokens: どころ|か (副助詞 + 副助詞) and お茶|どころ|です confirmed"
+    ]
+  },
+  {
+    "id": "zaru-o-enai",
+    "verdict": "fixed",
+    "changes": [
+      "examples 3 and 8: 認める appeared in three examples, replaced with 見直さざるを得ません and 手放さざるを得ないだろう",
+      "register: written changed to neutral; ざるを得ない is common in speech (example 6 ends in よ)",
+      "detection: せ is the 未然形 of する, not a volitional stem; the polite form is 得 (連用形-一般)|ませ|ん, not え, and え is the 未然形 kana spelling",
+      "tokens: 未然形 + ざる (ず 連体形-補助) + を + 得 (得る 下一段-ア行) + ない confirmed; 起こり|得|ない has no ざる"
+    ]
+  },
+  {
+    "id": "nai-wake-niwa-ikanai",
+    "verdict": "fixed",
+    "changes": [
+      "example 3: わけにもいかない after 締め切りだから lacks the 'either' sense of も, replaced with 面倒だけど、返事をしないわけにもいかない",
+      "example 7: 心配しないわけにはいかない is unnatural for an involuntary feeling (that is ないではいられない), replaced with 顔を出さないわけにはいかない",
+      "tokens: 未然形 + ない 連体形 + 訳 + に + は/も + いか (行く 未然形)|ない or いき|ませ|ん confirmed; subsumes wake-ni-wa-ikanai is the right direction"
+    ]
+  },
+  {
+    "id": "kaneru",
+    "verdict": "fixed",
+    "changes": [
+      "detection: the split with kanenai keyed on the 活用形 of かね (未然形 + ない, 連用形 + ませ), but UniDic tags かね before ます as 未然形 in お答えしかねます and 連用形 in 決めかねます; the split now uses only the next token: ない or ませ + ん goes to kanenai, every other continuation (ます, まし + た, る, て, た) stays here",
+      "tokens: 兼ねる 接尾辞-動詞的 after 連用形 against 兼ねる 動詞-一般 after を, and かねて = 予て 副詞, confirmed"
+    ]
+  },
+  {
+    "id": "kanenai",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: 何をしでかしかねない is ungrammatical (何を wants か分からない), replaced with 上司にも食ってかかりかねない",
+      "detection: かねません belongs here; かね is tagged 未然形 or 連用形 inconsistently, so the guard is only the next token (ない, なかっ, ませ + ん), the same split as kaneru",
+      "tokens: かね + ない, かね + ませ + ん confirmed"
+    ]
+  },
+  {
+    "id": "dake-atte",
+    "verdict": "fixed",
+    "changes": [
+      "example 5: en 'It's expensive, but' reversed the logic, now 'As you'd expect for the price'",
+      "example 6: no example showed the listed variant だけあり, changed 住んでいるだけあって to 住んでいるだけあり",
+      "example 8: 苦労しただけあって、喜びはひとしお is the dake-ni sense (all the greater), replaced with 何度も書き直しただけあって、いい作品に仕上がった",
+      "counterexample 4: added 元選手だけのことはあって, the dake-no-koto-wa-aru near miss",
+      "detection: added the あり variant and the rule that だけ and あっ/あり are adjacent, which rejects だけ|の|こと|は|あっ|て",
+      "tokens: だけ 副助詞 + あっ (有る 連用形-促音便) + て confirmed; これ|だけ|あっ|て has the same tokens, kept as counterexample 1"
+    ]
+  },
+  {
+    "id": "dake-ni",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: match 上がりなだけに cut the token 病み上がり, widened to 病み上がりなだけに",
+      "example 7: 信頼していただけに repeated the ていただけに frame of example 1, replaced with 安かっただけに to cover the adjective past",
+      "example 6: en had a dangling 'Being a famous shop', reworded",
+      "tokens: だけ 副助詞 + に 格助詞 after 連体形, な (だ 連体形), だっ|た and こと confirmed; 社長|だけ|に|報告 has the same tokens, so the guard stays semantic"
+    ]
+  }
+]

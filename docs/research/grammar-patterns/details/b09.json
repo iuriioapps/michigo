@@ -474,7 +474,7 @@
     ],
     "subsumes": [],
     "confusables": ["to-iu-wake-de-wa-nai", "wake-ga-nai", "wake-da", "wake-ni-wa-ikanai", "kanarazushimo-nai", "to-wa-kagiranai"],
-    "detection": "Tokens: 名詞 わけ (lexeme 訳), then で (助動詞 だ, 連用形) + は (係助詞) + ない (形容詞 無い, 終止形, or 連体形 before ん in わけじゃないんだ), or じゃ (だ, 連用形-融合) + ない, or で + も + ない, where UniDic tags the で before も as 格助詞 で, not だ. The ありません form is で + は + あり (有る) + ませ + ん, and なくて is ない in 連用形 + て. Before わけ comes a clause in 連体形 or な (だ 連体形) after a noun or na-adjective. Guard: reject the string when と + いう comes right before わけ (というわけではない, to-iu-wake-de-wa-nai wins) and reject わけ + が + ない, わけ + に + は and わけ + を."
+    "detection": "Tokens: 名詞 わけ (lexeme 訳), then で (助動詞 だ, 連用形) + は (係助詞) + ない (形容詞 無い, 終止形, or 連体形 before ん in わけじゃないんだ), or じゃ (だ, 連用形-融合) + ない, or で + も + ない, where UniDic tags the で before も as 格助詞 で, not だ. The ありません form is で + は + あり (有る) + ませ + ん, and なくて is ない in 連用形 + て. Before わけ comes a clause in 連体形 or な (だ 連体形) after a noun or na-adjective. Guard: reject the string when と + いう, って (助詞-副助詞) + いう, or the contracted って (lexeme つう, 助動詞, 連体形) comes right before わけ (というわけではない, っていうわけじゃない, ってわけじゃない: to-iu-wake-de-wa-nai wins) and reject わけ + が + ない, わけ + に + は and わけ + を."
   },
   {
     "id": "ni-totte",
