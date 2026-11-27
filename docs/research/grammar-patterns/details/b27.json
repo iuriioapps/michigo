@@ -621,7 +621,7 @@
       {"ja":"古めかしい建物が並んでいる。","en":"Old-fashioned buildings stand in a row.","why":"古めかしい is one adjective, with めかしい inside it"}
     ],
     "subsumes": [],
-    "confusables": ["jimita","biru"],
+    "confusables": ["jimita"],
     "detection": "Tokens: a noun + めく (めく, 接尾辞-動詞的 五段-カ行) in any form: 春|めい|て (イ音便 連用形), 謎|めい|た, 冗談|めかし|て (めかす, 接尾辞-動詞的 五段-サ行), 春|めく. A verb stem can also precede it (脅し|めい|た, 脅す 連用形). Verbs that end in めく are single tokens tagged 動詞-一般 and are not matches, for example ざわめく, きらめく, ゆらめく (揺らめく), よろめく, ひらめく (閃く), うごめく, どよめく, ときめく, ほのめかす; so is 古めかしい (one adjective). The guard is the tag 接尾辞-動詞的 (lexeme めく or めかす) after a noun or a verb 連用形. Also reject めくる (捲る, 一枚めくった: めくっ). Often confused with jimita and biru, which also make a noun into a state."
   },
   {

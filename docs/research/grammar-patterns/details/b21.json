@@ -736,7 +736,7 @@
       { "ja": "あの事故が、町の改革の契機となった。", "en": "That accident became the trigger for reforming the town.", "why": "契機となる 'become the trigger' has the event as subject, with の and no を before 契機" }
     ],
     "subsumes": [],
-    "confusables": ["o-kikkake-ni","o-toshite","ni-yotte"],
+    "confusables": ["o-kikkake-ni", "toshite", "ni-yotte"],
     "detection": "The tokens are を (格助詞) + 契機 (名詞-普通名詞) + に (格助詞), or を + 契機 + と (格助詞) + し (為る 連用形) + て / た (連体形, before a noun) / する. The noun before を is an event (事故, 結婚, 転職). The noun 契機 is unique, so it is the key; reject を きっかけ に (o-kikkake-ni, a different noun) and を + 目標 + に + し + て, and require を right before 契機: 改革 の 契機 と なっ た has the noun but not the pattern. Close to o-toshite when と + し + て follows, but 契機 is required here."
   }
 ]

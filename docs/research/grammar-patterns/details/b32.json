@@ -246,7 +246,7 @@
       { "ja": "彼をおいて先に行かないでください。", "en": "Please don't go ahead and leave him behind.", "why": "を + おいて is the literal 'leave behind' written in kana, with a negative at the end but no 他に/ほかに/誰も phrase" }
     ],
     "subsumes": [],
-    "confusables": ["ni-oite", "o-yoso-ni", "o-toshite"],
+    "confusables": ["ni-oite", "o-yoso-ni", "toshite"],
     "detection": "Tokens: を (助詞-格助詞) + おい (於く, 動詞-一般 五段-カ行 連用形-イ音便; tagged 於く for the kana spelling even when it is 置く) + て (助詞-接続助詞), then optionally は, followed by a phrase of exclusion (他|に, ほか|に, 誰|も, これ|ほど, どこ|にも) and a negative later in the same sentence: ない (助動詞 or 形容詞 無い), ません. Kanji 置い after を always has the lexeme 置く and does not match. The noun before を is the one person or thing singled out. Guard: require an exclusion phrase or a question word (誰|も, 誰|が) within about ten tokens after て and a negative (or a rhetorical だろう|か) after it; after おいて|は a negative alone is enough (彼女をおいては務まらない); reject a plain 置いて 'leave behind' with a following verb (いく, くる, でかける). Do not confuse with ni-oite (に + おい + て), o-yoso-ni or o-toshite."
   },
   {
@@ -553,8 +553,8 @@
       { "ja": "私たちは彼を委員長として迎えた。", "en": "We welcomed him as chairperson.", "why": "を + role noun + として is o-toshite 'taking X as Y', not the fixed noun 前提" },
       { "ja": "前提として、まず予算を確認しておこう。", "en": "As a starting point, let's check the budget first.", "why": "前提として opens the sentence with no を-object before 前提; it is plain toshite" }
     ],
-    "subsumes": ["o-toshite"],
-    "confusables": ["o-toshite", "toshite", "ni-motozuite", "o-moto-ni"],
+    "subsumes": ["toshite"],
+    "confusables": ["toshite", "ni-motozuite", "o-moto-ni"],
     "detection": "Tokens: を (助詞-格助詞) + 前提 (前提, 名詞-普通名詞) + と (格助詞) + し (為る, 連用形) + て, or に (格助詞) alone, or に + し + て, or と / に + し + た (連体形) before a noun, or と + し + て + い + ます / と + する (〜を前提とする). The noun or clause before を is the assumed condition (結婚, 全員が参加すること, 増税). Guard: 前提 must come directly after を (reject の + 前提, 前提 + を, which have another role), and only the three particle routes after 前提 count. The pattern is a case of o-toshite (を〜として) with a fixed noun, so it takes precedence over o-toshite when 前提 is the noun. Do not confuse with ni-motozuite or o-moto-ni, which take a source of information instead of a condition."
   },
   {

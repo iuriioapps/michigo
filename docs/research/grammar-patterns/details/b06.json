@@ -402,12 +402,9 @@
         "why": "済む is the verb 'be settled', not the apology すみません."
       }
     ],
-    "subsumes": [
-      "te-cause"
-    ],
+    "subsumes": [],
     "confusables": [
-      "te-kurete-arigatou",
-      "te-cause"
+      "te-kurete-arigatou"
     ],
     "detection": "接続助詞 て/で (after a verb or an adjective's く) immediately followed by an apology: すみ/すい (済む 連用形) + ませ + ん (lexeme ず), optionally + でし + た; ごめん (lexeme 御免, 名詞), optionally + なさい (為さる 命令形); or 申し訳 (名詞) + ない (無い), あり ませ ん (有る) or ござい ませ ん (御座る). After a na-adjective or a noun the で is tagged 格助詞 (下手 で すみ ませ ん), so the matcher must accept 格助詞 で there. Guard: a 。 or a quote between the て and the apology breaks it (下げ て 、 ごめん なさい と 言っ た); 済む as a plain verb ('be settled', 謝っ て 済む 問題) is not followed by ます + ん."
   },
@@ -1068,8 +1065,7 @@
     "confusables": [
       "ta-koto-ga-aru",
       "koto-wa-nai",
-      "koto-wa-ga",
-      "tokoro-ga-aru"
+      "koto-wa-ga"
     ],
     "detection": "A non-past 連体形 (verb, ない, てる, an i-adjective, na-adjective + な, or noun + の) + こと (事, 名詞-普通名詞) + が/も/は or nothing + 有る (動詞-非自立可能) in any form. Guard: if the token before こと is 助動詞 た, it is ta-koto-ga-aru; こと は ない (無い 形容詞) is koto-wa-nai. The literal 'there is something to ~' (話し たい こと が ある, やる こと が たくさん ある) has the same tokens; lower confidence when こと follows たい or a word stands between が and ある. N の こと が ある can also be 'there is the matter of N' (彼 の こと が ある から), so the N slot needs the most care. ことは + the same verb again (行く こと は 行く) is koto-wa-ga."
   },

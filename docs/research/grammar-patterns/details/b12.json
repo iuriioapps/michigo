@@ -613,7 +613,7 @@
       { "ja": "彼は何も食べないそうだ。", "en": "I hear he doesn't eat anything.", "why": "ないそうだ is hearsay そうだ after a negative, with そう before だ rather than そうもない" }
     ],
     "subsumes": [],
-    "confusables": ["sou-ni-nai", "sou-nimo-nai", "nasasou-da", "sou-appearance", "mo-nai"],
+    "confusables": ["sou-ni-nai", "nasasou-da", "sou-appearance", "mo-nai"],
     "detection": "Tokens: a verb 連用形 (終わり, 解け, 来, 許し|て|くれ) + そう (形状詞-助動詞語幹, lexeme そう-様態) + も (助詞-係助詞) + ない (形容詞 無い 終止形-一般), or あり + ませ + ん, or なかっ (形容詞 連用形-促音便) + た. A verb stem that is also a noun can tokenize oddly: 止みそうもない is 止み (止み 名詞-普通名詞) + そう (lexeme そう, 副詞) + も + ない, while 止みそうにない gets 止み (止む 動詞 連用形) + そう-様態. So accept そう-様態 after a verb 連用形, and also accept そう 副詞 when the token before it is a noun that is a verb's 連用形 (止み); reject そう 副詞 that opens the clause (そう|も|簡単|に|は|いか|ない) and the hearsay そう-伝聞 (名詞-助動詞語幹). The following ない must be the adjective 無い. Reject そう + に + ない (sou-ni-nai, に is the copula 連用形-ニ) and なさ + そう (nasasou-da)."
   },
   {

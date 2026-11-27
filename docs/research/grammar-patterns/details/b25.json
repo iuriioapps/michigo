@@ -713,7 +713,7 @@
       { "ja": "この映画は面白くもない。", "en": "This movie isn't even interesting.", "why": "くもない lacks なんとも, so this is the plain emphatic negative" }
     ],
     "subsumes": [],
-    "confusables": ["nai-de-mo-nai", "nanimo-nai", "demo"],
+    "confusables": ["nai-de-mo-nai", "interrogative-mo", "demo"],
     "detection": "Tokens for the noun form: で (助動詞 だ 連用形 or 助詞-格助詞) + も (係助詞) + 何 (代名詞) + で + も + ない (無い, 形容詞-非自立可能) or あり + ませ + ん, as in 友達|で|も|何|で|も|ない; the pattern is 'N + でも + 何でもない' and the second half is written 何でもない or なんでもない. For adjectives: 形容詞 連用形 (怖く, 寒く) + も + なん (何) + と (助詞-格助詞) + も + ない; UniDic sometimes tags 痛く as a 副詞, so do not require the 形容詞 tag before も. The strongest guard is the full run of tokens ending with ない or ありません: reject でも何でも followed by a verb or a particle (お茶でも何でも飲む), reject 何でもない with no でも before it, and reject でも + noun + でもない (neither A nor B). The preceding word is the thing being denied, and a clause after it often explains what it really is. Often confused with nanimo-nai and nai-de-mo-nai."
   },
   {

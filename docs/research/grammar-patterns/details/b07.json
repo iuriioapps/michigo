@@ -172,7 +172,7 @@
       { "ja": "いいさ、好きにしろよ。", "en": "Fine, do whatever you want.", "why": "さ follows the full adjective いい as a sentence-final particle; the noun would be よさ." }
     ],
     "subsumes": [],
-    "confusables": ["mi"],
+    "confusables": [],
     "detection": "Tokens: さ (さ 接尾辞-名詞的) directly after an adjective 語幹 (高 + さ, よ + さ), after a 形状詞 or a na-Adj that UniDic tags 名詞-普通名詞 (便利 + さ), or after the 語幹 of たい (会いた + さ). The common nouns 高さ, 長さ and 暑さ are split this way too, not single nouns. Guard: さ tagged 助詞-終助詞 (after a full verb or adjective, a noun as filler, or だ) is the particle, not this. Confused with み."
   },
   {
@@ -285,7 +285,7 @@
       { "ja": "一つでもいいから、わかる問題はある？", "en": "Is there even one question you understand?", "why": "でも, not も, and the question is affirmative." }
     ],
     "subsumes": [],
-    "confusables": ["interrogative-mo", "sukoshi-mo-nai", "mo-emphasis", "nanimo-nai"],
+    "confusables": ["interrogative-mo", "sukoshi-mo-nai", "mo-emphasis"],
     "detection": "Tokens: 一 (名詞-数詞) + a counter, then も (助詞-係助詞), then a negative in the same clause (ない 助動詞 or 無い 形容詞, any form, or ません's ず). The counter is 接尾辞 for つ but 名詞-普通名詞 for 度, 回, 問, 枚 and ページ, so accept either tag after 一; 一人 is one 名詞-普通名詞 token (lexeme 一人) and needs its own rule. Guards: a number + も with an affirmative predicate is mo-emphasis (三時間も待った); 一 + 日 + も + 早く is the set phrase \"as soon as possible\"; 一つ + で + も is でも. In example 3 the tokenizer reads 行った as 行う, which does not affect this pattern. Confused with question word + も and 少しも〜ない."
   },
   {

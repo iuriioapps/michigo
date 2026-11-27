@@ -306,7 +306,7 @@
       {"ja": "何もそこまで怒ることはないでしょう。", "en": "There's no need to get that angry.", "why": "何も + ことはない is the emphatic 'no need to' of nanimo-nai, not 'nothing'."}
     ],
     "subsumes": [],
-    "confusables": ["nanimo-nai", "mo-nai", "demo"],
+    "confusables": ["mo-nai", "demo"],
     "detection": "Tokens: an interrogative pronoun (代名詞; lexemes 何, 誰, 何処, 何れ) followed by も (助詞-係助詞), optionally with a case particle between (どこにも, 誰とも). With a negative predicate it means no-, with an affirmative one every-; the matcher can report the pattern either way. いつも is two tokens, いつ (lexeme 何時, 代名詞) + も, so it matches like the others. Guard: question word + counter + も (何度も, 何回も) means 'many', and the 何 there is 名詞-数詞 instead of 代名詞; でも in place of も (誰でも) is で + も and means 'any-'. 何も followed by ことはない belongs to nanimo-nai."
   },
   {
@@ -605,7 +605,7 @@
       {"ja": "疲れて、もう一歩も歩けない。", "en": "I'm so tired I can't take another step.", "why": "て gives a cause (te-cause) and a main clause follows."}
     ],
     "subsumes": [],
-    "confusables": ["te-kudasai", "te-kurenai", "te-choudai", "te-cause", "naide-request"],
+    "confusables": ["te-kudasai", "te-kurenai", "te-choudai", "naide-request"],
     "detection": "Tokens: a verb in 連用形 + the conjunctive particle て/で (助詞-接続助詞, lexeme て) at the end of an utterance, optionally followed by よ, ね (終助詞), or by 呉れる in 命令形 (くれ). A サ変 or na-adjective + にして ends the same way (静かにして: だ 助動詞 連用形-ニ + し + て). Guard: the て must not be followed by an auxiliary verb (居る, 仕舞う, 置く), by 下さる (te-kudasai), ちょうだい (te-choudai) or くれない/くれる (te-kurenai); the verb should be volitional. A sentence-final て after a non-volitional verb or after a main clause that came first (電車が止まってて, where てる 助動詞 + て) is an inverted reason (te-cause). Subtitles often break a line at a linking て, so require sentence-final punctuation or a following line that starts a new sentence."
   },
   {

@@ -315,7 +315,7 @@
       "sukoshi-mo-nai",
       "zenzen-nai",
       "mattaku-nai",
-      "nanimo-nai"
+      "interrogative-mo"
     ],
     "detection": "Tokens: ちっとも (些とも, 副詞, one token) + a negative in the same clause: ない (助動詞-ナイ, any form, such as わから|ない, し|ない), the adjective 無い (楽しく|なかっ|た, where なかっ is 無い 連用形-促音便), or ませ + ん (ます 未然形 + ず 撥音便) with でし + た in the past. Predicates in between are allowed (連絡|を|くれ|ない). Reject ちっとも with no negative before the sentence end. Only ちっとも is this entry: 少しも gets sukoshi-mo-nai and the 少し + も sequence is two tokens. ちっとは comes out as ちっ (副詞) + と + は and ちっと as 一寸 (副詞); neither is 些とも, so a surface match on ちっと must not count them. Colloquial and a little complaining in tone; often used about someone else's behavior."
   },

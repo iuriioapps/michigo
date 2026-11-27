@@ -144,7 +144,7 @@
       { "ja": "インターネットを通じて、世界中の人と話せる。", "en": "You can talk to people all over the world via the internet.", "why": "を通じて (lexeme 通ずる) is the separate entry o-tsuujite" }
     ],
     "subsumes": [],
-    "confusables": ["o-tsuujite", "o-toshite", "ni-yotte"],
+    "confusables": ["o-tsuujite", "toshite", "ni-yotte"],
     "detection": "The tokens are を (助詞-格助詞) + 通し or とおし (通す 動詞-非自立可能 五段-サ行 連用形-一般) + て (助詞-接続助詞); the bare 通し before a comma also counts. This entry owns the lexeme 通す only: を通じて and を通じ are 通じ (通ずる 動詞-一般 サ行変格 連用形-一般) and belong to o-tsuujite. The word before を is a noun naming a medium, a person, a period or an experience. The literal verb has the same tokens (ここ を 通し て もらえ, 糸 を 通し て), so reject a hit when もらう/くれる/ください follows て or a に target (針 に) stands earlier in the clause; this guard is weak, and the literal sense stays a known false positive. Confusable with o-tsuujite and, in kana, with として (o-toshite)."
   },
   {
@@ -448,7 +448,7 @@
       { "ja": "私の夢は、世界中を旅することだ。", "en": "My dream is to travel all over the world.", "why": "a non-past verb + ことだ that names what the topic 夢は is, not advice to the listener" }
     ],
     "subsumes": [],
-    "confusables": ["koto-nominalizer", "koto-ka", "hou-ga-ii", "wa-koto-na-no-da"],
+    "confusables": ["koto-nominalizer", "koto-ka", "hou-ga-ii", "to-iu-koto"],
     "detection": "The tokens are a verb in 連体形-一般 (or ない 助動詞-ナイ 連体形-一般) + こと (事 名詞-普通名詞) + だ (助動詞-ダ 終止形-一般) or です at the end of a sentence, optionally then よ/ね, often after a conditional or purpose clause (なら, たければ, には). The rough contraction こった is こっ (事 名詞-普通名詞) + た, which UniDic tags as the past 助動詞-タ 終止形-一般, so match こっ + た as a unit. Require the verb to be non-past and to carry the speaker's advice about what the listener should do. Reject た 連体形 before こと (破っ た こと だ), a 連体詞 before こと (その こと), and a topic-は identification (問題は〜ことだ, 夢は〜することだ), which has the same tokens; the guard is a topic noun + は earlier in the sentence with no conditional clause, and it stays imperfect. Confusable with ほうがいい, which gives softer advice."
   },
   {

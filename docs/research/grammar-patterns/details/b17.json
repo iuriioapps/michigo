@@ -306,7 +306,7 @@
       { "ja": "なんだか疲れてるって感じだね。", "en": "You seem kind of tired.", "why": "って感じ is the entry tte-kanji" }
     ],
     "subsumes": [],
-    "confusables": ["tte-kyouchou", "tte-kanji", "n-datte", "to-iu", "to-iu-no-wa"],
+    "confusables": ["tteba", "tte-kanji", "n-datte", "to-iu", "to-iu-no-wa"],
     "detection": "って is one token, 助詞-副助詞, lexeme って, and UniDic gives the quotation, hearsay and topic uses the same tag, so tokens alone do not separate them. The topic use is って directly after a noun or name (田中|さん|って, 東京|って) or a plain clause (暮らす|って), followed by a comma, さ, or a predicate describing it. Guards: reject って followed by 言う, 思う, 聞く or similar (行く|って|言っ|た), which is the quotation; reject って at the end of a sentence (雨|だ|って, 来|ない|って), which is hearsay or emphasis, never a topic; reject the te-form (会っ|て, て tagged 接続助詞). The って of って感じ after a verb is tagged つう (助動詞), not 副助詞 (疲れ|てる|って|感じ), so it is not this token. Treat ってさ as って + さ (助詞-終助詞)."
   },
   {

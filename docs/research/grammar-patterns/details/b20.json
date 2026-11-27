@@ -242,7 +242,7 @@
       { "ja": "駅を出たところに交番がある。", "en": "There's a police box right outside the station.", "why": "出たところ is the place just past the exit, and に marks where the police box is" }
     ],
     "subsumes": [],
-    "confusables": ["tokoro-o", "te-iru-tokoro", "ta-tokoro-kekka", "ru-tokoro", "tokoro-ga-aru"],
+    "confusables": ["tokoro-o", "te-iru-tokoro", "ta-tokoro-kekka", "ru-tokoro"],
     "detection": "Tokens: ところ(所 名詞) + に(格助詞) or へ(格助詞), after a verb clause that shows a situation in progress: V-te + いる/い + た (困っていた), V-vol + と + し + (て) + (い) + た (出よう + と + し + た), かけ + て + い + た, or V-ta; the clause before ところ is always a verb in 連体形 or a て-form chain. Longer forms like ているところに are still this entry; te-iru-tokoro and ru-tokoro (ところだ) end in だ/です. Guards: reject ところ after a noun or a possessive (私のところに is a place), ところ + を (tokoro-o), ところ with no particle (ta-tokoro-kekka, たところ、〜) and ところが (a conjunction). The pattern is followed by an event that interrupts, which a token matcher cannot check; the shape verb-plain + ところ + に/へ is the guard. ところを is covered by tokoro-o, not here, and the guard on the particle (に/へ only) keeps the two disjoint. After V-ta, ところ + に can also be a literal place (駅を出たところに交番がある, same tokens 出|た|ところ(所)|に); a following existence verb ある/いる is a hint for that reading. Tokens confirmed: ところ(所 名詞-普通名詞) + に/へ(格助詞) in every example."
   },
   {
@@ -368,7 +368,7 @@
       { "ja": "一人も来なかった。", "en": "Not one person came.", "why": "一人も〜ない is the separate entry mo-nai" }
     ],
     "subsumes": ["toshite"],
-    "confusables": ["toshite", "mo-nai", "sukoshi-mo-nai", "nanimo-nai"],
+    "confusables": ["toshite", "mo-nai", "sukoshi-mo-nai", "interrogative-mo"],
     "detection": "Tokens: a counter or 'one' word + と + し(為る, 連用形) + て(接続助詞) with a negative predicate later in the same clause: 一人(一人 名詞, one token) + として + い + ない, 誰 + 一人 + として, 一 + 日 + として, 一 + つ + として, 一 + 度 + として, 一 + 晩 + として. Require the numeral 一 (or 一人) directly before the counter and the counter directly before と, and ない (無い or 助動詞 ない, also ありません/なかった) after it; both the verb negative (知らなかった) and 無い (一日としてない) count. Reject 家族の一人として + a positive predicate (the 'as one of' reading), and reject 一人も〜ない, which is the separate entry mo-nai. This entry takes precedence over the plain toshite when the counter and the negation are present, and toshite rejects that shape. 何一つとして is 何 + 一 + つ + として. Tokens confirmed; note that 一日としてない (with no word between) misreads て as てる + ない(助動詞), so a matcher should also accept that split."
   },
   {

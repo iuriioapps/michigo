@@ -223,7 +223,7 @@
       { "ja": "電車が遅れたため、会議に間に合わなかった。", "en": "The train was late, so I missed the meeting.", "why": "past clause + ため states a cause, the separate entry tame-ni-riyuu" }
     ],
     "subsumes": [],
-    "confusables": ["tame-ni-riyuu", "noni-purpose", "noni-mokuteki"],
+    "confusables": ["tame-ni-riyuu", "noni-purpose"],
     "detection": "Tokens: ため (lexeme 為, 名詞-普通名詞), then optionally に (格助詞), に + は/も, or の. Before it comes a verb in 連体形 (買う ため に, 合格 する ため に は), a negative ない (し ない ため に) or a noun + の 格助詞. The token before ため splits this entry from tame-ni-riyuu: 助動詞 た, て + 居る (ている), a 形容詞, な (だ 連体形) or で + ある before ため mean cause. A plain verb or ない before ため is purpose when the verb is volitional (買う, 守る, 失敗 する) and cause when it is not (雨 が 降ら ない ため); tokens cannot tell the two, so a matcher defaults to purpose. N + の + ため is the hard case: の ため の + N and ため に は/も are purpose, but 健康 の ため に and 大雨 の ため differ only by the noun: a beneficiary or goal (健康, 子供, 誕生日) is purpose, an event or state (大雨, 病気, 不在) is cause, so the matcher needs a noun list for bare N の ため(に) and should report neither when the noun is in neither list. Guards: ため as 溜める 連用形 before て, ため + に + なる (ためになる), and 念 の ため (just in case) are not the pattern."
   },
   {
@@ -350,7 +350,7 @@
       { "ja": "個人としては、この案に反対です。", "en": "Personally, I oppose this plan.", "why": "としては 'as for' is the separate entry toshite-wa" }
     ],
     "subsumes": [],
-    "confusables": ["toshite-wa", "toshitemo", "toshite-nai", "o-toshite", "mono-toshite", "you-to-suru"],
+    "confusables": ["toshite-wa", "toshitemo", "toshite-nai", "mono-toshite", "you-to-suru"],
     "detection": "UniDic gives と (格助詞) + し (lexeme 為る, 動詞-非自立可能 サ行変格 連用形) + て (接続助詞), so match that triple directly after a noun (医者 と し て, 親 と し て の). After a clause the same triple means 'supposing' or is ようとして. Ownership: after a noun, として + も 'also as' (女優としても) stays here, while と + し + て + も after a predicate or だ is toshitemo 'even if'; noun + と + し + て/まし + て + は is toshite-wa; 一 + counter or 誰一人 + として with a negative predicate later is toshite-nai. Guard: reject those three, and reject と + し + て after a volitional verb 意志推量形 (開けよう と し て, you-to-suru). In お土産として the noun is a role, a use or a capacity, which is what separates it from the quoting と + する 'regard as' of o-toshite (を〜として)."
   },
   {
