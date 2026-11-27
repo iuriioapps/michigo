@@ -237,7 +237,7 @@
     ],
     "subsumes": [],
     "confusables": ["mono-da", "nai-mono-ka", "mono-dakara"],
-    "detection": "Tokens: a predicate in 連体形 (a verb, an adjective as in 楽しい|もん, or な = だ 連体形 after a na-adjective, 簡単|な|もの) + もの (物, 名詞-普通名詞) or もん (lexeme 物) + か (助詞-終助詞), or もの + です (助動詞) + か (終助詞). か is 終助詞 and ends the sentence or clause here, whereas the embedded question marker after a noun (誰のもの|か分からない) is 助詞-副助詞, which is the main guard. The preceding predicate is usually a verb in 連体形, often one the speaker reacts against (負ける, 行く); a negative reply or a rhetorical tone is the cue. Reject の + もの + か (the noun 'thing' with a possessor), and reject もの + です + か after the quoting verb いう (mono-da). Negative ない + ものか is nai-mono-ka (the opposite meaning, 'surely will')."
+    "detection": "Tokens: a predicate in 連体形 (a verb, an adjective as in 楽しい|もん, or な = だ 連体形 after a na-adjective, 簡単|な|もの) + もの (物, 名詞-普通名詞) or もん (lexeme 物) + か (助詞-終助詞), or もの + です (助動詞) + か (終助詞). か is 終助詞 and ends the sentence or clause here, whereas the embedded question marker after a noun (誰のもの|か分からない) is 助詞-副助詞, which is the main guard. The preceding predicate is usually a verb in 連体形, often one the speaker reacts against (負ける, 行く); a negative reply or a rhetorical tone is the cue. Reject の + もの + か (the noun 'thing' with a possessor), and reject もの + です + か after the quoting verb いう (mono-da). Negative ない + ものか is nai-mono-ka (a wish: 'is there no way to ~')."
   },
   {
     "id": "ni-kimatte-iru",
