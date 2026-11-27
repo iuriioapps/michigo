@@ -1,0 +1,193 @@
+[
+  {
+    "id": "ka-ina-ka",
+    "verdict": "ok",
+    "changes": []
+  },
+  {
+    "id": "katagata",
+    "verdict": "fixed",
+    "changes": [
+      "detection: 挨拶|かた|がた split is wrong (one token 方々 in every example); split only appears without a following comma (ご報告かたがた伺います)",
+      "counterexample 2: 先生方 (surface 方, no matcher hit) replaced with 地域のかたがた (people)",
+      "counterexample 4: sentence without かたがた replaced with 方々 (ほうぼう) everywhere",
+      "example 4: en reworded",
+      "example 8: added, かたがた followed directly by the main verb",
+      "confusables: added gatera"
+    ]
+  },
+  {
+    "id": "katawara",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: 学生のかたわら (a status, not an activity) changed to 学業のかたわら",
+      "example 8: added その傍ら, a common use pointing back to the previous sentence",
+      "counterexample 4: ながら sentence (no shared tokens) replaced with 傍らの椅子 (place noun before a noun)",
+      "detection: accept その|傍ら, reject 傍ら|の + noun"
+    ]
+  },
+  {
+    "id": "gamashii",
+    "verdict": "fixed",
+    "changes": [
+      "kept under the b27 suffix rule: がましい (接尾辞-形容詞的) is a separate token after every noun or stem tested, including open ones (批判, 非難, 弁解, 皮肉, 愚痴, 命令, 催促); only 晴れがましい and おこがましい are fused",
+      "variants: word list replaced with the forms 〜がましく, 〜がましさ",
+      "example 2: replaced, 恩着せがましく + 私が手伝います did not fit the meaning and en was wrong",
+      "examples 3 and 5: en corrected",
+      "detection: removed the closed-list claim and the false 愚 + 痴がましい mis-split (UniDic gives 愚痴|がましい)"
+    ]
+  },
+  {
+    "id": "kitte-no",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the kanji spelling 〜切っての, with example 9",
+      "counterexample 4: 思い切って伝えた (no の, no matcher hit) replaced with 先頭を切っての独走",
+      "confusables: removed koso-ga (unrelated)",
+      "detection: kanji spelling and the を guard added; always-hiragana claim corrected"
+    ]
+  },
+  {
+    "id": "ikan-de-wa",
+    "verdict": "fixed",
+    "changes": [
+      "example 9: added the kanji variant 如何 (如何に|よっ|て|は)",
+      "detection: 返事いかんで is mis-split as 行く + ず + て; matcher must accept that after a noun; 如何だ can be 形状詞 + だ; 如何に fusion confirmed"
+    ]
+  },
+  {
+    "id": "ikan-ni-kakawarazu",
+    "verdict": "fixed",
+    "changes": [
+      "detection: said three tails but lists four; corrected"
+    ]
+  },
+  {
+    "id": "yue-ni",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added the conjunction それゆえ(に), with example 9",
+      "counterexample 4: せいで (no shared tokens) replaced with 何故に (なぜ adverb, surface 故に)",
+      "detection: ゆえ after ず (世間知らず) and それ + 故 added; 何故 guard added"
+    ]
+  },
+  {
+    "id": "ori-ni",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 2: sentence had せっかく in kana, so no 折 at all; replaced with kanji 折角の休み",
+      "detection: verb form is 連体形, not 終止形; お越しの is verb 連用形 + の"
+    ]
+  },
+  {
+    "id": "sube-ga-nai",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added 〜術はない, which example 8 shows",
+      "example 3: en corrected (連絡先 is contact details, not address)",
+      "detection: verb form is 連体形; 術はない added to the accepted forms"
+    ]
+  },
+  {
+    "id": "kirai-ga-aru",
+    "verdict": "fixed",
+    "changes": [
+      "example 9: added N + の + きらいがある (独断のきらい), a connection no example showed",
+      "counterexample 3: reworded, the old sentence was illogical",
+      "detection: UniDic tags 嫌い 名詞-普通名詞 in the dislike sense too, so the na-adjective tag claim was wrong; verb form is 連体形"
+    ]
+  },
+  {
+    "id": "to-no",
+    "verdict": "fixed",
+    "changes": [
+      "variants: removed the collocations 〜との知らせ / 〜との返事, which are not forms of the pattern",
+      "connection: added N + との + N (陰性との診断), with example 9",
+      "counterexample 4: third comitative duplicate replaced with listing と (駅と空港との間)",
+      "detection: bare-noun connection and the A と B との guard added; agrees with to-iu, which owns とのことだ/です, and no to-no-koto id exists"
+    ]
+  },
+  {
+    "id": "shidai-desu",
+    "verdict": "fixed",
+    "changes": [
+      "examples 1 and 7: en corrected (7 added an unstated three of us)",
+      "detection: 次第に is 次第 + に (two tokens), not one adverb; preceding-token guard keeps it disjoint from shidai and shidai-de"
+    ]
+  },
+  {
+    "id": "gotoki",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: 炎のごとくだった (unidiomatic ごとく + だ) changed to 炎のごとく激しかった",
+      "example 8: en reworded",
+      "detection: ごと in 日ごとに is 毎 接尾辞; 皮ごと is mis-split as 皮籠 + と",
+      "checked: no other ごとし id exists (goto-ni is ごとに)"
+    ]
+  },
+  {
+    "id": "beku",
+    "verdict": "fixed",
+    "changes": [
+      "example 3: en corrected (I raced there, not the taxi sped)",
+      "detection: す is 文語サ行変格, causative せる + べく added, comma is usual not required; disjoint from beki-da, beku-shite and beku-mo-nai by the token after べく"
+    ]
+  },
+  {
+    "id": "majiki",
+    "verdict": "fixed",
+    "changes": [
+      "example 7: この恨み、許すまじ (a grudge is not forgiven) replaced with 裏切り者、許すまじ",
+      "counterexample 4: べきではない (no shared tokens) replaced with ある (或る) + まじめ",
+      "detection: まじまじ is one adverb token; the ある of the pattern is 有る 文語ラ行変格 連体形, used as the guard"
+    ]
+  },
+  {
+    "id": "bekarazu",
+    "verdict": "fixed",
+    "changes": [
+      "variants and connection: added 〜すべからず (油断すべからず), with example 9",
+      "example 8: a no-entry sign saying do not touch was inconsistent; changed to a sign at an exhibit",
+      "counterexample 5: added すべからく (須らく, one adverb token)",
+      "detection: す + べから and the すべからく guard added; べく/べき/べし guards keep it disjoint from beku and beki-da"
+    ]
+  },
+  {
+    "id": "taru",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 3: unnatural もう十分に足る (and wrong en) replaced with 堂々たる, a タリ adjective with the same tokens as the pattern",
+      "counterexample 5: added 確固たる (形状詞-タリ + たる)",
+      "detection: タリ-adjective guard added (確固 形状詞-タリ; 堂々 tagged 名詞); 足る verb guard keeps it disjoint from ni-taru"
+    ]
+  },
+  {
+    "id": "tteba",
+    "verdict": "fixed",
+    "changes": [
+      "examples 10-11: added topic ってば after a noun (connection listed it, no example) and the insistent sentence-final ねえったら",
+      "example 7: en given the exasperated tone",
+      "connection: added sentence-final ったら",
+      "detection: checked ownership (tara rejects 副助詞 たら, to-ittara needs 言っ, so topic ったら stays here); noted してったら mis-split as てく + た 仮定形; tte-kyouchou is rejected, wording corrected"
+    ]
+  },
+  {
+    "id": "sura",
+    "verdict": "fixed",
+    "changes": [
+      "examples 10-11: added the listed variant とすら (quotative と + すら 思う) and こと + すら, which no example showed",
+      "example 9: en reworded",
+      "counterexample 4: だに sentence (no すら token) replaced with うすら笑い",
+      "detection: で is 格助詞 in 子供ですら but だ 連用形 in 専門家ですら; disjoint from sae and dani by lexeme"
+    ]
+  },
+  {
+    "id": "tote",
+    "verdict": "fixed",
+    "changes": [
+      "connection and meaning: added N + とて (私とて, even I), a core use, with example 9",
+      "counterexample 4: added と + 手 (surface とて across words)",
+      "detection: the claimed と + て split (言ったとて, 負けたとて) is wrong, both are one とて token; 格助詞 after nouns and から, 接続助詞 after predicates; こと + とて left to koto-tote"
+    ]
+  }
+]
