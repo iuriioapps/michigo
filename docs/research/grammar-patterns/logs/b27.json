@@ -1,0 +1,224 @@
+[
+  {
+    "id": "tokoro-o",
+    "verdict": "fixed",
+    "changes": [
+      "meaning: named both uses (caught or helped just as someone was doing; despite your busy situation)",
+      "example 1: match now includes お to cover the listed variant お忙しいところを",
+      "counterexample 2: 笑うところを → 笑っているところを, with a natural translation",
+      "detection: rewrote the garbled last sentence; tokoro-o owns ところを and tokoro-ni accepts only に/へ (checked: both sides agree); named the verbs of the caught-in-the-act use"
+    ]
+  },
+  {
+    "id": "soba-kara",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: replaced (rain starting is not the repeated undoing そばから expresses) with 拾っているそばから",
+      "example 7: replaced (same frame as example 1, 〜たそばから忘れる) with 稼いだそばから使っちゃう",
+      "detection: noted that noodle そば is also 側 名詞 in UniDic, and the だ surface of た after イ音便/撥音便"
+    ]
+  },
+  {
+    "id": "te-kara-to-iu-mono",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 2: replaced a sentence copied verbatim from to-iu-mono example 1 with この一か月というもの",
+      "counterexample 3: replaced the contrived 飲んでからというより、寝たから治った with 結婚してからというより、子供ができてからだ",
+      "detection: added the で surface of て after a 撥音便 verb; checked disjoint from te-kara and to-iu-mono"
+    ]
+  },
+  {
+    "id": "to-iu-mono",
+    "verdict": "fixed",
+    "changes": [
+      "variants: replaced two example phrases and the non-form '〜というもの (period)' with この〜というもの and ここ〜というもの",
+      "counterexample 5: added 一年というものは (period noun, generic reading), the near miss a period-noun guard would hit",
+      "detection: listed the real tokens before と (年, 週間, 年間, か月 箇月, 半年 名詞; 日 接尾辞) and required no は/が/を/だ after もの; checked disjoint from to-iu-mono-da and to-iu-mono-dewa-nai (b20 excludes period phrases)"
+    ]
+  },
+  {
+    "id": "nari",
+    "verdict": "fixed",
+    "changes": [
+      "detection: the 品詞 tag (接続助詞 after V-dict, 副助詞 after た and in nari-nari) cannot separate this from nari-nari, so the guard is a second なり; checked that nari-nari owns 〜なり〜なり and subsumes nari, so both sides agree"
+    ]
+  },
+  {
+    "id": "ga-hayai-ka",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: replaced a second 見るが早いか with 聞くが早いか",
+      "counterexample 2: replaced 時計の進みが早いか遅いか (unidiomatic) with どっちが早いか",
+      "counterexample 3: replaced 足が早い (wrong kanji, speed is 速い) with 早いか遅いかより",
+      "detection: が is 接続助詞 after the verb but 格助詞 after の/a noun, and か is 副助詞 in 早いか遅いか (confirmed by the tokenizer)"
+    ]
+  },
+  {
+    "id": "ya-ina-ya",
+    "verdict": "fixed",
+    "changes": [
+      "detection: corrected the claim that UniDic tags や否や and やいなや differently; both are や(副助詞) + 否(名詞-普通名詞) + や(副助詞)",
+      "example 1: replaced 家に着くや否や、ベッドに倒れ込んだ (same sentence as nari example 2)",
+      "example 3: replaced 姿を見るや否や、泣き出した (same frame as nari example 3)"
+    ]
+  },
+  {
+    "id": "n-bakari-ni",
+    "verdict": "fixed",
+    "changes": [
+      "detection: rewrote the token claims: ん is む (文語助動詞-ム) or ず (助動詞-ヌ, 溢れ|ん); some verbs fuse ん as 連体形-撥音便 (割れん, 張り裂けん, 突き刺さん) while 倒れ|ん splits, so 'all 一段 verbs fuse' was wrong",
+      "detection: every サ行 五段 verb misparses さ+ん as さん 接尾辞 (泣き|出|さん, 飛び出|さん, 話|さん); stated that a matcher must accept さん + ばかり there and reject it after a name (田中さんばかり)",
+      "example 1: match now 泣き出さんばかりの, covering the whole verb",
+      "example 6: 溢れんばかりの人でいっぱい (redundant) → 溢れんばかりの笑顔",
+      "example 8: 嬉しさで胸が張り裂けん (張り裂ける is for grief) → 悲しみで"
+    ]
+  },
+  {
+    "id": "to-bakari-ni",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 1: replaced a sentence identical to n-bakari-ni example 7 with 早く帰れと言わんばかりに",
+      "counterexample 4: 食べたばかりに、すぐ寝た was mistranslated ('just eaten') and labeled ta-bakari; replaced with 一言多かったばかりに (bakari-ni)",
+      "detection: replaced the 'speech-like gesture' guard with the token before と (命令形, だ, 」, ぞ, interjection); checked disjoint from n-bakari-ni, bakari-ni and bakari"
+    ]
+  },
+  {
+    "id": "ba-koso",
+    "verdict": "fixed",
+    "changes": [
+      "example 2: replaced a second 思えばこそ with 信じればこそ",
+      "example 9: replaced a second Nであればこそ with the i-adjective 厳しければこそ",
+      "detection: added 信ずる 仮定形 and the token shape of であればこそ (で is だ 連用形)"
+    ]
+  },
+  {
+    "id": "kai-mo-naku",
+    "verdict": "ok",
+    "changes": []
+  },
+  {
+    "id": "kagiri-da",
+    "verdict": "fixed",
+    "changes": [
+      "detection: the adjective is 連体形, not 終止形 (tokenizer); a na-adjective is 形状詞",
+      "detection: 'reject ない限り' would drop 情けない/申し訳ない限りだ; now only 助動詞 ない + 限り goes to kagiri; checked that kagiri leaves 限りだ/です at a clause end to this entry",
+      "example 7: replaced the stilted past 懐かしい限りだった with 情けない限りだ"
+    ]
+  },
+  {
+    "id": "kiri-ga-nai",
+    "verdict": "fixed",
+    "changes": [
+      "detection: hiragana きり is 切り 名詞 in most examples but きり 助詞-副助詞 in 心配し出すときりがない (tokenizer); the guard 'きり must be 切り 名詞' would miss it, so match きり/切り/キリ + が + 無い by surface",
+      "example 7: en was counterfactual; 答えていたらきりがなかった is a past experience"
+    ]
+  },
+  {
+    "id": "hame-ni-naru",
+    "verdict": "ok",
+    "changes": []
+  },
+  {
+    "id": "shimatsu-da",
+    "verdict": "fixed",
+    "changes": [
+      "example 2: replaced さんざんな始末だった (na-adjective + the noun 始末 'sorry state', not the V + 始末だ pattern) with 画面まで割る始末だ",
+      "detection: updated the token examples and added the guard that a verb or auxiliary must precede 始末 (ひどい始末, この始末 are the plain noun)"
+    ]
+  },
+  {
+    "id": "houdai",
+    "verdict": "fixed",
+    "changes": [
+      "kept (not borderline under the batch rule): 放題 is always a separate token (放題 名詞) and attaches to almost any verb stem, like darake and mamire; removed the 'behaves like vocabulary' remark from detection",
+      "variants: replaced example words with the forms 〜たい放題, 〜放題だ/の/に",
+      "example 8: replaced a second やりたい放題 with 散らかし放題",
+      "detection: tags of 好き (形状詞) and 勝手 (名詞), and っ放し is 放し 接尾辞-形状詞的"
+    ]
+  },
+  {
+    "id": "makuru",
+    "verdict": "fixed",
+    "changes": [
+      "kept: productive auxiliary verb 捲る after any 連用形, never fused except the two compound verbs the detection already rejects (confirmed: 捲り上げる, 捲し立てる)",
+      "example 5: en 'when I noticed it was morning' → 'before I knew it, it was morning'"
+    ]
+  },
+  {
+    "id": "buri",
+    "verdict": "fixed",
+    "changes": [
+      "kept: 振り 接尾辞-名詞的 after many verb stems and nouns (仕事, 働き, 暮らし, 指揮, 戦い), separate token in every example",
+      "variants: dropped the example words 飲みっぷり, 仕事ぶり",
+      "example 5: en 'What a great way to drink!' → 'You sure can knock them back!'",
+      "checked disjoint from buri-ni: both key on the word before ぶり (time word vs anything else)"
+    ]
+  },
+  {
+    "id": "buru",
+    "verdict": "fixed",
+    "changes": [
+      "kept: 振る 接尾辞-動詞的 after many nouns (先輩, 学者, 大人, 金持ち, 通), a separate token in every example",
+      "detection: dropped the false claim that the ぶる-final verbs form a closed list; added 被る, しゃぶる, くすぶる and the tag guard; noted 通ぶって misreads 通 as 通り",
+      "counterexample 4: added 帽子をかぶって (被る), the common near miss",
+      "variants: replaced the example word いい子ぶる with 〜ぶらない"
+    ]
+  },
+  {
+    "id": "meku",
+    "verdict": "fixed",
+    "changes": [
+      "kept: めく/めかす 接尾辞-動詞的 after many nouns (春, 秋, 謎, 皮肉, 冗談, 命令, 脅し), always a separate token",
+      "detection: the めく-final verbs are not a closed list; added ゆらめく, よろめく and the tag guard",
+      "variants: dropped the example words 春めく, 謎めいた"
+    ]
+  },
+  {
+    "id": "jimita",
+    "verdict": "fixed",
+    "changes": [
+      "kept: 染みる 接尾辞-動詞的 after many nouns, always a separate token",
+      "example 7: 垢じみた is the literal stain sense, the same as counterexample 3; replaced with 説教じみた",
+      "counterexample 3 and detection: 汗じみた is the stain sense of the same suffix; the guard is a stop list of dirt nouns, not an accepted false positive",
+      "variants: dropped the example word 子供じみた"
+    ]
+  },
+  {
+    "id": "biru",
+    "verdict": "reject",
+    "changes": [
+      "vocabulary, not a Grammar Pattern: every use is one fused UniDic verb (大人びる, 古びる, 田舎びる, 鄙びる; 動詞-一般 上一段-バ行) from a short closed list, never a noun + suffix token; unlike darake/mamire, nothing for a matcher to find beyond these lemmas"
+    ]
+  },
+  {
+    "id": "zukume",
+    "verdict": "fixed",
+    "changes": [
+      "kept (writer suggested reject): ずくめ (尽くめ 接尾辞-名詞的) is a separate token after every noun tested and the nouns are open (colors, こと, 規則, 異例, 結構, ごちそう), the same case as darake and mamire; removed the 'closer to vocabulary' remark",
+      "variants: replaced the example words 黒ずくめ, いいことずくめ with 〜ずくめで, 〜ことずくめ",
+      "example 4: 出費ずくめ (unidiomatic, 出費続き is the word) → 結構ずくめの話",
+      "example 7: replaced a second 黒ずくめ with 異例ずくめ"
+    ]
+  },
+  {
+    "id": "gurumi",
+    "verdict": "fixed",
+    "changes": [
+      "kept (writer suggested reject): ぐるみ 接尾辞-名詞的 attaches to any group noun as a separate token; the fused ぬいぐるみ, 着ぐるみ, 身ぐるみ are 名詞 tokens and the tag excludes them",
+      "variants: dropped the example words 家族ぐるみ, 町ぐるみ",
+      "example 6: 国ぐるみで選手を育てている (unnatural, 国を挙げて) → 国ぐるみのドーピング",
+      "example 7: 一家ぐるみで引っ越した (ぐるみ needs joint involvement, 一家そろって is the word) → 村ぐるみで",
+      "example 8: replaced a second 家族ぐるみ with 業界ぐるみ",
+      "detection: removed the 'untagged in some words' claim (always 接尾辞-名詞的) and the rejection remark"
+    ]
+  },
+  {
+    "id": "nami",
+    "verdict": "fixed",
+    "changes": [
+      "kept (writer suggested reject): 並み 接尾辞-名詞的 after an open set of nouns, always a separate token; the fused 町並み, 足並み, 軒並み, 月並み have other tags (confirmed)",
+      "variants: replaced the example words with 〜並みだ/に and the kana 〜なみ (same lexeme, confirmed)",
+      "detection: removed the 'closer to vocabulary' remark and gave the tags of the fused words"
+    ]
+  }
+]

@@ -3,7 +3,7 @@
     "id": "tokoro-o",
     "form": "〜ところを",
     "variants": ["お忙しいところを","〜ているところを","お休みのところを","〜たところを"],
-    "meaning": "at a time when; despite (the situation)",
+    "meaning": "just as (someone was doing); despite (your busy situation)",
     "kind": "construction",
     "register": "neutral",
     "level": "N1",
@@ -11,7 +11,7 @@
     "prototype": false,
     "connection": ["V-plain + ところを","i-Adj + ところを","N + の + ところを","na-Adj + な + ところを"],
     "examples": [
-      {"ja":"お忙しいところを失礼いたします。","match":"忙しいところを","en":"I'm sorry to trouble you when you're busy."},
+      {"ja":"お忙しいところを失礼いたします。","match":"お忙しいところを","en":"I'm sorry to trouble you when you're busy."},
       {"ja":"寝ているところを電話で起こされた。","match":"寝ているところを","en":"I was woken by a phone call just as I was sleeping."},
       {"ja":"お休みのところを申し訳ありません。","match":"お休みのところを","en":"I apologize for disturbing you on your day off."},
       {"ja":"泣いているところを、彼女に見られてしまった。","match":"泣いているところを","en":"She saw me crying."},
@@ -22,13 +22,13 @@
     ],
     "counterexamples": [
       {"ja":"景色のいいところを探して、レジャーシートを広げた。","en":"I looked for a spot with a nice view and spread out the picnic sheet.","why":"ところ is a literal place and を marks the object of 探す"},
-      {"ja":"彼が笑うところを見ると、冗談だったらしい。","en":"Judging by the fact that he laughs, it must have been a joke.","why":"ところを見ると is the entry tokoro-o-miru-to"},
+      {"ja":"彼が笑っているところを見ると、冗談だったらしい。","en":"Judging by the way he's laughing, it must have been a joke.","why":"ところを見ると is the entry tokoro-o-miru-to"},
       {"ja":"ちょうど帰ろうとしたところに、電話が鳴った。","en":"The phone rang just as I was about to leave.","why":"ところに is the entry tokoro-ni; the particle is に, not を"},
       {"ja":"行ってみたところが、店は閉まっていた。","en":"When I went there, the shop was closed.","why":"ところが is a conjunction, not ところ + を"}
     ],
     "subsumes": [],
     "confusables": ["tokoro-ni","tokoro-o-miru-to","te-iru-tokoro","ta-tokoro"],
-    "detection": "Tokens: a predicate in 連体形 or a noun + の, then ところ (所, 名詞-普通名詞) + を (格助詞): 忙しい|ところ|を, 寝|て|いる|ところ|を (いる is 居る 連体形), 休み|の|ところ|を, 盗もう|と|し|た|ところ|を (盗もう is 意志推量形). The ご/お + noun + の form (ご多用|の|ところ|を) is the same. The ところ is 'situation, moment', and the clause usually describes a person caught, helped or disturbed, which a token matcher cannot see; the shape verb-plain/い-adjective/の + ところ + を is the guard. Reject ところ + に/が (tokoro-ni, ところが conjunction) and ところ + を + 見る + と (tokoro-o-miru-to). A literal place or aspect before を (いいところを探す, 悪いところを直す) has identical tokens, so accept it only when the clause before ところ is a verb or adjective in 連体形 describing a situation, and when the verb after を is not an act on the place itself (探す, 選ぶ, 知る). ところを with ところ owned here is not tokoro-ni, which keeps に/へ."
+    "detection": "Tokens: a predicate in 連体形 or a noun + の, then ところ (所, 名詞-普通名詞) + を (格助詞): 忙しい|ところ|を, 寝|て|いる|ところ|を (いる is 居る 連体形), 休み|の|ところ|を, 盗もう|と|し|た|ところ|を (盗もう is 意志推量形). The ご/お + noun + の form (ご多用|の|ところ|を) is the same. The ところ is 'situation, moment', and the clause usually describes a person caught, helped or disturbed, which a token matcher cannot see; the shape verb-plain/い-adjective/の + ところ + を is the guard. Reject ところ + に/が (tokoro-ni, ところが conjunction) and ところ + を + 見る + と (tokoro-o-miru-to). A literal place or aspect before を (いいところを探す, 悪いところを直す) has identical tokens, so accept it only when the clause before ところ is a verb or adjective in 連体形 describing a situation, and when the verb after を is not an act on the place itself (探す, 選ぶ, 知る). This entry owns ところを; tokoro-ni accepts only に/へ, so the two stay disjoint. In the caught-in-the-act use the verb after を is 見る, 見つかる, 捕まえる, 取り押さえる or 起こす, and the ところ clause is the object."
   },
   {
     "id": "soba-kara",
@@ -47,8 +47,8 @@
       {"ja":"言ったそばから後悔した。","match":"たそばから","en":"I regretted it the instant I said it."},
       {"ja":"掃除したそばから汚されて、やってられない。","match":"たそばから","en":"It gets dirty again right after I clean, so I can't take it."},
       {"ja":"注意するそばから、同じミスを繰り返している。","match":"注意するそばから","en":"He keeps repeating the same mistake even as I warn him."},
-      {"ja":"洗濯物を取り込んでいるそばから、雨が降りだした。","match":"いるそばから","en":"It started raining while I was still bringing in the laundry."},
-      {"ja":"勉強したそばから忘れるんだよね。","match":"たそばから","en":"I forget everything right after I study it."},
+      {"ja":"落ち葉を拾っているそばから、また次の葉が落ちてくる。","match":"いるそばから","en":"Even as I'm picking up the fallen leaves, more keep coming down."},
+      {"ja":"稼いだそばから使っちゃうから、全然貯まらない。","match":"だそばから","en":"I spend it as soon as I earn it, so I never save anything."},
       {"ja":"食べるそばからお腹が空くなんて、どうなってるんだろう。","match":"食べるそばから","en":"How can I be hungry again the moment I eat?"}
     ],
     "counterexamples": [
@@ -59,7 +59,7 @@
     ],
     "subsumes": [],
     "confusables": ["ta-bakari","te-kara"],
-    "detection": "Tokens: a verb in た (連体形) or 終止形/連体形, or ている, then そば (側, 名詞-普通名詞) + から (格助詞): 覚え|た|そば|から, 片付ける|そば|から (片付ける is 連体形 and one token), 注意|する(為る 連体形)|そば|から, 取り込ん|で|いる|そば|から. The lexeme of そば is 側, the same noun as 'side, nearby', so the guard is what comes before it: a verb in 連体形 (including the た form), never の or a bare noun. Reject の + そば + から (窓のそばから), a sentence-initial or noun-preceded そば, and the noodle そば from から 'starting with'. Often confused with ta-bakari (たばかり) and te-kara, which have different tokens."
+    "detection": "Tokens: a verb in た (連体形) or 終止形/連体形, or ている, then そば (側, 名詞-普通名詞) + から (格助詞): 覚え|た|そば|から, 片付ける|そば|から (片付ける is 連体形 and one token), 注意|する(為る 連体形)|そば|から, 取り込ん|で|いる|そば|から. The lexeme of そば is 側, the same noun as 'side, nearby', so the guard is what comes before it: a verb in 連体形 (including the た form), never の or a bare noun. Reject の + そば + から (窓のそばから), a sentence-initial or noun-preceded そば, and the noodle そば from から 'starting with' (UniDic also tags that one 側 名詞, so only the preceding token tells them apart). After a ガ行 イ音便 or 撥音便 verb the auxiliary surfaces as だ (稼い|だ(た 助動詞)|そば|から), and the ている form ends in いる(居る 連体形). Often confused with ta-bakari (たばかり) and te-kara, which have different tokens."
   },
   {
     "id": "te-kara-to-iu-mono",
@@ -84,17 +84,17 @@
     ],
     "counterexamples": [
       {"ja":"家に帰ってから、手を洗った。","en":"After coming home, I washed my hands.","why":"plain てから 'after doing', the entry te-kara, with no というもの"},
-      {"ja":"この一年というもの、彼とは連絡を取っていない。","en":"For this past year I haven't been in touch with him.","why":"というもの after a time noun is the entry to-iu-mono; there is no てから"},
-      {"ja":"薬を飲んでからというより、寝たから治ったのだと思う。","en":"I think I got better because I slept, rather than after taking the medicine.","why":"てからというより is てから + というより (to-iu-yori), not というもの"}
+      {"ja":"この一か月というもの、休みが一日もなかった。","en":"For this whole past month I didn't get a single day off.","why":"というもの after a time noun is the entry to-iu-mono; there is no てから"},
+      {"ja":"彼が変わったのは、結婚してからというより、子供ができてからだ。","en":"He changed not so much after getting married as after having a child.","why":"てからというより is てから + というより (to-iu-yori), not というもの"}
     ],
     "subsumes": ["te-kara"],
     "confusables": ["te-kara","to-iu-mono","te-kara-de-nai-to"],
-    "detection": "Tokens: て (接続助詞, lexeme て) + から (格助詞) + と (格助詞) + いう (言う, 連体形) + もの (物, 名詞-普通名詞), after a verb in て-form: 出会っ|て|から|と|いう|もの, 亡くなっ|て|から|と|いう|もの. A comma follows the whole phrase, and the main clause describes a state that went on. Reject てから alone (te-kara), てからというより (より 格助詞 follows いう), and というもの with no てから before it, which is to-iu-mono (a time noun like 一年 precedes と). Where this matches, te-kara and to-iu-mono must not also count."
+    "detection": "Tokens: て (接続助詞, lexeme て) + から (格助詞) + と (格助詞) + いう (言う, 連体形) + もの (物, 名詞-普通名詞), after a verb in て-form: 出会っ|て|から|と|いう|もの, 亡くなっ|て|から|と|いう|もの; after a 撥音便 verb the て surfaces as で (飲ん|で(て 接続助詞)|から). A comma follows the whole phrase, and the main clause describes a state that went on. Reject てから alone (te-kara), てからというより (より 格助詞 follows いう), and というもの with no てから before it, which is to-iu-mono (a time noun like 一年 precedes と). Where this matches, te-kara and to-iu-mono must not also count."
   },
   {
     "id": "to-iu-mono",
     "form": "〜というもの",
-    "variants": ["この一年というもの","ここ数日というもの","〜というもの (period)"],
+    "variants": ["この〜というもの","ここ〜というもの"],
     "meaning": "for the whole (period)",
     "kind": "construction",
     "register": "written",
@@ -116,11 +116,12 @@
       {"ja":"それが人生というものだ。","en":"That's what life is.","why":"というものだ after a general noun is the entry to-iu-mono-da"},
       {"ja":"友情というものは、簡単には壊れない。","en":"Friendship is not something that breaks easily.","why":"というもの is a topic-introducing 'what is called X' after a general noun, followed by は; it covers no period of time"},
       {"ja":"待てばいいというものではない。","en":"It's not simply a matter of waiting.","why":"というものではない is the entry to-iu-mono-dewa-nai"},
-      {"ja":"彼が帰ってからというもの、家が静かになった。","en":"Ever since he went home, the house has gone quiet.","why":"てからというもの is the entry te-kara-to-iu-mono"}
+      {"ja":"彼が帰ってからというもの、家が静かになった。","en":"Ever since he went home, the house has gone quiet.","why":"てからというもの is the entry te-kara-to-iu-mono"},
+      {"ja":"一年というものは、本当にあっという間に過ぎる。","en":"A year really does fly by.","why":"a period noun, but というもの + は is the generic 'what is called a year', not 'for the whole year'"}
     ],
     "subsumes": [],
     "confusables": ["te-kara-to-iu-mono","to-iu-mono-da","to-iu-mono-dewa-nai"],
-    "detection": "Tokens: a period noun, usually a number + a counter (一|年, 数|日, 三|週間, 半年, 一|年間, 二十|年), then と (格助詞) + いう (言う 連体形) + もの (物, 名詞-普通名詞), followed by a comma, as in この|一|年|と|いう|もの、. The period is introduced by この, ここ, あれから or another demonstrative or modifier, and the main clause states a situation that held the whole time (often negative). Guards: the word before と is a time period; reject というものだ/です (to-iu-mono-da), というものではない/でもない (to-iu-mono-dewa-nai), というものは/を after a general noun (友情というものは), and てからというもの (te-kara-to-iu-mono: て + から precedes と). 数 + 日 is 数詞 + 接尾辞, so accept a 数詞 or 数-prefixed token before the counter."
+    "detection": "Tokens: a period noun, usually a number + a counter (一|年, 数|日, 三|週間, 半年, 一|年間, 二十|年), then と (格助詞) + いう (言う 連体形) + もの (物, 名詞-普通名詞), followed by a comma, as in この|一|年|と|いう|もの、. The period is introduced by この, ここ, あれから or another demonstrative or modifier, and the main clause states a situation that held the whole time (often negative). Guards: the word before と is a time period; reject というものだ/です (to-iu-mono-da), というものではない/でもない (to-iu-mono-dewa-nai), というものは/を after a general noun (友情というものは), and てからというもの (te-kara-to-iu-mono: て + から precedes と). The token before と is 年/週間/年間/か月(箇月)/半年 (名詞-普通名詞) or 日 (接尾辞, after 数 名詞-数詞), so accept a counter noun or 接尾辞 after a 数詞, or a period noun such as 半年. A period noun + というもの + は (一年というものは) is the generic reading, so the token after もの must be the comma or the next clause, not は/が/を/だ."
   },
   {
     "id": "nari",
@@ -152,7 +153,7 @@
     ],
     "subsumes": [],
     "confusables": ["nari-ni","nari-nari","nari-tomo","ga-hayai-ka","ya-ina-ya"],
-    "detection": "Tokens: a verb in 終止形/連体形 + なり (なり, 助詞-接続助詞): 入る|なり, 見る|なり, 来る|なり, 入っ|て|くる|なり, 横|に|なる|なり (the second なる is the verb 成る, then なり). After た the same word is tagged 助詞-副助詞: 座っ|た|なり, 出かけ|た|なり; lexeme なり either way. The first reading 'as soon as' takes V-dict and is followed by a sudden event; V-ta + なり means 'and stayed that way', and the clause ends in a negative or continuing state. Reject なり after a noun or pronoun (私|なり|に, nari-ni: the suffix なり, lexeme 形, 接尾辞-名詞的, which also follows a 連用形 as in 言い|なり|に), two なり in a row (電話する|なり|メールする|なり, nari-nari) and なり as the 連用形 of 成る (なり|たい). Confused with nari-ni and nari-nari; the guard is the preceding token (a verb) and no second なり in the same sentence."
+    "detection": "Tokens: a verb in 終止形/連体形 + なり (なり, 助詞-接続助詞): 入る|なり, 見る|なり, 来る|なり, 入っ|て|くる|なり, 横|に|なる|なり (the second なる is the verb 成る, then なり). After た the same word is tagged 助詞-副助詞: 座っ|た|なり, 出かけ|た|なり; lexeme なり either way. The first reading 'as soon as' takes V-dict and is followed by a sudden event; V-ta + なり means 'and stayed that way', and the clause ends in a negative or continuing state. Reject なり after a noun or pronoun (私|なり|に, nari-ni: the suffix なり, lexeme 形, 接尾辞-名詞的, which also follows a 連用形 as in 言い|なり|に), two なり in a row (電話する|なり|メールする|なり, nari-nari) and なり as the 連用形 of 成る (なり|たい). Confused with nari-ni and nari-nari; the guard is the preceding token (a verb) and no second なり in the same sentence. The tag does not separate this entry from nari-nari (電話|する|なり is 助詞-副助詞 there, and nari-nari reports 接続助詞 after some verbs), so match the lexeme and leave every sentence with a second なり to nari-nari, which subsumes this entry."
   },
   {
     "id": "ga-hayai-ka",
@@ -173,16 +174,16 @@
       {"ja":"赤ん坊は母親に抱かれたが早いか、泣きやんだ。","match":"抱かれたが早いか","en":"The baby stopped crying the moment his mother picked him up."},
       {"ja":"試験終了の合図があるが早いか、彼はペンを投げ出した。","match":"あるが早いか","en":"The moment the signal to end the exam came, he threw down his pen."},
       {"ja":"彼は金を受け取るが早いか、店を出ていった。","match":"受け取るが早いか","en":"As soon as he got the money, he left the shop."},
-      {"ja":"犬は餌を見るが早いか、飛びついてきた。","match":"見るが早いか","en":"The dog jumped at me the instant it saw the food."}
+      {"ja":"犬は餌の袋の音を聞くが早いか、台所に走ってきた。","match":"聞くが早いか","en":"The moment the dog heard the food bag rustle, it came running into the kitchen."}
     ],
     "counterexamples": [
       {"ja":"彼が行くのが早いか、私が着くのが早いか、競争だ。","en":"It's a race to see whether he leaves first or I arrive first.","why":"のが早い is a nominalized clause with 早い 'early, quick' as a real adjective, not the が早いか idiom"},
-      {"ja":"この時計は進みが早いか遅いかを確かめてください。","en":"Please check whether this clock runs fast or slow.","why":"早い か is an ordinary 'fast or slow' question, with か marking the alternatives"},
-      {"ja":"彼は足が早いか遅いか、見たことがないので分からない。","en":"I've never seen him run, so I don't know whether he's fast or slow.","why":"足が早い 'is a fast runner' is a plain description with a noun before が"}
+      {"ja":"どっちが早いか、駅まで競争しよう。","en":"Let's race to the station and see who's faster.","why":"a pronoun before が: どっち + が + 早い + か is the plain question 'which is quicker'"},
+      {"ja":"結婚は、早いか遅いかより、相手が大事だ。","en":"With marriage, who you marry matters more than whether it's early or late.","why":"早いか遅いか is 'early or late' with か marking the alternatives; no verb or が before 早い"}
     ],
     "subsumes": [],
     "confusables": ["ya-ina-ya","nari","ta-tokoro"],
-    "detection": "Tokens: a verb in 終止形/連体形 or た + が (助詞-接続助詞, lexeme が) + 早い (早い, 形容詞-一般 終止形) + か (助詞-終助詞): 鳴る|が|早い|か, 見る|が|早い|か, 抱か|れ|た|が|早い|か. The four tokens が + 早い + か are fixed, and the verb before が is in the plain dictionary or た form. The main clause follows after a comma and states an immediate reaction. Reject の + が + 早い (行く|の|が|早い|か, a comparison 'which is quicker'), a noun before が (足|が|早い|か 'fast runner') and 早い か as 'fast or slow'. The only guard that separates them from the idiom is the verb directly before が (no の, no noun); also check that the next token after か is not 遅い."
+    "detection": "Tokens: a verb in 終止形/連体形 or た + が (助詞-接続助詞, lexeme が) + 早い (早い, 形容詞-一般 終止形) + か (助詞-終助詞): 鳴る|が|早い|か, 見る|が|早い|か, 抱か|れ|た|が|早い|か. The four tokens が + 早い + か are fixed, and the verb before が is in the plain dictionary or た form. The main clause follows after a comma and states an immediate reaction. Reject の + が + 早い (行く|の|が|早い|か, a comparison 'which is quicker'; that が is 格助詞), a noun or pronoun before が (どっち|が|早い|か) and 早いか遅いか 'early or late' (there か is 助詞-副助詞). The guard that separates them from the idiom is the verb or た directly before が, which UniDic then tags 助詞-接続助詞 (in every example here; after の or a noun it is 格助詞); also check that the next token after か is not 遅い."
   },
   {
     "id": "ya-ina-ya",
@@ -196,9 +197,9 @@
     "prototype": false,
     "connection": ["V-dict + や否や","V-dict + やいなや"],
     "examples": [
-      {"ja":"彼は家に着くや否や、ベッドに倒れ込んだ。","match":"着くや否や","en":"The moment he got home, he collapsed onto the bed."},
+      {"ja":"彼は家に着くや否や、パソコンの電源を入れた。","match":"着くや否や","en":"The moment he got home, he switched on his computer."},
       {"ja":"ドアが開くやいなや、子供たちが駆け込んできた。","match":"開くやいなや","en":"The instant the door opened, the children ran in."},
-      {"ja":"彼女は彼の姿を見るや否や、泣き出した。","match":"見るや否や","en":"She burst into tears as soon as she saw him."},
+      {"ja":"彼女は彼の姿を見るや否や、駆け寄って抱きついた。","match":"見るや否や","en":"As soon as she saw him, she ran over and threw her arms around him."},
       {"ja":"ニュースが流れるや否や、会社の電話が鳴りやまなくなった。","match":"流れるや否や","en":"The moment the news aired, the company's phones would not stop ringing."},
       {"ja":"試合終了のホイッスルが鳴るやいなや、観客がグラウンドになだれ込んだ。","match":"鳴るやいなや","en":"As soon as the final whistle blew, the fans poured onto the field."},
       {"ja":"彼は私の話を聞くや否や、席を立った。","match":"聞くや否や","en":"As soon as he heard what I had to say, he got up from his seat."},
@@ -211,7 +212,7 @@
     ],
     "subsumes": [],
     "confusables": ["ga-hayai-ka","nari","ta-tokoro"],
-    "detection": "Tokens: a verb in 終止形/連体形 + や (助詞-副助詞) + 否 (否) + や. UniDic is not consistent here: 着く|や|否(感動詞)|や(いや 感動詞) in や否や, but 開く|や|いな(否 名詞)|や(や 助動詞-ヤ) in やいなや. Match on the surface string や否や / やいなや after a verb, not on the tags. The V-dict form takes the main clause with a sudden event after a comma. Reject か否か (賛成|か|否|か), 否 as an interjection (、否、大成功) and 否応 (one noun). Often confused with ga-hayai-ka and nari, which have different fixed tokens."
+    "detection": "Tokens: a verb in 終止形/連体形 + や (や 助詞-副助詞) + 否 or いな (lexeme 否, 名詞-普通名詞) + や (や 助詞-副助詞), the same for both spellings: 着く|や|否|や, 開く|や|いな|や. か否か has the same 否 名詞 but か (副助詞) on both sides, and the interjection 否 is 感動詞-一般. The V-dict form takes the main clause with a sudden event after a comma. Reject か否か (賛成|か|否|か), 否 as an interjection (、否、大成功) and 否応 (one noun). Often confused with ga-hayai-ka and nari, which have different fixed tokens."
   },
   {
     "id": "n-bakari-ni",
@@ -225,14 +226,14 @@
     "prototype": false,
     "connection": ["V-nai-stem (未然形) + んばかりに","V-nai-stem + んばかりの","V-nai-stem + んばかりだ"],
     "examples": [
-      {"ja":"彼女は今にも泣き出さんばかりの顔をしていた。","match":"出さんばかりの","en":"She looked as if she might burst into tears at any moment."},
+      {"ja":"彼女は今にも泣き出さんばかりの顔をしていた。","match":"泣き出さんばかりの","en":"She looked as if she might burst into tears at any moment."},
       {"ja":"観客は割れんばかりの拍手を送った。","match":"割れんばかりの","en":"The audience gave thunderous applause."},
       {"ja":"彼は飛び上がらんばかりに喜んだ。","match":"飛び上がらんばかりに","en":"He was so happy he nearly jumped for joy."},
       {"ja":"母は今にも倒れんばかりに青ざめていた。","match":"倒れんばかりに","en":"My mother was so pale she looked about to collapse."},
       {"ja":"男は私に掴みかからんばかりの勢いで迫ってきた。","match":"掴みかからんばかりの","en":"The man closed in on me so fiercely he looked about to grab me."},
-      {"ja":"部屋は溢れんばかりの人でいっぱいだった。","match":"溢れんばかりの","en":"The room was filled with people to overflowing."},
+      {"ja":"彼女は溢れんばかりの笑顔で迎えてくれた。","match":"溢れんばかりの","en":"She welcomed me with a beaming smile."},
       {"ja":"出ていけと言わんばかりに、彼は戸を開けた。","match":"言わんばかりに","en":"He opened the door as if to tell me to get out."},
-      {"ja":"嬉しさのあまり、胸は張り裂けんばかりだ。","match":"張り裂けんばかりだ","en":"My heart felt ready to burst with joy."}
+      {"ja":"悲しみで、胸が張り裂けんばかりだ。","match":"張り裂けんばかりだ","en":"My heart feels ready to break with grief."}
     ],
     "counterexamples": [
       {"ja":"油断したばかりに、財布を盗まれてしまった。","en":"Just because I let my guard down, my wallet got stolen.","why":"たばかりに is the entry bakari-ni, a different ばかり"},
@@ -241,7 +242,7 @@
     ],
     "subsumes": [],
     "confusables": ["to-bakari-ni","bakari-ni","bakari-da"],
-    "detection": "Tokens: a verb in 未然形 + ん (UniDic lexeme む, 助動詞 文語助動詞-ム 連体形-撥音便) + ばかり (助詞-副助詞) + に / の / だ: 言わ|ん|ばかり|に, 倒れ|ん|ばかり|に, 飛び上がら|ん|ばかり|に. With 一段 verbs the ん is already inside the verb token (割れん is 割れる 連体形-撥音便, 張り裂けん is 張り裂ける 連体形-撥音便), so match 割れん|ばかり|の. Tokenizer gap: 泣き出さんばかり becomes 泣き|出|さん|ばかり with さん as 接尾辞, so also accept the surface さんばかり after 出. Reject 未然形 + ん + と + する (言わんとして, ん + と) and とばかりに (to-bakari-ni) and たばかりに (bakari-ni). The meaning is 'as if about to ~' and the main noun or clause describes an exaggerated state."
+    "detection": "Tokens: a verb in 未然形 + ん + ばかり (助詞-副助詞) + に / の / だ, in three token shapes. (1) ん is a separate 助動詞 whose lexeme is む (文語助動詞-ム 連体形-撥音便: 言わ|ん, 倒れ|ん, 飛び上がら|ん) or sometimes ず (助動詞-ヌ 終止形-撥音便: 溢れ|ん). (2) The ん is fused into the verb token as 連体形-撥音便 (割れん 割れる, 張り裂けん 張り裂ける, 突き刺さん 突き刺さる). (3) Every サ行 五段 verb misparses: さ + ん becomes さん (さん 接尾辞-名詞的) after a broken stem, as in 泣き|出(出 接尾辞)|さん|ばかり, 飛び出(飛び出る 連用形)|さん, 話(話 名詞)|さん; a matcher must accept さん + ばかり + に/の/だ there, but reject it after a name or person noun (田中|さん|ばかり 'only Ms Tanaka'). Reject 未然形 + ん + と + する (言わんとして, ん + と) and とばかりに (to-bakari-ni) and たばかりに (bakari-ni). The meaning is 'as if about to ~' and the main noun or clause describes an exaggerated state."
   },
   {
     "id": "to-bakari-ni",
@@ -265,14 +266,14 @@
       {"ja":"これで終わりだとばかりに、彼はペンを置いた。","match":"とばかりに","en":"He put down his pen as if to say, 'That's the end of it.'"}
     ],
     "counterexamples": [
-      {"ja":"出ていけと言わんばかりに、彼は戸を開けた。","en":"He opened the door as if to tell me to get out.","why":"んばかりに is the entry n-bakari-ni, with ん + ばかり and no と"},
+      {"ja":"早く帰れと言わんばかりに、店員が片付けを始めた。","en":"The staff started clearing up as if to tell us to hurry up and leave.","why":"と here quotes 言わ; と + ばかり is not adjacent, and 言わんばかりに is the entry n-bakari-ni"},
       {"ja":"てっきり彼は来ないとばかり思っていた。","en":"I was sure he wasn't coming.","why":"とばかり思う is a quotation + ばかり + 思う, the 'only thought that' usage, with no 'as if to say' meaning"},
       {"ja":"最近は友達とばかり遊んでいて、勉強しない。","en":"Lately he does nothing but play with his friends and doesn't study.","why":"と is 'with' after 友達 and ばかり means 'only', so it is と + ばかり across two particles"},
-      {"ja":"彼は食べたばかりに、すぐ寝てしまった。","en":"Since he had only just eaten, he went to sleep right away.","why":"たばかり is ta-bakari plus に, not とばかりに"}
+      {"ja":"一言多かったばかりに、彼女を怒らせてしまった。","en":"Just because I said one word too many, I made her angry.","why":"たばかりに 'just because' is the entry bakari-ni; た, not と, precedes ばかり"}
     ],
     "subsumes": [],
     "confusables": ["n-bakari-ni","bakari-ni","ta-bakari","bakari"],
-    "detection": "Tokens: と (格助詞) + ばかり (ばかり, 助詞-副助詞) + に (格助詞) or nothing, after a quotation, an imperative, a だ-ending clause or a set phrase: 行け|と|ばかり|に, 終わり|だ|と|ばかり|に, ここ|ぞ|と|ばかり. The thing before と is an imperative or exclamation, a quoted word in 「」 or ここぞ; the main clause is a gesture or action that wordlessly conveys it. Reject 未然形 + ん + ばかり (言わんばかり, n-bakari-ni), た + ばかり + に (bakari-ni), and と + ばかり + 思う (来ない|と|ばかり|思っ|て|い|た), where ばかり is 'only'. Also reject a と after a noun that means 'with' (友達|と|ばかり|遊ん|で): the tell is that the verb after ばかり is a speech-like gesture, not a plain activity. Confused with n-bakari-ni, which has ん and no と."
+    "detection": "Tokens: と (格助詞) + ばかり (ばかり, 助詞-副助詞) + に (格助詞) or nothing, after a quotation, an imperative, a だ-ending clause or a set phrase: 行け|と|ばかり|に, 終わり|だ|と|ばかり|に, ここ|ぞ|と|ばかり. The thing before と is an imperative or exclamation, a quoted word in 「」 or ここぞ; the main clause is a gesture or action that wordlessly conveys it. Reject 未然形 + ん + ばかり (言わんばかり, n-bakari-ni), た + ばかり + に (bakari-ni), and と + ばかり + 思う (来ない|と|ばかり|思っ|て|い|た), where ばかり is 'only'. Also reject a と after a noun that means 'with' (友達|と|ばかり|遊ん|で). The guard is the token before と: a 命令形 verb (行け, 帰れ, くれ), だ/です, a closing 」, ぞ (ここ|ぞ) or an interjection, not a plain noun; the bare とばかり (no に) needs this guard most, since とばかり + 思う/信じる is 'only'. Confused with n-bakari-ni, which has ん and no と, and keeps no と directly before ばかり (と + 言わ + ん + ばかり is n-bakari-ni)."
   },
   {
     "id": "ba-koso",
@@ -287,14 +288,14 @@
     "connection": ["V-ba + こそ","i-Adj (-ければ) + こそ","N + であれば / ならば + こそ","na-Adj + であれば / ならば + こそ"],
     "examples": [
       {"ja":"子供のことを思えばこそ、厳しく叱るのだ。","match":"思えばこそ","en":"It is precisely because I care about my child that I scold so strictly."},
-      {"ja":"君のためを思えばこそ、あえて言うんだよ。","match":"思えばこそ","en":"I'm telling you this precisely because I'm thinking of you."},
+      {"ja":"仲間を信じればこそ、最後まで戦えた。","match":"信じればこそ","en":"It was because I believed in my friends that I could fight to the end."},
       {"ja":"健康であればこそ、仕事も楽しめる。","match":"あればこそ","en":"It is only when you're healthy that you can enjoy work as well."},
       {"ja":"愛すればこそ、彼は別れを選んだのです。","match":"愛すればこそ","en":"It was precisely because he loved her that he chose to part."},
       {"ja":"家族がいればこそ、頑張れる。","match":"いればこそ","en":"It's because I have my family that I can keep going."},
       {"ja":"期待していればこそ、彼には厳しいのだ。","match":"いればこそ","en":"I'm hard on him precisely because I have expectations of him."},
       {"ja":"若ければこそ、できる無茶もある。","match":"若ければこそ","en":"Some reckless things you can do only because you're young."},
       {"ja":"あなたが大切ならばこそ、本当のことを言うんです。","match":"ならばこそ","en":"I'm telling you the truth precisely because you matter to me."},
-      {"ja":"平和であればこそ、文化は栄える。","match":"あればこそ","en":"Only in peacetime does culture flourish."}
+      {"ja":"仕事が厳しければこそ、やりがいも大きい。","match":"厳しければこそ","en":"It's precisely because the work is tough that it's so rewarding."}
     ],
     "counterexamples": [
       {"ja":"こちらこそ、よろしくお願いします。","en":"The pleasure is mine; I'm counting on you too.","why":"こそ is the emphatic particle after a noun, with no ば before it (koso)"},
@@ -304,7 +305,7 @@
     ],
     "subsumes": [],
     "confusables": ["te-koso","koso","koso-ga","kara-koso"],
-    "detection": "Tokens: ば (助詞-接続助詞, lexeme ば) + こそ (助詞-係助詞) directly after a conditional: 思え|ば|こそ, あれ|ば|こそ (あれ is 有る 仮定形), 若けれ|ば|こそ (若い 仮定形), 愛すれ|ば|こそ, なら|ば|こそ (だ 助動詞 + ば). The main clause gives the result with の/んだ, often in the explanatory form. Reject こそ without ば (こちらこそ, 彼こそが, koso-ga), て + こそ (te-koso), から + こそ (kara-koso) and plain conditional ば with no こそ. Match the two tokens ば + こそ directly after a 仮定形 (or なら)."
+    "detection": "Tokens: ば (助詞-接続助詞, lexeme ば) + こそ (助詞-係助詞) directly after a conditional: 思え|ば|こそ, あれ|ば|こそ (あれ is 有る 仮定形), 若けれ|ば|こそ (若い 仮定形), 愛すれ|ば|こそ, 信じれ (信ずる 仮定形)|ば|こそ, なら (だ 助動詞 仮定形)|ば|こそ; であればこそ is で (だ 連用形) + あれ + ば + こそ. The main clause gives the result with の/んだ, often in the explanatory form. Reject こそ without ば (こちらこそ, 彼こそが, koso-ga), て + こそ (te-koso), から + こそ (kara-koso) and plain conditional ば with no こそ. Match the two tokens ば + こそ directly after a 仮定形 (or なら)."
   },
   {
     "id": "kai-mo-naku",
@@ -355,7 +356,7 @@
       {"ja":"こんな失敗をするなんて、恥ずかしい限りです。","match":"恥ずかしい限りです","en":"Making a mistake like this is extremely embarrassing."},
       {"ja":"古い家が壊されるのは、残念な限りだ。","match":"残念な限りだ","en":"It's a great pity that the old house is being torn down."},
       {"ja":"彼女の活躍は、頼もしい限りだね。","match":"頼もしい限りだ","en":"Her success is extremely reassuring."},
-      {"ja":"子供のころの友達と再会できて、懐かしい限りだった。","match":"懐かしい限りだった","en":"Meeting a childhood friend again made me feel so nostalgic."},
+      {"ja":"こんな初歩的なミスをするとは、情けない限りだ。","match":"情けない限りだ","en":"Making such a basic mistake is truly pathetic."},
       {"ja":"毎日残業とは、気の毒な限りです。","match":"気の毒な限りです","en":"Overtime every day, how very unfortunate for you."},
       {"ja":"ありがたい限りです。","match":"ありがたい限りです","en":"I'm more grateful than I can say."}
     ],
@@ -367,7 +368,7 @@
     ],
     "subsumes": [],
     "confusables": ["kagiri","o-kagiri-ni"],
-    "detection": "Tokens: an i-adjective in 終止形 (嬉しい, 寂しい, 羨ましい, 懐かしい, ありがたい) or a na-adjective stem + な (だ 連体形: 残念|な, 気の毒|な) + 限り (限り, 名詞-普通名詞) + だ/です (助動詞) or だっ|た, or a sentence-final よ/ね or the end of the sentence. The preceding adjective expresses a feeling (嬉しい, 残念な, ありがたい). Reject a verb before 限り (知る|限り, kagiri), a time word (今日|限り|だ, 'today only'), の + 限り (力|の|限り), を|限り|に (o-kagiri-ni), and ない限り. After a bare adjective with だ/です following, 限り is this entry, not kagiri; the guard is the token before 限り (形容詞 終止形 or な) and the next token (だ/です/end)."
+    "detection": "Tokens: an i-adjective in 連体形 (嬉しい, 寂しい, 羨ましい, 情けない, 有り難い, all tagged 連体形-一般) or a na-adjective (形状詞) + な (だ 連体形: 残念|な, 気の毒|な) + 限り (限り, 名詞-普通名詞) + だ/です (助動詞) or だっ|た, then a sentence-final よ/ね or the end of the sentence. An adjective ending in ない is this entry (情けない 形容詞, 申し訳|ない(無い 形容詞) 限りです); only 助動詞 ない + 限り (続け|ない|限り) is kagiri 'unless'. The preceding adjective expresses a feeling (嬉しい, 残念な, ありがたい). Reject a verb before 限り (知る|限り, kagiri), a time word (今日|限り|だ, 'today only'), の + 限り (力|の|限り), を|限り|に (o-kagiri-ni), and 助動詞 ない + 限り. After a bare adjective with だ/です following, 限り is this entry, not kagiri; the guard is the token before 限り (形容詞 終止形 or な) and the next token (だ/です/end)."
   },
   {
     "id": "kiri-ga-nai",
@@ -387,7 +388,7 @@
       {"ja":"彼の自慢話は、始まると切りがない。","match":"切りがない","en":"Once he starts bragging, it never ends."},
       {"ja":"いくら部屋を掃除しても、きりがありません。","match":"きりがありません","en":"No matter how much I clean the room, it never ends."},
       {"ja":"心配し出すときりがないよ。","match":"きりがない","en":"If you start worrying, there's no end to it."},
-      {"ja":"質問に全部答えていたら、きりがなかった。","match":"きりがなかった","en":"If I had answered every question, there would have been no end."},
+      {"ja":"質問に全部答えていたら、きりがなかった。","match":"きりがなかった","en":"I tried to answer every question, but there was no end to them."},
       {"ja":"他人と比べだしたらキリがないでしょ。","match":"キリがない","en":"If you start comparing yourself with others, it never ends."},
       {"ja":"例を挙げればきりがない。","match":"きりがない","en":"Examples are endless once you start listing them."}
     ],
@@ -399,7 +400,7 @@
     ],
     "subsumes": [],
     "confusables": ["kiri"],
-    "detection": "Tokens: きり (切り, 名詞-普通名詞) + が (格助詞) + ない (無い, 形容詞-非自立可能), or なかっ|た, or あり|ませ|ん in the polite form: 言い|出し|たら|きり|が|ない. The katakana キリ is an unknown word to UniDic (lexeme ?, no 切り), so accept キリ + が + ない by surface. A conditional (たら, ば, と) or a verb-te-form usually precedes it, and the clause means 'if you start, it never ends'. Reject きり as 助詞-副助詞 (会っ|た|きり, 寝|た|きり, N3 'since then'), きりがいい and きりがつく (the same 切り noun with いい or 付く, not 無い). The guard is 切り(名詞) + が + 無い, with が directly before ない."
+    "detection": "Tokens: きり + が (格助詞) + ない (無い, 形容詞-非自立可能), or なかっ|た, or あり|ませ|ん in the polite form: 言い|出し|たら|きり|が|ない. The hiragana きり is usually 切り (名詞-普通名詞), but UniDic tags it きり (助詞-副助詞) after と in 心配し出す|と|きり|が|ない, and the kanji 切り is 切り 名詞; the katakana キリ is an unknown word (lexeme ?). So accept any of the three + が + ない by surface, not by tag. A conditional (たら, ば, と) or a verb-te-form usually precedes it, and the clause means 'if you start, it never ends'. Reject た + きり (会っ|た|きり, 寝|た|きり, 'since then', the particle きり with no が + ない right after it), きりがいい and きりがつく (きり + が + 良い / 付く, not 無い). The guard is きり/切り/キリ + が + 無い with the three tokens adjacent, not the tag of きり."
   },
   {
     "id": "hame-ni-naru",
@@ -446,7 +447,7 @@
     "connection": ["V-plain + 始末だ / 始末です / 始末で","Clause-plain + 始末だ"],
     "examples": [
       {"ja":"彼は借金を返さないどころか、また貸してくれと言う始末だ。","match":"言う始末だ","en":"Not only does he not repay his debt, he even asks to borrow more."},
-      {"ja":"道に迷うわ財布は落とすわで、さんざんな始末だった。","match":"さんざんな始末だった","en":"I got lost and dropped my wallet, which was a miserable outcome."},
+      {"ja":"買ったばかりのスマホを落として、画面まで割る始末だ。","match":"割る始末だ","en":"I dropped my brand-new phone and even ended up cracking the screen."},
       {"ja":"注意しても聞かず、挙げ句の果てに逆ギレする始末だ。","match":"する始末だ","en":"He doesn't listen to warnings, and in the end he even flies off the handle."},
       {"ja":"息子は宿題もせず、ゲームばかりしている始末です。","match":"いる始末です","en":"My son doesn't even do his homework and just plays games."},
       {"ja":"何度言ってもわからず、とうとう先生まで呼ばれる始末だった。","match":"呼ばれる始末だった","en":"He wouldn't get it however many times I said it, and in the end even the teacher was called in."},
@@ -462,12 +463,12 @@
     ],
     "subsumes": [],
     "confusables": ["hame-ni-naru","ageku"],
-    "detection": "Tokens: a verb or clause in 連体形 + 始末 (始末, 名詞-普通名詞) + だ/です (助動詞) or だっ|た, で: 言う|始末|だ, さんざん|な|始末|だっ|た, される|始末|で. The 始末 states a sorry outcome after a list of bad events (どころか, 挙げ句, わ〜わ). Reject 始末する/始末した (始末 + 為る), 始末書 and 後始末 (compounds), and 始末に負えない (始末 + に + 負う, an idiom with に). The hiragana しまつ has the same lexeme. Confused with hame-ni-naru and ageku."
+    "detection": "Tokens: a verb or clause in 連体形 + 始末 (始末, 名詞-普通名詞) + だ/です (助動詞) or だっ|た, で: 言う|始末|だ, 呼ば|れる|始末|だっ|た, 通報|さ|れる|始末|で. The 始末 states a sorry outcome after a list of bad events (どころか, 挙げ句, くせに). An adjective + 始末 (ひどい始末だ, さんざんな始末) and この/あの + 始末 are the plain noun 'sorry state', not this verb-clause pattern; require a verb or auxiliary (れる, ている) directly before 始末. Reject 始末する/始末した (始末 + 為る), 始末書 and 後始末 (compounds), and 始末に負えない (始末 + に + 負う, an idiom with に). The hiragana しまつ has the same lexeme. Confused with hame-ni-naru and ageku."
   },
   {
     "id": "houdai",
     "form": "〜放題",
-    "variants": ["食べ放題","やりたい放題","言いたい放題","飲み放題","〜放題"],
+    "variants": ["〜たい放題","〜放題だ","〜放題の","〜放題に"],
     "meaning": "as much as one likes; unchecked",
     "kind": "construction",
     "register": "neutral",
@@ -483,7 +484,7 @@
       {"ja":"飲み放題のコースで予約しました。","match":"飲み放題","en":"I booked a course with all-you-can-drink."},
       {"ja":"このプランなら、ネットも使い放題だ。","match":"使い放題","en":"With this plan, internet use is unlimited."},
       {"ja":"空き家は荒れ放題で、屋根も壊れていた。","match":"荒れ放題","en":"The vacant house was left to ruin, and the roof was broken too."},
-      {"ja":"親がいない間、兄弟でやりたい放題だった。","match":"やりたい放題","en":"While our parents were away, we brothers did whatever we pleased."},
+      {"ja":"部屋は散らかし放題で、足の踏み場もない。","match":"散らかし放題","en":"The room is such a mess there's nowhere to step."},
       {"ja":"好き放題言われても、黙って聞くしかなかった。","match":"好き放題","en":"I had no choice but to listen quietly while they said whatever they liked."}
     ],
     "counterexamples": [
@@ -493,7 +494,7 @@
     ],
     "subsumes": [],
     "confusables": ["ppanashi","dake"],
-    "detection": "Tokens: 放題 (放題, 名詞-普通名詞, one token, always separate) preceded by a verb in 連用形 (食べ|放題, 飲み|放題, 伸び|放題, 荒れ|放題, 使い|放題), by 連用形 + たい (言い|たい|放題, やり|たい|放題) or by a noun/na-adjective stem (好き|放題, 勝手|放題). It is followed by だ/で/の/に/する or a verb of the same action. Not fused with preceding words in any form checked: 食べ放題, 飲み放題, 好き放題, 勝手放題, 荒れ放題, 伸び放題 and 使い放題 are all two tokens. Reject っ放し (ppanashi) and 放し飼い. This is a productive suffix, but the only common forms are a short list; as a standalone entry it behaves like vocabulary."
+    "detection": "Tokens: 放題 (放題, 名詞-普通名詞, one token, always separate) preceded by a verb in 連用形 (食べ|放題, 飲み|放題, 伸び|放題, 荒れ|放題, 使い|放題), by 連用形 + たい (言い|たい|放題, やり|たい|放題) or by a noun/na-adjective stem (好き 形状詞|放題, 勝手 名詞|放題). It is followed by だ/で/の/に/する or a verb of the same action. Not fused with the preceding word in any form checked (食べ, 飲み, 使い, 伸び, 荒れ, 散らかし, 好き, 勝手 + 放題 are all two tokens), and it attaches to almost any verb stem, so it is kept as a productive pattern, like darake and mamire. Reject っ放し (放し 接尾辞-形状詞的, ppanashi) and 放し飼い."
   },
   {
     "id": "makuru",
@@ -511,7 +512,7 @@
       {"ja":"週末は食べまくって、三キロ太った。","match":"食べまくって","en":"I ate like crazy over the weekend and gained three kilos."},
       {"ja":"彼女は新しい靴を買いまくっている。","match":"買いまくっている","en":"She's buying new shoes like there's no tomorrow."},
       {"ja":"夏休みは友達と遊びまくった。","match":"遊びまくった","en":"I played around with my friends nonstop during summer vacation."},
-      {"ja":"動画を見まくって、気づいたら朝だった。","match":"見まくって","en":"I watched videos nonstop, and when I noticed it was morning."},
+      {"ja":"動画を見まくって、気づいたら朝だった。","match":"見まくって","en":"I binge-watched videos, and before I knew it, it was morning."},
       {"ja":"昨夜は歌いまくったから、声が出ない。","match":"歌いまくった","en":"I sang my heart out last night, so my voice is gone."},
       {"ja":"弟にラインを送りまくったのに、既読にならない。","match":"送りまくった","en":"I sent my brother tons of messages, but they still aren't marked as read."},
       {"ja":"彼は試験前、問題集を解きまくっていた。","match":"解きまくっていた","en":"Before the exam he was working through problem sets nonstop."},
@@ -531,7 +532,7 @@
   {
     "id": "buri",
     "form": "〜ぶり",
-    "variants": ["〜ぶり","〜っぷり","飲みっぷり","仕事ぶり"],
+    "variants": ["〜ぶり","〜っぷり"],
     "meaning": "manner, way of doing",
     "kind": "construction",
     "register": "neutral",
@@ -544,7 +545,7 @@
       {"ja":"新入社員の働きぶりに、課長も満足している。","match":"働きぶり","en":"Even the section chief is pleased with the way the new employee works."},
       {"ja":"あの人の食べっぷりは、見ていて気持ちがいい。","match":"食べっぷり","en":"It's a joy to watch the way he eats."},
       {"ja":"彼女の暮らしぶりは質素だった。","match":"暮らしぶり","en":"Her way of living was plain."},
-      {"ja":"見事な飲みっぷりだね。","match":"飲みっぷり","en":"What a great way to drink!"},
+      {"ja":"見事な飲みっぷりだね。","match":"飲みっぷり","en":"You sure can knock them back!"},
       {"ja":"先生の話しぶりはとても穏やかだ。","match":"話しぶり","en":"The teacher speaks in a very gentle way."},
       {"ja":"男っぷりのいい俳優ですね。","match":"男っぷり","en":"He's a handsome, dashing actor."},
       {"ja":"彼の指揮ぶりに、観客は魅了された。","match":"指揮ぶり","en":"The audience was captivated by the way he conducted."},
@@ -563,7 +564,7 @@
   {
     "id": "buru",
     "form": "〜ぶる",
-    "variants": ["〜ぶる","〜ぶって","〜ぶった","いい子ぶる"],
+    "variants": ["〜ぶる","〜ぶって","〜ぶった","〜ぶらない"],
     "meaning": "act as if, pretend to be",
     "kind": "construction",
     "register": "neutral",
@@ -585,16 +586,17 @@
     "counterexamples": [
       {"ja":"寒くて体がぶるぶる震える。","en":"I'm so cold my body is shaking.","why":"ぶるぶる is a reduplicated onomatopoeia, with no noun before ぶる"},
       {"ja":"試合の前で、気持ちが高ぶる。","en":"My feelings run high before the match.","why":"高ぶる is one verb 'be excited' whose tokens include ぶる only inside the word"},
-      {"ja":"彼は私の肩を揺さぶって、起こそうとした。","en":"He shook my shoulder to try to wake me.","why":"揺さぶる is one verb, with ぶる as part of the stem"}
+      {"ja":"彼は私の肩を揺さぶって、起こそうとした。","en":"He shook my shoulder to try to wake me.","why":"揺さぶる is one verb, with ぶる as part of the stem"},
+      {"ja":"帽子をかぶって出かけた。","en":"I put on a hat and went out.","why":"かぶる (被る) is the verb 'put on', after the object particle を, not a noun + ぶる"}
     ],
     "subsumes": [],
     "confusables": ["buri","furi-o-suru"],
-    "detection": "Tokens: a noun, na-adjective stem or i-adjective stem + ぶる (振る, 接尾辞-動詞的 五段-ラ行) in any form: 先輩|ぶっ|て, いい|子|ぶる, 金持ち|ぶっ|た, もったい|ぶら|ない (もったい is 勿体, 名詞), 偉|ぶら|ない (偉 is the 語幹 of 偉い), 利口|ぶっ|て (利口 is 形状詞). The noun before it names the role or quality that is faked. Single-token verbs that end in ぶる are not matches, and this list is closed: 高ぶる, 揺さぶる, 荒ぶる. Also reject ぶるぶる (副詞) and ぶる after a bare verb. It is confused with buri (the noun suffix ぶり), which ends in り, not る."
+    "detection": "Tokens: a noun, na-adjective stem or i-adjective stem + ぶる (振る, 接尾辞-動詞的 五段-ラ行) in any form: 先輩|ぶっ|て, いい|子|ぶる, 金持ち|ぶっ|た, もったい|ぶら|ない (もったい is 勿体, 名詞), 偉|ぶら|ない (偉 is the 語幹 of 偉い), 利口|ぶっ|て (利口 is 形状詞); 通ぶって is misread as 通り (名詞) + ぶっ, still a noun before the suffix. The noun before it names the role or quality that is faked; the suffix attaches freely (先輩, 学者, 大人, 金持ち, 通), so the guard is the tag 接尾辞-動詞的 with lexeme 振る. Verbs that end in ぶる are single tokens tagged 動詞-一般 and are not matches, for example 高ぶる, 揺さぶる, 荒ぶる, 被る (かぶる), しゃぶる, くすぶる. Also reject ぶるぶる (副詞) and ぶる after a bare verb. It is confused with buri (the noun suffix ぶり), which ends in り, not る."
   },
   {
     "id": "meku",
     "form": "〜めく",
-    "variants": ["〜めく","〜めいた","〜めいて","〜めかして","春めく","謎めいた"],
+    "variants": ["〜めく","〜めいた","〜めいて","〜めかして"],
     "meaning": "show signs of, -ish",
     "kind": "construction",
     "register": "neutral",
@@ -620,12 +622,12 @@
     ],
     "subsumes": [],
     "confusables": ["jimita","biru"],
-    "detection": "Tokens: a noun + めく (めく, 接尾辞-動詞的 五段-カ行) in any form: 春|めい|て (イ音便 連用形), 謎|めい|た, 冗談|めかし|て (めかす, 接尾辞-動詞的 五段-サ行), 春|めく. A verb stem can also precede it (脅し|めい|た, 脅す 連用形). Single-token verbs that end in めく are not matches, and the list is closed: ざわめく, きらめく, ほのめく (仄めく), ひらめく (閃く), うごめく, どよめく, ときめく, ほのめかす; so is 古めかしい (one adjective). Also reject めくる (捲る, 一枚めくった: めくっ). Often confused with jimita and biru, which also make a noun into a state."
+    "detection": "Tokens: a noun + めく (めく, 接尾辞-動詞的 五段-カ行) in any form: 春|めい|て (イ音便 連用形), 謎|めい|た, 冗談|めかし|て (めかす, 接尾辞-動詞的 五段-サ行), 春|めく. A verb stem can also precede it (脅し|めい|た, 脅す 連用形). Verbs that end in めく are single tokens tagged 動詞-一般 and are not matches, for example ざわめく, きらめく, ゆらめく (揺らめく), よろめく, ひらめく (閃く), うごめく, どよめく, ときめく, ほのめかす; so is 古めかしい (one adjective). The guard is the tag 接尾辞-動詞的 (lexeme めく or めかす) after a noun or a verb 連用形. Also reject めくる (捲る, 一枚めくった: めくっ). Often confused with jimita and biru, which also make a noun into a state."
   },
   {
     "id": "jimita",
     "form": "〜じみた",
-    "variants": ["〜じみた","〜じみる","〜じみて","子供じみた"],
+    "variants": ["〜じみた","〜じみる","〜じみて"],
     "meaning": "like, smacking of (negative)",
     "kind": "construction",
     "register": "neutral",
@@ -640,19 +642,19 @@
       {"ja":"そんな年寄りじみた考え方は、やめたほうがいい。","match":"年寄りじみた","en":"You should drop such an old-man way of thinking."},
       {"ja":"芝居じみた言い方はやめてくれ。","match":"芝居じみた","en":"Please stop talking so theatrically."},
       {"ja":"彼の行動は、どこか狂気じみている。","match":"狂気じみている","en":"His behavior is somehow crazed."},
-      {"ja":"垢じみた服を着て、道端に座っていた。","match":"垢じみた","en":"He sat by the road in grimy clothes."},
+      {"ja":"説教じみたことは言いたくないけど、早く寝なさい。","match":"説教じみた","en":"I don't want to lecture you, but go to bed early."},
       {"ja":"そのやり方は、詐欺じみていると思う。","match":"詐欺じみて","en":"I think that method is close to fraud."},
       {"ja":"冗談じみた話だが、本当に起きたことだ。","match":"冗談じみた","en":"It sounds like a joke, but it really happened."}
     ],
     "counterexamples": [
       {"ja":"彼女はいつも地味な色の服を選ぶ。","en":"She always chooses clothes in plain colors.","why":"地味 is a na-adjective whose reading じみ is a different word from 染みる"},
       {"ja":"煙が目に染みて、涙が出た。","en":"The smoke stung my eyes, and tears came out.","why":"染みる is the verb 'sting, soak in', not a noun + suffix じみる (the reading is しみ)"},
-      {"ja":"汗じみたシャツを洗濯機に入れた。","en":"I put the sweat-stained shirt in the washing machine.","why":"the literal 'stained with sweat' is the verb 染みる; it has the same tokens as the suffix but means a real stain"},
+      {"ja":"汗じみたシャツを洗濯機に入れた。","en":"I put the sweat-stained shirt in the washing machine.","why":"the literal stain sense of じみる (as in 垢じみた), not 'smacking of'; it has the same tokens as the pattern"},
       {"ja":"彼は子供のような笑顔を見せた。","en":"He showed a childlike smile.","why":"のような is the ordinary simile; it has no negative じみた"}
     ],
     "subsumes": [],
     "confusables": ["meku","ppoi","rashii"],
-    "detection": "Tokens: a noun + じみ (染みる, 接尾辞-動詞的 上一段-マ行 連用形) + た/て (+ いる), or じみる/じみた: 子供|じみ|た, 所帯|じみ|た, 狂気|じみ|て|いる, 詐欺|じみ|て, 芝居|じみ|た. The lexeme of じみ is 染みる, the same as the verb 染みる 'soak, sting' (目|に|染み|て, tagged 動詞-一般, not 接尾辞-動詞的), so the guard is the tag 接尾辞-動詞的 and a noun directly before it. The suffix only has a negative colour: 'like X, in a bad way'. The literal stain use 汗じみた has the same tokens and cannot be told apart by a matcher, so accept it as a false positive. Reject 地味 (形状詞) and 染み. Confused with meku (めく) and ppoi."
+    "detection": "Tokens: a noun + じみ (染みる, 接尾辞-動詞的 上一段-マ行 連用形) + た/て (+ いる), or じみる/じみた: 子供|じみ|た, 所帯|じみ|た, 狂気|じみ|て|いる, 詐欺|じみ|て, 芝居|じみ|た. The lexeme of じみ is 染みる, the same as the verb 染みる 'soak, sting' (目|に|染み|て, tagged 動詞-一般, not 接尾辞-動詞的), so the guard is the tag 接尾辞-動詞的 and a noun directly before it. The suffix only has a negative colour: 'like X, in a bad way'. The literal stain use after a dirt noun (汗|じみ|た, 垢|じみ|た, 油じみた) has the same tokens; a short stop list of those nouns (汗, 垢, 油, 血) removes it. Reject 地味 (形状詞) and 染み. Confused with meku (めく) and ppoi."
   },
   {
     "id": "biru",
@@ -686,22 +688,22 @@
   {
     "id": "zukume",
     "form": "〜ずくめ",
-    "variants": ["黒ずくめ","いいことずくめ","〜ずくめの","〜ずくめだ"],
+    "variants": ["〜ずくめの","〜ずくめだ","〜ずくめで","〜ことずくめ"],
     "meaning": "nothing but, entirely",
     "kind": "construction",
     "register": "neutral",
     "level": "N1",
     "sources": {"jlptsensei":"N1","bunpro":"N1","tanos":"N1","jt4y":"N1"},
     "prototype": false,
-    "connection": ["N + ずくめ","i-Adj + こと + ずくめ"],
+    "connection": ["N + ずくめ","i-Adj + こと + ずくめ","na-Adj + ずくめ"],
     "examples": [
       {"ja":"彼は上から下まで黒ずくめの服装だった。","match":"黒ずくめ","en":"He was dressed in black from head to toe."},
       {"ja":"今日はいいことずくめの一日だった。","match":"いいことずくめ","en":"Today was a day when everything went well."},
       {"ja":"規則ずくめの生活に息が詰まる。","match":"規則ずくめ","en":"Life full of nothing but rules is suffocating."},
-      {"ja":"今月は出費ずくめで、お金が残らない。","match":"出費ずくめ","en":"This month was nothing but expenses, and no money is left."},
+      {"ja":"結構ずくめの話だが、どこか怪しい。","match":"結構ずくめ","en":"It sounds perfect in every way, but something about it is fishy."},
       {"ja":"全身白ずくめの男が立っていた。","match":"白ずくめ","en":"A man dressed all in white was standing there."},
       {"ja":"悪いことずくめで、泣きたくなった。","match":"悪いことずくめ","en":"Everything went wrong, and I felt like crying."},
-      {"ja":"彼女はいつも黒ずくめだ。","match":"黒ずくめ","en":"She is always dressed all in black."},
+      {"ja":"今年は異例ずくめのシーズンだった。","match":"異例ずくめ","en":"This year was an unusual season in every respect."},
       {"ja":"ごちそうずくめのお正月だった。","match":"ごちそうずくめ","en":"It was a New Year with nothing but feasts."}
     ],
     "counterexamples": [
@@ -711,12 +713,12 @@
     ],
     "subsumes": [],
     "confusables": ["darake","mamire"],
-    "detection": "Tokens: a noun, color word or noun + こと, then ずくめ (尽くめ, 接尾辞-名詞的): 黒|ずくめ, 白|ずくめ, 規則|ずくめ, 出費|ずくめ, いい|こと|ずくめ, 悪い|こと|ずくめ, ご|ちそう|ずくめ (ごちそう is 接頭辞 + 馳走). It is followed by の, だ, a comma or the end of the sentence. No fused words were found, since every tested word splits as noun + ずくめ. Reject 力ずく (ずく, one token), 宝尽くし (one noun), and the verb 尽くす (全力を尽くした). The suffix is limited to a short list of nouns, so it is closer to vocabulary than grammar."
+    "detection": "Tokens: a noun, color word or noun + こと, then ずくめ (尽くめ, 接尾辞-名詞的): 黒|ずくめ, 白|ずくめ, 規則|ずくめ, 異例|ずくめ, 結構 (形状詞)|ずくめ, いい|こと|ずくめ, 悪い|こと|ずくめ, ご|ちそう|ずくめ (ごちそう is 接頭辞 + 馳走). It is followed by の, だ, で, a comma or the end of the sentence. No fused words were found: every tested word splits as noun + ずくめ, and the nouns are an open set (colors, こと, 規則, 異例, ごちそう), so it is kept as a productive pattern, like darake and mamire. Reject 力ずく (ずく, one token), 宝尽くし (one noun, 宝尽くし), and the verb 尽くす (全力を尽くした)."
   },
   {
     "id": "gurumi",
     "form": "〜ぐるみ",
-    "variants": ["家族ぐるみ","町ぐるみ","〜ぐるみで","〜ぐるみの"],
+    "variants": ["〜ぐるみで","〜ぐるみの"],
     "meaning": "the whole (group) together",
     "kind": "construction",
     "register": "neutral",
@@ -730,9 +732,9 @@
       {"ja":"その不正は会社ぐるみで行われていた。","match":"会社ぐるみ","en":"The misconduct was carried out by the company as a whole."},
       {"ja":"地域ぐるみの防災訓練が行われた。","match":"地域ぐるみ","en":"A disaster drill involving the whole community was held."},
       {"ja":"学校ぐるみでいじめを隠していたことが発覚した。","match":"学校ぐるみ","en":"It came out that the school as a whole had covered up the bullying."},
-      {"ja":"国ぐるみで選手を育てている。","match":"国ぐるみ","en":"The whole nation is nurturing its athletes."},
-      {"ja":"一家ぐるみで、北海道に引っ越した。","match":"一家ぐるみ","en":"The entire family moved to Hokkaido."},
-      {"ja":"彼の家とは、家族ぐるみで仲良くしている。","match":"家族ぐるみ","en":"Our families are all good friends with his family."}
+      {"ja":"国ぐるみのドーピングが問題になった。","match":"国ぐるみ","en":"State-sponsored doping became an issue."},
+      {"ja":"村ぐるみで、空き家の再生に取り組んでいる。","match":"村ぐるみ","en":"The whole village is working together to restore empty houses."},
+      {"ja":"業界ぐるみの談合が明るみに出た。","match":"業界ぐるみ","en":"Industry-wide bid-rigging came to light."}
     ],
     "counterexamples": [
       {"ja":"娘は大きなぬいぐるみを抱いて寝ている。","en":"My daughter sleeps hugging a big stuffed toy.","why":"ぬいぐるみ is one noun 'stuffed toy', not a noun + ぐるみ"},
@@ -741,12 +743,12 @@
     ],
     "subsumes": [],
     "confusables": [],
-    "detection": "Tokens: a noun + ぐるみ (ぐるみ, 接尾辞-名詞的, or untagged in some words) followed by で, の, だ, に or a comma: 町|ぐるみ, 家族|ぐるみ, 会社|ぐるみ, 地域|ぐるみ, 学校|ぐるみ, 国|ぐるみ, 一家|ぐるみ. Fused words that must be rejected as a closed list: ぬいぐるみ (縫い包み), 着ぐるみ, 身ぐるみ (身包み), each one 名詞-普通名詞 token. The suffix is limited to groups of people (家族, 町, 会社, 学校, 国), so it is closer to vocabulary than to grammar and is a candidate for rejection."
+    "detection": "Tokens: a noun + ぐるみ (lexeme ぐるみ, 接尾辞-名詞的) followed by で, の, だ, に or a comma: 町|ぐるみ, 家族|ぐるみ, 会社|ぐるみ, 地域|ぐるみ, 学校|ぐるみ, 国|ぐるみ, 村|ぐるみ, 業界|ぐるみ. The noun is any group or organization, an open set, and every one tested is a separate token, so it is kept as a productive pattern, like darake and mamire. Reject the fused nouns ぬいぐるみ (縫い包み), 着ぐるみ and 身ぐるみ (身包み), each one 名詞-普通名詞 token, so the tag 接尾辞-名詞的 already excludes them."
   },
   {
     "id": "nami",
     "form": "〜並み",
-    "variants": ["人並み","プロ並み","例年並み","〜並みの"],
+    "variants": ["〜並みの","〜並みだ","〜並みに","〜なみ"],
     "meaning": "on par with, equal to",
     "kind": "construction",
     "register": "neutral",
@@ -772,6 +774,6 @@
     ],
     "subsumes": [],
     "confusables": [],
-    "detection": "Tokens: a noun + 並み (並み, 接尾辞-名詞的), then の, だ, に or a comma: 人|並み|の, プロ|並み|だ, 例年|並み|の, 世間|並み, 大人|並み, 四|月|並み (数詞 + 月 + 並み). The noun before it is the standard of comparison, and the meaning is 'at the level of'. Fused words that must be rejected as a closed list: 町並み (町並み, 街並み, one token), 家並み (屋並み), 足並み, 月並み (形状詞), 毛並み, 軒並み, and the verb 並み外れる (並外れる) and 並み居る. Also reject 並 as in 並盛 or 波. The suffix attaches to nouns of a short list, so it is closer to vocabulary than grammar."
+    "detection": "Tokens: a noun + 並み (並み, 接尾辞-名詞的), then の, だ, に or a comma: 人|並み|の, プロ|並み|だ, 例年|並み|の, 世間|並み, 大人|並み, 四|月|並み (数詞 + 月 + 並み); the kana なみ has the same lexeme and tag (プロ|なみ|だ). The noun before it is the standard of comparison, and the meaning is 'at the level of'; it attaches to an open set of nouns (プロ, 大人, 例年, ネイティブ, 四月), each a separate token, so it is kept as a productive pattern, like darake and mamire. Reject the fused words, each one token with another tag: 町並み/街並み, 家並み, 足並み, 毛並み, 軒並み (名詞-普通名詞), 月並み (形状詞), and the verbs 並外れる and 並み居る. Also reject 並 as in 並盛 or 波."
   }
 ]
