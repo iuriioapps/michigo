@@ -1,0 +1,222 @@
+[
+  {
+    "id": "betsu-ni-nai",
+    "verdict": "fixed",
+    "changes": [
+      "example 1: en was the loose 'Not really', now 'I'm not really mad'",
+      "counterexample 3: replaced the odd これは別にあるから with 予備は別にあるから",
+      "detection: bare 別に kept as the curt reply, with why (negative understood, nothing follows); 別にいい named as a reject",
+      "tokens: 別 (別 名詞) + に (だ 連用形-ニ) confirmed; 怒ってない is て (てる 未然形) + ない 助動詞; 高くない, わけじゃない, なんかない end in 無い 形容詞; ません is ます 未然形 + ず; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "metta-ni-nai",
+    "verdict": "fixed",
+    "changes": [
+      "variants: no bare 滅多に variant present (滅多に〜ない and めったにない both carry the negative), kept",
+      "counterexample 2: ボールはめった打ちにされた was unnatural, replaced with ピッチャーは初回からめった打ちにされた",
+      "tokens: めった/滅多 (滅多 形状詞-一般) + に (だ 連用形-ニ) confirmed; めった打ち (滅多打ち 名詞) and めったやたら (滅多矢鱈 副詞) are single tokens as claimed; 釣れ misread as 吊る, noted in detection; no earlier entry duplicates it (b10 koto-wa-nai uses めったにありません inside its own match)"
+    ]
+  },
+  {
+    "id": "totemo-nai",
+    "verdict": "ok",
+    "changes": [
+      "tokens: とても (迚も 副詞) confirmed; 食べきれない is 食べ + きれ (切る 未然形) + ない 助動詞; とてもじゃないが is とても + じゃ (だ 連用形-融合) + ない (無い 形容詞) + が (接続助詞) as claimed; 信じ is 信ずる サ変; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "mattaku-nai",
+    "verdict": "fixed",
+    "changes": [
+      "detection: named the forms of ませ + ん (ます 未然形 + ず) and なかっ (ない 連用形-促音便)",
+      "tokens: 全く / まったく both lexeme 全く 副詞; 関係がない, 悪気はない, まったくない end in 無い 形容詞; まったくの is 全く + の 格助詞; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "nakanaka-nai",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 1: ラーメンはなかなか上手だ was wrong (上手 is a skill word), now なかなかうまいね",
+      "example 2: en 'just isn't coming' now 'is taking forever to come'",
+      "detection: both readings are one token なかなか (中々 副詞), only the negative separates them",
+      "tokens: なかなか (中々 副詞), 動かなくて is なく (ない 助動詞 連用形) + て, くれない is 呉れる 未然形 + ない as claimed; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "sae-ba",
+    "verdict": "fixed",
+    "changes": [
+      "variants: さえ〜なら had no example; added 体さえ丈夫なら and the common あなたさえよければ",
+      "connection: added N + さえ + i-Adj-stem + ければ and N + さえ + na-Adj + なら",
+      "example 3: en 'If only he didn't come' now 'If only he weren't coming'",
+      "counterexample 3: the unnatural 彼女にさえ話さなかったことを、話せばよかった replaced with 名前さえ知らない相手でも、聞けば教えてくれるよ",
+      "detection: the guard is now 'the predicate that さえ marks must be conditional', not 'no 。 between さえ and ば', which the new counterexample passes",
+      "tokens: さえ 助詞-副助詞; あれ/いれ/すれ/取れれ/よけれ 仮定形 + ば 接続助詞; 来なければ is 来 + なけれ (ない 仮定形) + ば; たら is た 仮定形; 静かで is だ 連用形-一般 as claimed; no earlier entry duplicates it (sae is a later id)"
+    ]
+  },
+  {
+    "id": "ba-noni",
+    "verdict": "fixed",
+    "changes": [
+      "meaning: 'if ~ then (but you don't)' now 'if only ~ (but it isn't so)'",
+      "variants: added 〜ばいいのにな (with example 4) and named the counterfactual ば〜のに; connection: added ければいいのに and なければいいのに",
+      "counterexample 4: why corrected, the point is that ば sits inside a quote and does not condition the のに clause",
+      "detection: guard for a quote or clause break between ば and のに in the counterfactual reading",
+      "scope: only ばいいのに and counterfactual ば〜のに; ばよかったのに (ba-yokatta) and たらいいのに (tara-ii) appear only as counterexamples, so no sentence counts for two ids",
+      "tokens: のに is の (準体助詞) + に (格助詞) everywhere, いい before の is 良い 連体形; counterfactual 読めるのに and なれたのに end in plain predicate + の + に as claimed"
+    ]
+  },
+  {
+    "id": "ba-ii",
+    "verdict": "fixed",
+    "changes": [
+      "variants and meaning: added the wish 〜ばいいな 'I hope ~' with example 9 (明日、晴れればいいな)",
+      "detection: いい + な counts here, いい + の + に + な is ba-noni",
+      "tokens: いい is 良い 終止形 before です/か/よ/、 and 連体形 before ん/だけ/の, as the detection says; ばよかった has よかっ (良い 連用形-促音便); no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "nai-to",
+    "verdict": "fixed",
+    "changes": [
+      "detection: the claimed guard was wrong; sentence-final と (行かないと。, 返事しないと。) is 助詞-格助詞 like the quoting と, so the guard now tests the next token, not the part of speech",
+      "subsumes: added to-conditional, whose connection V-nai + と would also count the 'or else' examples (急がないと、…)",
+      "scope: only bare, sentence-final and 'or else' ないと; ないといけない and ないとだめ stay with naito-ikenai (counterexample 4)",
+      "tokens: ない (ない 助動詞 終止形) + と; と is 接続助詞 before ね, な and 、, 格助詞 before 。 and before 決める/思う/言う; じゃないと is だ 連用形-融合 + 無い + と; 帰ら misread as 返る, noted in detection"
+    ]
+  },
+  {
+    "id": "te-goran",
+    "verdict": "ok",
+    "changes": [
+      "tokens: V-te + ごらん/ご覧 (御覧 名詞-普通名詞), なさい is 為さる 命令形, ごらんよ adds よ 終助詞, as claimed; ご覧ください, ご覧の通り, ご覧になる all have 御覧 without a preceding て; no earlier entry duplicates it (b06 uses 話してごらん only inside another pattern's example)"
+    ]
+  },
+  {
+    "id": "furi-o-suru",
+    "verdict": "fixed",
+    "changes": [
+      "variants: フリ had no example; added 忙しいフリする, and the common 知らんぷり(を)する with an example",
+      "connection: added i-Adj + ふりをする",
+      "counterexample 3: 振り返った shares no ふり token, replaced with the suffix ぶり (話しぶりをまねする); added 振り 'dance moves' (曲の振りを覚えていない)",
+      "detection: require 振り 名詞 + を + 為る; the suffix ぶり is 振り 接尾辞-名詞的",
+      "tokens: ふり, フリ, 振り and the ぷり of 知らんぷり are all 振り 名詞-普通名詞; ぶり in 三年ぶり, 話しぶり is 振り 接尾辞-名詞的; 素振り and 振り掛け are single tokens as claimed; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "sasete-morau",
+    "verdict": "fixed",
+    "changes": [
+      "example 1: 帰らせてもらいます repeated the verb of example 8 and a b03 counterexample, replaced with この席、使わせてもらいますね",
+      "example 4: en now 'They let me knock off work early yesterday'",
+      "meaning: added the humble 'I will ~' use (検討させていただきます); variant さしてもらう renamed (さ)してもらう, since the example is 帰らす",
+      "detection: request forms させてもらえませんか / いただけませんか belong to sasete-kudasai (b05), which subsumes this entry",
+      "tokens: させ is lexeme させる, せ is せる, both 助動詞 下一段-サ行 連用形 (the detection said せる for both); suru verbs are noun + さ (為る 未然形-サ) + せ; 帰らし is 帰らす 連用形; 見せ is 見せる 動詞; 帰ら misread as 返る, noted"
+    ]
+  },
+  {
+    "id": "ta-tokoro-kekka",
+    "verdict": "fixed",
+    "changes": [
+      "detection: the guard also accepts たところ with no comma before a new clause",
+      "tokens: V + た (タ 連体形) + ところ (所 名詞-普通名詞) everywhere, identical to ta-tokoro, ta-tokoro-de (で 格助詞) and tokoro-ni; only the next token separates them, as claimed; no earlier entry duplicates it (b04 ta-tokoro lists たところ、 as a counterexample pointing here)"
+    ]
+  },
+  {
+    "id": "noni-mokuteki",
+    "verdict": "reject",
+    "changes": [
+      "duplicate of noni-purpose (b08): same form V-dict + のに / のには, same purpose meaning, no form that noni-purpose lacks",
+      "tokens: V 連体形 + の (準体助詞) + に (格助詞) (+ は), identical to noni-purpose and to concessive noni, as the detection says"
+    ]
+  },
+  {
+    "id": "temo-shou-ga-nai",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added 〜ても仕方ありません, which example 7 already shows",
+      "subsumes: added temo and tatte, the shorter patterns inside ても and たって",
+      "tokens: しょう (仕様 名詞) + が + ない (無い), 仕方 + が + ない, and 仕方ない as one token 仕方無い 形容詞, as claimed; 言ったって is た + って (つう 助動詞) here; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "temo-hajimaranai",
+    "verdict": "fixed",
+    "changes": [
+      "example 6: 後悔してみても始まらない and its en 'Even trying to regret it' were odd, replaced with 部屋にこもっていても始まらないよ",
+      "subsumes: added temo and tatte",
+      "tokens: 始まら (始まる 動詞-一般 未然形) + ない as claimed; 言ったって and こぼしたって give one token たって (助詞-接続助詞), unlike た + って in temo-shou-ga-nai, so detection now accepts both; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "te-sumu",
+    "verdict": "fixed",
+    "changes": [
+      "example 2: 十分で済みました reads as 'enough' (じゅうぶん) before 'ten minutes', replaced with 三十分で済みました",
+      "example 6: 薬を塗って済む is unnatural (塗っておけば済む), replaced with 笑って済む話じゃない",
+      "detection: すみません can follow て directly (遅れてすみません), so the 'missing て/で' guard was wrong; the apology form is now rejected after て, and では済まない is pointed to de-wa-sumanai",
+      "tokens: 済む 動詞-一般 五段-マ行 after て (接続助詞) or で (格助詞); 十分 is read as 形状詞 + だ; 済ませ is 済ま (済む 未然形) + せ (せる), as claimed; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "te-wa-ikenai-kara",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the common 〜といけないので, with example 9 (迷うといけないので)",
+      "example 5: loose en 'nothing rude happens to our guests' now 'so as not to be rude to our guests in any way'",
+      "subsumes: added to-conditional, since V-dict + と (接続助詞) inside といけないから is conditional と",
+      "tokens: いけ is 行く 下一段 未然形 (連用形 before ませ), ちゃ is lexeme て, と is 接続助詞 in といけない but 格助詞 in ないという, as claimed; ので is の + で (だ 連用形); no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "te-iru-baai-ja-nai",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the rhetorical 〜てる場合か！ with an example",
+      "counterexample 2: 今回の場合ではありません was unnatural and no matcher would hit it, replaced with 急いでいる場合でなければ 'unless', which does share ている場合で + な",
+      "detection: accept 場合 + か at the end, reject じゃ/で + なけれ + ば",
+      "tokens: でる and てる are lexeme てる 連体形; 場合 名詞; 場合ではない has で as 格助詞 but 場合でなければ has で as だ 連用形, so accept both; no earlier entry duplicates it (b07 baai-wa points here)"
+    ]
+  },
+  {
+    "id": "temo-nakutemo",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the casual 〜たって〜なくたって with example 9 (行ったって行かなくたって); connection added",
+      "subsumes: added tatte",
+      "counterexample 3: en 'even if you don't come for me' now 'You don't need to come and get me'",
+      "tokens: なく is ない 助動詞 after verbs and 無い 形容詞 after じゃ, 忙しく and in あってもなくても, as claimed; たって is one token 助詞-接続助詞 after 行っ and なく; 来たって is misread as 来たる, so the example avoids it; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "n-datte",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added 〜んだってね, which example 8 shows",
+      "counterexample 2: the unnatural 子供でも分かるんだ、大人だって分かるよ replaced with 大人だって泣きたい時があるんだよ",
+      "counterexample 4: added the insistent だから、俺は行かないんだって！, which has the same tokens as hearsay",
+      "detection: notes the insistent って and the cues that point to it (first person, だから, ！)",
+      "tokens: ん (の 準体助詞) + だ (終止形) + って (って 助詞-副助詞) as claimed; polite ん + です + って; 何だって is 何 + だ + って; 大人だって is 大人 + だ + って; no earlier entry duplicates it (b01 no-da points here)"
+    ]
+  },
+  {
+    "id": "to-douji-ni",
+    "verdict": "fixed",
+    "changes": [
+      "variants: removed 〜と同時 without に (開始と同時、 is unnatural in running text) and its example; added the common 〜のと同時に and 〜とほぼ同時に with an example each",
+      "connection: V-dict + と同時 replaced with V-plain + のと同時に",
+      "counterexample 2: a second bare 同時に replaced with the quoting と of 「危ない！」と同時に叫んだ, which a matcher would hit",
+      "tokens: と is 接続助詞 after a dictionary-form verb but 格助詞 after a noun, after ある and after の, as the detection says; 同時 名詞 + に 格助詞; ほぼ is 略 副詞; 同時通訳 is 同時 + 通訳; no earlier entry duplicates it"
+    ]
+  },
+  {
+    "id": "wake-ni-wa-ikanai",
+    "verdict": "fixed",
+    "changes": [
+      "variants: added the casual 〜わけにはいかん, common in anime and drama, with example 9",
+      "detection: いか + ん (ず 連体形-撥音便) added to the tail forms",
+      "tokens: V 連体形 + わけ (訳 名詞) + に (格助詞; にゃ also has lexeme に) + は/も + いか (行く 五段 未然形) as claimed; ないわけにはいかない has ない before わけ (nai-wake-niwa-ikanai, b09 points here); no earlier entry duplicates it"
+    ]
+  }
+]
