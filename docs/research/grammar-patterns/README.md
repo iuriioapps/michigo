@@ -15,7 +15,7 @@ The merge keeps constructions and the particles that carry a meaning of their ow
 
 ## Status
 
-The status of each batch is in the issue that owns it.
+All 34 batches are written and reviewed. Of the 801 entries, 13 were rejected in review and 788 ship. Each level's issue below has the counts and the reasons, and the implementation issues #205 to #208 list the batches that build them.
 
 | Batches | Level | Issue |
 | --- | --- | --- |
@@ -74,6 +74,6 @@ The `agents/` folder holds the prompts that wrote and reviewed b09 onward, and t
 
 ## Limits
 
-- The detail step ran without a UniDic 2025.12 build, so its `detection` hints came from the model's knowledge of UniDic. The reviews check them against the real tokens with `tools/tokenize.mjs`. A lexeme still marked `?` was not confirmed. The implementation checks every matcher against the real tokenizer.
+- The N5 and N4 detail step ran without a UniDic 2025.12 build, so those `detection` hints came from the model's knowledge of UniDic; their reviews and a token pass checked them against the real tokens. From N3 on, writers and reviewers both used `tools/tokenize.mjs`. A lexeme still marked `?` was not confirmed. The implementation checks every matcher against the real tokenizer.
 - Some sites could not be read (tanos.co.uk is down, JapaneseTest4You blocks automated access, Marumori needs a login for some pages), so some level votes rest on archived copies or on fewer sources. Each inventory entry's `sources` shows which ones.
 - The order inside each inventory (most common first) is the model's estimate, not a count from real text.
