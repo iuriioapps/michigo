@@ -27,7 +27,7 @@
     ],
     "subsumes": [],
     "confusables": ["naide-request", "naide-kudasai", "nakute", "zu-ni"],
-    "detection": "A verb in the ない form (助動詞 ない) followed by the conjunctive particle で (助詞-接続助詞 で?), then more of the sentence: the ないで phrase modifies a following predicate. When ないで ends the clause or the sentence it is the casual request naide-request, and ないでください / ないで下さい / ないでくれ / ないでほしい belong to naide-kudasai and related requests. Exclude ない + でしょう / でした, where で starts the auxiliary です (lexeme です). Learners confuse it with なくて (nakute), which gives a cause, and with the written ずに (zu-ni)."
+    "detection": "A verb in the ない form (助動詞 ない) followed by the conjunctive particle で (助詞-接続助詞 で?), then more of the sentence: the ないで phrase modifies a following predicate. When ないで ends the clause or the sentence it is the casual request naide-request, and ないでください / ないで下さい / ないでくれ / ないでほしい belong to naide-kudasai and related requests. Exclude ない + でしょう / でした: でしょう and でした are each one token of the auxiliary です (lexeme です), not で + more. Learners confuse it with なくて (nakute), which gives a cause, and with the written ずに (zu-ni)."
   },
   {
     "id": "ato-de",
@@ -82,7 +82,7 @@
     "counterexamples": [
       { "ja": "すみません、お水をください。", "en": "Excuse me, could I have some water?", "why": "お水 is a noun object of ください ('give me N'), not お + a verb stem." },
       { "ja": "お名前を教えてください。", "en": "Could you tell me your name?", "why": "ください follows a て-form (te-kudasai); お belongs to the noun お名前." },
-      { "ja": "ご連絡をお待ちしております。", "en": "We look forward to hearing from you.", "why": "お + stem + する is the humble o-suru, not a request." }
+      { "ja": "今日はゆっくりお休みになってください。", "en": "Please get a good rest today.", "why": "お休みになって is o-ni-naru in the て-form; ください follows a て-form (te-kudasai), not the bare stem." }
     ],
     "subsumes": [],
     "confusables": ["te-kudasai", "o-suru", "o-ni-naru"],
@@ -223,7 +223,7 @@
       { "ja": "何回読んでもわからない。", "match": "読んでも", "en": "No matter how many times I read it, I don't get it." },
       { "ja": "高くても、いいものなら買う。", "match": "高くても", "en": "Even if it's pricey, I'll buy it if it's good." },
       { "ja": "今から行っても間に合わないよ。", "match": "行っても", "en": "Even if you leave now, you won't make it." },
-      { "ja": "便利でも、高すぎたら買わない。", "match": "便利でも", "en": "Handy or not, I won't buy it if it's too expensive." },
+      { "ja": "便利でも、高すぎたら買わない。", "match": "便利でも", "en": "Even if it's handy, I won't buy it if it's too expensive." },
       { "ja": "疲れていても、毎日ジムには行ってる。", "match": "疲れていても", "en": "Even when I'm tired, I still go to the gym every day." },
       { "ja": "返事がなくても気にしないで。", "match": "なくても", "en": "Don't worry about it even if you don't hear back." }
     ],
@@ -314,7 +314,7 @@
       { "ja": "彼はもう帰ったようです。", "match": "ようです", "en": "It looks like he's already gone home." },
       { "ja": "どうやら道を間違えたようだね。", "match": "ようだ", "en": "Looks like we took a wrong turn." },
       { "ja": "彼女は何か知っているようだったが、何も言わなかった。", "match": "ようだった", "en": "She seemed to know something, but she didn't say a word." },
-      { "ja": "この部屋、少し寒いようですね。暖房をつけましょうか。", "match": "ようです", "en": "This room seems a bit chilly. Shall I turn on the heat?" },
+      { "ja": "外はかなり寒いようですね。みんなコートを着ています。", "match": "ようです", "en": "It seems pretty cold out. Everyone's wearing a coat." },
       { "ja": "風邪をひいたようで、朝から喉が痛い。", "match": "ようで", "en": "I think I've caught a cold; my throat's been sore since this morning." },
       { "ja": "田中さんは甘いものが好きなようです。", "match": "ようです", "en": "Tanaka seems to like sweets." }
     ],
@@ -326,7 +326,7 @@
     ],
     "subsumes": [],
     "confusables": ["mitai-da", "rashii", "sou-appearance", "no-you-na", "you-ni"],
-    "detection": "よう is 形状詞-助動詞語幹 (lexeme 様) followed by 助動詞 だ / です or by で. Conjecture ようだ follows a plain verb or i-adjective, な after a na-adjective, or の after a noun. Resemblance (まるで〜のようだ, のような) is no-you-na; the adverb まるで is a strong cue for it. Exclude ように (you-ni), ような気がする (you-na-ki-ga-suru), ように見える (you-ni-mieru), the volitional よう after a verb's 未然形 (助動詞 よう?, as in 起きよう) and the interjection よう (感動詞)."
+    "detection": "よう is 形状詞-助動詞語幹 (lexeme 様) followed by 助動詞 だ / です or by で. Conjecture ようだ follows a plain verb or i-adjective, な after a na-adjective, or の after a noun. Resemblance (まるで〜のようだ, のような) is no-you-na; the adverb まるで is a strong cue for it. Exclude ように (you-ni), ような気がする (you-na-ki-ga-suru), ように見える (you-ni-mieru), the volitional (UniDic gives 起きよう as one verb token in 意志推量形, so no よう token appears) and the interjection よう (感動詞)."
   },
   {
     "id": "mitai-da",
@@ -355,7 +355,7 @@
     ],
     "subsumes": [],
     "confusables": ["you-da", "rashii", "sou-appearance", "no-you-na", "te-miru"],
-    "detection": "みたい is 形状詞-助動詞語幹 (lexeme みたい?) followed by だ, です, な, に or nothing. It follows a noun or na-adjective stem directly, or a plain verb or i-adjective. The main false match is the verb 見る (also the auxiliary てみる) in 連用形 み + 助動詞 たい; UniDic splits that into み (動詞) + たい, so match only the single みたい token. Confusable with you-da (more formal), rashii and sou-appearance."
+    "detection": "みたい is 形状詞-助動詞語幹 (lexeme みたい?) followed by だ, です, な, に or nothing. It follows a noun or na-adjective stem directly, or a plain verb or i-adjective. The main false match is the verb 見る (also the auxiliary てみる) in 連用形 み + 助動詞 たい; UniDic usually splits that into み (動詞) + たい, so match only the single みたい token; みたい never follows て or a case particle, so after て / が / を treat a みたい token as 見る + たい even if the tokenizer fused it. Confusable with you-da (more formal), rashii and sou-appearance."
   },
   {
     "id": "te-kureru",
@@ -374,7 +374,7 @@
       { "ja": "先生が丁寧に説明してくださった。", "match": "説明してくださった", "en": "The teacher explained it to us very carefully." },
       { "ja": "いつも話を聞いてくれる君に、本当に感謝してる。", "match": "聞いてくれる", "en": "I'm really grateful to you for always listening to me." },
       { "ja": "彼が傘を貸してくれて、助かった。", "match": "貸してくれて", "en": "He lent me his umbrella, which was a lifesaver." },
-      { "ja": "このアプリ、予定を勝手に教えてくれるから便利だよ。", "match": "教えてくれる", "en": "This app reminds you of your plans on its own, so it's handy." }
+      { "ja": "このアプリ、予定を自動で教えてくれるから便利だよ。", "match": "教えてくれる", "en": "This app reminds you of your plans automatically, so it's handy." }
     ],
     "counterexamples": [
       { "ja": "誕生日に姉がマフラーをくれた。", "en": "My big sister gave me a scarf for my birthday.", "why": "くれる is the main verb 'give'; no て-form comes before it." },
@@ -382,8 +382,8 @@
       { "ja": "来てくれてありがとう。", "en": "Thanks for coming.", "why": "てくれてありがとう is the longer te-kurete-arigatou." }
     ],
     "subsumes": [],
-    "confusables": ["te-ageru", "te-morau", "te-kurenai", "te-kudasai"],
-    "detection": "Tokens: a verb 連用形 + 接続助詞 て/で + 呉れる (動詞-非自立可能, lexeme 呉れる) or 下さる (lexeme 下さる), in any form other than the requests. Exclude くれる as a main verb (no て before it), the requests てくれない？ / てくれませんか (te-kurenai), てくれてありがとう (te-kurete-arigatou) and てください (te-kudasai, the imperative of 下さる). 暮れる (日が暮れる) is a different lexeme. Learners mix it up with te-morau and te-ageru, which differ in who does the favor."
+    "confusables": ["te-ageru", "te-morau", "te-kurenai", "te-kudasai", "te-request"],
+    "detection": "Tokens: a verb 連用形 + 接続助詞 て/で + 呉れる (動詞-非自立可能, lexeme 呉れる) or 下さる (lexeme 下さる), in any form other than the requests. Exclude くれる as a main verb (no て before it), the requests てくれない？ / てくれませんか (te-kurenai) and the imperative てくれ (te-request), てくれてありがとう (te-kurete-arigatou) and てください (te-kudasai, the imperative of 下さる). 暮れる (日が暮れる) is a different lexeme. Learners mix it up with te-morau and te-ageru, which differ in who does the favor."
   },
   {
     "id": "te-iku",
@@ -646,7 +646,7 @@
     ],
     "subsumes": [],
     "confusables": ["te-goran", "te-miseru", "mitai-da"],
-    "detection": "Tokens: a verb 連用形 + 接続助詞 て/で + 見る (動詞-非自立可能, lexeme 見る), usually written みる. Require 見る to follow the て directly with no object or punctuation between; 見る with its own object (振り向いて、私を見た) is a main verb. Exclude て + みんな and てみせる (lexeme 見せる, te-miseru), and the imperative てごらん (te-goran), a separate pattern with a similar meaning. てみたい is often mistaken for the single token みたい (mitai-da); the tokenizer separates them."
+    "detection": "Tokens: a verb 連用形 + 接続助詞 て/で + 見る (動詞-非自立可能, lexeme 見る), usually written みる. Require 見る to follow the て directly with no object or punctuation between; 見る with its own object (振り向いて、私を見た) is a main verb. Exclude て + みんな and てみせる (lexeme 見せる, te-miseru), and the imperative てごらん (te-goran), a separate pattern with a similar meaning. てみたい is often mistaken for the single token みたい (mitai-da); the tokenizer usually separates them, and a みたい token right after て is still 見る + たい."
   },
   {
     "id": "te-oku",
