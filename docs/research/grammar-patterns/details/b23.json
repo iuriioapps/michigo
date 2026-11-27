@@ -23,11 +23,11 @@
     "counterexamples": [
       {"ja":"皆がそう思うように仕向けたんだ。","en":"I steered things so that everyone would think so.","why":"思う is the thing being brought about (so that they think); ように is the purpose clause, not 'as one would like'"},
       {"ja":"彼の話を聞いて、そう思うようになった。","en":"After hearing him out, I came to think so.","why":"ようになる 'come to', with 思う as the changing action"},
-      {"ja":"母を思うように先生を慕っている。","en":"She looks up to her teacher the way she cares for her mother.","why":"思う means 'to hold dear' and ように is the simile 'like'"}
+      {"ja":"みんなも思うように、この計画には無理がある。","en":"As everyone else thinks too, this plan is unrealistic.","why":"ように is 'as' (agreement with what others think), not 'the way one wants'"}
     ],
     "subsumes": [],
     "confusables": ["you-ni-naru","you-ni-suru"],
-    "detection": "Three tokens: 思う (思う, 動詞-一般, 連体形) + よう (様, 形状詞-助動詞語幹) + に (だ, 助動詞, 連用形-ニ), then usually a negative or potential predicate (いか|ない with 行く, なら|ない with 成る 未然形, 動か|ない, 取れ|ませ|ん). The variant 思い通りに is tokenized differently: 思い (名詞) + 通り (名詞) + に (助詞-格助詞). Guards: reject 思う when the token before it is そう (副詞), こう or と (the purpose use in そう思うように仕向けた); reject 思う + よう + に + なっ|た, the affirmative ようになる 'came to think' (you-ni-naru); and reject the simile where 思う means 'care for' and an object comes before it (母を思うように慕う). The negative 思うようにならない is 思う|よう|に|なら|ない, so you-ni-naru must not claim it."
+    "detection": "Three tokens: 思う (思う, 動詞-一般, 連体形) + よう (様, 形状詞-助動詞語幹) + に (だ, 助動詞, 連用形-ニ), then usually a negative or potential predicate (いか|ない with 行く, なら|ない with 成る 未然形, 動か|ない, 取れ|ませ|ん). The variant 思い通りに is 思い + 通り (通り 名詞-普通名詞) + に (助詞-格助詞), and 思い is tagged either 思い (名詞-普通名詞) or 思う (動詞 連用形-一般) depending on context (子供を思い通りに gets the verb), so accept both. Guards: reject 思う when the token before it is そう (副詞), こう or と (the purpose use in そう思うように仕向けた); reject 思う + よう + に + なっ|た, the affirmative ようになる 'came to think' (you-ni-naru); and reject the agreement use 'as X thinks' where ように is followed by a comma and a new clause (みんなも思うように、この計画には…). The negative 思うようにならない is 思う|よう|に|なら|ない, so you-ni-naru must not claim it."
   },
   {
     "id": "sou-ni-nai",
@@ -35,7 +35,7 @@
     "variants": ["〜そうにもない","〜そうにありません","〜そうになかった"],
     "meaning": "unlikely to ~",
     "kind": "construction",
-    "register": "spoken",
+    "register": "neutral",
     "level": "N2",
     "sources": { "bunpro": "N2", "jt4y": "N2", "jlptsensei": "N3" },
     "prototype": false,
@@ -58,7 +58,7 @@
     ],
     "subsumes": [],
     "confusables": ["sou-mo-nai","sou-appearance"],
-    "detection": "Tokens: a verb in 連用形 (終わり, 止み with 止む, でき with 出来る, 払え, 来られ with られる) + そう (そう-様態, 形状詞-助動詞語幹) + に (だ, 助動詞, 連用形-ニ) + [も (係助詞)] + ない (無い, 形容詞-非自立可能, 終止形), or あり (有る) + ませ + ん, or なかっ (無い 連用形-促音便) + た. The word after に must be the adjective 無い (tagged 形容詞), never the 助動詞 ない: 楽しそうにしていない has そう|に|し|て|い|ない and is a negated する, so reject it. Reject そう|も|ない (sou-mo-nai, which owns そうもない) and hearsay そう (そう-伝聞, 名詞-助動詞語幹). The も variant そうにもない stays in this entry."
+    "detection": "Tokens: a verb in 連用形 (終わり, 止み with 止む, でき with 出来る, 払え, 来られ with られる) + そう (そう-様態, 形状詞-助動詞語幹) + に (だ, 助動詞, 連用形-ニ) + [も (係助詞)] + ない (無い, 形容詞-非自立可能, 終止形), or あり (有る) + ませ + ん, or なかっ (無い 連用形-促音便) + た. The word after に must be the adjective 無い (tagged 形容詞), never the 助動詞 ない: 楽しそうにしていない has そう|に|し|て|い|ない and is a negated する, so reject it. Reject そう|も|ない (sou-mo-nai, which owns そうもない). Hearsay そう is not told apart by lexeme (止むそうだ gets そう-様態 too), so require the verb before そう to be 連用形, not 終止形. A verb stem that is also a noun can split oddly (止みそうだ is 止み 名詞 + そう 副詞), so also accept そう 副詞 right after such a noun, as sou-mo-nai does. The も variant そうにもない stays in this entry."
   },
   {
     "id": "te-ite-wa",
@@ -66,7 +66,7 @@
     "variants": ["〜ていちゃ","〜てちゃ","〜でちゃ"],
     "meaning": "if you keep ~ (it will go badly)",
     "kind": "construction",
-    "register": "spoken",
+    "register": "neutral",
     "level": "N2",
     "sources": { "jlptsensei": "N2", "bunpro": "N2", "jt4y": "N2" },
     "prototype": false,
@@ -79,7 +79,7 @@
       {"ja":"のんびり構えていては、締め切りに間に合わない。","match":"構えていては","en":"If we keep taking it easy, we won't meet the deadline."},
       {"ja":"ぼんやり見ていては、何も覚えられませんよ。","match":"見ていては","en":"If you just keep watching blankly, you won't learn a thing."},
       {"ja":"ずっと下を向いていちゃ、チャンスは来ないよ。","match":"向いていちゃ","en":"If you keep looking down, the chance won't come."},
-      {"ja":"あんなに飲んでいては、体が持たないだろう。","match":"飲んでいては","en":"Drinking like that, his body won't hold out."}
+      {"ja":"あんなに飲んでいては、体が持たないだろう。","match":"飲んでいては","en":"If he keeps drinking like that, his body won't hold out."}
     ],
     "counterexamples": [
       {"ja":"家にいては退屈だ。","en":"It's boring if one stays at home.","why":"い is the main verb 居る, not the auxiliary, so this is the plain conditional ては (tewa)"},
@@ -87,9 +87,9 @@
       {"ja":"勉強していたら、友達が来た。","en":"While I was studying, a friend came.","why":"ていたら is the conditional of ている with たら, not ては"},
       {"ja":"食べてはいけません。","en":"You must not eat.","why":"てはいけない is te-wa-ikenai, a prohibition with no ている"}
     ],
-    "subsumes": [],
-    "confusables": ["tewa","te-wa-ikenai","tewa-irarenai"],
-    "detection": "Tokens: V-連用形 + て (助詞-接続助詞) + い (居る, 動詞-非自立可能, 連用形) + て (接続助詞) + は (係助詞); the contracted forms have ちゃ (助詞-接続助詞, lexeme て, fusing て + は) after て + い (向い|て|い|ちゃ), after て (接続助詞) alone (食べ|て|ちゃ), or after the 助動詞 てる, which already holds て + いる (し|て|ちゃ with て = てる 連用形, 遊ん|で|ちゃ with で = てる). So the test is ちゃ whose previous token is て, で, or い after て. Reject い (居る) as a main verb after に or が (家|に|い|て|は), which is the plain conditional tewa; reject ちゃ right after a verb 連用形 with no て-form before it (食べ|ちゃ, tewa), and reject い + たら (ていたら). This entry takes precedence over tewa and over te-wa-ikenai for the same ては, and いては followed by いけ or なら is te-wa-ikenai or tewa-naranai."
+    "subsumes": ["tewa"],
+    "confusables": ["tewa","te-wa-ikenai","tewa-naranai","tewa-irarenai"],
+    "detection": "Tokens: V-連用形 + て (助詞-接続助詞) + い (居る, 動詞-非自立可能, 連用形) + て (接続助詞) + は (係助詞); the contracted forms have ちゃ (助詞-接続助詞, lexeme て, fusing て + は) after て + い (向い|て|い|ちゃ), after て (接続助詞) alone (食べ|て|ちゃ), or after the 助動詞 てる, which already holds て + いる (し|て|ちゃ with て = てる 連用形, 遊ん|で|ちゃ with で = てる). So the test is ちゃ whose previous token is て, で, or い after て. The main verb いる 'stay' gets the same tag as the auxiliary (居る 動詞-非自立可能), so the guard is the token before い: reject い after に or が (家|に|い|て|は), which is the plain conditional tewa; reject ちゃ right after a verb 連用形 with no て-form before it (食べ|ちゃ, tewa), and reject い + たら (ていたら). This entry subsumes tewa for the same ては or ちゃ; いては or いちゃ followed by いけ, だめ or なら is te-wa-ikenai or tewa-naranai, so reject those here."
   },
   {
     "id": "tewa",
@@ -97,7 +97,7 @@
     "variants": ["〜では","〜ちゃ","〜じゃ"],
     "meaning": "if ~ (then something bad)",
     "kind": "construction",
-    "register": "spoken",
+    "register": "neutral",
     "level": "N2",
     "sources": { "jlptsensei": "N2", "bunpro": "N2", "jt4y": "N2" },
     "prototype": false,
@@ -121,7 +121,7 @@
     ],
     "subsumes": [],
     "confusables": ["te-ite-wa","tewa-tewa","te-wa-ikenai","tewa-naranai","tewa-irarenai"],
-    "detection": "Tokens: V-連用形 or i-Adj 連用形 (高く) + て (助詞-接続助詞; で after a nasal or voiced stem, 急い|で) + は (助詞-係助詞), or the contraction ちゃ / じゃ, one 助詞-接続助詞 token with lexeme て placed directly after the 連用形 (休ん|じゃ, 笑っ|ちゃ, 食べ|ちゃ). The clause is followed by a bad or evaluative result (危ない, 迷惑, 信用されない). Give the ては to other entries first: reject て|は + いけ / なら / いられ (te-wa-ikenai, tewa-naranai, tewa-irarenai), reject い + て + は (te-ite-wa, which also owns て|ちゃ after a て-form), reject a ては that opens a second ては in a series (tewa-tewa), and reject ちゃっ|た (ちゃう, 助動詞). Reject で (助詞-格助詞) + は (ここでは), and also で + は after a noun (助動詞 だ 連用形 + は), which is the copula and too ambiguous to count."
+    "detection": "Tokens: V-連用形 or i-Adj 連用形 (高く) + て (助詞-接続助詞; で after a nasal or voiced stem, 急い|で) + は (助詞-係助詞), or the contraction ちゃ / じゃ, one 助詞-接続助詞 token with lexeme て placed directly after the 連用形 (休ん|じゃ, 笑っ|ちゃ, 食べ|ちゃ). The clause is followed by a bad or evaluative result (危ない, 迷惑, 信用されない). Give the ては to other entries first: reject て|は + いけ / なら / いられ (te-wa-ikenai, tewa-naranai, tewa-irarenai), reject い + て + は and い + ちゃ after a て-form (te-ite-wa, which also owns て|ちゃ: 食べ|て|ちゃ, し|て(てる)|ちゃ), reject a ては that opens a second ては in a series (tewa-tewa), and reject ちゃっ|た (ちゃう, 助動詞). Reject で (助詞-格助詞) + は (ここでは). The copula conditional N + では (そんな態度では嫌われる) is left out on purpose: the tokenizer tags its で as 格助詞 too, the same as the location では and the topic では, so only the following clause could tell them apart. The habitual ては 'whenever' (暇を見つけては本を読む) has the same tokens and no bad result; a matcher cannot reject it, so expect some false hits there."
   },
   {
     "id": "tewa-tewa",
@@ -129,7 +129,7 @@
     "variants": ["〜では〜では","〜ちゃ〜ちゃ"],
     "meaning": "~ over and over (repeating actions)",
     "kind": "construction",
-    "register": "written",
+    "register": "neutral",
     "level": "N2",
     "sources": { "jlptsensei": "N2", "bunpro": "N2" },
     "prototype": false,
@@ -153,12 +153,12 @@
     ],
     "subsumes": ["tewa"],
     "confusables": ["tewa","te-wa-ikenai"],
-    "detection": "Tokens: V-連用形 + て (助詞-接続助詞; で after a nasal or voiced stem) + は (係助詞) + V2-連用形, then the same first verb again: 書い|て|は|消し、書い|て|は|消し. In kana contractions the ちゃ is one 接続助詞 token with lexeme て (書い|ちゃ|消し、書い|ちゃ|消し). Count it when a て|は (or ちゃ) opens twice within one sentence, the first verb of each pair has the same lexeme, and each ては is followed directly by a second verb in 連用形 or the next ては pair, not by いけ, なら, いら or a result predicate. The second pair may swap the two verbs (食べては寝、寝ては食べる). Reject a pair where は is followed by いる (降っ|て|は|いる, contrast) or いけ|ない (te-wa-ikenai). This entry subsumes tewa: the two ては here must not also count as tewa."
+    "detection": "Tokens: V-連用形 + て (助詞-接続助詞; で after a nasal or voiced stem) + は (係助詞) + V2-連用形, then the same first verb again: 書い|て|は|消し、書い|て|は|消し. In kana contractions the ちゃ is one 接続助詞 token with lexeme て (書い|ちゃ|消し、書い|ちゃ|消し). Count it when a て|は (or ちゃ) opens twice within one sentence, the first verb of each pair has the same lexeme, and each ては is followed directly by a second verb in 連用形 or the next ては pair, not by いけ, なら, いら or a result predicate. The second pair may swap the two verbs (食べては寝、寝ては食べる). A 連用形 that is also a noun can be tagged as one: 降っ|て|は|止み is 止み (止み 名詞-普通名詞), so accept a noun there when the other pair has its verb (止ん, 止む). Reject a pair where は is followed by いる (降っ|て|は|いる, contrast) or いけ|ない (te-wa-ikenai). This entry subsumes tewa: the two ては here must not also count as tewa."
   },
   {
     "id": "gake-ni",
     "form": "〜がけに",
-    "variants": ["〜がけ","帰りがけに","出がけに"],
+    "variants": ["〜がけ","帰りがけに","出がけに","通りがけに"],
     "meaning": "just as one is leaving or returning; on the way ~",
     "kind": "construction",
     "register": "neutral",
@@ -174,7 +174,7 @@
       {"ja":"帰りがけ、駅でばったり先生に会った。","match":"帰りがけ","en":"On my way back, I ran into my teacher at the station."},
       {"ja":"電車を降りがけに、財布を落としてしまった。","match":"降りがけに","en":"Just as I was getting off the train, I dropped my wallet."},
       {"ja":"会社を出がけに、上司に呼び止められた。","match":"出がけに","en":"Just as I was leaving the office, my boss stopped me."},
-      {"ja":"去りがけに、彼は私の肩をぽんと叩いた。","match":"去りがけに","en":"As he left, he gave my shoulder a pat."},
+      {"ja":"通りがけにちょっと寄ってみたんです。","match":"通りがけに","en":"I just dropped in on my way past."},
       {"ja":"帰りがけに一杯どうですか。","match":"帰りがけに","en":"How about a drink on the way home?"}
     ],
     "counterexamples": [
@@ -184,7 +184,7 @@
     ],
     "subsumes": [],
     "confusables": ["nagara"],
-    "detection": "Two shapes. A verb 連用形 + がけ (掛け, 接尾辞-名詞的) + に (助詞-格助詞): 立ち去り|がけ|に, 降り|がけ|に. Or a single noun token with lexeme 帰り掛け, 出掛け, 行き掛け (名詞-普通名詞), as UniDic lists these as words: 帰りがけ|に, 出がけ|に. Without に the noun can stand alone (帰りがけ、駅で). Guards: reject 掛け after a number or 人 (二人がけ, a counter), reject 崖 (lexeme 崖, a noun, 崖|に), and reject 掛け (掛ける, 動詞-非自立可能 連用形) + に of purpose (絵を掛け|に行く). The word before がけ must be a motion verb (出る, 帰る, 行く, 降りる, 去る), since the pattern marks the moment of departing or returning."
+    "detection": "Two shapes. A verb 連用形 + がけ (掛け, 接尾辞-名詞的) + に (助詞-格助詞): 立ち去り|がけ|に, 降り|がけ|に. Or a single noun token with lexeme 帰り掛け, 出掛け, 行き掛け (名詞-普通名詞), as UniDic lists these as words: 帰りがけ|に, 出がけ|に. 通りがけ splits as 通り (通り 名詞-普通名詞) + がけ (掛け 接尾辞), so also accept the noun 通り before 掛け. Without に the noun can stand alone (帰りがけ、駅で). Guards: reject 掛け after a number or 人 (二人がけ, a counter), reject 崖 (lexeme 崖, a noun, 崖|に), and reject 掛け (掛ける, 動詞-非自立可能 連用形) + に of purpose (絵を掛け|に行く). The word before がけ must be a motion verb (出る, 帰る, 行く, 下りる for 降り, 去る, 立ち去る), since the pattern marks the moment of departing or returning."
   },
   {
     "id": "no-uchi-de",
@@ -206,7 +206,7 @@
       {"ja":"彼の作品のうちで、これが最高傑作だと思う。","match":"のうちで","en":"I think this is the best of all his works."},
       {"ja":"クラスの三十人のうち、五人が欠席した。","match":"のうち","en":"Of the thirty students in the class, five were absent."},
       {"ja":"一日のうちで一番静かなのは、早朝だ。","match":"のうちで","en":"The quietest time of the day is early morning."},
-      {"ja":"応募者は五人のうち二人が未経験です。","match":"のうち","en":"Of the five applicants, two have no experience."}
+      {"ja":"応募者五人のうち、二人が未経験です。","match":"のうち","en":"Of the five applicants, two have no experience."}
     ],
     "counterexamples": [
       {"ja":"私のうちで会おう。","en":"Let's meet at my place.","why":"うち is 'home' with the location particle で, not 'among'"},
@@ -244,16 +244,16 @@
       {"ja":"歯を抜いたら、少し楽になった。","en":"After the tooth was pulled, I felt a little better.","why":"抜く is the main verb 'to pull out', with the object 歯を before it"},
       {"ja":"忙しいときでも手を抜くな。","en":"Don't cut corners, even when you're busy.","why":"手を抜く is the idiom 'slack off', not the 'to the end' auxiliary"},
       {"ja":"車が私たちを追い抜いていった。","en":"A car overtook us.","why":"追い抜く is one lexical verb (追い抜く) and means 'overtake'"},
-      {"ja":"力を抜きながら歩いてください。","en":"Please walk with your muscles relaxed.","why":"力を is the object of 抜く 'let go of'"}
+      {"ja":"肩の力を抜いて、楽にしてください。","en":"Relax your shoulders and make yourself comfortable.","why":"力を is the object of the main verb 抜く 'let go of'"}
     ],
     "subsumes": [],
     "confusables": ["kiru","tsukusu"],
-    "detection": "Tokens: a verb in 連用形 + 抜く (抜く, 動詞-非自立可能, 五段-カ行): 戦い|抜い|た, 耐え|抜い|た, やり (遣る)|抜く, 考え|抜い|て, 生き|抜く, 頑張り|抜か|ない. UniDic tags 抜く 動詞-非自立可能 for the main verb as well (歯|を|抜い|た, 手|を|抜く), so the tag cannot decide: require a verb 連用形 directly before 抜く, and reject 抜く whose previous token is a noun, を or a particle. Some compounds are one 動詞-一般 token with no separate 抜く (悩み抜く, 追い抜く 'overtake'), so the token test misses 悩み抜いた; add a lexeme list ending in 抜く for those if wanted. With し抜い|た (我慢し|抜い|た) the verb is する + 抜く. Related entries are kiru (切る, 'completely') and tsukusu (尽くす), which take other verbs."
+    "detection": "Tokens: a verb in 連用形 + 抜く (抜く, 動詞-非自立可能, 五段-カ行): 戦い|抜い|た, 耐え|抜い|た, やり (遣る)|抜く, 考え|抜い|て, 生き|抜く, 頑張り|抜か|ない. UniDic tags 抜く 動詞-非自立可能 for the main verb as well (歯|を|抜い|た, 手|を|抜く), so the tag cannot decide: require a verb 連用形 directly before 抜く, and reject 抜く whose previous token is a noun, を or a particle. Some compounds are one 動詞-一般 token with no separate 抜く (悩み抜く, 選び抜く, 追い抜く 'overtake'), so the token test misses 悩み抜いた and 選び抜かれた; add a lexeme list ending in 抜く for those if wanted. With し抜い|た (我慢し|抜い|た) the verb is する + 抜く. Related entries are kiru (切る, 'completely') and tsukusu (尽くす), which take other verbs."
   },
   {
     "id": "nuki-de",
     "form": "〜抜きで",
-    "variants": ["〜抜きにして","〜抜きには","〜抜きの","〜抜きに"],
+    "variants": ["〜抜きにして","〜抜きでは","〜抜きには","〜抜きの","〜抜きに"],
     "meaning": "without ~",
     "kind": "construction",
     "register": "neutral",
@@ -273,14 +273,14 @@
       {"ja":"この問題は、感情抜きには語れない。","match":"抜きには","en":"You can't talk about this issue without emotion."}
     ],
     "counterexamples": [
-      {"ja":"力を抜きながら歩いてください。","en":"Please walk with your muscles relaxed.","why":"抜き is the verb 抜く in 連用形 (動詞), with an object 力を and ながら"},
+      {"ja":"ときどき肩の力を抜きながら作業してください。","en":"Relax your shoulders now and then as you work.","why":"抜き is the verb 抜く in 連用形 (動詞), with an object 力を and ながら"},
       {"ja":"手抜きの料理は出したくない。","en":"I don't want to serve a half-hearted meal.","why":"手抜き is a lexical noun 'cutting corners', not N + 抜き"},
       {"ja":"息抜きに公園へ行った。","en":"I went to the park for a breather.","why":"息抜き is a lexical noun 'a break', not 'without breath'"},
       {"ja":"芝生の雑草を抜いて、水をまいた。","en":"I pulled the weeds in the lawn and watered it.","why":"抜い is the verb 抜く, with て, not the noun 抜き"}
     ],
     "subsumes": [],
     "confusables": ["nuku"],
-    "detection": "Tokens: N + 抜き (抜き, 名詞-普通名詞) + で (助詞-格助詞), or に (格助詞) + し + て, or に + は, or の (格助詞): 朝ごはん|抜き|で, 抜き|に|し|て, 抜き|の. When the noun in front is a plain word, 抜き is its own token; some compounds are one token (税抜き, 肉抜き, 手抜き, 息抜き), so also accept a token that ends in 抜き but reject the lexicalized nouns 手抜き and 息抜き. The で after 抜き is 助詞-格助詞 in 朝ごはん|抜き|で but だ (助動詞, 連用形-一般) in 彼|抜き|で|は and 肩書き|抜き|で, so accept both tags. Reject 抜き (抜く, 動詞-非自立可能, 連用形) that follows an object noun + を (力を抜き|ながら) or that is followed by て/た (雑草を抜い|て). The verb entry is nuku."
+    "detection": "Tokens: N + 抜き (抜き, 名詞-普通名詞) + で (助詞-格助詞), or に (格助詞) + し + て, or に + は, or の (格助詞): 朝ごはん|抜き|で, 抜き|に|し|て, 抜き|の. When the noun in front is a plain word, 抜き is its own token; some compounds are one token (税抜き, 肉抜き, 手抜き, 息抜き), so also accept a token that ends in 抜き but reject the lexicalized nouns 手抜き and 息抜き. The で after 抜き is 助詞-格助詞 in 朝ごはん|抜き|で but だ (助動詞, 連用形-一般) in 彼|抜き|で|は and 肩書き|抜き|で, so accept both tags. Reject 抜き (抜く, 動詞-非自立可能, 連用形) that follows an object noun + を (力を抜き|ながら) or that is followed by て/た (雑草を抜い|て). Confirmed single tokens: 税抜き and 肉抜き (名詞-普通名詞), like 手抜き and 息抜き. The verb entry is nuku."
   },
   {
     "id": "ka-nanika",
@@ -306,13 +306,14 @@
     ],
     "counterexamples": [
       {"ja":"何かあったの？","en":"Did something happen?","why":"何か is 'something' on its own, with no か before it"},
-      {"ja":"彼が来るか、何か聞いてみて。","en":"Ask him whether he's coming, or something.","why":"か after 来る is the sentence-final question か (終助詞) and a comma follows; 何か opens a new clause"},
+      {"ja":"本当に来るか、何か連絡あった？","en":"Did you hear anything about whether he's really coming?","why":"か after 来る closes an embedded question (終助詞) and 何か 'anything' belongs to the next clause"},
+      {"ja":"誰か何か知らない？","en":"Does anyone know anything?","why":"誰か 'someone' and 何か 'anything' are two indefinite words, not 'X or something'"},
       {"ja":"あれは何かの間違いだ。","en":"That must be some mistake.","why":"何か + の 'some ~', not an alternative"},
       {"ja":"何かしら理由があるはずだ。","en":"There must be some reason.","why":"何かしら is the indefinite word, with no か何か"}
     ],
     "subsumes": [],
     "confusables": ["nado","nanka-nante"],
-    "detection": "Tokens: X + か (助詞-副助詞) + 何 (代名詞, lexeme 何) + か (助詞-副助詞), where X is a noun, a verb in 終止形 or a た-form (怒っ|た|か|何|か). The variants are か + なん (何) + か and か + な + に + か in kana. The か before 何 must be tagged 副助詞; a か tagged 助詞-終助詞 (彼が来る|か|、|何|か) is a question and rejects the match. Reject 何か + の (何かの間違い) and 何か without a preceding か (何|か|あっ|た), and 何かしら. The tail after the pattern is a particle or the copula (か何か|で, か何か|だ, か何か|を), or the end of the sentence."
+    "detection": "Tokens: X + か (助詞-副助詞) + 何 (代名詞, lexeme 何) + か (助詞-副助詞), where X is a noun, a verb in 終止形 or a た-form (怒っ|た|か|何|か). The variants are か + なん (何, 代名詞) + か and か + なに (何, 代名詞) + か in kana. The か before 何 must be tagged 副助詞; a か tagged 助詞-終助詞 (来る|か|、|何|か) is a question and rejects the match. Reject X that is a question word (誰|か|何|か 'someone ... anything', どこ|か): the tokens are the same as the pattern. Reject 何か + の (何かの間違い) and 何か without a preceding か (何|か|あっ|た), and 何かしら. The tail after the pattern is a particle or the copula (か何か|で, か何か|だ, か何か|を), or the end of the sentence."
   },
   {
     "id": "igai",
@@ -359,7 +360,7 @@
     "connection": ["V-masu-stem + 得る / うる / える"],
     "examples": [
       {"ja":"そんなことは十分あり得る。","match":"あり得る","en":"That is quite possible."},
-      {"ja":"彼が犯人である可能性も考えうる。","match":"考えうる","en":"It's conceivable that he is the culprit."},
+      {"ja":"考えうる限りの手は尽くした。","match":"考えうる","en":"We tried everything we could think of."},
       {"ja":"この条件では事故が起こりうる。","match":"起こりうる","en":"Under these conditions an accident could occur."},
       {"ja":"誰にでも起こりえる問題だ。","match":"起こりえる","en":"It's a problem that can happen to anyone."},
       {"ja":"そういうこともありえます。","match":"ありえます","en":"That can happen too."},
@@ -401,7 +402,7 @@
     ],
     "counterexamples": [
       {"ja":"今日は残業せざるを得ない。","en":"I have no choice but to work overtime today.","why":"ざるを得ない is zaru-o-enai, 'have no choice but to', not 'cannot'"},
-      {"ja":"工場から許可を得ない限り、始められない。","en":"We can't start unless we get permission from the factory.","why":"得る is the main verb 'obtain' with the object 許可を"},
+      {"ja":"市の許可を得ない限り、工事は始められない。","en":"The work can't start unless we get the city's permission.","why":"得る is the main verb 'obtain' with the object 許可を"},
       {"ja":"遠くて声が聞こえない。","en":"It's too far, so I can't hear the voice.","why":"聞こえない is the verb 聞こえる negated; えない does not come from 得る"}
     ],
     "subsumes": [],
@@ -411,7 +412,7 @@
   {
     "id": "ge",
     "form": "〜げ",
-    "variants": ["〜げな","〜げに","寂しげ","〜たげ"],
+    "variants": ["〜げな","〜げに","〜ありげ","〜たげ"],
     "meaning": "seemingly ~ / with an air of ~",
     "kind": "construction",
     "register": "written",
@@ -434,11 +435,12 @@
     "counterexamples": [
       {"ja":"昼は唐揚げを食べた。","en":"I had fried chicken for lunch.","why":"げ ends the noun 唐揚げ (揚げ 'frying'), not the suffix 気"},
       {"ja":"空を見上げたら、星が出ていた。","en":"When I looked up at the sky, there were stars.","why":"げ ends the verb 見上げる, not a suffix"},
-      {"ja":"犬が逃げた。","en":"The dog ran away.","why":"げ ends the verb 逃げる"}
+      {"ja":"犬が逃げた。","en":"The dog ran away.","why":"げ ends the verb 逃げる"},
+      {"ja":"子供相手に本気で怒るなんて、大人げないよ。","en":"Getting seriously angry at a kid is childish.","why":"大人げない is a fixed adjective 'childish', not 'seemingly adult', though it splits as 大人|げ|ない"}
     ],
     "subsumes": [],
     "confusables": ["rashii","ppoi","garu"],
-    "detection": "UniDic does not join げ to the word before it: げ is its own token (気, 接尾辞-形状詞的) after an adjective stem (悲し|げ, 寂し|げ, 楽し|げ, 苦し|げ, lexemes 悲しい 語幹), a noun (得意|げ, 不安|げ, 自慢|げ, 満足|げ) or あり (有る 連用形) (意味|あり|げ), followed by な (だ 連体形), に (だ 連用形-ニ) or a noun. So the match is げ with lexeme 気 and tag 接尾辞-形状詞的; there is no single-token word to list. Wishing-type 言いたげ is different: たげ is one 助動詞 token (たげる, 下一段-ガ行) after a verb 連用形 (言い|たげ|に). Reject げ that is the end of a verb or noun token (見上げ, 逃げ, 唐揚げ), because there the tag is the verb's own. Compare rashii, ppoi and garu."
+    "detection": "UniDic does not join げ to the word before it: げ is its own token (気, 接尾辞-形状詞的) after an adjective stem (悲し|げ, 寂し|げ, 楽し|げ, 苦し|げ, lexemes 悲しい 語幹), a noun (得意|げ, 不安|げ, 自慢|げ, 満足|げ) or あり (有る 連用形) (意味|あり|げ), followed by な (だ 連体形), に (だ 連用形-ニ) or a noun. So the match is げ with lexeme 気 and tag 接尾辞-形状詞的; there is no single-token word to list. Wishing-type 言いたげ is different: たげ is one 助動詞 token (たげる, 下一段-ガ行) after a verb 連用形 (言い|たげ|に). Reject げ that is the end of a verb or noun token (見上げ, 逃げ, 唐揚げ), because there the tag is the verb's own. The noun 気 (気|が|する) is 名詞-普通名詞 and compounds such as やる気, 眠気 are one token, so the tag 接尾辞-形状詞的 keeps them out. The fixed adjective 大人げない has the same tokens 大人|げ|ない, so reject 大人 + げ + ない by lexeme. Compare rashii, ppoi and garu."
   },
   {
     "id": "o-negau",
@@ -456,7 +458,7 @@
       {"ja":"ご協力願います。","match":"ご協力願います","en":"Your cooperation is requested."},
       {"ja":"お持ち帰りは、ご遠慮願います。","match":"ご遠慮願います","en":"Please refrain from taking items home."},
       {"ja":"恐れ入りますが、少々お待ち願えますか。","match":"お待ち願えますか","en":"Excuse me, could you wait a moment?"},
-      {"ja":"傍聴席ではお静かに願いたい。","match":"お静かに願いたい","en":"We ask for quiet in the public gallery."},
+      {"ja":"今日のところはお引き取り願いたい。","match":"お引き取り願いたい","en":"I'd like you to leave for today."},
       {"ja":"ご乗車の際は、整理券をお取り願います。","match":"お取り願います","en":"When boarding, please take a numbered ticket."},
       {"ja":"当店は一切責任を負いかねますので、ご了承願います。","match":"ご了承願います","en":"We cannot accept any responsibility, so we ask for your understanding."},
       {"ja":"ご不明な点は、窓口までお問い合わせ願います。","match":"お問い合わせ願います","en":"If anything is unclear, please inquire at the counter."},
@@ -469,7 +471,7 @@
     ],
     "subsumes": [],
     "confusables": ["o-suru","o-kudasai"],
-    "detection": "Tokens: お or ご (御, 接頭辞) + a content word + 願い (願う, 動詞-非自立可能, 五段-ワア行 連用形) + ます, or 願え (下一段 連用形) + ます + か, or 願い + たい. The content word is a verb 連用形 (お|待ち|願え, お|取り|願い), a 漢語 noun after ご (ご|遠慮|願い, ご|了承|願い) or a na-adjective + に (だ 連用形-ニ) (お|静か|に|願い). Reject 願い directly after お or ご with nothing between (お|願い|し|ます, which is the humble お願いする and the o-suru family), and reject 願う with no お/ご (願っ|た, 願い事). Requests of this kind are written in notices and announcements. Confused with o-kudasai and o-suru."
+    "detection": "Tokens: お or ご (御, 接頭辞) + a content word + 願い (願う, 動詞-非自立可能, 五段-ワア行 連用形) + ます, or 願え (lexeme still 願う, 下一段-ア行 連用形, the potential) + ます + か, or 願い + たい. The content word is a verb 連用形 (お|待ち|願え, お|取り|願い), a 漢語 noun after ご (ご|遠慮|願い, ご|了承|願い) or a na-adjective + に (だ 連用形-ニ) (お|静か|に|願い). Reject 願い directly after お or ご with nothing between (お|願い|し|ます, which is the humble お願いする and the o-suru family), and reject 願う with no お/ご (願っ|た, 願い事). Requests of this kind are written in notices and announcements. Confused with o-kudasai and o-suru."
   },
   {
     "id": "kuse-shite",
@@ -560,7 +562,7 @@
     ],
     "subsumes": [],
     "confusables": ["te-mo-ii","nakute-mo-ii"],
-    "detection": "Tokens: N + で + いい (良い, 形容詞-非自立可能, 終止形). The で is 助詞-格助詞 after a time or place noun (来週|で, おにぎり|で) but だ (助動詞, 連用形-一般) after a plain noun in some cases (水|で, もの|で), so accept both tags. The deciding token is いい in 終止形, followed by よ, や, です, か, から, ん or the end of the sentence, while the 連体形 いい before a noun (いい|思い出, いい|部屋) rejects the match. Reject で + も + いい (どれでもいい). The permission pattern te-mo-ii has て + も instead."
+    "detection": "Tokens: N + で + いい (良い, 形容詞-非自立可能, 終止形). The で is 助詞-格助詞 after a time or place noun (来週|で, おにぎり|で) but だ (助動詞, 連用形-一般) after a plain noun in some cases (水|で, もの|で), so accept both tags. The deciding token is いい ending the clause: 終止形 followed by よ, や, です, か, から or the end of the sentence, or 連体形 before ん/の (準体助詞) as in 安い|の|で|いい|ん|だ; いい in 連体形 before a noun (いい|思い出, いい|部屋) rejects the match. Reject で + も + いい (どれでもいい). The permission pattern te-mo-ii has て + も instead."
   },
   {
     "id": "kara-naru",
@@ -617,12 +619,12 @@
     ],
     "counterexamples": [
       {"ja":"毎週末、友達と山に登る。","en":"Every weekend I climb a mountain with friends.","why":"登る 'to climb' has the same lexeme 上る in UniDic, but the noun before に is a place, not a quantity"},
-      {"ja":"その話題は会議にのぼらなかった。","en":"That topic didn't come up at the meeting.","why":"話題にのぼる 'come up as a topic' takes no amount"},
+      {"ja":"その件は会議の議題にのぼらなかった。","en":"That matter never came up on the meeting's agenda.","why":"議題にのぼる 'come up for discussion' takes no amount"},
       {"ja":"太陽が東の空にのぼる。","en":"The sun rises in the eastern sky.","why":"のぼる is the verb 'to rise', and 空 is a place"}
     ],
     "subsumes": [],
     "confusables": [],
-    "detection": "Tokens: a quantity noun (数詞 + 助数詞 or 円, 人, 件, 割, such as 一千|億|円, 五|万|人) + に (助詞-格助詞) [+ も (係助詞)] + のぼる (上る, 動詞-一般, 五段-ラ行), in the forms のぼる, のぼっ|た, のぼっ|て|いる, のぼり|ます, or the kanji 上る/上っ. UniDic gives the lexeme 上る for 登る, 昇る and のぼる alike, so the lexeme cannot decide: test the noun before に. Reject a place or a topic before に (山に登る, 空にのぼる, 話題にのぼる, 食卓にのぼる). A matcher should also accept 総額で三億円に上る, where で + a quantity comes before."
+    "detection": "Tokens: a quantity noun (数詞 + 助数詞 or 円, 人, 件, 割, such as 一千|億|円, 五|万|人) + に (助詞-格助詞) [+ も (係助詞)] + のぼる (上る, 動詞-一般, 五段-ラ行), in the forms のぼる, のぼっ|た, のぼっ|て|いる, のぼり|ます, or the kanji 上る/上っ. UniDic gives the lexeme 上る for 登る, 昇る and のぼる alike, so the lexeme cannot decide: test the noun before に. Reject a place or a topic before に (山に登る, 空にのぼる, 議題にのぼる, 話題にのぼる, 食卓にのぼる). A matcher should also accept 総額で三億円に上る, where で + a quantity comes before."
   },
   {
     "id": "kara-miru-to",
@@ -642,7 +644,7 @@
       {"ja":"立場の違う人から見たら、考えられないことだ。","match":"から見たら","en":"From the view of someone in a different position, it's unthinkable."},
       {"ja":"私から見ても、あの二人はお似合いだ。","match":"から見ても","en":"Even from where I stand, those two are a good match."},
       {"ja":"初心者から見ると、このソフトは難しすぎる。","match":"から見ると","en":"For a beginner, this software is far too hard."},
-      {"ja":"外国人から見た日本の印象を調べた。","match":"から見た","en":"I looked into the impressions of Japan that foreigners have."},
+      {"ja":"子供の目から見た戦争を描いた映画だ。","match":"から見た","en":"It's a film about war as seen through a child's eyes."},
       {"ja":"彼女の性格から見て、そんな無理はしないだろう。","match":"から見て","en":"Judging by her character, she won't push herself like that."},
       {"ja":"経営の面から見れば、この計画は危険だ。","match":"から見れば","en":"From the management side, this plan is risky."}
     ],
@@ -653,8 +655,8 @@
       {"ja":"様子からすると、彼は来ないだろう。","en":"Judging by how things look, he won't come.","why":"からすると is the separate entry kara-suru-to"}
     ],
     "subsumes": [],
-    "confusables": ["kara-suru-to","kara-shite"],
-    "detection": "Tokens: N + から (助詞-格助詞) + 見る (見る, 動詞-非自立可能, 上一段-マ行) in a conditional or connective form: 見る + と (助詞-接続助詞), 見れ (仮定形) + ば (助詞-接続助詞), 見 (連用形) + て (接続助詞) [+ も], 見 + たら (た 仮定形), or 見 + た (連体形) + noun. The noun before から is a person, group or aspect (親, 外国人, 経営の面). Distinguish it from kara-suru-to by the verb: 見る here, 為る there (から|する|と, から|し|たら). Reject から + 見える (one token) and 見せる, which are other verbs. Reject a literal gaze from a place (窓|から|見る|と, 山|から|見る): the noun is a place and the clause goes on to say what can be seen, so require a person, group or abstract noun before から."
+    "confusables": ["kara-suru-to","kara-shite","kara-iu-to"],
+    "detection": "Tokens: N + から (助詞-格助詞) + 見る (見る, 動詞-非自立可能, 上一段-マ行) in a conditional or connective form: 見る + と (助詞-接続助詞), 見れ (仮定形) + ば (助詞-接続助詞), 見 (連用形) + て (接続助詞) [+ も], 見 + たら (た 仮定形), or 見 + た (連体形) + noun. The noun before から is a person, group or aspect (親, 外国人, 経営の面). Distinguish it from kara-suru-to, kara-shite and kara-iu-to by the verb: 見る here, 為る there (から|する|と, から|し|て), 言う in kara-iu-to. Reject から + 見える (one token) and 見せる, which are other verbs. Reject a literal gaze from a place (窓|から|見る|と, 山|から|見る): the noun is a place and the clause goes on to say what can be seen, so require a person, group or abstract noun before から."
   },
   {
     "id": "kara-suru-to",
@@ -675,7 +677,7 @@
       {"ja":"彼の経験からすれば、これくらいは簡単なはずだ。","match":"からすれば","en":"With his experience, this should be easy."},
       {"ja":"値段からすると、品質はそれほど高くないと思う。","match":"からすると","en":"Going by the price, I don't think the quality is that high."},
       {"ja":"彼女の性格からしたら、黙っているはずがない。","match":"からしたら","en":"Knowing her character, there's no way she'd stay quiet."},
-      {"ja":"年齢からすれば、まだ若いほうだ。","match":"からすれば","en":"For his age, he's still on the young side."},
+      {"ja":"年齢からすれば、まだ若いほうだ。","match":"からすれば","en":"Going by age alone, he's still on the young side."},
       {"ja":"あの口ぶりからすると、あまり乗り気ではないようだった。","match":"からすると","en":"From the way he spoke, he didn't seem very keen."}
     ],
     "counterexamples": [
@@ -685,13 +687,13 @@
       {"ja":"親から見ると、子供は子供だ。","en":"To a parent, a child is a child.","why":"から見ると is the separate entry kara-miru-to"}
     ],
     "subsumes": [],
-    "confusables": ["kara-miru-to","kara-shite","to-suru-to"],
-    "detection": "Tokens: N + から (助詞-格助詞) + する (為る, 動詞-非自立可能, サ行変格) directly after から, in one of: する + と (助詞-格助詞 in this use), すれ (仮定形) + ば (接続助詞), し (連用形) + たら (た 仮定形). Note that the と here is tagged 格助詞, not 接続助詞. The する must follow から immediately: reject から + noun + する (出発する, 連絡する), where する belongs to a suru-verb. Separate it from kara-shite by the next token (し|て there, し|たら or する|と here), from kara-miru-to by the verb (為る, not 見る), and from to-suru-to, which has a quoting と before する."
+    "confusables": ["kara-miru-to","kara-shite","kara-iu-to","to-suru-to"],
+    "detection": "Tokens: N + から (助詞-格助詞) + する (為る, 動詞-非自立可能, サ行変格) directly after から, in one of: する + と (助詞-接続助詞), すれ (仮定形) + ば (接続助詞), し (連用形) + たら (た 仮定形). The する must follow から immediately: reject から + noun + する (出発する, 連絡する), where する belongs to a suru-verb. Separate it from kara-shite by the next token (し|て there, し|たら or する|と here), from kara-miru-to by the verb (為る, not 見る), and from to-suru-to, which has a quoting と before する."
   },
   {
     "id": "kara-shite",
     "form": "〜からして",
-    "variants": ["〜からしてそう"],
+    "variants": [],
     "meaning": "even ~ (to begin with) / judging from ~",
     "kind": "construction",
     "register": "neutral",
@@ -706,7 +708,7 @@
       {"ja":"彼の態度からして、反省していないようだ。","match":"からして","en":"Judging from his attitude, he doesn't seem sorry."},
       {"ja":"この味からして、素人の仕事じゃないね。","match":"からして","en":"Going by the taste, this isn't an amateur's work."},
       {"ja":"部屋の散らかり具合からして、あまり掃除はしないんでしょう。","match":"からして","en":"From how messy the room is, you probably don't clean much."},
-      {"ja":"あの様子からしてそうだろう。","match":"からしてそう","en":"Judging from how he looked, that must be the case."},
+      {"ja":"あの様子からして、たぶんそうだろう。","match":"からして","en":"Judging from how he looked, that's probably the case."},
       {"ja":"タイトルからしてもう面白そうだ。","match":"からして","en":"Even the title already looks fun."},
       {"ja":"服装からして場違いだった。","match":"からして","en":"I was out of place, beginning with my clothes."}
     ],
@@ -716,8 +718,8 @@
       {"ja":"話し方からすると、彼は関西の人だ。","en":"Judging by how he talks, he's from the Kansai area.","why":"からすると is the separate entry kara-suru-to"}
     ],
     "subsumes": [],
-    "confusables": ["kara-suru-to","kara-miru-to"],
-    "detection": "Tokens: N + から (助詞-格助詞) + し (為る, 動詞-非自立可能, 連用形) + て (助詞-接続助詞): 名前|から|し|て. The variant からしてそう is the same followed by そう (副詞) or そうだ. The する verb stands directly after から. Separate it from kara-suru-to by the next token (て here, と, ば or たら there) and from kara-miru-to by the verb (為る, not 見る). Reject し + て when it is a continuation of the gift verb してもらう / してくれる whose から marks a person who does something for the speaker (先輩|から|し|て|もらっ|た), reject 滴る and other single verb tokens, and reject し + て + から (since て + から is te-kara)."
+    "confusables": ["kara-suru-to","kara-miru-to","kara-iu-to"],
+    "detection": "Tokens: N + から (助詞-格助詞) + し (為る, 動詞-非自立可能, 連用形) + て (助詞-接続助詞): 名前|から|し|て. The する verb stands directly after から. Separate it from kara-suru-to by the next token (て here, と, ば or たら there) and from kara-miru-to by the verb (為る, not 見る). Reject し + て when it is a continuation of the gift verb してもらう / してくれる whose から marks a person who does something for the speaker (先輩|から|し|て|もらっ|た), reject 滴る and other single verb tokens, and reject し + て + から (since て + から is te-kara)."
   },
   {
     "id": "kara-niwa",
@@ -760,7 +762,7 @@
     "level": "N2",
     "sources": { "bunpro": "N2", "jt4y": "N2", "kanzen": "N2", "jlptsensei": "N3" },
     "prototype": false,
-    "connection": ["V-plain + 上に","i-Adj + 上に","na-Adj + な上に","N + の上に"],
+    "connection": ["V-plain + 上に","i-Adj + 上に","na-Adj + な上に","N + である上に"],
     "examples": [
       {"ja":"彼は頭がいい上に、性格もいい。","match":"上に","en":"He's smart, and on top of that he has a good personality."},
       {"ja":"彼女は美人な上に、仕事もできる。","match":"上に","en":"She's beautiful and also good at her job."},
@@ -779,6 +781,6 @@
     ],
     "subsumes": [],
     "confusables": ["ue-de","ue-wa","dake-de-naku"],
-    "detection": "Tokens: a predicate in 連体形 or た-form (いい, 寝坊し|た, 降っ|て|いる), な (だ 連体形) after a na-adjective or の (格助詞) after a noun, + 上 (上, 名詞-普通名詞; written 上 or うえ) + に (助詞-格助詞). The clause that follows adds a second item, often with も or まで (性格|も|いい, 電車|まで|遅れ|た). UniDic uses the same noun 上 for the literal place 'top', so reject 上 when the word before の is a physical object and the clause says where something is (机|の|上|に), reject 上 + で (ue-de) and 上 + は (ue-wa), and reject 上に立つ. The な before 上 is tagged 助動詞 だ 連体形 after a na-adjective, while のうえに after a bare noun is rare in the additive sense."
+    "detection": "Tokens: a predicate in 連体形 or た-form (いい, 寝坊し|た, 降っ|て|いる), な (だ 連体形) after a na-adjective (or, colloquially, a noun such as 美人|な) or である after a noun, + 上 (上, 名詞-普通名詞; written 上 or うえ) + に (助詞-格助詞). The clause that follows adds a second item, often with も or まで (性格|も|いい, 電車|まで|遅れ|た). UniDic uses the same noun 上 for the literal place 'top', so reject 上 when the word before の is a physical object and the clause says where something is (机|の|上|に), reject 上 + で (ue-de) and 上 + は (ue-wa), and reject 上に立つ. The な before 上 is tagged 助動詞 だ 連体形 after a na-adjective, while のうえに after a bare noun is rare in the additive sense."
   }
 ]

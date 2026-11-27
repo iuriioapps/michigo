@@ -1,0 +1,230 @@
+[
+  {
+    "id": "omou-you-ni",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 3: 母を思うように先生を慕っている was stiff, replaced with the agreement use みんなも思うように、この計画には無理がある",
+      "detection: 思い in 思い通りに is tagged 名詞 or 思う 連用形 depending on context (example 7 gets the verb); guard for the agreement use replaces the simile guard",
+      "tokens: 思う|よう(様)|に(だ 連用形-ニ) confirmed in all 思うように examples"
+    ]
+  },
+  {
+    "id": "sou-ni-nai",
+    "verdict": "fixed",
+    "changes": [
+      "detection: hearsay そう is not a separate lexeme in this tokenizer (止むそうだ gets そう-様態), so the guard is the 連用形 of the verb; added the 止み 名詞 + そう 副詞 split, as in sou-mo-nai",
+      "checked: そうもない is not listed and sou-mo-nai (b12) rejects そう|に|ない, so the two stay disjoint",
+      "tokens: 連用形 + そう(そう-様態) + に(だ 連用形-ニ) + [も] + 無い/有る+ませ+ん confirmed in all examples",
+      "register: spoken to neutral, そうにない is as common in news and prose as in speech"
+    ]
+  },
+  {
+    "id": "te-ite-wa",
+    "verdict": "fixed",
+    "changes": [
+      "register: spoken to neutral, ていては is common in writing; only ちゃ is spoken",
+      "example 8: en reworded as a conditional",
+      "subsumes: added tewa, since ていては contains the ては of tewa and must not count twice",
+      "confusables: added tewa-naranai",
+      "detection: the main verb いる has the same tag as the auxiliary (居る 動詞-非自立可能), so the guard is the token before い; reject いては/いちゃ before いけ, だめ, なら",
+      "tokens: て|い(居る)|て|は, て|い|ちゃ, て(てる)|ちゃ and 食べ|て|ちゃ confirmed"
+    ]
+  },
+  {
+    "id": "tewa",
+    "verdict": "fixed",
+    "changes": [
+      "register: spoken to neutral",
+      "detection: N + では is tagged 格助詞 で + は by this tokenizer, not 助動詞 だ, the same as location and topic では; dropping the copula では is right and the reason is now stated",
+      "detection: guard extended to て|い|ちゃ and て|ちゃ (te-ite-wa); noted the habitual ては 'whenever' as an unavoidable false hit",
+      "checked: te-wa-ikenai, tewa-naranai, tewa-irarenai all claim their own て|は/ちゃ run and tewa rejects them, te-ite-wa and tewa-tewa subsume tewa, so one sentence counts once"
+    ]
+  },
+  {
+    "id": "tewa-tewa",
+    "verdict": "fixed",
+    "changes": [
+      "register: written to neutral, 書いては消し is common in speech and the ちゃ variant is spoken",
+      "detection: 止み in 降っては止み is tagged 名詞-普通名詞; the matcher must accept it",
+      "tokens: V|て|は|V2、V|て|は|V2 and V|ちゃ|V2 confirmed in all examples"
+    ]
+  },
+  {
+    "id": "gake-ni",
+    "verdict": "fixed",
+    "changes": [
+      "example 8: 去りがけに repeated example 3's 立ち去りがけに, replaced with 通りがけに, a common form that splits as 通り (名詞) + がけ",
+      "variants: added 通りがけに",
+      "detection: 降り has lexeme 下りる; noted the 通り + 掛け split",
+      "tokens: noun tokens 帰り掛け, 出掛け, 行き掛け and 連用形 + 掛け (接尾辞-名詞的) + に confirmed"
+    ]
+  },
+  {
+    "id": "no-uchi-de",
+    "verdict": "fixed",
+    "changes": [
+      "example 9: 応募者は五人のうち二人が was ill-formed (double subject), rewritten as 応募者五人のうち、二人が未経験です",
+      "tokens: の|うち(内 名詞-普通名詞)|で(格助詞) confirmed; 'home' and 'while' get the same 内 token, as detection says"
+    ]
+  },
+  {
+    "id": "nuku",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 4: 力を抜きながら歩いてください was unnatural, replaced with 肩の力を抜いて、楽にしてください",
+      "detection: 選び抜く is also one 動詞-一般 token, like 悩み抜く and 追い抜く (all confirmed)",
+      "tokens: V 連用形 + 抜く (動詞-非自立可能) confirmed in all examples; main-verb 抜く has the same tag",
+      "checked: disjoint from nuki-de, which needs 抜き tagged 名詞"
+    ]
+  },
+  {
+    "id": "nuki-de",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 1: unnatural 力を抜きながら歩いて replaced with 肩の力を抜きながら作業してください",
+      "variants: added 抜きでは, which connection and example 4 already used",
+      "detection: 税抜き and 肉抜き confirmed as single 名詞 tokens",
+      "tokens: 抜き (名詞) + で (格助詞 or だ 連用形), に, に|し|て, の confirmed"
+    ]
+  },
+  {
+    "id": "ka-nanika",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 2: 彼が来るか、何か聞いてみて was unnatural and its en contradictory, replaced with 本当に来るか、何か連絡あった？",
+      "counterexample 5: added 誰か何か知らない？, the same か|何|か tokens after a question word",
+      "detection: なに is one token (何 代名詞), not な + に; added the question-word guard",
+      "tokens: か(副助詞)|何/なん/なに(代名詞)|か(副助詞) confirmed"
+    ]
+  },
+  {
+    "id": "igai",
+    "verdict": "reject",
+    "changes": [
+      "reject: plain word; 以外 is a 名詞-普通名詞 token with ordinary case particles after it (以外|の, 以外|に|も, 以外|で|は), and every example is the compositional 'except X', which is vocabulary (bunpro even files it at N4)",
+      "the one grammar-like use, 以外に + negative 'nothing but', is just 以外 + a negated predicate; 'no choice but' is already owned by shika-nai and yori-hoka-nai",
+      "tokens: 以外 (以外 名詞-普通名詞) confirmed in every example"
+    ]
+  },
+  {
+    "id": "eru-uru",
+    "verdict": "fixed",
+    "changes": [
+      "example 2: 可能性も考えうる was stiff as a predicate, replaced with the usual attributive 考えうる限りの手は尽くした",
+      "tokens: V 連用形 + 得る (動詞-非自立可能 下一段-ア行) as 得る/うる/える (終止形/連体形) and 得/え (連用形) + ます/た confirmed; 有り得る in kanji is 有り|得る",
+      "checked: disjoint from enai, which takes 得 in 未然形 + ない"
+    ]
+  },
+  {
+    "id": "enai",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 2: 工場から許可を得ない限り was odd, replaced with 市の許可を得ない限り、工事は始められない",
+      "tokens: 得/え (得る 未然形) + ない/なかっ|た/ねえ (ない 助動詞) and え (連用形) + ませ|ん confirmed; main-verb 得|ない has the same tags, so the を guard is needed"
+    ]
+  },
+  {
+    "id": "ge",
+    "verdict": "fixed",
+    "changes": [
+      "variants: 寂しげ was an example, not a variant, replaced with 〜ありげ",
+      "counterexample 4: added 大人げないよ, the fixed adjective with the same 大人|げ(気 接尾辞)|ない tokens",
+      "detection: precision against the noun 気 checked: 気 the noun is 名詞-普通名詞 and やる気/眠気 are one token, so 接尾辞-形状詞的 keeps them out; added the 大人げない guard",
+      "tokens: げ (気 接尾辞-形状詞的) after 形容詞 語幹, a noun or あり, and たげ (たげる 助動詞 連用形) confirmed"
+    ]
+  },
+  {
+    "id": "o-negau",
+    "verdict": "fixed",
+    "changes": [
+      "example 5: お静かに願いたい repeated the frame of example 1, replaced with 今日のところはお引き取り願いたい",
+      "detection: 願え keeps the lexeme 願う (下一段-ア行 連用形, the potential)",
+      "tokens: お/ご (御 接頭辞) + content word + 願い (願う 連用形) + ます/たい and 願え + ます + か confirmed; お|願い|し|ます confirmed as the near miss"
+    ]
+  },
+  {
+    "id": "kuse-shite",
+    "verdict": "ok",
+    "changes": [
+      "checked: kuse-ni (b10) has no くせして variant and its detection rejects くせ + し + て, matching this entry's guard against くせ + に",
+      "tokens: くせ (癖 名詞-普通名詞) + し (為る 連用形) + [やがっ (やがる)] + て confirmed in all examples"
+    ]
+  },
+  {
+    "id": "sei-ka",
+    "verdict": "ok",
+    "changes": [
+      "checked: sei-de (b10) lists only せいだ, せい, せいにする and rejects せい + か, matching this entry, which rejects せい + で",
+      "tokens: せい (所為 名詞-普通名詞) + か (副助詞), せい + だろう + か (終助詞), せい + か (終助詞) + な confirmed, so the tag of か varies as detection says"
+    ]
+  },
+  {
+    "id": "dewa-ii",
+    "verdict": "fixed",
+    "changes": [
+      "detection: いい is 連体形 before ん in example 3 (安いのでいいんだ), so the 終止形-only rule would miss it; now accepts 連体形 before 準体助詞 ん/の",
+      "tokens: で as 格助詞 or だ 連用形-一般 + いい (良い 形容詞-非自立可能) confirmed"
+    ]
+  },
+  {
+    "id": "kara-naru",
+    "verdict": "ok",
+    "changes": [
+      "tokens: から (格助詞) + 成る (なる/成る/なっ/なり/成っ) and 成り立っ (成り立つ, one token) confirmed; example 5 with the comma after なり now tokenizes correctly"
+    ]
+  },
+  {
+    "id": "ni-noboru",
+    "verdict": "fixed",
+    "changes": [
+      "counterexample 2: 会議にのぼらなかった was unidiomatic, replaced with 会議の議題にのぼらなかった",
+      "tokens: quantity + に + [も] + のぼる/上る (上る 動詞-一般) confirmed; 登る also gets lexeme 上る, as detection says"
+    ]
+  },
+  {
+    "id": "kara-miru-to",
+    "verdict": "fixed",
+    "changes": [
+      "example 7: 外国人から見た repeated the noun of example 3, replaced with 子供の目から見た戦争を描いた映画だ",
+      "confusables: added kara-iu-to",
+      "detection: named all three sibling verbs (為る, 言う) for the disjointness test",
+      "tokens: から (格助詞) + 見る/見れ|ば/見|て[|も]/見|たら/見|た confirmed; checked against kara-iu-to (b14), which requires 言う"
+    ]
+  },
+  {
+    "id": "kara-suru-to",
+    "verdict": "fixed",
+    "changes": [
+      "detection: the と after する is 助詞-接続助詞 in every example, not 格助詞 as claimed",
+      "example 8: en 'For his age' meant something else, reworded as 'Going by age alone'",
+      "confusables: added kara-iu-to",
+      "tokens: から + する|と, すれ|ば, し|たら confirmed; disjoint from kara-shite (し|て) and kara-miru-to (見る)"
+    ]
+  },
+  {
+    "id": "kara-shite",
+    "verdict": "fixed",
+    "changes": [
+      "variants: dropped 〜からしてそう, which is からして + そう and not a variant",
+      "example 7: rewritten as あの様子からして、たぶんそうだろう with match からして",
+      "confusables: added kara-iu-to",
+      "tokens: から (格助詞) + し (為る 連用形) + て (接続助詞) confirmed; 滴る is one token"
+    ]
+  },
+  {
+    "id": "kara-niwa",
+    "verdict": "ok",
+    "changes": [
+      "tokens: predicate + から (接続助詞) + に (格助詞) + は and から (接続助詞) + は confirmed; the source から in the counterexamples is 格助詞, so the tag separates them as detection says"
+    ]
+  },
+  {
+    "id": "ue-ni",
+    "verdict": "fixed",
+    "changes": [
+      "connection: N + の上に is not the additive use (it reads as 'on top of N'); replaced with N + である上に",
+      "detection: matched the connection change and noted the colloquial noun + な (美人な上に)",
+      "tokens: 連体形/た/な + 上 or うえ (上 名詞-普通名詞) + に (格助詞) confirmed"
+    ]
+  }
+]
