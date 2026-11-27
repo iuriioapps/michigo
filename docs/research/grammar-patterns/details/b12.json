@@ -1,0 +1,703 @@
+[
+  {
+    "id": "bakari-de-naku",
+    "form": "〜ばかりでなく",
+    "variants": ["〜ばかりでなく〜も", "〜ばかりではなく", "〜ばかりじゃなく", "〜ばっかりでなく"],
+    "meaning": "not only ~ but also",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3", "try": "N3" },
+    "prototype": false,
+    "connection": ["V-plain + ばかりでなく", "i-Adj + ばかりでなく", "na-Adj + なばかりでなく", "N + ばかりでなく"],
+    "examples": [
+      { "ja": "彼女は歌が上手なばかりでなく、ダンスもプロ級だ。", "match": "ばかりでなく", "en": "She's not only good at singing; her dancing is pro level too." },
+      { "ja": "日本語ばかりではなく、英語も話せます。", "match": "ばかりではなく", "en": "I can speak English as well as Japanese." },
+      { "ja": "彼、顔がいいばかりじゃなくて、性格もいいんだよね。", "match": "ばかりじゃなくて", "en": "He's not just good-looking; he's a nice guy too." },
+      { "ja": "この店は味がいいばかりでなく、値段も安い。", "match": "ばかりでなく", "en": "This place has good food, and it's cheap too." },
+      { "ja": "学生ばかりでなく、先生たちもその知らせに驚いた。", "match": "ばかりでなく", "en": "Not only the students but the teachers too were shocked by the news." },
+      { "ja": "雨が降ってきたばかりでなく、風まで強くなってきた。", "match": "ばかりでなく", "en": "Not only has it started raining, but the wind has picked up too." },
+      { "ja": "彼は自分の仕事ばっかりでなく、人の分まで手伝ってくれる。", "match": "ばっかりでなく", "en": "He doesn't only do his own work; he helps with other people's too." }
+    ],
+    "counterexamples": [
+      { "ja": "今着いたばかりで、まだ何も食べていません。", "en": "I've only just arrived and haven't eaten anything yet.", "why": "ばかりで after た is 'just did' (ta-bakari) and is not followed by なく" },
+      { "ja": "毎日仕事ばかりで、休む暇もなく一年が過ぎた。", "en": "It was nothing but work every day, and a year passed with no time to rest.", "why": "ばかりで is 'nothing but' (bakari-de); なく is the next clause (暇もなく), not でなく" },
+      { "ja": "この部屋は子供ばかりで、大人は一人もいない。", "en": "This room is all kids, with no adults at all.", "why": "ばかりで is 'only' after a noun; the clause continues with a plain negative, not ばかりでなく〜も" },
+      { "ja": "彼は漫画ばかり読んでいる。", "en": "He does nothing but read manga.", "why": "plain ばかり 'only' with no でなく" }
+    ],
+    "subsumes": ["bakari"],
+    "confusables": ["bakari-ka", "bakari-de", "nominarazu", "bakari-da"],
+    "detection": "Tokens: ばかり (助詞-副助詞, lexeme ばかり) + で (助動詞 だ 連用形-一般) + なく (形容詞 無い 連用形-一般), e.g. 上手な|ばかり|で|なく. The variants are ばかり + で + は + なく (ではなく), ばかり + じゃ (だ 連用形-融合) + なく (+ て), and ばっかり, which UniDic also gives the lexeme ばかり. Require ばかり directly followed by で/じゃ and then なく; the 〜も / 〜まで / 〜だけでなく second half is optional and not a guard. ばかりで + なく must not be matched when なく belongs to the next clause (ばかりで、暇もなく: a comma and other tokens separate them). After た, ばかり is the 'just did' ta-bakari; the sentence-level ばかりでなく still wins when なく follows. This entry takes precedence over bakari and bakari-de."
+  },
+  {
+    "id": "bakari-de",
+    "form": "〜ばかりで",
+    "variants": ["〜ばっかりで"],
+    "meaning": "nothing but ~ (and nothing else comes of it)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["N + ばかりで", "V-dict + ばかりで", "i-Adj + ばかりで"],
+    "examples": [
+      { "ja": "口ばかりで、全然動かないんだから。", "match": "ばかりで", "en": "He's all talk and never lifts a finger." },
+      { "ja": "最近は忙しいばかりで、楽しいことが何もない。", "match": "ばかりで", "en": "Lately it's just been busy, with nothing fun about it." },
+      { "ja": "泣くばかりで、何も話してくれなかった。", "match": "ばかりで", "en": "She just cried and wouldn't tell me anything." },
+      { "ja": "うちの会社は年寄りばっかりで、若い人がいないんだよ。", "match": "ばっかりで", "en": "My company is all old people, and there are no young ones." },
+      { "ja": "毎日同じ作業を繰り返すばかりで、少しも進歩しません。", "match": "ばかりで", "en": "I just repeat the same task every day and make no progress at all." },
+      { "ja": "この町は坂道ばかりで、自転車では移動できない。", "match": "ばかりで", "en": "This town is all slopes, so you can't get around by bicycle." },
+      { "ja": "彼の話は自慢ばかりで、聞いていて疲れる。", "match": "ばかりで", "en": "His talk is nothing but bragging, and it's tiring to listen to." }
+    ],
+    "counterexamples": [
+      { "ja": "今着いたばかりで、まだ何も食べていません。", "en": "I've only just arrived and haven't eaten anything yet.", "why": "ばかりで after た is 'just did' (ta-bakari), a different meaning" },
+      { "ja": "歌が上手なばかりでなく、ダンスもできる。", "en": "She can not only sing well but dance too.", "why": "ばかりでなく is the longer 'not only' entry" },
+      { "ja": "彼は漫画ばかり読んでいる。", "en": "He does nothing but read manga.", "why": "ばかり without で, directly before a verb" },
+      { "ja": "物価は上がるばかりだ。", "en": "Prices keep going up.", "why": "ばかりだ is the 'keeps getting' entry bakari-da; で is not present" }
+    ],
+    "subsumes": ["bakari"],
+    "confusables": ["bakari-de-naku", "ta-bakari", "bakari-da", "bakari", "te-bakari"],
+    "detection": "Tokens: ばかり (助詞-副助詞, lexeme ばかり) followed by で (助動詞 だ 連用形-一般), as in 口|ばかり|で and 泣く|ばかり|で; ばっかり has the same lexeme ばかり. The で is the copula, not the て-form of a verb and not a particle. Reject ばかり + で + なく (bakari-de-naku) and ばかり + で + し + た (the polite ばかりでした of bakari-da). Skip た + ばかり + で: it is 'just did' (ta-bakari, 今着いたばかりで), which has its own entry. Often confused with bakari-da (ばかりだ), where the copula is だ."
+  },
+  {
+    "id": "bakari-da",
+    "form": "〜ばかりだ",
+    "variants": ["〜ばかりです", "〜ばかりだった", "〜ばかりでした"],
+    "meaning": "keeps getting ~ (usually worse); nothing left but to ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N2", "bunpro": "N3", "marumori": "N3", "kanzen": "N2" },
+    "prototype": false,
+    "connection": ["V-dict + ばかりだ"],
+    "examples": [
+      { "ja": "物価は上がるばかりだ。", "match": "ばかりだ", "en": "Prices just keep going up." },
+      { "ja": "説明を聞いても、混乱するばかりでした。", "match": "ばかりでした", "en": "Even after hearing the explanation, I only got more confused." },
+      { "ja": "景気は悪くなるばかりです。", "match": "ばかりです", "en": "The economy only keeps getting worse." },
+      { "ja": "準備はすべて整った。あとは本番を待つばかりだ。", "match": "ばかりだ", "en": "Everything is ready. All that's left is to wait for the real thing." },
+      { "ja": "調べれば調べるほど、不安は大きくなるばかりだった。", "match": "ばかりだった", "en": "The more I looked into it, the more my anxiety only grew." },
+      { "ja": "あれから彼女との距離は広がるばかりだ。", "match": "ばかりだ", "en": "Since then, the distance between her and me has only widened." },
+      { "ja": "この町は人口が減っていくばかりだと聞いた。", "match": "ばかりだ", "en": "I heard this town's population keeps shrinking." }
+    ],
+    "counterexamples": [
+      { "ja": "部屋の中は本ばかりだ。", "en": "The room is full of nothing but books.", "why": "noun + ばかり + だ means 'only / all', with no ongoing change" },
+      { "ja": "今帰ってきたばかりだ。", "en": "I've just come back.", "why": "た + ばかりだ is 'just did' (ta-bakari)" },
+      { "ja": "彼は食べてばかりだ。", "en": "All he does is eat.", "why": "て + ばかり is te-bakari 'does nothing but'" },
+      { "ja": "子供ばかりで大人は一人もいない。", "en": "It's all children, with no adults at all.", "why": "ばかりで is the separate entry bakari-de" }
+    ],
+    "subsumes": ["bakari"],
+    "confusables": ["bakari-de", "ta-bakari", "te-bakari", "ippou-da", "bakari"],
+    "detection": "Tokens: a verb in 連体形/終止形 (上がる, 待つ, 為る) or an adjective 連用形 + なる (悪く|なる) + ばかり (助詞-副助詞, lexeme ばかり) + だ/です (助動詞 だ/です 終止形-一般), or でし + た for ばかりでした. Require a dictionary-form verb directly before ばかり: た + ばかり is ta-bakari, て + ばかり is te-bakari, and a noun + ばかり + だ is plain 'only' (本ばかりだ). Sentence-end ばかり (ばかりだ, ばかりです, ばかりだった, ばかりでした) is the guard; ばかりで followed by a comma and more clause is bakari-de. The sense 'nothing left but to ~' (待つばかりだ) has the same tokens."
+  },
+  {
+    "id": "bakari-ni",
+    "form": "〜ばかりに",
+    "variants": ["〜たばかりに", "〜ばっかりに"],
+    "meaning": "simply because ~ (with a bad result)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N2", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["V-ta + ばかりに", "V-plain + ばかりに", "i-Adj + ばかりに", "na-Adj + なばかりに", "N + な + ばかりに"],
+    "examples": [
+      { "ja": "彼を信じたばかりに、全財産を失った。", "match": "ばかりに", "en": "Just because I trusted him, I lost everything I had." },
+      { "ja": "ちょっと油断したばかりに、財布を盗まれた。", "match": "ばかりに", "en": "I let my guard down for a moment, and that's why my wallet got stolen." },
+      { "ja": "一言多かったばかりに、彼女を怒らせてしまった。", "match": "ばかりに", "en": "Because I said one word too many, I ended up making her angry." },
+      { "ja": "私が行かなかったばかりに、みんなに迷惑をかけた。", "match": "ばかりに", "en": "Just because I didn't go, I put everyone to trouble." },
+      { "ja": "お金がないばかりに、夢をあきらめる人もいる。", "match": "ばかりに", "en": "Some people give up their dreams only because they have no money." },
+      { "ja": "寝坊したばっかりに、大事な面接に遅れた。", "match": "ばっかりに", "en": "All because I overslept, I was late for an important interview." },
+      { "ja": "傘を持っていかなかったばかりに、びしょ濡れになりました。", "match": "ばかりに", "en": "Because I didn't take an umbrella, I got soaked." }
+    ],
+    "counterexamples": [
+      { "ja": "彼女は着いたばかりに見えた。", "en": "She looked like she had just arrived.", "why": "ばかり is 'just did' and に belongs to 見える (looks like), not a cause" },
+      { "ja": "子供ばかりに仕事を任せるのは危ない。", "en": "It's risky to leave the work only to the children.", "why": "ばかり is 'only' after a noun, followed by the particle に" },
+      { "ja": "今にも泣かんばかりに喜んだ。", "en": "She was so happy she looked ready to burst into tears.", "why": "んばかりに is the separate entry n-bakari-ni" },
+      { "ja": "待ってましたとばかりに、彼は立ち上がった。", "en": "As if to say 'I've been waiting for this', he stood up.", "why": "とばかりに is the separate entry to-bakari-ni" }
+    ],
+    "subsumes": ["bakari"],
+    "confusables": ["n-bakari-ni", "to-bakari-ni", "bakari-de", "node", "ta-bakari"],
+    "detection": "Tokens: ばかり (助詞-副助詞, lexeme ばかり) + に (助詞-格助詞), after a plain predicate, most often た (助動詞 た 連体形-一般): 信じ|た|ばかり|に, 寝坊|し|た|ばっかり|に. Require a plain-form verb, adjective or copula な before ばかり, and a result clause that is bad or unwanted. Reject 今にも泣かん|ばかり|に (ん is 助動詞 ず, entry n-bakari-ni) and と|ばかり|に (entry to-bakari-ni), which have their own ids. Reject た|ばかり|に|見える style uses where に belongs to the next verb, and noun + ばかり + に (子供ばかりに) where ばかり means 'only'."
+  },
+  {
+    "id": "ippou-da",
+    "form": "〜一方だ",
+    "variants": ["〜一方です", "〜一方だった", "〜いっぽうだ"],
+    "meaning": "keeps on ~ing; more and more",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["V-dict + 一方だ"],
+    "examples": [
+      { "ja": "物価は上がる一方だ。", "match": "一方だ", "en": "Prices just keep going up." },
+      { "ja": "病状は悪くなる一方でした。", "match": "一方でした", "en": "His condition kept getting worse." },
+      { "ja": "仕事は増える一方です。", "match": "一方です", "en": "My workload only keeps growing." },
+      { "ja": "円は下がる一方だね。", "match": "一方だ", "en": "The yen just keeps falling, doesn't it." },
+      { "ja": "いくら働いても、借金は増える一方だった。", "match": "一方だった", "en": "No matter how much I worked, my debt only kept growing." },
+      { "ja": "彼女に会えない日が続いて、寂しさは募る一方だ。", "match": "一方だ", "en": "The days without seeing her go on, and my loneliness only grows." },
+      { "ja": "都会の人口は増える一方だと言われている。", "match": "一方だ", "en": "They say the population of the city just keeps rising." }
+    ],
+    "counterexamples": [
+      { "ja": "二人のうち、一方だけが悪いわけではない。", "en": "It isn't that only one of the two is at fault.", "why": "一方 is 'one side' (接続詞 here), followed by だけ, not 'keeps ~ing'" },
+      { "ja": "彼は会社で働く一方で、夜は大学に通っている。", "en": "He works at a company, and at the same time goes to university at night.", "why": "一方で is the separate entry ippou-de" },
+      { "ja": "物価は上がるばかりだ。", "en": "Prices only keep going up.", "why": "ばかりだ is the near-synonym bakari-da, with a different token" },
+      { "ja": "この道は一方通行だ。", "en": "This road is one-way.", "why": "一方 is part of the compound 一方通行, not after a verb" }
+    ],
+    "subsumes": [],
+    "confusables": ["ippou-de", "bakari-da", "bakari-de", "tsuzukeru"],
+    "detection": "Tokens: a verb in 連体形 or 終止形 (上がる, 増える) or an adjective 連用形 + なる (悪く|なる), then 一方 (名詞-普通名詞, lexeme 一方; いっぽう spelled out has the same lexeme) + だ/です (助動詞 終止形-一般) or でし + た / だっ + た. Require a dictionary-form verb right before 一方 and だ/です right after. 一方 + で (助詞-格助詞) is ippou-de, 一方 + 通行 is a compound, and 一方 as 接続詞 (二人のうち、一方だけ) is a sentence-level contrast or 'one of two'. Often confused with bakari-da."
+  },
+  {
+    "id": "ippou-de",
+    "form": "〜一方で",
+    "variants": ["〜一方", "〜一方では", "その一方で", "一方で"],
+    "meaning": "on the other hand; while ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N2", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["V-plain + 一方で", "i-Adj + 一方で", "na-Adj + 一方で (na-Adj + な + 一方)", "Clause-plain + 一方"],
+    "examples": [
+      { "ja": "彼は会社で働く一方で、夜は大学に通っている。", "match": "一方で", "en": "He works at a company, and at the same time he goes to university at night." },
+      { "ja": "この町は便利な一方、家賃が高い。", "match": "一方", "en": "This town is convenient, but the rent is high." },
+      { "ja": "彼女は厳しい一方で、生徒思いの先生だ。", "match": "一方で", "en": "She is strict, but she's also a teacher who cares about her students." },
+      { "ja": "景気が回復している。その一方で、物価も上がり続けている。", "match": "その一方で", "en": "The economy is recovering. At the same time, prices keep rising." },
+      { "ja": "一方では賛成する人もいるが、反対する人も多い。", "match": "一方では", "en": "Some people are in favor, but many are against." },
+      { "ja": "母は子供に甘い一方、父はとても厳しい。", "match": "一方", "en": "Mother is soft on the kids, while Father is very strict." },
+      { "ja": "ネットは便利な一方で、使いすぎると依存してしまう。", "match": "一方で", "en": "The internet is convenient, but if you use it too much you become dependent." }
+    ],
+    "counterexamples": [
+      { "ja": "物価は上がる一方だ。", "en": "Prices just keep going up.", "why": "一方だ is the separate entry ippou-da" },
+      { "ja": "この道は一方通行だ。", "en": "This road is one-way.", "why": "一方 is part of the compound 一方通行" },
+      { "ja": "二人のうち一方が先に帰った。", "en": "One of the two went home first.", "why": "一方 is 'one of two' (名詞), with が as its particle" },
+      { "ja": "一方的に話を打ち切られた。", "en": "The conversation was cut off unilaterally.", "why": "一方 + 的 (suffix) + に, with no で after 一方" }
+    ],
+    "subsumes": [],
+    "confusables": ["ippou-da", "ni-taishite", "bakari-de", "tsuide-ni"],
+    "detection": "Tokens: 一方 (名詞-普通名詞, lexeme 一方) + で (助詞-格助詞), as in 働く|一方|で and その|一方|で; the shorter 〜一方、 and 一方では (一方 + で + は) drop or extend the で. UniDic does not make 一方で a conjunction here: 一方 is a noun. A sentence-initial 一方、 or 一方 + 接続詞 reading appears in 二人のうち、一方だけ and is not this pattern. Require a clause before 一方 (a plain predicate or な), or その, and a contrasting or parallel second clause after it. Reject 一方 + だ/です (ippou-da) and 一方 + 通行 (one-way)."
+  },
+  {
+    "id": "kara-koso",
+    "form": "〜からこそ",
+    "variants": ["〜だからこそ", "だからこそ", "〜からこそ〜のだ"],
+    "meaning": "precisely because ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N2", "bunpro": "N3", "marumori": "N3", "try": "N3", "jt4y": "N2" },
+    "prototype": false,
+    "connection": ["Clause-plain + からこそ", "N + だからこそ", "na-Adj + だからこそ"],
+    "examples": [
+      { "ja": "愛しているからこそ、本当のことを言うんだよ。", "match": "からこそ", "en": "It's precisely because I love you that I'm telling you the truth." },
+      { "ja": "友達だからこそ、言いにくいこともある。", "match": "だからこそ", "en": "Precisely because we're friends, there are things that are hard to say." },
+      { "ja": "だからこそ、私はあの人を信じたい。", "match": "だからこそ", "en": "That's exactly why I want to believe in him." },
+      { "ja": "大変だったからこそ、今の自分があります。", "match": "からこそ", "en": "It's because it was hard that I am who I am now." },
+      { "ja": "忙しいからこそ、休みの日は何もしないと決めている。", "match": "からこそ", "en": "Just because I'm busy, I've made it a rule to do nothing on my days off." },
+      { "ja": "失敗したからこそ、見えてきたものがある。", "match": "からこそ", "en": "There are things I came to see precisely because I failed." },
+      { "ja": "好きだからこそ、離れる決心をしたんです。", "match": "だからこそ", "en": "It's because I love her that I decided to part." }
+    ],
+    "counterexamples": [
+      { "ja": "今日は日曜だから、店は混んでいる。", "en": "It's Sunday, so the store is crowded.", "why": "から is the plain 'so' conjunction with no こそ" },
+      { "ja": "今年こそ合格してみせる。", "en": "I'll pass this year for sure.", "why": "こそ emphasizes the noun 今年; there is no から before it" },
+      { "ja": "試験に受かってこそ、一人前だ。", "en": "Only by passing the exam are you a professional.", "why": "てこそ is the separate entry te-koso" },
+      { "ja": "雨が降ればこそ、花は育つ。", "en": "It is precisely when it rains that the flowers grow.", "why": "ばこそ is the separate entry ba-koso" }
+    ],
+    "subsumes": ["koso"],
+    "confusables": ["koso", "te-koso", "ba-koso", "node"],
+    "detection": "Tokens: から (助詞-接続助詞, lexeme から) + こそ (助詞-係助詞, lexeme こそ), after a plain predicate: 愛し|て|いる|から|こそ. The だからこそ forms are だ (助動詞 だ 終止形-一般) + から + こそ, both after a noun (友達|だ|から|こそ) and sentence-initially (だ|から|こそ); UniDic does not treat だから as a conjunction. This entry takes precedence over koso. Guard: から must be the reason conjunction, not the 'from' particle (格助詞 から) followed by こそ. Reject こそ after て or ば (te-koso, ba-koso) and after a bare noun (今年こそ)."
+  },
+  {
+    "id": "dokoro-ka",
+    "form": "〜どころか",
+    "variants": ["〜どころか〜(さえ/まで)", "〜どころか〜も"],
+    "meaning": "far from ~; on the contrary; let alone ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N2", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["V-dict + どころか", "i-Adj + どころか", "na-Adj + どころか", "N + どころか", "V-ta + どころか"],
+    "examples": [
+      { "ja": "忙しいどころか、毎日暇で困っている。", "match": "どころか", "en": "Far from being busy, I have nothing to do every day and it's a problem." },
+      { "ja": "彼は謝るどころか、逆に私を責めた。", "match": "どころか", "en": "Far from apologizing, he blamed me instead." },
+      { "ja": "英語どころか、日本語もまだ上手に話せない。", "match": "どころか", "en": "Let alone English, I can't even speak Japanese well yet." },
+      { "ja": "三万円どころか、千円も持っていなかった。", "match": "どころか", "en": "I didn't have thirty thousand yen; I didn't even have a thousand." },
+      { "ja": "いい天気どころか、台風が来そうな空だ。", "match": "どころか", "en": "Good weather? It looks like a typhoon is coming." },
+      { "ja": "この店は安いどころか、むしろ高いくらいだよ。", "match": "どころか", "en": "This place isn't cheap at all; if anything it's expensive." },
+      { "ja": "お礼を言われるどころか、文句を言われてしまった。", "match": "どころか", "en": "Instead of being thanked, I got complained at." },
+      { "ja": "彼女は休むどころか、夜遅くまで働き続けていた。", "match": "どころか", "en": "Far from resting, she kept working until late at night." }
+    ],
+    "counterexamples": [
+      { "ja": "今は忙しくて、遊ぶどころではない。", "en": "I'm too busy right now to have any time for play.", "why": "どころではない is the separate entry dokoro-dewa-nai" },
+      { "ja": "静岡は有名なお茶どころだ。", "en": "Shizuoka is a famous tea-growing area.", "why": "どころ here is a suffix 'area known for ~', with no か" },
+      { "ja": "ここは何をするところか分かりますか。", "en": "Do you know what this place is for?", "why": "ところ (place) + か is not どころ" },
+      { "ja": "どこかで会ったことがありますか。", "en": "Have we met somewhere before?", "why": "どこ + か is 'somewhere', a different word" }
+    ],
+    "subsumes": [],
+    "confusables": ["dokoro-dewa-nai", "bakari-ka", "nominarazu"],
+    "detection": "Tokens: どころ (助詞-副助詞, lexeme どころ) + か (助詞-副助詞) as two tokens: 忙しい|どころ|か, 謝る|どころ|か, 英語|どころ|か. Match the adjacent pair どころ + か. Reject どころ + だ/で + は + ない (dokoro-dewa-nai, an own entry) and お茶どころ, where the same どころ token is followed by だ and no か. ところ + か (所/ところ, 名詞) and どこ + か (代名詞 + 助詞) are different tokens and fail the two-token check."
+  },
+  {
+    "id": "ni-kawatte",
+    "form": "〜に代わって",
+    "variants": ["〜に代わり", "〜にかわって", "〜に代わりまして", "〜に代わる", "〜に替わって"],
+    "meaning": "in place of ~; on behalf of ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["N + に代わって", "N + に代わり", "N + に代わる + N"],
+    "examples": [
+      { "ja": "母に代わって、私が挨拶いたします。", "match": "に代わって", "en": "On behalf of my mother, I will give the greeting." },
+      { "ja": "社長に代わり、副社長が会見を行った。", "match": "に代わり", "en": "The vice president held the press conference in place of the president." },
+      { "ja": "病気の田中さんに代わって、山本さんが発表した。", "match": "に代わって", "en": "Yamamoto gave the presentation in place of Tanaka, who was ill." },
+      { "ja": "今日は父に代わって、私が迎えに来ました。", "match": "に代わって", "en": "Today I came to pick you up in my father's place." },
+      { "ja": "先生にかわって、私が説明するね。", "match": "にかわって", "en": "I'll explain it in place of the teacher." },
+      { "ja": "手紙に代わる連絡手段として、チャットが普及した。", "match": "に代わる", "en": "Chat became widespread as a means of contact replacing letters." },
+      { "ja": "担当者に代わりまして、お詫び申し上げます。", "match": "に代わりまして", "en": "On behalf of the person in charge, I apologize." }
+    ],
+    "counterexamples": [
+      { "ja": "友達に席を代わってもらった。", "en": "My friend switched seats with me.", "why": "に marks the person who did the favor (てもらう); 代わって is 'switch', not 'in place of ~'" },
+      { "ja": "司会が新人に代わった。", "en": "The host changed to a newcomer.", "why": "に marks what the host changed into, with a plain verb 代わる and no 'in place of' phrase" },
+      { "ja": "季節が冬に変わって、雪が降り始めた。", "en": "The season changed to winter, and it started to snow.", "why": "変わる 'to change' (same lexeme and reading, different kanji) with に as the result of change" },
+      { "ja": "お茶の代わりにコーヒーを飲んだ。", "en": "I drank coffee instead of tea.", "why": "代わりに is the separate entry kawari-ni" }
+    ],
+    "subsumes": [],
+    "confusables": ["kawari-ni", "towa-utte-kawatte", "ni-taishite"],
+    "detection": "Tokens: に (助詞-格助詞) + 代わっ / かわっ (動詞-一般, lexeme 変わる, 五段-ラ行, 連用形-促音便) + て (助詞-接続助詞); UniDic folds 代わる, 替わる and 変わる into the one lexeme 変わる, so the lexeme cannot tell 'in place of' from 'change'. Use the surface 代わ/かわ/替わ as the guard and exclude 変わ (季節が冬に変わって). The variants are に + 代わり (連用形-一般) and に + 代わる (連体形) + noun, and に + 代わり + まし + て. Require a noun for the person or thing replaced directly before に, and a second clause that names who acts in its place. Reject に + 代わっ + て + もらう (席を代わってもらう) and the noun 代わり + に (kawari-ni, own entry)."
+  },
+  {
+    "id": "ue-de",
+    "form": "〜上で",
+    "variants": ["〜うえで", "〜上での"],
+    "meaning": "after ~; upon ~; in doing ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["V-ta + 上で", "V-dict + 上で", "N + の + 上で"],
+    "examples": [
+      { "ja": "契約書をよく読んだ上で、署名してください。", "match": "上で", "en": "Please sign after reading the contract carefully." },
+      { "ja": "家族と相談した上で、お返事をします。", "match": "上で", "en": "I'll give you my answer after talking it over with my family." },
+      { "ja": "日本で生活する上で、一番大変なのは言葉だ。", "match": "上で", "en": "In living in Japan, the hardest thing is the language." },
+      { "ja": "内容を確認したうえで、お申し込みください。", "match": "うえで", "en": "Please apply after checking the contents." },
+      { "ja": "仕事を進める上での注意点を教えてください。", "match": "上での", "en": "Please tell me the points to watch out for in carrying out the work." },
+      { "ja": "この計画を実行する上で、問題になるのはお金だ。", "match": "上で", "en": "In carrying out this plan, the problem is money." },
+      { "ja": "皆さんのご意見を伺った上で決めたいと思います。", "match": "上で", "en": "I'd like to decide after hearing everyone's opinions." }
+    ],
+    "counterexamples": [
+      { "ja": "猫が机の上で寝ている。", "en": "The cat is sleeping on the desk.", "why": "上 is 'top' and で is the location particle: a physical place" },
+      { "ja": "彼は絵が上手で、色使いもきれいだ。", "en": "He's good at drawing, and his use of color is nice too.", "why": "上手で is 上手 + で (copula), not 上 + で" },
+      { "ja": "彼は頭がいい上に、性格もいい。", "en": "On top of being smart, he has a good personality.", "why": "上に is the 'on top of that' entry ue-ni" },
+      { "ja": "こうなった上は、覚悟を決めるしかない。", "en": "Now that it's come to this, we have to make up our minds.", "why": "上は is 'now that ~' (ue-wa)" }
+    ],
+    "subsumes": [],
+    "confusables": ["ue-ni", "ue-wa", "no-ue-dewa", "ato-de", "te-kara"],
+    "detection": "Tokens: 上 (名詞-普通名詞, lexeme 上; うえ is the same lexeme) + で (助詞-格助詞), after た (助動詞 た 連体形-一般) or a dictionary-form verb: 読ん|だ|上|で, 生活|する|上|で, 確認|し|た|うえ|で. 上での is 上 + で + の. With a noun the form is N + の + 上で (計画の上で); that sense is close to no-ue-dewa. Guard: reject 上 as a physical position after の with a concrete noun (机の上で寝ている), 上手 (one token), and 上 + に / は (ue-ni, ue-wa). The 'after' sense needs a verb in た; the 'in doing' sense needs a verb in dictionary form and a statement about difficulty or necessity."
+  },
+  {
+    "id": "saichuu-ni",
+    "form": "〜最中に",
+    "variants": ["〜最中だ", "〜最中です", "〜真っ最中に", "〜さいちゅうに"],
+    "meaning": "right in the middle of ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3", "try": "N3" },
+    "prototype": false,
+    "connection": ["V-te + いる + 最中に", "N + の + 最中に", "V-te + いる + 最中だ"],
+    "examples": [
+      { "ja": "会議の最中に、携帯が鳴った。", "match": "最中に", "en": "My phone rang right in the middle of the meeting." },
+      { "ja": "食事をしている最中に、地震が起きた。", "match": "最中に", "en": "An earthquake hit while we were in the middle of a meal." },
+      { "ja": "電話で話している最中に、急に切れてしまった。", "match": "最中に", "en": "The call suddenly cut off while I was talking." },
+      { "ja": "試験の最中に、お腹が痛くなってきた。", "match": "最中に", "en": "My stomach started to hurt in the middle of the exam." },
+      { "ja": "今、料理を作っている最中です。", "match": "最中です", "en": "I'm in the middle of cooking right now." },
+      { "ja": "ちょうど寝ている最中だったんだよ、電話しないで。", "match": "最中だった", "en": "I was right in the middle of sleeping, so don't call." },
+      { "ja": "引っ越しの真っ最中に、腰を痛めてしまった。", "match": "真っ最中に", "en": "I hurt my back right in the middle of moving." }
+    ],
+    "counterexamples": [
+      { "ja": "仕事の途中で、急に帰ってしまった。", "en": "He suddenly went home partway through the work.", "why": "途中で is the separate entry tochuu-de" },
+      { "ja": "授業中に居眠りをして、怒られた。", "en": "I dozed off during class and got scolded.", "why": "中 is the suffix entry chuu, with no 最中" },
+      { "ja": "会議の間に、携帯が鳴った。", "en": "My phone rang during the meeting.", "why": "間に is the separate entry aida-ni" },
+      { "ja": "お土産に最中を買った。", "en": "I bought monaka as a souvenir.", "why": "最中 here is the wafer sweet (reading もなか), not さいちゅう" }
+    ],
+    "subsumes": [],
+    "confusables": ["tochuu-de", "chuu", "aida-ni", "te-iru-tokoro", "nagara"],
+    "detection": "Tokens: 最中 (名詞-普通名詞, lexeme 最中) + に (助詞-格助詞), preceded by の or by a verb in ている (食べ|て|いる|最中に) or the plain verb ending; the sentence-final variants are 最中 + だ/です/だっ|た. 真っ最中 is 真っ (接頭辞) + 最中. The same lexeme also covers もなか (the sweet): check the reading さいちゅう, or that a verb or の comes before it. Reject 途中, 中 (ちゅう) and 間 (あいだ), which have their own entries."
+  },
+  {
+    "id": "tsuide-ni",
+    "form": "〜ついでに",
+    "variants": ["〜のついでに", "ついでに", "〜ついでだから", "〜ついでの"],
+    "meaning": "while you're at it; on the way",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3", "try": "N3" },
+    "prototype": false,
+    "connection": ["V-dict + ついでに", "V-ta + ついでに", "N + の + ついでに"],
+    "examples": [
+      { "ja": "買い物に行くついでに、郵便局にも寄ってきた。", "match": "ついでに", "en": "While I was out shopping, I stopped by the post office too." },
+      { "ja": "散歩のついでに、パンを買って帰ろう。", "match": "ついでに", "en": "Let's pick up some bread on our way back from the walk." },
+      { "ja": "掃除をしたついでに、棚の整理もしてしまった。", "match": "ついでに", "en": "While I was cleaning, I went ahead and sorted the shelves too." },
+      { "ja": "出張のついでに、京都の友達に会ってきた。", "match": "ついでに", "en": "I saw a friend in Kyoto while I was there on a business trip." },
+      { "ja": "コンビニに行くなら、ついでに牛乳も買ってきて。", "match": "ついでに", "en": "If you're going to the convenience store, get some milk too." },
+      { "ja": "お風呂のついでに、洗面所も掃除しておきました。", "match": "ついでに", "en": "While I was at it with the bath, I cleaned the washroom too." },
+      { "ja": "ついでの用事ですから、気にしないでください。", "match": "ついでの", "en": "It's just an errand I'm doing on the way, so please don't worry about it." }
+    ],
+    "counterexamples": [
+      { "ja": "田中さんに次いで、鈴木さんが到着した。", "en": "Suzuki arrived after Tanaka.", "why": "次いで is 'next, following' (次ぐ + て), a different word with the same reading" },
+      { "ja": "この荷物は、ついでではなく、わざわざ届けに来たんです。", "en": "I came to deliver this package deliberately, not just on the way.", "why": "ついで is followed by ではなく, so there is no ついでに" },
+      { "ja": "つい電話に出てしまった。", "en": "I answered the phone without thinking.", "why": "つい is the adverb 'unintentionally'; there is no ついで" }
+    ],
+    "subsumes": [],
+    "confusables": ["ni-tsurete", "nagara", "ippou-de", "aida-ni"],
+    "detection": "Tokens: ついで (名詞-普通名詞, lexeme 序で) + に (助詞-格助詞), after a plain verb, after た, or after の + noun: 行く|ついで|に, 散歩|の|ついで|に. Sentence-initially or after a な-clause it also appears bare (ついでに牛乳も買ってきて). Variants: ついで + だ + から, ついで + の + noun. Reject 次いで (lexeme 次ぐ, 動詞 連用形-イ音便 + 接続助詞 で). The same noun in ついでではなく is not the pattern. Often confused with the 'in the course of' ni-tsurete."
+  },
+  {
+    "id": "tochuu-de",
+    "form": "〜途中で / 〜途中に",
+    "variants": ["〜途中", "〜途中だ", "〜途中です", "〜とちゅうで"],
+    "meaning": "on the way; partway through ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N2", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["V-dict + 途中で", "V-te + いる + 途中で", "N + の + 途中で"],
+    "examples": [
+      { "ja": "学校に行く途中で、財布を落とした。", "match": "途中で", "en": "I dropped my wallet on the way to school." },
+      { "ja": "帰り道の途中に、小さな公園がある。", "match": "途中に", "en": "There's a small park partway along the road home." },
+      { "ja": "映画を見ている途中で、寝てしまった。", "match": "途中で", "en": "I fell asleep partway through the movie." },
+      { "ja": "話の途中で、急に電話が鳴った。", "match": "途中で", "en": "The phone suddenly rang in the middle of the conversation." },
+      { "ja": "駅へ向かう途中、昔の友達にばったり会った。", "match": "途中", "en": "On my way to the station I ran into an old friend." },
+      { "ja": "今、家に帰る途中です。", "match": "途中です", "en": "I'm on my way home right now." },
+      { "ja": "仕事の途中で悪いんだけど、ちょっといい？", "match": "途中で", "en": "Sorry to break in while you're working, but do you have a minute?" },
+      { "ja": "この本は、まだ読んでいる途中だ。", "match": "途中だ", "en": "I'm still partway through this book." }
+    ],
+    "counterexamples": [
+      { "ja": "彼は途中から参加した。", "en": "He joined partway through.", "why": "途中から marks a starting point, not 途中で / 途中に" },
+      { "ja": "途中経過を報告します。", "en": "I will report the progress so far.", "why": "途中経過 is a compound noun, not 途中 + で/に" },
+      { "ja": "会議の最中に、携帯が鳴った。", "en": "My phone rang in the middle of the meeting.", "why": "最中に is the separate entry saichuu-ni" },
+      { "ja": "授業中にメモを取った。", "en": "I took notes during class.", "why": "中 is the suffix entry chuu" }
+    ],
+    "subsumes": [],
+    "confusables": ["saichuu-ni", "chuu", "aida-ni", "nagara", "te-iru-tokoro"],
+    "detection": "Tokens: 途中 (名詞-普通名詞, lexeme 途中; one token) + で (助詞-格助詞) or に (助詞-格助詞), after a dictionary-form verb (行く|途中|で), ている, or の + noun (帰り道|の|途中|に). The variants are bare 途中 followed by a comma or 、 (向かう|途中|、) and 途中 + だ/です. Require something before 途中 that names the action or route. Reject 途中 + から (a starting point), 途中 + 経過 (a compound), and the neighbors 最中 (saichuu-ni) and 中 (chuu), which are different words with their own entries."
+  },
+  {
+    "id": "chuu",
+    "form": "〜中",
+    "variants": ["〜じゅう"],
+    "meaning": "during ~ (ちゅう); throughout ~ (じゅう)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["N + 中", "N-time + 中"],
+    "examples": [
+      { "ja": "会議中は、携帯の電源を切ってください。", "match": "会議中", "en": "Please turn off your phone during the meeting." },
+      { "ja": "ただいま電話中です。", "match": "電話中", "en": "He's on the phone right now." },
+      { "ja": "工事中のため、この道は通れません。", "match": "工事中", "en": "This road is closed because of construction." },
+      { "ja": "一日中、雨が降っていた。", "match": "一日中", "en": "It rained all day long." },
+      { "ja": "今年中に、この仕事を終わらせたい。", "match": "今年中", "en": "I want to finish this job within this year." },
+      { "ja": "世界中の人がこの歌を知っている。", "match": "世界中", "en": "People all over the world know this song." },
+      { "ja": "彼は一晩中、泣いていた。", "match": "一晩中", "en": "He cried all night." },
+      { "ja": "本日は準備中です。", "match": "準備中", "en": "We're preparing and not open today." }
+    ],
+    "counterexamples": [
+      { "ja": "箱の中に猫がいる。", "en": "There's a cat in the box.", "why": "中 here is the noun なか 'inside', not the suffix" },
+      { "ja": "田中さんは中学生だ。", "en": "Tanaka is a junior high school student.", "why": "中 is inside a surname and the compound 中学生, not a suffix after a time or an activity" },
+      { "ja": "会議の最中に、携帯が鳴った。", "en": "My phone rang in the middle of the meeting.", "why": "最中 is the separate entry saichuu-ni" },
+      { "ja": "仕事の途中で帰った。", "en": "I left partway through the work.", "why": "途中 is the separate entry tochuu-de" }
+    ],
+    "subsumes": [],
+    "confusables": ["saichuu-ni", "tochuu-de", "aida"],
+    "detection": "Tokens: a noun (会議, 電話, 工事, 準備, a time such as 今年, 一日, 一晩, or a place such as 世界) + 中 (接尾辞-名詞的, lexeme 中). UniDic gives the lexeme 中 for both readings, so use the preceding word to choose: an activity noun gives ちゅう (会議中, 電話中, 工事中), and a time or place span gives じゅう (一日中, 今年中, 世界中); 一日中 is 一 + 日 + 中 (three tokens). Guard: the suffix 接尾辞-名詞的, not the noun 中 (名詞 なか) in 箱の中 and not 中 inside a name (田中) or compound (中学生, 中国). 最中 and 途中 are separate one-token nouns."
+  },
+  {
+    "id": "kara-ni-kakete",
+    "form": "〜から〜にかけて",
+    "variants": ["〜にかけて"],
+    "meaning": "from ~ through ~ (span of time or area)",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["N + から + N + にかけて", "N + にかけて"],
+    "examples": [
+      { "ja": "今夜から明日の朝にかけて、大雪になるでしょう。", "match": "今夜から明日の朝にかけて", "en": "It will snow heavily from tonight into tomorrow morning." },
+      { "ja": "九州から四国にかけて、強い雨が降った。", "match": "九州から四国にかけて", "en": "Heavy rain fell from Kyushu through Shikoku." },
+      { "ja": "三月から五月にかけて、花粉がたくさん飛ぶ。", "match": "三月から五月にかけて", "en": "A lot of pollen flies from March through May." },
+      { "ja": "関東から東北にかけての地域で、地震があった。", "match": "関東から東北にかけて", "en": "There was an earthquake in the area from Kanto up to Tohoku." },
+      { "ja": "肩から腕にかけて、ひどい痛みがある。", "match": "肩から腕にかけて", "en": "I have bad pain from my shoulder down to my arm." },
+      { "ja": "夏の終わりから秋にかけて、台風が多い。", "match": "夏の終わりから秋にかけて", "en": "There are many typhoons from late summer into autumn." },
+      { "ja": "この地方では、冬から春にかけてが一番寒い。", "match": "冬から春にかけて", "en": "In this region, the coldest time runs from winter into spring." },
+      { "ja": "春にかけて、だんだん暖かくなる。", "match": "にかけて", "en": "It gets gradually warmer toward spring." }
+    ],
+    "counterexamples": [
+      { "ja": "壁に鍵をかけて、出かけた。", "en": "I hung the key on the wall and went out.", "why": "かけて is the て-form of かける 'hang'; に marks the place, not a range end" },
+      { "ja": "料理にかけては、誰にも負けない。", "en": "When it comes to cooking, I lose to no one.", "why": "にかけては is the separate entry ni-kakete-wa" },
+      { "ja": "彼は命にかけて約束を守った。", "en": "He kept his promise on his life.", "why": "にかけて here means 'staking ~ on', an oath, not a span" },
+      { "ja": "東京から大阪まで新幹線で行く。", "en": "I go from Tokyo to Osaka by Shinkansen.", "why": "から〜まで is a plain range with まで, not にかけて" }
+    ],
+    "subsumes": [],
+    "confusables": ["ni-kakete-wa", "ni-kakete-mo", "ni-kagitte"],
+    "detection": "Tokens: に (助詞-格助詞) + かけ (動詞-非自立可能, lexeme 掛ける, 下一段-カ行 連用形-一般) + て (助詞-接続助詞), usually after から: 今夜|から|明日|の|朝|に|かけ|て. The full pattern is から + a time or place noun + にかけて with the span noun close to から; the bare variant is a time or place noun + にかけて. Guard: the noun before に must be a time or place (not a concrete object for hanging, 壁に鍵をかけて), and the next token must not be は or も (ni-kakete-wa, ni-kakete-mo). Reject 命にかけて (an oath) and から + まで."
+  },
+  {
+    "id": "zuni-wa-irarenai",
+    "form": "〜ずにはいられない",
+    "variants": ["〜ずにいられない", "〜ずにはいられなかった", "〜ずにはいられません"],
+    "meaning": "can't help ~ing",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3", "try": "N3" },
+    "prototype": false,
+    "connection": ["V-nai-stem + ずにはいられない", "V-nai-stem + ずにいられない", "する → せずにはいられない"],
+    "examples": [
+      { "ja": "この映画を見たら、泣かずにはいられない。", "match": "ずにはいられない", "en": "You can't help crying when you watch this movie." },
+      { "ja": "おいしそうな匂いがして、食べずにはいられなかった。", "match": "ずにはいられなかった", "en": "It smelled so good that I couldn't help eating." },
+      { "ja": "彼女の話を聞いて、笑わずにはいられませんでした。", "match": "ずにはいられませんでした", "en": "Hearing her story, I couldn't help laughing." },
+      { "ja": "そんな悲しい話を聞いたら、同情せずにはいられない。", "match": "ずにはいられない", "en": "Hearing such a sad story, I can't help feeling sorry." },
+      { "ja": "かわいい子犬を見ると、触らずにいられないんだ。", "match": "ずにいられない", "en": "When I see a cute puppy, I just have to pet it." },
+      { "ja": "この景色を見たら、写真を撮らずにいられないよ。", "match": "ずにいられない", "en": "You can't help taking a picture when you see this view." },
+      { "ja": "気になって、確かめずにはいられなかった。", "match": "ずにはいられなかった", "en": "I was so curious that I had to check." },
+      { "ja": "悔しくて、叫ばずにはいられないほどだった。", "match": "ずにはいられない", "en": "I was so frustrated that I couldn't help shouting." }
+    ],
+    "counterexamples": [
+      { "ja": "朝ご飯を食べずに出かけた。", "en": "I left without eating breakfast.", "why": "ずに alone is 'without ~ing' (zu-ni), with no いられない" },
+      { "ja": "この作品は人の心を動かさずにはおかない。", "en": "This work cannot fail to move people.", "why": "ずにはおかない is the separate entry zu-ni-wa-okanai" },
+      { "ja": "じっとしてはいられない。", "en": "I can't just sit still.", "why": "ては + いられない is tewa-irarenai, with て-form and no ず" },
+      { "ja": "謝らずにはすまないだろう。", "en": "He won't get away without apologizing.", "why": "ずにはすまない is the separate entry zu-ni-wa-sumanai" }
+    ],
+    "subsumes": ["zu-ni"],
+    "confusables": ["zu-ni", "nai-dewa-irarenai", "tewa-irarenai", "zu-ni-wa-okanai", "zu-ni-wa-sumanai"],
+    "detection": "Tokens: a verb 未然形 (泣か, 食べ, 同情|せ) + ず (助動詞 ヌ lexeme ず, 連用形-一般) + に (助詞-格助詞) + は (助詞-係助詞, optional) + い (居る, 動詞-非自立可能 上一段-ア行 未然形-一般) + られ (助動詞 lexeme られる, 未然形) + ない (助動詞 ナイ, 終止形/連体形/連用形 なかっ + た) ; with ませ + ん for the polite form. する gives せ (為る, 未然形-セ). Require ず + に + (は +) い + られ + ない in sequence; ずに alone is zu-ni, and this entry takes precedence over it. Reject ずにはおかない (おか) and ずにはすまない (すま). The same meaning with ない + ではいられない is the separate entry nai-dewa-irarenai."
+  },
+  {
+    "id": "zu-ni",
+    "form": "〜ずに",
+    "variants": ["〜ず"],
+    "meaning": "without ~ing",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3", "try": "N3" },
+    "prototype": true,
+    "connection": ["V-nai-stem + ずに", "V-nai-stem + ず", "する → せずに / せず"],
+    "examples": [
+      { "ja": "朝ご飯を食べずに、家を出た。", "match": "ずに", "en": "I left the house without eating breakfast." },
+      { "ja": "何も言わずに、彼は部屋を出ていった。", "match": "ずに", "en": "Without saying a word, he left the room." },
+      { "ja": "傘を持たずに出かけて、雨に降られた。", "match": "ずに", "en": "I went out without an umbrella and got rained on." },
+      { "ja": "宿題をせずに寝てはいけません。", "match": "ずに", "en": "You must not go to bed without doing your homework." },
+      { "ja": "彼女は一度も振り返らずに歩いていった。", "match": "ずに", "en": "She walked away without looking back even once." },
+      { "ja": "何も言わず、ただ笑っていた。", "match": "ず", "en": "He didn't say anything and just smiled." },
+      { "ja": "辞書を使わずに、この文章を読めますか。", "match": "ずに", "en": "Can you read this passage without using a dictionary?" },
+      { "ja": "眠れずに、朝まで本を読んでいた。", "match": "ずに", "en": "Unable to sleep, I read a book until morning." }
+    ],
+    "counterexamples": [
+      { "ja": "この映画を見たら、泣かずにはいられない。", "en": "You can't help crying when you watch this movie.", "why": "ずにはいられない is the longer entry zuni-wa-irarenai" },
+      { "ja": "謝らずに済んだので、ほっとした。", "en": "I was relieved that I didn't have to apologize.", "why": "ずに済む is the separate entry zu-ni-sumu" },
+      { "ja": "この作品は人の心を動かさずにはおかない。", "en": "This work cannot fail to move people.", "why": "ずにはおかない is the separate entry zu-ni-wa-okanai" },
+      { "ja": "何も食べないで寝た。", "en": "I went to bed without eating anything.", "why": "ないで is the colloquial synonym naide, not ず" }
+    ],
+    "subsumes": [],
+    "confusables": ["naide", "zuni-wa-irarenai", "zu-ni-sumu", "zu-ni-wa-okanai", "zu-ni-wa-sumanai", "zu-tomo"],
+    "detection": "Tokens: a verb 未然形 (食べ, 言わ, 持た, 眠れ) + ず (助動詞 ヌ, lexeme ず, 連用形-一般) + に (助詞-格助詞); する gives せ (為る 未然形-セ) + ず + に. The short variant is the same ず token followed by a comma or another clause without に (何も言わず、). Require a verb 未然形 directly before ず; skip it when ず is followed by に + は (ずには: zuni-wa-irarenai, zu-ni-wa-okanai, zu-ni-wa-sumanai), に + 済む (zu-ni-sumu) or ず + とも (zu-tomo). Bare ず shares its token with the older negative ぬ: reject fixed phrases where ず is part of a longer entry. The synonym ないで (naide) is a different token sequence."
+  },
+  {
+    "id": "you-to-shinai",
+    "form": "〜ようとしない",
+    "variants": ["〜うとしない", "〜ようとしなかった", "〜ようとはしない", "〜ようともしない", "〜ようとしません"],
+    "meaning": "won't even try to ~; refuses to ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["V-vol + としない", "V-vol + とはしない", "V-vol + ともしない"],
+    "examples": [
+      { "ja": "息子は何度言っても、勉強しようとしない。", "match": "しようとしない", "en": "No matter how many times I tell him, my son won't even try to study." },
+      { "ja": "彼は自分の間違いを認めようとしなかった。", "match": "認めようとしなかった", "en": "He wouldn't even try to admit his mistake." },
+      { "ja": "猫が薬を飲もうとしなくて困っている。", "match": "飲もうとしなくて", "en": "The cat won't take its medicine, and it's a problem." },
+      { "ja": "彼女は私と目を合わせようとしません。", "match": "合わせようとしません", "en": "She won't even try to meet my eyes." },
+      { "ja": "あの人は人の話を聞こうともしない。", "match": "聞こうともしない", "en": "That person doesn't even try to listen to others." },
+      { "ja": "いくら頼んでも、彼は動こうとはしなかった。", "match": "動こうとはしなかった", "en": "No matter how much I asked, he wouldn't budge." },
+      { "ja": "子供が野菜を食べようとしないんです。", "match": "食べようとしない", "en": "My child won't eat vegetables." },
+      { "ja": "ドアが錆びて、開こうとしない。", "match": "開こうとしない", "en": "The door has rusted and won't open." }
+    ],
+    "counterexamples": [
+      { "ja": "寝ようとしたら、電話が鳴った。", "en": "Just as I was about to go to sleep, the phone rang.", "why": "ようとする without the negative is you-to-suru" },
+      { "ja": "さっき出かけようとしていた。", "en": "I was just about to go out a moment ago.", "why": "ようとしている is 'about to ~' (you-to-suru), with no ない" },
+      { "ja": "今さら転職しようとは思わない。", "en": "I don't intend to change jobs at this point.", "why": "ようとは思わない is the separate entry you-to-omowanai" },
+      { "ja": "彼は新しい仕事を始めようと思っている。", "en": "He is thinking of starting a new job.", "why": "ようと思う is you-to-omou, with 思う rather than する" }
+    ],
+    "subsumes": ["you-to-suru"],
+    "confusables": ["you-to-suru", "you-to-omowanai", "you-to-omou", "tsumori"],
+    "detection": "Tokens: a verb in 意志推量形 (しよう, 認めよう, 飲もう, 動こう, each one token) + と (助詞-格助詞) + し (為る 動詞-非自立可能, サ行変格 未然形-一般) + ない (助動詞 ナイ), as 勉強|しよう|と|し|ない; with なかっ + た, なく + て, ませ + ん for the other forms. The variants insert は or も between と and し (動こう|と|は|し|なかっ|た, 聞こう|と|も|し|ない). UniDic joins plain volitionals into one token, so うとしない for consonant verbs is 動こう + と + し + ない. Require する in the negative; the positive しよう + と + し + て + いる is you-to-suru. This entry takes precedence over you-to-suru. Reject と + 思わ + ない (you-to-omowanai)."
+  },
+  {
+    "id": "you-to-omowanai",
+    "form": "〜ようと思わない",
+    "variants": ["〜うとは思わない", "〜ようとは思わない", "〜ようとも思わない", "〜ようとは思いません"],
+    "meaning": "have no wish to ~; don't think of ~ing",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "marumori": "N3" },
+    "prototype": false,
+    "connection": ["V-vol + と + 思わない", "V-vol + とは + 思わない", "V-vol + とも + 思わない"],
+    "examples": [
+      { "ja": "今さら転職しようとは思わない。", "match": "しようとは思わない", "en": "I have no wish to change jobs at this point." },
+      { "ja": "彼女に謝ろうとは思いません。", "match": "謝ろうとは思いません", "en": "I have no intention of apologizing to her." },
+      { "ja": "親に相談しようとも思わなかった。", "match": "しようとも思わなかった", "en": "It never even occurred to me to talk to my parents." },
+      { "ja": "私は結婚しようとは思わないよ。", "match": "しようとは思わない", "en": "I don't plan to get married, you know." },
+      { "ja": "そこまでして出世しようとは思いません。", "match": "しようとは思いません", "en": "I don't want to get promoted that badly." },
+      { "ja": "もう二度とあの店に行こうと思わない。", "match": "行こうと思わない", "en": "I don't want to go to that restaurant ever again." },
+      { "ja": "彼の意見に従おうと思わない人も多い。", "match": "従おうと思わない", "en": "Many people have no wish to follow his opinion." },
+      { "ja": "病気になるまで、運動しようとは思わなかった。", "match": "しようとは思わなかった", "en": "I never thought of exercising until I got sick." }
+    ],
+    "counterexamples": [
+      { "ja": "行こうと思ったが、やめた。", "en": "I thought of going, but I gave up.", "why": "ようと思う in the positive is you-to-omou" },
+      { "ja": "彼は勉強しようとしない。", "en": "He won't even try to study.", "why": "ようとしない is the separate entry you-to-shinai, with し not 思わ" },
+      { "ja": "彼女がそんなことをするとは思わない。", "en": "I don't think she would do such a thing.", "why": "とは思わない after a plain form is a statement of belief (to-omou), without a volitional" },
+      { "ja": "今年こそ痩せようと思っている。", "en": "I'm determined to lose weight this year.", "why": "ようと思っている is the positive plan" }
+    ],
+    "subsumes": [],
+    "confusables": ["you-to-omou", "you-to-shinai", "to-omou", "tsumori"],
+    "detection": "Tokens: a verb in 意志推量形 (しよう, 謝ろう, 行こう; one token) + と (助詞-格助詞) + は/も (助詞-係助詞, optional) + 思わ (思う 動詞-一般 五段-ワア行 未然形-一般) + ない (助動詞 ナイ) or なかっ + た or ませ + ん. Require a volitional token directly before と: a plain verb before とは思わない (そんなことをするとは思わない) is the belief pattern, not this one. The positive 思っ + た / て + いる is you-to-omou and ようとしない is you-to-shinai."
+  },
+  {
+    "id": "sou-mo-nai",
+    "form": "〜そうもない",
+    "variants": ["〜そうもありません", "〜そうもなかった"],
+    "meaning": "~ seems unlikely",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["V-masu-stem + そうもない", "V-masu-stem + そうもありません"],
+    "examples": [
+      { "ja": "今日は仕事が終わりそうもない。", "match": "そうもない", "en": "It doesn't look like I'll finish work today." },
+      { "ja": "この雨は止みそうもないね。", "match": "そうもない", "en": "This rain doesn't look like it will stop." },
+      { "ja": "彼が来そうもないから、先に始めよう。", "match": "そうもない", "en": "He doesn't seem likely to come, so let's start without him." },
+      { "ja": "こんな難しい問題は、私には解けそうもありません。", "match": "そうもありません", "en": "I don't think I could solve a hard problem like this." },
+      { "ja": "彼女は許してくれそうもなかった。", "match": "そうもなかった", "en": "She didn't look like she would forgive me." },
+      { "ja": "この調子では、期限に間に合いそうもない。", "match": "そうもない", "en": "At this pace, it doesn't look like we'll make the deadline." },
+      { "ja": "そんなうまい話は、ありそうもない。", "match": "そうもない", "en": "A deal that good doesn't seem likely to exist." },
+      { "ja": "今年は雪が降りそうもないですね。", "match": "そうもない", "en": "It doesn't look like it will snow this year." }
+    ],
+    "counterexamples": [
+      { "ja": "今日は雨が止みそうにない。", "en": "It doesn't look like the rain will stop today.", "why": "そうにない is the separate entry sou-ni-nai" },
+      { "ja": "そうも簡単にはいかない。", "en": "It isn't as easy as all that.", "why": "そう is the adverb 'so' and も follows it; there is no verb stem before そう" },
+      { "ja": "あのレストランは、あまり面白くなさそうだ。", "en": "That place doesn't look very interesting.", "why": "なさそうだ is the separate entry nasasou-da" },
+      { "ja": "彼は何も食べないそうだ。", "en": "I hear he doesn't eat anything.", "why": "ないそうだ is hearsay そうだ after a negative, with そう before だ rather than そうもない" }
+    ],
+    "subsumes": [],
+    "confusables": ["sou-ni-nai", "sou-nimo-nai", "nasasou-da", "sou-appearance", "mo-nai"],
+    "detection": "Tokens: a verb 連用形 (終わり, 解け, 来, 許し|て|くれ) + そう (形状詞-助動詞語幹, lexeme そう-様態) + も (助詞-係助詞) + ない (形容詞 無い 終止形-一般), or あり + ませ + ん, or なかっ (形容詞 連用形-促音便) + た. In UniDic a few verb stems that are also nouns tokenize oddly (止み|そう, where そう is tagged 副詞), so match the sequence そう + も + ない and do not rely on the POS of そう. Guards: そう must follow a verb stem, not stand alone as an adverb (そうも簡単には), and the following ない must be the adjective 無い. Reject そう + に + ない (sou-ni-nai, に is the copula 連用形-ニ) and なさ + そう (nasasou-da)."
+  },
+  {
+    "id": "to-wa-kagiranai",
+    "form": "〜とは限らない",
+    "variants": ["〜とも限らない", "〜とは限りません", "〜とは限らなかった"],
+    "meaning": "not necessarily ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3", "try": "N3" },
+    "prototype": false,
+    "connection": ["Clause-plain + とは限らない", "N + だとは限らない", "na-Adj + だとは限らない"],
+    "examples": [
+      { "ja": "高いからといって、品質がいいとは限らない。", "match": "とは限らない", "en": "Just because it's expensive doesn't mean the quality is good." },
+      { "ja": "努力すれば必ず成功するとは限りません。", "match": "とは限りません", "en": "Working hard doesn't always lead to success." },
+      { "ja": "みんなが賛成するとは限らないよ。", "match": "とは限らない", "en": "Not everyone will necessarily agree, you know." },
+      { "ja": "日本人だからって、納豆が好きだとは限らない。", "match": "とは限らない", "en": "Being Japanese doesn't mean you like natto." },
+      { "ja": "有名な店でも、おいしいとは限らなかった。", "match": "とは限らなかった", "en": "Even a famous restaurant wasn't necessarily good." },
+      { "ja": "道が空いているとも限らないから、早めに出よう。", "match": "とも限らない", "en": "The roads might not be clear, so let's leave early." },
+      { "ja": "明日も晴れるとは限らないから、今日のうちに洗濯しておこう。", "match": "とは限らない", "en": "It won't necessarily be sunny tomorrow, so let's do the laundry today." },
+      { "ja": "頭がいい人が、いい先生になるとは限らない。", "match": "とは限らない", "en": "A smart person doesn't necessarily make a good teacher." }
+    ],
+    "counterexamples": [
+      { "ja": "彼が来るとは思わなかった。", "en": "I didn't think he would come.", "why": "とは is followed by 思う, not 限る; it expresses surprise" },
+      { "ja": "この店は会員に限る。", "en": "This shop is for members only.", "why": "限る is the plain verb 'to be limited to' with に, not とは限らない" },
+      { "ja": "この店は日本人に限らず、外国人にも人気だ。", "en": "This shop is popular with foreigners, not only with Japanese people.", "why": "に限らず is the separate entry ni-kagirazu" },
+      { "ja": "雨の日に限って、傘を忘れる。", "en": "It's always on rainy days that I forget my umbrella.", "why": "に限って is the separate entry ni-kagitte" }
+    ],
+    "subsumes": [],
+    "confusables": ["nai-tomo-kagiranai", "kanarazushimo-nai", "wake-de-wa-nai", "ni-kagirazu", "ni-kagitte"],
+    "detection": "Tokens: と (助詞-格助詞) + は/も (助詞-係助詞) + 限ら (限る 動詞-一般 五段-ラ行 未然形-一般) + ない (助動詞 ナイ 終止形-一般) or なかっ + た, or 限り (連用形-一般) + ませ + ん, after a plain clause: いい|と|は|限ら|ない. After a noun or na-adjective the copula だ precedes と (好きだ|と|は). Require と + は/も + 限る in the negative; 限る in the positive or with に (会員に限る) is not this pattern. The same-form-plus-ない entry nai-tomo-kagiranai (ないとも限らない, 'might well') is a separate id and takes precedence when the clause before とも ends in ない. Often paired with 必ずしも (kanarazushimo-nai), which appears earlier in the sentence."
+  },
+  {
+    "id": "kanarazushimo-nai",
+    "form": "必ずしも〜ない",
+    "variants": ["必ずしも〜とは限らない", "必ずしも〜わけではない", "必ずしも〜ではない"],
+    "meaning": "not always ~; not necessarily ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["必ずしも + Clause + ない", "必ずしも + Clause + とは限らない", "必ずしも + Clause + わけではない"],
+    "examples": [
+      { "ja": "高い物が必ずしも良いとは限らない。", "match": "必ずしも良いとは限らない", "en": "Expensive things are not necessarily good." },
+      { "ja": "努力は必ずしも報われるわけではない。", "match": "必ずしも報われるわけではない", "en": "Effort is not always rewarded." },
+      { "ja": "私の意見が必ずしも正しいとは言えません。", "match": "必ずしも正しいとは言えません", "en": "I can't say my opinion is necessarily right." },
+      { "ja": "彼の言うことは必ずしも本当ではない。", "match": "必ずしも本当ではない", "en": "What he says isn't necessarily true." },
+      { "ja": "大学を出ていても、必ずしも就職できるとは限らない。", "match": "必ずしも就職できるとは限らない", "en": "Even with a university degree, you won't necessarily get a job." },
+      { "ja": "日本人なら誰でも漢字が書けるかというと、必ずしもそうではありません。", "match": "必ずしもそうではありません", "en": "Can every Japanese person write kanji? Not necessarily." },
+      { "ja": "必ずしも全員が賛成しているわけではないと思います。", "match": "必ずしも全員が賛成しているわけではない", "en": "I don't think that everyone necessarily agrees." },
+      { "ja": "彼女の態度は必ずしも悪くないよ。", "match": "必ずしも悪くない", "en": "Her attitude isn't necessarily bad." }
+    ],
+    "counterexamples": [
+      { "ja": "明日は必ず来てね。", "en": "Be sure to come tomorrow.", "why": "必ず without しも is 'without fail', with no negation" },
+      { "ja": "このことは決して忘れません。", "en": "I will never forget this.", "why": "決して〜ない is the separate entry kesshite-nai" },
+      { "ja": "彼女のことは全然知らない。", "en": "I don't know her at all.", "why": "全然〜ない is 'not at all', a different adverb of degree" },
+      { "ja": "この店はあまり好きではない。", "en": "I don't like this place very much.", "why": "あまり〜ない is a different adverb of degree, with no 必ずしも" }
+    ],
+    "subsumes": [],
+    "confusables": ["to-wa-kagiranai", "wake-de-wa-nai", "kesshite-nai", "zenzen-nai", "amari-nai"],
+    "detection": "Tokens: 必ず (副詞) + しも (助詞-副助詞) as two tokens, then a clause that ends in a negative: ない (助動詞 or 形容詞 無い), ませ + ん, ではない (で|は|ない), とは限らない (と|は|限ら|ない), わけではない (わけ|で|は|ない). Match 必ず + しも, then require a negative predicate in the same clause (before 、 or 。). Reject 必ず alone (必ず来てね) and 決して. When とは限らない or わけではない follows, this entry and to-wa-kagiranai / wake-de-wa-nai both apply; keep this one as the wider frame and let the closing entry also match. Often confused with 全然〜ない, which takes a total negative."
+  },
+  {
+    "id": "kesshite-nai",
+    "form": "決して〜ない",
+    "variants": ["けっして〜ない", "決して〜ません", "決して〜ないで"],
+    "meaning": "never ~; by no means ~",
+    "kind": "construction",
+    "register": "neutral",
+    "level": "N3",
+    "sources": { "jlptsensei": "N3", "bunpro": "N3", "marumori": "N3" },
+    "prototype": false,
+    "connection": ["決して + V-nai", "決して + Clause + ない", "決して + V + ません"],
+    "examples": [
+      { "ja": "このことは決して忘れません。", "match": "決して忘れません", "en": "I will never forget this." },
+      { "ja": "あなたのことは決して許さない。", "match": "決して許さない", "en": "I will never forgive you." },
+      { "ja": "決して諦めないで。", "match": "決して諦めないで", "en": "Never give up." },
+      { "ja": "彼は決して嘘をつくような人ではない。", "match": "決して嘘をつくような人ではない", "en": "He is by no means the sort of person who would lie." },
+      { "ja": "約束は決して破らないと誓います。", "match": "決して破らない", "en": "I swear I will never break my promise." },
+      { "ja": "けっして楽な道ではありませんでした。", "match": "けっして楽な道ではありませんでした", "en": "It was by no means an easy road." },
+      { "ja": "彼女の努力を決して無駄にはしたくない。", "match": "決して無駄にはしたくない", "en": "I never want to let her effort go to waste." },
+      { "ja": "私は決して怒っているわけではないよ。", "match": "決して怒っているわけではない", "en": "I'm really not angry, you know." }
+    ],
+    "counterexamples": [
+      { "ja": "高い物が必ずしも良いとは限らない。", "en": "Expensive things are not necessarily good.", "why": "必ずしも〜ない is the separate entry kanarazushimo-nai" },
+      { "ja": "今日の試験は全然わからなかった。", "en": "I didn't understand anything on today's exam.", "why": "全然〜ない is 'not at all', not 決して" },
+      { "ja": "彼女と二度と会わないと決めた。", "en": "I decided never to see her again.", "why": "決めた is the verb 決める 'decide', and ない sits in the quoted clause, with no adverb 決して" },
+      { "ja": "彼は必ず約束を守る人だ。", "en": "He is a person who always keeps his promises.", "why": "必ず is an affirmative adverb, with no negative predicate" }
+    ],
+    "subsumes": [],
+    "confusables": ["kanarazushimo-nai", "zenzen-nai", "mo-nai", "chittomo-nai", "mattaku-nai"],
+    "detection": "Tokens: 決して (副詞, one token; けっして has the lexeme 決して too) followed in the same clause by a negative predicate: ない (助動詞 ナイ), ませ + ん, ない + で (命令 'don't'), ではない (で|は|ない or で|は|あり|ませ|ん), or たくない. The adverb need not be adjacent to the negative (決して|嘘|を|つく|よう|な|人|で|は|ない). Match 決して and require a negative before the next 。 or sentence end. Reject the affirmative adverb 必ず, and the verb 決める (決め|た); the 副詞 決して is not a form of 決める. Often confused with 必ずしも〜ない (kanarazushimo-nai) and 全然〜ない."
+  }
+]
