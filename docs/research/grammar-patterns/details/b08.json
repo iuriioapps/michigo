@@ -4,6 +4,7 @@
     "form": "〜って感じ",
     "variants": [
       "〜という感じ",
+      "〜っていう感じ",
       "〜って感じだ"
     ],
     "meaning": "kind of a ~ feel",
@@ -18,7 +19,9 @@
       "Clause-plain + って感じ",
       "N + って感じ",
       "Clause-plain + という感じ",
-      "N + という感じ"
+      "N + という感じ",
+      "Clause-plain + っていう感じ",
+      "N + っていう感じ"
     ],
     "examples": [
       {
@@ -55,6 +58,11 @@
         "ja": "「疲れた？」「いや、ちょっと眠いって感じかな。」",
         "match": "って感じ",
         "en": "\"Tired?\" \"No, more like a little sleepy.\""
+      },
+      {
+        "ja": "もう全部どうでもいいっていう感じ。",
+        "match": "っていう感じ",
+        "en": "It's like I just don't care about any of it anymore."
       }
     ],
     "counterexamples": [
@@ -66,7 +74,7 @@
       {
         "ja": "寒いって感じたら、すぐ言ってね。",
         "en": "If you feel cold, tell me right away.",
-        "why": "感じ is the stem of the verb 感じる (感じたら), not the noun 感じ."
+        "why": "感じ is the verb 感じる (UniDic 感ずる 連用形) before たら, not the noun 感じ."
       },
       {
         "ja": "この部屋、明るい感じがしていいね。",
@@ -82,7 +90,7 @@
       "mitai-da",
       "ppoi"
     ],
-    "detection": "Tokens: quotative って (助詞-副助詞, lexeme って?) or と (格助詞) + 言う (lexeme 言う, form いう), then the noun 感じ (名詞-普通名詞-一般, lexeme 感じ). Require the noun reading of 感じ: reject it when UniDic tags it as the verb 感じる (連用形, followed by た/たら/て). Reject って that marks a topic noun followed by 感じのいい/感じの悪い, where 感じ is the subject of an adjective. When this matches, do not also count to-iu for the same という. Often confused with みたい and っぽい, which also soften a description."
+    "detection": "Tokens: って directly before 感じ is one token, lexeme つう (助動詞 連体形), the contraction of という; the long forms are と (助詞-格助詞) + いう (言う 連体形) and って (って 助詞-副助詞) + いう (言う 連体形); then the noun 感じ (感じ 名詞-普通名詞). Reject 感じ tagged as the verb 感ずる (連用形 before たら/た/て, or 感じる 終止形), as in 寒いって感じたら. The topic って in 彼って感じのいい人 is also tagged つう 連体形, so reject 感じ followed by の + いい/悪い (感じのいい/感じの悪い \"pleasant/unpleasant\"). When this matches, do not also count to-iu for the same という. Often confused with みたい and っぽい, which also soften a description."
   },
   {
     "id": "wa-no-hitotsu-da",
@@ -90,7 +98,8 @@
     "variants": [
       "〜のひとつだ",
       "〜の一つです",
-      "〜の一つ"
+      "〜の一つ",
+      "〜の1つ"
     ],
     "meaning": "~ is one of ~",
     "kind": "construction",
@@ -135,6 +144,11 @@
         "ja": "彼の悪い癖のひとつは、人の話を最後まで聞かないことだ。",
         "match": "のひとつ",
         "en": "One of his bad habits is not letting people finish what they're saying."
+      },
+      {
+        "ja": "人気の理由の1つは、値段の安さです。",
+        "match": "の1つ",
+        "en": "One of the reasons it's popular is the low price."
       }
     ],
     "counterexamples": [
@@ -144,9 +158,9 @@
         "why": "一つ is a plain count \"one\"; there is no Nの group before it."
       },
       {
-        "ja": "みんなで心を一つにして頑張ろう。",
-        "en": "Let's all pull together as one.",
-        "why": "一つにする means \"unite\", not \"one of a group\"."
+        "ja": "大きいの一つちょうだい。",
+        "en": "Give me one of the big ones.",
+        "why": "の is the pronoun \"one\" after an adjective (準体助詞), and 一つ is a plain count."
       },
       {
         "ja": "この箱の一つ上の棚に置いて。",
@@ -158,15 +172,20 @@
     "confusables": [
       "no-naka-de"
     ],
-    "detection": "Tokens: noun + の (助詞-格助詞) + 一つ or ひとつ, then optionally だ/です or a following particle. UniDic may split 一つ into 一 (名詞-数詞) + つ (接尾辞-名詞的-助数詞), lexeme 一つ?; match both shapes. Guard: the token after 一つ must not be a positional noun such as 上, 下, 前, 後, 先, which give \"one level up\" readings, and 一つにする/一つになる (unite) must not match. The は-topic is optional; count the pattern on Nの一つ alone."
+    "detection": "Tokens: noun + の (助詞-格助詞) + 一 (lexeme 一, 名詞-数詞; surface 一, ひと or 1) + つ (接尾辞-名詞的), then optionally だ/です, a particle or the end. UniDic always splits 一つ/ひとつ/1つ into these two tokens. Guards: require の as 格助詞, not 準体助詞 (大きいの一つ \"a big one, one of them\" is a count); reject 一つ followed by a positional noun such as 上, 下, 前, 後, 先 (\"one level up\"), and 一つ + に + する/なる (unite). The は-topic is optional; count the pattern on Nの一つ alone."
   },
   {
     "id": "kara-dekiru",
     "form": "〜からできる / 〜でできる",
     "variants": [
+      "〜からできている",
+      "〜でできている",
+      "〜からできてる",
+      "〜でできてる",
       "〜から作る",
       "〜で作る",
-      "〜でできている"
+      "〜から作られる",
+      "〜で作られる"
     ],
     "meaning": "made from ~ / made of ~",
     "kind": "construction",
@@ -181,9 +200,12 @@
     "connection": [
       "N + からできる",
       "N + でできる",
+      "N + からできている",
+      "N + でできている",
       "N + から作る",
       "N + で作る",
-      "N + でできている"
+      "N + から作られる",
+      "N + で作られる"
     ],
     "examples": [
       {
@@ -204,7 +226,7 @@
       {
         "ja": "紙で作った飛行機を窓から飛ばした。",
         "match": "で作った",
-        "en": "I sent a paper plane flying out the window."
+        "en": "I flew a plane I'd made out of paper out the window."
       },
       {
         "ja": "水は水素と酸素からできています。",
@@ -239,9 +261,9 @@
         "why": "から marks the starting time, not the material."
       },
       {
-        "ja": "駅前に新しいカフェができた。",
-        "en": "A new café opened in front of the station.",
-        "why": "できる means \"open, come into being\"; no material is named."
+        "ja": "このパン、うちのオーブンで作ったんだ。",
+        "en": "I baked this bread in our own oven.",
+        "why": "で marks the tool used, not the material the bread is made of."
       }
     ],
     "subsumes": [],
@@ -249,13 +271,15 @@
       "koto-ga-dekiru",
       "kara-because"
     ],
-    "detection": "Tokens: noun + から or で (助詞-格助詞) + 出来る (lexeme 出来る) or 作る (lexeme 作る, also passive 作られる), often with ている (居る). The noun before から/で should be a material or ingredient; reject time nouns (明日, 朝, 今日), place nouns and nouns followed by a relative clause where できる means \"can do\". Reject できる with に-marked location (駅前にできた), which means \"be built\". A matcher cannot always tell material from place without a noun list, so a small list of common materials (木, 紙, 米, 石, 鉄, 布, プラスチック) helps precision."
+    "detection": "Tokens: noun + から or で (助詞-格助詞) + 出来る (lexeme 出来る, 動詞-非自立可能) or 作る (lexeme 作る, also 作ら + れる for the passive). The resultative is でき + て (助詞-接続助詞) + いる/います (居る), or casual でき + てる, which is one token (lexeme てる, 助動詞). The noun before から/で must be a material or ingredient; reject time nouns (明日から, 朝から), places (家で) and tools (オーブンで), where できる means \"can do\" or で/から is not the material. A matcher cannot tell material from place or tool without a noun list, so a list of common materials (木, 紙, 米, 石, 鉄, 布, 大豆, プラスチック) or of time, place and tool nouns to reject helps precision."
   },
   {
     "id": "ga-mirareru",
     "form": "〜が見られる",
     "variants": [
-      "〜がみられる"
+      "〜がみられる",
+      "〜は見られない",
+      "〜も見られる"
     ],
     "meaning": "~ can be seen / ~ is observed",
     "kind": "construction",
@@ -267,7 +291,9 @@
     "prototype": false,
     "connection": [
       "N + が見られる",
-      "N + がみられる"
+      "N + がみられる",
+      "N + は見られない",
+      "N + も見られる"
     ],
     "examples": [
       {
@@ -286,9 +312,9 @@
         "en": "Among young people, a trend away from TV can be seen."
       },
       {
-        "ja": "晴れた日には、ここから富士山が見られるんですよ。",
-        "match": "が見られる",
-        "en": "On clear days you can see Mt. Fuji from here."
+        "ja": "最近、この辺りでも外国人観光客の姿がよく見られるようになった。",
+        "match": "がよく見られる",
+        "en": "Lately you often see foreign tourists around here too."
       },
       {
         "ja": "作品全体に作者の強いこだわりが見られる。",
@@ -299,13 +325,18 @@
         "ja": "大きな変化が見られないまま、一年が過ぎた。",
         "match": "が見られない",
         "en": "A year went by without any major change."
+      },
+      {
+        "ja": "検査では、特に異常は見られませんでした。",
+        "match": "は見られませんでした",
+        "en": "The tests didn't show anything abnormal."
       }
     ],
     "counterexamples": [
       {
-        "ja": "着替えているところを弟に見られた。",
-        "en": "My little brother saw me getting changed.",
-        "why": "Passive \"be seen by\" with the agent in に; nothing is marked with が."
+        "ja": "忙しくて、見たかった映画が見られなかった。",
+        "en": "I was so busy I couldn't watch the movie I wanted to see.",
+        "why": "Plain potential of 見る \"watch\": someone could not watch it, not \"was observed\"."
       },
       {
         "ja": "秘密の日記が母に見られてしまった。",
@@ -323,13 +354,14 @@
       "to-mirareru",
       "ni-mieru"
     ],
-    "detection": "Tokens: noun + が (助詞-格助詞) + 見る (lexeme 見る, form 見 or み) + られる (助動詞, lexeme られる). Guard against the passive with an agent: reject when an に-marked person noun appears in the same clause before the verb. Reject when the が-noun is a person and the clause is a relative clause modifying a following noun (私が見られなかった試合), where が marks the viewer. Do not confuse with と見られる (\"is thought to be\"), which is to-mirareru."
+    "detection": "Tokens: noun + が (助詞-格助詞) + 見 or み (見る 未然形) + られる (lexeme られる, 助動詞-レル), in any form (られた, られます, られない). Allow one adverb between が and 見 (よく, 多く, 特に), and accept は or も (助詞-係助詞) in place of が, as in the common negative 異常は見られない. Guard against the passive: reject when an に-marked person noun precedes 見られる in the clause (母に見られた). Reject a person noun before が in a relative clause (私が見られなかった試合), where が marks the viewer; the potential \"could watch\" (映画が見られなかった) has the same tokens and needs a noun list (映画, 試合, 番組) to reject. The ら-less 見れる is only the casual potential, never this pattern. Do not confuse with と見られる (\"is thought to be\"), which is to-mirareru."
   },
   {
     "id": "no-tsugi-ni",
     "form": "〜の次に",
     "variants": [
-      "〜の次は"
+      "〜の次は",
+      "〜の次が"
     ],
     "meaning": "next to ~ / second after ~",
     "kind": "construction",
@@ -341,7 +373,8 @@
     "prototype": false,
     "connection": [
       "N + の次に",
-      "N + の次は"
+      "N + の次は",
+      "N + の次が"
     ],
     "examples": [
       {
@@ -373,6 +406,11 @@
         "ja": "うちの家族で兄の次に背が高いのは父です。",
         "match": "の次に",
         "en": "In my family, after my brother, the tallest is my dad."
+      },
+      {
+        "ja": "人気ランキングでは、駅前のラーメン屋の次がうちの店だった。",
+        "match": "の次が",
+        "en": "In the popularity ranking, our shop came right after the ramen place by the station."
       }
     ],
     "counterexamples": [
@@ -382,9 +420,9 @@
         "why": "Sentence-initial 次に \"next\" with no Nの before it."
       },
       {
-        "ja": "次の駅で降ります。",
-        "en": "I'm getting off at the next station.",
-        "why": "次の modifies 駅 (\"the next station\"); there is no Nの次."
+        "ja": "この次に来るときは、先に連絡してね。",
+        "en": "Next time you come, let me know first.",
+        "why": "この is a 連体詞, not a noun + の; この次 means \"next time\", not \"after ~\"."
       },
       {
         "ja": "彼の次の作品が楽しみだ。",
@@ -396,7 +434,7 @@
     "confusables": [
       "no-naka-de-ichiban"
     ],
-    "detection": "Tokens: noun + の (助詞-格助詞) + 次 (名詞-普通名詞-副詞可能?, lexeme 次) + に (格助詞) or は (係助詞). Require a noun before の and に or は right after 次; reject 次の (次 modifying a following noun) and a bare sentence-initial 次に. Ranking uses (Aの次にBが〜) are the core use; sequence uses (この曲の次は) are counted too. Often learned beside の中で〜が一番."
+    "detection": "Tokens: noun + の (助詞-格助詞) + 次 (lexeme 次, 名詞-普通名詞) + に (助詞-格助詞), は (助詞-係助詞) or が (助詞-格助詞). Require a noun before の; この/その/あの + 次 are 連体詞 + 次 (\"next time\") and must not match. Reject 次 + の (次 modifying a following noun, 彼の次の作品) and a bare sentence-initial 次に. Ranking uses (Aの次にBが〜) are the core use; sequence uses (この曲の次は) are counted too. Often learned beside の中で〜が一番."
   },
   {
     "id": "demo-demo",
@@ -469,6 +507,11 @@
         "ja": "でも、それでもいいの？",
         "en": "But are you okay even with that?",
         "why": "でも is the conjunction \"but\" and それでも means \"even so\"."
+      },
+      {
+        "ja": "それは赤でも青でもない、不思議な色だった。",
+        "en": "It was a strange color, neither red nor blue.",
+        "why": "でも〜でもない is \"neither ~ nor ~\", the negated copula, not \"whether ~ or ~\"."
       }
     ],
     "subsumes": [
@@ -480,14 +523,16 @@
       "de-are-de-are",
       "toka-toka"
     ],
-    "detection": "Tokens: noun or na-adjective stem + でも, then a second noun or na-adjective stem + でも, usually followed by いい/構わない/同じ or a comma. UniDic may tag でも as 助詞-副助詞 (lexeme でも) or split it into だ (助動詞, form で) + も (係助詞); match both. Reject でも after a verb て-form (飲んでも), which is ても, and the sentence-initial conjunction でも (接続詞). When this matches, do not also count the two でも as the particle demo. Formal relatives are にしろ〜にしろ and であれ〜であれ."
+    "detection": "Tokens: UniDic never gives one でも token here. After a noun it is で (助詞-格助詞) + も (助詞-係助詞); after a na-adjective it is で (だ 連用形) + も. Match noun or na-adjective + で + も, then a second noun or na-adjective + で + も, usually followed by いい/構わない/同じ or a comma. Reject で + も after a verb (飲んでも is で = て 助詞-接続助詞), で + も with no noun before it (the conjunction でも, which UniDic also tags 格助詞 + 係助詞), and a second でも followed by ない/ありません (でも〜でもない \"neither ~ nor ~\"). When this matches, do not also count the two でも as demo. Formal relatives are にしろ〜にしろ and であれ〜であれ."
   },
   {
     "id": "to-to-dochira",
     "form": "〜と〜と、どちらが",
     "variants": [
       "〜と〜とどっちが",
-      "〜と〜と、どちらのほうが"
+      "〜と〜と、どちらのほうが",
+      "〜と〜、どっちが",
+      "〜と〜では、どちらが"
     ],
     "meaning": "which is more ~, A or B?",
     "kind": "construction",
@@ -499,7 +544,9 @@
     "prototype": false,
     "connection": [
       "N + と + N + と、どちらが",
-      "N + と + N + とどっちが"
+      "N + と + N + とどっちが",
+      "N + と + N + 、どちらが",
+      "N + と + N + では、どちらが"
     ],
     "examples": [
       {
@@ -531,6 +578,16 @@
         "ja": "赤と青とどっちが似合うか、まだ決められない。",
         "match": "赤と青とどっちが",
         "en": "I still can't decide whether red or blue suits me better."
+      },
+      {
+        "ja": "ねえ、海と山、どっちが好き？",
+        "match": "海と山、どっちが",
+        "en": "Hey, which do you like better, the sea or the mountains?"
+      },
+      {
+        "ja": "車と自転車では、どちらが環境にやさしいですか。",
+        "match": "車と自転車では、どちらが",
+        "en": "Which is better for the environment, a car or a bike?"
       }
     ],
     "counterexamples": [
@@ -545,9 +602,9 @@
         "why": "Only one と (\"with a friend\"); there is no A と B と frame."
       },
       {
-        "ja": "どっちが勝つと思う？",
-        "en": "Who do you think will win?",
-        "why": "どっちが without the A と B と frame; the と after 勝つ is quotative."
+        "ja": "田中さんと話したけど、どちらが正しいかは分からない。",
+        "en": "I talked with Tanaka, but I still can't tell which of us is right.",
+        "why": "と marks the partner of 話す; no two nouns are listed before どちら."
       }
     ],
     "subsumes": [],
@@ -555,7 +612,7 @@
       "yori-hou-ga",
       "no-naka-de-ichiban"
     ],
-    "detection": "Tokens: noun + と (助詞-格助詞 or 並立助詞) + noun + と + optional comma + どちら or どっち (代名詞, lexeme 何方?) + optional のほう + が. Require two nouns each followed by と directly before どちら/どっち; a single N と before どちら is comitative \"with\". Reject どちらも/どっちも (both) and どちらに/どちらへ. The answer usually uses より〜のほうが (yori-hou-ga), which is a separate entry."
+    "detection": "Tokens: noun + と (助詞-格助詞) + noun, then と (助詞-格助詞), で (格助詞) + は (係助詞), or only a comma (読点), then どちら or どっち (lexeme 何方, 代名詞), optionally の + ほう (方), then が. The casual AとB、どっちが with no second と is very common, so do not require it; but require the second noun to be followed directly by と, では or 、 and then どちら/どっち. A single N と before a verb (友達と競争した, 田中さんと話した) is comitative and must not match. Reject どちらも/どっちも (both) and どちらに/どちらへ. Compound nouns can split into several tokens (自転 + 車 接尾辞), so treat a noun run as one noun. The answer usually uses より〜のほうが (yori-hou-ga), which is a separate entry."
   },
   {
     "id": "mai-no-you-ni",
@@ -563,8 +620,11 @@
     "variants": [
       "毎日のように",
       "毎晩のように",
+      "毎朝のように",
       "毎週のように",
-      "毎年のように"
+      "毎月のように",
+      "毎年のように",
+      "毎回のように"
     ],
     "meaning": "almost every ~",
     "kind": "construction",
@@ -634,7 +694,7 @@
       "goto-ni",
       "tabi-ni"
     ],
-    "detection": "Tokens: a 毎 time word (毎日, 毎晩, 毎朝, 毎週, 毎月, 毎年, 毎回; UniDic may split 毎 as 接頭辞 + noun) + の (助詞-格助詞) + よう (形状詞-助動詞語幹, lexeme 様) + に (助動詞 だ, 連用形). Require the 毎 word directly before の; reject 毎日の + noun + のように and 毎日が〜のよう. When this matches, do not also count no-you-na for the same のように. Often confused with ごとに and たびに, which mean \"each/every time\" without the \"almost\" sense."
+    "detection": "Tokens: a 毎 time word + の (助詞-格助詞) + よう (様 形状詞-助動詞語幹) + に (だ 助動詞 連用形-ニ). 毎日, 毎晩, 毎朝, 毎週, 毎月, 毎年, 毎回 and 毎度 are each one token (名詞-普通名詞, lexeme = surface); a rarer word such as 毎試合 splits into 毎 (接頭辞) + noun, so accept both shapes. Require the 毎 word directly before の; reject 毎日の + noun + のように, 毎日が〜のよう and 毎日、同じように. When this matches, do not also count no-you-na for the same のように. Often confused with ごとに and たびに, which mean \"each/every time\" without the \"almost\" sense."
   },
   {
     "id": "na-command",
@@ -643,7 +703,7 @@
       "〜なよ",
       "〜なって"
     ],
-    "meaning": "do ~ (soft casual command)",
+    "meaning": "do ~ (casual, friendly command; short for なさい)",
     "kind": "construction",
     "register": "spoken",
     "level": "N4",
@@ -653,7 +713,8 @@
     "prototype": false,
     "connection": [
       "V-masu-stem + な",
-      "V-masu-stem + なよ"
+      "V-masu-stem + なよ",
+      "V-masu-stem + なって"
     ],
     "examples": [
       {
@@ -683,13 +744,18 @@
       },
       {
         "ja": "いいから座りなって。",
-        "match": "座りな",
+        "match": "座りなって",
         "en": "Just sit down already."
       },
       {
         "ja": "もう泣くのはやめて、顔を上げな。",
         "match": "上げな",
         "en": "Stop crying now and lift your head."
+      },
+      {
+        "ja": "いいからこっちに来な。",
+        "match": "来な",
+        "en": "Never mind that, just come over here."
       }
     ],
     "counterexamples": [
@@ -719,7 +785,7 @@
       "na-prohibitive",
       "nasai"
     ],
-    "detection": "Tokens: a verb in 連用形 (masu-stem) directly followed by な, tagged 終助詞 or 助動詞 (UniDic may treat it as a shortened なさる/なさい, lexeme 為さる?), then end of clause, よ, って or punctuation. Require the verb form to be 連用形; a 終止形 (dictionary form) + な is na-prohibitive. Reject な followed by さい (なさい), い/く/かっ (ない), and な after だ or an adjective (exclamatory な). For ichidan verbs such as 寝る or 見る the stem and the dictionary form differ (寝な against 寝るな), so check the conjugation form, not the surface."
+    "detection": "Tokens: a verb in 連用形 directly followed by な (lexeme な, 助詞-終助詞), then よ, the end of the clause or punctuation; する-verbs give し + な (勉強しな) and 来る gives 来 (連用形) + な. Require 連用形: 終止形 + な (寝るな) is na-prohibitive. This entry owns only the bare な token; なさい is one token (為さる 命令形) and belongs to nasai, so the two never overlap. Two shapes are mis-tokenized and need extra rules: 〜なって comes out as stem + なっ (成る 連用形-促音便) + て (座りなって, 行きなって), so accept 連用形 + なっ (成る) + clause-final て; and 帰りな comes out as the noun 帰り + な (終助詞, or だ 連体形 before よ), so accept the noun 帰り before a clause-final な/なよ. Reject な after だ, a noun or an adjective (exclamatory な, きれいな花だな) and 未然形 + ない (寝ない)."
   },
   {
     "id": "nan-counter-ka",
@@ -728,7 +794,10 @@
       "何人か",
       "何回か",
       "何本か",
-      "何度か"
+      "何度か",
+      "何日か",
+      "何枚か",
+      "何個か"
     ],
     "meaning": "several ~ / a few ~",
     "kind": "construction",
@@ -797,7 +866,7 @@
       "ka-douka",
       "interrogative-mo"
     ],
-    "detection": "Tokens: 何 (代名詞, lexeme 何, read なん) + a counter suffix (接尾辞-名詞的-助数詞: 人, 回, 本, 度, 冊, 年, 枚, 個) + か (助詞-副助詞). UniDic may join 何 and the counter into one token; accept both. Guard: the token after か is usually の, a case particle or a verb; reject when か is followed by 分かる, 知る, 教える, 聞く or 確かめる, or is preceded by 全部で/いったい, which signal an indirect question. When this matches, do not also count interrogative-ka. Contrast 何人も (many), which is a different pattern."
+    "detection": "Tokens: 何 (lexeme 何, tagged 名詞-数詞 before a counter) + a counter token + か (助詞-副助詞). UniDic never joins 何 and the counter. The counter is 接尾辞-名詞的 for 人, 本, 冊, 枚, 個 but 名詞-普通名詞 for 回, 度, 年, 日, so match on 何 名詞-数詞 + one token + か rather than on the counter's POS. 何か \"something\" is 何 代名詞 + か and is interrogative-ka. Guard against the indirect question: reject when か is followed by 分かる, 知る, 教える, 聞く or 確かめる, or is preceded by 全部で/いったい; reject a verb between the counter and か (何人来るか). When this matches, do not also count interrogative-ka. Contrast 何人も (many), which is a different pattern."
   },
   {
     "id": "rashii-typical",
@@ -840,7 +909,7 @@
       {
         "ja": "彼は本当に男らしい人だ。",
         "match": "男らしい",
-        "en": "He's a real man's man."
+        "en": "He's a really manly guy."
       },
       {
         "ja": "この絵には子供らしさがあふれている。",
@@ -856,6 +925,11 @@
         "ja": "いかにも先生らしい答えだね。",
         "match": "先生らしい",
         "en": "That's such a teacher answer."
+      },
+      {
+        "ja": "黙って帰るなんて、いかにも彼らしい。",
+        "match": "彼らしい",
+        "en": "Leaving without a word is so like him."
       }
     ],
     "counterexamples": [
@@ -880,7 +954,7 @@
       "rashii",
       "ppoi"
     ],
-    "detection": "Tokens: noun + らしい (UniDic 接尾辞-形容詞的, lexeme らしい?) in any adjective form (らしい, らしく, らしかっ), or らしさ (らし + 接尾辞 さ). UniDic tags hearsay らしい as 助動詞, so the POS tag is the main guard; if the tagger gives 助動詞, treat it as rashii. Reject らしい inside a lexicalized adjective (素晴らしい, 可愛らしい, 憎らしい, わざとらしい), which UniDic gives as one token. A remaining ambiguity is N + らしい with a sentence-final reading (彼は学生らしい); prefer the 接尾辞 tag and a following noun or らしく/らしさ as evidence for this sense."
+    "detection": "Tokens: noun or pronoun + らしい (lexeme らしい, 接尾辞-形容詞的) in any adjective form: らしい (連体形/終止形), らしく (連用形), らしかっ; らしさ is らし (語幹) + さ (接尾辞-名詞的). UniDic tags hearsay らしい as 助動詞-ラシイ, so the POS tag is the main guard, and it is right before a noun, before ない and in らしさ. It fails at the end of a sentence: いかにも彼らしい (typical) is tagged 助動詞 like 雨らしい (hearsay), so accept a sentence-final 助動詞 らしい as this sense only after いかにも/本当に/実に, and otherwise leave it to rashii. Lexicalized adjectives (素晴らしい, 可愛らしい, 憎らしい, わざとらしい) are one token and never match."
   },
   {
     "id": "noni-purpose",
@@ -954,6 +1028,11 @@
         "ja": "一緒に来ればよかったのに。",
         "en": "You should have come with us.",
         "why": "Sentence-final のに expresses regret, not purpose."
+      },
+      {
+        "ja": "毎日練習するのに、全然上手にならない。",
+        "en": "I practice every day, but I'm just not getting any better.",
+        "why": "Concessive のに \"even though\" after a non-past verb; the main clause is a let-down, not a cost or use."
       }
     ],
     "subsumes": [],
@@ -963,7 +1042,7 @@
       "tame-ni",
       "niwa-purpose"
     ],
-    "detection": "Tokens: verb in 終止形/連体形 (dictionary form, non-past) + の (助詞-準体助詞) + に (助詞-格助詞), optionally + は. UniDic tags concessive のに as one token, 助詞-接続助詞 のに; this pattern is the two-token の + に, but check the tagger output, since the split is not always reliable. Context guard: the predicate after のに is usually かかる, 使う, 必要, 便利, いい, 役立つ or 十分; past-tense verbs and なのに point to concessive noni. Reject の + に governed by 夢中, 疲れる or 飽きる, where に marks a target. This entry duplicates noni-mokuteki in the final id list."
+    "detection": "Tokens: verb in 連体形 (dictionary form, non-past) + の (助詞-準体助詞) + に (助詞-格助詞), optionally + は (係助詞). UniDic gives concessive のに exactly the same two tokens (説明したのに, 雨なのに, 練習するのに), so the tags cannot separate them; the guard is context. Require a non-past verb before の (a past verb, なのに or an adjective points to noni) and a purpose predicate after のに/のには in the same clause: かかる, 使う, 必要, 便利, いい, 役立つ, 十分, 向いている. Reject sentence-final のに (regret) and のに followed by a comma and a contrasting clause. Reject の + に governed by 夢中, 疲れる or 飽きる, where に marks a target. This entry owns purpose のに; noni-mokuteki (N3) is the same pattern and defers to it."
   },
   {
     "id": "demo",
@@ -972,7 +1051,8 @@
       "何でも",
       "誰でも",
       "どこでも",
-      "いつでも"
+      "いつでも",
+      "どれでも"
     ],
     "meaning": "~ or something; even ~; any ~ (with question words)",
     "kind": "particle",
@@ -1056,7 +1136,7 @@
       "sae",
       "interrogative-mo"
     ],
-    "detection": "Tokens: noun or question word (何, 誰, どこ, いつ, どれ, どちら) + でも tagged 助詞-副助詞 (lexeme でも). Reject でも tagged 接続詞 (sentence-initial \"but\"), でも after a verb or adjective て-form (temo, UniDic 接続助詞 て + も or でも), and で + も where で is a case particle (place, means) or the copula followed by ある/ない. The \"or something\" and \"even\" readings share one token and are not split here. Two でも in a row with a choice between two items is demo-demo."
+    "detection": "Tokens: UniDic has no でも token in any example; it is always で (助詞-格助詞) + も (助詞-係助詞), after a noun or a question word (何, 誰 代名詞; どこ 何処, いつ 何時, どれ 何れ). So the tags do not separate this でも from で + も \"also\" with a place or means (駅前でも, 電話でも) or from the copula + も before ある/ない (医者でもある). Guards: reject で + も with no noun before it (sentence-initial でも \"but\" is also で 格助詞 + も), で + も after a verb or adjective (呼んでも is で = て 助詞-接続助詞, temo), and で + も followed by ある/あり/ない. A place noun before でも with a verb that takes a place (待ち合わせできる, 売っている) is the place reading; a noun list or the following verb is the only cue. The \"or something\" and \"even\" readings share the tokens and are not split here. Two でも with a choice between two items is demo-demo."
   },
   {
     "id": "nado",
@@ -1104,12 +1184,17 @@
       {
         "ja": "野菜や果物などは、地下一階で売っています。",
         "match": "など",
-        "en": "Things like vegetables and fruit are sold on the lower level."
+        "en": "Things like vegetables and fruit are sold on the first basement floor."
       },
       {
         "ja": "疲れたときは、甘いものなど食べるといいですよ。",
         "match": "など",
         "en": "When you're tired, it helps to eat something sweet, for example."
+      },
+      {
+        "ja": "休みの日は、映画を見るなどしてのんびり過ごしています。",
+        "match": "など",
+        "en": "On my days off I take it easy, watching movies and such."
       }
     ],
     "counterexamples": [
@@ -1140,14 +1225,16 @@
       "toka-toka",
       "tari"
     ],
-    "detection": "Tokens: noun (often after や-listed nouns) + など (助詞-副助詞, lexeme 等?) or なんか (助詞-副助詞, lexeme なんか?). For など, the listing sense is the usual one; accept など followed by が, を, は, の, で or a verb. For なんか, require a noun right before it and reject なんか at the start of a clause (filler adverb or 何か) and なんか + negative predicate with no listing context, which is nanka-nante. なんて is left to nanka-nante. Confusable with とか, which also lists examples."
+    "detection": "Tokens: noun (often after や-listed nouns, や is 助詞-副助詞) or a verb in 連体形 + など (lexeme など, 助詞-副助詞) or なんか (lexeme なんか, 助詞-副助詞). など may be followed by が, を, は, の, で, a verb, or する after a verb (見るなどして). The particle なんか is one token; clause-initial なんか (filler \"kind of\", or casual 何か \"something\") is two tokens, なん (何 代名詞) + か (副助詞), so the token itself rejects it. Reject なんか + a negative or contemptuous predicate with no listing context (嘘なんかついてない), which is nanka-nante; なんて is left to nanka-nante. Confusable with とか, which also lists examples."
   },
   {
     "id": "shi",
     "form": "し",
     "variants": [
       "〜し〜し",
-      "〜だし"
+      "〜だし",
+      "〜ですし",
+      "〜ますし"
     ],
     "meaning": "and also ~ (listing reasons)",
     "kind": "particle",
@@ -1164,7 +1251,9 @@
       "V-plain + し",
       "i-Adj + し",
       "na-Adj + だし",
-      "N + だし"
+      "N + だし",
+      "Clause-plain + ですし",
+      "V-masu-stem + ますし"
     ],
     "examples": [
       {
@@ -1201,6 +1290,11 @@
         "ja": "道ももう覚えたし、一人で行けます。",
         "match": "覚えたし",
         "en": "I've learned the way by now, so I can go on my own."
+      },
+      {
+        "ja": "まだ時間もありますし、ゆっくり考えてください。",
+        "match": "ありますし",
+        "en": "There's still plenty of time, so take it slow and think it over."
       }
     ],
     "counterexamples": [
@@ -1218,6 +1312,11 @@
         "ja": "この問題は難しい。",
         "en": "This problem is hard.",
         "why": "し is part of the adjective 難しい."
+      },
+      {
+        "ja": "修理には三日ないし一週間かかります。",
+        "en": "Repairs take three days to a week.",
+        "why": "ないし is the written conjunction \"or, to\" (乃至), not ない + し."
       }
     ],
     "subsumes": [],
@@ -1226,13 +1325,14 @@
       "kara-because",
       "tari"
     ],
-    "detection": "Tokens: a predicate in 終止形 (verb, i-adjective, or だ/です after a noun or na-adjective) + し tagged 助詞-接続助詞 (lexeme し). Reject し tagged as a verb form (する 連用形 in して, しよう, します) or as part of a word (難しい, 話し, 寂しい), which UniDic gives as one token or as 動詞. A repeated 〜し〜し counts once per し; the match spans both when they are in one sentence. Sentence-final し (眠いし) is common in speech and counts."
+    "detection": "Tokens: a predicate in 終止形 (verb, i-adjective, た, ない, or だ/です/ます) + し (lexeme し, 助詞-接続助詞). UniDic tags the する stem as 為る 連用形 (して, します), and し inside a word (難しい, 話し, 寂しい) is part of that word's token, so the 接続助詞 tag alone rejects them. ないし \"or, to\" is one token (乃至 接続詞) and never matches. A repeated 〜し〜し counts once per し; the match spans both when they are in one sentence. Sentence-final し (眠いし) is common in speech and counts."
   },
   {
     "id": "kana",
     "form": "かな",
     "variants": [
       "かなあ",
+      "かなぁ",
       "かなー"
     ],
     "meaning": "I wonder ~",
@@ -1282,6 +1382,11 @@
         "ja": "そろそろ帰ろうかなと思ってたところ。",
         "match": "かな",
         "en": "I was just thinking of heading home soon."
+      },
+      {
+        "ja": "あれ、もしかして田中さんかなぁ？",
+        "match": "かなぁ",
+        "en": "Huh, could that be Tanaka?"
       }
     ],
     "counterexamples": [
@@ -1308,16 +1413,15 @@
       "kke",
       "no-darou-ka"
     ],
-    "detection": "Tokens: a plain predicate, noun or の/ん + かな tagged 助詞-終助詞 (lexeme かな?); UniDic may instead give か (終助詞 or 副助詞) + な (終助詞), so match both shapes. Optional long-vowel tail あ or ー. Reject かな inside a word (静かな, 仮名, 叶う, 悲しい), which UniDic tags as part of the word or as 名詞. Reject か + なんて and か + なあ where な starts another word. The pattern sits at clause end, before と思う or a sentence end."
+    "detection": "Tokens: always two, か (助詞-終助詞) + な (lexeme な, 助詞-終助詞); the long tails なあ, なぁ and なー are one な token. か follows a plain predicate, a noun (田中さんか), the volitional (帰ろうか) or の/ん. Require か tagged 終助詞; か + なんて (本当かなんて \"whether\") has か as 副助詞 and なんて as its own token. かな inside a word (静かな is 静か + な だ 連体形; 仮名 is a noun; かなり is an adverb) never gives the か 終助詞 + な 終助詞 pair. The pattern sits at clause end, before と思う, って or a sentence end."
   },
   {
     "id": "mo-emphasis",
     "form": "(number)も",
     "variants": [
-      "〜も (as many as)",
-      "〜もの"
+      "〜もの (before a noun)"
     ],
-    "meaning": "as many as ~ / even ~",
+    "meaning": "as many/much as ~ (stresses that an amount is large)",
     "kind": "particle",
     "register": "neutral",
     "level": "N4",
@@ -1329,7 +1433,8 @@
     },
     "prototype": false,
     "connection": [
-      "number + counter + も"
+      "number + counter + も",
+      "number + counter + もの + N"
     ],
     "examples": [
       {
@@ -1361,6 +1466,11 @@
         "ja": "会場には千人もの人が集まった。",
         "match": "千人も",
         "en": "As many as a thousand people gathered at the venue."
+      },
+      {
+        "ja": "もう3回も言ったでしょ！",
+        "match": "3回も",
+        "en": "I've already told you three times!"
       }
     ],
     "counterexamples": [
@@ -1375,9 +1485,9 @@
         "why": "One + counter + も with a negative is \"not even one\" (mo-nai)."
       },
       {
-        "ja": "田中さんは三年生で、私も三年生です。",
-        "en": "Tanaka is a third-year, and so am I.",
-        "why": "も is the additive \"too\" on 私; the number comes after it."
+        "ja": "大丈夫、二、三日もすれば元気になるよ。",
+        "en": "Don't worry, you'll be fine in a couple of days.",
+        "why": "Approximate number + もすれば minimizes (\"in just a few days\"); it does not stress a large amount."
       }
     ],
     "subsumes": [],
@@ -1386,7 +1496,7 @@
       "interrogative-mo",
       "kurai"
     ],
-    "detection": "Tokens: a numeral (名詞-数詞) + a counter (接尾辞-名詞的-助数詞) + も (助詞-係助詞, lexeme も), optionally + の. Require a number other than one (一, 1) before the counter, or a positive predicate: 一 + counter + も + negative is mo-nai. Reject 何 + counter + も, which is the \"many/any\" reading under interrogative-mo. A numeral may be in kanji or Arabic digits, and UniDic splits multi-digit kanji numbers into several 数詞 tokens."
+    "detection": "Tokens: a numeral (名詞-数詞, kanji or digits; 3 has lexeme 三, and multi-digit numbers such as 五 + 万 are several 数詞 tokens) + one counter token + も (lexeme も, 助詞-係助詞), optionally + の before a noun. The counter's POS varies: 人, 日 and 生 are 接尾辞-名詞的, while 時間, 分, 回, 杯, 度 and 円 (lexeme 円-助数詞) are 名詞-普通名詞, so match one token after the numeral rather than a POS. Reject 一 + counter + も + negative (一度も行ったことがない), which is mo-nai; 何 + counter + も, which is interrogative-mo; and も + すれば/したら after an approximate number (二、三日もすれば), which minimizes."
   },
   {
     "id": "kashira",
@@ -1408,6 +1518,7 @@
     "connection": [
       "V-plain + かしら",
       "i-Adj + かしら",
+      "na-Adj + かしら",
       "N + かしら",
       "V-nai + かしら"
     ],
@@ -1465,7 +1576,7 @@
       "kana",
       "kke"
     ],
-    "detection": "Tokens: a plain predicate, noun or の/ん + かしら tagged 助詞-終助詞 (lexeme かしら), optionally + ね/ん. Require clause end: the next token is punctuation, ね, と (quoting) or the sentence end. Reject かしら right after a question word (何かしら, 誰かしら, どこかしら), which is an indefinite, and か + しら + ない, where しら is the verb 知る (UniDic 動詞, 未然形). Mostly used by women and in older or polite speech; in fiction it marks a character's voice."
+    "detection": "Tokens: a plain predicate, noun or の/ん + かしら, one token (lexeme かしら, 助詞-終助詞), optionally + ね. The indefinite after a question word (何かしら, 誰かしら, どこかしら) is the same token tagged 助詞-副助詞, so require 終助詞. か + しら + ない is か (副助詞) + しら (知る 未然形) + ない and never gives a かしら token. The next token is usually punctuation, ね, と (quoting) or the sentence end. Mostly used by women and in older or polite speech; in fiction it marks a character's voice."
   },
   {
     "id": "made-even",
@@ -1475,7 +1586,7 @@
       "にまで",
       "までが"
     ],
-    "meaning": "even ~ / to the extent of ~",
+    "meaning": "even ~ (adds a surprising, extreme item)",
     "kind": "particle",
     "register": "neutral",
     "level": "N4",
@@ -1487,7 +1598,8 @@
     "connection": [
       "N + まで",
       "N + にまで",
-      "N + までも"
+      "N + までも",
+      "N + までが"
     ],
     "examples": [
       {
@@ -1506,9 +1618,9 @@
         "en": "My little brother even ate my snack."
       },
       {
-        "ja": "そこまで言わなくてもいいでしょう。",
-        "match": "そこまで",
-        "en": "You didn't have to go that far."
+        "ja": "最近は、コンビニで野菜まで売ってるんだね。",
+        "match": "野菜まで",
+        "en": "So convenience stores even sell vegetables these days."
       },
       {
         "ja": "その知らせには、先生までもが驚いていた。",
@@ -1541,6 +1653,11 @@
         "ja": "言うまでもないけど、遅刻はだめだよ。",
         "en": "It goes without saying, but don't be late.",
         "why": "までもない \"no need to\" (made-mo-nai), not \"even\"."
+      },
+      {
+        "ja": "ここまで来たら、もう引き返せない。",
+        "en": "Now that we've come this far, there's no turning back.",
+        "why": "ここまで \"this far\" is the limit sense of まで, not \"even\"."
       }
     ],
     "subsumes": [],
@@ -1551,6 +1668,6 @@
       "made-mo-nai",
       "te-made"
     ],
-    "detection": "Tokens: noun (or に + noun) + まで (助詞-副助詞, lexeme 迄?), optionally + も or が. The token is the same as まで \"until\", so context decides: reject when the noun is a time or date word (五時, 明日, 来週) or a place reached by movement (駅まで歩く), and reject までに (made-ni) and verb + までもない (made-mo-nai). Good evidence for this sense is まで + も/が, に + まで, a preceding だけでなく/だけじゃなく, or まで marking the subject or object of a verb like 食べる or 驚く. そこまで/ここまで \"to that extent\" counts."
+    "detection": "Tokens: noun (or noun + に) + まで (lexeme まで, 助詞-副助詞), optionally + も (係助詞) or が (格助詞). The token is the same as まで \"until, as far as\", so context decides: reject when the noun is a time or date word (五時, 明日, 来週), a place reached by movement (駅まで歩く), or こ/そ/あ/ど + こ (ここまで, そこまで \"this/that far\"); reject まで + に (made-ni) and verb + まで + も + ない (made-mo-nai). Good evidence for this sense is まで + も/が, に + まで, a preceding だけでなく/だけじゃなく, or まで marking the subject or object of a verb like 食べる, 売る or 驚く."
   }
 ]
