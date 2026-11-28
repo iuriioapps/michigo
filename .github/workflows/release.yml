@@ -21,14 +21,18 @@ jobs:
           cache: pnpm
 
       # electron-builder names the release after package.json, not the tag,
-      # so a mismatch would publish the wrong version.
+      # so a mismatch would publish the wrong version. A prerelease tag of the
+      # version (v1.0.0-test.1) passes, and the desktop job stamps it in.
       - name: Tag matches desktop version
         run: |
           version=$(node -p "require('./apps/desktop/package.json').version")
-          if [ "${GITHUB_REF_NAME#v}" != "$version" ]; then
-            echo "::error::Tag $GITHUB_REF_NAME does not match apps/desktop version $version"
-            exit 1
-          fi
+          case "${GITHUB_REF_NAME#v}" in
+            "$version" | "$version"-*) ;;
+            *)
+              echo "::error::Tag $GITHUB_REF_NAME does not match apps/desktop version $version"
+              exit 1
+              ;;
+          esac
 
       - run: pnpm install --frozen-lockfile
 
@@ -59,6 +63,14 @@ jobs:
 
       - name: Build renderer and main
         run: pnpm --filter @michigo/desktop build
+
+      # Semver sorts 1.0.0-test.1 below 1.0.0, so a test release never takes
+      # the name of the real one, and an update can still move up to it.
+      - name: Stamp the prerelease version
+        if: contains(github.ref_name, '-')
+        shell: bash
+        working-directory: apps/desktop
+        run: npm pkg set version="${GITHUB_REF_NAME#v}"
 
       - name: Package and upload to draft release
         run: pnpm --filter @michigo/desktop release

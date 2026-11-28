@@ -57,8 +57,10 @@ This slice deliberately carries no domain logic — it exists to prove the wirin
 Bump the version in `apps/desktop/package.json`, commit, then:
 
 ```sh
-git tag v0.2.0 && git push --tags
+git tag v1.1.0 && git push --tags
 ```
+
+A test release takes a prerelease tag of the current version, such as `v1.0.0-test.1`, without a version bump. The workflow builds it as `1.0.0-test.1`, so the name `1.0.0` stays free for the real release.
 
 The release workflow builds installers on macOS, Windows and Linux and uploads them to a **draft** GitHub Release for you to review before publishing.
 
