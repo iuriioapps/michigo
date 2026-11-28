@@ -60,6 +60,8 @@ Bump the version in `apps/desktop/package.json`, commit, then:
 git tag v1.1.0 && git push --tags
 ```
 
+A test release takes a prerelease tag of the current version, such as `v1.0.0-test.1`, without a version bump. The workflow builds it as `1.0.0-test.1`, so the name `1.0.0` stays free for the real release.
+
 The release workflow builds installers on macOS, Windows and Linux and uploads them to a **draft** GitHub Release for you to review before publishing.
 
 > **Builds are currently unsigned.** macOS will be blocked by Gatekeeper and Windows will warn via SmartScreen. Signing needs an Apple Developer account ($99/yr) for macOS; the env vars are stubbed in `.github/workflows/release.yml`. Auto-update effectively requires signing, so it is deferred too.
