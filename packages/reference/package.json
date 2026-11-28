@@ -1,0 +1,22 @@
+{
+  "name": "@michigo/reference",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dictionary entries, JLPT levels and Frequency ranks",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@michigo/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "zod": "catalog:"
+  }
+}

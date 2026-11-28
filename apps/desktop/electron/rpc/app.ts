@@ -1,9 +1,13 @@
 import process from "node:process";
 
 import { ankiModule } from "@michigo/anki";
+import { audioModule } from "@michigo/audio";
 import { describeRuntime } from "@michigo/core";
-import { EventPublisher } from "@orpc/server";
+import { pitchModule } from "@michigo/pitch";
+import { referenceModule } from "@michigo/reference";
+import { storageModule } from "@michigo/storage";
 import { vocabModule } from "@michigo/vocab";
+import { EventPublisher } from "@orpc/server";
 import { app as electronApp } from "electron";
 
 import { os } from "./base";
@@ -53,7 +57,7 @@ export const app = {
     describeRuntime({
       app: electronApp.getName(),
       version: electronApp.getVersion(),
-      modules: [vocabModule, ankiModule],
+      modules: [storageModule, referenceModule, pitchModule, vocabModule, ankiModule, audioModule],
       electron: process.versions.electron,
     }),
   ),
