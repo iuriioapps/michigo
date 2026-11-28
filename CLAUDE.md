@@ -21,7 +21,7 @@ apps/desktop ─┬─> storage ──────────────> voca
               └─> tokenizer, source, grammar, anki, manifest, log ────────┴─> core
 ```
 
-Decided in `docs/adr/0007-packages-do-not-import-each-other-and-the-app-composes.md`. Create each package when its first feature lands, with the layout of `packages/vocab`: `exports` pointing at `./src/index.ts`, a `typecheck` script and `@michigo/core` as a `workspace:*` dependency. The rules for code:
+Decided in `docs/adr/0007-packages-do-not-import-each-other-and-the-app-composes.md`. Every package in the graph exists, most as a scaffold with the layout of `packages/vocab`: `exports` pointing at `./src/index.ts`, a `typecheck` script and `@michigo/core` as a `workspace:*` dependency. A feature fills in the package that owns it. The rules for code:
 
 - `core` imports no other package, and code in `packages/` imports only packages, never `apps/`.
 - A package imports `core` and nothing else. The one exception is `storage`, which imports the store interfaces of the packages it serves.
@@ -30,7 +30,7 @@ Decided in `docs/adr/0007-packages-do-not-import-each-other-and-the-app-composes
 - A package that keeps data declares its store as an interface in domain terms. **SQL lives only in `storage`.**
 - `core` holds the data shapes that packages and the renderer exchange. Logic goes to the package that owns the capability.
 - Each package declares what it imports in its own `package.json`, so pnpm refuses an import that breaks these rules.
-- Only `packages/tokenizer` imports `lindera`, the native binding. Read ADR 0005 and `.claude/rules/tokenizer.md` before you create that package.
+- Only `packages/tokenizer` imports `lindera`, the native binding. Read ADR 0005 and `.claude/rules/tokenizer.md` before you add the binding to that package.
 
 ### Pure and Node entry points
 

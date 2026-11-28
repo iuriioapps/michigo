@@ -1,0 +1,22 @@
+{
+  "name": "@michigo/manifest",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fetch, check and install of the files the Manifest lists",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@michigo/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "zod": "catalog:"
+  }
+}

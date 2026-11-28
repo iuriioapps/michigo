@@ -1,0 +1,22 @@
+{
+  "name": "@michigo/grammar",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Grammar Patterns and the labels of inflected forms",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@michigo/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "zod": "catalog:"
+  }
+}
