@@ -57,7 +57,7 @@ This slice deliberately carries no domain logic — it exists to prove the wirin
 Bump the version in `apps/desktop/package.json`, commit, then:
 
 ```sh
-git tag v0.2.0 && git push --tags
+git tag v1.1.0 && git push --tags
 ```
 
 The release workflow builds installers on macOS, Windows and Linux and uploads them to a **draft** GitHub Release for you to review before publishing.

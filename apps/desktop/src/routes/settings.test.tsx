@@ -10,7 +10,7 @@ describe("settings route", () => {
   it("renders runtime details fetched from the main process", async () => {
     renderRoute("/settings");
 
-    expect(await screen.findByText("Michigo 0.1.0")).toBeInTheDocument();
+    expect(await screen.findByText("Michigo 1.0.0")).toBeInTheDocument();
     expect(screen.getByText("24.21.0")).toBeInTheDocument();
     expect(screen.getByText("darwin-x64")).toBeInTheDocument();
     expect(screen.getByText("44.4.5")).toBeInTheDocument();
@@ -50,7 +50,7 @@ describe("settings route", () => {
       }),
     );
 
-    expect(await screen.findByText("Michigo 0.1.0")).toBeInTheDocument();
+    expect(await screen.findByText("Michigo 1.0.0")).toBeInTheDocument();
     expect(screen.queryByText("electron")).not.toBeInTheDocument();
   });
 });

@@ -21,7 +21,7 @@ const listeners = new Map<string, Listener>();
 const getName = vi.hoisted(() => vi.fn<() => string>(() => "Michigo"));
 
 vi.mock("electron", () => ({
-  app: { getName, getVersion: () => "0.1.0" },
+  app: { getName, getVersion: () => "1.0.0" },
   ipcMain: {
     on: (channel: string, listener: Listener) => listeners.set(channel, listener),
   },

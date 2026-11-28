@@ -10,13 +10,13 @@ import { routeTree } from "../routeTree.gen";
 
 export const runtimeInfo: RuntimeInfo = {
   app: "Michigo",
-  version: "0.1.0",
+  version: "1.0.0",
   node: "24.21.0",
   platform: "darwin-x64",
   electron: "44.4.5",
   modules: [
-    { name: "@michigo/vocab", version: "0.1.0", status: "scaffold" },
-    { name: "@michigo/anki", version: "0.1.0", status: "scaffold" },
+    { name: "@michigo/vocab", version: "1.0.0", status: "scaffold" },
+    { name: "@michigo/anki", version: "1.0.0", status: "scaffold" },
   ],
 };
 
