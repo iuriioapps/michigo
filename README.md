@@ -35,8 +35,12 @@ apps/
   desktop/   Electron + React + Tailwind, with hand-written UI components
 packages/
   core/      shared primitives and zod schemas
-  vocab/     vocabulary coverage analysis  (scaffold)
-  anki/      Anki integration              (scaffold)
+  storage/   every store, Snapshot and Backup                    (scaffold)
+  reference/ Dictionary entries, JLPT levels and Frequency ranks (scaffold)
+  pitch/     Pitch accent lookup and its card markup             (scaffold)
+  vocab/     vocabulary coverage analysis                        (scaffold)
+  anki/      Anki integration                                    (scaffold)
+  audio/     Audio Sources and the pipeline that produces a file (scaffold)
   log/       JSON Lines log for every process
 ```
 
