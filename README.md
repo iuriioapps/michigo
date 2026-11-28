@@ -36,11 +36,15 @@ apps/
 packages/
   core/      shared primitives and zod schemas
   storage/   every store, Snapshot and Backup                    (scaffold)
+  tokenizer/ Japanese tokenization with the Lindera binding      (scaffold)
+  source/    Source formats and their cleanup into Lines         (scaffold)
+  grammar/   Grammar Patterns and the labels of inflected forms  (scaffold)
   reference/ Dictionary entries, JLPT levels and Frequency ranks (scaffold)
   pitch/     Pitch accent lookup and its card markup             (scaffold)
   vocab/     vocabulary coverage analysis                        (scaffold)
   anki/      Anki integration                                    (scaffold)
   audio/     Audio Sources and the pipeline that produces a file (scaffold)
+  manifest/  Fetch, check and install of the Manifest files      (scaffold)
   log/       JSON Lines log for every process
 ```
 
